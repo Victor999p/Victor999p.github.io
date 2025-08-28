@@ -1,1 +1,1 @@
-[{"title":"My First Post","url":"/2025/08/26/My-First-Post/","content":""}]
+[{"title":"Test 01","url":"/2025/08/26/My-First-Post/","content":"Welcome to my blog!This is my first post using Hexo and the Butterfly theme.\nWhy I started this blog\nTo share my journey of self-improvement\nTo document what I learn about technology\nTo connect with like-minded people\n\ndef hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)\n\nOutput:\nHello, Hexo + Butterfly + Python!\nStay tuned for more updates!\n","categories":["Test"],"tags":["introduction","first"]}]

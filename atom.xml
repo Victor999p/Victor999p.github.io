@@ -3,11 +3,11 @@
   <title>A Person Trying to be Better</title>
   
   <subtitle>Never stop improving yourself</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://victor999p.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2025-08-26T07:33:35.068Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://victor999p.github.io/"/>
+  <updated>2025-08-28T16:46:06.581Z</updated>
+  <id>https://victor999p.github.io/</id>
   
   <author>
     <name>Victor Ng</name>
@@ -17,15 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My First Post</title>
-    <link href="http://example.com/2025/08/26/My-First-Post/"/>
-    <id>http://example.com/2025/08/26/My-First-Post/</id>
+    <title>Test 01</title>
+    <link href="https://victor999p.github.io/2025/08/26/My-First-Post/"/>
+    <id>https://victor999p.github.io/2025/08/26/My-First-Post/</id>
     <published>2025-08-26T07:33:35.000Z</published>
-    <updated>2025-08-26T07:33:35.068Z</updated>
+    <updated>2025-08-28T16:46:06.581Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to my blog!<br>This is my first post using Hexo and the Butterfly theme.</p><h2 id="Why-I-started-this-blog"><a href="#Why-I-started-this-blog" class="headerlink" title="Why I started this blog"></a>Why I started this blog</h2><ul><li>To share my journey of self-improvement</li><li>To document what I learn about technology</li><li>To connect with like-minded people</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">hello</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello, Hexo + Butterfly !&quot;</span>)</span><br></pre></td></tr></table></figure><p><strong>Output:</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, Hexo + Butterfly + Python!</span><br></pre></td></tr></table></figure><p>Stay tuned for more updates!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot; cla</summary>
+      
     
     
     
+    <category term="Test" scheme="https://victor999p.github.io/categories/Test/"/>
     
+    
+    <category term="introduction" scheme="https://victor999p.github.io/tags/introduction/"/>
+    
+    <category term="first" scheme="https://victor999p.github.io/tags/first/"/>
     
   </entry>
   
