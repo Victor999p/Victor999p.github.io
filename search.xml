@@ -1,10 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Biomedical Signals and Systems *UNFINISHED</title>
+    <title>Biomedical Signals and Systems | 生物信號與生物系統 *UNFINISHED</title>
     <url>/posts/6778c1a2.html</url>
-    <content><![CDATA[Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
+    <content><![CDATA[Introduction to Biosignals and Biological Systems | 生物信號與生物系統簡介Course Overview | 課程概述This course explores biosignals and biological systems, focusing on their roles in physiological processes, measurement, and analysis. Students will learn how biosignals facilitate communication within biological systems, how these signals are processed, and how tools like MATLAB can be used to simulate signal acquisition and conversion. The course bridges biology, engineering, and data analysis to understand physiological functions and their applications in medicine.本課程探討生物信號與生物系統，重點在於它們在生理過程、測量和分析中的作用。學生將學習生物信號如何促進生物系統內的通信、這些信號如何被處理，以及如何使用MATLAB等工具模擬信號採集和轉換。本課程結合生物學、工程學和數據分析，以理解生理功能及其在醫學中的應用。
+Learning Objectives | 學習目標
+Define biosignals and biological systems.定義生物信號和生物系統。
+Explain the input-output model in physiological contexts.解釋生理環境中的輸入-輸出模型。
+Differentiate between analog and digital biosignals.區分模擬和數位生物信號。
+Describe the encoding and sampling process of biosignals.描述生物信號的編碼和採樣過程。
+Apply MATLAB to simulate biosignal acquisition and conversion.使用MATLAB模擬生物信號的採集和轉換。
+
+What Are Biological Systems? | 什麼是生物系統？A biological system is a collection of physiological processes or components that interact to perform a specific function. Examples include:生物系統是由生理過程或組件相互作用以執行特定功能的集合。示例包括：
+
+Cardiovascular System: Delivers oxygenated blood to tissues.心血管系統：將含氧血液輸送到組織。
+Nervous System: Transmits electrical signals for communication and control.神經系統：傳輸電信號以進行通信和控制。
+Endocrine System: Uses hormones for regulation.內分泌系統：使用激素進行調節。
+Immune System: Responds to pathogens with inputs (e.g., antigens) and outputs (e.g., antibodies).免疫系統：對病原體作出反應，輸入（例如抗原）和輸出（例如抗體）。
+
+English Discussion Prompt: How would you classify the immune system in terms of an input-output model?Example: Inputs (pathogens) → Processing (immune cell signaling) → Outputs (antibody production, inflammation).繁體中文討論提示：你會如何根據輸入-輸出模型對免疫系統進行分類？示例：輸入（病原體）→ 處理（免疫細胞信號傳導）→ 輸出（抗體產生、炎症）。
+What Are Biosignals? | 什麼是生物信號？Biosignals are measurable quantities that convey information about the behavior of biological systems. They enable communication between systems and subsystems and are encoded as variations in:生物信號是傳達生物系統行為信息的可測量量。它們促進系統與子系統之間的通信，並以以下形式編碼：
+
+Electrical Energy: Ion-based signals (e.g., Na⁺, K⁺) in ECG (heart) or EMG (muscle).電能：基於離子（例如Na⁺、K⁺）的信號，如心電圖（ECG，心臟）或肌電圖（EMG，肌肉）。
+Chemical Energy: Hormone or neurotransmitter concentrations.化學能：激素或神經傳遞物質濃度。
+Mechanical Energy: Blood pressure, cardiac valve sounds, or motion.機械能：血壓、心臟瓣膜聲音或運動。
+
+Common Biosignals in Medicine | 醫學中常見的生物信號
+ECG: Monitors heart electrical activity (e.g., for arrhythmias).  
+EMG: Measures muscle activity (e.g., for neuromuscular disorders).  
+Blood Pressure: Tracks cardiovascular dynamics.  
+Heart Rate: Reflects cardiac response.  
+Blood Gas Concentrations: Monitors respiratory function (e.g., CO₂, O₂).  
+Cardiac Valve Sounds: Detects valve function.  
+
+心電圖（ECG）：監測心臟電活動（例如心律不整）。  
+
+肌電圖（EMG）：測量肌肉活動（例如神經肌肉疾病）。  
+血壓：追蹤心血管動態。  
+心率：反映心臟反應。  
+血氣濃度：監測呼吸功能（例如CO₂、O₂）。  
+心臟瓣膜聲音：檢測瓣膜功能。
+
+Key Concepts | 核心概念
+Input-Output Model: Describes how biological systems process stimuli (inputs) to produce responses (outputs). Example: The immune system detects pathogens (input) and produces antibodies (output).  
+Analog vs. Digital Biosignals:  
+Analog: Continuous signals (e.g., raw ECG waveform).  
+Digital: Discrete, sampled signals for analysis (e.g., digitized ECG).  
+
+
+Encoding and Sampling:  
+Encoding: Biosignals are naturally encoded (e.g., electrical pulses in neurons).  
+Sampling: Converts analog signals to digital via sampling (regular intervals), quantization (discrete values), and encoding (binary data).  
+
+
+MATLAB Simulation: Used to model biosignal acquisition, such as sampling an ECG signal, adding noise, and converting to digital format.  
+
+輸入-輸出模型：描述生物系統如何處理刺激（輸入）以產生反應（輸出）。示例：免疫系統檢測病原體（輸入）並產生抗體（輸出）。  
+
+模擬與數位生物信號：  
+模擬：連續信號（例如原始心電圖波形）。  
+數位：離散、採樣信號用於分析（例如數位化的心電圖）。  
+
+
+編碼與採樣：  
+編碼：生物信號自然編碼（例如神經元中的電脈衝）。  
+採樣：通過採樣（固定間隔）、量化（離散值）和編碼（二進制數據）將模擬信號轉換為數位。  
+
+
+MATLAB模擬：用於模擬生物信號採集，例如採樣心電圖信號、添加噪聲並轉換為數位格式。
+
+Why This Matters | 為什麼重要Understanding biosignals and biological systems is critical for:  
+
+Diagnosing and monitoring medical conditions (e.g., heart disease, neurological disorders).  
+Designing medical devices (e.g., pacemakers, wearable sensors).  
+Advancing research in physiology and biomedical engineering.理解生物信號和生物系統對於以下方面至關重要：  
+診斷和監測醫療狀況（例如心臟病、神經疾病）。  
+設計醫療設備（例如心臟起搏器、可穿戴傳感器）。  
+推進生理學和生物醫學工程研究。
+
+This course will equip you with the tools to analyze biosignals, interpret system behavior, and apply computational techniques to real-world physiological data.本課程將為您提供分析生物信號、解釋系統行為以及將計算技術應用於現實世界生理數據的工具。
+Next Steps | 後續步驟Explore the input-output model and signal processing through hands-on MATLAB exercises and case studies on biosignals like ECG and EMG.通過MATLAB實操練習和生物信號（如心電圖和肌電圖）的案例研究，探索輸入-輸出模型和信號處理。
+
+Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
 Systems / 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
+Input-Output / Stimuli-Response Model | 輸入-輸出 / 刺激-響應模型
+Biological systems can be modeled as input-output systems where stimuli (e.g., drugs, mechanical force) produce responses (e.g., motion, reflexes).  
+生物系統可被建模為輸入-輸出系統，其中刺激（例如藥物、機械力）產生響應（例如運動、反射）。
+
 Single Input Single Output (SISO) / 單輸入單輸出 (SISO)
 Example: Thermistor / 範例：熱敏電阻
 Input: Temperature / 輸入：溫度
@@ -45,7 +127,78 @@ subgraph Inputs
 A --&gt; B --&gt; C
 end
 
-Signals / 信號Signals represent data over time.信號表示隨時間變化的數據。
+Analog and Digital Biosignals | 模擬和數位生物信號
+Biosignals are either continuous analog (fluctuations over time) or discrete digital (encoded sequences). Conversion to electrical signals uses biotransducers (e.g., ECG electrodes).  
+生物信號要么是連續模擬（隨時間波動），要么是離散數位（編碼序列）。轉換為電信號使用生物轉換器（例如心電圖電極）。
+
+Comparison | 比較
+
+
+
+Feature
+Analog Signal
+Digital Signal
+
+
+
+
+Representation
+Continuous
+Discrete
+
+
+Examples
+ECG waveform
+Sampled ECG
+
+
+Pros
+More detail
+Easier processing
+
+
+Cons
+Noise-sensitive
+Risk of aliasing
+
+
+
+
+Signal Encoding | 信號編碼
+Biosignals use continuous (analog) or discrete (digital) encoding.  
+生物信號使用連續（模擬）或離散（數位）編碼。
+
+Continuous Encoding | 連續編碼
+Encodes information into continuous fluctuations, e.g., temperature to voltage (Voltage = (Temp + 10) * 0.5).  
+將信息編碼為連續波動，例如溫度到電壓（電壓 = (溫度 + 10) * 0.5）。
+
+Sampling | 採樣
+Converts continuous signals to digital by sampling in time (Ts = 1/fs) and amplitude. Nyquist rate: fs ≥ 2 * highest frequency to avoid aliasing.
+通過時間（Ts = 1/fs）和幅度採樣將連續信號轉換為數位。Nyquist率：fs ≥ 2 * 最高頻率以避免混疊。
+
+Example | 示例
+75 mmHg (0-100 mmHg to 0-5V) on 10-bit ADC gives 3.75V, digital value ≈ 768.
+75 mmHg（0-100 mmHg映射到0-5V）在10位ADC上給出3.75V，數字值 ≈ 768。
+
+ECG Sampling | 心電圖採樣
+For 120 Hz ECG, minimum fs = 240 Hz. At 250 Hz, 2500 samples in 10s. Downsampling to 125 Hz risks aliasing.
+對於120 Hz心電圖，最小fs = 240 Hz。在250 Hz，10秒內2500樣本。下採樣到125 Hz有混疊風險。
+
+
+Lecture 2: Signal Properties - Basic Measurements | 講座2：信號屬性 - 基本測量
+This lecture covers mean, variance, RMS, and averaging for continuous and discrete signals.
+本講座涵蓋連續和離散信號的均值、變異數、RMS和平均。
+
+Continuous-Time Signals | 連續時間信號
+Mean μ = (1/T) ∫ x(t) dt (e.g., ECG baseline correction). Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/T) ∫ x(t)^2 dt ) measures power. For sinusoid, RMS = A/√2.
+均值 μ = (1/T) ∫ x(t) dt（例如心電圖基線修正）。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/T) ∫ x(t)^2 dt ) 測量功率。對於正弦，RMS = A/√2。English Example: x(t) = 2 sin(100π t), RMS = 1.414.繁體中文示例: x(t) = 2 sin(100π t)，RMS = 1.414。Discrete-Time Signals | 離散時間信號
+Mean μ = (1/N) Σ x[n]. Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/N) Σ x[n]^2 ).
+均值 μ = (1/N) Σ x[n]。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/N) Σ x[n]^2 )。English Example: x[n] = 1,3,5,4,2, RMS ≈ 3.317.繁體中文示例: x[n] = 1,3,5,4,2，RMS ≈ 3.317。
+
+Averaging | 平均
+Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals for noise reduction.
+平均通過1/√N減少噪聲。集成平均對齊多個信號以減少噪聲。
+
 
 HW1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。
 🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
@@ -83,39 +236,60 @@ Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗
 Plot:
 One raw trial
 avg25
-avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
-🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
 
+
+
+
+avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
+🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
 
 ver is a matrix or 2D array. 是一個矩陣或二維陣列。
 1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
-: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:) 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
 mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
 avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
 
-🔍 Part III: Noise Reduction Evaluation✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
+🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
 
 Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
 Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
-
 One raw trial
 avg25
 avg100 to estimate noise.
 
 
 Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
-
-std_ver, std_avg25, std_avg100load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
-
+std_ver, std_avg25, std_avg100
 
 
 
+load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
 📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
 
 Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
 Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
-Discuss any differences and possible reasons (e.g., non-Gaussian noise, signal variability). 討論差異與可能原因（如非高斯噪聲、試驗間變異等）。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
-Calculate result Actual STD (Raw): 1.0405Actual STD (Avg25): 0.1986 | Expected: 0.2081Actual STD (Avg100): 0.1005 | Expected: 0.1040
+Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
+Actual STD (Raw): 1.0405
+Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
+Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
+
+Discussion of DiscrepanciesSeveral factors could explain the slight differences between actual and expected STD values:
+
+Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
+Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
+Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
+Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
+Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
+
+差異原因探討儘管差異不大，仍可能由以下因素造成：
+
+非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
+試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
+基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
+樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
+前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
 
 ]]></content>
       <categories>
@@ -124,8 +298,12 @@ Calculate result Actual STD (Raw): 1.0405Actual STD (Avg25): 0.1986 | Expected: 
       <tags>
         <tag>Signaling</tag>
         <tag>System</tag>
+        <tag>BME</tag>
         <tag>CityU</tag>
         <tag>matlab</tag>
+        <tag>生物信號</tag>
+        <tag>生物系統</tag>
+        <tag>生物醫學工程</tag>
       </tags>
   </entry>
   <entry>
