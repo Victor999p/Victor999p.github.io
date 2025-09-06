@@ -4,7 +4,7 @@
   <url>
     <loc>https://victor999p.github.io/manifest.json</loc>
     
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://victor999p.github.io/link/index.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://victor999p.github.io/movie/index.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>https://victor999p.github.io/music/index.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,34 +40,7 @@
   <url>
     <loc>https://victor999p.github.io/tags/index.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/index.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/comments/index.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,34 +49,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/fe3551ce.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/a4367020.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/98acdb98.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/fe3551ce.html</loc>
-    
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +58,70 @@
   <url>
     <loc>https://victor999p.github.io/about/index.html</loc>
     
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/index.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/comments/index.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/fe3551ce.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/a4367020.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/98acdb98.html</loc>
+    
+    <lastmod>2025-09-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,57 +130,78 @@
 
   <url>
     <loc>https://victor999p.github.io/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://victor999p.github.io/tags/Python/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://victor999p.github.io/tags/Signaling/</loc>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/tags/CS1302/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <loc>https://victor999p.github.io/tags/System/</loc>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/CityU/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/matlab/</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Python/</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/CS1302/</loc>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/Beginner/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/introduction/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/first/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/AI-generate/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -179,15 +209,22 @@
 
   
   <url>
+    <loc>https://victor999p.github.io/categories/Biomedical-Engineering/</loc>
+    <lastmod>2025-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://victor999p.github.io/categories/Programming/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Test/</loc>
-    <lastmod>2025-09-02</lastmod>
+    <lastmod>2025-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -1,6 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Biomedical Signals and Systems *UNFINISHED</title>
+    <url>/posts/6778c1a2.html</url>
+    <content><![CDATA[Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
+Systems / 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
+Single Input Single Output (SISO) / 單輸入單輸出 (SISO)
+Example: Thermistor / 範例：熱敏電阻
+Input: Temperature / 輸入：溫度
+System: Thermistor / 系統：熱敏電阻
+Output: Voltage / 輸出：電壓Temperature —&gt; [Thermistor] —&gt; Voltage溫度 —&gt; [熱敏電阻] —&gt; 電壓
+
+
+
+Multiple Input Multiple Output (MIMO) / 多輸入多輸出 (MIMO)
+Example: Human Body / 範例：人體
+Inputs: Exercise, Sweat, Food / 輸入：運動、出汗、食物
+Outputs: Body Weight (multiple factors influencing) / 輸出：體重（多種因素影響）
+
+
+graph LR
+%% SISO (Single Input Single Output)
+subgraph SISO [SISO 單輸入單輸出]
+    A1[Temperature 溫度] --&gt; B1[Thermistor 熱敏電阻] --&gt; C1[Voltage 電壓]
+end
+
+%% MIMO (Multiple Input Multiple Output)
+subgraph MIMO [MIMO 多輸入多輸出]
+    A2[Exercise 運動]
+    A3[Fuel 燃料]
+    A4[Food 食物]
+    A2 --&gt; B2[Body 身體]
+    A3 --&gt; B2
+    A4 --&gt; B2
+    B2--&gt; C2[Sweat 出汗]
+    B2 --&gt; C3[Body Weight 體重]
+end
+
+%% General System Model
+subgraph Inputs
+  A[Input 輸入]
+  B[System 系統]
+  C[Output 輸出]
+A --&gt; B --&gt; C
+end
+
+Signals / 信號Signals represent data over time.信號表示隨時間變化的數據。
+
+HW1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。
+🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
+
+
+Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
+
+
+
+Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
+
+
+
+Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
+
+
+
+load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
+🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
+
+size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
+0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
+The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
+
+size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
+
+0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
+結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
+
+📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
+
+Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
+First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
+Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
+Plot:
+One raw trial
+avg25
+avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
+🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+
+
+ver is a matrix or 2D array. 是一個矩陣或二維陣列。
+1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
+: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:) 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
+avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
+
+🔍 Part III: Noise Reduction Evaluation✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
+
+Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
+Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
+
+One raw trial
+avg25
+avg100 to estimate noise.
+
+
+Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
+
+std_ver, std_avg25, std_avg100load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
+
+
+
+
+📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
+
+Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
+Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
+Discuss any differences and possible reasons (e.g., non-Gaussian noise, signal variability). 討論差異與可能原因（如非高斯噪聲、試驗間變異等）。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Calculate result Actual STD (Raw): 1.0405Actual STD (Avg25): 0.1986 | Expected: 0.2081Actual STD (Avg100): 0.1005 | Expected: 0.1040
+
+]]></content>
+      <categories>
+        <category>Biomedical Engineering</category>
+      </categories>
+      <tags>
+        <tag>Signaling</tag>
+        <tag>System</tag>
+        <tag>CityU</tag>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -122,9 +250,9 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
         <category>Programming</category>
       </categories>
       <tags>
+        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
-        <tag>CityU</tag>
         <tag>Beginner</tag>
       </tags>
   </entry>
@@ -204,9 +332,9 @@ numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]prin
         <category>Programming</category>
       </categories>
       <tags>
+        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
-        <tag>CityU</tag>
         <tag>Beginner</tag>
         <tag>AI generate</tag>
       </tags>
@@ -273,9 +401,9 @@ ConclusionThese Python snippets cover common tasks and demonstrate Python’s si
         <category>Programming</category>
       </categories>
       <tags>
+        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
-        <tag>CityU</tag>
         <tag>Beginner</tag>
         <tag>AI generate</tag>
       </tags>
