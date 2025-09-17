@@ -1,312 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Biomedical Signals and Systems | 生物信號與生物系統 *UNFINISHED</title>
-    <url>/posts/6778c1a2.html</url>
-    <content><![CDATA[Introduction to Biosignals and Biological Systems | 生物信號與生物系統簡介Course Overview | 課程概述This course explores biosignals and biological systems, focusing on their roles in physiological processes, measurement, and analysis. Students will learn how biosignals facilitate communication within biological systems, how these signals are processed, and how tools like MATLAB can be used to simulate signal acquisition and conversion. The course bridges biology, engineering, and data analysis to understand physiological functions and their applications in medicine.本課程探討生物信號與生物系統，重點在於它們在生理過程、測量和分析中的作用。學生將學習生物信號如何促進生物系統內的通信、這些信號如何被處理，以及如何使用MATLAB等工具模擬信號採集和轉換。本課程結合生物學、工程學和數據分析，以理解生理功能及其在醫學中的應用。
-Learning Objectives | 學習目標
-Define biosignals and biological systems.定義生物信號和生物系統。
-Explain the input-output model in physiological contexts.解釋生理環境中的輸入-輸出模型。
-Differentiate between analog and digital biosignals.區分模擬和數位生物信號。
-Describe the encoding and sampling process of biosignals.描述生物信號的編碼和採樣過程。
-Apply MATLAB to simulate biosignal acquisition and conversion.使用MATLAB模擬生物信號的採集和轉換。
-
-What Are Biological Systems? | 什麼是生物系統？A biological system is a collection of physiological processes or components that interact to perform a specific function. Examples include:生物系統是由生理過程或組件相互作用以執行特定功能的集合。示例包括：
-
-Cardiovascular System: Delivers oxygenated blood to tissues.心血管系統：將含氧血液輸送到組織。
-Nervous System: Transmits electrical signals for communication and control.神經系統：傳輸電信號以進行通信和控制。
-Endocrine System: Uses hormones for regulation.內分泌系統：使用激素進行調節。
-Immune System: Responds to pathogens with inputs (e.g., antigens) and outputs (e.g., antibodies).免疫系統：對病原體作出反應，輸入（例如抗原）和輸出（例如抗體）。
-
-English Discussion Prompt: How would you classify the immune system in terms of an input-output model?Example: Inputs (pathogens) → Processing (immune cell signaling) → Outputs (antibody production, inflammation).繁體中文討論提示：你會如何根據輸入-輸出模型對免疫系統進行分類？示例：輸入（病原體）→ 處理（免疫細胞信號傳導）→ 輸出（抗體產生、炎症）。
-What Are Biosignals? | 什麼是生物信號？Biosignals are measurable quantities that convey information about the behavior of biological systems. They enable communication between systems and subsystems and are encoded as variations in:生物信號是傳達生物系統行為信息的可測量量。它們促進系統與子系統之間的通信，並以以下形式編碼：
-
-Electrical Energy: Ion-based signals (e.g., Na⁺, K⁺) in ECG (heart) or EMG (muscle).電能：基於離子（例如Na⁺、K⁺）的信號，如心電圖（ECG，心臟）或肌電圖（EMG，肌肉）。
-Chemical Energy: Hormone or neurotransmitter concentrations.化學能：激素或神經傳遞物質濃度。
-Mechanical Energy: Blood pressure, cardiac valve sounds, or motion.機械能：血壓、心臟瓣膜聲音或運動。
-
-Common Biosignals in Medicine | 醫學中常見的生物信號
-ECG: Monitors heart electrical activity (e.g., for arrhythmias).  
-EMG: Measures muscle activity (e.g., for neuromuscular disorders).  
-Blood Pressure: Tracks cardiovascular dynamics.  
-Heart Rate: Reflects cardiac response.  
-Blood Gas Concentrations: Monitors respiratory function (e.g., CO₂, O₂).  
-Cardiac Valve Sounds: Detects valve function.  
-
-心電圖（ECG）：監測心臟電活動（例如心律不整）。  
-
-肌電圖（EMG）：測量肌肉活動（例如神經肌肉疾病）。  
-血壓：追蹤心血管動態。  
-心率：反映心臟反應。  
-血氣濃度：監測呼吸功能（例如CO₂、O₂）。  
-心臟瓣膜聲音：檢測瓣膜功能。
-
-Key Concepts | 核心概念
-Input-Output Model: Describes how biological systems process stimuli (inputs) to produce responses (outputs). Example: The immune system detects pathogens (input) and produces antibodies (output).  
-Analog vs. Digital Biosignals:  
-Analog: Continuous signals (e.g., raw ECG waveform).  
-Digital: Discrete, sampled signals for analysis (e.g., digitized ECG).  
-
-
-Encoding and Sampling:  
-Encoding: Biosignals are naturally encoded (e.g., electrical pulses in neurons).  
-Sampling: Converts analog signals to digital via sampling (regular intervals), quantization (discrete values), and encoding (binary data).  
-
-
-MATLAB Simulation: Used to model biosignal acquisition, such as sampling an ECG signal, adding noise, and converting to digital format.  
-
-輸入-輸出模型：描述生物系統如何處理刺激（輸入）以產生反應（輸出）。示例：免疫系統檢測病原體（輸入）並產生抗體（輸出）。  
-
-模擬與數位生物信號：  
-模擬：連續信號（例如原始心電圖波形）。  
-數位：離散、採樣信號用於分析（例如數位化的心電圖）。  
-
-
-編碼與採樣：  
-編碼：生物信號自然編碼（例如神經元中的電脈衝）。  
-採樣：通過採樣（固定間隔）、量化（離散值）和編碼（二進制數據）將模擬信號轉換為數位。  
-
-
-MATLAB模擬：用於模擬生物信號採集，例如採樣心電圖信號、添加噪聲並轉換為數位格式。
-
-Why This Matters | 為什麼重要Understanding biosignals and biological systems is critical for:  
-
-Diagnosing and monitoring medical conditions (e.g., heart disease, neurological disorders).  
-Designing medical devices (e.g., pacemakers, wearable sensors).  
-Advancing research in physiology and biomedical engineering.理解生物信號和生物系統對於以下方面至關重要：  
-診斷和監測醫療狀況（例如心臟病、神經疾病）。  
-設計醫療設備（例如心臟起搏器、可穿戴傳感器）。  
-推進生理學和生物醫學工程研究。
-
-This course will equip you with the tools to analyze biosignals, interpret system behavior, and apply computational techniques to real-world physiological data.本課程將為您提供分析生物信號、解釋系統行為以及將計算技術應用於現實世界生理數據的工具。
-Next Steps | 後續步驟Explore the input-output model and signal processing through hands-on MATLAB exercises and case studies on biosignals like ECG and EMG.通過MATLAB實操練習和生物信號（如心電圖和肌電圖）的案例研究，探索輸入-輸出模型和信號處理。
-
-Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
-Systems / 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
-Input-Output / Stimuli-Response Model | 輸入-輸出 / 刺激-響應模型
-Biological systems can be modeled as input-output systems where stimuli (e.g., drugs, mechanical force) produce responses (e.g., motion, reflexes).  
-生物系統可被建模為輸入-輸出系統，其中刺激（例如藥物、機械力）產生響應（例如運動、反射）。
-
-Single Input Single Output (SISO) / 單輸入單輸出 (SISO)
-Example: Thermistor / 範例：熱敏電阻
-Input: Temperature / 輸入：溫度
-System: Thermistor / 系統：熱敏電阻
-Output: Voltage / 輸出：電壓Temperature —&gt; [Thermistor] —&gt; Voltage溫度 —&gt; [熱敏電阻] —&gt; 電壓
-
-
-
-Multiple Input Multiple Output (MIMO) / 多輸入多輸出 (MIMO)
-Example: Human Body / 範例：人體
-Inputs: Exercise, Sweat, Food / 輸入：運動、出汗、食物
-Outputs: Body Weight (multiple factors influencing) / 輸出：體重（多種因素影響）
-
-
-graph LR
-%% SISO (Single Input Single Output)
-subgraph SISO [SISO 單輸入單輸出]
-    A1[Temperature 溫度] --&gt; B1[Thermistor 熱敏電阻] --&gt; C1[Voltage 電壓]
-end
-
-%% MIMO (Multiple Input Multiple Output)
-subgraph MIMO [MIMO 多輸入多輸出]
-    A2[Exercise 運動]
-    A3[Fuel 燃料]
-    A4[Food 食物]
-    A2 --&gt; B2[Body 身體]
-    A3 --&gt; B2
-    A4 --&gt; B2
-    B2--&gt; C2[Sweat 出汗]
-    B2 --&gt; C3[Body Weight 體重]
-end
-
-%% General System Model
-subgraph Inputs
-  A[Input 輸入]
-  B[System 系統]
-  C[Output 輸出]
-A --&gt; B --&gt; C
-end
-
-Analog and Digital Biosignals | 模擬和數位生物信號
-Biosignals are either continuous analog (fluctuations over time) or discrete digital (encoded sequences). Conversion to electrical signals uses biotransducers (e.g., ECG electrodes).  
-生物信號要么是連續模擬（隨時間波動），要么是離散數位（編碼序列）。轉換為電信號使用生物轉換器（例如心電圖電極）。
-
-Comparison | 比較
-
-
-
-Feature
-Analog Signal
-Digital Signal
-
-
-
-
-Representation
-Continuous
-Discrete
-
-
-Examples
-ECG waveform
-Sampled ECG
-
-
-Pros
-More detail
-Easier processing
-
-
-Cons
-Noise-sensitive
-Risk of aliasing
-
-
-
-
-Signal Encoding | 信號編碼
-Biosignals use continuous (analog) or discrete (digital) encoding.  
-生物信號使用連續（模擬）或離散（數位）編碼。
-
-Continuous Encoding | 連續編碼
-Encodes information into continuous fluctuations, e.g., temperature to voltage (Voltage = (Temp + 10) * 0.5).  
-將信息編碼為連續波動，例如溫度到電壓（電壓 = (溫度 + 10) * 0.5）。
-
-Sampling | 採樣
-Converts continuous signals to digital by sampling in time (Ts = 1/fs) and amplitude. Nyquist rate: fs ≥ 2 * highest frequency to avoid aliasing.
-通過時間（Ts = 1/fs）和幅度採樣將連續信號轉換為數位。Nyquist率：fs ≥ 2 * 最高頻率以避免混疊。
-
-Example | 示例
-75 mmHg (0-100 mmHg to 0-5V) on 10-bit ADC gives 3.75V, digital value ≈ 768.
-75 mmHg（0-100 mmHg映射到0-5V）在10位ADC上給出3.75V，數字值 ≈ 768。
-
-ECG Sampling | 心電圖採樣
-For 120 Hz ECG, minimum fs = 240 Hz. At 250 Hz, 2500 samples in 10s. Downsampling to 125 Hz risks aliasing.
-對於120 Hz心電圖，最小fs = 240 Hz。在250 Hz，10秒內2500樣本。下採樣到125 Hz有混疊風險。
-
-
-Lecture 2: Signal Properties - Basic Measurements | 講座2：信號屬性 - 基本測量
-This lecture covers mean, variance, RMS, and averaging for continuous and discrete signals.
-本講座涵蓋連續和離散信號的均值、變異數、RMS和平均。
-
-Continuous-Time Signals | 連續時間信號
-Mean μ = (1/T) ∫ x(t) dt (e.g., ECG baseline correction). Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/T) ∫ x(t)^2 dt ) measures power. For sinusoid, RMS = A/√2.
-均值 μ = (1/T) ∫ x(t) dt（例如心電圖基線修正）。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/T) ∫ x(t)^2 dt ) 測量功率。對於正弦，RMS = A/√2。English Example: x(t) = 2 sin(100π t), RMS = 1.414.繁體中文示例: x(t) = 2 sin(100π t)，RMS = 1.414。Discrete-Time Signals | 離散時間信號
-Mean μ = (1/N) Σ x[n]. Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/N) Σ x[n]^2 ).
-均值 μ = (1/N) Σ x[n]。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/N) Σ x[n]^2 )。English Example: x[n] = 1,3,5,4,2, RMS ≈ 3.317.繁體中文示例: x[n] = 1,3,5,4,2，RMS ≈ 3.317。
-
-Averaging | 平均
-Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals for noise reduction.
-平均通過1/√N減少噪聲。集成平均對齊多個信號以減少噪聲。
-
-
-HW1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。
-🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
-
-
-Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
-
-
-
-Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
-
-
-
-Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
-
-
-
-load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
-🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
-
-size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
-0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
-The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
-
-size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
-
-0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
-結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
-
-📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
-
-Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
-First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
-Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
-Plot:
-One raw trial
-avg25
-avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
-
-
-
-
-avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
-🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
-
-ver is a matrix or 2D array. 是一個矩陣或二維陣列。
-1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
-**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
-mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
-avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
-
-🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
-
-Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
-Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
-One raw trial
-avg25
-avg100 to estimate noise.
-
-
-Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
-std_ver, std_avg25, std_avg100
-
-
-
-load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
-📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
-
-Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
-Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
-Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
-Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
-Actual STD (Raw): 1.0405
-Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
-Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
-
-Discussion of DiscrepanciesSeveral factors could explain the slight differences between actual and expected STD values:
-
-Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
-Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
-Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
-Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
-Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
-
-差異原因探討儘管差異不大，仍可能由以下因素造成：
-
-非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
-試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
-基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
-樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
-前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
-
-]]></content>
-      <categories>
-        <category>Biomedical Engineering</category>
-      </categories>
-      <tags>
-        <tag>Signaling</tag>
-        <tag>System</tag>
-        <tag>BME</tag>
-        <tag>CityU</tag>
-        <tag>matlab</tag>
-        <tag>生物信號</tag>
-        <tag>生物系統</tag>
-        <tag>生物醫學工程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -428,30 +122,10 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
+        <tag>CityU</tag>
         <tag>Beginner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Test 01</title>
-    <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[Welcome to my blog!This is my first post using Hexo and the Butterfly theme.
-Why I started this blog
-To share my journey of self-improvement
-To document what I learn about technology
-To connect with like-minded people
-
-def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
-Output:Hello, Hexo + Butterfly + Python!Stay tuned for more updates!
-]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>introduction</tag>
-        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -510,9 +184,9 @@ numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]prin
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
+        <tag>CityU</tag>
         <tag>Beginner</tag>
         <tag>AI generate</tag>
       </tags>
@@ -579,9 +253,9 @@ ConclusionThese Python snippets cover common tasks and demonstrate Python’s si
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>CityU</tag>
         <tag>Python</tag>
         <tag>CS1302</tag>
+        <tag>CityU</tag>
         <tag>Beginner</tag>
         <tag>AI generate</tag>
       </tags>
@@ -589,7 +263,15 @@ ConclusionThese Python snippets cover common tasks and demonstrate Python’s si
   <entry>
     <title>Test 01</title>
     <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[change?
+    <content><![CDATA[Welcome to my blog!This is my first post using Hexo and the Butterfly theme.
+Why I started this blog
+To share my journey of self-improvement
+To document what I learn about technology
+To connect with like-minded people
+
+def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
+Output:Hello, Hexo + Butterfly + Python!Stay tuned for more updates!
+test 123
 ]]></content>
       <categories>
         <category>Test</category>
@@ -597,6 +279,860 @@ ConclusionThese Python snippets cover common tasks and demonstrate Python’s si
       <tags>
         <tag>introduction</tag>
         <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test 02</title>
+    <url>/posts/fe3551ce.html</url>
+    <content><![CDATA[change?
+表格带有对齐格式的表格
+
+
+
+标题1
+标题2
+标题2
+
+
+
+
+文本好短
+文本不短也不长
+文本好长文本好长文本好长
+
+
+文本好长文本好长文本好长
+文本好短
+文本不短也不长
+
+
+
+
+居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
+html写法
+  
+    标题1
+    标题2
+    标题3
+  
+  
+    文本好短
+    文本不短也不长
+    文本好长文本好长文本好长
+  
+  
+    文本好长文本好长文本好长
+    文本好短
+    文本不短也不长
+  
+&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
+这种方式，表格上方会留出大量空白
+解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
+mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
+
+    flowchart LR
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+  
+
+    pie
+title Key elements in Product X
+&quot;Calcium&quot; : 42.96
+&quot;Potassium&quot; : 50.05
+&quot;Magnesium&quot; : 10.01
+&quot;Iron&quot; : 5
+  
+&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>introduction</tag>
+        <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-1 | 生物材料-1</title>
+    <url>/posts/d1e61a5b.html</url>
+    <content><![CDATA[Lecture 1: History, Definition, and OutlineIntroduction
+Title: Materials for Biomedical Engineering
+Subtitle: Lecture 1: History, Definition, and Outline
+
+Lecture Outline
+Topics Covered:
+Definition of Biomaterials
+Characteristics of four generations
+Major market shares
+Requirements of biomaterials
+Major types and their pros and cons
+Forces in biomaterials
+Three aspects in biomaterials
+Restenosis
+Need for selection and processing of biomaterials
+
+
+
+Definition of Biomaterials
+Definition: Biomaterials are materials suitable for making devices to replace a part or function of the body in a safe, reliable, economic, and physiologically acceptable manner.
+
+Historical Context: The use of biomaterials dates back a long time, but the notion of biomaterials science emerged in the 1960s.
+
+
+The definition, though initially restricted, is continually improved and provides an overview of goals, needs, and potential applications.
+Clinical Needs for BiomaterialsStems from inability to treat many diseases, injuries, and conditions:
+
+Replacement of other therapy parts or procedures (total hip)
+Correct abnormalities (spinal cord)
+Improve function (pacemaker, stent)
+Structural, pharmaceutical effects: sutures, drug release
+
+Four Generations of Biomaterials
+        
+          Generation of Biomaterials
+
+        
+      
+        
+          1st-Generation
+
+        
+        First Generation:
+
+Restricted to materials available in the natura-environment.
+Used to simply repair organs.
+
+
+      
+        
+          2nd-Generation
+
+        
+         Second Generation:
+
+Spans a long period, starting with improvements in human knowledge and ending in the mid-20th century.
+Benefited from the  Industrial-Revolution.
+
+
+      
+        
+          3rd-Generation
+
+        
+        
+Third Generation:
+Began with the birth-of-polymers as promising materials.
+Built on scientific advancements in materials and their transformation, as well as understanding of living systems.
+
+
+
+
+      
+        
+          now
+
+        
+        
+Fourth Generation:
+Currently in its early stages.
+Combines “dreams and realities” with assistance from artificial-intelligence (AI).
+
+
+
+
+      
+Examples from the First Generation
+Etruscan Dental Bridge: Gold was one of the earliest biomaterials used in ancient civilizations.
+Oldest Known Prosthesis: A replacement for the right big toe found in a mummy from the necropolis of Thebes (circa 3,000 years ago).
+Burn Treatment: Use of tilapia skin for burns victims.Fish Skin Treatment
+
+
+
+
+
+Pros
+Cons
+
+
+
+
+Cost
+Process
+
+
+Biocompatible &amp; biodegradable
+Bacterial/pathogen risk
+
+
+Ethics
+Immune response
+
+
+Supply
+/
+
+
+Non-toxic
+/
+
+
+
+
+🔥 Burn Classification Table
+
+
+
+Damages / Symptoms
+First-Degree Burn
+Second-Degree Burn (Partial Thickness)
+Third-Degree Burn (Full Thickness)
+
+
+
+
+Damages epidermis (outer layer of skin)
+✓
+✓
+✓
+
+
+Damages dermis layer
+
+✓
+✓
+
+
+Damages tendons, bones
+
+
+✓
+
+
+Reddens skin
+✓
+✓
+
+
+
+Blisters
+
+✓
+
+
+
+Pain / white or black discoloration
+
+✓
+✓
+
+
+Damages nerve endings
+
+
+✓
+
+
+
+
+Discussion Questions
+Questions:
+Titanium vs. Polycaprolactone?
+Porous surface or smooth surface?
+Cell attractive or cell repellent?
+
+
+
+Take-Home Message
+Key Points:
+Definition of Biomaterials
+Characteristics of four generations
+Major market shares
+Requirements of biomaterials
+Major types and their pros and cons
+Forces in biomaterials
+Three aspects in biomaterials
+Restenosis
+Need for selection and processing of biomaterials
+
+
+
+History of Coronary Stents
+First Use: The first coronary stent was implanted in a patient in Toulouse, France, in 1986.
+Initial Consequences: Post-stent placement effects include:
+De-endothelialization
+Crushing of the plaque
+Stretching of the entire artery
+
+
+
+Stent Surgery Procedure
+Procedure: Involves inserting a catheter into the body, avoiding open-chest surgery.
+Patient Preference: Many patients prefer stenting due to its minimally invasive nature. No patients were excluded from stenting due to angiographic reasons or comorbidities, unlike traditional surgery.
+
+Minimally Invasive Surgery
+Definition: Uses small incisions instead of large ones, enabling complex procedures with:
+Less trauma to the body
+Reduced pain and scarring
+Quicker recovery times compared to traditional surgery
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>BME3123</category>
+      </categories>
+      <tags>
+        <tag>biomaterials</tag>
+        <tag>biomedical engineering</tag>
+        <tag>lecture notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials Lecture 2</title>
+    <url>/posts/f5cdc6c3.html</url>
+    <content><![CDATA[Lecture 2: Surface and Bulk Properties of BiomaterialsLecture Introduction
+Title: Surface and Bulk Properties of Biomaterials
+
+Three Aspects in Biomaterials
+Aspects:
+Biological materials or body
+Implant materials
+Interaction between the two in the body
+
+
+
+Surface and Bulk Properties Overview
+Surface Properties:
+Surface contact angle
+Scanning Electron Microscopy (SEM)
+Electron Spectroscopy for Chemical Analysis (ESCA or XPS)
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS)
+Raman spectroscopy
+
+
+Bulk Properties:
+Stress and strain
+Shear stress and shear strain
+Young’s modulus and shear modulus
+
+
+
+Surface Properties Characteristics
+Key Points:
+Surfaces have unique reactivity.
+The surface is inevitably different from the bulk.
+Surface molecules can exhibit considerable mobility.
+
+
+
+Surface Dynamics
+Observation: The movement of atoms and molecules near the surface in response to the external environment is highly significant.
+
+Protein-Surface Interaction
+Effect of Protein Size: Larger proteins with more amino acids can make more interactions with a surface.
+
+Surface Characteristics
+Factors:
+Roughness (A)
+Patterns (C)
+Wettability, surface mobility, chemical composition (B)
+Electrical charge, crystallinity (E)
+Heterogeneity (D &amp; F)
+
+
+
+Cosmetic Contact Lenses
+Context: Pigments in cosmetic contact lenses may alter surface properties, impacting comfort compared to clear lenses.
+Factors:
+Location and depth of pigment particles from the lens surface
+Coefficient of friction
+Surface roughness
+
+
+Source: Johnson &amp; Johnson Vision Inc, Eye Contact Lens, 2018 Nov; 44(2):S256
+
+Surface Analysis Considerations
+Challenges:
+All methods can alter the surface.
+Potential for artifacts requires corroborative information from multiple methods to construct a complete surface profile.
+
+
+
+Surface and Bulk Properties (Detailed)
+Surface Properties:
+Surface contact angle (hydrophobicity)
+SEM (roughness and patterns)
+ESCA or XPS (chemical composition)
+TOF-SIMS (chemical composition)
+Raman spectroscopy (chemical composition)
+
+
+Bulk Properties:
+Stress and strain (mechanical properties)
+Shear stress and shear strain (mechanical properties)
+Young’s modulus and shear modulus (mechanical properties)
+
+
+
+Surface Contact Angle
+Definition: Measures the balance between cohesive forces (liquid molecules attracted to each other) and adhesive forces (liquid molecules attracted to the surface).
+Purpose: Directly measures surface wettability; indirectly probes surface energy, roughness, heterogeneity, contamination, and molecular mobility.
+Equation:```latex\gamma{sl} = \gamma{sv} + \gamma_{lv} \cos \theta
+Where:
+
+(\gamma_{lv}): Liquid-vapor surface tension
+(\gamma_{sl}): Interfacial tension between solid and liquid
+(\gamma_{sv}): Surface energy of the solid
+(\theta): Contact angle
+
+
+
+Scanning Electron Microscopy (SEM)
+Function: Uses a high-energy electron beam (5-100 keV) rastered on a specimen under vacuum.
+Mechanism: Low-energy secondary electrons (1-20 eV) are emitted from impact points, with intensity depending on atomic composition and geometry.
+Note: Insulating materials require metallic coating; images reflect the coating surface, not the underlying material.
+
+SEM ImagingElectrons Used: Secondary and backscattered electrons are used for SEM imaging.
+Electron-Solid Interactions
+Regions:
+
+Secondary Electron (SE): Produced wherever primary electrons go, but only those near the surface reach the SE detector for imaging.
+Backscattered Electron (BSE): Produced with higher energy, travels farther than SE, provides better Z-contrast.
+X-ray Region: Used for Energy-Dispersive X-ray Spectroscopy (EDX), travels farther than BSE, best for analytical purposes.
+
+
+
+
+Applications:
+
+SE: Best spatial resolution
+BSE: Better Z-contrast
+EDX: Best for elemental analysis
+
+
+
+X-ray Photoelectron Spectroscopy (XPS/ESCA)
+Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements.
+
+Applications :
+
+Identifies all elements except H and He (concentrations &gt;0.1%).
+Semi-quantitative elemental surface composition (±10%).
+Provides molecular environment details (oxidation state, bonding atoms).
+Detects aromatic/unsaturated structures via shake-up transitions.
+Identifies organic groups using derivatization reactions.
+Non-destructive elemental depth profiles (~100 Å).
+Destructive depth profiles (thousands of Å) using argon etching (for inorganics).
+Lateral surface composition variations (spatial resolution 8-150 µm).
+Fingerprinting materials using valence band spectra and bonding orbitals.
+Studies on hydrated (frozen) surfaces.
+
+
+
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS)
+Mechanism: Bombards surface with accelerated ions, ejecting secondary ions, radicals, excited states, and neutrals. Only secondary ions are measured.
+Purpose: Analyzes elemental, isotopic, or molecular composition of the outermost 1-2 nm.
+
+Static SIMS : Uses low ion doses for analysis.When to Use EDX, ESCA, or SIMS
+EDX: For elemental composition of materials.
+ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental/chemical states with good energy resolution.
+SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis.
+
+Raman Spectroscopy
+Definition: Measures the energy difference (Raman shift) between incident and scattered light.
+Spectrum: Vertical axis (intensity of scattered light), horizontal axis (wavenumber of Raman shift, cm⁻¹).
+Example (Slide 41): Raman spectrum of tetrachloromethane (532 nm green laser):
+
+Stokes scattering: Lower wavenumber (longer wavelength), typically used for analysis.
+
+Anti-Stokes scattering: Higher wavenumber (shorter wavelength), also usable.
+
+Surface-Enhanced Raman Spectroscopy (SERS)
+Technique: Uses nanostructured metal surfaces (gold or silver) to amplify Raman scattering signals via localized surface plasmons, enabling ultra-sensitive detection (down to single-molecule level).
+
+Bulk Properties
+Role: Dictate the ability to carry loads without undue deflection, premature failure, or degradation.
+Properties:
+
+Mechanical (stress, strain, moduli)
+Thermal (response to heat)
+Optical (response to light)
+
+
+
+
+Categories (Slide 48):
+
+Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness).
+Extrinsic: Depend on microstructure (e.g., yield strength, optical/magnetic properties).
+
+
+
+Physical PropertiesExamples:
+
+Crystallinity
+Thermal transition points (melting point (T_m), glass transition point (T_g))
+Chemical composition
+
+Impact: Chemical composition affects bulk properties, surface chemistry, and other characteristics.
+
+
+Mechanical Properties
+Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact).
+Influence: Highly affected by physical and chemical characteristics.
+
+Tensile/Compressive Testing
+Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate.
+Setup: One end of the specimen is attached to a movable platform.
+
+Compression Testing
+Application: Common for biomaterials under compressive forces (e.g., orthopedic implants).
+Specimen: Cylindrical, with length at least twice the diameter.
+Calculation: Stress-strain calculated similarly to tensile tests, but values are negative.
+
+Note: Repetitive OCR errors (e.g., “She shear shear stress” in Slide 54, “W. Wet” in Slide 22) were excluded unless meaningful. Some slides (e.g., 4, 8, 20, 21) contain incomplete or erroneous data, so only relevant content was included.
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>BME3123</category>
+      </categories>
+      <tags>
+        <tag>biomaterials</tag>
+        <tag>biomedical engineering</tag>
+        <tag>lecture notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomedical Signals and Systems | 生物信號與生物系統 *UNFINISHED</title>
+    <url>/posts/6778c1a2.html</url>
+    <content><![CDATA[Introduction to Biosignals and Biological Systems | 生物信號與生物系統簡介Course Overview | 課程概述This course explores biosignals and biological systems, focusing on their roles in physiological processes, measurement, and analysis. Students will learn how biosignals facilitate communication within biological systems, how these signals are processed, and how tools like MATLAB can be used to simulate signal acquisition and conversion. The course bridges biology, engineering, and data analysis to understand physiological functions and their applications in medicine.本課程探討生物信號與生物系統，重點在於它們在生理過程、測量和分析中的作用。學生將學習生物信號如何促進生物系統內的通信、這些信號如何被處理，以及如何使用MATLAB等工具模擬信號採集和轉換。本課程結合生物學、工程學和數據分析，以理解生理功能及其在醫學中的應用。
+Learning Objectives | 學習目標
+Define biosignals and biological systems.定義生物信號和生物系統。
+Explain the input-output model in physiological contexts.解釋生理環境中的輸入-輸出模型。
+Differentiate between analog and digital biosignals.區分模擬和數位生物信號。
+Describe the encoding and sampling process of biosignals.描述生物信號的編碼和採樣過程。
+Apply MATLAB to simulate biosignal acquisition and conversion.使用MATLAB模擬生物信號的採集和轉換。
+
+What Are Biological Systems? | 什麼是生物系統？A biological system is a collection of physiological processes or components that interact to perform a specific function. Examples include:生物系統是由生理過程或組件相互作用以執行特定功能的集合。示例包括：
+
+Cardiovascular System: Delivers oxygenated blood to tissues.心血管系統：將含氧血液輸送到組織。
+Nervous System: Transmits electrical signals for communication and control.神經系統：傳輸電信號以進行通信和控制。
+Endocrine System: Uses hormones for regulation.內分泌系統：使用激素進行調節。
+Immune System: Responds to pathogens with inputs (e.g., antigens) and outputs (e.g., antibodies).免疫系統：對病原體作出反應，輸入（例如抗原）和輸出（例如抗體）。
+
+English Discussion Prompt: How would you classify the immune system in terms of an input-output model?Example: Inputs (pathogens) → Processing (immune cell signaling) → Outputs (antibody production, inflammation).繁體中文討論提示：你會如何根據輸入-輸出模型對免疫系統進行分類？示例：輸入（病原體）→ 處理（免疫細胞信號傳導）→ 輸出（抗體產生、炎症）。
+What Are Biosignals? | 什麼是生物信號？Biosignals are measurable quantities that convey information about the behavior of biological systems. They enable communication between systems and subsystems and are encoded as variations in:生物信號是傳達生物系統行為信息的可測量量。它們促進系統與子系統之間的通信，並以以下形式編碼：
+
+Electrical Energy: Ion-based signals (e.g., Na⁺, K⁺) in ECG (heart) or EMG (muscle).電能：基於離子（例如Na⁺、K⁺）的信號，如心電圖（ECG，心臟）或肌電圖（EMG，肌肉）。
+Chemical Energy: Hormone or neurotransmitter concentrations.化學能：激素或神經傳遞物質濃度。
+Mechanical Energy: Blood pressure, cardiac valve sounds, or motion.機械能：血壓、心臟瓣膜聲音或運動。
+
+Common Biosignals in Medicine | 醫學中常見的生物信號
+ECG: Monitors heart electrical activity (e.g., for arrhythmias).  
+EMG: Measures muscle activity (e.g., for neuromuscular disorders).  
+Blood Pressure: Tracks cardiovascular dynamics.  
+Heart Rate: Reflects cardiac response.  
+Blood Gas Concentrations: Monitors respiratory function (e.g., CO₂, O₂).  
+Cardiac Valve Sounds: Detects valve function.  
+
+心電圖（ECG）：監測心臟電活動（例如心律不整）。  
+
+肌電圖（EMG）：測量肌肉活動（例如神經肌肉疾病）。  
+血壓：追蹤心血管動態。  
+心率：反映心臟反應。  
+血氣濃度：監測呼吸功能（例如CO₂、O₂）。  
+心臟瓣膜聲音：檢測瓣膜功能。
+
+Key Concepts | 核心概念
+Input-Output Model: Describes how biological systems process stimuli (inputs) to produce responses (outputs). Example: The immune system detects pathogens (input) and produces antibodies (output).  
+Analog vs. Digital Biosignals:  
+Analog: Continuous signals (e.g., raw ECG waveform).  
+Digital: Discrete, sampled signals for analysis (e.g., digitized ECG).  
+
+
+Encoding and Sampling:  
+Encoding: Biosignals are naturally encoded (e.g., electrical pulses in neurons).  
+Sampling: Converts analog signals to digital via sampling (regular intervals), quantization (discrete values), and encoding (binary data).  
+
+
+MATLAB Simulation: Used to model biosignal acquisition, such as sampling an ECG signal, adding noise, and converting to digital format.  
+
+輸入-輸出模型：描述生物系統如何處理刺激（輸入）以產生反應（輸出）。示例：免疫系統檢測病原體（輸入）並產生抗體（輸出）。  
+
+模擬與數位生物信號：  
+模擬：連續信號（例如原始心電圖波形）。  
+數位：離散、採樣信號用於分析（例如數位化的心電圖）。  
+
+
+編碼與採樣：  
+編碼：生物信號自然編碼（例如神經元中的電脈衝）。  
+採樣：通過採樣（固定間隔）、量化（離散值）和編碼（二進制數據）將模擬信號轉換為數位。  
+
+
+MATLAB模擬：用於模擬生物信號採集，例如採樣心電圖信號、添加噪聲並轉換為數位格式。
+
+Why This Matters | 為什麼重要Understanding biosignals and biological systems is critical for:  
+
+Diagnosing and monitoring medical conditions (e.g., heart disease, neurological disorders).  
+Designing medical devices (e.g., pacemakers, wearable sensors).  
+Advancing research in physiology and biomedical engineering.理解生物信號和生物系統對於以下方面至關重要：  
+診斷和監測醫療狀況（例如心臟病、神經疾病）。  
+設計醫療設備（例如心臟起搏器、可穿戴傳感器）。  
+推進生理學和生物醫學工程研究。
+
+This course will equip you with the tools to analyze biosignals, interpret system behavior, and apply computational techniques to real-world physiological data.本課程將為您提供分析生物信號、解釋系統行為以及將計算技術應用於現實世界生理數據的工具。
+Next Steps | 後續步驟Explore the input-output model and signal processing through hands-on MATLAB exercises and case studies on biosignals like ECG and EMG.通過MATLAB實操練習和生物信號（如心電圖和肌電圖）的案例研究，探索輸入-輸出模型和信號處理。
+
+Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
+Systems / 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
+Input-Output / Stimuli-Response Model | 輸入-輸出 / 刺激-響應模型
+Biological systems can be modeled as input-output systems where stimuli (e.g., drugs, mechanical force) produce responses (e.g., motion, reflexes).  
+生物系統可被建模為輸入-輸出系統，其中刺激（例如藥物、機械力）產生響應（例如運動、反射）。
+
+Single Input Single Output (SISO) / 單輸入單輸出 (SISO)
+Example: Thermistor / 範例：熱敏電阻
+Input: Temperature / 輸入：溫度
+System: Thermistor / 系統：熱敏電阻
+Output: Voltage / 輸出：電壓
+    flowchart LR
+subgraph SISO [SISO 單輸入單輸出]
+  Temperature溫度 --&gt; Thermistor熱敏電阻 --&gt; Voltage電壓
+  end
+  
+
+
+
+
+Multiple Input Multiple Output (MIMO) / 多輸入多輸出 (MIMO)
+Example: Human Body / 範例：人體
+Inputs: Exercise, Sweat, Food / 輸入：運動、出汗、食物
+Outputs: Body Weight (multiple factors influencing) / 輸出：體重（多種因素影響）
+
+
+    flowchart LR
+  subgraph A[Input 輸入]
+    Exercise運動 --- Fuel燃料 --- Food食物
+    direction BT
+  end
+  subgraph B[System系統]
+    Body身體
+  end
+  subgraph C[Output 輸出]
+    Sweat出汗 --- Body-Weight體重
+    direction BT
+  end
+  A --&gt; B 
+  B --&gt; C
+  
+Analog and Digital Biosignals | 模擬和數位生物信號
+Biosignals are either continuous analog (fluctuations over time) or discrete digital (encoded sequences). Conversion to electrical signals uses biotransducers (e.g., ECG electrodes).  
+生物信號要么是連續模擬（隨時間波動），要么是離散數位（編碼序列）。轉換為電信號使用生物轉換器（例如心電圖電極）。
+
+Comparison | 比較
+
+
+
+Feature
+Analog Signal
+Digital Signal
+
+
+
+
+Representation
+Continuous
+Discrete
+
+
+Examples
+ECG waveform
+Sampled ECG
+
+
+Pros
+More detail
+Easier processing
+
+
+Cons
+Noise-sensitive
+Risk of aliasing
+
+
+
+
+Signal Encoding | 信號編碼
+Biosignals use continuous (analog) or discrete (digital) encoding.  
+生物信號使用連續（模擬）或離散（數位）編碼。
+
+Continuous Encoding | 連續編碼
+Encodes information into continuous fluctuations, e.g., temperature to voltage (Voltage = (Temp + 10) * 0.5).  
+將信息編碼為連續波動，例如溫度到電壓（電壓 = (溫度 + 10) * 0.5）。
+
+Sampling | 採樣
+Converts continuous signals to digital by sampling in time (Ts = 1/fs) and amplitude. Nyquist rate: fs ≥ 2 * highest frequency to avoid aliasing.
+通過時間（Ts = 1/fs）和幅度採樣將連續信號轉換為數位。Nyquist率：fs ≥ 2 * 最高頻率以避免混疊。
+
+Example | 示例
+75 mmHg (0-100 mmHg to 0-5V) on 10-bit ADC gives 3.75V, digital value ≈ 768.
+75 mmHg（0-100 mmHg映射到0-5V）在10位ADC上給出3.75V，數字值 ≈ 768。
+
+ECG Sampling | 心電圖採樣
+For 120 Hz ECG, minimum fs = 240 Hz. At 250 Hz, 2500 samples in 10s. Downsampling to 125 Hz risks aliasing.
+對於120 Hz心電圖，最小fs = 240 Hz。在250 Hz，10秒內2500樣本。下採樣到125 Hz有混疊風險。
+
+
+Lecture 2: Signal Properties - Basic Measurements | 講座2：信號屬性 - 基本測量
+This lecture covers mean, variance, RMS, and averaging for continuous and discrete signals.
+本講座涵蓋連續和離散信號的均值、變異數、RMS和平均。
+
+Continuous-Time Signals | 連續時間信號
+Mean μ = (1/T) ∫ x(t) dt (e.g., ECG baseline correction). Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/T) ∫ x(t)^2 dt ) measures power. For sinusoid, RMS = A/√2.
+均值 μ = (1/T) ∫ x(t) dt（例如心電圖基線修正）。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/T) ∫ x(t)^2 dt ) 測量功率。對於正弦，RMS = A/√2。English Example: x(t) = 2 sin(100π t), RMS = 1.414.繁體中文示例: x(t) = 2 sin(100π t)，RMS = 1.414。Discrete-Time Signals | 離散時間信號
+Mean μ = (1/N) Σ x[n]. Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/N) Σ x[n]^2 ).
+均值 μ = (1/N) Σ x[n]。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/N) Σ x[n]^2 )。English Example: x[n] = 1,3,5,4,2, RMS ≈ 3.317.繁體中文示例: x[n] = 1,3,5,4,2，RMS ≈ 3.317。
+
+Averaging | 平均
+Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals for noise reduction.
+平均通過1/√N減少噪聲。集成平均對齊多個信號以減少噪聲。
+
+
+]]></content>
+      <categories>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>CityU</tag>
+        <tag>Signaling</tag>
+        <tag>System</tag>
+        <tag>BME</tag>
+        <tag>matlab</tag>
+        <tag>生物信號</tag>
+        <tag>生物系統</tag>
+        <tag>生物醫學工程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HW for Biomedical Signals and Systems | 生物信號與生物系統</title>
+    <url>/posts/1775fd89.html</url>
+    <content><![CDATA[HW1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。
+🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
+
+
+Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
+
+
+
+Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
+
+
+
+Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
+
+
+
+load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
+🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
+
+size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
+0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
+The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
+
+size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
+
+0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
+結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
+
+📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
+
+Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
+First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
+Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
+Plot:
+One raw trial
+avg25
+avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
+
+
+
+
+avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
+🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+
+ver is a matrix or 2D array. 是一個矩陣或二維陣列。
+1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
+**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
+avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
+
+🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
+
+Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
+Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
+One raw trial
+avg25
+avg100 to estimate noise.
+
+
+Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
+std_ver, std_avg25, std_avg100
+
+
+
+load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
+📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
+
+Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
+Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
+Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
+Actual STD (Raw): 1.0405
+Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
+Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
+
+Discussion of DiscrepanciesSeveral factors could explain the slight differences between actual and expected STD values:
+
+Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
+Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
+Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
+Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
+Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
+
+差異原因探討儘管差異不大，仍可能由以下因素造成：
+
+非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
+試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
+基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
+樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
+前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>biomaterials</tag>
+        <tag>biomedical engineering</tag>
+        <tag>lecture notes</tag>
+        <tag>Signals and Systems</tag>
       </tags>
   </entry>
 </search>
