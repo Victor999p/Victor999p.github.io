@@ -282,6 +282,89 @@ test 123
       </tags>
   </entry>
   <entry>
+    <title>Test 02</title>
+    <url>/posts/fe3551ce.html</url>
+    <content><![CDATA[change?
+表格带有对齐格式的表格
+
+
+
+标题1
+标题2
+标题2
+
+
+
+
+文本好短
+文本不短也不长
+文本好长文本好长文本好长
+
+
+文本好长文本好长文本好长
+文本好短
+文本不短也不长
+
+
+
+
+居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
+html写法
+  
+    标题1
+    标题2
+    标题3
+  
+  
+    文本好短
+    文本不短也不长
+    文本好长文本好长文本好长
+  
+  
+    文本好长文本好长文本好长
+    文本好短
+    文本不短也不长
+  
+&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
+这种方式，表格上方会留出大量空白
+解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
+mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
+
+    flowchart LR
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+  
+
+    pie
+title Key elements in Product X
+&quot;Calcium&quot; : 42.96
+&quot;Potassium&quot; : 50.05
+&quot;Magnesium&quot; : 10.01
+&quot;Iron&quot; : 5
+  
+&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>introduction</tag>
+        <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Biomaterials-1 | 生物材料-1</title>
     <url>/posts/d1e61a5b.html</url>
     <content><![CDATA[Lecture 1: History, Definition, and OutlineIntroduction
@@ -516,89 +599,6 @@ Quicker recovery times compared to traditional surgery
         <tag>biomaterials</tag>
         <tag>biomedical engineering</tag>
         <tag>lecture notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Test 02</title>
-    <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[change?
-表格带有对齐格式的表格
-
-
-
-标题1
-标题2
-标题2
-
-
-
-
-文本好短
-文本不短也不长
-文本好长文本好长文本好长
-
-
-文本好长文本好长文本好长
-文本好短
-文本不短也不长
-
-
-
-
-居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
-html写法
-  
-    标题1
-    标题2
-    标题3
-  
-  
-    文本好短
-    文本不短也不长
-    文本好长文本好长文本好长
-  
-  
-    文本好长文本好长文本好长
-    文本好短
-    文本不短也不长
-  
-&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
-这种方式，表格上方会留出大量空白
-解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
-mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
-
-    flowchart LR
-    c1--&gt;a2
-    subgraph one
-    a1--&gt;a2
-    end
-    subgraph two
-    b1--&gt;b2
-    end
-    subgraph three
-    c1--&gt;c2
-    end
-    one --&gt; two
-    three --&gt; two
-    two --&gt; c2
-  
-
-    pie
-title Key elements in Product X
-&quot;Calcium&quot; : 42.96
-&quot;Potassium&quot; : 50.05
-&quot;Magnesium&quot; : 10.01
-&quot;Iron&quot; : 5
-  
-&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
-]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>introduction</tag>
-        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -1029,7 +1029,7 @@ Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals fo
       </tags>
   </entry>
   <entry>
-    <title>HW for Biomedical Signals and Systems | 生物信號與生物系統</title>
+    <title>HW1 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/1775fd89.html</url>
     <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。
 🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
@@ -1178,7 +1178,7 @@ In −2𝑡+1 involve:
 
 By calculate | 或透過計算 :
 orginal_time_data = 2 * new_time_data + 1  
-new_time_data = (orginal_time_data - 1) / 2
+new_time_data = - (orginal_time_data - 1) / 2
 [ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ 1, 0.5, 0.5, 0, -0.5, -1, -1.5, -2, -2.5]t_q2 = -(t-1)/2; % by using the fomular abovesubplot(3,2,3);plot(t_q2, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Question 2&#x27;);grid on;
 
 
