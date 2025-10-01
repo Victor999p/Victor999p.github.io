@@ -48,7 +48,6 @@ ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MC
 
 
 
-OLED 測試#include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#define SCREEN_WIDTH 128  // OLED寬度（像素）#define SCREEN_HEIGHT 64  // OLED高度（像素）#define OLED_RESET -1     // 重置引腳（未使用，設為-1）// GND =&gt; GND// 3V3 =&gt; VCC//IO16 =&gt; SDA//IO17 =&gt;SCL// 創建顯示器物件，I2C地址為0x3CAdafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);void setup() &#123;  Serial.begin(115200);  // 用於除錯  // 初始化I2C，使用自訂引腳（SDA=16, SCL=17）  Wire.begin(16, 17);  // 初始化顯示器  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306初始化失敗&quot;));    for (;;);  // 初始化失敗則停止  &#125;  // 清空顯示緩衝區  display.clearDisplay();  display.setTextSize(2);           // 設置文字大小  display.setTextColor(SSD1306_WHITE);  // 設置文字顏色為白色  display.setCursor(0, 0);         // 從左上角開始  display.println(&quot;Hello world!&quot;);  // 顯示中文文字  display.display();               // 輸出到螢幕&#125;void loop() &#123;  // 空迴圈；可在此添加動態更新程式碼&#125;
 程式碼解釋1. 硬體連線- SSD1306 OLED 和 MAX30102 共用 I2C 匯流排，連接到 ESP32 的 GPIO16 (SDA) 和 GPIO17 (SCL)。
 - 電源使用 3.3V。
 - 連線表如下：
