@@ -44,7 +44,7 @@ ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MC
 步驟 3: 程式碼範例 - Hello World!簡單測試Esp32, 以下是程式碼：void setup() &#123;Serial.begin(115200);&#125;void loop() &#123;Serial.println(&quot;Hello World!&quot;);delay(1000);&#125;
 步驟 4: 與MAX30102 和 SSD1106 OLED 的整合
 目標
-使用 ESP32-WROOM-32 將 MAX30102 脈搏血氧感測器和 SSD1306 OLED 顯示器（128x64，I2C 介面）連接到一起，並在 OLED 上顯示心率（BPM）和血氧飽和度（SpO2），使用 Adafruit SSD1306 函式庫的 println 方法輸出英文文字（例如 “Heart Rate: [BPM]” 和 “SpO2: [SpO2]%”）。
+使用 ESP32-WROOM-32 將 MAX30102 脈搏血氧感測器和 SSD1306 OLED 顯示器（128x64，I2C 介面）連接到一起，並在 OLED 上顯示心率（BPM）和血氧飽和度（SpO2），使用 Adafruit SSD1306 函式庫的 println 方法輸出英文文字（例如 “Heart Rate: [BPM]” 和 “SpO2: [SpO2]%”）。un
 
 
 
