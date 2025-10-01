@@ -1,6 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ESP32-S3 與心跳和血氧測試</title>
+    <url>/posts/c2e18503.html</url>
+    <content><![CDATA[
+
+參考 NMKING
+- ESP32與MAX30102血氧感測
+    - by 小霸王實驗室in ESP32on Posted on2023/03/26
+https://www.nmking.io/index.php/2023/03/26/1071/
+
+MAX30102 血氧與心率感測器重點整理
+
+
+我們可以將 MAX30102（脈搏血氧和心率感測器） 連接到相同的 I2C 匯流排。MAX30102 是 I2C 裝置（預設地址 0x57），使用紅外線和紅光 LED 測量心率（BPM）和血氧飽和度（SpO2）。這適合 DIY 健康監測項目，但請注意：這不是醫療級設備，讀數受運動、指頭放置等影響，僅供學習用。
+
+
+
+我們將使用 SparkFun MAX3010x Sensor Library（支援 MAX30102），它包含心率計算演算法。以下是完整指南，包括接線、庫安裝和基本範例程式碼（測量心率和 SpO2）。
+
+
+**所需元件：**
+
+
+- ESP32-WROOM-32 開發板
+- MAX30102 模組（通常帶指夾或貼片）
+- 0.96 OLED SSD1106 推薦使用SSD1306
+- 杜邦線
+- USB 線（用於程式上傳）
+ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MCU，支援 Wi-Fi、Bluetooth 5.0 和 AI 加速，適合 IoT 專案。這篇記錄詳細說明如何安裝開發環境，並運行簡單的 Hello World 程式（LED 閃爍）。
+步驟 1: 硬體準備
+開發板：推薦 ESP32-S3-DevKitC-1（約 NT$300）。
+工具：USB 線、電腦（Windows/Mac/Linux）。
+連接：USB 連接到電腦，確認驅動程式（CP210x 或 CH340）已安裝。
+
+&lt;/image-card&gt;(圖片來源：Espressif 官方文件)
+步驟 2: 安裝 Arduino IDE
+下載 Arduino IDE 2.x：Arduino 官網。
+在 檔案 &gt; 偏好設定 添加 ESP32 板子 URL：
+在 工具 &gt; 板子 &gt; 板子管理員 搜尋 “ESP32”，安裝 Espressif 的 ESP32 套件（v2.0.3+ 支援 S3）。
+選擇板子：工具 &gt; 板子 &gt; ESP32 Arduino &gt; ESP32S3 Dev Module。
+
+步驟 3: 程式碼範例 - Hello World!簡單測試Esp32, 以下是程式碼：void setup() &#123;Serial.begin(115200);&#125;void loop() &#123;Serial.println(&quot;Hello World!&quot;);delay(1000);&#125;
+步驟 4: 與MAX30102 和 SSD1106 OLED 的整合
+目標
+使用 ESP32-WROOM-32 將 MAX30102 脈搏血氧感測器和 SSD1306 OLED 顯示器（128x64，I2C 介面）連接到一起，並在 OLED 上顯示心率（BPM）和血氧飽和度（SpO2），使用 Adafruit SSD1306 函式庫的 println 方法輸出英文文字（例如 “Heart Rate: [BPM]” 和 “SpO2: [SpO2]%”）。
+
+
+
+OLED 測試#include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#define SCREEN_WIDTH 128  // OLED寬度（像素）#define SCREEN_HEIGHT 64  // OLED高度（像素）#define OLED_RESET -1     // 重置引腳（未使用，設為-1）// GND =&gt; GND// 3V3 =&gt; VCC//IO16 =&gt; SDA//IO17 =&gt;SCL// 創建顯示器物件，I2C地址為0x3CAdafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);void setup() &#123;  Serial.begin(115200);  // 用於除錯  // 初始化I2C，使用自訂引腳（SDA=16, SCL=17）  Wire.begin(16, 17);  // 初始化顯示器  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306初始化失敗&quot;));    for (;;);  // 初始化失敗則停止  &#125;  // 清空顯示緩衝區  display.clearDisplay();  display.setTextSize(2);           // 設置文字大小  display.setTextColor(SSD1306_WHITE);  // 設置文字顏色為白色  display.setCursor(0, 0);         // 從左上角開始  display.println(&quot;Hello world!&quot;);  // 顯示中文文字  display.display();               // 輸出到螢幕&#125;void loop() &#123;  // 空迴圈；可在此添加動態更新程式碼&#125;
+程式碼解釋1. 硬體連線- SSD1306 OLED 和 MAX30102 共用 I2C 匯流排，連接到 ESP32 的 GPIO16 (SDA) 和 GPIO17 (SCL)。
+- 電源使用 3.3V。
+- 連線表如下：
+
+
+
+
+設備
+引腳
+ESP32 引腳
+描述
+
+
+
+
+SSD1106 OLED
+VCC
+3.3V
+電源（3.3V）
+
+
+
+GND
+GND
+接地
+
+
+
+SCL
+GPIO17
+I2C 時鐘線
+
+
+
+SDA
+GPIO16
+I2C 資料線
+
+
+MAX30102
+VIN
+3.3V
+電源（3.3V）
+
+
+
+GND
+GND
+接地（共用）
+
+
+
+SCL
+GPIO17
+I2C 時鐘線（共用）
+
+
+
+SDA
+GPIO16
+I2C 資料線（共用）
+
+
+
+INT
+未連接
+中斷引腳（可選）
+
+
+
+
+
+注意：
+確保所有設備共用 GND（接地）。
+如果 I2C NACK 錯誤持續發生，請在 SDA (GPIO16) 和 SCL (GPIO17) 各接一個 4.7kΩ 上拉電阻到 3.3V。部分模組內建上拉電阻，但外部電阻通常能提高穩定性。
+使用短杜邦線以減少信號干擾。
+MAX30102 測量時，手指需完全覆蓋感測器，避免移動或環境光干擾。
+
+
+
+2. 程式碼結構使用說明OLED屏幕測試：    線路連接：
+- GND =&gt; GND
+- 3V3 =&gt; VCC
+- IO16 =&gt; SDA
+- IO17 =&gt; SCL
+
+#include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#define SCREEN_WIDTH 128  // OLED寬度（像素）#define SCREEN_HEIGHT 64  // OLED高度（像素）#define OLED_RESET -1     // 重置引腳（未使用，設為-1）// GND =&gt; GND// 3V3 =&gt; VCC//IO16 =&gt; SDA//IO17 =&gt;SCL// 創建顯示器物件，I2C地址為0x3CAdafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);void setup() &#123;  Serial.begin(115200);  // 用於除錯  // 初始化I2C，使用自訂引腳（SDA=16, SCL=17）  Wire.begin(16, 17);  // 初始化顯示器  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306初始化失敗&quot;));    for (;;);  // 初始化失敗則停止  &#125;  // 清空顯示緩衝區  display.clearDisplay();  display.setTextSize(2);           // 設置文字大小  display.setTextColor(SSD1306_WHITE);  // 設置文字顏色為白色  display.setCursor(0, 0);         // 從左上角開始  display.println(&quot;Hello world!&quot;);  // 顯示中文文字  display.display();               // 輸出到螢幕&#125;void loop() &#123;  // 空迴圈；可在此添加動態更新程式碼&#125;
+源代碼修改：  
+
+添加 Wire.begin(16, 17); 和 Wire.setClock(100000);  
+移除所有蜂鳴器相關程式碼  
+添加初始化除錯訊息  
+確保與 Adafruit SSD1306 (2.4.6) 和 SparkFun MAX3010x 相容  
+驗證函式庫版本：
+Adafruit SSD1306: 2.4.6
+Adafruit GFX: 1.10.12
+SparkFun MAX3010x: 任意版本（包含 heartRate.h）
+
+
+
+上傳程式碼：
+
+在 Arduino IDE 中選擇 ESP32 Dev Module 和正確的序列埠。
+上傳上述程式碼。
+
+檢查序列監視器：
+
+打開序列監視器（115200 波特率），確認初始化訊息（例如 “SSD1306 初始化成功”）。
+觀察 BPM 和 SpO2 輸出。
+
+測試感測器：
+
+將手指輕放在 MAX30102 感測器上（完全覆蓋，避免移動）。
+等待 5-10 秒，OLED 應顯示心跳圖示、”[BPM] BPM” 和氧氣圖示、”[SpO2]%”（若 BPM &gt; 30）。
+若無手指，OLED 顯示 “Finger Please”。
+
+預期輸出：
+
+正常成人 BPM：60-100。
+正常 SpO2：95-100%。
+序列監視器顯示類似：Bpm: 75, SpO2: 98.5
+
+
+3. 問題排查無心率或血氧讀數：
+
+確保手指正確放置（輕壓，無環境光干擾）。
+調整 ledBrightness（試 50-127，例如 particleSensor.setup(50, ...)）。
+檢查序列監視器：IR &lt; 7000 表示未偵測到手指。
+血氧可能需 30 次採樣（Num）穩定。
+
+OLED 無顯示或亂碼：
+
+若無顯示，嘗試 I2C 地址 0x3D（修改 display.begin(SSD1306_SWITCHCAPVCC, 0x3D)）。
+若使用 128x32 OLED，修改 SCREEN_HEIGHT 為 32。
+單獨測試 OLED（使用 artifact ID: e69fa0ab-7c18-4349-a8a4-5ac22e61b0ef 的程式碼）。
+
+血氧不準確：
+
+當前公式（SpO2 = -23.3 * (R - 0.4) + 120）為簡化版。若需更高精度，可使用 SparkFun 的 Example6_SPO2（包含 spo2_algorithm.h）。
+確保 ledMode = 2（紅光+紅外線）。
+
+
+#include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#include &quot;MAX30105.h&quot;#include &quot;heartRate.h&quot;#define SCREEN_WIDTH 128 // OLED 寬度#define SCREEN_HEIGHT 64 // OLED 高度#define OLED_RESET -1 // 重置引腳Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET); // 初始化 OLEDMAX30105 particleSensor;// 心率變數const byte RATE_SIZE = 4; // 平均樣本數byte rates[RATE_SIZE]; // 心率陣列byte rateSpot = 0;long lastBeat = 0; // 上次心跳時間float beatsPerMinute;int beatAvg;// 血氧變數double avered = 0;double aveir = 0;double sumirrms = 0;double sumredrms = 0;double SpO2 = 0;double ESpO2 = 60.0; // 初始血氧估計值double FSpO2 = 0.7; // 血氧濾波因子double frate = 0.95; // 紅光/紅外線低通濾波int i = 0;int Num = 30; // 每 30 次採樣計算一次#define FINGER_ON 7000 // 手指偵測紅外線最小值#define MINIMUM_SPO2 60.0 // 血氧最小值// 小心跳圖示static const unsigned char PROGMEM logo2_bmp[] =&#123; 0x03, 0xC0, 0xF0, 0x06, 0x71, 0x8C, 0x0C, 0x1B, 0x06, 0x18, 0x0E, 0x02, 0x10, 0x0C, 0x03, 0x10,   0x04, 0x01, 0x10, 0x04, 0x01, 0x10, 0x40, 0x01, 0x10, 0x40, 0x01, 0x10, 0xC0, 0x03, 0x08, 0x88,  0x02, 0x08, 0xB8, 0x04, 0xFF, 0x37, 0x08, 0x01, 0x30, 0x18, 0x01, 0x90, 0x30, 0x00, 0xC0, 0x60,  0x00, 0x60, 0xC0, 0x00, 0x31, 0x80, 0x00, 0x1B, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x04, 0x00&#125;;// 大心跳圖示static const unsigned char PROGMEM logo3_bmp[] =&#123; 0x01, 0xF0, 0x0F, 0x80, 0x06, 0x1C, 0x38, 0x60, 0x18, 0x06, 0x60, 0x18, 0x10, 0x01, 0x80, 0x08,  0x20, 0x01, 0x80, 0x04, 0x40, 0x00, 0x00, 0x02, 0x40, 0x00, 0x00, 0x02, 0xC0, 0x00, 0x08, 0x03,  0x80, 0x00, 0x08, 0x01, 0x80, 0x00, 0x18, 0x01, 0x80, 0x00, 0x1C, 0x01, 0x80, 0x00, 0x14, 0x00,  0x80, 0x00, 0x14, 0x00, 0x80, 0x00, 0x14, 0x00, 0x40, 0x10, 0x12, 0x00, 0x40, 0x10, 0x12, 0x00,  0x7E, 0x1F, 0x23, 0xFE, 0x03, 0x31, 0xA0, 0x04, 0x01, 0xA0, 0xA0, 0x0C, 0x00, 0xA0, 0xA0, 0x08,  0x00, 0x60, 0xE0, 0x10, 0x00, 0x20, 0x60, 0x20, 0x06, 0x00, 0x40, 0x60, 0x03, 0x00, 0x40, 0xC0,  0x01, 0x80, 0x01, 0x80, 0x00, 0xC0, 0x03, 0x00, 0x00, 0x60, 0x06, 0x00, 0x00, 0x30, 0x0C, 0x00,  0x00, 0x08, 0x10, 0x00, 0x00, 0x06, 0x60, 0x00, 0x00, 0x03, 0xC0, 0x00, 0x00, 0x01, 0x80, 0x00&#125;;// 氧氣圖示static const unsigned char PROGMEM O2_bmp[] = &#123;  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0x00, 0x3f, 0xc3, 0xf8, 0x00, 0xff, 0xf3, 0xfc,  0x03, 0xff, 0xff, 0xfe, 0x07, 0xff, 0xff, 0xfe, 0x0f, 0xff, 0xff, 0xfe, 0x0f, 0xff, 0xff, 0x7e,  0x1f, 0x80, 0xff, 0xfc, 0x1f, 0x00, 0x7f, 0xb8, 0x3e, 0x3e, 0x3f, 0xb0, 0x3e, 0x3f, 0x3f, 0xc0,  0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3e, 0x2f, 0xc0,  0x3e, 0x3f, 0x0f, 0x80, 0x1f, 0x1c, 0x2f, 0x80, 0x1f, 0x80, 0xcf, 0x80, 0x1f, 0xe3, 0x9f, 0x00,  0x0f, 0xff, 0x3f, 0x00, 0x07, 0xfe, 0xfe, 0x00, 0x0b, 0xfe, 0x0c, 0x00, 0x1d, 0xff, 0xf8, 0x00,  0x1e, 0xff, 0xe0, 0x00, 0x1f, 0xff, 0x00, 0x00, 0x1f, 0xf0, 0x00, 0x00, 0x1f, 0xe0, 0x00, 0x00,  0x0f, 0xe0, 0x00, 0x00, 0x07, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00&#125;;void setup() &#123;  Serial.begin(115200);  Serial.println(&quot;系統啟動&quot;);  // 初始化 I2C (SDA=16, SCL=17)  Wire.begin(16, 17);  Wire.setClock(100000); // 100kHz 穩定性  // 初始化 OLED  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306 初始化失敗！&quot;));    for (;;); // 初始化失敗則停止  &#125;  Serial.println(&quot;SSD1306 初始化成功&quot;);  display.clearDisplay();  display.display();  delay(3000);  // 初始化 MAX30102  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) &#123;    Serial.println(&quot;找不到 MAX30102！請檢查連線。&quot;);    for (;;); // 初始化失敗則停止  &#125;  Serial.println(&quot;MAX30102 初始化成功&quot;);  // 配置 MAX30102  byte ledBrightness = 0x7F; // 亮度: 127 (0=關閉, 255=50mA)  byte sampleAverage = 4; // 平均樣本數: 1, 2, 4, 8, 16, 32  byte ledMode = 2; // 模式: 2 (紅光+紅外線，用於血氧)  int sampleRate = 800; // 採樣率: 50, 100, 200, 400, 800, 1000, 1600, 3200  int pulseWidth = 215; // 脈寬: 69, 118, 215, 411  int adcRange = 16384; // ADC範圍: 2048, 4096, 8192, 16384  particleSensor.setup(ledBrightness, sampleAverage, ledMode, sampleRate, pulseWidth, adcRange);  particleSensor.enableDIETEMPRDY();  particleSensor.setPulseAmplitudeRed(0x0A); // 低紅光 LED 表示感測器運行  particleSensor.setPulseAmplitudeGreen(0); // 禁用綠光 LED&#125;void loop() &#123;  long irValue = particleSensor.getIR(); // 讀取紅外線值以檢測手指  if (irValue &gt; FINGER_ON) &#123;    // 檢查心跳    if (checkForBeat(irValue) == true) &#123;      // 顯示心跳動畫      display.clearDisplay();      display.drawBitmap(0, 0, logo3_bmp, 32, 32, WHITE); // 大心跳圖示      display.setTextSize(2);      display.setTextColor(SSD1306_WHITE);      display.setCursor(42, 10);      display.print(beatAvg);      display.println(&quot; BPM&quot;);      display.drawBitmap(0, 35, O2_bmp, 32, 32, WHITE); // 氧氣圖示      display.setCursor(42, 40);      if (beatAvg &gt; 30) display.print(String(ESpO2) + &quot;%&quot;);      else display.print(&quot;---- %&quot;);      display.display();      long delta = millis() - lastBeat;      lastBeat = millis();      beatsPerMinute = 60 / (delta / 1000.0);      if (beatsPerMinute &lt; 255 &amp;&amp; beatsPerMinute &gt; 20) &#123;        rates[rateSpot++] = (byte)beatsPerMinute;        rateSpot %= RATE_SIZE;        beatAvg = 0;        for (byte x = 0; x &lt; RATE_SIZE; x++) beatAvg += rates[x];        beatAvg /= RATE_SIZE;      &#125;    &#125;    // 計算血氧    uint32_t ir, red;    double fred, fir;    particleSensor.check(); // 讀取最多 3 個樣本    if (particleSensor.available()) &#123;      i++;      ir = particleSensor.getFIFOIR(); // 讀取紅外線      red = particleSensor.getFIFORed(); // 讀取紅光      fir = (double)ir;      fred = (double)red;      aveir = aveir * frate + fir * (1.0 - frate); // 紅外線低通濾波      avered = avered * frate + fred * (1.0 - frate); // 紅光低通濾波      sumirrms += (fir - aveir) * (fir - aveir); // 紅外線交流成分平方和      sumredrms += (fred - avered) * (fred - avered); // 紅光交流成分平方和      if ((i % Num) == 0) &#123;        double R = (sqrt(sumirrms) / aveir) / (sqrt(sumredrms) / avered);        SpO2 = -23.3 * (R - 0.4) + 120;        ESpO2 = FSpO2 * ESpO2 + (1.0 - FSpO2) * SpO2; // 低通濾波        if (ESpO2 &lt;= MINIMUM_SPO2) ESpO2 = MINIMUM_SPO2;        if (ESpO2 &gt; 100) ESpO2 = 99.9;        sumredrms = 0.0; sumirrms = 0.0; SpO2 = 0;        i = 0;      &#125;      particleSensor.nextSample(); // 移至下一個樣本    &#125;    // 輸出到序列監視器    Serial.print(&quot;Bpm: &quot; + String(beatAvg));    if (beatAvg &gt; 30) Serial.println(&quot;, SpO2: &quot; + String(ESpO2));    else Serial.println(&quot;, SpO2: ----&quot;);    // 更新 OLED 穩定顯示    display.clearDisplay();    display.drawBitmap(5, 5, logo2_bmp, 24, 21, WHITE); // 小心跳圖示    display.setTextSize(2);    display.setTextColor(SSD1306_WHITE);    display.setCursor(42, 10);    display.print(beatAvg);    display.println(&quot; BPM&quot;);    display.drawBitmap(0, 35, O2_bmp, 32, 32, WHITE); // 氧氣圖示    display.setCursor(42, 40);    if (beatAvg &gt; 30) display.print(String(ESpO2) + &quot;%&quot;);    else display.print(&quot;---- %&quot;);    display.display();  &#125; else &#123;    // 未偵測到手指，重置數據並顯示提示    for (byte rx = 0; rx &lt; RATE_SIZE; rx++) rates[rx] = 0;    beatAvg = 0; rateSpot = 0; lastBeat = 0;    avered = 0; aveir = 0; sumirrms = 0; sumredrms = 0;    SpO2 = 0; ESpO2 = 90.0;    display.clearDisplay();    display.setTextSize(2);    display.setTextColor(SSD1306_WHITE);    display.setCursor(30, 5);    display.println(&quot;Finger&quot;);    display.setCursor(30, 35);    display.println(&quot;Please&quot;);    display.display();  &#125;&#125;
+未來計劃
+圖表展示
+記錄數據。
+使用 AI 模型（如簡單神經網路）檢測心律不整 [使用 TensorFlow Lite 載入預訓練模型（例如簡單 MLP 模型）檢測異常。]
+
+]]></content>
+      <categories>
+        <category>硬體操作</category>
+      </categories>
+      <tags>
+        <tag>ESP32-S3</tag>
+        <tag>Arduino</tag>
+        <tag>入門</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -548,7 +755,7 @@ Damages nerve endings
 
 Second Generation Example
 The Glass Eye
-By French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain and glass.
+CREATE By French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain and glass.
 The Glass Eye. The first known Ocularist, constructing artificial eyes from glass during the golden age of Italian glassmaking, came out of Venice in the 16th century. By the 19th century Europe was acknowledged as a centre of excellence in artistic craftsmanship, and Germany became the centre for glass eye production.
 
 
