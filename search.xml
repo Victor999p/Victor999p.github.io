@@ -207,69 +207,6 @@ OLED 無顯示或亂碼：
       </tags>
   </entry>
   <entry>
-    <title>常用Python程式碼片段集合</title>
-    <url>/posts/a4367020.html</url>
-    <content><![CDATA[Switch to English Version 🇬🇧
-常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
-1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
-print(&quot;你好，世界！&quot;)
-說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：你好，世界！
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：水果：蘋果水果：香蕉水果：橙子水果：葡萄
-
-3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
-# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
-說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
-
-4. 檔案讀寫在Python中，讀寫檔案是常見任務。
-# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
-說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：```text你好，這是一個測試檔案！第二行。---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
-說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：```text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
-說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：```text
-面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
-說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：```text請輸入一個數字：2結果：5.0---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
-說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
-
-9. 字串操作Python 提供強大的字串處理工具。
-text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
-說明：strip()、split() 和 join() 方法使字串處理變得簡單。
-
-10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
-# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
-說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
-
-11. 日期處理datetime 模組幫助處理日期和時間。
-from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
-說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
-
-12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
-numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
-說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：[0, 1, 2][0, 2, 4]
-
-結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
-
-發布於 
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
-        <tag>CityU</tag>
-        <tag>Beginner</tag>
-        <tag>AI generate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -395,6 +332,69 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
         <tag>CS1302</tag>
         <tag>CityU</tag>
         <tag>Beginner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用Python程式碼片段集合</title>
+    <url>/posts/a4367020.html</url>
+    <content><![CDATA[Switch to English Version 🇬🇧
+常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
+1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
+print(&quot;你好，世界！&quot;)
+說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
+執行結果：你好，世界！
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：水果：蘋果水果：香蕉水果：橙子水果：葡萄
+
+3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
+# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
+
+4. 檔案讀寫在Python中，讀寫檔案是常見任務。
+# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
+執行結果：```text你好，這是一個測試檔案！第二行。---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
+執行結果：```text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
+執行結果：```text
+面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
+執行結果（假設輸入為 2）：執行結果：```text請輸入一個數字：2結果：5.0---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
+執行結果：&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
+9. 字串操作Python 提供強大的字串處理工具。
+text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+說明：strip()、split() 和 join() 方法使字串處理變得簡單。
+
+10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
+# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
+
+11. 日期處理datetime 模組幫助處理日期和時間。
+from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
+執行結果（假設當前時間為 2025-08-30 17:31:05）：當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
+12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
+numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
+執行結果：[0, 1, 2][0, 2, 4]
+
+結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+
+發布於 
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+        <tag>AI generate</tag>
       </tags>
   </entry>
   <entry>
@@ -571,52 +571,67 @@ title Key elements in Product X
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/posts/0.html</url>
-    <content><![CDATA[
-title: Biomaterials-1 | 生物材料-1tags:
+    <title>Biomaterials-1 | 生物材料-1</title>
+    <url>/posts/d1e61a5b.html</url>
+    <content><![CDATA[ Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
+Introduction | 引言
+Title: Materials for Biomedical Engineering | 生物醫學工程材料
+Subtitle: Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
 
-Biomaterials
-Biomedical Engineering
-Lecture notescategories:
-Education
-Biomedical Engineering
-Biomaterials(BME3123)abbrlink: d1e61a5bdate: 2025-09-08 00:00:00description:
+Lecture Outline | 課程大綱
+Topics Covered | 涵蓋主題:
 
-
-Lecture 1: History, Definition, and OutlineIntroduction
-Title: Materials for Biomedical Engineering
-Subtitle: Lecture 1: History, Definition, and Outline
-
-Lecture Outline
-Topics Covered:
-1.Definition of Biomaterials
-2.Characteristics of four generations
-3.Major market shares
-4.Requirements of biomaterials
-5.Major types and their pros and cons
-6.Forces in biomaterials
-7.Three aspects in biomaterials
-8.Restenosis
-9.Need of selection and processing of biomaterials
+Definition of Biomaterials | 生物材料的定義
 
 
 
-Definition of Biomaterials
-Definition: Biomaterials are materials suitable for making devices to replace a part or function of the body in a safe, reliable, economic, and physiologically acceptable manner.
-
-Historical Context: The use of biomaterials dates back a long time, but the notion of biomaterials science emerged in the 1960s.
+Characteristics of four generations | 四個世代的特徵
 
 
-The definition, though initially restricted, is continually improved and provides an overview of goals, needs, and potential applications.
-Clinical Needs for BiomaterialsStems from inability to treat many diseases, injuries, and conditions:
 
-Replacement of other therapy parts or procedures (total hip)
-Correct abnormalities (spinal cord)
-Improve function (pacemaker, stent)
-Structural, pharmaceutical effects: sutures, drug release
+Major market shares | 主要市場份額
 
-Characteristics of four generation
+
+
+Requirements of biomaterials | 生物材料的要求
+
+
+
+Major types and their pros and cons | 主要類型及其優缺點
+
+
+
+Forces in biomaterials | 生物材料中的作用力
+
+
+
+Three aspects in biomaterials | 生物材料的三個方面
+
+
+
+Restenosis | 再狹窄
+
+
+
+Need of selection and processing of biomaterials | 生物材料選擇與加工的需求
+
+
+
+
+
+Definition of Biomaterials | 生物材料的定義
+Definition: Biomaterials are materials suitable for making devices to replace a part or function of the body in a safe, reliable, economic, and physiologically acceptable manner. | 生物材料是用於製造安全、可靠、經濟且生理上可接受的裝置，以替代身體部分或功能的材料。
+Historical Context: The use of biomaterials dates back a long time, but the notion of biomaterials science emerged in the 1960s. | 生物材料的使用歷史悠久，但生物材料科學的概念於1960年代興起。
+
+The definition, though initially restricted, is continually improved and provides an overview of goals, needs, and potential applications. | 該定義雖最初有限，但持續改進，提供了目標、需求和潛在應用的概述。
+Clinical Needs for Biomaterials | 生物材料的臨床需求Stems from inability to treat many diseases, injuries, and conditions: | 源於無法治療許多疾病、傷害和狀況：
+
+Replacement of other therapy parts or procedures (total hip) | 替代其他治療部件或程序（全髖關節置換）
+Correct abnormalities (spinal cord) | 矯正異常（脊髓）
+Improve function (pacemaker, stent) | 改善功能（心臟起搏器、支架）
+Structural, pharmaceutical effects: sutures, drug release | 結構與藥物效應：縫合線、藥物釋放
+
+Characteristics of Four Generations | 四個世代的特徵
         
           Generation of Biomaterials
 
@@ -626,10 +641,10 @@ Characteristics of four generation
           1st-Generation
 
         
-        First Generation:
+        First Generation | 第一世代:
 
-Restricted to materials available in the natura-environment.
-Used to simply repair organs.
+Restricted to materials available in the natura-environment. | 僅限於自然環境中可用的材料。
+Used to simply repair organs. | 用於簡單修復器官。
 
 
       
@@ -637,10 +652,10 @@ Used to simply repair organs.
           2nd-Generation
 
         
-         Second Generation:
+        Second Generation | 第二世代:
 
-Spans a long period, starting with improvements in human knowledge and ending in the mid-20th century.
-Benefited from the  Industrial-Revolution.
+Spans a long period, starting with improvements in human knowledge and ending in the mid-20th century. | 跨越很長一段時間，從人類知識進步開始，至20世紀中葉結束。
+Benefited from the Industrial-Revolution. | 受益於工業革命。
 
 
       
@@ -648,12 +663,10 @@ Benefited from the  Industrial-Revolution.
           3rd-Generation
 
         
-        
-Third Generation:
-Began with the birth-of-polymers as promising materials.
-Built on scientific advancements in materials and their transformation, as well as understanding of living systems.
+        Third Generation | 第三世代:
 
-
+Began with the birth-of-polymers as promising materials. | 以聚合物的誕生作為有前景的材料開始。
+Built on scientific advancements in materials and their transformation, as well as understanding of living systems. | 基於材料及其轉化的科學進步，以及對生命系統的理解。
 
 
       
@@ -661,101 +674,122 @@ Built on scientific advancements in materials and their transformation, as well 
           now
 
         
-        
-Fourth Generation:
-Currently in its early stages.
-Combines “dreams and realities” with assistance from artificial-intelligence (AI).
+        Fourth Generation | 第四世代:
 
-
+Currently in its early stages. | 目前處於早期階段。
+Combines “dreams and realities” with assistance from artificial-intelligence (AI). | 結合“夢想與現實”，得到人工智能（AI）的協助。
 
 
       
-First Generation Example:
-Etruscan Dental Bridge: Gold was one of the earliest biomaterials used in ancient civilizations.
-Oldest Known Prosthesis: A replacement for the right big toe found in a mummy from the necropolis of Thebes (circa 3,000 years ago).
-Burn Treatment: Use of tilapia skin for burns victims.Fish Skin Treatment
+First Generation Example | 第一世代範例
+Etruscan Dental Bridge: Gold was one of the earliest biomaterials used in ancient civilizations. | 伊特魯里亞牙橋：黃金是古代文明中最早使用的生物材料之一。
+Oldest Known Prosthesis: A replacement for the right big toe found in a mummy from the necropolis of Thebes (circa 3,000 years ago). | 已知最古老的假肢：約3000年前在底比斯墓地發現的木乃伊右大腳趾替換物。
+Burn Treatment: Use of tilapia skin for burns victims. | 燒傷治療：使用羅非魚皮治療燒傷患者。
 
-
+Fish Skin Treatment | 魚皮治療
 
 
 
 Pros
+優點
 Cons
+缺點
 
 
 
 
 Cost
+成本
 Process
+加工過程
 
 
 Biocompatible &amp; biodegradable
+生物相容與可降解
 Bacterial/pathogen risk
+細菌/病原體風險
 
 
 Ethics
+倫理
 Immune response
+免疫反應
 
 
 Supply
+供應
+/
 /
 
 
 Non-toxic
+無毒
+/
 /
 
 
 
 
-🔥 Burn Classification Table
+🔥 Burn Classification Table | 燒傷分類表
 
 
 
 Damages / Symptoms
+損傷/症狀
 First-Degree Burn
+一度燒傷
 Second-Degree Burn (Partial Thickness)
+二度燒傷（部分厚度）
 Third-Degree Burn (Full Thickness)
+三度燒傷（全厚度）
 
 
 
 
 Damages epidermis (outer layer of skin)
+損傷表皮（皮膚外層）
 ✓
 ✓
 ✓
 
 
 Damages dermis layer
+損傷真皮層
 
 ✓
 ✓
 
 
 Damages tendons, bones
+損傷肌腱、骨骼
 
 
 ✓
 
 
 Reddens skin
+皮膚發紅
 ✓
 ✓
 
 
 
 Blisters
+起水泡
 
 ✓
 
 
 
 Pain / white or black discoloration
+疼痛/白色或黑色變色
 
 ✓
 ✓
 
 
 Damages nerve endings
+損傷神經末梢
 
 
 ✓
@@ -763,60 +797,51 @@ Damages nerve endings
 
 
 
-Second Generation Example
-The Glass Eye
-CREATE By French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain and glass.
-The Glass Eye. The first known Ocularist, constructing artificial eyes from glass during the golden age of Italian glassmaking, came out of Venice in the 16th century. By the 19th century Europe was acknowledged as a centre of excellence in artistic craftsmanship, and Germany became the centre for glass eye production.
+Second Generation Example | 第二世代範例
+The Glass Eye | 玻璃眼:
+Created By: French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain, and glass. | 由法國外科醫生安布魯瓦茲·帕雷（1510-90）創造，被認為是面部假體之父。他首先描述了人工眼的使用，並用搪瓷金、銀、瓷器和玻璃製作。
+The Glass Eye: The first known Ocularist, constructing artificial eyes from glass during the golden age of Italian glassmaking, came out of Venice in the 16th century. By the 19th century, Europe was acknowledged as a centre of excellence in artistic craftsmanship, and Germany became the centre for glass eye production. | 玻璃眼：最早的已知義眼師在16世紀義大利玻璃製造黃金時代於威尼斯製作玻璃人工眼。到19世紀，歐洲被認為是藝術工藝的卓越中心，德國成為玻璃眼生產中心。
 
 
 
-Third Generation Example
-Acrylic Artificial Eye (US &amp; UK in 2nd WW): the advantages of this material (resistance to scratches, breakage and attack by lacrimal secretions) made it lighter.-Rhinoplasty: 
-
-Artificial materials include:
-synthetic substances
-silicone
-Gore-Tex (polytetrafluoroethylene)
-Medpor (polyethylene implants).
-
-
+Third Generation Example | 第三世代範例
+Acrylic Artificial Eye (US &amp; UK in 2nd WW): The advantages of this material (resistance to scratches, breakage, and attack by lacrimal secretions) made it lighter. | 丙烯酸人工眼（二戰期間美國與英國）：該材料的優點（抗刮擦、破損和淚液侵蝕）使其更輕便。
+Rhinoplasty | 鼻整形:
+Artificial materials include: | 人工材料包括：
+Synthetic substances | 合成物質
+Silicone | 矽膠
+Gore-Tex (polytetrafluoroethylene) | 戈爾特斯（聚四氟乙烯）
+Medpor (polyethylene implants) | 邁德波（聚乙烯植入物）。
 
 
-Artificial skin (wound healing dressing)
 
+
+Artificial Skin (Wound Healing Dressing) | 人工皮膚（傷口癒合敷料）:
 Trends in Biotechnology, 2012, 30, 581-584.
 Video: https://youtu.be/f1sT2hbD6bGw?si=Bz_VZJPNLrhCkDk
-Lando: http://www.landobio.com/product/index_1.html (兰度人工皮肤 Innovative Technology of Artificial Dermal Regeneration Matrix Artificial Dermal Regeneration in China)Fourth Generation
+Lando: http://www.landobio.com/product/index_1.html (蘭度人工皮膚 Innovative Technology of Artificial Dermal Regeneration Matrix Artificial Dermal Regeneration in China) | 蘭度：http://www.landobio.com/product/index_1.html（蘭度人工皮膚 中國人工真皮再生基質創新技術）
 
 
-Self-healing materials
 
+Fourth Generation | 第四世代
+Self-healing materials | 自癒材料
 https://youtu.be/lVTT5HEPnRb
 https://youtu.be/-yCZgv_SRA
 
 
-
-
-Shape memory alloy
+Shape memory alloy | 形狀記憶合金
 https://youtu.be/vPhB5bSP1NEM
 
 
-
-
-4-dimensional material
+4-dimensional material | 四維材料
 https://youtu.be/GilyGH1V4kAU
 
 
-
-
-Assistance of AI
+Assistance of AI | 人工智能協助
 https://youtu.be/6hmuZHTM7sZnXvY3ZMPX
 
 
-
-
-Brain-computer interface implants
-
+Brain-computer interface implants | 腦機接口植入物
 https://youtu.be/10bQEz07rH4kDOVJKA
 https://youtu.be/CVgQ5q2nBIRDkISAN5Fx
 https://youtu.be/Eps0CkO7o2t=RBEUUNSmF0Y6T0
@@ -824,632 +849,631 @@ https://youtu.be/HrAUbow9-nidstrmT5K (Synchron)
 https://youtu.be/NJThM7sVsOdY
 
 
-E-Skin: Wireless Communication and Signal Processing Technologies
-
-Materials Mimicking Human Skin
-
-Skin-attachable Devices
-Prosthesis
-Robotic
-Stretchable Materials
-Stretchable Transistors
-Self-healing Materials
-Electronic Skin (E-skin)
-Tactile, Chemical, and Electrophysiological Sensors
+E-Skin: Wireless Communication and Signal Processing Technologies | 電子皮膚：無線通訊與信號處理技術
+Materials Mimicking Human Skin | 模仿人類皮膚的材料
+Skin-attachable Devices | 皮膚附著設備
+Prosthesis | 假肢
+Robotic | 機器人
+Stretchable Materials | 可拉伸材料
+Stretchable Transistors | 可拉伸晶體管
+Self-healing Materials | 自癒材料
+Electronic Skin (E-skin) | 電子皮膚
+Tactile, Chemical, and Electrophysiological Sensors | 觸覺、化學和電生理傳感器
 Advanced Materials, Volume 31, Issue 41, First published: 19 September 2019, DOI: 10.1002/adma.201902649
 
 
 
-Major market shares
-Market Size
+Major Market Shares | 主要市場份額
+Market Size | 市場規模
 
-CAGR 2024-2029: 7.3%
-Market Size (USD Billion)
-2023: 42.3
-2024: 45.2
-2029: 64.2
-Regions: North America, Europe, Asia-Pacific, Middle East &amp; Africa, Latin America
-
-
-Market Dynamics:
-
-Drivers and Restraints:
-Growing use of biomaterials in various therapeutic areas
-Growing use of biomaterials in wound healing and plastic surgery
-Rising funding for implantable devices
-Restraint: Biocompatibility issues
+CAGR 2024-2029: 7.3% | 2024-2029年複合年增長率：7.3%
+Market Size (USD Billion) | 市場規模（十億美元）
+2023: 42.3 | 2023年：42.3
+2024: 45.2 | 2024年：45.2
+2029: 64.2 | 2029年：64.2
+Regions: North America, Europe, Asia-Pacific, Middle East &amp; Africa, Latin America | 地區：北美、歐洲、亞太、中東與非洲、拉丁美洲
 
 
+Market Dynamics | 市場動態:
+
+Drivers and Restraints | 驅動因素與限制因素:
+Growing use of biomaterials in various therapeutic areas | 生物材料在多種治療領域的應用增長
+Growing use of biomaterials in wound healing and plastic surgery | 生物材料在傷口癒合和整形外科中的應用增長
+Rising funding for implantable devices | 可植入設備資金增加
+Restraint: Biocompatibility issues | 限制因素：生物相容性問題
 
 
 
 
-Product Footprint Market Ecosystem Analysis:
-Metallic Biomaterials: Carpenter, DSM, Regenity, BASF
-Ceramic Biomaterials: CoorsTek, CeramTec
-Polymeric Biomaterials: Corbion, Evonik
-Natural Biomaterials: Solvay
+Product Footprint Market Ecosystem Analysis | 產品足跡市場生態系統分析:
+
+Metallic Biomaterials: Carpenter, DSM, Regenity, BASF | 金屬生物材料：Carpenter、DSM、Regenity、BASF
+Ceramic Biomaterials: CoorsTek, CeramTec | 陶瓷生物材料：CoorsTek、CeramTec
+Polymeric Biomaterials: Corbion, Evonik | 聚合物生物材料：Corbion、Evonik
+Natural Biomaterials: Solvay | 天然生物材料：Solvay
 
 
 
-Market Segmentation by Type &amp; Geographical Spread :
-By Type:
+Market Segmentation by Type &amp; Geographical Spread | 按類型與地理分佈的市場細分:
+By Type | 按類型:
 
-Metallic Biomaterials:
-Stainless Steel, Titanium &amp; Titanium Alloys, Cobalt-Chrome Alloys, Gold, Silver, Other Metallic Biomaterials
-
-
-Polymeric Biomaterials: 
-Polymethylmethacrylate, Polyethylene, Polyester, Polyvinylchloride, Silicone Rubber, Nylon, Polyetheretherketone, Other Polymeric Biomaterials
+Metallic Biomaterials | 金屬生物材料:
+Stainless Steel, Titanium &amp; Titanium Alloys, Cobalt-Chrome Alloys, Gold, Silver, Other Metallic Biomaterials | 不銹鋼、鈦及鈦合金、鈷鉻合金、金、銀、其他金屬生物材料
 
 
-Ceramic Biomaterials: 
-Zirconia, Calcium Phosphate, Aluminum Oxide, Calcium Sulfate, Carbon, Glass
+Polymeric Biomaterials | 聚合物生物材料:
+Polymethylmethacrylate, Polyethylene, Polyester, Polyvinylchloride, Silicone Rubber, Nylon, Polyetheretherketone, Other Polymeric Biomaterials | 聚甲基丙烯酸甲酯、聚乙烯、聚酯、聚氯乙烯、矽橡膠、尼龍、聚醚醚酮、其他聚合物生物材料
 
 
-Natural Biomaterials: 
-Hyaluronic Acid, Collagen, Gelatin, Fibrin, Cellulose, Chitin, Alginates, SilkOther
+Ceramic Biomaterials | 陶瓷生物材料:
+Zirconia, Calcium Phosphate, Aluminum Oxide, Calcium Sulfate, Carbon, Glass | 氧化鋯、磷酸鈣、氧化鋁、硫酸鈣、碳、玻璃
 
 
+Natural Biomaterials | 天然生物材料:
+Hyaluronic Acid, Collagen, Gelatin, Fibrin, Cellulose, Chitin, Alginates, Silk | 透明質酸、膠原蛋白、明膠、纖維蛋白、纖維素、幾丁質、海藻酸鹽、絲
 
 
-By Application:
-
-Cardiovascular: 
-Catheters, Stents, Implantable Cardiac Defibrillators, Pacemakers, Sensors, Heart Valves, Vascular Grafts, Guidewires, Others
+Other | 其他
 
 
-Orthopedic: 
-Joint Replacement (Knee Replacement, Hip Replacement, Shoulder Replacement, Others), Bioresorbable Tissue Fixation (Suture Anchors, Interference Screws, Meniscal Repair Tacks, Meshes), Spine (Spinal Fusion, Minimally Invasive Fusion Surgery, Motion Preservation &amp; Dynamic Stabilization, Pedicle-based Rod Systems, Interspinous Process Spacers, Artificial Discs), Fracture Fixation (Bone Plates, Screws, Pins, Rods, Wires), Orthobiologics (Synthetics Bone Grafts)
+By Application | 按應用:
+
+Cardiovascular | 心血管:
+Catheters, Stents, Implantable Cardiac Defibrillators, Pacemakers, Sensors, Heart Valves, Vascular Grafts, Guidewires, Others | 導管、支架、可植入心臟除顫器、心臟起搏器、傳感器、心臟瓣膜、血管移植物、導絲、其他
 
 
-Ophthalmology: Contact Lenses, Intraocular Lenses, Functional Replacement of Ocular Tissues, Synthetic Corneas, Others
-Dental: 
-Dental Implants, Dental Bone Grafts &amp; Substitutes, Dental Membranes, Tissue Regeneration Materials-Plastic Surgery: Soft Tissue Fillers, Craniofacial Surgery, Bioengineered Skins, Peripheral Nerve Repair, Acellular Dermal Matrices, Facial Wrinkle Treatment
+Orthopedic | 骨科:
+Joint Replacement (Knee Replacement, Hip Replacement, Shoulder Replacement, Others), Bioresorbable Tissue Fixation (Suture Anchors, Interference Screws, Meniscal Repair Tacks, Meshes), Spine (Spinal Fusion, Minimally Invasive Fusion Surgery, Motion Preservation &amp; Dynamic Stabilization, Pedicle-based Rod Systems, Interspinous Process Spacers, Artificial Discs), Fracture Fixation (Bone Plates, Screws, Pins, Rods, Wires), Orthobiologics (Synthetics Bone Grafts) | 關節置換（膝關節置換、髖關節置換、肩關節置換、其他）、可吸收組織固定（縫合錨、干擾螺釘、半月板修復釘、網）、脊柱（脊柱融合、微創融合手術、運動保持與動態穩定、椎弓根桿系統、棘間突間隔器、人工椎間盤）、骨折固定（骨板、螺釘、銷、桿、線）、骨生物學（合成骨移植物）
 
 
-Wound Healing: 
-Wound Closure Devices (Sutures, Staples), Surgical Hemostats, Internal Tissue Sealants, Adhesion Barriers, Hernia Meshes
+Ophthalmology | 眼科:
+Contact Lenses, Intraocular Lenses, Functional Replacement of Ocular Tissues, Synthetic Corneas, Others | 隱形眼鏡、人工晶狀體、眼組織功能性替換、合成角膜、其他
 
 
-Tissue Engineering: 
-Scaffolds for Regenerative Medicine, Nanomaterials for Biosensing, Tailoring of Inorganic Nanoparticles
+Dental | 牙科:
+Dental Implants, Dental Bone Grafts &amp; Substitutes, Dental Membranes, Tissue Regeneration Materials | 牙科植入物、牙科骨移植與替代物、牙科膜、組織再生材料
 
 
-Neurological/Central Nervous System: 
-Shunting Systems, Cortical Neural Prosthetics, Hydrocephalus Shunts, Neural Stem Cell Encapsulation
+Plastic Surgery | 整形外科:
+Soft Tissue Fillers, Craniofacial Surgery, Bioengineered Skins, Peripheral Nerve Repair, Acellular Dermal Matrices, Facial Wrinkle Treatment | 軟組織填充劑、顱面外科、生物工程皮膚、周圍神經修復、無細胞真皮基質、面部皺紋治療
 
 
-Other Applications: 
-Drug Delivery Systems, Gastrointestinal Applications, Urinary Applications, Bariatric Surgery
+Wound Healing | 傷口癒合:
+Wound Closure Devices (Sutures, Staples), Surgical Hemostats, Internal Tissue Sealants, Adhesion Barriers, Hernia Meshes | 傷口閉合設備（縫合線、訂書釘）、外科止血劑、內部組織密封劑、粘連屏障、疝氣網
 
 
+Tissue Engineering | 組織工程:
+Scaffolds for Regenerative Medicine, Nanomaterials for Biosensing, Tailoring of Inorganic Nanoparticles | 再生醫學支架、生物傳感奈米材料、無機奈米粒子的定制
 
 
-
-Requirements of biomaterialsRequirements of Biomaterials:
-Inert or specifically interactive
-Biocompatible
-Mechanically and chemically stable or biodegradable
-Processable (for manufacturability)
-Nonthrombogenic (if blood-contacting)
-Sterilizable
-
-Major types and their pros and consTypes of Biomaterials
-Grouped by physical properties:
-
-Ceramics:
-
-Aluminum oxide, zirconia, calcium phosphates
+Neurological/Central Nervous System | 神經/中樞神經系統:
+Shunting Systems, Cortical Neural Prosthetics, Hydrocephalus Shunts, Neural Stem Cell Encapsulation | 分流系統、皮質神經假體、腦積水分流、神經幹細胞封裝
 
 
-Metals:
-
-Stainless steel, cobalt alloys, titanium alloys
-
-
-Polymers: synthetic and natural
-
-Synthetic: Silicones, poly(ethylene), poly(vinyl chloride), polyurethanes, polylactides
-Natural: Collagen, gelatin, elastin, silk, polysaccharides
-
-
-Composites
-
-Micro/nano-dimensioned biomaterials
+Other Applications | 其他應用:
+Drug Delivery Systems, Gastrointestinal Applications, Urinary Applications, Bariatric Surgery | 藥物傳遞系統、胃腸道應用、泌尿應用、減重手術
 
 
 
-Class of Materials Used in the Body
 
+
+Requirements of Biomaterials | 生物材料的要求Requirements of Biomaterials | 生物材料的要求:
+Inert or specifically interactive | 惰性或特定交互
+Biocompatible | 生物相容性
+Mechanically and chemically stable or biodegradable | 機械與化學穩定或可降解
+Processable (for manufacturability) | 可加工（製造性）
+Nonthrombogenic (if blood-contacting) | 非血栓形成（若接觸血液）
+Sterilizable | 可滅菌
+
+Major Types and Their Pros and Cons | 主要類型及其優缺點Types of Biomaterials | 生物材料類型
+Grouped by physical properties | 按物理性質分類:
+
+Ceramics | 陶瓷:
+
+Aluminum oxide, zirconia, calcium phosphates | 氧化鋁、氧化鋯、磷酸鈣
+
+
+Metals | 金屬:
+Stainless steel, cobalt alloys, titanium alloys | 不銹鋼、鈷合金、鈦合金
+
+
+Polymers: synthetic and natural | 聚合物：合成與天然
+Synthetic: Silicones, poly(ethylene), poly(vinyl chloride), polyurethanes, polylactides | 合成：矽膠、聚乙烯、聚氯乙烯、聚氨酯、聚乳酸
+Natural: Collagen, gelatin, elastin, silk, polysaccharides | 天然：膠原蛋白、明膠、彈性蛋白、絲、多醣
+
+
+Composites | 複合材料
+Micro/nano-dimensioned biomaterials | 微米/奈米尺寸生物材料
+
+
+
+Class of Materials Used in the Body | 體內使用的材料類別
   
     
-      Materials
-      Advantages
-      Disadvantages
-      Examples
+      Materials | 材料
+      Advantages | 優點
+      Disadvantages | 缺點
+      Examples | 範例
     
   
   
     
-      Polymers (nylon, silicone rubber, polyester, polytetrafluoroethylene, etc.)
-      ResilientEasy to fabricate
-      Not strongDeforms with timeMay degrade
-      Sutures, blood vesselsSoft tissues, sutures, hip socket, ear, nose
+      Polymers (nylon, silicone rubber, polyester, polytetrafluoroethylene, etc.) | 聚合物（尼龍、矽橡膠、聚酯、聚四氟乙烯等）
+      ResilientEasy to fabricate | 彈性易於製造
+      Not strongDeforms with timeMay degrade | 強度不高隨時間變形可能降解
+      Sutures, blood vesselsSoft tissues, sutures, hip socket, ear, nose | 縫合線、血管軟組織、縫合線、髖臼、耳、鼻
     
     
-      Metals (Ti and its alloys, Co-Cr alloys, Au, Ag, stainless steels, etc.)
-      Strong, toughDuctile
-      DenseDifficult to make
-      Joint replacements, dentalRoot implants, pacer and suture wires, bone plates and screws
+      Metals (Ti and its alloys, Co-Cr alloys, Au, Ag, stainless steels, etc.) | 金屬（鈦及其合金、鈷鉻合金、金、銀、不銹鋼等）
+      Strong, toughDuctile | 強韌延展性
+      DenseDifficult to make | 密度高製造困難
+      Joint replacements, dentalRoot implants, pacer and suture wires, bone plates and screws | 關節置換、牙科根植入物、起搏器和縫合線、骨板和螺釘
     
     
-      Ceramics (alumina zirconia, calcium phosphate including hydroxyapatite, carbon)
-      Very biocompatible
-      BrittleNot resilientWeak in tension
-      Dental and orthopedic implants
+      Ceramics (alumina zirconia, calcium phosphate including hydroxyapatite, carbon) | 陶瓷（氧化鋁、氧化鋯、磷酸鈣包括羥基磷灰石、碳）
+      Very biocompatible | 生物相容性高
+      BrittleNot resilientWeak in tension | 易碎無彈性抗拉強度弱
+      Dental and orthopedic implants | 牙科和骨科植入物
     
     
-      Composites (carbon-carbon, wire- or fiber-reinforced bone cement)
-      StrongTailor-made
-      Difficult to make
-      Bone cementDental resin
+      Composites (carbon-carbon, wire- or fiber-reinforced bone cement) | 複合材料（碳-碳、線或纖維增強骨水泥）
+      StrongTailor-made | 強度高可定制
+      Difficult to make | 製造困難
+      Bone cementDental resin | 骨水泥牙科樹脂
     
   
 
 
-Forces in biomaterialsBiomaterials are materials.The key to understanding matter is to understand attractive and interactive forces between atoms.
+Forces in Biomaterials | 生物材料中的作用力Biomaterials are materials. | 生物材料即材料。The key to understanding matter is to understand attractive and interactive forces between atoms. | 理解物質的關鍵在於理解原子間的吸引力和交互作用力。
 
 Buddy D. RatnerBioengineering and Chemical Engineering, University of Washington, Seattle, USA
-Forces that Hold Atoms Together
-
+Forces that Hold Atoms Together | 將原子結合在一起的作用力
   
     
-      Interatomic Force
-      Relative Strength
-      Example
+      Interatomic Force | 原子間作用力
+      Relative Strength | 相對強度
+      Example | 範例
     
   
   
     
-      Van der Waals interactions
-      Weak
-      Polyethylene forces that hold the chains together to make a solid
+      Van der Waals interactions | 范德瓦爾斯作用力
+      Weak | 弱
+      Polyethylene forces that hold the chains together to make a solid | 聚乙烯中將鏈結合形成固體的作用力
     
     
-      Ionic
-      Very strong
-      NaCl
+      Ionic | 離子鍵
+      Very strong | 非常強
+      NaCl | 氯化鈉
     
     
-      Hydrogen Bonding
-      Medium
-      Water ice that holds the chains together
+      Hydrogen Bonding | 氫鍵
+      Medium | 中等
+      Water ice that holds the chains together | 將水冰鏈結合的作用力
     
     
-      Metallic
-      Medium-strong
-      Gold metal with a high-melting point
+      Metallic | 金屬鍵
+      Medium-strong | 中等至強
+      Gold metal with a high-melting point | 高熔點金屬金
     
     
-      Covalent
-      Strong
-      The carbon-carbon bondCross-links in a polyacryl hydrogel
+      Covalent | 共價鍵
+      Strong | 強
+      The carbon-carbon bondCross-links in a polyacryl hydrogel | 碳-碳鍵聚丙烯酸水凝膠中的交聯
     
   
 
 
-Van der Waals or dispersion forces
-By Consider the electron clouds (charge density in space) of two atoms or molecules, both without permanent dipole moments.
-Electron clouds are contributory in molecular form. 
-Can shift to one side of the atom/molecule, therefore, at any moment the atoms or molecules can create a fluctuating instantaneous dipole.
-The fluctuating instantaneous dipole in one molecule typically induces such an “instantaneous dipole” in the next molecule.
-They dictate the properties of many materials (for example, some polymers such as polyethylene which has no obvious dipole).
-They explain why the lipids in cell membranes assemble into the bilayer structure. A typical van der Waals interactive force (for example, CH4 … CH4) is about 9 kJ/mol.
+Van der Waals or Dispersion Forces | 范德瓦爾斯或分散力
+By considering the electron clouds (charge density in space) of two atoms or molecules, both without permanent dipole moments. | 考慮兩個無永久偶極矩的原子或分子的電子雲（空間中的電荷密度）。
+Electron clouds are contributory in molecular form. | 電子雲在分子形態中起作用。
+Can shift to one side of the atom/molecule, therefore, at any moment the atoms or molecules can create a fluctuating instantaneous dipole. | 可移到原子/分子的一側，因此，任何時刻原子或分子可產生波動瞬時偶極。
+The fluctuating instantaneous dipole in one molecule typically induces such an “instantaneous dipole” in the next molecule. | 一個分子的波動瞬時偶極通常在下一個分子中誘導出類似的“瞬時偶極”。
+They dictate the properties of many materials (for example, some polymers such as polyethylene which has no obvious dipole). | 它們決定了許多材料的性質（例如，無明顯偶極的聚乙烯等聚合物）。
+They explain why the lipids in cell membranes assemble into the bilayer structure. A typical van der Waals interactive force (for example, CH4 … CH4) is about 9 kJ/mol. | 它們解釋了為什麼細胞膜中的脂質組裝成雙層結構。典型的范德瓦爾斯交互力（例如，CH4 … CH4）約為9 kJ/mol。
 
 
 
-Ionic forces and Hydrogen bond
-Ionic force: 
-The + and - charges are arrayed to achieve the closest interaction of opposite charges, and the furthest separation of similar charges. 
-Typical ionic bond strength: (for example, NaCl) are about 770 kJ/mol.
+Ionic Forces and Hydrogen Bond | 離子力與氫鍵
+Ionic force | 離子力:
+The + and - charges are arrayed to achieve the closest interaction of opposite charges, and the furthest separation of similar charges. | 正負電荷排列以實現相反電荷的最密切交互，並使相同電荷分離最遠。
+Typical ionic bond strength: (for example, NaCl) are about 770 kJ/mol. | 典型的離子鍵強度：（例如，氯化鈉）約為770 kJ/mol。
 
 
-Hydrogen bond:
-Typical hydrogen bond strengths (for example, O-H … H) are about 20 kJ/mol.
-
-
-
-Metallic and covalent bonds
-Single metallic bond is rarely discussed. The total interactive strength is realized through the multiplicity of the plus-minus interactions, at 25°C, aluminum will have a heat of sublimation of 325 kJ/mol, while titanium will be about 475 kJ/mol.
-Covalent bonds are relatively strong bonds associated with sharing of pairs of electrons between atoms. Typical covalent bond strengths (for example, C-C) are about 350 kJ/mol.
-
-Ionically-bonded Hydrogels/ Natural PolymerFor example: 
-
-Base acid: guluronic acid, mannuroic acid, Alginate(polysaccharide)By adding:
-Cationic polymer (e.g. chitosan fraction, polylysine)
-Divalent cations: (Creating salt bridge e.g. Ca2+)Form GELS using Ions or Polymers
+Hydrogen bond | 氫鍵:
+Typical hydrogen bond strengths (for example, O-H … H) are about 20 kJ/mol. | 典型的氫鍵強度（例如，O-H … H）約為20 kJ/mol。
 
 
 
-Collagen, the most abundant protein in mammals
-~30% of total protein mass
-Deposited in the extracellular matrix
-Since the discovery of collagen II by Miller and Matukas (1969), 26 new collagen types have been found
-The common structural feature of collagens is the presence of a triple helix that can range from most of their structure (96% for collagen I) to less than 10% (collagen XII)
-Collagen α chains vary in size from 662 up to 3152 amino acids
-The three α chains can be either identical to form homotrimers (e.g., collagen II) or different to form heterotrimers (e.g., collagen IX)
+Metallic and Covalent Bonds | 金屬鍵與共價鍵
+Single metallic bond is rarely discussed. The total interactive strength is realized through the multiplicity of the plus-minus interactions, at 25°C, aluminum will have a heat of sublimation of 325 kJ/mol, while titanium will be about 475 kJ/mol. | 單個金屬鍵很少被討論。總交互強度通過多重正負交互實現，在25°C時，鋁的升華熱約為325 kJ/mol，而鈦約為475 kJ/mol。
+Covalent bonds are relatively strong bonds associated with sharing of pairs of electrons between atoms. Typical covalent bond strengths (for example, C-C) are about 350 kJ/mol. | 共價鍵是原子間共享電子對的相對強鍵。典型的共價鍵強度（例如，C-C）約為350 kJ/mol。
+
+Ionically-bonded Hydrogels/Natural Polymer | 離子鍵結水凝膠/天然聚合物For example | 例如:
+
+Base acid: guluronic acid, mannuroic acid, Alginate (polysaccharide) | 基礎酸：古洛糖酸、甘露糖酸、海藻酸（多醣）By adding | 通過添加:
+Cationic polymer (e.g. chitosan fraction, polylysine) | 陽離子聚合物（例如，幾丁聚醣片段、聚賴氨酸）
+Divalent cations: (Creating salt bridge e.g. Ca2+) | 二價陽離子：（創建鹽橋，例如Ca2+）Form GELS using Ions or Polymers | 使用離子或聚合物形成凝膠
+
+
+
+Collagen, the Most Abundant Protein in Mammals | 膠原蛋白，哺乳動物中最豐富的蛋白質
+~30% of total protein mass | 約佔總蛋白質質量的30%
+Deposited in the extracellular matrix | 沉積於細胞外基質
+Since the discovery of collagen II by Miller and Matukas (1969), 26 new collagen types have been found | 自米勒和馬圖卡斯（1969）發現膠原蛋白II以來，已發現26種新膠原蛋白類型
+The common structural feature of collagens is the presence of a triple helix that can range from most of their structure (96% for collagen I) to less than 10% (collagen XII) | 膠原蛋白的共同結構特徵是存在三螺旋結構，範圍從大部分結構（膠原蛋白I為96%）到不到10%（膠原蛋白XII）
+Collagen α chains vary in size from 662 up to 3152 amino acids | 膠原蛋白α鏈的大小從662到3152個氨基酸不等
+The three α chains can be either identical to form homotrimers (e.g., collagen II) or different to form heterotrimers (e.g., collagen IX) | 三條α鏈可以相同形成同三聚體（例如，膠原蛋白II）或不同形成異三聚體（例如，膠原蛋白IX）
 
 By Cold Spring Harb Perspect Biol. 2011 Jan; 3(1): a004978
-MOLECULAR ASSEMBLIES: Collagen hierarchical structures
-MOLECULAR ASSEMBLIES:
-α-chains -&gt; collagen molecules (triple helices) -&gt; collagen fibrils -&gt; collagen fibers 
+Molecular Assemblies: Collagen Hierarchical Structures | 分子組裝：膠原蛋白層次結構
+MOLECULAR ASSEMBLIES | 分子組裝:
+α-chains -&gt; collagen molecules (triple helices) -&gt; collagen fibrils -&gt; collagen fibers | α鏈 -&gt; 膠原蛋白分子（三螺旋） -&gt; 膠原蛋白纖維 -&gt; 膠原蛋白纖維束
 
 
-Collagen fibers scale:
-
-Up to 10s of microns, 10-500 nm
-
-
-Amino acids in the alpha chain are proline (PRO), glycine (GLY) and hydroxyproline (HYP).
+Collagen fibers scale | 膠原蛋白纖維尺度:
+Up to 10s of microns, 10-500 nm | 高達數十微米，10-500奈米
 
 
-TYPES OF COLLAGEN
-TYPE 1: skin, nails and hair
-Found in ~90% of the collagen in the body. Forms 80% of dermis of skin and is the most beneficial for skin, nails and hair.
+Amino acids in the alpha chain are proline (PRO), glycine (GLY), and hydroxyproline (HYP). | α鏈中的氨基酸為脯氨酸（PRO）、甘氨酸（GLY）和羥脯氨酸（HYP）。
+
+Types of Collagen | 膠原蛋白類型
+TYPE 1: Skin, Nails, and Hair | 皮膚、指甲和頭髮
+Found in ~90% of the collagen in the body. Forms 80% of dermis of skin and is the most beneficial for skin, nails, and hair. | 佔體內約90%的膠原蛋白，形成皮膚真皮的80%，對皮膚、指甲和頭髮最有益。
 
 
-TYPE 2: elastic cartilage, e.g. ear
-Found in elastic cartilage like the ear. This type is linked to anti-ageing properties.
+TYPE 2: Elastic Cartilage, e.g., Ear | 彈性軟骨，例如耳朵
+Found in elastic cartilage like the ear. This type is linked to anti-ageing properties. | 存在於耳朵等彈性軟骨中，與抗衰老特性相關。
 
 
-TYPE 3: intestines, blood vessels, muscles
-Occurs in the intestines and has been linked to blood vessels and muscles.
+TYPE 3: Intestines, Blood Vessels, Muscles | 腸道、血管、肌肉
+Occurs in the intestines and has been linked to blood vessels and muscles. | 存在於腸道，與血管和肌肉相關。
 
 
-TYPE 4: base membranes for organs
-Found in egg whites, this collagen forms the base also forms the base membranes for organs, including the kidney.
+TYPE 4: Base Membranes for Organs | 器官基底膜
+Found in egg whites, this collagen forms the base also forms the base membranes for organs, including the kidney. | 存在於蛋清中，形成器官基底膜，包括腎臟。
 
 
-TYPE 5: cornea &amp; embryonic development
-Found in the cornea. Type 5 also helps with embryonic development.
+TYPE 5: Cornea &amp; Embryonic Development | 角膜與胚胎發育
+Found in the cornea. Type 5 also helps with embryonic development. | 存在於角膜。第五類型還有助於胚胎發育。
 
 
 
 By https://absolute-collagen.com/blogs/features-testimonials/different-types-of-collagen-which-is-best
-Three aspects in biomaterials
-Biological materials or body,
-Implant materials,
-Interaction between the two in the body
+Three Aspects in Biomaterials | 生物材料的三個方面
+Biological materials or body | 生物材料或身體
+Implant materials | 植入材料
+Interaction between the two in the body | 兩者在體內的交互作用
 
-In-stent restenosisMost successful invention
-Stent story
+In-stent Restenosis | 支架內再狹窄Most Successful Invention | 最成功的發明
+Stent story | 支架故事
 Video: https://youtu.be/f92O0iT2Odo
-Stent is a metal or plastic tube inserted into the lumen of an anatomic vessel or duct to keep the passageway open, and stenting is the placement of a stent.
-The first use of a coronary stent is typically attributed to Jacques Puel and Ulrich Sigwart when they implanted a stent into a patient in Toulouse, France, in 1986.
+Stent is a metal or plastic tube inserted into the lumen of an anatomic vessel or duct to keep the passageway open, and stenting is the placement of a stent. | 支架是插入解剖血管或管道內腔的金屬或塑料管，以保持通道暢通，支架植入術是支架的放置。
+The first use of a coronary stent is typically attributed to Jacques Puel and Ulrich Sigwart when they implanted a stent into a patient in Toulouse, France, in 1986. | 冠狀動脈支架的首次使用通常歸功於雅克·普埃爾和烏爾里希·西格瓦特，他們於1986年在法國圖盧茲為患者植入支架。
 
-Pathophysiology of Restenosis
-The initial consequences immediately after stent placement are de-endothelialization, crush of the plaque, and stretch of the entire artery.
-A layer of platelets and fibrin is then deposited at the injured site. Activated platelets on the surface expressing adhesion molecules such as P-selectin attach circulating leukocytes via platelet receptors such as P-selectin glycoprotein (GP) ligand. The leukocytes begin a process of rolling along the injured surface and migrate across the platelet-fibrin layer and into the tissue driven by chemical gradients of chemokines released from SMCs and resident macrophages.
-Next is a granulation or cellular proliferation phase. Growth factors are subsequently released from platelets and leukocytes, which stimulate migration of smooth muscle cells (SMCs) from the media into the neointima. The resultant neointima consists of SMCs, extracellular matrix, and macrophages recruited over several weeks.
-Over longer time periods, the artery enters a phase of remodeling involving extracellular matrix (ECM) protein degradation and resynthesis. Accompanying this phase is a shift to fewer cellular elements and greater production of ECM.
+Pathophysiology of Restenosis | 再狹窄的病理生理學
+The initial consequences immediately after stent placement are de-endothelialization, crush of the plaque, and stretch of the entire artery. | 支架放置後的即時後果包括去內皮化、斑塊壓碎和整個動脈的拉伸。
+A layer of platelets and fibrin is then deposited at the injured site. Activated platelets on the surface expressing adhesion molecules such as P-selectin attach circulating leukocytes via platelet receptors such as P-selectin glycoprotein (GP) ligand. The leukocytes begin a process of rolling along the injured surface and migrate across the platelet-fibrin layer and into the tissue driven by chemical gradients of chemokines released from SMCs and resident macrophages. | 隨後在受傷部位沉積一層血小板和纖維蛋白。表面活化的血小板表達P-選擇素等黏附分子，通過血小板受體（如P-選擇素糖蛋白配體）附著循環白細胞。白細胞開始沿受傷表面滾動，並在平滑肌細胞（SMC）和駐留巨噬細胞釋放的趨化因子的化學梯度驅動下，穿越血小板-纖維蛋白層並遷移到組織中。
+Next is a granulation or cellular proliferation phase. Growth factors are subsequently released from platelets and leukocytes, which stimulate migration of smooth muscle cells (SMCs) from the media into the neointima. The resultant neointima consists of SMCs, extracellular matrix, and macrophages recruited over several weeks. | 接下來是肉芽組織或細胞增殖階段。血小板和白細胞隨後釋放生長因子，刺激平滑肌細胞（SMC）從中膜遷移到新生內膜。最終新生內膜由平滑肌細胞、細胞外基質和數週內招募的巨噬細胞組成。
+Over longer time periods, the artery enters a phase of remodeling involving extracellular matrix (ECM) protein degradation and resynthesis. Accompanying this phase is a shift to fewer cellular elements and greater production of ECM. | 在更長的時間內，動脈進入涉及細胞外基質（ECM）蛋白降解和再合成的重塑階段。此階段伴隨著細胞成分減少和ECM生成增加。
 
 By Circulation. 2005; 111:237-273
-Additional infoHistory of Coronary Stents
-First Use: The first coronary stent was implanted in a patient in Toulouse, France, in 1986.
-Initial Consequences: Post-stent placement effects include:
-De-endothelialization
-Crushing of the plaque
-Stretching of the entire artery
+Additional Info | 額外資訊History of Coronary Stents | 冠狀動脈支架歷史
+First Use: The first coronary stent was implanted in a patient in Toulouse, France, in 1986. | 首次使用：第一個冠狀動脈支架於1986年在法國圖盧茲植入患者體內。
+Initial Consequences: Post-stent placement effects include: | 支架放置後的初始後果包括：
+De-endothelialization | 去內皮化
+Crushing of the plaque | 斑塊壓碎
+Stretching of the entire artery | 整個動脈拉伸
 
 
 
-Stent Surgery Procedure
-Procedure: Involves inserting a catheter into the body, avoiding open-chest surgery.
-Patient Preference: Many patients prefer stenting due to its minimally invasive nature. No patients were excluded from stenting due to angiographic reasons or comorbidities, unlike traditional surgery.
+Stent Surgery Procedure | 支架手術程序
+Procedure: Involves inserting a catheter into the body, avoiding open-chest surgery. | 程序：涉及將導管插入體內，避免開胸手術。
+Patient Preference: Many patients prefer stenting due to its minimally invasive nature. No patients were excluded from stenting due to angiographic reasons or comorbidities, unlike traditional surgery. | 患者偏好：許多患者因其微創性而偏好支架植入術。與傳統手術不同，沒有患者因血管造影原因或合併症被排除在支架植入術之外。
 
-Minimally Invasive Surgery
-Definition: Uses small incisions instead of large ones, enabling complex procedures with:
-Less trauma to the body
-Reduced pain and scarring
-Quicker recovery times compared to traditional surgery
-
-
-
-Need of selection and processing of biomaterialsChoice of material of bone regeneration
-Interaction between biomaterials and biology
-From Stent: 
-Restore the blood flow through de-endothelialization, crush of the plaque, and stretch of the entire artery
-
-
-From body: 
-Platelet aggregation, inflammatory cell infiltration, release of growth factors, smooth muscle cell modulation and proliferation, ECM deposition and remodeling
+Minimally Invasive Surgery | 微創手術
+Definition: Uses small incisions instead of large ones, enabling complex procedures with: | 定義：使用小切口而非大切口，使複雜手術具備：
+Less trauma to the body | 對身體的創傷較少
+Reduced pain and scarring | 減少疼痛和瘢痕
+Quicker recovery times compared to traditional surgery | 比傳統手術恢復時間更快
 
 
 
+Need of Selection and Processing of Biomaterials | 生物材料選擇與加工的需求Choice of Material of Bone Regeneration | 骨再生材料選擇
+Interaction between biomaterials and biology | 生物材料與生物學的交互作用
+From Stent | 從支架:
+Restore the blood flow through de-endothelialization, crush of the plaque, and stretch of the entire artery | 通過去內皮化、斑塊壓碎和整個動脈拉伸恢復血流
 
 
-Selection, and processing
-Types of Biomaterials (mechanical properties, biocompatibility, degradation, non-thrombogenic, etc);
-Processing involves a complex series of chemical, thermal, and physical processes that prepare a starting material, create a shape, retain that shape, refine the structure and shape.
-
-Questions:For Hip Replacement vs Skull Replacement:
-
-Titanium vs. Polycaprolactone?
-Porous surface or smooth surface?
-Cell attractive or cell repellent?
+From body | 從身體:
+Platelet aggregation, inflammatory cell infiltration, release of growth factors, smooth muscle cell modulation and proliferation, ECM deposition and remodeling | 血小板聚集、炎症細胞浸潤、生長因子釋放、平滑肌細胞調節和增殖、細胞外基質沉積和重塑
 
 
 
-Table: Hip Replacement vs Skull Replacement
 
+
+Selection and Processing | 選擇與加工
+Types of Biomaterials (mechanical properties, biocompatibility, degradation, non-thrombogenic, etc) | 生物材料類型（機械性能、生物相容性、降解性、非血栓形成等）
+Processing involves a complex series of chemical, thermal, and physical processes that prepare a starting material, create a shape, retain that shape, refine the structure and shape. | 加工涉及一系列複雜的化學、熱和物理過程，準備起始材料、創建形狀、保持形狀、精煉結構和形狀。
+
+Questions | 問題:For Hip Replacement vs Skull Replacement | 髖關節置換與顱骨置換:
+
+Titanium vs. Polycaprolactone? | 鈦與聚己內酯？
+Porous surface or smooth surface? | 多孔表面或光滑表面？
+Cell attractive or cell repellent? | 細胞吸引或細胞排斥？
+
+
+
+Table: Hip Replacement vs Skull Replacement | 髖關節置換與顱骨置換比較
   
     
-      Aspect
-      Hip Replacement
-      Skull Replacement
+      Aspect | 面向
+      Hip Replacement | 髖關節置換
+      Skull Replacement | 顱骨置換
     
   
   
     
-      Typical Patient
-      Aging population
-      Injury, surgery, tissue defect (broad age range)
+      Typical Patient | 典型患者
+      Aging population | 老年人群
+      Injury, surgery, tissue defect (broad age range) | 受傷、手術、組織缺陷（廣泛年齡範圍）
     
     
-      Primary Need
-      Mobility
-      Structural restoration and integration
+      Primary Need | 主要需求
+      Mobility | 活動性
+      Structural restoration and integration | 結構恢復與整合
     
     
-      Material Used
-      Titanium
-      Polycaprolactone / Titanium
+      Material Used | 使用材料
+      Titanium | 鈦
+      Polycaprolactone / Titanium | 聚己內酯/鈦
     
     
-      Surface Type
-      Smooth surface
-      Porous surface
+      Surface Type | 表面類型
+      Smooth surface | 光滑表面
+      Porous surface | 多孔表面
     
     
-      Fixation Strategy
-      Requires robust fixation
-      Encourages bone tissue integration
+      Fixation Strategy | 固定策略
+      Requires robust fixation | 需要堅固固定
+      Encourages bone tissue integration | 促進骨組織整合
     
     
-      Cell Interaction
-      Cell repellent
-      Cell attractive
+      Cell Interaction | 細胞交互
+      Cell repellent | 細胞排斥
+      Cell attractive | 細胞吸引
     
   
 
 
-
-Answering skill
-Characterization of biomaterials:
-Polymers and hydrogel
-Metals and inorganics
-Micro/nano-biomaterials
-
-
-What does the body do to the biomaterials:
-Host reaction to biomaterials and their evaluation
-Biological testing of biomaterials
-Degradation in biological environment
+Answering Skill | 回答技巧
+Characterization of biomaterials | 生物材料特性:
+Polymers and hydrogel | 聚合物與水凝膠
+Metals and inorganics | 金屬與無機物
+Micro/nano-biomaterials | 微米/奈米生物材料
 
 
-What does the biomaterials do to the body:
-Biomaterials in drug delivery and imaging
-Biomaterials in implants
-Biomaterials in tissue engineering
-Practical aspects of materials in biomedical engineering
+What does the body do to the biomaterials | 身體對生物材料的反應:
+Host reaction to biomaterials and their evaluation | 宿主對生物材料的反應及其評估
+Biological testing of biomaterials | 生物材料的生物測試
+Degradation in biological environment | 生物環境中的降解
+
+
+What does the biomaterials do to the body | 生物材料對身體的作用:
+Biomaterials in drug delivery and imaging | 生物材料在藥物傳遞和成像中的應用
+Biomaterials in implants | 生物材料在植入物中的應用
+Biomaterials in tissue engineering | 生物材料在組織工程中的應用
+Practical aspects of materials in biomedical engineering | 生物醫學工程中材料的實際面向
 
 
 
 ]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture notes</tag>
+      </tags>
   </entry>
   <entry>
     <title>Biomaterials-2 | 生物材料-2</title>
     <url>/posts/f5cdc6c3.html</url>
-    <content><![CDATA[Lecture 2: Surface and Bulk Properties of BiomaterialsLecture Introduction
-Title: Surface and Bulk Properties of Biomaterials
+    <content><![CDATA[ Lecture 2: Surface and Bulk Properties of Biomaterials | 第二講：生物材料的表面與體相性質
+Lecture Introduction | 課程引言
+Title: Surface and Bulk Properties of Biomaterials | 生物材料的表面與體相性質
 
-Three Aspects in Biomaterials
-Aspects:
-Biological materials or body
-Implant materials
-Interaction between the two in the body
-
-
-
-Surface and Bulk Properties Overview
-Surface Properties:
-Surface contact angle
-Scanning Electron Microscopy (SEM)
-Electron Spectroscopy for Chemical Analysis (ESCA or XPS)
-Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS)
-Raman spectroscopy
-
-
-Bulk Properties:
-Stress and strain
-Shear stress and shear strain
-Young’s modulus and shear modulus
+Three Aspects in Biomaterials | 生物材料的三個面向
+Aspects | 面向:
+Biological materials or body | 生物材料或身體
+Implant materials | 植入材料
+Interaction between the two in the body | 兩者在體內的交互作用
 
 
 
-Surface Properties Characteristics
-Key Points:
-Surfaces have unique reactivity.
-The surface is inevitably different from the bulk.
-Surface molecules can exhibit considerable mobility.
+Surface and Bulk Properties Overview | 表面與體相性質概述
+Surface Properties | 表面性質:
+Surface contact angle | 表面接觸角
+Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
+Electron Spectroscopy for Chemical Analysis (ESCA or XPS) | 電子能譜化學分析（ESCA或XPS）
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
+Raman spectroscopy | 拉曼光譜
+
+
+Bulk Properties | 體相性質:
+Stress and strain | 應力與應變
+Shear stress and shear strain | 剪應力與剪應變
+Young’s modulus and shear modulus | 楊氏模量與剪切模量
 
 
 
-Surface Dynamics
-Observation: The movement of atoms and molecules near the surface in response to the external environment is highly significant.
-
-Protein-Surface Interaction
-Effect of Protein Size: Larger proteins with more amino acids can make more interactions with a surface.
-
-Surface Characteristics
-Factors:
-Roughness (A)
-Patterns (C)
-Wettability, surface mobility, chemical composition (B)
-Electrical charge, crystallinity (E)
-Heterogeneity (D &amp; F)
+Surface Properties Characteristics | 表面性質特徵
+Key Points | 要點:
+Surfaces have unique reactivity. | 表面具有獨特的反應性。
+The surface is inevitably different from the bulk. | 表面與體相不可避免地不同。
+Surface molecules can exhibit considerable mobility. | 表面分子可展現顯著的流動性。
 
 
 
-Cosmetic Contact Lenses
-Context: Pigments in cosmetic contact lenses may alter surface properties, impacting comfort compared to clear lenses.
-Factors:
-Location and depth of pigment particles from the lens surface
-Coefficient of friction
-Surface roughness
+Surface Dynamics | 表面動態
+Observation: The movement of atoms and molecules near the surface in response to the external environment is highly significant. | 觀察：表面附近的原子和分子對外部環境的響應具有重要意義。
+
+Protein-Surface Interaction | 蛋白質-表面交互作用
+Effect of Protein Size: Larger proteins with more amino acids can make more interactions with a surface. | 蛋白質大小的影響：具有更多氨基酸的較大蛋白質可與表面進行更多交互作用。
+
+Surface Characteristics | 表面特性
+Factors | 因素:
+Roughness (A) | 粗糙度 (A)
+Patterns (C) | 圖案 (C)
+Wettability, surface mobility, chemical composition (B) | 潤濕性、表面流動性、化學組成 (B)
+Electrical charge, crystallinity (E) | 電荷、結晶度 (E)
+Heterogeneity (D &amp; F) | 異質性 (D &amp; F)
+
+
+
+Cosmetic Contact Lenses | 彩色隱形眼鏡
+Context: Pigments in cosmetic contact lenses may alter surface properties, impacting comfort compared to clear lenses. | 背景：彩色隱形眼鏡中的色素可能改變表面性質，影響與透明隱形眼鏡相比的舒適度。
+Factors | 因素:
+Location and depth of pigment particles from the lens surface | 色素顆粒與鏡片表面的位置和深度
+Coefficient of friction | 摩擦係數
+Surface roughness | 表面粗糙度
 
 
 Source: Johnson &amp; Johnson Vision Inc, Eye Contact Lens, 2018 Nov; 44(2):S256
 
-Surface Analysis Considerations
-Challenges:
-All methods can alter the surface.
-Potential for artifacts requires corroborative information from multiple methods to construct a complete surface profile.
+Surface Analysis Considerations | 表面分析注意事項
+Challenges | 挑戰:
+All methods can alter the surface. | 所有方法都可能改變表面。
+Potential for artifacts requires corroborative information from multiple methods to construct a complete surface profile. | 可能出現的偽影需要多種方法提供佐證信息以構建完整的表面輪廓。
 
 
 
-Surface and Bulk Properties (Detailed)
-Surface Properties:
-Surface contact angle (hydrophobicity)
-SEM (roughness and patterns)
-ESCA or XPS (chemical composition)
-TOF-SIMS (chemical composition)
-Raman spectroscopy (chemical composition)
+Surface and Bulk Properties (Detailed) | 表面與體相性質（詳細）
+Surface Properties | 表面性質:
+Surface contact angle (hydrophobicity) | 表面接觸角（疏水性）
+SEM (roughness and patterns) | 掃描電子顯微鏡（粗糙度與圖案）
+ESCA or XPS (chemical composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
+TOF-SIMS (chemical composition) | 飛行時間二次離子質譜（化學組成）
+Raman spectroscopy (chemical composition) | 拉曼光譜（化學組成）
 
 
-Bulk Properties:
-Stress and strain (mechanical properties)
-Shear stress and shear strain (mechanical properties)
-Young’s modulus and shear modulus (mechanical properties)
-
-
-
-Surface Contact Angle
-Definition: Measures the balance between cohesive forces (liquid molecules attracted to each other) and adhesive forces (liquid molecules attracted to the surface).
-Purpose: Directly measures surface wettability; indirectly probes surface energy, roughness, heterogeneity, contamination, and molecular mobility.
-Equation:```latex\gamma{sl} = \gamma{sv} + \gamma_{lv} \cos \theta
-Where:
-
-(\gamma_{lv}): Liquid-vapor surface tension
-(\gamma_{sl}): Interfacial tension between solid and liquid
-(\gamma_{sv}): Surface energy of the solid
-(\theta): Contact angle
+Bulk Properties | 體相性質:
+Stress and strain (mechanical properties) | 應力與應變（機械性能）
+Shear stress and shear strain (mechanical properties) | 剪應力與剪應變（機械性能）
+Young’s modulus and shear modulus (mechanical properties) | 楊氏模量與剪切模量（機械性能）
 
 
 
-Scanning Electron Microscopy (SEM)
-Function: Uses a high-energy electron beam (5-100 keV) rastered on a specimen under vacuum.
-Mechanism: Low-energy secondary electrons (1-20 eV) are emitted from impact points, with intensity depending on atomic composition and geometry.
-Note: Insulating materials require metallic coating; images reflect the coating surface, not the underlying material.
-
-SEM ImagingElectrons Used: Secondary and backscattered electrons are used for SEM imaging.
-Electron-Solid Interactions
-Regions:
-
-Secondary Electron (SE): Produced wherever primary electrons go, but only those near the surface reach the SE detector for imaging.
-Backscattered Electron (BSE): Produced with higher energy, travels farther than SE, provides better Z-contrast.
-X-ray Region: Used for Energy-Dispersive X-ray Spectroscopy (EDX), travels farther than BSE, best for analytical purposes.
+Surface Contact Angle | 表面接觸角
+Definition: Measures the balance between cohesive forces (liquid molecules attracted to each other) and adhesive forces (liquid molecules attracted to the surface). | 定義：測量液體分子相互吸引的內聚力與液體分子與表面吸引的黏附力之間的平衡。
+Purpose: Directly measures surface wettability; indirectly probes surface energy, roughness, heterogeneity, contamination, and molecular mobility. | 目的：直接測量表面潤濕性；間接探測表面能量、粗糙度、異質性、污染和分子流動性。
+Equation:\gamma_&#123;sl&#125; = \gamma_&#123;sv&#125; + \gamma_&#123;lv&#125; \cos \theta
+Where | 其中:
+((\gamma_{lv})): Liquid-vapor surface tension | 液-氣表面張力
+((\gamma_{sl})): Interfacial tension between solid and liquid | 固-液界面張力
+((\gamma_{sv})): Surface energy of the solid | 固體表面能量
+((\theta)): Contact angle | 接觸角
 
 
 
+Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
+Function: Uses a high-energy electron beam (5-100 keV) rastered on a specimen under vacuum. | 功能：使用高能電子束（5-100 keV）在真空下對樣品進行掃描。
+Mechanism: Low-energy secondary electrons (1-20 eV) are emitted from impact points, with intensity depending on atomic composition and geometry. | 機制：從撞擊點發射低能二次電子（1-20 eV），強度取決於原子組成和幾何形狀。
+Note: Insulating materials require metallic coating; images reflect the coating surface, not the underlying material. | 注意：絕緣材料需要金屬塗層；圖像反映塗層表面，而非底層材料。
 
-Applications:
+SEM Imaging | 掃描電子顯微鏡成像
+Electrons Used: Secondary and backscattered electrons are used for SEM imaging. | 使用的電子：二次電子和背散射電子用於SEM成像。
 
-SE: Best spatial resolution
-BSE: Better Z-contrast
-EDX: Best for elemental analysis
+Electron-Solid Interactions | 電子-固體交互作用
+Regions | 區域:
+Secondary Electron (SE): Produced wherever primary electrons go, but only those near the surface reach the SE detector for imaging. | 二次電子（SE）：只要初級電子到達就會產生，但只有靠近表面的二次電子到達SE檢測器進行成像。
+Backscattered Electron (BSE): Produced with higher energy, travels farther than SE, provides better Z-contrast. | 背散射電子（BSE）：以較高能量產生，傳播距離比SE遠，提供更好的Z對比。
+X-ray Region: Used for Energy-Dispersive X-ray Spectroscopy (EDX), travels farther than BSE, best for analytical purposes. | X射線區域：用於能量分散X射線光譜（EDX），傳播距離比BSE遠，最適合分析用途。
 
 
-
-X-ray Photoelectron Spectroscopy (XPS/ESCA)
-Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements.
-
-Applications :
-
-Identifies all elements except H and He (concentrations &gt;0.1%).
-Semi-quantitative elemental surface composition (±10%).
-Provides molecular environment details (oxidation state, bonding atoms).
-Detects aromatic/unsaturated structures via shake-up transitions.
-Identifies organic groups using derivatization reactions.
-Non-destructive elemental depth profiles (~100 Å).
-Destructive depth profiles (thousands of Å) using argon etching (for inorganics).
-Lateral surface composition variations (spatial resolution 8-150 µm).
-Fingerprinting materials using valence band spectra and bonding orbitals.
-Studies on hydrated (frozen) surfaces.
+Applications | 應用:
+SE: Best spatial resolution | 二次電子：最佳空間分辨率
+BSE: Better Z-contrast | 背散射電子：更好的Z對比
+EDX: Best for elemental analysis | 能量分散X射線光譜：最佳元素分析
 
 
 
-Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS)
-Mechanism: Bombards surface with accelerated ions, ejecting secondary ions, radicals, excited states, and neutrals. Only secondary ions are measured.
-Purpose: Analyzes elemental, isotopic, or molecular composition of the outermost 1-2 nm.
-
-Static SIMS : Uses low ion doses for analysis.When to Use EDX, ESCA, or SIMS
-EDX: For elemental composition of materials.
-ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental/chemical states with good energy resolution.
-SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis.
-
-Raman Spectroscopy
-Definition: Measures the energy difference (Raman shift) between incident and scattered light.
-Spectrum: Vertical axis (intensity of scattered light), horizontal axis (wavenumber of Raman shift, cm⁻¹).
-Example (Slide 41): Raman spectrum of tetrachloromethane (532 nm green laser):
-
-Stokes scattering: Lower wavenumber (longer wavelength), typically used for analysis.
-
-Anti-Stokes scattering: Higher wavenumber (shorter wavelength), also usable.
-
-Surface-Enhanced Raman Spectroscopy (SERS)
-Technique: Uses nanostructured metal surfaces (gold or silver) to amplify Raman scattering signals via localized surface plasmons, enabling ultra-sensitive detection (down to single-molecule level).
-
-Bulk Properties
-Role: Dictate the ability to carry loads without undue deflection, premature failure, or degradation.
-Properties:
-
-Mechanical (stress, strain, moduli)
-Thermal (response to heat)
-Optical (response to light)
+X-ray Photoelectron Spectroscopy (XPS/ESCA) | X射線光電子能譜（XPS/ESCA）
+Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements. | 機制：X射線光子從原子內殼（例如K殼）中逐出電子。逐出電子的動能可用於計算結合能，識別元素。
+Applications | 應用:
+Identifies all elements except H and He (concentrations &gt;0.1%). | 識別除H和He外的所有元素（濃度&gt;0.1%）。
+Semi-quantitative elemental surface composition (±10%). | 半定量元素表面組成（±10%）。
+Provides molecular environment details (oxidation state, bonding atoms). | 提供分子環境細節（氧化態、鍵結原子）。
+Detects aromatic/unsaturated structures via shake-up transitions. | 通過激發躍遷檢測芳香族/不飽和結構。
+Identifies organic groups using derivatization reactions. | 使用衍生反應識別有機基團。
+Non-destructive elemental depth profiles (~100 Å). | 非破壞性元素深度輪廓（~100 Å）。
+Destructive depth profiles (thousands of Å) using argon etching (for inorganics). | 使用氬蝕刻進行破壞性深度輪廓（數千Å，用於無機物）。
+Lateral surface composition variations (spatial resolution 8-150 µm). | 橫向表面組成變化（空間分辨率8-150 µm）。
+Fingerprinting materials using valence band spectra and bonding orbitals. | 使用價帶光譜和鍵結軌道進行材料指紋識別。
+Studies on hydrated (frozen) surfaces. | 研究水合（冷凍）表面。
 
 
 
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
+Mechanism: Bombards surface with accelerated ions, ejecting secondary ions, radicals, excited states, and neutrals. Only secondary ions are measured. | 機制：用加速離子轟擊表面，逐出二次離子、自由基、激發態和中性粒子。僅測量二次離子。
+Purpose: Analyzes elemental, isotopic, or molecular composition of the outermost 1-2 nm. | 目的：分析最外層1-2奈米的元素、同位素或分子組成。
+Static SIMS: Uses low ion doses for analysis. | 靜態SIMS：使用低離子劑量進行分析。
 
-Categories (Slide 48):
+When to Use EDX, ESCA, or SIMS | 何時使用EDX、ESCA或SIMS
+EDX: For elemental composition of materials. | 用於材料的元素組成。
+ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental/chemical states with good energy resolution. | 用於量化表面污染、理解電子結構或分析具有良好能量分辨率的元素/化學狀態。
+SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis. | 用於高靈敏度痕量元素檢測、高分辨率表面成像或分子組成分析。
 
-Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness).
-Extrinsic: Depend on microstructure (e.g., yield strength, optical/magnetic properties).
-
-
-
-Physical PropertiesExamples:
-
-Crystallinity
-Thermal transition points (melting point (T_m), glass transition point (T_g))
-Chemical composition
-
-Impact: Chemical composition affects bulk properties, surface chemistry, and other characteristics.
+Raman Spectroscopy | 拉曼光譜
+Definition: Measures the energy difference (Raman shift) between incident and scattered light. | 定義：測量入射光與散射光之間的能量差（拉曼位移）。
+Spectrum: Vertical axis (intensity of scattered light), horizontal axis (wavenumber of Raman shift, cm⁻¹). | 光譜：縱軸（散射光強度），橫軸（拉曼位移波數，cm⁻¹）。
+Example: Raman spectrum of tetrachloromethane (532 nm green laser): | 範例：四氯化碳的拉曼光譜（532奈米綠色激光）:
+Stokes scattering: Lower wavenumber (longer wavelength), typically used for analysis. | 斯托克斯散射：較低波數（較長波長），通常用於分析。
+Anti-Stokes scattering: Higher wavenumber (shorter wavelength), also usable. | 反斯托克斯散射：較高波數（較短波長），也可用。
 
 
-Mechanical Properties
-Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact).
-Influence: Highly affected by physical and chemical characteristics.
 
-Tensile/Compressive Testing
-Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate.
-Setup: One end of the specimen is attached to a movable platform.
+Surface-Enhanced Raman Spectroscopy (SERS) | 表面增強拉曼光譜（SERS）
+Technique: Uses nanostructured metal surfaces (gold or silver) to amplify Raman scattering signals via localized surface plasmons, enabling ultra-sensitive detection (down to single-molecule level). | 技術：使用奈米結構金屬表面（金或銀）通過局部表面電漿子放大拉曼散射信號，實現超靈敏檢測（低至單分子水平）。
 
-Compression Testing
-Application: Common for biomaterials under compressive forces (e.g., orthopedic implants).
-Specimen: Cylindrical, with length at least twice the diameter.
-Calculation: Stress-strain calculated similarly to tensile tests, but values are negative.
+Bulk Properties | 體相性質
+Role: Dictate the ability to carry loads without undue deflection, premature failure, or degradation. | 角色：決定在不發生過度變形、過早失效或降解的情況下承載負荷的能力。
+Properties | 性質:
+Mechanical (stress, strain, moduli) | 機械（應力、應變、模量）
+Thermal (response to heat) | 熱（對熱的響應）
+Optical (response to light) | 光學（對光的響應）
+
+
+Categories | 類別:
+Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness). | 內在：取決於組成（例如，密度、熱容量、剛度）。
+Extrinsic: Depend on microstructure (e.g., yield strength, optical/magnetic properties). | 外在：取決於微觀結構（例如，屈服強度、光學/磁性質）。
+
+
+
+Physical Properties | 物理性質
+Examples | 範例:
+Crystallinity | 結晶度
+Thermal transition points (melting point ((T_m)), glass transition point ((T_g))) | 熱轉換點（熔點((T_m))、玻璃化轉變點((T_g))）
+Chemical composition | 化學組成
+
+
+Impact: Chemical composition affects bulk properties, surface chemistry, and other characteristics. | 影響：化學組成影響體相性質、表面化學和其他特性。
+
+Mechanical Properties | 機械性質
+Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact). | 目的：估計在機械負載（拉伸、壓縮、扭轉、彎曲、循環負載、衝擊）下的行為。
+Influence: Highly affected by physical and chemical characteristics. | 影響：高度受物理和化學特性的影響。
+
+Tensile/Compressive Testing | 拉伸/壓縮測試
+Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate. | 方法：以控制的幅度和速率施加單軸負載（拉伸、壓縮或剪切）。
+Setup: One end of the specimen is attached to a movable platform. | 設置：樣品的一端附著在可移動平台上。
+
+Compression Testing | 壓縮測試
+Application: Common for biomaterials under compressive forces (e.g., orthopedic implants). | 應用：常用於承受壓縮力的生物材料（例如，骨科植入物）。
+Specimen: Cylindrical, with length at least twice the diameter. | 樣品：圓柱形，長度至少為直徑的兩倍。
+Calculation: Stress-strain calculated similarly to tensile tests, but values are negative. | 計算：應力-應變計算與拉伸測試類似，但值為負。
 
 ]]></content>
       <categories>
@@ -1466,69 +1490,69 @@ Calculation: Stress-strain calculated similarly to tensile tests, but values are
   <entry>
     <title>Biomaterials-4 | 生物材料-4</title>
     <url>/posts/170228b7.html</url>
-    <content><![CDATA[Lecture Outline | 课程大纲
-Outline | 讲义提要
-Advantages of ceramics and metals for medical implants | 医用植入物中陶瓷和金属的优势
-Composition of Bone | 骨的组成
-Three types of ceramics in biomaterials and their differences | 生物材料中三种陶瓷及其区别
-Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的区别
-Hydroxyapatite and its properties and applications | 羟基磷灰石的性质与应用
-Solid state sintering | 固态烧结
-Basic properties of metals | 金属的基本性质
-Relative elastic modulus of different biomaterials | 不同生物材料的弹性模量比较
-Criteria for orthopaedic implant and choices of materials | 骨科植入物的标准及材料选择
-Comparison of three types of metals as orthopaedic implant | 三种金属作为骨科植入物的比较
-Corrosion of metallic implants and solutions | 金属植入物的腐蚀及解决方案
+    <content><![CDATA[Lecture Outline | 課程大綱
+Outline | 講義提要
+Advantages of ceramics and metals for medical implants | 醫用植入物中陶瓷和金屬的優勢
+Composition of Bone | 骨的組成
+Three types of ceramics in biomaterials and their differences | 生物材料中三種陶瓷及其區別
+Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的區別
+Hydroxyapatite and its properties and applications | 羥基磷灰石的性質與應用
+Solid state sintering | 固態燒結
+Basic properties of metals | 金屬的基本性質
+Relative elastic modulus of different biomaterials | 不同生物材料的彈性模量比較
+Criteria for orthopaedic implant and choices of materials | 骨科植入物的標準及材料選擇
+Comparison of three types of metals as orthopaedic implant | 三種金屬作為骨科植入物的比較
+Corrosion of metallic implants and solutions | 金屬植入物的腐蝕及解決方案
 
 
 
-Ceramic and Metal Biomaterials: Types, Manufacturing, and Applications | 陶瓷与金属生物材料：类型、制造与应用Ceramic | 陶瓷Ceramic Types &amp; Manufacturing | 陶瓷类型与制造
-Traditional Ceramics: Porcelain, Stoneware, Earthenware; each uses unique chemical compositions and raw materials. The Hong Kong/Canton region is known for specialized techniques.传统陶瓷： 瓷器、炻器、陶器；各自采用独特的化学成分和原材料。港粤地区以专门工艺著称。
-Manufacturing Process: Clay (powder + water) is shaped, dried (shrinks and reorganizes), then fired/sintered to bond particles.制造过程： 粘土（粉末+水）成型、干燥（收缩与重组）、烧结使颗粒结合。
-Materials: Kaolinite and Bentonite clays; Flint and Quartz additives reduce shrinkage; Feldspar creates glossy, non-porous finishes.原材料： 高岭土和膨润土；燧石和石英添加剂减少收缩；长石形成光滑致密表面。
+Ceramic and Metal Biomaterials: Types, Manufacturing, and Applications | 陶瓷與金屬生物材料：類型、製造與應用Ceramic | 陶瓷Ceramic Types &amp; Manufacturing | 陶瓷類型與製造
+Traditional Ceramics: Porcelain, Stoneware, Earthenware; each uses unique chemical compositions and raw materials. The Hong Kong/Canton region is known for specialized techniques.傳統陶瓷： 瓷器、炻器、陶器；各自採用獨特的化學成分和原材料。港粵地區以專門工藝著稱。
+Manufacturing Process: Clay (powder + water) is shaped, dried (shrinks and reorganizes), then fired/sintered to bond particles.製造過程： 粘土（粉末+水）成型、乾燥（收縮與重組）、燒結使顆粒結合。
+Materials: Kaolinite and Bentonite clays; Flint and Quartz additives reduce shrinkage; Feldspar creates glossy, non-porous finishes.原材料： 高嶺土和膨潤土；燧石和石英添加劑減少收縮；長石形成光滑致密表面。
 
-Biomedical Ceramic Classifications | 生物医学陶瓷分类
-Bioactive Ceramics: Bond with tissue (e.g., glass ceramics for implant coatings, stimulate hydroxyapatite formation).生物活性陶瓷： 能与组织结合（如用于植入物涂层的玻璃陶瓷，促进羟基磷灰石形成）。
-Bioresorbable Ceramics: Biodegradable (e.g., calcium phosphate compounds, hydroxyapatite).生物可吸收陶瓷： 可降解（如磷酸钙化合物、羟基磷灰石）。
-Bioinert Ceramics: Minimal tissue interaction (e.g., pyrolytic carbon, alumina for joint replacements and dental crowns).生物惰性陶瓷： 与组织相互作用极少（如用于关节置换和牙冠的热解碳、氧化铝）。
+Biomedical Ceramic Classifications | 生物醫學陶瓷分類
+Bioactive Ceramics: Bond with tissue (e.g., glass ceramics for implant coatings, stimulate hydroxyapatite formation).生物活性陶瓷： 能與組織結合（如用於植入物塗層的玻璃陶瓷，促進羥基磷灰石形成）。
+Bioresorbable Ceramics: Biodegradable (e.g., calcium phosphate compounds, hydroxyapatite).生物可吸收陶瓷： 可降解（如磷酸鈣化合物、羥基磷灰石）。
+Bioinert Ceramics: Minimal tissue interaction (e.g., pyrolytic carbon, alumina for joint replacements and dental crowns).生物惰性陶瓷： 與組織相互作用極少（如用於關節置換和牙冠的熱解碳、氧化鋁）。
 
-Natural Ceramics in the Body | 体内天然陶瓷
-Bone: ~60% minerals (mainly hydroxyapatite), ~26% collagen, plus cells. Cortical (dense) and trabecular (porous) types; bone marrow contains stem and immune cells.骨骼： 约60%矿物质（主要为羟基磷灰石）、约26%胶原蛋白及细胞。分为致密骨和松质骨；骨髓含有干细胞和免疫细胞。
-Teeth: Higher inorganic content; layers include enamel, dentin, and pulp. Strength from nanostructured calcium phosphate.牙齿： 无机物含量更高；分为釉质、牙本质和牙髓。强度来自纳米结构磷酸钙。
+Natural Ceramics in the Body | 體內天然陶瓷
+Bone: ~60% minerals (mainly hydroxyapatite), ~26% collagen, plus cells. Cortical (dense) and trabecular (porous) types; bone marrow contains stem and immune cells.骨骼： 約60%礦物質（主要為羥基磷灰石）、約26%膠原蛋白及細胞。分為緻密骨和鬆質骨；骨髓含有幹細胞和免疫細胞。
+Teeth: Higher inorganic content; layers include enamel, dentin, and pulp. Strength from nanostructured calcium phosphate.牙齒： 無機物含量更高；分為琺瑯質、牙本質和牙髓。強度來自奈米結構磷酸鈣。
 
-Sintering Process &amp; Applications | 烧结工艺与应用
-Sintering: Occurs at ~⅓ melting point; surface atoms bond without full melting.烧结： 在约熔点三分之一温度下进行，表面原子结合但未完全熔化。
-Applications: Thermal spray coatings, porous structures for cell migration, dental crowns (zirconia vs. alumina), hip implants with hydroxyapatite coatings.应用： 热喷涂涂层、细胞迁移的多孔结构、牙冠（氧化锆与氧化铝）、带羟基磷灰石涂层的髋关节植入物。
+Sintering Process &amp; Applications | 燒結工藝與應用
+Sintering: Occurs at ~⅓ melting point; surface atoms bond without full melting.燒結： 在約熔點三分之一溫度下進行，表面原子結合但未完全熔化。
+Applications: Thermal spray coatings, porous structures for cell migration, dental crowns (zirconia vs. alumina), hip implants with hydroxyapatite coatings.應用： 熱噴塗塗層、細胞遷移的多孔結構、牙冠（氧化鋯與氧化鋁）、帶羥基磷灰石塗層的髖關節植入物。
 
-Overview of Biomedical Materials | 生物医学材料概述
-Ceramics: Biocompatible, mainly for implant coatings.陶瓷： 生物相容性好，主要用于植入物涂层。
-Metals: High mechanical strength, used for load-bearing implants.金属： 机械强度高，用于承重植入物。
+Overview of Biomedical Materials | 生物醫學材料概述
+Ceramics: Biocompatible, mainly for implant coatings.陶瓷： 生物相容性好，主要用於植入物塗層。
+Metals: High mechanical strength, used for load-bearing implants.金屬： 機械強度高，用於承重植入物。
 
-Ceramic Manufacturing &amp; Applications | 陶瓷制造与应用
-Steps: Raw material prep, shaping, drying, sintering.步骤： 原料准备、成型、干燥、烧结。
-Applications: Dental/orthopedic coatings, surface treatments to minimize protein/cell deposition and reduce friction.应用： 牙科/骨科涂层，表面处理减少蛋白质/细胞沉积和摩擦。
+Ceramic Manufacturing &amp; Applications | 陶瓷製造與應用
+Steps: Raw material prep, shaping, drying, sintering.步驟： 原料準備、成型、乾燥、燒結。
+Applications: Dental/orthopedic coatings, surface treatments to minimize protein/cell deposition and reduce friction.應用： 牙科/骨科塗層，表面處理減少蛋白質/細胞沉積和摩擦。
 
-Metals | 金属Types &amp; Properties of Medical Metals | 医用金属类型与性质
-Stainless Steel: Affordable, but poor corrosion resistance.不锈钢： 价格低廉，但耐腐蚀性差。
-Cobalt-Based Alloys: Better corrosion resistance, but potential carcinogenic ion release.钴基合金： 耐腐蚀性更好，但可能释放致癌离子。
-Titanium Alloys: Best biocompatibility and corrosion resistance, non-toxic, but expensive.钛合金： 生物相容性和耐腐蚀性最佳，无毒但价格昂贵。
+Metals | 金屬Types &amp; Properties of Medical Metals | 醫用金屬類型與性質
+Stainless Steel: Affordable, but poor corrosion resistance.不銹鋼： 價格低廉，但耐腐蝕性差。
+Cobalt-Based Alloys: Better corrosion resistance, but potential carcinogenic ion release.鈷基合金： 耐腐蝕性更好，但可能釋放致癌離子。
+Titanium Alloys: Best biocompatibility and corrosion resistance, non-toxic, but expensive.鈦合金： 生物相容性和耐腐蝕性最佳，無毒但價格昂貴。
 
-Special Metal Materials | 特殊金属材料
-Shape Memory Alloys: Nickel-Titanium; used in braces, stents, IVC filters; return to shape when heated.形状记忆合金： 镍钛合金；用于牙套、支架、下腔静脉滤器，加热后可恢复原形。
-Liquid Metals: Solid at room temp, liquid at body temp; used in wearable electronics (e.g., mercury, gallium).液态金属： 常温为固体，体温为液体；用于可穿戴电子（如汞、镓）。
-Biodegradable Metals: Magnesium- and zinc-based; gradually absorbed by the body.可降解金属： 镁基和锌基金属，能被人体逐渐吸收。
+Special Metal Materials | 特殊金屬材料
+Shape Memory Alloys: Nickel-Titanium; used in braces, stents, IVC filters; return to shape when heated.形狀記憶合金： 鎳鈦合金；用於牙套、支架、下腔靜脈濾器，加熱後可恢復原形。
+Liquid Metals: Solid at room temp, liquid at body temp; used in wearable electronics (e.g., mercury, gallium).液態金屬： 常溫為固體，體溫為液體；用於可穿戴電子（如汞、鎵）。
+Biodegradable Metals: Magnesium- and zinc-based; gradually absorbed by the body.可降解金屬： 鎂基和鋅基金屬，能被人體逐漸吸收。
 
-Corrosion Issues &amp; Protection | 腐蚀问题与防护
-Mechanism: Oxidation, electrode formation, accelerated by moisture/oxygen.机制： 氧化、电极形成，受潮湿/氧气加速。
-Biological Impact: Corrosion products trigger immune response and inflammation, may cause bone degradation.生物影响： 腐蚀产物引发免疫反应和炎症，可能导致骨质破坏。
-Protection: Use corrosion-resistant metals (chromium, titanium), inert ceramic coatings, and protective oxide layers.防护措施： 采用耐腐蚀金属（铬、钛）、惰性陶瓷涂层和保护性氧化层。
+Corrosion Issues &amp; Protection | 腐蝕問題與防護
+Mechanism: Oxidation, electrode formation, accelerated by moisture/oxygen.機制： 氧化、電極形成，受潮濕/氧氣加速。
+Biological Impact: Corrosion products trigger immune response and inflammation, may cause bone degradation.生物影響： 腐蝕產物引發免疫反應和炎症，可能導致骨質破壞。
+Protection: Use corrosion-resistant metals (chromium, titanium), inert ceramic coatings, and protective oxide layers.防護措施： 採用耐腐蝕金屬（鉻、鈦）、惰性陶瓷塗層和保護性氧化層。
 
 
-Tutorial | 教程Practice Questions | 练习题Q1. What is the driving force for the sintering (firing) process of ceramics? | 陶瓷烧结过程的驱动力是什么？
-A. The high surface free energy under heat and pressure | 高温高压下的高表面自由能
-B. High pressure in the environment | 环境中的高压力
-C. Heat (causing the melting of ceramics particles) | 热（导致陶瓷颗粒熔化）
-D. Ironic attraction | 离子吸引
+Tutorial | 教程Practice Questions | 練習題Q1. What is the driving force for the sintering (firing) process of ceramics? | 陶瓷燒結過程的驅動力是什麼？
+A. The high surface free energy under heat and pressure | 高溫高壓下的高表面自由能
+B. High pressure in the environment | 環境中的高壓力
+C. Heat (causing the melting of ceramics particles) | 熱（導致陶瓷顆粒熔化）
+D. Ironic attraction | 離子吸引
 
 
     
@@ -1556,15 +1580,15 @@ D. Ironic attraction | 离子吸引
       Show Answer
     
     
-      ✅ A. The high surface free energy under heat and pressureExplanation: Sintering occurs due to the reduction of surface energy, promoting particle bonding under heat.解析： 烧结是由于表面能降低，在加热下促进颗粒结合。
+      ✅ A. The high surface free energy under heat and pressureExplanation: Sintering occurs due to the reduction of surface energy, promoting particle bonding under heat.解析： 燒結是由於表面能降低，在加熱下促進顆粒結合。
 
     
   
 
-Q2. What is the difference between bioactive and bioinert ceramics in dental implants? | 牙科植入物中生物活性陶瓷与生物惰性陶瓷的区别是什么？
-A. Coating of implant; coating for crown | 植入物涂层；牙冠涂层
-B. Implant; coating for crown | 植入物；牙冠涂层
-C. Coating of implant; Implant | 植入物涂层；植入物
+Q2. What is the difference between bioactive and bioinert ceramics in dental implants? | 牙科植入物中生物活性陶瓷與生物惰性陶瓷的區別是什麼？
+A. Coating of implant; coating for crown | 植入物塗層；牙冠塗層
+B. Implant; coating for crown | 植入物；牙冠塗層
+C. Coating of implant; Implant | 植入物塗層；植入物
 D. Implant; Crown | 植入物；牙冠
 
 
@@ -1593,14 +1617,14 @@ D. Implant; Crown | 植入物；牙冠
       Show Answer
     
     
-      ✅ C. Coating of implant; ImplantExplanation: Bioactive ceramics are used as coatings to promote bone bonding; bioinert ceramics are used as structural implant materials.解析： 生物活性陶瓷用于涂层促进骨结合，生物惰性陶瓷用于结构性植入材料。
+      ✅ C. Coating of implant; ImplantExplanation: Bioactive ceramics are used as coatings to promote bone bonding; bioinert ceramics are used as structural implant materials.解析： 生物活性陶瓷用於塗層促進骨結合，生物惰性陶瓷用於結構性植入材料。
 
     
   
 
-Q3. What is the chemistry behind the corrosion resistance of titanium dioxide? | 二氧化钛耐腐蚀性的化学原理是什么？
-A. Titanium dioxide is very chemically stable and does not react with most of the chemicals | 二氧化钛化学性质非常稳定，不与大多数化学物质反应
-B. It is metal oxide | 它是金属氧化物
+Q3. What is the chemistry behind the corrosion resistance of titanium dioxide? | 二氧化鈦耐腐蝕性的化學原理是什麼？
+A. Titanium dioxide is very chemically stable and does not react with most of the chemicals | 二氧化鈦化學性質非常穩定，不與大多數化學物質反應
+B. It is metal oxide | 它是金屬氧化物
 C. It is white | 它是白色的
 D. None of the above | 以上都不是
 
@@ -1630,15 +1654,15 @@ D. None of the above | 以上都不是
       Show Answer
     
     
-      ✅ A. Titanium dioxide is very chemically stable and does not react with most of the chemicalsExplanation: TiO₂ forms a passive, stable oxide layer that protects titanium from corrosion.解析： 二氧化钛形成稳定的钝化氧化层，保护钛免受腐蚀。
+      ✅ A. Titanium dioxide is very chemically stable and does not react with most of the chemicalsExplanation: TiO₂ forms a passive, stable oxide layer that protects titanium from corrosion.解析： 二氧化鈦形成穩定的鈍化氧化層，保護鈦免受腐蝕。
 
     
   
 
-Q4. Why is stainless steel still used despite titanium’s superiority? | 尽管钛更优，为什么仍使用不锈钢？
+Q4. Why is stainless steel still used despite titanium’s superiority? | 儘管鈦更優，為什麼仍使用不銹鋼？
 A. Cost | 成本
-B. Accessibility | 易获得性
-C. Tradition and habit | 传统与习惯
+B. Accessibility | 易獲得性
+C. Tradition and habit | 傳統與習慣
 D. All of the above | 以上全部
 
 
@@ -1667,16 +1691,16 @@ D. All of the above | 以上全部
       Show Answer
     
     
-      ✅ D. All of the aboveExplanation: Stainless steel is cheaper, widely available, and historically used in implants.解析： 不锈钢价格低廉、易获得且有历史使用传统。
+      ✅ D. All of the aboveExplanation: Stainless steel is cheaper, widely available, and historically used in implants.解析： 不銹鋼價格低廉、易獲得且有歷史使用傳統。
 
     
   
 
-Q5. Roles of polymer, ceramic, and metal in full hip replacement | 全髋关节置换中聚合物、陶瓷和金属的作用
-A. Acetabulum: Polymer; Femoral head: Ceramic; Femoral stem: Metal | 髋臼：聚合物；股骨头：陶瓷；股骨柄：金属
-B. Acetabulum: Ceramic; Femoral head: Metal; Femoral stem: Polymer | 髋臼：陶瓷；股骨头：金属；股骨柄：聚合物
-C. Acetabulum: Metal; Femoral head: Polymer; Femoral stem: Ceramic | 髋臼：金属；股骨头：聚合物；股骨柄：陶瓷
-D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: Metal | 髋臼：陶瓷；股骨头：陶瓷；股骨柄：金属
+Q5. Roles of polymer, ceramic, and metal in full hip replacement | 全髖關節置換中聚合物、陶瓷和金屬的作用
+A. Acetabulum: Polymer; Femoral head: Ceramic; Femoral stem: Metal | 髖臼：聚合物；股骨頭：陶瓷；股骨柄：金屬
+B. Acetabulum: Ceramic; Femoral head: Metal; Femoral stem: Polymer | 髖臼：陶瓷；股骨頭：金屬；股骨柄：聚合物
+C. Acetabulum: Metal; Femoral head: Polymer; Femoral stem: Ceramic | 髖臼：金屬；股骨頭：聚合物；股骨柄：陶瓷
+D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: Metal | 髖臼：陶瓷；股骨頭：陶瓷；股骨柄：金屬
 
 
     
@@ -1704,14 +1728,14 @@ D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: Metal | 髋臼：�
       Show Answer
     
     
-      ✅ D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: MetalExplanation: Polymer is used in acetabular liners, ceramic for femoral heads, and metal for femoral stems.解析： 聚合物用于髋臼衬垫，陶瓷用于股骨头，金属用于股骨柄。
+      ✅ D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: MetalExplanation: Polymer is used in acetabular liners, ceramic for femoral heads, and metal for femoral stems.解析： 聚合物用於髖臼襯墊，陶瓷用於股骨頭，金屬用於股骨柄。
 
     
   
 
-Q6. Dental Implant Design | 牙科植入物设计
-(4 marks) List two major reasons people choose titanium to make the dental implant (screw). | 列举两大选择钛制作牙科植入物（螺钉）的原因
-(6 marks) List two benefits of the hydroxyapatite coating. | 列举羟基磷灰石涂层的两大优点
+Q6. Dental Implant Design | 牙科植入物設計
+(4 marks) List two major reasons people choose titanium to make the dental implant (screw). | 列舉兩大選擇鈦製作牙科植入物（螺釘）的理由
+(6 marks) List two benefits of the hydroxyapatite coating. | 列舉羥基磷灰石塗層的兩大優點
 
 
     
@@ -1741,19 +1765,19 @@ Q6. Dental Implant Design | 牙科植入物设计
     
       Titanium advantages:  
 
-Excellent biocompatibility | 优异的生物相容性
-High corrosion resistance due to stable oxide layer | 稳定氧化层带来高耐腐蚀性
+Excellent biocompatibility | 優異的生物相容性
+High corrosion resistance due to stable oxide layer | 穩定氧化層帶來高耐腐蝕性
 
 Hydroxyapatite coating benefits:  
 
-Promotes osseointegration (bone bonding) | 促进骨结合
-Mimics natural bone mineral, enhancing biological response | 模仿天然骨矿物，增强生物反应
+Promotes osseointegration (bone bonding) | 促進骨結合
+Mimics natural bone mineral, enhancing biological response | 模仿天然骨礦物，增強生物反應
 
 
     
   
 
-Q7. What is pyrolytic carbon? | 什么是热解碳？
+Q7. What is pyrolytic carbon? | 什麼是熱解碳？
     
       .collapse-button {
         background-color: #FF7242;
@@ -1779,12 +1803,12 @@ Q7. What is pyrolytic carbon? | 什么是热解碳？
       Show Answer
     
     
-      ✅ Pyrolytic carbon is a ceramic-like material known for its biocompatibility, chemical inertness, and wear resistance.Explanation: It is produced by the thermal decomposition of hydrocarbons and is widely used in heart valve prostheses and orthopedic implants due to its durability and compatibility with blood and tissue.解析： 热解碳是一种类陶瓷材料，具有生物相容性、化学惰性和耐磨性。由碳氢化合物热分解制得，广泛用于心脏瓣膜和骨科植入物，因其耐用且与血液和组织兼容。
+      ✅ Pyrolytic carbon is a ceramic-like material known for its biocompatibility, chemical inertness, and wear resistance.Explanation: It is produced by the thermal decomposition of hydrocarbons and is widely used in heart valve prostheses and orthopedic implants due to its durability and compatibility with blood and tissue.解析： 熱解碳是一種類陶瓷材料，具有生物相容性、化學惰性和耐磨性。由碳氫化合物熱分解製得，廣泛用於心臟瓣膜和骨科植入物，因其耐用且與血液和組織相容。
 
     
   
 
-Q8. What kind of material is the Simon IVC filter made of? | Simon下腔静脉滤器由什么材料制成？
+Q8. What kind of material is the Simon IVC filter made of? | Simon下腔靜脈濾器由什麼材料製成？
     
       .collapse-button {
         background-color: #FF7242;
@@ -1810,11 +1834,10 @@ Q8. What kind of material is the Simon IVC filter made of? | Simon下腔静脉�
       Show Answer
     
     
-      ✅ The Simon IVC filter is made of a shape memory metal, typically nitinol (nickel-titanium alloy).Explanation: Nitinol provides flexibility, biocompatibility, and self-expanding properties, making it ideal for vascular implants like IVC filters.解析： Simon下腔静脉滤器由形状记忆金属制成，通常为镍钛合金。镍钛合金具有柔韧性、生物相容性和自扩展性，适合血管植入物。
+      ✅ The Simon IVC filter is made of a shape memory metal, typically nitinol (nickel-titanium alloy).Explanation: Nitinol provides flexibility, biocompatibility, and self-expanding properties, making it ideal for vascular implants like IVC filters.解析： Simon下腔靜脈濾器由形狀記憶金屬製成，通常為鎳鈦合金。鎳鈦合金具有柔韌性、生物相容性和自擴展性，適合血管植入物。
 
     
-  
-]]></content>
+  ]]></content>
       <categories>
         <category>Education</category>
         <category>Biomedical Engineering</category>
@@ -1829,277 +1852,257 @@ Q8. What kind of material is the Simon IVC filter made of? | Simon下腔静脉�
   <entry>
     <title>Biomaterials-5 | 生物材料-5</title>
     <url>/posts/8f57aec0.html</url>
-    <content><![CDATA[🧭 Lecture Outline
-Introduction
-Nanomaterials
-Gold Nanoparticles (AuNPs)
-Quantum Dots (QDs)
-Liposomes &amp; Lipid Nanoparticles (LNPs)
+    <content><![CDATA[🧭 Lecture Outline | 課程大綱
+Introduction | 引言
+Nanomaterials | 奈米材料
+Gold Nanoparticles (AuNPs) | 金奈米粒子
+Quantum Dots (QDs) | 量子點
+Liposomes &amp; Lipid Nanoparticles (LNPs) | 脂質體與脂質奈米粒子
 
 
-Fabrication Techniques
-Synthesis Methods
-Surface Engineering
+Fabrication Techniques | 製造技術
+Synthesis Methods | 合成方法
+Surface Engineering | 表面工程
 
 
-Biomedical Applications
-Principles of Nanomedicine
-Gene Therapy &amp; Delivery
-
-
-
-
-🧠 Nanomaterials: Origins &amp; ImpactHistorical Foundations
-The concept of nanotechnology was popularized by Richard Feynman in his 1959 lecture “There’s Plenty of Room at the Bottom”.
-Feynman used vivid storytelling to advocate for atomic-scale engineering, inspiring decades of research.
-Many of his predictions have since been realized through modern nanotechnology.
-
-Evolution of Medical Applications
-Initial breakthroughs (1980s–1990s):
-PEGylation for drug stability
-Targeting ribosomes
-Endometriosis treatments
-
-
-Current technologies:
-Lipid and ceramic nanoparticles
-Polymer micelles and protein carriers
-Cell-based and viral delivery systems
+Biomedical Applications | 生物醫學應用
+Principles of Nanomedicine | 奈米醫學原理
+Gene Therapy &amp; Delivery | 基因療法與傳遞
 
 
 
 
-🔬 Key Properties of NanomaterialsSurface-to-Volume Ratio
-As particle size decreases, the proportion of surface atoms increases:
-~90% for single-atom layers
-~35% for 7-layer clusters
-&lt;5% for 30 nm particles
+🧠 Nanomaterials: Origins &amp; Impact | 奈米材料：起源與影響Historical Foundations | 歷史基礎
+The concept of nanotechnology was popularized by Richard Feynman in his 1959 lecture “There’s Plenty of Room at the Bottom” | 奈米技術的概念由理查德·費曼在1959年的演講“底部有足夠的空間”中推廣。
+Feynman used vivid storytelling to advocate for atomic-scale engineering, inspiring decades of research | 費曼以生動的敘事方式提倡原子尺度工程，激發了數十年的研究。
+Many of his predictions have since been realized through modern nanotechnology | 他的許多預測已通過現代奈米技術實現。
+
+Evolution of Medical Applications | 醫療應用的演變
+Initial breakthroughs (1980s–1990s): | 初期突破（1980年代至1990年代）：
+PEGylation for drug stability | PEG化增強藥物穩定性
+Targeting ribosomes | 靶向核糖體
+Endometriosis treatments | 子宮內膜異位症治療
 
 
-This enhances chemical reactivity and biological interaction.
-
-Size-Dependent Behavior
-Nanomaterials exhibit unique properties not seen in bulk materials.
-Operate in a transitional zone between molecular and macroscopic scales.
-Enable novel applications in medicine, electronics, and energy.
-
-
-🟡 Gold Nanoparticles &amp; Localized Surface Plasmon Resonance (LSPR)Discovery &amp; Physical Properties
-First observed by Michael Faraday in 1857: wine-colored gold colloids
-Gold nanoparticles have a lower melting point than bulk gold
-Exhibit Localized Surface Plasmon Resonance (LSPR):
-Oscillation of conduction electrons in response to light
-Responsible for vivid colors (e.g., red from 520 nm green light absorption)
+Current technologies: | 當前技術：
+Lipid and ceramic nanoparticles | 脂質與陶瓷奈米粒子
+Polymer micelles and protein carriers | 聚合物膠束與蛋白質載體
+Cell-based and viral delivery systems | 基於細胞與病毒的傳遞系統
 
 
 
-Applications
-Biosensors: Fluorescence quenching for detection
-mRNA detection: Using detachable linkers
-Protein biomarkers: Enhanced sensitivity via plasmonic effects
 
-Tuning LSPR
-Size Increase → Red shift in absorption
-Shape Control (e.g., nanorods) → Longitudinal resonance in far-red region
-Aggregation → Red shift due to interparticle coupling
+🔬 Key Properties of Nanomaterials | 奈米材料的關鍵特性Surface-to-Volume Ratio | 表面積與體積比
+As particle size decreases, the proportion of surface atoms increases: | 隨著粒徑減小，表面原子的比例增加：
+~90% for single-atom layers | 單原子層約90%
+~35% for 7-layer clusters | 7層簇約35%
+&lt;5% for 30 nm particles | 30奈米粒子小於5%
 
 
-🌈 Quantum Dots (QDs): Color by SizeOverview
-Semiconductor nanocrystals with size-dependent emission
-Recognized by the 2022 Nobel Prize
+This enhances chemical reactivity and biological interaction | 這增強了化學反應性和生物交互作用。
 
-Mechanism
-Smaller QDs → Larger band gap → Emission at shorter wavelengths (blue)
-Larger QDs → Smaller band gap → Emission at longer wavelengths (red)
-
-Manufacturing
-Synthesized at ~300°C using cadmium, selenium, and sulfur
-Stabilized with ZnS shells and organic ligands
-
-Advantages
-Photostability: Resistant to photobleaching
-Broad absorption with narrow emission
-Used in QLED displays, solar cells, and bioimaging
+Size-Dependent Behavior | 尺寸依賴行為
+Nanomaterials exhibit unique properties not seen in bulk materials | 奈米材料展現出與大塊材料不同的獨特特性。
+Operate in a transitional zone between molecular and macroscopic scales | 在分子與宏觀尺度之間的過渡區運作。
+Enable novel applications in medicine, electronics, and energy | 實現醫學、電子與能源的新應用。
 
 
-🌐 SPR vs LSPR Technologies
+🟡 Gold Nanoparticles &amp; Localized Surface Plasmon Resonance (LSPR) | 金奈米粒子與局部表面電漿共振Discovery &amp; Physical Properties | 發現與物理特性
+First observed by Michael Faraday in 1857: wine-colored gold colloids | 1857年由邁克爾·法拉第首次觀察：酒紅色金膠體。
+Gold nanoparticles have a lower melting point than bulk gold | 金奈米粒子的熔點低於大塊金。
+Exhibit Localized Surface Plasmon Resonance (LSPR): | 展現局部表面電漿共振（LSPR）：
+Oscillation of conduction electrons in response to light | 傳導電子響應光的振盪
+Responsible for vivid colors (e.g., red from 520 nm green light absorption) | 負責鮮艷的顏色（例如，520奈米綠光吸收產生紅色）
+
+
+
+Applications | 應用
+Biosensors: | 生物感測器： Fluorescence quenching for detection | 螢光淬滅用於檢測
+mRNA detection: | mRNA檢測： Using detachable linkers | 使用可分離連接物
+Protein biomarkers: | 蛋白質生物標誌物： Enhanced sensitivity via plasmonic effects | 通過電漿效應增強靈敏度
+
+Tuning LSPR | 調節LSPR
+Size Increase | 尺寸增加 → Red shift in absorption | 吸收紅移
+Shape Control | 形狀控制 (e.g., nanorods) → Longitudinal resonance in far-red region | （例如奈米棒）→遠紅區的縱向共振
+Aggregation | 聚集 → Red shift due to interparticle coupling | 因粒子間耦合導致紅移
+
+
+🌈 Quantum Dots (QDs): Color by Size | 量子點：尺寸決定顏色Overview | 概述
+Semiconductor nanocrystals with size-dependent emission | 具有尺寸依賴發射的半導體奈米晶體
+Recognized by the 2022 Nobel Prize | 2022年諾貝爾獎認可
+
+Mechanism | 機制
+Smaller QDs → Larger band gap → Emission at shorter wavelengths (blue) | 較小的量子點→較大的能隙→較短波長發射（藍色）
+Larger QDs → Smaller band gap → Emission at longer wavelengths (red) | 較大的量子點→較小的能隙→較長波長發射（紅色）
+
+Manufacturing | 製造
+Synthesized at ~300°C using cadmium, selenium, and sulfur | 在約300°C下使用鎘、硒和硫合成
+Stabilized with ZnS shells and organic ligands | 使用ZnS殼和有機配體穩定
+
+Advantages | 優勢
+Photostability: Resistant to photobleaching | 光穩定性：抗光漂白
+Broad absorption with narrow emission | 寬吸收與窄發射
+Used in QLED displays, solar cells, and bioimaging | 用於QLED顯示器、太陽能電池和生物成像
+
+
+🌐 SPR vs LSPR Technologies | SPR與LSPR技術比較
 
 
 
 Feature
+特性
 SPR (Surface Plasmon Resonance)
+表面電漿共振
 LSPR (Localized SPR)
+局部表面電漿共振
 
 
 
 
 Evanescent Field
+折射場
 250 nm – 1 μm
+250奈米 - 1微米
 Much shorter
+更短
 
 
 Propagation Length
+傳播長度
 Microns to millimeters
+微米到毫米
 Localized
+局部
 
 
 Resonance Conditions
+共振條件
 Prism optics
+稜鏡光學
 Light wavelength
+光波長
 
 
 
 
 
-SPR: Surface wave at metal-dielectric interface
-LSPR: Electron cloud oscillation around nanoparticles
-LSPR explains the color of gold nanoparticles
+SPR: | 表面電漿共振： Surface wave at metal-dielectric interface | 金屬-介電界面上的表面波
+LSPR: | 局部表面電漿共振： Electron cloud oscillation around nanoparticles | 奈米粒子周圍的電子雲振盪
+LSPR explains the color of gold nanoparticles | LSPR解釋了金奈米粒子的顏色
 
 
-🧪 Liposomes &amp; Lipid Nanoparticles (LNPs)Liposomes
-Discovered by Alec Bangham in the 1960s
-Composed of a double lipid bilayer enclosing an aqueous core
-Can encapsulate both hydrophilic and hydrophobic drugs
-Common components: phospholipids, PEG-lipids, cholesterol
-Fabrication: freeze-drying → hydration → size control
+🧪 Liposomes &amp; Lipid Nanoparticles (LNPs) | 脂質體與脂質奈米粒子Liposomes | 脂質體
+Discovered by Alec Bangham in the 1960s | 1960年代由Alec Bangham發現
+Composed of a double lipid bilayer enclosing an aqueous core | 由雙層脂質膜包圍水性核心組成
+Can encapsulate both hydrophilic and hydrophobic drugs | 可包封親水性和疏水性藥物
+Common components: phospholipids, PEG-lipids, cholesterol | 常見成分：磷脂、PEG-脂質、膽固醇
+Fabrication: freeze-drying → hydration → size control | 製造：冷凍乾燥→水合→尺寸控制
 
-Lipid Nanoparticles (LNPs)
-Solid lipid-based particles for nucleic acid delivery
-Fabricated via microfluidics
-Typical formulation: 12 mg/mL lipids, 25% ethanol
-Purification: tangential flow filtration (TFF), dialysis, size exclusion
-
-
-🧭 Nanomaterial Fabrication StrategiesBottom-Up Approaches
-Chemical synthesis: e.g., gold nanoparticles via citrate reduction
-Self-assembly: lipid vesicles, micelles
-Spray drying: for drug particle formation
-
-Top-Down Approaches
-PRINT® technology: Particle Replication in Non-wetting Templates
-Photolithography: Inspired by microelectronics
-Graphene exfoliation: Electrochemical peeling
-
-Surface Stabilization
-Charge-based (e.g., citrate): unstable in salt solutions
-Steric-based (e.g., PEG): preferred for stability and protein corona prevention
+Lipid Nanoparticles (LNPs) | 脂質奈米粒子
+Solid lipid-based particles for nucleic acid delivery | 用於核酸傳遞的固體脂質粒子
+Fabricated via microfluidics | 通過微流控技術製造
+Typical formulation: 12 mg/mL lipids, 25% ethanol | 典型配方：12毫克/毫升脂質，25%乙醇
+Purification: tangential flow filtration (TFF), dialysis, size exclusion | 純化：切向流過濾（TFF）、透析、尺寸排阻
 
 
-💊 Nanomedicine: Benefits &amp; ChallengesBenefits of Nanoparticle-Based Drug Delivery
-Improved bioavailability and solubility
-Suitable for intravenous (IV) administration
-Extended circulation time in the body
-Enhanced tissue penetration
-Targeted accumulation at disease sites
+🧭 Nanomaterial Fabrication Strategies | 奈米材料製造策略Bottom-Up Approaches | 自下而上方法
+Chemical synthesis: e.g., gold nanoparticles via citrate reduction | 化學合成：例如，通過檸檬酸還原製備金奈米粒子
+Self-assembly: lipid vesicles, micelles | 自組裝：脂質囊泡、膠束
+Spray drying: for drug particle formation | 噴霧乾燥：用於藥物粒子形成
 
-Design Considerations
-Size:
-150 nm → accumulation in liver, lungs, spleen
-&lt;10 nm → rapid clearance via kidneys
+Top-Down Approaches | 自上而下方法
+PRINT® technology: Particle Replication in Non-wetting Templates | PRINT®技術：非潤濕模板中的粒子複製
+Photolithography: Inspired by microelectronics | 光刻技術：受微電子啟發
+Graphene exfoliation: Electrochemical peeling | 石墨烯剝離：電化學剝離
 
-
-Shape:
-Disc-shaped particles → liver/lung/spleen targeting
+Surface Stabilization | 表面穩定
+Charge-based (e.g., citrate): unstable in salt solutions | 基於電荷（例如檸檬酸）：在鹽溶液中不穩定
+Steric-based (e.g., PEG): preferred for stability and protein corona prevention | 基於空間位阻（例如PEG）：穩定性和防止蛋白冠層的首選
 
 
-Surface Charge:
-Positive charge → increased uptake in liver/lung
+💊 Nanomedicine: Benefits &amp; Challenges | 奈米醫學：益處與挑戰Benefits of Nanoparticle-Based Drug Delivery | 基於奈米粒子的藥物傳遞益處
+Improved bioavailability and solubility | 改善生物利用度和溶解度
+Suitable for intravenous (IV) administration | 適合靜脈（IV）給藥
+Extended circulation time in the body | 延長體內循環時間
+Enhanced tissue penetration | 增強組織滲透
+Targeted accumulation at disease sites | 靶向疾病部位積累
+
+Design Considerations | 設計考量
+Size: | 尺寸：
+150 nm → accumulation in liver, lungs, spleen | 150奈米→在肝臟、肺部、脾臟積累
+&lt;10 nm → rapid clearance via kidneys | 小於10奈米→經腎臟快速清除
 
 
-
-Delivery Challenges
-Macrophage uptake reduces circulation time
-Non-specific organ distribution
-Laminar blood flow limits vascular wall interaction
-Tumor pressure hinders deep tissue penetration
-
-PRINT® Technology Applications
-Used by Liquidia for lung-targeted delivery
-Particle size (1–5 μm) affects deposition depth
-Particle shape influences biodistribution
+Shape: | 形狀：
+Disc-shaped particles → liver/lung/spleen targeting | 盤狀粒子→靶向肝臟/肺部/脾臟
 
 
-⚡ Charge-Stabilized Nanoparticles
-Less stable than PEG-coated particles
-Stabilization via electric double layer:
-Stern layer: tightly bound ions
-Diffusive layer: loosely bound ions
-
-
-Salt exposure disrupts the double layer → aggregation
-
-
-🧬 Gene Delivery Using NanoparticlesCentral Dogma of Molecular Biology
-DNA → mRNA → Protein
-
-Types of Therapeutic Nucleic Acids
-DNA: e.g., Luxturna (FDA-approved in 2017)
-mRNA: e.g., Pfizer/Moderna COVID-19 vaccines
-siRNA: e.g., Patisiran (FDA-approved in 2018)
-microRNA: experimental, not FDA-approved
-
-Delivery Methods
-Viral Vectors:
-Retrovirus, Adenovirus, AAV, HSV
-
-
-Non-Viral Methods:
-Gene gun, Electroporation, Nanoparticles
+Surface Charge: | 表面電荷：
+Positive charge → increased uptake in liver/lung | 正電荷→肝臟/肺部攝取增加
 
 
 
-Role of Lipid Nanoparticles (LNPs)
-Protect nucleic acids from nucleases
-Avoid renal clearance
-Facilitate endocytosis
-Proposed structures: onion-like, cake-like, solid core
+Delivery Challenges | 傳遞挑戰
+Macrophage uptake reduces circulation time | 巨噬細胞攝取減少循環時間
+Non-specific organ distribution | 非特異性器官分佈
+Laminar blood flow limits vascular wall interaction | 層流限制血管壁交互
+Tumor pressure hinders deep tissue penetration | 腫瘤壓力阻礙深層組織滲透
+
+PRINT® Technology Applications | PRINT®技術應用
+Used by Liquidia for lung-targeted delivery | Liquidia用於肺部靶向傳遞
+Particle size (1–5 μm) affects deposition depth | 粒子尺寸（1-5微米）影響沉積深度
+Particle shape influences biodistribution | 粒子形狀影響生物分佈
 
 
-🧫 COVID-19 Vaccine Mechanism &amp; Industry Trends1. Mechanism of mRNA-LNP Vaccines
-mRNA encodes spike protein
-Delivered via LNPs
-Uptaken by antigen-presenting cells (APCs)
-Activates B cells and T cells for immune response
-
-2. Market Trends (2023)
-80% of vaccines use non-lipid nanoparticles
-Viral vectors still dominate gene delivery
+⚡ Charge-Stabilized Nanoparticles | 電荷穩定奈米粒子
+Less stable than PEG-coated particles | 比PEG塗層粒子穩定性低
+Stabilization via electric double layer: | 通過電雙層穩定：
+Stern layer: tightly bound ions | 斯特恩層：緊密結合的離子
+Diffusive layer: loosely bound ions | 擴散層：鬆散結合的離子
 
 
-Tutorial-5Q1. Which is correct in terms of surface plasmon resonance (SPR)?
-A. SPR involves valence band electronsB. SPR involves conduction band electronsC. SPR involves magnetic field oscillationD. None of the above  
+Salt exposure disrupts the double layer → aggregation | 鹽暴露破壞電雙層→聚集
 
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ B. SPR involves conduction band electronsExplanation: SPR is caused by the collective oscillation of conduction electrons in resonance with the electric field of incident light.
 
-    
-  
-Q2. What is the difference between LSPR and SPR?
-A. SubstrateB. PlasmonC. SignalD. All  
+🧬 Gene Delivery Using Nanoparticles | 使用奈米粒子進行基因傳遞Central Dogma of Molecular Biology | 分子生物學中心法則
+DNA → mRNA → Protein | DNA → mRNA → 蛋白質
+
+Types of Therapeutic Nucleic Acids | 治療性核酸類型
+DNA: | DNA： e.g., Luxturna (FDA-approved in 2017) | 例如Luxturna（2017年FDA批准）
+mRNA: | mRNA： e.g., Pfizer/Moderna COVID-19 vaccines | 例如輝瑞/莫德納COVID-19疫苗
+siRNA: | siRNA： e.g., Patisiran (FDA-approved in 2018) | 例如Patisiran（2018年FDA批准）
+microRNA: | 微RNA： experimental, not FDA-approved | 實驗性，未經FDA批准
+
+Delivery Methods | 傳遞方法
+Viral Vectors: | 病毒載體：
+Retrovirus, Adenovirus, AAV, HSV | 逆轉錄病毒、腺病毒、AAV、HSV
+
+
+Non-Viral Methods: | 非病毒方法：
+Gene gun, Electroporation, Nanoparticles | 基因槍、電穿孔、奈米粒子
+
+
+
+Role of Lipid Nanoparticles (LNPs) | 脂質奈米粒子（LNPs）的角色
+Protect nucleic acids from nucleases | 保護核酸免受核酸酶降解
+Avoid renal clearance | 避免腎臟清除
+Facilitate endocytosis | 促進內吞作用
+Proposed structures: onion-like, cake-like, solid core | 提出的結構：洋蔥狀、蛋糕狀、固體核心
+
+
+🧫 COVID-19 Vaccine Mechanism &amp; Industry Trends | COVID-19疫苗機制與行業趨勢1. Mechanism of mRNA-LNP Vaccines | mRNA-LNP疫苗機制
+mRNA encodes spike protein | mRNA編碼刺突蛋白
+Delivered via LNPs | 通過LNPs傳遞
+Uptaken by antigen-presenting cells (APCs) | 由抗原呈遞細胞（APCs）攝取
+Activates B cells and T cells for immune response | 激活B細胞和T細胞以產生免疫反應
+
+2. Market Trends (2023) | 市場趨勢（2023年）
+80% of vaccines use non-lipid nanoparticles | 80%的疫苗使用非脂質奈米粒子
+Viral vectors still dominate gene delivery | 病毒載體仍主導基因傳遞
+
+
+Tutorial-5 | 教程-5Q1. Which is correct in terms of surface plasmon resonance (SPR)? | 關於表面電漿共振（SPR），哪個是正確的？
+A. SPR involves valence band electrons | SPR涉及價帶電子B. SPR involves conduction band electrons | SPR涉及傳導帶電子C. SPR involves magnetic field oscillation | SPR涉及磁場振盪D. None of the above | 以上皆非  
 
     
       .collapse-button {
@@ -2126,17 +2129,49 @@ A. SubstrateB. PlasmonC. SignalD. All
       Show Answer
     
     
-      ✅ D. All  
-Explanation:SPR occurs on flat metal surfaces; LSPR occurs on nanoparticles. Differences include substrate type, plasmon behavior, and signal detection.
+      ✅ B. SPR involves conduction band electrons | SPR涉及傳導帶電子Explanation: SPR is caused by the collective oscillation of conduction electrons in resonance with the electric field of incident light | 解釋：SPR由傳導電子的集體振盪引起，與入射光的電場共振。
 
     
   
-Q3. Compare the longest SPR wavelength among gold nanostructures:
+Q2. What is the difference between LSPR and SPR? | LSPR與SPR的區別是什麼？
+A. Substrate | 基板B. Plasmon | 電漿C. Signal | 信號D. All | 全部  
 
-10 nm AuNPs  
-50 nm AuNPs  
-10×60 nm nanorods  
-10×40 nm nanorods  
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. All | 全部  
+Explanation: SPR occurs on flat metal surfaces; LSPR occurs on nanoparticles. Differences include substrate type, plasmon behavior, and signal detection | 解釋：SPR發生在平坦金屬表面；LSPR發生在奈米粒子上。差異包括基板類型、電漿行為和信號檢測。
+
+    
+  
+Q3. Compare the longest SPR wavelength among gold nanostructures: | 比較金奈米結構中最長的SPR波長：
+
+10 nm AuNPs | 10奈米金奈米粒子  
+50 nm AuNPs | 50奈米金奈米粒子  
+10×60 nm nanorods | 10×60奈米奈米棒  
+10×40 nm nanorods | 10×40奈米奈米棒  
 
 A. 1 &gt; 3 &gt; 2 &gt; 4B. 2 &gt; 1 &gt; 3 &gt; 4C. 3 &gt; 4 &gt; 2 &gt; 1D. 4 &gt; 3 &gt; 2 &gt; 1  
 
@@ -2166,12 +2201,12 @@ A. 1 &gt; 3 &gt; 2 &gt; 4B. 2 &gt; 1 &gt; 3 &gt; 4C. 3 &gt; 4 &gt; 2 &gt; 1D. 4 
     
     
       ✅ C. 3 &gt; 4 &gt; 2 &gt; 1  
-Explanation: Nanorods with higher aspect ratios show longer SPR wavelengths. Size also contributes, but shape dominates.
+Explanation: Nanorods with higher aspect ratios show longer SPR wavelengths. Size also contributes, but shape dominates | 解釋：高縱橫比的奈米棒顯示較長的SPR波長。尺寸也有影響，但形狀主導。
 
     
   
-Q4. Which nanoparticles change color when 3 M NaCl is added?
-A. Citrate-stabilized 20 nm AuNPsB. PEG-stabilized AuNPsC. CdSe QDs with PEGD. Lipid nanoparticles with PEG  
+Q4. Which nanoparticles change color when 3 M NaCl is added? | 添加3M NaCl時，哪些奈米粒子會改變顏色？
+A. Citrate-stabilized 20 nm AuNPs | 檸檬酸穩定的20奈米金奈米粒子B. PEG-stabilized AuNPs | PEG穩定的金奈米粒子C. CdSe QDs with PEG | 帶PEG的CdSe量子點D. Lipid nanoparticles with PEG | 帶PEG的脂質奈米粒子  
 
     
       .collapse-button {
@@ -2198,12 +2233,12 @@ A. Citrate-stabilized 20 nm AuNPsB. PEG-stabilized AuNPsC. CdSe QDs with PEGD. L
       Show Answer
     
     
-      ✅ A. Citrate-stabilized 20 nm AuNPs  
-Explanation: Salt disrupts electrostatic stabilization in citrate-coated AuNPs, causing aggregation and color change.
+      ✅ A. Citrate-stabilized 20 nm AuNPs | 檸檬酸穩定的20奈米金奈米粒子  
+Explanation: Salt disrupts electrostatic stabilization in citrate-coated AuNPs, causing aggregation and color change | 解釋：鹽破壞檸檬酸塗層金奈米粒子的靜電穩定性，導致聚集和顏色變化。
 
     
   
-Q5. Quantum dots emitting blue, green, and red light—compare retention time in size exclusion chromatography:
+Q5. Quantum dots emitting blue, green, and red light—compare retention time in size exclusion chromatography: | 發射藍光、綠光和紅光的量子點—比較尺寸排阻層析中的保留時間：
 A. Blue &gt; Green &gt; RedB. Green &gt; Red &gt; BlueC. Red &gt; Green &gt; BlueD. Red &gt; Blue &gt; Green  
 
     
@@ -2232,12 +2267,12 @@ A. Blue &gt; Green &gt; RedB. Green &gt; Red &gt; BlueC. Red &gt; Green &gt; Blu
     
     
       ✅ A. Blue &gt; Green &gt; Red  
-Explanation: Smaller QDs (blue) elute slower due to more pore interaction. Larger QDs (red) elute faster.
+Explanation: Smaller QDs (blue) elute slower due to more pore interaction. Larger QDs (red) elute faster | 解釋：較小的量子點（藍色）由於更多孔隙交互作用而洗脫較慢。較大的量子點（紅色）洗脫較快。
 
     
   
-Q6. What method can be used to make liposomes?
-A. Electrochemical exfoliationB. PRINT technologyC. Spray dryingD. Self-assembly  
+Q6. What method can be used to make liposomes? | 哪種方法可用於製造脂質體？
+A. Electrochemical exfoliation | 電化學剝離B. PRINT technology | PRINT技術C. Spray drying | 噴霧乾燥D. Self-assembly | 自組裝  
 
     
       .collapse-button {
@@ -2264,13 +2299,13 @@ A. Electrochemical exfoliationB. PRINT technologyC. Spray dryingD. Self-assembly
       Show Answer
     
     
-      ✅ D. Self-assembly  
-Explanation: Liposomes form spontaneously when amphiphilic lipids self-assemble in water.
+      ✅ D. Self-assembly | 自組裝  
+Explanation: Liposomes form spontaneously when amphiphilic lipids self-assemble in water | 解釋：當兩親性脂質在水中自組裝時，脂質體會自發形成。
 
     
   
-Q7. Major difference between liposomes and lipid nanoparticles?
-A. SizeB. Surface functional groupC. Composition and functionD. Surface charge  
+Q7. Major difference between liposomes and lipid nanoparticles? | 脂質體與脂質奈米粒子的主要區別？
+A. Size | 尺寸B. Surface functional group | 表面官能團C. Composition and function | 組成與功能D. Surface charge | 表面電荷  
 
     
       .collapse-button {
@@ -2297,13 +2332,13 @@ A. SizeB. Surface functional groupC. Composition and functionD. Surface charge
       Show Answer
     
     
-      ✅ C. Composition and function  
-Explanation: Liposomes have bilayer structures; LNPs are solid or amorphous. Their composition and delivery roles differ.
+      ✅ C. Composition and function | 組成與功能  
+Explanation: Liposomes have bilayer structures; LNPs are solid or amorphous. Their composition and delivery roles differ | 解釋：脂質體具有雙層結構；脂質奈米粒子為固體或非晶態。它們的組成和傳遞角色不同。
 
     
   
-Q8. Which factor influences nanoparticle biodistribution in vivo?
-A. SizeB. Surface chargeC. ShapeD. All of the above  
+Q8. Which factor influences nanoparticle biodistribution in vivo? | 哪些因素影響奈米粒子在體內的生物分佈？
+A. Size | 尺寸B. Surface charge | 表面電荷C. Shape | 形狀D. All of the above | 以上全部  
 
     
       .collapse-button {
@@ -2330,13 +2365,13 @@ A. SizeB. Surface chargeC. ShapeD. All of the above
       Show Answer
     
     
-      ✅ D. All of the above  
-Explanation: All these factors affect circulation, organ targeting, and cellular uptake.
+      ✅ D. All of the above | 以上全部  
+Explanation: All these factors affect circulation, organ targeting, and cellular uptake | 解釋：所有這些因素都影響循環、器官靶向和細胞攝取。
 
     
   
-Q9. Why are lipid nanoparticles needed for nucleic acid drug delivery?
-A. In vivo degradation by nucleasesB. Renal clearanceC. Negative charge prevents membrane crossingD. All of the above  
+Q9. Why are lipid nanoparticles needed for nucleic acid drug delivery? | 為什麼核酸藥物傳遞需要脂質奈米粒子？
+A. In vivo degradation by nucleases | 體內核酸酶降解B. Renal clearance | 腎臟清除C. Negative charge prevents membrane crossing | 負電荷阻止膜穿越D. All of the above | 以上全部  
 
     
       .collapse-button {
@@ -2363,16 +2398,16 @@ A. In vivo degradation by nucleasesB. Renal clearanceC. Negative charge prevents
       Show Answer
     
     
-      ✅ D. All of the above  
-Explanation: LNPs protect nucleic acids, improve delivery efficiency, and prevent rapid clearance. 
+      ✅ D. All of the above | 以上全部  
+Explanation: LNPs protect nucleic acids, improve delivery efficiency, and prevent rapid clearance | 解釋：LNPs保護核酸，提高傳遞效率，並防止快速清除。
 
     
   
-Q10. mRNA-1273 (Moderna COVID vaccine) is injected intramuscularly.
+Q10. mRNA-1273 (Moderna COVID vaccine) is injected intramuscularly. | mRNA-1273（莫德納COVID疫苗）通過肌肉注射給藥。
 
-Role of mRNA: Provides genetic instructions to antigen-presenting cells (APCs) to produce the spike (S) protein antigen.  
-Role of lipid nanoparticles (LNPs): Protect mRNA from degradation, facilitate cellular uptake, and help deliver mRNA into APCs.  
-Target cells: APCs such as dendritic cells and Langerhans cells translate the mRNA into spike protein, initiating the immune response.
+Role of mRNA: Provides genetic instructions to antigen-presenting cells (APCs) to produce the spike (S) protein antigen | mRNA的角色：為抗原呈遞細胞（APCs）提供遺傳指令以產生刺突（S）蛋白抗原。  
+Role of lipid nanoparticles (LNPs): Protect mRNA from degradation, facilitate cellular uptake, and help deliver mRNA into APCs | 脂質奈米粒子（LNPs）的角色：保護mRNA免受降解，促進細胞攝取，並幫助將mRNA傳遞到APCs。  
+Target cells: APCs such as dendritic cells and Langerhans cells translate the mRNA into spike protein, initiating the immune response | 目標細胞：樹突細胞和朗格漢斯細胞等APCs將mRNA翻譯成刺突蛋白，啟動免疫反應。
 
 ]]></content>
       <categories>
@@ -2594,6 +2629,120 @@ Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals fo
       </tags>
   </entry>
   <entry>
+    <title>HW1 Signals and Systems | 生物信號與生物系統</title>
+    <url>/posts/1775fd89.html</url>
+    <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
+
+這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
+
+🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
+
+
+Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
+
+
+
+Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
+
+
+
+Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
+
+
+
+load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
+🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
+
+size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
+0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
+The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
+
+size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
+
+0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
+結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
+
+📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
+
+Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
+First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
+Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
+Plot:
+One raw trial
+avg25
+avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
+
+
+
+
+avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
+🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+
+ver is a matrix or 2D array. 是一個矩陣或二維陣列。
+1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
+**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
+avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
+
+🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
+
+Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
+Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
+One raw trial
+avg25
+avg100 to estimate noise.
+
+
+Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
+std_ver, std_avg25, std_avg100
+
+
+
+load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
+📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
+
+Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
+Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
+Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
+Actual STD (Raw): 1.0405
+Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
+Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
+
+Discussion of Discrepancies | 差異原因探討 :Several factors could explain the slight differences between actual and expected STD values | 儘管差異不大，仍可能由以下因素造成 :
+
+Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
+非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
+
+Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
+
+試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
+
+Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
+
+基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
+
+Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
+
+樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
+
+Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
+
+前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>Signals and Systems</tag>
+        <tag>biomedical engineering</tag>
+        <tag>Homework</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HW2 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/6d4835d0.html</url>
     <content><![CDATA[Homework 2In this homework set, you will aims to build your skills in visualizing signal transformations and understanding the process of discretization, which are fundamental in analyzing and processing biomedical signals in systems like those used in medical diagnostics or monitoring.
@@ -2717,120 +2866,6 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
 
 
 
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Signals and Systems</category>
-      </categories>
-      <tags>
-        <tag>Signals and Systems</tag>
-        <tag>biomedical engineering</tag>
-        <tag>Homework</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HW1 Signals and Systems | 生物信號與生物系統</title>
-    <url>/posts/1775fd89.html</url>
-    <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
-
-這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
-
-🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
-
-
-Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
-
-
-
-Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
-
-
-
-Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
-
-
-
-load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
-🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
-
-size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
-0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
-The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
-
-size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
-
-0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
-結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
-
-📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
-
-Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
-First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
-Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
-Plot:
-One raw trial
-avg25
-avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
-
-
-
-
-avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
-🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
-
-ver is a matrix or 2D array. 是一個矩陣或二維陣列。
-1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
-**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
-mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
-avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
-
-🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
-
-Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
-Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
-One raw trial
-avg25
-avg100 to estimate noise.
-
-
-Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
-std_ver, std_avg25, std_avg100
-
-
-
-load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
-📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
-
-Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
-Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
-Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
-Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
-Actual STD (Raw): 1.0405
-Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
-Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
-
-Discussion of Discrepancies | 差異原因探討 :Several factors could explain the slight differences between actual and expected STD values | 儘管差異不大，仍可能由以下因素造成 :
-
-Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
-非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
-
-Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
-
-試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
-
-Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
-
-基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
-
-Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
-
-樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
-
-Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
-
-前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
 
 ]]></content>
       <categories>
