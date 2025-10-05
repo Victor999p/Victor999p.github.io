@@ -55,8 +55,7 @@ MAX30102 血氧與心率感測器重點整理
 - USB 線（用於程式上傳）
 ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MCU，支援 Wi-Fi、Bluetooth 5.0 和 AI 加速，適合 IoT 專案。這篇記錄詳細說明如何安裝開發環境，並運行簡單的 Hello World 程式（LED 閃爍）。
 步驟 1: 硬體準備
-開發板：推薦 ESP32-S3-DevKitC-1（約 NT$300）。
-工具：USB 線、電腦（Windows/Mac/Linux）。
+開發板：推薦 ESP32-S3-DevKitC-1（約 NT300）。300）。300）。- 工具：USB 線、電腦（Windows/Mac/Linux）。
 連接：USB 連接到電腦，確認驅動程式（CP210x 或 CH340）已安裝。
 
 &lt;/image-card&gt;(圖片來源：Espressif 官方文件)
@@ -503,89 +502,6 @@ To connect with like-minded people
 def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
 Output:Hello, Hexo + Butterfly + Python!Stay tuned for more updates!
 test 123
-]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>introduction</tag>
-        <tag>first</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Test 02</title>
-    <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[change?
-表格带有对齐格式的表格
-
-
-
-标题1
-标题2
-标题2
-
-
-
-
-文本好短
-文本不短也不长
-文本好长文本好长文本好长
-
-
-文本好长文本好长文本好长
-文本好短
-文本不短也不长
-
-
-
-
-居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
-html写法
-  
-    标题1
-    标题2
-    标题3
-  
-  
-    文本好短
-    文本不短也不长
-    文本好长文本好长文本好长
-  
-  
-    文本好长文本好长文本好长
-    文本好短
-    文本不短也不长
-  
-&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
-这种方式，表格上方会留出大量空白
-解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
-mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
-
-    flowchart LR
-    c1--&gt;a2
-    subgraph one
-    a1--&gt;a2
-    end
-    subgraph two
-    b1--&gt;b2
-    end
-    subgraph three
-    c1--&gt;c2
-    end
-    one --&gt; two
-    three --&gt; two
-    two --&gt; c2
-  
-
-    pie
-title Key elements in Product X
-&quot;Calcium&quot; : 42.96
-&quot;Potassium&quot; : 50.05
-&quot;Magnesium&quot; : 10.01
-&quot;Iron&quot; : 5
-  
-&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
 ]]></content>
       <categories>
         <category>Test</category>
@@ -1302,6 +1218,89 @@ Practical aspects of materials in biomedical engineering | 生物醫學工程中
         <tag>Biomaterials</tag>
         <tag>Biomedical Engineering</tag>
         <tag>Lecture notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test 02</title>
+    <url>/posts/fe3551ce.html</url>
+    <content><![CDATA[change?
+表格带有对齐格式的表格
+
+
+
+标题1
+标题2
+标题2
+
+
+
+
+文本好短
+文本不短也不长
+文本好长文本好长文本好长
+
+
+文本好长文本好长文本好长
+文本好短
+文本不短也不长
+
+
+
+
+居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
+html写法
+  
+    标题1
+    标题2
+    标题3
+  
+  
+    文本好短
+    文本不短也不长
+    文本好长文本好长文本好长
+  
+  
+    文本好长文本好长文本好长
+    文本好短
+    文本不短也不长
+  
+&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
+这种方式，表格上方会留出大量空白
+解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
+mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
+
+    flowchart LR
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+  
+
+    pie
+title Key elements in Product X
+&quot;Calcium&quot; : 42.96
+&quot;Potassium&quot; : 50.05
+&quot;Magnesium&quot; : 10.01
+&quot;Iron&quot; : 5
+  
+&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>introduction</tag>
+        <tag>first</tag>
       </tags>
   </entry>
   <entry>
@@ -2888,6 +2887,143 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
 100, 100: Position of the bottom-left corner of the window on your screen (in pixels) | 視窗左下角在螢幕上的位置（以像素為單位）
 800: Width of the window | 視窗寬度
 600: Height of the window | 視窗高度
+
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>Signals and Systems</tag>
+        <tag>biomedical engineering</tag>
+        <tag>Homework</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HW3 Signals and Systems | 生物信號與生物系統</title>
+    <url>/posts/a776c643.html</url>
+    <content><![CDATA[Signal Analysis: Even and Odd Components and Periodicity | 信號分析：偶數與奇數分量及週期性Background Concepts | 背景概念Even and Odd Components | 偶數與奇數分量For a continuous-time signal x(t) x(t) x(t):
+
+Even component | 偶數分量: xe(t)=x(t)+x(−t)2x_e(t) = \frac{x(t) + x(-t)}{2}xe​(t)=2x(t)+x(−t)​
+Odd component | 奇數分量: xo(t)=x(t)−x(−t)2x_o(t) = \frac{x(t) - x(-t)}{2}xo​(t)=2x(t)−x(−t)​
+
+
+For a discrete-time signal x[n] x[n] x[n]:
+
+Even component | 偶數分量: xe[n]=x[n]+x[−n]2x_e[n] = \frac{x[n] + x[-n]}{2}xe​[n]=2x[n]+x[−n]​
+Odd component | 奇數分量: xo[n]=x[n]−x[−n]2x_o[n] = \frac{x[n] - x[-n]}{2}xo​[n]=2x[n]−x[−n]​
+
+
+A signal is even | 偶數 if x(t)=x(−t) x(t) = x(-t) x(t)=x(−t) or x[n]=x[−n] x[n] = x[-n] x[n]=x[−n], and odd | 奇數 if x(t)=−x(−t) x(t) = -x(-t) x(t)=−x(−t) or x[n]=−x[−n] x[n] = -x[-n] x[n]=−x[−n].
+Periodicity | 週期性
+A continuous-time signal | 連續時間信號 x(t) x(t) x(t) is periodic if there exists a T&gt;0 T &gt; 0 T&gt;0 such that x(t+T)=x(t) x(t + T) = x(t) x(t+T)=x(t). The smallest such T T T is the fundamental period | 基本週期.
+A discrete-time signal | 離散時間信號 x[n] x[n] x[n] is periodic if there exists an integer N&gt;0 N &gt; 0 N&gt;0 such that x[n+N]=x[n] x[n + N] = x[n] x[n+N]=x[n]. The smallest such N N N is the fundamental period | 基本週期.
+For sums of sinusoids, periodicity depends on whether the periods of individual components are commensurate (i.e., their ratio is rational).
+For continuous-time sinusoids cos⁡(ωt) \cos(\omega t) cos(ωt) or sin⁡(ωt) \sin(\omega t) sin(ωt), the period is T=2πω T = \frac{2\pi}{\omega} T=ω2π​.
+For discrete-time sinusoids cos⁡(ωn) \cos(\omega n) cos(ωn) or sin⁡(ωn) \sin(\omega n) sin(ωn), the signal is periodic if ω2π=kN \frac{\omega}{2\pi} = \frac{k}{N} 2πω​=Nk​ for integers k k k and N N N, with period N N N.
+
+Trigonometric Properties | 三角函數性質
+cos⁡(−t)=cos⁡(t) \cos(-t) = \cos(t) cos(−t)=cos(t) (even | 偶數)
+sin⁡(−t)=−sin⁡(t) \sin(-t) = -\sin(t) sin(−t)=−sin(t) (odd | 奇數)
+These apply similarly for discrete-time signals with n n n.
+
+
+Signal Analysis | 信號分析Signal 1: x(t)=2cos⁡(5t)+3sin⁡(3t) x(t) = 2\cos(5t) + 3\sin(3t) x(t)=2cos(5t)+3sin(3t)Even and Odd Components | 偶數與奇數分量Compute x(−t) x(-t) x(−t):x(−t)=2cos⁡(5(−t))+3sin⁡(3(−t))=2cos⁡(−5t)+3sin⁡(−3t)=2cos⁡(5t)−3sin⁡(3t)x(-t) = 2\cos(5(-t)) + 3\sin(3(-t)) = 2\cos(-5t) + 3\sin(-3t) = 2\cos(5t) - 3\sin(3t)x(−t)=2cos(5(−t))+3sin(3(−t))=2cos(−5t)+3sin(−3t)=2cos(5t)−3sin(3t)
+Even component | 偶數分量:xe(t)=x(t)+x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]+[2cos⁡(5t)−3sin⁡(3t)]2=4cos⁡(5t)2=2cos⁡(5t)x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] + [2\cos(5t) - 3\sin(3t)]}{2} = \frac{4\cos(5t)}{2} = 2\cos(5t)xe​(t)=2x(t)+x(−t)​=2[2cos(5t)+3sin(3t)]+[2cos(5t)−3sin(3t)]​=24cos(5t)​=2cos(5t)
+Odd component | 奇數分量:xo(t)=x(t)−x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]−[2cos⁡(5t)−3sin⁡(3t)]2=6sin⁡(3t)2=3sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] - [2\cos(5t) - 3\sin(3t)]}{2} = \frac{6\sin(3t)}{2} = 3\sin(3t)xo​(t)=2x(t)−x(−t)​=2[2cos(5t)+3sin(3t)]−[2cos(5t)−3sin(3t)]​=26sin(3t)​=3sin(3t)
+Verification | 驗證:xe(t)+xo(t)=2cos⁡(5t)+3sin⁡(3t)=x(t)x_e(t) + x_o(t) = 2\cos(5t) + 3\sin(3t) = x(t)xe​(t)+xo​(t)=2cos(5t)+3sin(3t)=x(t)
+Periodicity | 週期性The signal is a sum of two sinusoids:
+
+First term: 2cos⁡(5t) 2\cos(5t) 2cos(5t), angular frequency ω1=5 \omega_1 = 5 ω1​=5, period T1=2π5 T_1 = \frac{2\pi}{5} T1​=52π​.
+Second term: 3sin⁡(3t) 3\sin(3t) 3sin(3t), angular frequency ω2=3 \omega_2 = 3 ω2​=3, period T2=2π3 T_2 = \frac{2\pi}{3} T2​=32π​.
+
+For the sum to be periodic, the periods must be commensurate:mT1=nT2  ⟹  m⋅2π5=n⋅2π3  ⟹  m5=n3  ⟹  3m=5nm T_1 = n T_2 \implies m \cdot \frac{2\pi}{5} = n \cdot \frac{2\pi}{3} \implies \frac{m}{5} = \frac{n}{3} \implies 3m = 5nmT1​=nT2​⟹m⋅52π​=n⋅32π​⟹5m​=3n​⟹3m=5nSince 3 and 5 are coprime, the smallest integers are m=5 m = 5 m=5, n=3 n = 3 n=3. The fundamental period is:T=mT1=5⋅2π5=2πorT=nT2=3⋅2π3=2πT = m T_1 = 5 \cdot \frac{2\pi}{5} = 2\pi \quad \text{or} \quad T = n T_2 = 3 \cdot \frac{2\pi}{3} = 2\piT=mT1​=5⋅52π​=2πorT=nT2​=3⋅32π​=2πAnswer for Signal 1 | 第一信號解答:
+
+Even component | 偶數分量: 2cos⁡(5t) 2\cos(5t) 2cos(5t)
+Odd component | 奇數分量: 3sin⁡(3t) 3\sin(3t) 3sin(3t)
+Periodic | 週期性: Yes, period T=2π T = 2\pi T=2π | 是，週期 T=2π T = 2\pi T=2π
+
+
+Signal 2: x(t)=cos⁡(5πt)sin⁡(3t) x(t) = \cos(5\pi t) \sin(3t) x(t)=cos(5πt)sin(3t)Even and Odd Components | 偶數與奇數分量Rewrite using the product-to-sum identity:cos⁡(a)sin⁡(b)=12[sin⁡(a+b)−sin⁡(a−b)]\cos(a) \sin(b) = \frac{1}{2} [\sin(a + b) - \sin(a - b)]cos(a)sin(b)=21​[sin(a+b)−sin(a−b)]x(t)=cos⁡(5πt)sin⁡(3t)=12[sin⁡((5π+3)t)−sin⁡((5π−3)t)]x(t) = \cos(5\pi t) \sin(3t) = \frac{1}{2} [\sin((5\pi + 3)t) - \sin((5\pi - 3)t)]x(t)=cos(5πt)sin(3t)=21​[sin((5π+3)t)−sin((5π−3)t)]
+Compute x(−t) x(-t) x(−t):x(−t)=cos⁡(5π(−t))sin⁡(3(−t))=cos⁡(−5πt)sin⁡(−3t)=cos⁡(5πt)(−sin⁡(3t))=−cos⁡(5πt)sin⁡(3t)=−x(t)x(-t) = \cos(5\pi (-t)) \sin(3(-t)) = \cos(-5\pi t) \sin(-3t) = \cos(5\pi t) (-\sin(3t)) = -\cos(5\pi t) \sin(3t) = -x(t)x(−t)=cos(5π(−t))sin(3(−t))=cos(−5πt)sin(−3t)=cos(5πt)(−sin(3t))=−cos(5πt)sin(3t)=−x(t)
+Since x(−t)=−x(t) x(-t) = -x(t) x(−t)=−x(t), the signal is odd.
+Even component | 偶數分量:xe(t)=x(t)+x(−t)2=x(t)−x(t)2=0x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{x(t) - x(t)}{2} = 0xe​(t)=2x(t)+x(−t)​=2x(t)−x(t)​=0
+Odd component | 奇數分量:xo(t)=x(t)−x(−t)2=x(t)−(−x(t))2=2x(t)2=x(t)=cos⁡(5πt)sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{x(t) - (-x(t))}{2} = \frac{2x(t)}{2} = x(t) = \cos(5\pi t) \sin(3t)xo​(t)=2x(t)−x(−t)​=2x(t)−(−x(t))​=22x(t)​=x(t)=cos(5πt)sin(3t)
+Verification | 驗證:xe(t)+xo(t)=0+cos⁡(5πt)sin⁡(3t)=x(t)x_e(t) + x_o(t) = 0 + \cos(5\pi t) \sin(3t) = x(t)xe​(t)+xo​(t)=0+cos(5πt)sin(3t)=x(t)
+Periodicity | 週期性Using the product-to-sum form:x(t)=12sin⁡((5π+3)t)−12sin⁡((5π−3)t)x(t) = \frac{1}{2} \sin((5\pi + 3)t) - \frac{1}{2} \sin((5\pi - 3)t)x(t)=21​sin((5π+3)t)−21​sin((5π−3)t)
+
+First term: sin⁡((5π+3)t) \sin((5\pi + 3)t) sin((5π+3)t), angular frequency ω1=5π+3 \omega_1 = 5\pi + 3 ω1​=5π+3, period T1=2π5π+3 T_1 = \frac{2\pi}{5\pi + 3} T1​=5π+32π​.
+Second term: sin⁡((5π−3)t) \sin((5\pi - 3)t) sin((5π−3)t), angular frequency ω2=5π−3 \omega_2 = 5\pi - 3 ω2​=5π−3, period T2=2π5π−3 T_2 = \frac{2\pi}{5\pi - 3} T2​=5π−32π​.
+
+Check if periods are commensurate:T1T2=2π5π+32π5π−3=5π−35π+3\frac{T_1}{T_2} = \frac{\frac{2\pi}{5\pi + 3}}{\frac{2\pi}{5\pi - 3}} = \frac{5\pi - 3}{5\pi + 3}T2​T1​​=5π−32π​5π+32π​​=5π+35π−3​Approximate:5π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,12.7079618.70796≈0.6792455\pi \approx 15.70796, \quad 5\pi - 3 \approx 12.70796, \quad 5\pi + 3 \approx 18.70796, \quad \frac{12.70796}{18.70796} \approx 0.6792455π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,18.7079612.70796​≈0.679245This ratio is not rational due to the presence of π \pi π. Thus, the signal is non-periodic.
+Answer for Signal 2 | 第二信號解答:
+
+Even component | 偶數分量: 0 0 0
+Odd component | 奇數分量: cos⁡(5πt)sin⁡(3t) \cos(5\pi t) \sin(3t) cos(5πt)sin(3t)
+Periodic | 週期性: No | 否
+
+
+Signal 3: x[n]=cos⁡(6πn)+sin⁡(4πn) x[n] = \cos(6\pi n) + \sin(4\pi n) x[n]=cos(6πn)+sin(4πn)Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:x[−n]=cos⁡(6π(−n))+sin⁡(4π(−n))=cos⁡(−6πn)+sin⁡(−4πn)=cos⁡(6πn)−sin⁡(4πn)x[-n] = \cos(6\pi (-n)) + \sin(4\pi (-n)) = \cos(-6\pi n) + \sin(-4\pi n) = \cos(6\pi n) - \sin(4\pi n)x[−n]=cos(6π(−n))+sin(4π(−n))=cos(−6πn)+sin(−4πn)=cos(6πn)−sin(4πn)
+Even component | 偶數分量:xe[n]=x[n]+x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]+[cos⁡(6πn)−sin⁡(4πn)]2=cos⁡(6πn)x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] + [\cos(6\pi n) - \sin(4\pi n)]}{2} = \cos(6\pi n)xe​[n]=2x[n]+x[−n]​=2[cos(6πn)+sin(4πn)]+[cos(6πn)−sin(4πn)]​=cos(6πn)
+Odd component | 奇數分量:xo[n]=x[n]−x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]−[cos⁡(6πn)−sin⁡(4πn)]2=sin⁡(4πn)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] - [\cos(6\pi n) - \sin(4\pi n)]}{2} = \sin(4\pi n)xo​[n]=2x[n]−x[−n]​=2[cos(6πn)+sin(4πn)]−[cos(6πn)−sin(4πn)]​=sin(4πn)
+Verification | 驗證:xe[n]+xo[n]=cos⁡(6πn)+sin⁡(4πn)=x[n]x_e[n] + x_o[n] = \cos(6\pi n) + \sin(4\pi n) = x[n]xe​[n]+xo​[n]=cos(6πn)+sin(4πn)=x[n]
+Periodicity | 週期性
+First term: cos⁡(6πn)=cos⁡(2π⋅3n)=1 \cos(6\pi n) = \cos(2\pi \cdot 3n) = 1 cos(6πn)=cos(2π⋅3n)=1, constant, period N1=1 N_1 = 1 N1​=1.
+Second term: sin⁡(4πn)=sin⁡(2π⋅2n) \sin(4\pi n) = \sin(2\pi \cdot 2n) sin(4πn)=sin(2π⋅2n), ω=4π=2π⋅2 \omega = 4\pi = 2\pi \cdot 2 ω=4π=2π⋅2, so ω2π=2 \frac{\omega}{2\pi} = 2 2πω​=2, period N2=1 N_2 = 1 N2​=1.
+
+Since both terms have period 1, the signal is periodic with period N=1 N = 1 N=1.
+Answer for Signal 3 | 第三信號解答:
+
+Even component | 偶數分量: cos⁡(6πn) \cos(6\pi n) cos(6πn)
+Odd component | 奇數分量: sin⁡(4πn) \sin(4\pi n) sin(4πn)
+Periodic | 週期性: Yes, period N=1 N = 1 N=1 | 是，週期 N=1 N = 1 N=1
+
+
+Signal 4: x[n]=sin⁡(4n)+4 x[n] = \sin(4n) + 4 x[n]=sin(4n)+4Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:x[−n]=sin⁡(4(−n))+4=sin⁡(−4n)+4=−sin⁡(4n)+4x[-n] = \sin(4(-n)) + 4 = \sin(-4n) + 4 = -\sin(4n) + 4x[−n]=sin(4(−n))+4=sin(−4n)+4=−sin(4n)+4
+Even component | 偶數分量:xe[n]=x[n]+x[−n]2=[sin⁡(4n)+4]+[−sin⁡(4n)+4]2=82=4x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\sin(4n) + 4] + [-\sin(4n) + 4]}{2} = \frac{8}{2} = 4xe​[n]=2x[n]+x[−n]​=2[sin(4n)+4]+[−sin(4n)+4]​=28​=4
+Odd component | 奇數分量:xo[n]=x[n]−x[−n]2=[sin⁡(4n)+4]−[−sin⁡(4n)+4]2=2sin⁡(4n)2=sin⁡(4n)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\sin(4n) + 4] - [-\sin(4n) + 4]}{2} = \frac{2\sin(4n)}{2} = \sin(4n)xo​[n]=2x[n]−x[−n]​=2[sin(4n)+4]−[−sin(4n)+4]​=22sin(4n)​=sin(4n)
+Verification | 驗證:xe[n]+xo[n]=4+sin⁡(4n)=x[n]x_e[n] + x_o[n] = 4 + \sin(4n) = x[n]xe​[n]+xo​[n]=4+sin(4n)=x[n]
+Periodicity | 週期性
+First term: sin⁡(4n) \sin(4n) sin(4n), ω=4 \omega = 4 ω=4. Check:ω2π=42π=2π\frac{\omega}{2\pi} = \frac{4}{2\pi} = \frac{2}{\pi}2πω​=2π4​=π2​
+This is irrational. For periodicity:sin⁡(4(n+N))=sin⁡(4n)  ⟹  4N=2πk  ⟹  N=πk2\sin(4(n + N)) = \sin(4n) \implies 4N = 2\pi k \implies N = \frac{\pi k}{2}sin(4(n+N))=sin(4n)⟹4N=2πk⟹N=2πk​
+Since π \pi π is irrational, N N N is not an integer, so sin⁡(4n) \sin(4n) sin(4n) is non-periodic.
+Second term: Constant 4 4 4, periodic with any period.
+
+Since the sinusoidal part is non-periodic, the signal is non-periodic.
+Answer for Signal 4 | 第四信號解答:
+
+Even component | 偶數分量: 4 4 4
+Odd component | 奇數分量: sin⁡(4n) \sin(4n) sin(4n)
+Periodic | 週期性: No | 否
+
+
+Final Answer | 最終解答
+Signal 1 | 信號 1: x(t)=2cos⁡(5t)+3sin⁡(3t) x(t) = 2\cos(5t) + 3\sin(3t) x(t)=2cos(5t)+3sin(3t)
+Even component | 偶數分量: 2cos⁡(5t) 2\cos(5t) 2cos(5t)
+Odd component | 奇數分量: 3sin⁡(3t) 3\sin(3t) 3sin(3t)
+Periodic | 週期性: Yes, period T=2π T = 2\pi T=2π | 是，週期 T=2π T = 2\pi T=2π
+
+
+Signal 2 | 信號 2: x(t)=cos⁡(5πt)sin⁡(3t) x(t) = \cos(5\pi t) \sin(3t) x(t)=cos(5πt)sin(3t)
+Even component | 偶數分量: 0 0 0
+Odd component | 奇數分量: cos⁡(5πt)sin⁡(3t) \cos(5\pi t) \sin(3t) cos(5πt)sin(3t)
+Periodic | 週期性: No | 否
+
+
+Signal 3 | 信號 3: x[n]=cos⁡(6πn)+sin⁡(4πn) x[n] = \cos(6\pi n) + \sin(4\pi n) x[n]=cos(6πn)+sin(4πn)
+Even component | 偶數分量: cos⁡(6πn) \cos(6\pi n) cos(6πn)
+Odd component | 奇數分量: sin⁡(4πn) \sin(4\pi n) sin(4πn)
+Periodic | 週期性: Yes, period N=1 N = 1 N=1 | 是，週期 N=1 N = 1 N=1
+
+
+Signal 4 | 信號 4: x[n]=sin⁡(4n)+4 x[n] = \sin(4n) + 4 x[n]=sin(4n)+4
+Even component | 偶數分量: 4 4 4
+Odd component | 奇數分量: sin⁡(4n) \sin(4n) sin(4n)
+Periodic | 週期性: No | 否
 
 
 
