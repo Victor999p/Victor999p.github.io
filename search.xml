@@ -207,6 +207,69 @@ OLED 無顯示或亂碼：
       </tags>
   </entry>
   <entry>
+    <title>常用Python程式碼片段集合</title>
+    <url>/posts/a4367020.html</url>
+    <content><![CDATA[Switch to English Version 🇬🇧
+常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
+1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
+print(&quot;你好，世界！&quot;)
+說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
+執行結果：你好，世界！
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：水果：蘋果水果：香蕉水果：橙子水果：葡萄
+
+3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
+# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
+
+4. 檔案讀寫在Python中，讀寫檔案是常見任務。
+# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
+執行結果：```text你好，這是一個測試檔案！第二行。---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
+執行結果：```text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
+執行結果：```text
+面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
+執行結果（假設輸入為 2）：執行結果：```text請輸入一個數字：2結果：5.0---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
+執行結果：&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
+9. 字串操作Python 提供強大的字串處理工具。
+text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+說明：strip()、split() 和 join() 方法使字串處理變得簡單。
+
+10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
+# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
+
+11. 日期處理datetime 模組幫助處理日期和時間。
+from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
+執行結果（假設當前時間為 2025-08-30 17:31:05）：當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
+12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
+numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
+執行結果：[0, 1, 2][0, 2, 4]
+
+結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+
+發布於 
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+        <tag>AI generate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -332,69 +395,6 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
         <tag>CS1302</tag>
         <tag>CityU</tag>
         <tag>Beginner</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用Python程式碼片段集合</title>
-    <url>/posts/a4367020.html</url>
-    <content><![CDATA[Switch to English Version 🇬🇧
-常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
-1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
-print(&quot;你好，世界！&quot;)
-說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：你好，世界！
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：水果：蘋果水果：香蕉水果：橙子水果：葡萄
-
-3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
-# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
-說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
-
-4. 檔案讀寫在Python中，讀寫檔案是常見任務。
-# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
-說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：```text你好，這是一個測試檔案！第二行。---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
-說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：```text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
-說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：```text
-面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
-說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：```text請輸入一個數字：2結果：5.0---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
-說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
-
-9. 字串操作Python 提供強大的字串處理工具。
-text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
-說明：strip()、split() 和 join() 方法使字串處理變得簡單。
-
-10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
-# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
-說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
-
-11. 日期處理datetime 模組幫助處理日期和時間。
-from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
-說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
-
-12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
-numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
-說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：[0, 1, 2][0, 2, 4]
-
-結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
-
-發布於 
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
-        <tag>CityU</tag>
-        <tag>Beginner</tag>
-        <tag>AI generate</tag>
       </tags>
   </entry>
   <entry>
@@ -571,9 +571,20 @@ title Key elements in Product X
       </tags>
   </entry>
   <entry>
-    <title>Biomaterials-1 | 生物材料-1</title>
-    <url>/posts/d1e61a5b.html</url>
-    <content><![CDATA[Lecture 1: History, Definition, and OutlineIntroduction
+    <title></title>
+    <url>/posts/0.html</url>
+    <content><![CDATA[
+title: Biomaterials-1 | 生物材料-1tags:
+
+Biomaterials
+Biomedical Engineering
+Lecture notescategories:
+Education
+Biomedical Engineering
+Biomaterials(BME3123)abbrlink: d1e61a5bdate: 2025-09-08 00:00:00description:
+
+
+Lecture 1: History, Definition, and OutlineIntroduction
 Title: Materials for Biomedical Engineering
 Subtitle: Lecture 1: History, Definition, and Outline
 
@@ -1236,16 +1247,6 @@ Practical aspects of materials in biomedical engineering
 
 
 ]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Biomaterials(BME3123)</category>
-      </categories>
-      <tags>
-        <tag>Biomaterials</tag>
-        <tag>Biomedical Engineering</tag>
-        <tag>Lecture notes</tag>
-      </tags>
   </entry>
   <entry>
     <title>Biomaterials-2 | 生物材料-2</title>
@@ -1449,6 +1450,929 @@ Compression Testing
 Application: Common for biomaterials under compressive forces (e.g., orthopedic implants).
 Specimen: Cylindrical, with length at least twice the diameter.
 Calculation: Stress-strain calculated similarly to tensile tests, but values are negative.
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-4 | 生物材料-4</title>
+    <url>/posts/170228b7.html</url>
+    <content><![CDATA[Lecture Outline | 课程大纲
+Outline | 讲义提要
+Advantages of ceramics and metals for medical implants | 医用植入物中陶瓷和金属的优势
+Composition of Bone | 骨的组成
+Three types of ceramics in biomaterials and their differences | 生物材料中三种陶瓷及其区别
+Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的区别
+Hydroxyapatite and its properties and applications | 羟基磷灰石的性质与应用
+Solid state sintering | 固态烧结
+Basic properties of metals | 金属的基本性质
+Relative elastic modulus of different biomaterials | 不同生物材料的弹性模量比较
+Criteria for orthopaedic implant and choices of materials | 骨科植入物的标准及材料选择
+Comparison of three types of metals as orthopaedic implant | 三种金属作为骨科植入物的比较
+Corrosion of metallic implants and solutions | 金属植入物的腐蚀及解决方案
+
+
+
+Ceramic and Metal Biomaterials: Types, Manufacturing, and Applications | 陶瓷与金属生物材料：类型、制造与应用Ceramic | 陶瓷Ceramic Types &amp; Manufacturing | 陶瓷类型与制造
+Traditional Ceramics: Porcelain, Stoneware, Earthenware; each uses unique chemical compositions and raw materials. The Hong Kong/Canton region is known for specialized techniques.传统陶瓷： 瓷器、炻器、陶器；各自采用独特的化学成分和原材料。港粤地区以专门工艺著称。
+Manufacturing Process: Clay (powder + water) is shaped, dried (shrinks and reorganizes), then fired/sintered to bond particles.制造过程： 粘土（粉末+水）成型、干燥（收缩与重组）、烧结使颗粒结合。
+Materials: Kaolinite and Bentonite clays; Flint and Quartz additives reduce shrinkage; Feldspar creates glossy, non-porous finishes.原材料： 高岭土和膨润土；燧石和石英添加剂减少收缩；长石形成光滑致密表面。
+
+Biomedical Ceramic Classifications | 生物医学陶瓷分类
+Bioactive Ceramics: Bond with tissue (e.g., glass ceramics for implant coatings, stimulate hydroxyapatite formation).生物活性陶瓷： 能与组织结合（如用于植入物涂层的玻璃陶瓷，促进羟基磷灰石形成）。
+Bioresorbable Ceramics: Biodegradable (e.g., calcium phosphate compounds, hydroxyapatite).生物可吸收陶瓷： 可降解（如磷酸钙化合物、羟基磷灰石）。
+Bioinert Ceramics: Minimal tissue interaction (e.g., pyrolytic carbon, alumina for joint replacements and dental crowns).生物惰性陶瓷： 与组织相互作用极少（如用于关节置换和牙冠的热解碳、氧化铝）。
+
+Natural Ceramics in the Body | 体内天然陶瓷
+Bone: ~60% minerals (mainly hydroxyapatite), ~26% collagen, plus cells. Cortical (dense) and trabecular (porous) types; bone marrow contains stem and immune cells.骨骼： 约60%矿物质（主要为羟基磷灰石）、约26%胶原蛋白及细胞。分为致密骨和松质骨；骨髓含有干细胞和免疫细胞。
+Teeth: Higher inorganic content; layers include enamel, dentin, and pulp. Strength from nanostructured calcium phosphate.牙齿： 无机物含量更高；分为釉质、牙本质和牙髓。强度来自纳米结构磷酸钙。
+
+Sintering Process &amp; Applications | 烧结工艺与应用
+Sintering: Occurs at ~⅓ melting point; surface atoms bond without full melting.烧结： 在约熔点三分之一温度下进行，表面原子结合但未完全熔化。
+Applications: Thermal spray coatings, porous structures for cell migration, dental crowns (zirconia vs. alumina), hip implants with hydroxyapatite coatings.应用： 热喷涂涂层、细胞迁移的多孔结构、牙冠（氧化锆与氧化铝）、带羟基磷灰石涂层的髋关节植入物。
+
+Overview of Biomedical Materials | 生物医学材料概述
+Ceramics: Biocompatible, mainly for implant coatings.陶瓷： 生物相容性好，主要用于植入物涂层。
+Metals: High mechanical strength, used for load-bearing implants.金属： 机械强度高，用于承重植入物。
+
+Ceramic Manufacturing &amp; Applications | 陶瓷制造与应用
+Steps: Raw material prep, shaping, drying, sintering.步骤： 原料准备、成型、干燥、烧结。
+Applications: Dental/orthopedic coatings, surface treatments to minimize protein/cell deposition and reduce friction.应用： 牙科/骨科涂层，表面处理减少蛋白质/细胞沉积和摩擦。
+
+Metals | 金属Types &amp; Properties of Medical Metals | 医用金属类型与性质
+Stainless Steel: Affordable, but poor corrosion resistance.不锈钢： 价格低廉，但耐腐蚀性差。
+Cobalt-Based Alloys: Better corrosion resistance, but potential carcinogenic ion release.钴基合金： 耐腐蚀性更好，但可能释放致癌离子。
+Titanium Alloys: Best biocompatibility and corrosion resistance, non-toxic, but expensive.钛合金： 生物相容性和耐腐蚀性最佳，无毒但价格昂贵。
+
+Special Metal Materials | 特殊金属材料
+Shape Memory Alloys: Nickel-Titanium; used in braces, stents, IVC filters; return to shape when heated.形状记忆合金： 镍钛合金；用于牙套、支架、下腔静脉滤器，加热后可恢复原形。
+Liquid Metals: Solid at room temp, liquid at body temp; used in wearable electronics (e.g., mercury, gallium).液态金属： 常温为固体，体温为液体；用于可穿戴电子（如汞、镓）。
+Biodegradable Metals: Magnesium- and zinc-based; gradually absorbed by the body.可降解金属： 镁基和锌基金属，能被人体逐渐吸收。
+
+Corrosion Issues &amp; Protection | 腐蚀问题与防护
+Mechanism: Oxidation, electrode formation, accelerated by moisture/oxygen.机制： 氧化、电极形成，受潮湿/氧气加速。
+Biological Impact: Corrosion products trigger immune response and inflammation, may cause bone degradation.生物影响： 腐蚀产物引发免疫反应和炎症，可能导致骨质破坏。
+Protection: Use corrosion-resistant metals (chromium, titanium), inert ceramic coatings, and protective oxide layers.防护措施： 采用耐腐蚀金属（铬、钛）、惰性陶瓷涂层和保护性氧化层。
+
+
+Tutorial | 教程Practice Questions | 练习题Q1. What is the driving force for the sintering (firing) process of ceramics? | 陶瓷烧结过程的驱动力是什么？
+A. The high surface free energy under heat and pressure | 高温高压下的高表面自由能
+B. High pressure in the environment | 环境中的高压力
+C. Heat (causing the melting of ceramics particles) | 热（导致陶瓷颗粒熔化）
+D. Ironic attraction | 离子吸引
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ A. The high surface free energy under heat and pressureExplanation: Sintering occurs due to the reduction of surface energy, promoting particle bonding under heat.解析： 烧结是由于表面能降低，在加热下促进颗粒结合。
+
+    
+  
+
+Q2. What is the difference between bioactive and bioinert ceramics in dental implants? | 牙科植入物中生物活性陶瓷与生物惰性陶瓷的区别是什么？
+A. Coating of implant; coating for crown | 植入物涂层；牙冠涂层
+B. Implant; coating for crown | 植入物；牙冠涂层
+C. Coating of implant; Implant | 植入物涂层；植入物
+D. Implant; Crown | 植入物；牙冠
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ C. Coating of implant; ImplantExplanation: Bioactive ceramics are used as coatings to promote bone bonding; bioinert ceramics are used as structural implant materials.解析： 生物活性陶瓷用于涂层促进骨结合，生物惰性陶瓷用于结构性植入材料。
+
+    
+  
+
+Q3. What is the chemistry behind the corrosion resistance of titanium dioxide? | 二氧化钛耐腐蚀性的化学原理是什么？
+A. Titanium dioxide is very chemically stable and does not react with most of the chemicals | 二氧化钛化学性质非常稳定，不与大多数化学物质反应
+B. It is metal oxide | 它是金属氧化物
+C. It is white | 它是白色的
+D. None of the above | 以上都不是
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ A. Titanium dioxide is very chemically stable and does not react with most of the chemicalsExplanation: TiO₂ forms a passive, stable oxide layer that protects titanium from corrosion.解析： 二氧化钛形成稳定的钝化氧化层，保护钛免受腐蚀。
+
+    
+  
+
+Q4. Why is stainless steel still used despite titanium’s superiority? | 尽管钛更优，为什么仍使用不锈钢？
+A. Cost | 成本
+B. Accessibility | 易获得性
+C. Tradition and habit | 传统与习惯
+D. All of the above | 以上全部
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. All of the aboveExplanation: Stainless steel is cheaper, widely available, and historically used in implants.解析： 不锈钢价格低廉、易获得且有历史使用传统。
+
+    
+  
+
+Q5. Roles of polymer, ceramic, and metal in full hip replacement | 全髋关节置换中聚合物、陶瓷和金属的作用
+A. Acetabulum: Polymer; Femoral head: Ceramic; Femoral stem: Metal | 髋臼：聚合物；股骨头：陶瓷；股骨柄：金属
+B. Acetabulum: Ceramic; Femoral head: Metal; Femoral stem: Polymer | 髋臼：陶瓷；股骨头：金属；股骨柄：聚合物
+C. Acetabulum: Metal; Femoral head: Polymer; Femoral stem: Ceramic | 髋臼：金属；股骨头：聚合物；股骨柄：陶瓷
+D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: Metal | 髋臼：陶瓷；股骨头：陶瓷；股骨柄：金属
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: MetalExplanation: Polymer is used in acetabular liners, ceramic for femoral heads, and metal for femoral stems.解析： 聚合物用于髋臼衬垫，陶瓷用于股骨头，金属用于股骨柄。
+
+    
+  
+
+Q6. Dental Implant Design | 牙科植入物设计
+(4 marks) List two major reasons people choose titanium to make the dental implant (screw). | 列举两大选择钛制作牙科植入物（螺钉）的原因
+(6 marks) List two benefits of the hydroxyapatite coating. | 列举羟基磷灰石涂层的两大优点
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      Titanium advantages:  
+
+Excellent biocompatibility | 优异的生物相容性
+High corrosion resistance due to stable oxide layer | 稳定氧化层带来高耐腐蚀性
+
+Hydroxyapatite coating benefits:  
+
+Promotes osseointegration (bone bonding) | 促进骨结合
+Mimics natural bone mineral, enhancing biological response | 模仿天然骨矿物，增强生物反应
+
+
+    
+  
+
+Q7. What is pyrolytic carbon? | 什么是热解碳？
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Pyrolytic carbon is a ceramic-like material known for its biocompatibility, chemical inertness, and wear resistance.Explanation: It is produced by the thermal decomposition of hydrocarbons and is widely used in heart valve prostheses and orthopedic implants due to its durability and compatibility with blood and tissue.解析： 热解碳是一种类陶瓷材料，具有生物相容性、化学惰性和耐磨性。由碳氢化合物热分解制得，广泛用于心脏瓣膜和骨科植入物，因其耐用且与血液和组织兼容。
+
+    
+  
+
+Q8. What kind of material is the Simon IVC filter made of? | Simon下腔静脉滤器由什么材料制成？
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ The Simon IVC filter is made of a shape memory metal, typically nitinol (nickel-titanium alloy).Explanation: Nitinol provides flexibility, biocompatibility, and self-expanding properties, making it ideal for vascular implants like IVC filters.解析： Simon下腔静脉滤器由形状记忆金属制成，通常为镍钛合金。镍钛合金具有柔韧性、生物相容性和自扩展性，适合血管植入物。
+
+    
+  
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-5 | 生物材料-5</title>
+    <url>/posts/8f57aec0.html</url>
+    <content><![CDATA[🧭 Lecture Outline
+Introduction
+Nanomaterials
+Gold Nanoparticles (AuNPs)
+Quantum Dots (QDs)
+Liposomes &amp; Lipid Nanoparticles (LNPs)
+
+
+Fabrication Techniques
+Synthesis Methods
+Surface Engineering
+
+
+Biomedical Applications
+Principles of Nanomedicine
+Gene Therapy &amp; Delivery
+
+
+
+
+🧠 Nanomaterials: Origins &amp; ImpactHistorical Foundations
+The concept of nanotechnology was popularized by Richard Feynman in his 1959 lecture “There’s Plenty of Room at the Bottom”.
+Feynman used vivid storytelling to advocate for atomic-scale engineering, inspiring decades of research.
+Many of his predictions have since been realized through modern nanotechnology.
+
+Evolution of Medical Applications
+Initial breakthroughs (1980s–1990s):
+PEGylation for drug stability
+Targeting ribosomes
+Endometriosis treatments
+
+
+Current technologies:
+Lipid and ceramic nanoparticles
+Polymer micelles and protein carriers
+Cell-based and viral delivery systems
+
+
+
+
+🔬 Key Properties of NanomaterialsSurface-to-Volume Ratio
+As particle size decreases, the proportion of surface atoms increases:
+~90% for single-atom layers
+~35% for 7-layer clusters
+&lt;5% for 30 nm particles
+
+
+This enhances chemical reactivity and biological interaction.
+
+Size-Dependent Behavior
+Nanomaterials exhibit unique properties not seen in bulk materials.
+Operate in a transitional zone between molecular and macroscopic scales.
+Enable novel applications in medicine, electronics, and energy.
+
+
+🟡 Gold Nanoparticles &amp; Localized Surface Plasmon Resonance (LSPR)Discovery &amp; Physical Properties
+First observed by Michael Faraday in 1857: wine-colored gold colloids
+Gold nanoparticles have a lower melting point than bulk gold
+Exhibit Localized Surface Plasmon Resonance (LSPR):
+Oscillation of conduction electrons in response to light
+Responsible for vivid colors (e.g., red from 520 nm green light absorption)
+
+
+
+Applications
+Biosensors: Fluorescence quenching for detection
+mRNA detection: Using detachable linkers
+Protein biomarkers: Enhanced sensitivity via plasmonic effects
+
+Tuning LSPR
+Size Increase → Red shift in absorption
+Shape Control (e.g., nanorods) → Longitudinal resonance in far-red region
+Aggregation → Red shift due to interparticle coupling
+
+
+🌈 Quantum Dots (QDs): Color by SizeOverview
+Semiconductor nanocrystals with size-dependent emission
+Recognized by the 2022 Nobel Prize
+
+Mechanism
+Smaller QDs → Larger band gap → Emission at shorter wavelengths (blue)
+Larger QDs → Smaller band gap → Emission at longer wavelengths (red)
+
+Manufacturing
+Synthesized at ~300°C using cadmium, selenium, and sulfur
+Stabilized with ZnS shells and organic ligands
+
+Advantages
+Photostability: Resistant to photobleaching
+Broad absorption with narrow emission
+Used in QLED displays, solar cells, and bioimaging
+
+
+🌐 SPR vs LSPR Technologies
+
+
+
+Feature
+SPR (Surface Plasmon Resonance)
+LSPR (Localized SPR)
+
+
+
+
+Evanescent Field
+250 nm – 1 μm
+Much shorter
+
+
+Propagation Length
+Microns to millimeters
+Localized
+
+
+Resonance Conditions
+Prism optics
+Light wavelength
+
+
+
+
+
+SPR: Surface wave at metal-dielectric interface
+LSPR: Electron cloud oscillation around nanoparticles
+LSPR explains the color of gold nanoparticles
+
+
+🧪 Liposomes &amp; Lipid Nanoparticles (LNPs)Liposomes
+Discovered by Alec Bangham in the 1960s
+Composed of a double lipid bilayer enclosing an aqueous core
+Can encapsulate both hydrophilic and hydrophobic drugs
+Common components: phospholipids, PEG-lipids, cholesterol
+Fabrication: freeze-drying → hydration → size control
+
+Lipid Nanoparticles (LNPs)
+Solid lipid-based particles for nucleic acid delivery
+Fabricated via microfluidics
+Typical formulation: 12 mg/mL lipids, 25% ethanol
+Purification: tangential flow filtration (TFF), dialysis, size exclusion
+
+
+🧭 Nanomaterial Fabrication StrategiesBottom-Up Approaches
+Chemical synthesis: e.g., gold nanoparticles via citrate reduction
+Self-assembly: lipid vesicles, micelles
+Spray drying: for drug particle formation
+
+Top-Down Approaches
+PRINT® technology: Particle Replication in Non-wetting Templates
+Photolithography: Inspired by microelectronics
+Graphene exfoliation: Electrochemical peeling
+
+Surface Stabilization
+Charge-based (e.g., citrate): unstable in salt solutions
+Steric-based (e.g., PEG): preferred for stability and protein corona prevention
+
+
+💊 Nanomedicine: Benefits &amp; ChallengesBenefits of Nanoparticle-Based Drug Delivery
+Improved bioavailability and solubility
+Suitable for intravenous (IV) administration
+Extended circulation time in the body
+Enhanced tissue penetration
+Targeted accumulation at disease sites
+
+Design Considerations
+Size:
+150 nm → accumulation in liver, lungs, spleen
+&lt;10 nm → rapid clearance via kidneys
+
+
+Shape:
+Disc-shaped particles → liver/lung/spleen targeting
+
+
+Surface Charge:
+Positive charge → increased uptake in liver/lung
+
+
+
+Delivery Challenges
+Macrophage uptake reduces circulation time
+Non-specific organ distribution
+Laminar blood flow limits vascular wall interaction
+Tumor pressure hinders deep tissue penetration
+
+PRINT® Technology Applications
+Used by Liquidia for lung-targeted delivery
+Particle size (1–5 μm) affects deposition depth
+Particle shape influences biodistribution
+
+
+⚡ Charge-Stabilized Nanoparticles
+Less stable than PEG-coated particles
+Stabilization via electric double layer:
+Stern layer: tightly bound ions
+Diffusive layer: loosely bound ions
+
+
+Salt exposure disrupts the double layer → aggregation
+
+
+🧬 Gene Delivery Using NanoparticlesCentral Dogma of Molecular Biology
+DNA → mRNA → Protein
+
+Types of Therapeutic Nucleic Acids
+DNA: e.g., Luxturna (FDA-approved in 2017)
+mRNA: e.g., Pfizer/Moderna COVID-19 vaccines
+siRNA: e.g., Patisiran (FDA-approved in 2018)
+microRNA: experimental, not FDA-approved
+
+Delivery Methods
+Viral Vectors:
+Retrovirus, Adenovirus, AAV, HSV
+
+
+Non-Viral Methods:
+Gene gun, Electroporation, Nanoparticles
+
+
+
+Role of Lipid Nanoparticles (LNPs)
+Protect nucleic acids from nucleases
+Avoid renal clearance
+Facilitate endocytosis
+Proposed structures: onion-like, cake-like, solid core
+
+
+🧫 COVID-19 Vaccine Mechanism &amp; Industry Trends1. Mechanism of mRNA-LNP Vaccines
+mRNA encodes spike protein
+Delivered via LNPs
+Uptaken by antigen-presenting cells (APCs)
+Activates B cells and T cells for immune response
+
+2. Market Trends (2023)
+80% of vaccines use non-lipid nanoparticles
+Viral vectors still dominate gene delivery
+
+
+Tutorial-5Q1. Which is correct in terms of surface plasmon resonance (SPR)?
+A. SPR involves valence band electronsB. SPR involves conduction band electronsC. SPR involves magnetic field oscillationD. None of the above  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ B. SPR involves conduction band electronsExplanation: SPR is caused by the collective oscillation of conduction electrons in resonance with the electric field of incident light.
+
+    
+  
+Q2. What is the difference between LSPR and SPR?
+A. SubstrateB. PlasmonC. SignalD. All  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. All  
+Explanation:SPR occurs on flat metal surfaces; LSPR occurs on nanoparticles. Differences include substrate type, plasmon behavior, and signal detection.
+
+    
+  
+Q3. Compare the longest SPR wavelength among gold nanostructures:
+
+10 nm AuNPs  
+50 nm AuNPs  
+10×60 nm nanorods  
+10×40 nm nanorods  
+
+A. 1 &gt; 3 &gt; 2 &gt; 4B. 2 &gt; 1 &gt; 3 &gt; 4C. 3 &gt; 4 &gt; 2 &gt; 1D. 4 &gt; 3 &gt; 2 &gt; 1  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ C. 3 &gt; 4 &gt; 2 &gt; 1  
+Explanation: Nanorods with higher aspect ratios show longer SPR wavelengths. Size also contributes, but shape dominates.
+
+    
+  
+Q4. Which nanoparticles change color when 3 M NaCl is added?
+A. Citrate-stabilized 20 nm AuNPsB. PEG-stabilized AuNPsC. CdSe QDs with PEGD. Lipid nanoparticles with PEG  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ A. Citrate-stabilized 20 nm AuNPs  
+Explanation: Salt disrupts electrostatic stabilization in citrate-coated AuNPs, causing aggregation and color change.
+
+    
+  
+Q5. Quantum dots emitting blue, green, and red light—compare retention time in size exclusion chromatography:
+A. Blue &gt; Green &gt; RedB. Green &gt; Red &gt; BlueC. Red &gt; Green &gt; BlueD. Red &gt; Blue &gt; Green  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ A. Blue &gt; Green &gt; Red  
+Explanation: Smaller QDs (blue) elute slower due to more pore interaction. Larger QDs (red) elute faster.
+
+    
+  
+Q6. What method can be used to make liposomes?
+A. Electrochemical exfoliationB. PRINT technologyC. Spray dryingD. Self-assembly  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. Self-assembly  
+Explanation: Liposomes form spontaneously when amphiphilic lipids self-assemble in water.
+
+    
+  
+Q7. Major difference between liposomes and lipid nanoparticles?
+A. SizeB. Surface functional groupC. Composition and functionD. Surface charge  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ C. Composition and function  
+Explanation: Liposomes have bilayer structures; LNPs are solid or amorphous. Their composition and delivery roles differ.
+
+    
+  
+Q8. Which factor influences nanoparticle biodistribution in vivo?
+A. SizeB. Surface chargeC. ShapeD. All of the above  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. All of the above  
+Explanation: All these factors affect circulation, organ targeting, and cellular uptake.
+
+    
+  
+Q9. Why are lipid nanoparticles needed for nucleic acid drug delivery?
+A. In vivo degradation by nucleasesB. Renal clearanceC. Negative charge prevents membrane crossingD. All of the above  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ D. All of the above  
+Explanation: LNPs protect nucleic acids, improve delivery efficiency, and prevent rapid clearance. 
+
+    
+  
+Q10. mRNA-1273 (Moderna COVID vaccine) is injected intramuscularly.
+
+Role of mRNA: Provides genetic instructions to antigen-presenting cells (APCs) to produce the spike (S) protein antigen.  
+Role of lipid nanoparticles (LNPs): Protect mRNA from degradation, facilitate cellular uptake, and help deliver mRNA into APCs.  
+Target cells: APCs such as dendritic cells and Langerhans cells translate the mRNA into spike protein, initiating the immune response.
 
 ]]></content>
       <categories>
@@ -1670,120 +2594,6 @@ Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals fo
       </tags>
   </entry>
   <entry>
-    <title>HW1 Signals and Systems | 生物信號與生物系統</title>
-    <url>/posts/1775fd89.html</url>
-    <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
-
-這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
-
-🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
-
-
-Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
-
-
-
-Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
-
-
-
-Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
-
-
-
-load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
-🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
-
-size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
-0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
-The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
-
-size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
-
-0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
-結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
-
-📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
-
-Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
-First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
-Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
-Plot:
-One raw trial
-avg25
-avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
-
-
-
-
-avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
-🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
-
-ver is a matrix or 2D array. 是一個矩陣或二維陣列。
-1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
-**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
-mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
-avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
-
-🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
-
-Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
-Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
-One raw trial
-avg25
-avg100 to estimate noise.
-
-
-Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
-std_ver, std_avg25, std_avg100
-
-
-
-load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
-📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
-
-Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
-Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
-Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
-Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
-Actual STD (Raw): 1.0405
-Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
-Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
-
-Discussion of Discrepancies | 差異原因探討 :Several factors could explain the slight differences between actual and expected STD values | 儘管差異不大，仍可能由以下因素造成 :
-
-Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
-非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
-
-Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
-
-試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
-
-Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
-
-基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
-
-Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
-
-樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
-
-Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
-
-前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Signals and Systems</category>
-      </categories>
-      <tags>
-        <tag>Signals and Systems</tag>
-        <tag>biomedical engineering</tag>
-        <tag>Homework</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HW2 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/6d4835d0.html</url>
     <content><![CDATA[Homework 2In this homework set, you will aims to build your skills in visualizing signal transformations and understanding the process of discretization, which are fundamental in analyzing and processing biomedical signals in systems like those used in medical diagnostics or monitoring.
@@ -1907,6 +2717,120 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
 
 
 
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>Signals and Systems</tag>
+        <tag>biomedical engineering</tag>
+        <tag>Homework</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HW1 Signals and Systems | 生物信號與生物系統</title>
+    <url>/posts/1775fd89.html</url>
+    <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
+
+這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
+
+🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
+
+
+Load the VER data from ver.mat. This contains 100 simulated VERs. 從 ver.mat 檔案中載入 VER 資料。
+
+
+
+Check the size of ver. 檢查 ver 的大小（應為 100 × 500）。
+
+
+
+Plot one of the individual responses to visualize the “raw” EEG signal. 繪製第一筆試驗資料（即 ver 的第一列）。
+
+
+
+load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
+🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
+
+size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
+0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
+The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
+
+size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
+
+0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
+結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
+
+📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
+
+Use MATLAB’s mean function to average multiple trials. 使用 MATLAB 的 mean 函數來平均多條試驗訊號。
+First, average the first 25 trials → call this avg25. 先平均前 25 條試驗 → 命名為 avg25
+Then, average all 100 trials → call this avg100. 再平均全部 100 條試驗 → 命名為 avg100
+Plot:
+One raw trial
+avg25
+avg100 All on the same graph to compare how averaging reduces noise. 看看平均後雜訊如何減少。
+
+
+
+
+avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
+🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+
+ver is a matrix or 2D array. 是一個矩陣或二維陣列。
+1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
+**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
+avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
+
+🔍 Part III: Noise Reduction Evaluation 噪聲降低評估✅ Objective: Quantify how much noise is reduced by averaging. 量化平均處理後的噪聲降低效果。📌 Steps:
+
+Load actual_ver from ver.mat (the noise-free signal).  從 ver.mat 中載入無噪聲的 VER 訊（actual_ver）。
+Subtract actual_ver from: 分別從原始試驗、avg25 和 avg100 中減去 actual_ver，得到噪聲估計。
+One raw trial
+avg25
+avg100 to estimate noise.
+
+
+Compute standard deviation of each noise estimate: 計算每個噪聲估計的標準差（STD）作為噪聲強度指標。
+std_ver, std_avg25, std_avg100
+
+
+
+load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
+📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
+
+Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
+Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
+Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
+Actual STD (Raw): 1.0405
+Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
+Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
+
+Discussion of Discrepancies | 差異原因探討 :Several factors could explain the slight differences between actual and expected STD values | 儘管差異不大，仍可能由以下因素造成 :
+
+Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
+非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
+
+Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
+
+試驗間訊號變異：若神經反應在不同試驗中略有差異，平均後仍可能保留部分變異。
+
+Baseline Drift or Slow Trends: Low-frequency fluctuations in the signal can persist across trials and resist averaging, subtly inflating the STD.
+
+基線漂移或慢速趨勢：低頻波動可能在多次試驗中持續存在，不易被平均消除。
+
+Finite Sample Effects: The expected STD is based on ideal statistical behavior. With only 25 or 100 trials, small sample effects can cause minor deviations from theory.
+
+樣本數有限：理論值基於理想統計行為，實際試驗數量有限時可能出現微小偏差。
+
+Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
+
+前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
 
 ]]></content>
       <categories>
