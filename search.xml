@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Gallery</title>
-    <url>/posts/889641a6.html</url>
-    <content><![CDATA[這裏是我在用的封面圖片
-鏈接重返未來：1999 中文維基
-      
-        
-          
-            
-          
-          重返未來：1999 中文維基
-          衣着海报
-        
-      
-
-    [{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/2/2e/%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD1.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD1.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/9/96/%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD2.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD2.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/0/07/%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B1.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B1.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/c/c8/%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B2.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B2.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/1/1a/%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B31.jpg/800px-%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B31.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/4/49/%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B32.jpg/800px-%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B32.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/0/09/%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%841.jpg/237px-%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%841.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/a/ab/%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%842.jpg/237px-%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%842.jpg","alt":"","title":""}]
-  
-]]></content>
-      <categories>
-        <category>Gallery</category>
-      </categories>
-      <tags>
-        <tag>1999</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ESP32-S3 與心跳和血氧測試</title>
     <url>/posts/c2e18503.html</url>
     <content><![CDATA[
 
 參考 NMKING
-- ESP32與MAX30102血氧感測
-    - by 小霸王實驗室in ESP32on Posted on2023/03/26
-https://www.nmking.io/index.php/2023/03/26/1071/
+
+ESP32與MAX30102血氧感測
+by 小霸王實驗室in ESP32on Posted on2023&#x2F;03&#x2F;26https://www.nmking.io/index.php/2023/03/26/1071/
+
+
 
 MAX30102 血氧與心率感測器重點整理
 
@@ -45,7 +22,7 @@ MAX30102 血氧與心率感測器重點整理
 我們將使用 SparkFun MAX3010x Sensor Library（支援 MAX30102），它包含心率計算演算法。以下是完整指南，包括接線、庫安裝和基本範例程式碼（測量心率和 SpO2）。
 
 
-**所需元件：**
+所需元件：
 
 
 - ESP32-WROOM-32 開發板
@@ -53,19 +30,21 @@ MAX30102 血氧與心率感測器重點整理
 - 0.96 OLED SSD1106 推薦使用SSD1306
 - 杜邦線
 - USB 線（用於程式上傳）
+
 ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MCU，支援 Wi-Fi、Bluetooth 5.0 和 AI 加速，適合 IoT 專案。這篇記錄詳細說明如何安裝開發環境，並運行簡單的 Hello World 程式（LED 閃爍）。
 步驟 1: 硬體準備
-開發板：推薦 ESP32-S3-DevKitC-1（約 NT300）。300）。300）。- 工具：USB 線、電腦（Windows/Mac/Linux）。
+開發板：推薦 ESP32-S3-DevKitC-1（約 NT300）。300）。300）。- 工具：USB 線、電腦（Windows&#x2F;Mac&#x2F;Linux）。
 連接：USB 連接到電腦，確認驅動程式（CP210x 或 CH340）已安裝。
 
-&lt;/image-card&gt;(圖片來源：Espressif 官方文件)
+(圖片來源：Espressif 官方文件)
 步驟 2: 安裝 Arduino IDE
 下載 Arduino IDE 2.x：Arduino 官網。
 在 檔案 &gt; 偏好設定 添加 ESP32 板子 URL：
 在 工具 &gt; 板子 &gt; 板子管理員 搜尋 “ESP32”，安裝 Espressif 的 ESP32 套件（v2.0.3+ 支援 S3）。
 選擇板子：工具 &gt; 板子 &gt; ESP32 Arduino &gt; ESP32S3 Dev Module。
 
-步驟 3: 程式碼範例 - Hello World!簡單測試Esp32, 以下是程式碼：void setup() &#123;Serial.begin(115200);&#125;void loop() &#123;Serial.println(&quot;Hello World!&quot;);delay(1000);&#125;
+步驟 3: 程式碼範例 - Hello World!簡單測試Esp32, 以下是程式碼：
+void setup() &#123;Serial.begin(115200);&#125;void loop() &#123;Serial.println(&quot;Hello World!&quot;);delay(1000);&#125;
 步驟 4: 與MAX30102 和 SSD1106 OLED 的整合
 目標
 使用 ESP32-WROOM-32 將 MAX30102 脈搏血氧感測器和 SSD1306 OLED 顯示器（128x64，I2C 介面）連接到一起，並在 OLED 上顯示心率（BPM）和血氧飽和度（SpO2），使用 Adafruit SSD1306 函式庫的 println 方法輸出英文文字（例如 “Heart Rate: [BPM]” 和 “SpO2: [SpO2]%”）。un
@@ -83,7 +62,6 @@ ESP32-S3 入門：安裝環境與 Hello WorldESP32-S3 是 Espressif 的旗艦 MC
 引腳
 ESP32 引腳
 描述
-
 
 
 
@@ -142,8 +120,6 @@ INT
 
 
 
-
-
 注意：
 確保所有設備共用 GND（接地）。
 如果 I2C NACK 錯誤持續發生，請在 SDA (GPIO16) 和 SCL (GPIO17) 各接一個 4.7kΩ 上拉電阻到 3.3V。部分模組內建上拉電阻，但外部電阻通常能提高穩定性。
@@ -152,13 +128,9 @@ MAX30102 測量時，手指需完全覆蓋感測器，避免移動或環境光�
 
 
 
-2. 程式碼結構使用說明OLED屏幕測試：    線路連接：
-- GND =&gt; GND
-- 3V3 =&gt; VCC
-- IO16 =&gt; SDA
-- IO17 =&gt; SCL
-
+2. 程式碼結構使用說明OLED屏幕測試：    線路連接：    - GND &#x3D;&gt; GND    - 3V3 &#x3D;&gt; VCC    - IO16 &#x3D;&gt; SDA    - IO17 &#x3D;&gt; SCL
 #include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#define SCREEN_WIDTH 128  // OLED寬度（像素）#define SCREEN_HEIGHT 64  // OLED高度（像素）#define OLED_RESET -1     // 重置引腳（未使用，設為-1）// GND =&gt; GND// 3V3 =&gt; VCC//IO16 =&gt; SDA//IO17 =&gt;SCL// 創建顯示器物件，I2C地址為0x3CAdafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);void setup() &#123;  Serial.begin(115200);  // 用於除錯  // 初始化I2C，使用自訂引腳（SDA=16, SCL=17）  Wire.begin(16, 17);  // 初始化顯示器  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306初始化失敗&quot;));    for (;;);  // 初始化失敗則停止  &#125;  // 清空顯示緩衝區  display.clearDisplay();  display.setTextSize(2);           // 設置文字大小  display.setTextColor(SSD1306_WHITE);  // 設置文字顏色為白色  display.setCursor(0, 0);         // 從左上角開始  display.println(&quot;Hello world!&quot;);  // 顯示中文文字  display.display();               // 輸出到螢幕&#125;void loop() &#123;  // 空迴圈；可在此添加動態更新程式碼&#125;
+
 源代碼修改：  
 
 添加 Wire.begin(16, 17); 和 Wire.setClock(100000);  
@@ -214,6 +186,7 @@ OLED 無顯示或亂碼：
 確保 ledMode = 2（紅光+紅外線）。
 
 
+
 #include &lt;Wire.h&gt;#include &lt;Adafruit_GFX.h&gt;#include &lt;Adafruit_SSD1306.h&gt;#include &quot;MAX30105.h&quot;#include &quot;heartRate.h&quot;#define SCREEN_WIDTH 128 // OLED 寬度#define SCREEN_HEIGHT 64 // OLED 高度#define OLED_RESET -1 // 重置引腳Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET); // 初始化 OLEDMAX30105 particleSensor;// 心率變數const byte RATE_SIZE = 4; // 平均樣本數byte rates[RATE_SIZE]; // 心率陣列byte rateSpot = 0;long lastBeat = 0; // 上次心跳時間float beatsPerMinute;int beatAvg;// 血氧變數double avered = 0;double aveir = 0;double sumirrms = 0;double sumredrms = 0;double SpO2 = 0;double ESpO2 = 60.0; // 初始血氧估計值double FSpO2 = 0.7; // 血氧濾波因子double frate = 0.95; // 紅光/紅外線低通濾波int i = 0;int Num = 30; // 每 30 次採樣計算一次#define FINGER_ON 7000 // 手指偵測紅外線最小值#define MINIMUM_SPO2 60.0 // 血氧最小值// 小心跳圖示static const unsigned char PROGMEM logo2_bmp[] =&#123; 0x03, 0xC0, 0xF0, 0x06, 0x71, 0x8C, 0x0C, 0x1B, 0x06, 0x18, 0x0E, 0x02, 0x10, 0x0C, 0x03, 0x10,   0x04, 0x01, 0x10, 0x04, 0x01, 0x10, 0x40, 0x01, 0x10, 0x40, 0x01, 0x10, 0xC0, 0x03, 0x08, 0x88,  0x02, 0x08, 0xB8, 0x04, 0xFF, 0x37, 0x08, 0x01, 0x30, 0x18, 0x01, 0x90, 0x30, 0x00, 0xC0, 0x60,  0x00, 0x60, 0xC0, 0x00, 0x31, 0x80, 0x00, 0x1B, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x04, 0x00&#125;;// 大心跳圖示static const unsigned char PROGMEM logo3_bmp[] =&#123; 0x01, 0xF0, 0x0F, 0x80, 0x06, 0x1C, 0x38, 0x60, 0x18, 0x06, 0x60, 0x18, 0x10, 0x01, 0x80, 0x08,  0x20, 0x01, 0x80, 0x04, 0x40, 0x00, 0x00, 0x02, 0x40, 0x00, 0x00, 0x02, 0xC0, 0x00, 0x08, 0x03,  0x80, 0x00, 0x08, 0x01, 0x80, 0x00, 0x18, 0x01, 0x80, 0x00, 0x1C, 0x01, 0x80, 0x00, 0x14, 0x00,  0x80, 0x00, 0x14, 0x00, 0x80, 0x00, 0x14, 0x00, 0x40, 0x10, 0x12, 0x00, 0x40, 0x10, 0x12, 0x00,  0x7E, 0x1F, 0x23, 0xFE, 0x03, 0x31, 0xA0, 0x04, 0x01, 0xA0, 0xA0, 0x0C, 0x00, 0xA0, 0xA0, 0x08,  0x00, 0x60, 0xE0, 0x10, 0x00, 0x20, 0x60, 0x20, 0x06, 0x00, 0x40, 0x60, 0x03, 0x00, 0x40, 0xC0,  0x01, 0x80, 0x01, 0x80, 0x00, 0xC0, 0x03, 0x00, 0x00, 0x60, 0x06, 0x00, 0x00, 0x30, 0x0C, 0x00,  0x00, 0x08, 0x10, 0x00, 0x00, 0x06, 0x60, 0x00, 0x00, 0x03, 0xC0, 0x00, 0x00, 0x01, 0x80, 0x00&#125;;// 氧氣圖示static const unsigned char PROGMEM O2_bmp[] = &#123;  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0x00, 0x3f, 0xc3, 0xf8, 0x00, 0xff, 0xf3, 0xfc,  0x03, 0xff, 0xff, 0xfe, 0x07, 0xff, 0xff, 0xfe, 0x0f, 0xff, 0xff, 0xfe, 0x0f, 0xff, 0xff, 0x7e,  0x1f, 0x80, 0xff, 0xfc, 0x1f, 0x00, 0x7f, 0xb8, 0x3e, 0x3e, 0x3f, 0xb0, 0x3e, 0x3f, 0x3f, 0xc0,  0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3f, 0x1f, 0xc0, 0x3e, 0x3e, 0x2f, 0xc0,  0x3e, 0x3f, 0x0f, 0x80, 0x1f, 0x1c, 0x2f, 0x80, 0x1f, 0x80, 0xcf, 0x80, 0x1f, 0xe3, 0x9f, 0x00,  0x0f, 0xff, 0x3f, 0x00, 0x07, 0xfe, 0xfe, 0x00, 0x0b, 0xfe, 0x0c, 0x00, 0x1d, 0xff, 0xf8, 0x00,  0x1e, 0xff, 0xe0, 0x00, 0x1f, 0xff, 0x00, 0x00, 0x1f, 0xf0, 0x00, 0x00, 0x1f, 0xe0, 0x00, 0x00,  0x0f, 0xe0, 0x00, 0x00, 0x07, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00&#125;;void setup() &#123;  Serial.begin(115200);  Serial.println(&quot;系統啟動&quot;);  // 初始化 I2C (SDA=16, SCL=17)  Wire.begin(16, 17);  Wire.setClock(100000); // 100kHz 穩定性  // 初始化 OLED  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;    Serial.println(F(&quot;SSD1306 初始化失敗！&quot;));    for (;;); // 初始化失敗則停止  &#125;  Serial.println(&quot;SSD1306 初始化成功&quot;);  display.clearDisplay();  display.display();  delay(3000);  // 初始化 MAX30102  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) &#123;    Serial.println(&quot;找不到 MAX30102！請檢查連線。&quot;);    for (;;); // 初始化失敗則停止  &#125;  Serial.println(&quot;MAX30102 初始化成功&quot;);  // 配置 MAX30102  byte ledBrightness = 0x7F; // 亮度: 127 (0=關閉, 255=50mA)  byte sampleAverage = 4; // 平均樣本數: 1, 2, 4, 8, 16, 32  byte ledMode = 2; // 模式: 2 (紅光+紅外線，用於血氧)  int sampleRate = 800; // 採樣率: 50, 100, 200, 400, 800, 1000, 1600, 3200  int pulseWidth = 215; // 脈寬: 69, 118, 215, 411  int adcRange = 16384; // ADC範圍: 2048, 4096, 8192, 16384  particleSensor.setup(ledBrightness, sampleAverage, ledMode, sampleRate, pulseWidth, adcRange);  particleSensor.enableDIETEMPRDY();  particleSensor.setPulseAmplitudeRed(0x0A); // 低紅光 LED 表示感測器運行  particleSensor.setPulseAmplitudeGreen(0); // 禁用綠光 LED&#125;void loop() &#123;  long irValue = particleSensor.getIR(); // 讀取紅外線值以檢測手指  if (irValue &gt; FINGER_ON) &#123;    // 檢查心跳    if (checkForBeat(irValue) == true) &#123;      // 顯示心跳動畫      display.clearDisplay();      display.drawBitmap(0, 0, logo3_bmp, 32, 32, WHITE); // 大心跳圖示      display.setTextSize(2);      display.setTextColor(SSD1306_WHITE);      display.setCursor(42, 10);      display.print(beatAvg);      display.println(&quot; BPM&quot;);      display.drawBitmap(0, 35, O2_bmp, 32, 32, WHITE); // 氧氣圖示      display.setCursor(42, 40);      if (beatAvg &gt; 30) display.print(String(ESpO2) + &quot;%&quot;);      else display.print(&quot;---- %&quot;);      display.display();      long delta = millis() - lastBeat;      lastBeat = millis();      beatsPerMinute = 60 / (delta / 1000.0);      if (beatsPerMinute &lt; 255 &amp;&amp; beatsPerMinute &gt; 20) &#123;        rates[rateSpot++] = (byte)beatsPerMinute;        rateSpot %= RATE_SIZE;        beatAvg = 0;        for (byte x = 0; x &lt; RATE_SIZE; x++) beatAvg += rates[x];        beatAvg /= RATE_SIZE;      &#125;    &#125;    // 計算血氧    uint32_t ir, red;    double fred, fir;    particleSensor.check(); // 讀取最多 3 個樣本    if (particleSensor.available()) &#123;      i++;      ir = particleSensor.getFIFOIR(); // 讀取紅外線      red = particleSensor.getFIFORed(); // 讀取紅光      fir = (double)ir;      fred = (double)red;      aveir = aveir * frate + fir * (1.0 - frate); // 紅外線低通濾波      avered = avered * frate + fred * (1.0 - frate); // 紅光低通濾波      sumirrms += (fir - aveir) * (fir - aveir); // 紅外線交流成分平方和      sumredrms += (fred - avered) * (fred - avered); // 紅光交流成分平方和      if ((i % Num) == 0) &#123;        double R = (sqrt(sumirrms) / aveir) / (sqrt(sumredrms) / avered);        SpO2 = -23.3 * (R - 0.4) + 120;        ESpO2 = FSpO2 * ESpO2 + (1.0 - FSpO2) * SpO2; // 低通濾波        if (ESpO2 &lt;= MINIMUM_SPO2) ESpO2 = MINIMUM_SPO2;        if (ESpO2 &gt; 100) ESpO2 = 99.9;        sumredrms = 0.0; sumirrms = 0.0; SpO2 = 0;        i = 0;      &#125;      particleSensor.nextSample(); // 移至下一個樣本    &#125;    // 輸出到序列監視器    Serial.print(&quot;Bpm: &quot; + String(beatAvg));    if (beatAvg &gt; 30) Serial.println(&quot;, SpO2: &quot; + String(ESpO2));    else Serial.println(&quot;, SpO2: ----&quot;);    // 更新 OLED 穩定顯示    display.clearDisplay();    display.drawBitmap(5, 5, logo2_bmp, 24, 21, WHITE); // 小心跳圖示    display.setTextSize(2);    display.setTextColor(SSD1306_WHITE);    display.setCursor(42, 10);    display.print(beatAvg);    display.println(&quot; BPM&quot;);    display.drawBitmap(0, 35, O2_bmp, 32, 32, WHITE); // 氧氣圖示    display.setCursor(42, 40);    if (beatAvg &gt; 30) display.print(String(ESpO2) + &quot;%&quot;);    else display.print(&quot;---- %&quot;);    display.display();  &#125; else &#123;    // 未偵測到手指，重置數據並顯示提示    for (byte rx = 0; rx &lt; RATE_SIZE; rx++) rates[rx] = 0;    beatAvg = 0; rateSpot = 0; lastBeat = 0;    avered = 0; aveir = 0; sumirrms = 0; sumredrms = 0;    SpO2 = 0; ESpO2 = 90.0;    display.clearDisplay();    display.setTextSize(2);    display.setTextColor(SSD1306_WHITE);    display.setCursor(30, 5);    display.println(&quot;Finger&quot;);    display.setCursor(30, 35);    display.println(&quot;Please&quot;);    display.display();  &#125;&#125;
 未來計劃
 圖表展示
@@ -231,6 +204,34 @@ OLED 無顯示或亂碼：
       </tags>
   </entry>
   <entry>
+    <title>Gallery</title>
+    <url>/posts/889641a6.html</url>
+    <content><![CDATA[這裏是我在用的封面圖片
+鏈接重返未來：1999 中文維基
+      
+        
+          
+            
+          
+          重返未來：1999 中文維基
+          衣着海报
+        
+      
+
+
+    [{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/2/2e/%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD1.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD1.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/9/96/%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD2.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%BA%A2%E4%B8%8E%E7%99%BD2.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/0/07/%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B1.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B1.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/c/c8/%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B2.jpg/800px-%E8%A1%A3%E7%9D%80_%E7%94%9F%E5%A6%82%E8%A1%8C%E6%A3%8B2.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/1/1a/%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B31.jpg/800px-%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B31.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/4/49/%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B32.jpg/800px-%E8%A1%A3%E7%9D%80_%E6%8B%89%E6%9B%BC%E5%8D%B4%E5%B9%BB%E6%83%B32.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/0/09/%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%841.jpg/237px-%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%841.jpg","alt":"","title":""},{"url":"https://huiji-thumb.huijistatic.com/res1999/uploads/thumb/a/ab/%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%842.jpg/237px-%E8%A1%A3%E7%9D%80_%E6%B3%89%E7%9C%BC%E6%B7%B1%E5%A4%842.jpg","alt":"","title":""}]
+  
+
+
+]]></content>
+      <categories>
+        <category>Gallery</category>
+      </categories>
+      <tags>
+        <tag>1999</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -240,7 +241,7 @@ A computer is more than an advanced calculator—it’s an electronic device tha
 Unlike ancient tools like the abacus, modern computers are programmable and versatile.與古老的工具如算盤不同，現代電腦具有可編程性和多功能性。
 🧩 Von Neumann Architecture | 馮·諾依曼架構Most computers follow the Von Neumann architecture, which includes:大多數電腦遵循「馮·諾依曼架構」，包括：
 
-Input/Output Devices: Read/write data to/from memory on CPU command.輸入/輸出設備：根據 CPU 指令讀取或寫入記憶體資料。
+Input&#x2F;Output Devices: Read&#x2F;write data to&#x2F;from memory on CPU command.輸入&#x2F;輸出設備：根據 CPU 指令讀取或寫入記憶體資料。
 Examples: Keyboard (input), Monitor (output), Touchscreen (both).例子：鍵盤（輸入）、顯示器（輸出）、觸控螢幕（輸入與輸出）。
 
 
@@ -276,16 +277,16 @@ It’s like giving step-by-step directions in a language the computer understand
 🔣 Programming Languages | 編程語言Computers use binary (0s and 1s) for data and instructions.電腦使用 二進位（0 和 1） 來表示資料與指令。
 
 Example: Intel CPU addition → 00000011 00000100例子：Intel CPU 加法 → 00000011 00000100
-Why Binary? Reliable for electronic circuits (on/off states).為什麼使用二進位？因為電子電路的開/關狀態非常可靠。
+Why Binary? Reliable for electronic circuits (on&#x2F;off states).為什麼使用二進位？因為電子電路的開&#x2F;關狀態非常可靠。
 
 🕰️ Historical Note | 歷史小知識
 ENIAC (1940s): First electronic computer.ENIAC（1940年代）：第一台電子電腦。
-Used switches and inefficient decimal representation (10 bits = 1024 values).使用開關並以低效方式表示十進位數字（10 位元 = 1024 種可能）。
+Used switches and inefficient decimal representation (10 bits &#x3D; 1024 values).使用開關並以低效方式表示十進位數字（10 位元 &#x3D; 1024 種可能）。
 
 
 
 📏 Standards for Representation | 資料表示標準
-ASCII: 8-bit codes for English characters (A = 01000001)ASCII：8 位元英文字元編碼（如 ‘A’ = 01000001）
+ASCII: 8-bit codes for English characters (A &#x3D; 01000001)ASCII：8 位元英文字元編碼（如 ‘A’ &#x3D; 01000001）
 Unicode: Supports global languages (e.g., Chinese, Japanese)Unicode：支援全球語言（如中文、日文）
 Numbers:  
 2’s complement for negatives負數使用二的補數  
@@ -296,11 +297,9 @@ IEEE floating-point for decimals小數使用 IEEE 浮點格式
 🧬 Generations of Programming Languages | 編程語言世代
 
 
-
 Generation
 Description
 Example
-
 
 
 
@@ -335,8 +334,6 @@ Python, Java, C++
 
 
 
-
-
 🧠 Assembly is still useful for microprocessors. A simulator demo compares assembly vs. high-level code.🧠 組合語言仍適用於微處理器等高效率場景。教材中有模擬器展示組合語言與高階語言的比較。
 
 🐍 Introduction to Python | Python 語言簡介Python is chosen for its:選擇 Python 的原因：
@@ -347,6 +344,7 @@ Free &amp; Open-Source: No restrictions.免費且開源：無使用限制。
 Portability: Runs on multiple platforms.可移植性高：跨平台執行無需修改。
 
 🧪 Sample Python Program | Python 範例程式碼import datetime  # library to obtain current yearcohort = input(&quot;In which year did you join CityU? [e.g., 2020]&quot;)year = datetime.datetime.now().year - int(cohort) + 1print(&quot;So you are a year&quot;, year, &quot;student.&quot;)
+
 ]]></content>
       <categories>
         <category>Programming</category>
@@ -366,45 +364,70 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
 1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
 print(&quot;你好，世界！&quot;)
 說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：你好，世界！
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：水果：蘋果水果：香蕉水果：橙子水果：葡萄
+執行結果：
+你好，世界！
+
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
+# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
+說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：
+水果：蘋果水果：香蕉水果：橙子水果：葡萄
+
 
 3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
 # 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
 說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
 
 4. 檔案讀寫在Python中，讀寫檔案是常見任務。
 # 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+
 說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：```text你好，這是一個測試檔案！第二行。---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
+---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+
 說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：```text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
+---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+
 說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：```text
+執行結果：&#96;&#96;&#96;text
 面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+
 說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：```text請輸入一個數字：2結果：5.0---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
+---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+
 說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+執行結果：
+&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
 
 9. 字串操作Python 提供強大的字串處理工具。
 text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+
 說明：strip()、split() 和 join() 方法使字串處理變得簡單。
 
 10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
 # 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+
 說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
 
 11. 日期處理datetime 模組幫助處理日期和時間。
 from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+
 說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+執行結果（假設當前時間為 2025-08-30 17:31:05）：
+當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
 
 12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
 numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+
 說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：[0, 1, 2][0, 2, 4]
+執行結果：
+[0, 1, 2][0, 2, 4]
+
 
 結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
 
@@ -431,50 +454,62 @@ numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]prin
 A Collection of Common Python Code SnippetsThis blog post provides a curated list of commonly used Python code snippets, covering basic operations, data structures, file handling, and more. Each snippet includes a brief explanation and is ready to use or adapt for your projects. Whether you’re a beginner or an experienced developer, these examples will serve as a handy reference.
 1. Hello WorldThe classic “Hello, World!” program to get started with Python.
 print(&quot;Hello, World!&quot;)
+
 Explanation: The print() function outputs text to the console. This is often the first program written to test Python’s setup.
 
 2. Working with ListsLists are one of Python’s most versatile data structures. Here’s how to create, append, and iterate over a list.
 # Create a listfruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]# Append an itemfruits.append(&quot;grape&quot;)# Iterate over the listfor fruit in fruits:    print(f&quot;Fruit: &#123;fruit&#125;&quot;)
+
 Explanation: Lists are ordered, mutable collections. The append() method adds an item to the end, and a for loop iterates over each element.
 
 3. Dictionary OperationsDictionaries store key-value pairs. This snippet shows how to create, access, and update a dictionary.
 # Create a dictionaryperson = &#123;&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25, &quot;city&quot;: &quot;New York&quot;&#125;# Access a valueprint(person[&quot;name&quot;])  # Output: Alice# Update a valueperson[&quot;age&quot;] = 26# Add a new key-value pairperson[&quot;job&quot;] = &quot;Engineer&quot;# Iterate over keys and valuesfor key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
 Explanation: Dictionaries are mutable and allow fast key-based access. Use items() to iterate over key-value pairs.
 
 4. File Reading and WritingReading from and writing to files is a common task in Python.
 # Write to a filewith open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;Hello, this is a test file!\n&quot;)    file.write(&quot;Second line.&quot;)# Read from a filewith open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+
 Explanation: The with statement ensures the file is properly closed after use. Mode &quot;w&quot; is for writing, and &quot;r&quot; is for reading.
 
 5. List ComprehensionList comprehensions provide a concise way to create lists based on existing iterables.
 # Create a list of squares for numbers 1 to 5squares = [x**2 for x in range(1, 6)]print(squares)  # Output: [1, 4, 9, 16, 25]# Filter even numbersevens = [x for x in range(10) if x % 2 == 0]print(evens)  # Output: [0, 2, 4, 6, 8]
+
 Explanation: List comprehensions combine loops and conditionals into a single line, improving readability and efficiency.
 
 6. Function DefinitionFunctions help organize code into reusable blocks.
 def calculate_area(length, width):    &quot;&quot;&quot;Calculate the area of a rectangle.&quot;&quot;&quot;    return length * width# Call the functionarea = calculate_area(5, 3)print(f&quot;Area: &#123;area&#125;&quot;)  # Output: Area: 15
+
 Explanation: The def keyword defines a function. The docstring (&quot;&quot;&quot;...&quot;&quot;&quot;) describes its purpose, and return outputs the result.
 
 7. Exception HandlingHandle errors gracefully with try-except blocks.
 try:    num = int(input(&quot;Enter a number: &quot;))    result = 10 / num    print(f&quot;Result: &#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;Error: Cannot divide by zero!&quot;)except ValueError:    print(&quot;Error: Please enter a valid number!&quot;)
+
 Explanation: The try block runs code that might raise an error. except blocks handle specific exceptions, preventing the program from crashing.
 
 8. Working with SetsSets are useful for storing unique items and performing set operations.
 # Create a setnumbers = &#123;1, 2, 2, 3, 4&#125;  # Duplicates are removedprint(numbers)  # Output: &#123;1, 2, 3, 4&#125;# Set operationsother_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;Union: &#123;union&#125;&quot;)  # Output: Union: &#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;Intersection: &#123;intersection&#125;&quot;)  # Output: Intersection: &#123;3, 4&#125;
+
 Explanation: Sets automatically remove duplicates. Operators like | (union) and &amp; (intersection) perform set operations.
 
 9. String ManipulationPython offers powerful string manipulation tools.
 text = &quot;  Hello, Python!  &quot;# Strip whitespacecleaned = text.strip()print(cleaned)  # Output: Hello, Python!# Split into wordswords = cleaned.split()print(words)  # Output: [&#x27;Hello,&#x27;, &#x27;Python!&#x27;]# Join wordsjoined = &quot;-&quot;.join(words)print(joined)  # Output: Hello,-Python!
+
 Explanation: Methods like strip(), split(), and join() make string processing straightforward.
 
 10. Lambda FunctionsLambda functions are anonymous, single-expression functions for quick operations.
 # Define a lambda functionsquare = lambda x: x**2print(square(5))  # Output: 25# Use with sorted()points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  # Output: [(3, 1), (1, 2), (2, 3)]
+
 Explanation: Lambda functions are concise alternatives to regular functions, often used with functions like sorted() or map().
 
 11. Working with DatesThe datetime module helps handle dates and times.
 from datetime import datetime, timedelta# Current date and timenow = datetime.now()print(f&quot;Current time: &#123;now&#125;&quot;)# Add 3 daysfuture = now + timedelta(days=3)print(f&quot;Three days later: &#123;future&#125;&quot;)
+
 Explanation: The datetime module provides classes for date and time manipulation. timedelta is used for arithmetic with dates.
 
 12. List SlicingSlicing allows you to extract parts of a list (or other sequences).
 numbers = [0, 1, 2, 3, 4, 5]# Get first three elementsfirst_three = numbers[:3]print(first_three)  # Output: [0, 1, 2]# Get every second elementevery_second = numbers[::2]print(every_second)  # Output: [0, 2, 4]
+
 Explanation: The syntax [start:end:step] extracts a portion of a list. Omitting start or end uses the list’s boundaries.
 
 ConclusionThese Python snippets cover common tasks and demonstrate Python’s simplicity and power. Use them as a starting point for your projects or as a quick reference when coding. Python’s readability and flexibility make it ideal for both beginners and advanced developers. Happy coding!
@@ -500,8 +535,102 @@ To document what I learn about technology
 To connect with like-minded people
 
 def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
-Output:Hello, Hexo + Butterfly + Python!Stay tuned for more updates!
+
+Output:
+Hello, Hexo + Butterfly + Python!
+Stay tuned for more updates!
 test 123
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>introduction</tag>
+        <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test 02</title>
+    <url>/posts/fe3551ce.html</url>
+    <content><![CDATA[change?
+表格带有对齐格式的表格
+
+
+标题1
+标题2
+标题2
+
+
+
+文本好短
+文本不短也不长
+文本好长文本好长文本好长
+
+
+文本好长文本好长文本好长
+文本好短
+文本不短也不长
+
+
+居左对齐，居中对齐，居右对齐，Markdown 代码:
+
+
+
+
+| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
+
+html写法
+  
+    标题1
+    标题2
+    标题3
+  
+  
+    文本好短
+    文本不短也不长
+    文本好长文本好长文本好长
+  
+  
+    文本好长文本好长文本好长
+    文本好短
+    文本不短也不长
+  
+
+&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
+
+这种方式，表格上方会留出大量空白
+解决表格上方留出空白的办法1.压缩表格
+&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
+
+mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
+
+    flowchart LR
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+  
+
+
+
+    pie
+title Key elements in Product X
+&quot;Calcium&quot; : 42.96
+&quot;Potassium&quot; : 50.05
+&quot;Magnesium&quot; : 10.01
+&quot;Iron&quot; : 5
+  
+&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
 ]]></content>
       <categories>
         <category>Test</category>
@@ -514,49 +643,21 @@ test 123
   <entry>
     <title>Biomaterials-1 | 生物材料-1</title>
     <url>/posts/d1e61a5b.html</url>
-    <content><![CDATA[ Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
-Introduction | 引言
+    <content><![CDATA[Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱Back to Outline | 回到大綱Introduction | 引言
 Title: Materials for Biomedical Engineering | 生物醫學工程材料
 Subtitle: Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
 
 Lecture Outline | 課程大綱
 Topics Covered | 涵蓋主題:
-
 Definition of Biomaterials | 生物材料的定義
-
-
-
 Characteristics of four generations | 四個世代的特徵
-
-
-
 Major market shares | 主要市場份額
-
-
-
 Requirements of biomaterials | 生物材料的要求
-
-
-
 Major types and their pros and cons | 主要類型及其優缺點
-
-
-
 Forces in biomaterials | 生物材料中的作用力
-
-
-
 Three aspects in biomaterials | 生物材料的三個方面
-
-
-
 Restenosis | 再狹窄
-
-
-
 Need of selection and processing of biomaterials | 生物材料選擇與加工的需求
-
-
 
 
 
@@ -622,125 +723,17 @@ Combines “dreams and realities” with assistance from artificial-intelligence
 
 
       
+
 First Generation Example | 第一世代範例
 Etruscan Dental Bridge: Gold was one of the earliest biomaterials used in ancient civilizations. | 伊特魯里亞牙橋：黃金是古代文明中最早使用的生物材料之一。
 Oldest Known Prosthesis: A replacement for the right big toe found in a mummy from the necropolis of Thebes (circa 3,000 years ago). | 已知最古老的假肢：約3000年前在底比斯墓地發現的木乃伊右大腳趾替換物。
 Burn Treatment: Use of tilapia skin for burns victims. | 燒傷治療：使用羅非魚皮治療燒傷患者。
 
-Fish Skin Treatment | 魚皮治療
-
-
-
-Pros
-優點
-Cons
-缺點
-
-
-
-
-Cost
-成本
-Process
-加工過程
-
-
-Biocompatible &amp; biodegradable
-生物相容與可降解
-Bacterial/pathogen risk
-細菌/病原體風險
-
-
-Ethics
-倫理
-Immune response
-免疫反應
-
-
-Supply
-供應
-/
-/
-
-
-Non-toxic
-無毒
-/
-/
-
-
-
-
-🔥 Burn Classification Table | 燒傷分類表
-
-
-
-Damages / Symptoms
-損傷/症狀
-First-Degree Burn
-一度燒傷
-Second-Degree Burn (Partial Thickness)
-二度燒傷（部分厚度）
-Third-Degree Burn (Full Thickness)
-三度燒傷（全厚度）
-
-
-
-
-Damages epidermis (outer layer of skin)
-損傷表皮（皮膚外層）
-✓
-✓
-✓
-
-
-Damages dermis layer
-損傷真皮層
-
-✓
-✓
-
-
-Damages tendons, bones
-損傷肌腱、骨骼
-
-
-✓
-
-
-Reddens skin
-皮膚發紅
-✓
-✓
-
-
-
-Blisters
-起水泡
-
-✓
-
-
-
-Pain / white or black discoloration
-疼痛/白色或黑色變色
-
-✓
-✓
-
-
-Damages nerve endings
-損傷神經末梢
-
-
-✓
-
-
-
-
+Fish Skin Treatment | 魚皮治療| Pros | 優點                     | Cons | 缺點                || :————————— | :———————— || Cost | 成本                 | Process | 加工過程           || Biocompatible &amp; biodegradable | 生物相容與可降解 | Bacterial&#x2F;pathogen risk | 細菌&#x2F;病原體風險 || Ethics | 倫理                 | Immune response | 免疫反應         || Supply | 供應                 | &#x2F; | &#x2F;                     || Non-toxic | 無毒               | &#x2F; | &#x2F;                     |
+🔥 Burn Classification Table | 燒傷分類表| Damages &#x2F; Symptoms | 損傷&#x2F;症狀                          | First-Degree Burn | 一度燒傷 | Second-Degree Burn (Partial Thickness) | 二度燒傷（部分厚度） | Third-Degree Burn (Full Thickness) | 三度燒傷（全厚度） ||——————————————–|:——————:|:————————————–:|:———————————–:|| Damages epidermis (outer layer of skin) | 損傷表皮（皮膚外層）     | ✓ | ✓ | ✓ || Damages dermis layer | 損傷真皮層                        |   | ✓ | ✓ || Damages tendons, bones | 損傷肌腱、骨骼                      |   |   | ✓ || Reddens skin | 皮膚發紅                                | ✓ | ✓ |   || Blisters | 起水泡                                    |   | ✓  |   || Pain &#x2F; white or black discoloration | 疼痛&#x2F;白色或黑色變色         |   | ✓ | ✓ || Damages nerve endings | 損傷神經末梢                       |   |   | ✓ |
 Second Generation Example | 第二世代範例
 The Glass Eye | 玻璃眼:
-Created By: French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain, and glass. | 由法國外科醫生安布魯瓦茲·帕雷（1510-90）創造，被認為是面部假體之父。他首先描述了人工眼的使用，並用搪瓷金、銀、瓷器和玻璃製作。
+Created By: French surgeon Ambroise Paré (1510-90) could have laid claim to be the father of facial prosthetics. He was the first to describe the use of artificial eyes and constructed them from enameled gold, silver, porcelain, and glass. | 由法國外科醫生**安布魯瓦茲·帕雷（1510-90）**創造，被認為是面部假體之父。他首先描述了人工眼的使用，並用搪瓷金、銀、瓷器和玻璃製作。
 The Glass Eye: The first known Ocularist, constructing artificial eyes from glass during the golden age of Italian glassmaking, came out of Venice in the 16th century. By the 19th century, Europe was acknowledged as a centre of excellence in artistic craftsmanship, and Germany became the centre for glass eye production. | 玻璃眼：最早的已知義眼師在16世紀義大利玻璃製造黃金時代於威尼斯製作玻璃人工眼。到19世紀，歐洲被認為是藝術工藝的卓越中心，德國成為玻璃眼生產中心。
 
 
@@ -800,7 +793,7 @@ Stretchable Transistors | 可拉伸晶體管
 Self-healing Materials | 自癒材料
 Electronic Skin (E-skin) | 電子皮膚
 Tactile, Chemical, and Electrophysiological Sensors | 觸覺、化學和電生理傳感器
-Advanced Materials, Volume 31, Issue 41, First published: 19 September 2019, DOI: 10.1002/adma.201902649
+Advanced Materials, Volume 31, Issue 41, First published: 19 September 2019, DOI: 10.1002&#x2F;adma.201902649
 
 
 
@@ -887,7 +880,7 @@ Tissue Engineering | 組織工程:
 Scaffolds for Regenerative Medicine, Nanomaterials for Biosensing, Tailoring of Inorganic Nanoparticles | 再生醫學支架、生物傳感奈米材料、無機奈米粒子的定制
 
 
-Neurological/Central Nervous System | 神經/中樞神經系統:
+Neurological&#x2F;Central Nervous System | 神經&#x2F;中樞神經系統:
 Shunting Systems, Cortical Neural Prosthetics, Hydrocephalus Shunts, Neural Stem Cell Encapsulation | 分流系統、皮質神經假體、腦積水分流、神經幹細胞封裝
 
 
@@ -915,16 +908,19 @@ Aluminum oxide, zirconia, calcium phosphates | 氧化鋁、氧化鋯、磷酸鈣
 
 
 Metals | 金屬:
+
 Stainless steel, cobalt alloys, titanium alloys | 不銹鋼、鈷合金、鈦合金
 
 
 Polymers: synthetic and natural | 聚合物：合成與天然
+
 Synthetic: Silicones, poly(ethylene), poly(vinyl chloride), polyurethanes, polylactides | 合成：矽膠、聚乙烯、聚氯乙烯、聚氨酯、聚乳酸
 Natural: Collagen, gelatin, elastin, silk, polysaccharides | 天然：膠原蛋白、明膠、彈性蛋白、絲、多醣
 
 
 Composites | 複合材料
-Micro/nano-dimensioned biomaterials | 微米/奈米尺寸生物材料
+
+Micro&#x2F;nano-dimensioned biomaterials | 微米&#x2F;奈米尺寸生物材料
 
 
 
@@ -1008,29 +1004,29 @@ Forces that Hold Atoms Together | 將原子結合在一起的作用力
 Van der Waals or Dispersion Forces | 范德瓦爾斯或分散力
 By considering the electron clouds (charge density in space) of two atoms or molecules, both without permanent dipole moments. | 考慮兩個無永久偶極矩的原子或分子的電子雲（空間中的電荷密度）。
 Electron clouds are contributory in molecular form. | 電子雲在分子形態中起作用。
-Can shift to one side of the atom/molecule, therefore, at any moment the atoms or molecules can create a fluctuating instantaneous dipole. | 可移到原子/分子的一側，因此，任何時刻原子或分子可產生波動瞬時偶極。
+Can shift to one side of the atom&#x2F;molecule, therefore, at any moment the atoms or molecules can create a fluctuating instantaneous dipole. | 可移到原子&#x2F;分子的一側，因此，任何時刻原子或分子可產生波動瞬時偶極。
 The fluctuating instantaneous dipole in one molecule typically induces such an “instantaneous dipole” in the next molecule. | 一個分子的波動瞬時偶極通常在下一個分子中誘導出類似的“瞬時偶極”。
 They dictate the properties of many materials (for example, some polymers such as polyethylene which has no obvious dipole). | 它們決定了許多材料的性質（例如，無明顯偶極的聚乙烯等聚合物）。
-They explain why the lipids in cell membranes assemble into the bilayer structure. A typical van der Waals interactive force (for example, CH4 … CH4) is about 9 kJ/mol. | 它們解釋了為什麼細胞膜中的脂質組裝成雙層結構。典型的范德瓦爾斯交互力（例如，CH4 … CH4）約為9 kJ/mol。
+They explain why the lipids in cell membranes assemble into the bilayer structure. A typical van der Waals interactive force (for example, CH4 … CH4) is about 9 kJ&#x2F;mol. | 它們解釋了為什麼細胞膜中的脂質組裝成雙層結構。典型的范德瓦爾斯交互力（例如，CH4 … CH4）約為9 kJ&#x2F;mol。
 
 
 
 Ionic Forces and Hydrogen Bond | 離子力與氫鍵
 Ionic force | 離子力:
 The + and - charges are arrayed to achieve the closest interaction of opposite charges, and the furthest separation of similar charges. | 正負電荷排列以實現相反電荷的最密切交互，並使相同電荷分離最遠。
-Typical ionic bond strength: (for example, NaCl) are about 770 kJ/mol. | 典型的離子鍵強度：（例如，氯化鈉）約為770 kJ/mol。
+Typical ionic bond strength: (for example, NaCl) are about 770 kJ&#x2F;mol. | 典型的離子鍵強度：（例如，氯化鈉）約為770 kJ&#x2F;mol。
 
 
 Hydrogen bond | 氫鍵:
-Typical hydrogen bond strengths (for example, O-H … H) are about 20 kJ/mol. | 典型的氫鍵強度（例如，O-H … H）約為20 kJ/mol。
+Typical hydrogen bond strengths (for example, O-H … H) are about 20 kJ&#x2F;mol. | 典型的氫鍵強度（例如，O-H … H）約為20 kJ&#x2F;mol。
 
 
 
 Metallic and Covalent Bonds | 金屬鍵與共價鍵
-Single metallic bond is rarely discussed. The total interactive strength is realized through the multiplicity of the plus-minus interactions, at 25°C, aluminum will have a heat of sublimation of 325 kJ/mol, while titanium will be about 475 kJ/mol. | 單個金屬鍵很少被討論。總交互強度通過多重正負交互實現，在25°C時，鋁的升華熱約為325 kJ/mol，而鈦約為475 kJ/mol。
-Covalent bonds are relatively strong bonds associated with sharing of pairs of electrons between atoms. Typical covalent bond strengths (for example, C-C) are about 350 kJ/mol. | 共價鍵是原子間共享電子對的相對強鍵。典型的共價鍵強度（例如，C-C）約為350 kJ/mol。
+Single metallic bond is rarely discussed. The total interactive strength is realized through the multiplicity of the plus-minus interactions, at 25°C, aluminum will have a heat of sublimation of 325 kJ&#x2F;mol, while titanium will be about 475 kJ&#x2F;mol. | 單個金屬鍵很少被討論。總交互強度通過多重正負交互實現，在25°C時，鋁的升華熱約為325 kJ&#x2F;mol，而鈦約為475 kJ&#x2F;mol。
+Covalent bonds are relatively strong bonds associated with sharing of pairs of electrons between atoms. Typical covalent bond strengths (for example, C-C) are about 350 kJ&#x2F;mol. | 共價鍵是原子間共享電子對的相對強鍵。典型的共價鍵強度（例如，C-C）約為350 kJ&#x2F;mol。
 
-Ionically-bonded Hydrogels/Natural Polymer | 離子鍵結水凝膠/天然聚合物For example | 例如:
+Ionically-bonded Hydrogels&#x2F;Natural Polymer | 離子鍵結水凝膠&#x2F;天然聚合物For example | 例如:
 
 Base acid: guluronic acid, mannuroic acid, Alginate (polysaccharide) | 基礎酸：古洛糖酸、甘露糖酸、海藻酸（多醣）By adding | 通過添加:
 Cationic polymer (e.g. chitosan fraction, polylysine) | 陽離子聚合物（例如，幾丁聚醣片段、聚賴氨酸）
@@ -1135,6 +1131,7 @@ Platelet aggregation, inflammatory cell infiltration, release of growth factors,
 
 Selection and Processing | 選擇與加工
 Types of Biomaterials (mechanical properties, biocompatibility, degradation, non-thrombogenic, etc) | 生物材料類型（機械性能、生物相容性、降解性、非血栓形成等）
+
 Processing involves a complex series of chemical, thermal, and physical processes that prepare a starting material, create a shape, retain that shape, refine the structure and shape. | 加工涉及一系列複雜的化學、熱和物理過程，準備起始材料、創建形狀、保持形狀、精煉結構和形狀。
 
 Questions | 問題:For Hip Replacement vs Skull Replacement | 髖關節置換與顱骨置換:
@@ -1191,7 +1188,7 @@ Answering Skill | 回答技巧
 Characterization of biomaterials | 生物材料特性:
 Polymers and hydrogel | 聚合物與水凝膠
 Metals and inorganics | 金屬與無機物
-Micro/nano-biomaterials | 微米/奈米生物材料
+Micro&#x2F;nano-biomaterials | 微米&#x2F;奈米生物材料
 
 
 What does the body do to the biomaterials | 身體對生物材料的反應:
@@ -1208,6 +1205,272 @@ Practical aspects of materials in biomedical engineering | 生物醫學工程中
 
 
 
+Practice Questions | 練習題Q1. Which of the following is NOT a biomaterial?a. Fish skinb. Glassc. Goldd. None
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. NoneExplanation: All listed materials (fish skin, glass, gold) can be considered biomaterials because they have been used in medical or biological contexts.解析： 魚皮、玻璃和金在醫療應用中均可視為生物材料，因此沒有一個選項是完全不屬於生物材料。
+
+    
+  
+
+Q2. Which type of burn needs skin graft?a. First-degreeb. Second-degreec. Third-degreed. All of them
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: c. Third-degreeExplanation: Third-degree burns destroy the full thickness of skin, requiring grafts for wound closure. First-degree burns heal naturally; second-degree may need grafts only if extensive.解析： 三度燒傷破壞皮膚全層，必須進行皮膚移植；一度燒傷可自然癒合，二度燒傷僅在大面積時需要移植。
+
+    
+  
+
+Q3. Which is NOT a requirement for a successful biomaterial?a. Inert or specifically interactiveb. Human-madec. Processabled. Nonthrombogenic (if blood-contacting)
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Human-madeExplanation: Biomaterials can be natural (e.g., collagen) or synthetic; being human-made is not mandatory.解析： 生物材料可以是天然或合成的，並非必須由人製造。
+
+    
+  
+
+Q4. What is the advantage of ceramics compared to other biomaterials?a. Cheapb. Easy to fabricatec. Strongd. Biocompatible
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: c. StrongExplanation: Ceramics are known for high compressive strength and hardness, making them suitable for load-bearing implants.解析： 陶瓷具有高抗壓強度和硬度，適合承重植入物。
+
+    
+  
+
+Q5. Which of the following is WRONG for stent?a. First coronary stent implanted in Toulouse, France, in 1986b. Stent is a tube inserted to keep a vessel openc. Stent surgery is minimally invasived. Initial consequences include deendothelialization, plaque crush, and artery stretch
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. Initial consequences include deendothelialization, plaque crush, and artery stretchExplanation: While plaque crush and artery stretch occur, deendothelialization is not an intended consequence; endothelial damage is a complication.解析： 支架置入會壓碎斑塊並擴張血管，但去除內皮並非預期結果，而是併發症。
+
+    
+  
+
+Q6. What is the purpose of skin graft meshing?a. Expand to cover large defectsb. Provide drainage route for blood&#x2F;serumc. Increase flexibility to conform to uneven bedsd. All of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the aboveExplanation: Meshing allows expansion, drainage, and flexibility for better graft adaptation.解析： 網狀切割可擴展覆蓋範圍、排液並增加柔韌性，適應不平整創面。
+
+    
+  
+
+Q7. In Rhinoplasty, can we use biodegradable polymer as implants?a. Yesb. No
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. NoExplanation: Implants in rhinoplasty must maintain shape long-term; biodegradable polymers would degrade and fail structurally.解析： 隆鼻植入物需長期保持形狀，可降解聚合物會分解，導致結構失效。
+
+    
+  
+
+Q8. Fish skin for third-degree burns: Answer the following
+Define third-degree burnList 3 advantages and disadvantages of fish skinSolutions to limitationsProcedure for autologous skin transplantation if 80% burn
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:
+Third-degree burn: Full-thickness skin destruction, including epidermis and dermis.Advantages of fish skin:
+Rich in collagen → promotes healingCost-effectiveReadily available
+Disadvantages:
+Risk of infectionImmunogenicityLimited mechanical strength
+Solutions:
+Sterilization, crosslinking, or coating with antimicrobial agents
+Autologous transplant procedure:
+Harvest healthy skin from donor site → mesh graft → cover wound → secure and monitor for integration.解析：
+三度燒傷：皮膚全層破壞。魚皮優點：膠原蛋白多、成本低、易取得。缺點：感染風險、免疫反應、機械強度不足。解決方案：消毒、交聯、抗菌處理。自體移植：取健康皮膚→網狀切割→覆蓋創面→固定並監測。
+
+    
+  
+
 ]]></content>
       <categories>
         <category>Education</category>
@@ -1221,94 +1484,23 @@ Practical aspects of materials in biomedical engineering | 生物醫學工程中
       </tags>
   </entry>
   <entry>
-    <title>Test 02</title>
-    <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[change?
-表格带有对齐格式的表格
-
-
-
-标题1
-标题2
-标题2
-
-
-
-
-文本好短
-文本不短也不长
-文本好长文本好长文本好长
-
-
-文本好长文本好长文本好长
-文本好短
-文本不短也不长
-
-
-
-
-居左对齐，居中对齐，居右对齐，Markdown 代码:| 标题1 | 标题2 | 标题2 || :------ | :------: | ------: || 文本好短 | 文本不短也不长 | 文本好长文本好长文本好长 || 文本好长文本好长文本好长 | 文本好短 | 文本不短也不长 |
-html写法
-  
-    标题1
-    标题2
-    标题3
-  
-  
-    文本好短
-    文本不短也不长
-    文本好长文本好长文本好长
-  
-  
-    文本好长文本好长文本好长
-    文本好短
-    文本不短也不长
-  
-&lt;table&gt;  &lt;tr&gt;    &lt;th&gt;标题1&lt;/th&gt;    &lt;th&gt;标题2&lt;/th&gt;    &lt;th&gt;标题3&lt;/th&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;    &lt;td&gt;文本好短&lt;/td&gt;    &lt;td&gt;文本不短也不长&lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;
-这种方式，表格上方会留出大量空白
-解决表格上方留出空白的办法1.压缩表格&lt;table&gt;&lt;tr&gt;&lt;th&gt;标题1&lt;/th&gt;&lt;th&gt;标题2&lt;/th&gt;&lt;th&gt;标题3&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;文本好长文本好长文本好长&lt;/td&gt;&lt;td&gt;文本好短&lt;/td&gt;&lt;td&gt;文本不短也不长&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-2.表格首部和尾部用如下字符串包裹&#123;% raw %&#125; table &#123;% endraw %&#125;
-mermaid 文檔https://mermaid.nodejs.cn/syntax/flowchart.html
-
-    flowchart LR
-    c1--&gt;a2
-    subgraph one
-    a1--&gt;a2
-    end
-    subgraph two
-    b1--&gt;b2
-    end
-    subgraph three
-    c1--&gt;c2
-    end
-    one --&gt; two
-    three --&gt; two
-    two --&gt; c2
-  
-
-    pie
-title Key elements in Product X
-&quot;Calcium&quot; : 42.96
-&quot;Potassium&quot; : 50.05
-&quot;Magnesium&quot; : 10.01
-&quot;Iron&quot; : 5
-  
-&#123;% mermaid %&#125;pietitle Key elements in Product X&quot;Calcium&quot; : 42.96&quot;Potassium&quot; : 50.05&quot;Magnesium&quot; : 10.01&quot;Iron&quot; : 5&#123;% endmermaid %&#125;
-]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>introduction</tag>
-        <tag>first</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Biomaterials-2 | 生物材料-2</title>
     <url>/posts/f5cdc6c3.html</url>
-    <content><![CDATA[ Lecture 2: Surface and Bulk Properties of Biomaterials | 第二講：生物材料的表面與體相性質
-Lecture Introduction | 課程引言
-Title: Surface and Bulk Properties of Biomaterials | 生物材料的表面與體相性質
+    <content><![CDATA[Lecture 2: Surface and Bulk Properties of Biomaterials | 第二講：生物材料的表面與體相性質Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Surface Properties | 表面性質 ：
+Surface Contact Angle (Hydrophobicity) | 表面接觸角（疏水性）
+SEM (Roughness and Patterns) | 掃描電子顯微鏡（粗糙度和圖案）
+ESCA or XPS (Chemical Composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
+TOP-SIMS (Chemical Composition) | 飛行時間二次離子質譜（化學組成）
+Raman Spectroscopy (Chemical Composition) | 拉曼光譜（化學組成）
+
+
+Bulk Properties | 本體性質 ：
+Stress and Strain (Mechanical Properties) | 應力和應變（機械性質）
+Shear Stress and Shear Strain (Mechanical Properties) | 剪應力和剪應變（機械性質）
+Young’s Modulus and Shear Modulus (Mechanical Properties) | 楊氏模量和剪切模量（機械性質）
+
+
 
 Three Aspects in Biomaterials | 生物材料的三個面向
 Aspects | 面向:
@@ -1425,15 +1617,15 @@ EDX: Best for elemental analysis | 能量分散X射線光譜：最佳元素分�
 
 
 
-X-ray Photoelectron Spectroscopy (XPS/ESCA) | X射線光電子能譜（XPS/ESCA）
+X-ray Photoelectron Spectroscopy (XPS&#x2F;ESCA) | X射線光電子能譜（XPS&#x2F;ESCA）
 Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements. | 機制：X射線光子從原子內殼（例如K殼）中逐出電子。逐出電子的動能可用於計算結合能，識別元素。
 Applications | 應用:
 Identifies all elements except H and He (concentrations &gt;0.1%). | 識別除H和He外的所有元素（濃度&gt;0.1%）。
 Semi-quantitative elemental surface composition (±10%). | 半定量元素表面組成（±10%）。
 Provides molecular environment details (oxidation state, bonding atoms). | 提供分子環境細節（氧化態、鍵結原子）。
-Detects aromatic/unsaturated structures via shake-up transitions. | 通過激發躍遷檢測芳香族/不飽和結構。
+Detects aromatic&#x2F;unsaturated structures via shake-up transitions. | 通過激發躍遷檢測芳香族&#x2F;不飽和結構。
 Identifies organic groups using derivatization reactions. | 使用衍生反應識別有機基團。
-Non-destructive elemental depth profiles (~100 Å). | 非破壞性元素深度輪廓（~100 Å）。
+Non-destructive elemental depth profiles (100 Å). | 非破壞性元素深度輪廓（100 Å）。
 Destructive depth profiles (thousands of Å) using argon etching (for inorganics). | 使用氬蝕刻進行破壞性深度輪廓（數千Å，用於無機物）。
 Lateral surface composition variations (spatial resolution 8-150 µm). | 橫向表面組成變化（空間分辨率8-150 µm）。
 Fingerprinting materials using valence band spectra and bonding orbitals. | 使用價帶光譜和鍵結軌道進行材料指紋識別。
@@ -1448,7 +1640,7 @@ Static SIMS: Uses low ion doses for analysis. | 靜態SIMS：使用低離子劑�
 
 When to Use EDX, ESCA, or SIMS | 何時使用EDX、ESCA或SIMS
 EDX: For elemental composition of materials. | 用於材料的元素組成。
-ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental/chemical states with good energy resolution. | 用於量化表面污染、理解電子結構或分析具有良好能量分辨率的元素/化學狀態。
+ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental&#x2F;chemical states with good energy resolution. | 用於量化表面污染、理解電子結構或分析具有良好能量分辨率的元素&#x2F;化學狀態。
 SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis. | 用於高靈敏度痕量元素檢測、高分辨率表面成像或分子組成分析。
 
 Raman Spectroscopy | 拉曼光譜
@@ -1473,7 +1665,7 @@ Optical (response to light) | 光學（對光的響應）
 
 Categories | 類別:
 Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness). | 內在：取決於組成（例如，密度、熱容量、剛度）。
-Extrinsic: Depend on microstructure (e.g., yield strength, optical/magnetic properties). | 外在：取決於微觀結構（例如，屈服強度、光學/磁性質）。
+Extrinsic: Depend on microstructure (e.g., yield strength, optical&#x2F;magnetic properties). | 外在：取決於微觀結構（例如，屈服強度、光學&#x2F;磁性質）。
 
 
 
@@ -1490,7 +1682,7 @@ Mechanical Properties | 機械性質
 Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact). | 目的：估計在機械負載（拉伸、壓縮、扭轉、彎曲、循環負載、衝擊）下的行為。
 Influence: Highly affected by physical and chemical characteristics. | 影響：高度受物理和化學特性的影響。
 
-Tensile/Compressive Testing | 拉伸/壓縮測試
+Tensile&#x2F;Compressive Testing | 拉伸&#x2F;壓縮測試
 Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate. | 方法：以控制的幅度和速率施加單軸負載（拉伸、壓縮或剪切）。
 Setup: One end of the specimen is attached to a movable platform. | 設置：樣品的一端附著在可移動平台上。
 
@@ -1498,6 +1690,953 @@ Compression Testing | 壓縮測試
 Application: Common for biomaterials under compressive forces (e.g., orthopedic implants). | 應用：常用於承受壓縮力的生物材料（例如，骨科植入物）。
 Specimen: Cylindrical, with length at least twice the diameter. | 樣品：圓柱形，長度至少為直徑的兩倍。
 Calculation: Stress-strain calculated similarly to tensile tests, but values are negative. | 計算：應力-應變計算與拉伸測試類似，但值為負。
+
+Practice Questions | 練習題Q1. What does a “real-world” material’s surface have?a. Waterb. Oxidesc. Organic moleculesd. All of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the aboveExplanation: Real-world surfaces are rarely pristine; they typically have adsorbed water, oxide layers, and organic contaminants from the environment.解析： 真實材料表面通常含有水分、氧化層及有機污染物，並非完全潔淨。
+
+    
+  
+
+Q2. If a liquid does not wet a solid surface, then its angle of contact is:a. Acute angleb. Obtuse anglec. Right angled. More than one of the abovee. None of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Obtuse angleExplanation: Poor wetting corresponds to a large contact angle (&gt;90°), which is obtuse. Good wetting occurs when the angle is small (&lt;90°).解析： 液體不潤濕固體表面時，接觸角大於90°，屬於鈍角；良好潤濕時接觸角小於90°。
+
+    
+  
+
+Q3. Dancing of small pieces of camphor on the surface of water is due to:a. Viscosityb. Surface tensionc. Weightd. Lifting force
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Surface tensionExplanation: Camphor alters local surface tension, creating gradients that cause movement (Marangoni effect).解析： 樟腦改變水面局部表面張力，產生梯度，導致樟腦片移動，稱為馬蘭哥尼效應。
+
+    
+  
+
+Q4. Which one is true for cosmetic contact lenses?a. They alter eye color or appearance, some also correct visionb. They are harmless for anyone to usec. Contact lenses are considered consumablesd. Cosmetic lenses are one-size-fits-all
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: a. They alter eye color or appearance, some also correct visionExplanation: Cosmetic lenses primarily change appearance; some have corrective power. They are not universally safe and require proper fitting.解析： 美瞳主要改變眼睛外觀，有些具矯正功能，但並非人人安全，需適當配戴。
+
+    
+  
+
+Q5. Difference between EDX, ESCA and SIMS’s measurement?a. Excitation sourceb. Detection signalc. Profiling depthd. All of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the aboveExplanation: These techniques differ in excitation (X-ray, electron, ion), detection (photon, electron, ion), and depth sensitivity (nm to μm scale).解析： EDX、ESCA、SIMS在激發源、檢測信號及深度解析度上均有差異。
+
+    
+  
+
+Q6. Which factor keeps changing in tensile stress and compression stress?a. Young’s modulus of materialsb. Cross-sectional area of materialsc. Surface chemistry of materialsd. None of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Cross-sectional area of materialsExplanation: Under tension or compression, the cross-sectional area changes due to deformation, while Young’s modulus remains constant for elastic range.解析： 拉伸或壓縮時，截面積隨變形改變，而楊氏模量在彈性範圍內保持不變。
+
+    
+  
+
+Q7. Why is PCL a better choice than PLGA in making scaffolds for skull regeneration?a. Glass transition temperature (−60 °C vs 40–60 °C)b. Melting temperature (60 °C vs 240 °C)c. Degradation time (2–3 years vs &lt;6 months)d. Mechanical properties (&gt;200 MPa vs 20–30 MPa)
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: All of the above (a, b, c, d)Explanation: PCL has lower Tg and Tm, making it easier to process; it degrades slowly, providing long-term support, and has superior mechanical strength compared to PLGA.解析： PCL玻璃轉化溫度和熔點低，易加工；降解時間長，能長期支撐；機械強度高於PLGA，適合顱骨再生。
+
+    
+  
+
+Q8. How to evaluate antiviral coating (e.g., MAP-1)?
+EffectivenessDosage&#x2F;coverageHalf-life&#x2F;sustainabilityDuration under conditions (shower, sunlight, moisture)
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:Evaluation involves testing antimicrobial efficacy, required dosage, durability under environmental stress, and longevity before reapplication.解析： 評估需檢測抗菌效能、劑量覆蓋率、耐久性及在環境條件下的持續時間。
+
+    
+  ]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-3 | 生物材料-3</title>
+    <url>/posts/6848b770.html</url>
+    <content><![CDATA[Lecture 3: Polymers and Hydrogels | 聚合物和水凝膠Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Definition of Polymer | 聚合物的定義
+Equilibrium Swelling Theory | 平衡膨脹理論
+Calculation of Swelling Ratio | 膨脹比率的計算
+Mesh Size | 網格尺寸
+Chemical and Physical Hydrogels; Their Difference in Swelling Ratio and Mesh Size and Strength | 化學與物理水凝膠；其膨脹比率、網格尺寸和強度的差異
+Lower Critical Solution Temperature | 較低臨界溶液溫度
+Advantages of Hydrogel for Biomedical Applications | 水凝膠在生物醫學應用中的優勢
+Representative Bioapplications of Hydrogel | 水凝膠的代表性生物應用
+Degradation of Hydrogel | 水凝膠的降解
+
+
+Polymer and Hydrogel Notes | 聚合物與水凝膠筆記🧬 1. Definition of Polymer | 聚合物的定義Expanded Explanation  | 詳細說明 :Polymers are macromolecules formed by the covalent linking of smaller repeating units called monomers. These monomers are typically small organic molecules that bond together through chemical reactions like polymerization (e.g., addition or condensation polymerization). Polymers can be classified based on their origin, structure, or properties: | 聚合物是由較小的重複單元（稱為單體）通過共價鍵連接形成的大分子。這些單體通常是小的有機分子，通過聚合反應（如加成聚合或縮合聚合）結合在一起。聚合物可根據其來源、結構或性質進行分類：
+
+Natural Polymers: Found in biological systems, such as proteins (chains of amino acids), DNA (nucleotides), and cellulose (glucose units). These polymers are essential for life and often biodegradable. | 天然聚合物：存在於生物系統中，如蛋白質（氨基酸鏈）、DNA（核苷酸）和纖維素（葡萄糖單元）。這些聚合物對生命至關重要，且通常可生物降解。
+Synthetic Polymers: Human-made, such as polyethylene (used in plastic bags), polystyrene (used in foam packaging), and nylon (used in textiles). These are often designed for specific applications. | 合成聚合物：人造聚合物，如聚乙烯（用於塑料袋）、聚苯乙烯（用於泡沫包裝）和尼龍（用於紡織品）。這些聚合物通常為特定應用而設計。
+Copolymers: Polymers with two or more different monomer types, arranged in patterns like alternating (A-B-A-B), block (A-A-A-B-B-B), or random (A-B-B-A-B-A). Copolymers allow tailored properties, e.g., styrene-butadiene rubber for tires. | 共聚物：包含兩種或多種不同單體類型的聚合物，排列方式包括交替（A-B-A-B）、嵌段（A-A-A-B-B-B）或隨機（A-B-B-A-B-A）。共聚物可定制性能，例如用於輪胎的苯乙烯-丁二烯橡膠。
+Molecular Weight: A polymer’s molecular weight, measured in Daltons (Da), reflects the chain length and number of monomers. High molecular weights (25,000–200,000 Da or more) lead to unique properties like elasticity, strength, or viscosity. For example, ultra-high-molecular-weight polyethylene (UHMWPE) is used in joint implants due to its durability. | 分子量：聚合物的分子量以道爾頓（Da）為單位，反映鏈長和單體數量。高分子量（25,000–200,000 Da或更高）帶來獨特的性能，如彈性、強度或黏度。例如，超高分子量聚乙烯（UHMWPE）因其耐用性而用於關節植入物。
+
+Key Insight  | 關鍵見解 :The diversity of monomers and bonding arrangements allows polymers to have a vast range of properties, making them critical in industries from packaging to biomedical engineering. | 單體和鍵結方式的多樣性使聚合物具有廣泛的性能，使其在從包裝到生物醫學工程的各行業中至關重要。
+Polymer Classes and Biomedical Applications | 聚合物類別與生物醫學應用
+
+
+Polymer Type 聚合物類型
+Bonding &amp; Structure 鍵結與結構
+Polymerization Type 聚合類型
+Examples 示例
+Biomedical Applications 生物醫學應用
+
+
+
+Polyesters
+Covalent bonds forming ester linkages (-COO-) between diacid and diol monomers.
+Condensation polymerization (eliminates water&#x2F;methanol).
+PLA, PCL, PLGA
+Biodegradable sutures, drug delivery systems, tissue engineering scaffolds.
+
+
+聚酯
+二酸和二醇單體之間形成酯鍵（-COO-）的共價鍵。
+縮合聚合（消除水&#x2F;甲醇）。
+PLA、PCL、PLGA
+可生物降解縫線、藥物傳遞系統、組織工程支架。
+
+
+Polycarbonates
+Covalent bonds forming carbonate linkages (-O-(C&#x3D;O)-O-) between diols and carbonates.
+Condensation polymerization.
+Aliphatic polycarbonates
+Resorbable implants, bone fixation devices, controlled drug release.
+
+
+聚碳酸酯
+二醇和碳酸酯之間形成碳酸酯鍵（-O-(C&#x3D;O)-O-）的共價鍵。
+縮合聚合。
+脂肪族聚碳酸酯
+可吸收植入物、骨固定裝置、控制藥物釋放。
+
+
+Polyamides
+Covalent bonds forming amide linkages (-CONH-) between diamines and diacids.
+Condensation polymerization.
+Nylon, synthetic peptides
+Surgical sutures, orthopedic implants, tissue scaffolds.
+
+
+聚醯胺
+二胺和二酸之間形成醯胺鍵（-CONH-）的共價鍵。
+縮合聚合。
+尼龍、合成肽
+外科縫線、骨科植入物、組織支架。
+
+
+Polyurethanes
+Covalent bonds forming urethane linkages (-NH-CO-O-) from isocyanates + polyols.
+Addition polymerization (step-growth).
+Medical-grade PU
+Pacemaker leads, artificial hearts, catheters, wound dressings.
+
+
+聚氨酯
+異氰酸酯與多元醇形成氨酯鍵（-NH-CO-O-）的共價鍵。
+加成聚合（逐步增長）。
+醫療級PU
+心臟起搏器導線、人造心臟、導管、傷口敷料。
+
+
+
+💧 2. Equilibrium Swelling Theory | 平衡膨脹理論Expanded Explanation  | 詳細說明 :Equilibrium swelling theory explains how hydrogels (polymeric networks that absorb water) reach a balance between swelling and contraction. The Flory–Huggins theory is a cornerstone for understanding this behavior, modeling the thermodynamics of polymer solutions and gels. The swelling process is governed by two opposing forces: | 平衡膨脹理論解釋了水凝膠（吸收水的聚合物網絡）如何在膨脹和收縮之間達到平衡。Flory–Huggins理論是理解此行為的基石，模擬聚合物溶液和凝膠的熱力學。膨脹過程受兩個相反力的控制：
+
+Thermodynamic Mixing Force: This arises from the favorable entropy of mixing water with the polymer network. Water molecules penetrate the network, causing it to expand. The interaction parameter (χ) in Flory–Huggins theory quantifies polymer-solvent compatibility—lower χ values indicate better compatibility, promoting swelling. | 熱力學混合力：這源於水與聚合物網絡混合的有利熵。水分子滲入網絡，導致其膨脹。Flory–Huggins理論中的交互參數（χ）量化了聚合物-溶劑的相容性，較低的χ值表示更好的相容性，促進膨脹。
+Elastic Retractive Force: Crosslinked polymer chains resist stretching as the network swells. This elastic force, derived from the entropy of chain conformations, opposes swelling. The extent of crosslinking (how tightly the chains are connected) heavily influences this force. | 彈性回縮力：交聯的聚合物鏈在網絡膨脹時抵抗拉伸。這種彈性力源於鏈構象的熵，反對膨脹。交聯程度（鏈條連接的緊密程度）對此力有很大影響。
+
+Equilibrium State  | 平衡狀態 :Swelling stops when the chemical potential of water inside the gel equals that outside, balancing the mixing and elastic forces. Mathematically, this is described by the Flory–Rehner equation for crosslinked gels, which extends Flory–Huggins theory to account for elasticity. | 當凝膠內水的化學勢與外部相等時，膨脹停止，混合力和彈性力達到平衡。數學上，這由交聯凝膠的Flory–Rehner方程描述，該方程擴展了Flory–Huggins理論以考慮彈性。
+Example  | 示例 :A hydrogel used in contact lenses swells to a specific volume based on its polymer composition (e.g., poly(HEMA)) and crosslinking density, ensuring comfort and oxygen permeability. | 用於隱形眼鏡的水凝膠根據其聚合物組成（例如，聚(HEMA)）和交聯密度膨脹到特定體積，確保舒適性和氧氣滲透性。
+Key Insight  | 關鍵見解 :The balance of these forces allows hydrogels to be engineered for specific swelling behaviors, critical for applications like drug delivery or tissue scaffolds. | 這些力的平衡使水凝膠能夠被設計為特定的膨脹行為，這對藥物傳遞或組織支架等應用至關重要。
+
+📈 3. Calculation of Swelling Ratio | 膨脹比率的計算Expanded Explanation  | 詳細說明 :The swelling ratio (Q) quantifies how much a hydrogel expands when it absorbs a solvent (typically water). It’s defined as | *膨脹比率（Q）*量化了水凝膠在吸收溶劑（通常是水）時的膨脹程度。其定義為：  
+Q=VswollenVdry Q = \frac{V_{\text{swollen}}}{V_{\text{dry}}} Q=Vdry​Vswollen​​hhex
+or, in terms of weight:  或以重量計：
+Qmass=Wswollen−WdryWdry Q_{\text{mass}} = \frac{W_{\text{swollen}} - W_{\text{dry}}}{W_{\text{dry}}} Qmass​=Wdry​Wswollen​−Wdry​​  
+
+Where | 其中: 
+
+Volume of the swollen hydrogel| 膨脹水凝膠的體積: Vswollen V_{\text{swollen}} Vswollen​   
+Volume of the dry hydrogel| 乾燥水凝膠的體積: Vdry V_{\text{dry}} Vdry​  
+Weight of the swollen hydrogel| 膨脹水凝膠的重量: Wswollen W_{\text{swollen}} Wswollen​  
+Weight of the dry hydrogel| 乾燥水凝膠的重量: Wdry W_{\text{dry}} Wdry​
+
+Factors Influencing Swelling Ratio  | 影響膨脹比率的因素 :  
+
+Polymer Network Structure: Hydrophilic polymers (e.g., poly(acrylic acid)) absorb more water than hydrophobic ones. | 聚合物網絡結構：親水性聚合物（例如，聚(丙烯酸)）比疏水性聚合物吸收更多水。  
+Crosslinking Density: Higher crosslinking (more connections between chains) reduces swelling by restricting chain mobility. For example, a tightly crosslinked hydrogel has a lower Q than a loosely crosslinked one. | 交聯密度：較高的交聯（鏈之間的連接更多）通過限制鏈的移動性來減少膨脹。例如，緊密交聯的水凝膠比鬆散交聯的水凝膠具有較低的Q值。  
+Environmental Conditions: | 環境條件：  
+pH: Ionic hydrogels (e.g., those with carboxyl groups) swell more at higher pH due to ionization, which increases electrostatic repulsion. | pH值：離子型水凝膠（例如，含羧基的水凝膠）在較高pH值下因電離而膨脹更多，增加靜電排斥力。  
+Temperature: Thermo-responsive hydrogels like PNIPAM shrink above their LCST, reducing Q. | 溫度：熱響應水凝膠（如PNIPAM）在其LCST以上收縮，降低Q值。  
+Ionic Strength: High salt concentrations can shield ionic groups, reducing swelling in polyelectrolyte gels. | 離子強度：高鹽濃度可屏蔽離子基團，減少聚電解質凝膠的膨脹。
+
+
+
+Example Calculation  | 示例計算 :If a dry hydrogel weighs 1 g and swells to 5 g after absorbing water, the mass-based swelling ratio is | 如果乾燥水凝膠重1克，吸收水後膨脹至5克，則基於質量的膨脹比率為：   
+Qmass=5−11=4 Q_{\text{mass}} = \frac{5 - 1}{1} = 4 Qmass​=15−1​=4  
+This means the hydrogel absorbed 4 times its dry weight in water | 這意味著水凝膠吸收了其乾燥重量的4倍水。 
+Key Insight  | 關鍵見解 :Swelling ratio is a critical parameter for designing hydrogels for specific applications, such as drug release rates or mechanical support in tissue engineering. | 膨脹比率是設計水凝膠用於特定應用（如藥物釋放速率或組織工程中的機械支持）的關鍵參數。
+
+🕸️ 4. Mesh Size | 網孔大小Expanded Explanation  | 詳細說明 :Mesh size (ξ) is the average distance between crosslinks in a hydrogel’s polymer network, typically on the nanometer scale (1–100 nm). It’s a critical parameter that governs the hydrogel’s physical and functional properties. | 網孔大小（ξ）是水凝膠聚合物網絡中交聯點之間的平均距離，通常在奈米級（1–100奈米）。這是控制水凝膠物理和功能特性的關鍵參數。
+Factors Affecting Mesh Size  | 影響網孔大小的因素 :  
+
+Crosslinking Density: Higher crosslinking results in a smaller mesh size, creating a denser network. | 交聯密度：較高的交聯導致較小的網孔大小，形成更密集的網絡。  
+Polymer Chain Length: Longer chains between crosslinks increase mesh size. | 聚合物鏈長度：交聯點之間的較長鏈會增加網孔大小。  
+Swelling State: As the hydrogel swells, the mesh size increases due to chain stretching. | 膨脹狀態：隨著水凝膠膨脹，網孔大小因鏈條拉伸而增加。
+
+Impact of Mesh Size  | 網孔大小的影響 :  
+
+Diffusion: Smaller mesh sizes restrict the diffusion of larger molecules (e.g., proteins or drugs), while larger mesh sizes allow faster diffusion. For example, insulin (≈6 kDa) diffuses more slowly through a tightly crosslinked gel. | 擴散：較小的網孔大小限制較大分子（如蛋白質或藥物）的擴散，而較大的網孔大小允許更快擴散。例如，胰島素（≈6 kDa）在緊密交聯的凝膠中擴散較慢。  
+Mechanical Strength: Smaller mesh sizes correlate with higher mechanical strength due to a denser network but may reduce flexibility. | 機械強度：較小的網孔大小與較高的機械強度相關，因網絡更密集，但可能降低柔韌性。  
+Swelling Behavior: Larger mesh sizes allow more water absorption, increasing the swelling ratio. | 膨脹行為：較大的網孔大小允許更多水吸收，增加膨脹比率。
+
+Mathematical Estimation  | 數學估算 :Mesh size can be estimated using the Flory–Rehner theory or Peppas-Merrill model, which relate ξ to crosslinking density and swelling. A simplified expression is |  網孔大小可使用Flory–Rehner理論或Peppas-Merrill模型估算，這些模型將ξ與交聯密度和膨脹相關聯。簡化表達式為：  
+ξ∝(Q1/3Nx)1/2 \xi \propto \left( \frac{Q^{1/3}}{N_x} \right)^{1/2} ξ∝(Nx​Q1/3​)1/2  
+Where | 其中:number of crosslinks per unit volume | 單位體積中的交聯數 : Nx N_x Nx​swelling ratio | 膨脹比率 : Q Q Q  
+Example  | 示例 :In alginate hydrogels for cell encapsulation, a larger mesh size allows nutrient diffusion but may compromise mechanical stability. | 在用於細胞包封的藻酸鹽水凝膠中，較大的網孔大小允許營養擴散，但可能影響機械穩定性。
+Key Insight  | 關鍵見解 :Mesh size is a tunable parameter that balances diffusion, mechanical properties, and swelling, making it critical for hydrogel design. | 網孔大小是一個可調參數，平衡擴散、機械性能和膨脹，使其對水凝膠設計至關重要。
+
+⚗️ 5. Chemical vs. Physical Hydrogels | 化學與物理水凝膠Expanded Explanation  | 詳細說明 :Hydrogels are classified based on the type of crosslinking that holds their polymer networks together. The differences between chemical and physical hydrogels impact their properties and applications. | 水凝膠根據維持其聚合物網絡的交聯類型進行分類。化學和物理水凝膠之間的差異影響其性能和應用。
+
+
+
+**Property **
+**Chemical Hydrogels **
+**Physical Hydrogels **
+**性質 **
+**化學水凝膠 **
+**物理水凝膠 **
+
+
+
+Crosslinking
+Covalent bonds (e.g., via photo-crosslinking, Michael addition).
+Non-covalent interactions (e.g., ionic bonds, hydrogen bonds, hydrophobic interactions).
+交聯
+共價鍵（例如，通過光交聯、Michael加成）。
+非共價相互作用（例如，離子鍵、氫鍵、疏水相互作用）。
+
+
+Swelling Ratio
+Lower due to tighter, permanent networks.
+Higher due to looser, reversible networks.
+膨脹比率
+因較緊密、永久的網絡而較低。
+因較鬆散、可逆的網絡而較高。
+
+
+Mesh Size
+Smaller, as covalent bonds create a rigid structure.
+Larger, as non-covalent bonds allow more flexibility.
+網孔大小
+較小，因共價鍵形成剛性結構。
+較大，因非共價鍵允許更多靈活性。
+
+
+Strength
+Higher mechanical strength, less deformable.
+Lower strength, often reversible or self-healing.
+強度
+較高的機械強度，較不易變形。
+較低的強度，通常可逆或自癒合。
+
+
+Reversibility
+Irreversible (permanent unless degraded).
+Reversible (can dissociate under stimuli like heat or pH).
+可逆性
+不可逆（除非降解，否則永久）。
+可逆（可在熱或pH等刺激下解離）。
+
+
+Examples
+PEGDA (polyethylene glycol diacrylate), GelMA.
+Alginate (ionic), PNIPAM (hydrogen bonding).
+示例
+PEGDA（聚乙二醇二丙烯酸酯）、GelMA。
+藻酸鹽（離子）、PNIPAM（氫鍵）。
+
+
+Chemical Hydrogels  | 化學水凝膠 :  
+
+Formed by strong, covalent bonds, often via polymerization reactions (e.g., UV-induced crosslinking). | 通過強共價鍵形成，通常通過聚合反應（例如，紫外線誘導交聯）。  
+Stable under a wide range of conditions, making them suitable for permanent implants or drug delivery systems. | 在廣泛條件下穩定，適用於永久植入物或藥物傳遞系統。  
+Example: PEGDA hydrogels are used in tissue engineering due to their robust structure. | 示例：PEGDA水凝膠因其堅固結構而用於組織工程。
+
+Physical Hydrogels  | 物理水凝膠 :  
+
+Formed by weaker, non-covalent interactions, allowing responsiveness to stimuli (e.g., temperature, pH). | 通過較弱的非共價相互作用形成，允許對刺激（如溫度、pH）的響應。  
+Often reversible, enabling self-healing or injectability. For example, alginate gels form via ionic crosslinking with calcium ions and can dissolve in the presence of chelators. | 通常可逆，支持自癒合或可注射性。例如，藻酸鹽凝膠通過與鈣離子的離子交聯形成，並可在螯合劑存在下溶解。  
+Example: PNIPAM hydrogels collapse above their LCST, useful for temperature-triggered drug release. | 示例：PNIPAM水凝膠在其LCST以上收縮，適用於溫度觸發的藥物釋放。
+
+Key Insight  | 關鍵見解 :The choice between chemical and physical hydrogels depends on the application—chemical for stability, physical for responsiveness and reversibility. | 化學與物理水凝膠的選擇取決於應用—化學水凝膠用於穩定性，物理水凝膠用於響應性和可逆性。
+
+🌡️ 6. Lower Critical Solution Temperature (LCST) | 低臨界溶液溫度 (LCST)Expanded Explanation  | 詳細說明 :The Lower Critical Solution Temperature (LCST) is a critical temperature at which a polymer solution undergoes a phase transition from soluble (miscible with water) to insoluble (phase-separated). Below the LCST, the polymer chains are hydrated and extended; above the LCST, hydrophobic interactions dominate, causing chain collapse and gelation or precipitation. | 低臨界溶液溫度 (LCST) 是聚合物溶液從可溶（與水混溶）轉變為不溶（相分離）的臨界溫度。在LCST以下，聚合物鏈被水合並伸展；在LCST以上，疏水相互作用主導，導致鏈收縮和凝膠化或沉澱。
+Mechanism  | 機制 :  
+
+LCST behavior arises from a balance between hydrophilic (e.g., hydrogen bonding) and hydrophobic interactions. | LCST行為源於親水性（例如，氫鍵）和疏水性相互作用的平衡。  
+At low temperatures, hydrogen bonds between polymer and water dominate, keeping the polymer soluble. | 在低溫下，聚合物與水之間的氫鍵主導，使聚合物保持可溶。  
+Above the LCST, entropy-driven hydrophobic interactions cause the polymer to aggregate, expelling water. | 在LCST以上，熵驅動的疏水相互作用導致聚合物聚集成團，排出水。
+
+Example  | 示例 :Poly(N-isopropylacrylamide) (PNIPAM) has an LCST around 32°C, close to body temperature, making it ideal for biomedical applications. Below 32°C, PNIPAM hydrogels are swollen and transparent; above 32°C, they collapse and become opaque, releasing entrapped water or drugs. | 聚(N-異丙基丙烯醯胺) (PNIPAM) 的LCST約為32°C，接近人體溫度，適合生物醫學應用。在32°C以下，PNIPAM水凝膠膨脹且透明；在32°C以上，它們收縮並變得不透明，釋放被困的水或藥物。
+Applications  | 應用 :  
+
+Cell Sheet Engineering: PNIPAM-coated surfaces allow cells to grow at 37°C (above LCST) and detach as intact sheets when cooled below 32°C. | 細胞片工程：PNIPAM塗層表面允許細胞在37°C（高於LCST）生長，並在冷卻至32°C以下時以完整片狀脫離。  
+Drug Delivery: LCST-based hydrogels release drugs in response to temperature changes, e.g., at inflammation sites with elevated temperatures. | 藥物傳遞：基於LCST的水凝膠根據溫度變化釋放藥物，例如在溫度升高的炎症部位。
+
+Key Insight  | 關鍵見解 :LCST enables the design of “smart” hydrogels that respond to temperature changes, offering precise control in biomedical and environmental applications. | LCST使“智能”水凝膠的設計成為可能，這些水凝膠可響應溫度變化，在生物醫學和環境應用中提供精確控制。
+
+✅ 7. Advantages of Hydrogels for Biomedical Applications | 水凝膠在生物醫學應用中的優勢Expanded Explanation  | 詳細說明 :Hydrogels are highly valued in biomedical applications due to their unique properties, which mimic biological tissues and enable tailored functionalities: | 水凝膠因其獨特性能而在生物醫學應用中備受重視，這些性能模擬生物組織並實現定制功能：
+
+High Water Content: Hydrogels can contain 70–99% water, resembling the extracellular matrix (ECM) of tissues. This biomimetic property enhances biocompatibility and reduces immune responses. | 高含水量：水凝膠可含有70–99%的水，類似於組織的細胞外基質（ECM）。這種仿生特性增強了生物相容性並減少免疫反應。  
+Tunable Properties: Mechanical properties (e.g., stiffness) and chemical properties (e.g., degradation rate) can be adjusted by varying polymer composition, crosslinking density, or functional groups. | 可調性能：機械性能（如剛度）和化學性能（如降解速率）可通過改變聚合物組成、交聯密度或功能基團來調整。  
+Biocompatibility and Biodegradability: Many hydrogels (e.g., gelatin, hyaluronic acid) are biocompatible and can be designed to degrade naturally in the body, avoiding surgical removal. | 生物相容性和可生物降解性：許多水凝膠（如明膠、透明質酸）具有生物相容性，並可設計為在體內自然降解，避免手術移除。  
+Stimuli-Responsiveness: Hydrogels can respond to external stimuli like pH, temperature, or enzymes, enabling applications like on-demand drug release. For example, pH-sensitive hydrogels swell in acidic tumor microenvironments to release drugs. | 刺激響應性：水凝膠可響應外部刺激，如pH值、溫度或酶，實現按需藥物釋放等應用。例如，pH敏感水凝膠在酸性腫瘤微環境中膨脹以釋放藥物。  
+Injectability and In Situ Formation: Some hydrogels (e.g., photo-crosslinkable GelMA) can be injected as liquids and crosslinked in situ, conforming to complex tissue shapes. | 可注射性和原位形成：一些水凝膠（如光交聯GelMA）可作為液體注射並在原位交聯，適應複雜的組織形狀。
+
+Example  | 示例 :Alginate hydrogels are used for wound dressings due to their high water content and ability to maintain a moist healing environment. | 藻酸鹽水凝膠因其高含水量和維持濕潤癒合環境的能力而用於傷口敷料。
+Key Insight  | 關鍵見解 :The versatility of hydrogels makes them a cornerstone of modern biomedical engineering, from drug delivery to regenerative medicine. | 水凝膠的多功能性使其成為現代生物醫學工程的基石，從藥物傳遞到再生醫學。
+
+🧪 8. Representative Bioapplications of Hydrogels | 水凝膠的代表性生物應用Expanded Explanation  | 詳細說明 :Hydrogels are used in a wide range of biomedical applications due to their tunable properties and biocompatibility: | 水凝膠因其可調性能和生物相容性而在廣泛的生物醫學應用中使用：
+
+Drug Delivery Systems: Hydrogels can encapsulate drugs and release them in a controlled manner, either passively (via diffusion) or actively (via stimuli like pH or temperature). | 藥物傳遞系統：水凝膠可包封藥物並以受控方式釋放，通過被動擴散或主動響應（如pH或溫度）。  
+Example: PNIPAM hydrogels release drugs above their LCST in response to body temperature. | 示例：PNIPAM水凝膠在其LCST以上響應體溫釋放藥物。
+
+
+Tissue Engineering Scaffolds: Hydrogels provide a 3D environment for cell growth, mimicking the ECM. They support cell adhesion, proliferation, and differentiation. | 組織工程支架：水凝膠提供細胞生長的3D環境，模擬ECM，支持細胞粘附、增殖和分化。  
+Example: GelMA (gelatin methacryloyl) scaffolds are used for cartilage or bone regeneration due to their biocompatibility and tunable stiffness. | 示例：GelMA（明膠甲基丙烯酸酯）支架因其生物相容性和可調剛度而用於軟骨或骨再生。
+
+
+Wound Dressings and Barrier Coatings: Hydrogels maintain a moist environment, promote healing, and can deliver antimicrobial agents. | 傷口敷料和屏障塗層：水凝膠維持濕潤環境，促進癒合，並可傳遞抗菌劑。  
+Example: Alginate-based dressings absorb wound exudate and form a protective gel layer. | 示例：基於藻酸鹽的敷料吸收傷口滲出液並形成保護性凝膠層。
+
+
+Cell Encapsulation and Immunoisolation: Hydrogels encapsulate cells to protect them from the immune system while allowing nutrient and waste exchange. | 細胞包封和免疫隔離：水凝膠包封細胞以保護其免受免疫系統攻擊，同時允許營養和廢物交換。  
+Example: Alginate microcapsules are used to encapsulate pancreatic islet cells for diabetes treatment, protecting them from immune attack while releasing insulin. | 示例：藻酸鹽微膠囊用於包封胰島細胞以治療糖尿病，保護細胞免受免疫攻擊同時釋放胰島素。
+
+
+
+Key Insight  | 關鍵見解 :Hydrogels’ ability to mimic biological environments and respond to physiological cues makes them indispensable in advanced therapeutics and tissue repair. | 水凝膠模擬生物環境並響應生理信號的能力使其在先進治療和組織修復中不可或缺。
+
+🔄 9. Degradation of Hydrogels | 水凝膠的降解Expanded Explanation  | 詳細說明 :Hydrogel degradation is critical for applications where temporary function is desired, such as drug delivery or tissue scaffolds. Degradation occurs through several mechanisms: | 水凝膠降解對於需要臨時功能的應用（如藥物傳遞或組織支架）至關重要。降解通過以下幾種機制發生：
+
+Backbone Cleavage: The polymer backbone breaks down via hydrolysis, enzymatic cleavage, or oxidative degradation. For example, poly(lactic acid) (PLA) degrades via hydrolysis into lactic acid. | 主鏈斷裂：聚合物主鏈通過水解、酶切或氧化降解斷裂。例如，聚乳酸（PLA）通過水解降解為乳酸。  
+Crosslinker Breakdown: Crosslinks (covalent or non-covalent) can be designed to degrade under specific conditions, such as pH or enzymes. For example, peptide-based crosslinks are cleaved by matrix metalloproteinases (MMPs). | 交聯劑分解：交聯（共價或非共價）可設計為在特定條件下（如pH或酶）降解。例如，基於肽的交聯被基質金屬蛋白酶（MMPs）切斷。  
+Pendant Group Hydrolysis: Functional groups attached to the polymer chain may hydrolyze, altering the hydrogel’s properties. For example, ester-linked pendant groups in PEG-based hydrogels degrade in water. | 側基水解：連接到聚合物鏈的功能基團可能水解，改變水凝膠的性能。例如，PEG基水凝膠中的酯鍵側基在水中降解。
+
+Types of Degradation  | 降解類型 :  
+
+Preprogrammed: Degradation is controlled by the hydrogel’s chemical composition (e.g., hydrolytically labile bonds). | 預程式：降解由水凝膠的化學組成控制（例如，水解不穩定鍵）。  
+Cell-Dictated: Cells secrete enzymes (e.g., collagenases) that degrade the hydrogel, useful in tissue engineering. | 細胞主導：細胞分泌酶（如膠原酶）降解水凝膠，適用於組織工程。  
+Externally Triggered: Stimuli like pH, temperature, or light trigger degradation. For example, pH-sensitive hydrogels degrade in acidic tumor microenvironments. | 外部觸發：pH、溫度或光等刺激觸發降解。例如，pH敏感水凝膠在酸性腫瘤微環境中降解。
+
+Example  | 示例 :Poly(lactic-co-glycolic acid) (PLGA) hydrogels degrade over weeks to months, releasing encapsulated drugs and eventually clearing from the body. | 聚(乳酸-共-乙醇酸)（PLGA）水凝膠在數週至數月內降解，釋放包封的藥物並最終從體內清除。
+Key Insight  | 關鍵見解 :Controlled degradation allows hydrogels to serve temporary roles, such as delivering drugs or supporting tissue regeneration, before safely breaking down. | 控制降解使水凝膠能夠在藥物傳遞或組織再生等臨時角色中發揮作用，然後安全分解。
+
+# Practice Questions | 練習題❓Test Questions on Polymers and Hydrogels | 聚合物與水凝膠測驗問題Q1. What does a polymer like Polycaprolactone behave under Tg (−60 °C) and above Tm (60 °C)? | 聚己內酯等聚合物在Tg (−60°C)以下和Tm (60°C)以上的行為如何？a. Glass; gel | 玻璃態；凝膠b. Rubber; rubber | 橡膠態；橡膠態c. Glass; rubber | 玻璃態；橡膠態d. Glass; liquid | 玻璃態；液態  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. Glass; liquid | 玻璃態；液態Explanation  | 解析 :Below Tg, the polymer is in a glassy, rigid state. Above Tm, crystalline regions melt, and the polymer becomes a viscous liquid. | 在玻璃轉化溫度以下，聚合物呈現玻璃態，剛性強。在熔點以上，晶體區域熔化，聚合物變為粘性液體。  
+
+    
+  
+
+Q2. Why was PVC phased out from water bottles and hospital usage? | 為何PVC從水瓶和醫院使用中被逐步淘汰？a. High price | 價格高b. Insufficient performance | 性能不足c. Cannot degrade after disposal | 丟棄後無法降解d. Toxic plasticizers (e.g., BPA, phthalates) | 有毒增塑劑（例如，BPA、鄰苯二甲酸酯）  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. Toxic plasticizers | 有毒增塑劑Explanation  | 解析 :PVC requires plasticizers like phthalates, which are toxic and can leach into fluids, raising health concerns. | PVC需添加鄰苯二甲酸酯等增塑劑來變柔軟，這些物質具有毒性，可能滲入液體中，對健康有害。  
+
+    
+  
+
+Q3. What forces contribute to hydrogel formation in PNIPAM above LCST? | PNIPAM在LCST以上形成水凝膠的力是什麼？a. Ionic bond | 離子鍵b. Metallic bond | 金屬鍵c. Covalent bond | 共價鍵d. Van der Waals force | 范德華力  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. Van der Waals force | 范德華力Explanation  | 解析 :PNIPAM forms physical hydrogels via hydrophobic interactions and Van der Waals forces above LCST. | PNIPAM在超過LCST時，因疏水作用與范德華力形成物理水凝膠，非共價鍵。  
+
+    
+  
+
+Q4. Why are hydrogels used in tissue engineering? | 為何水凝膠用於組織工程？a. Biocompatibility | 生物相容性b. Biodegradability | 可生物降解性c. Ease of chemical modification | 易於化學修飾d. Soft-tissue-like structure&#x2F;properties | 類似軟組織的結構&#x2F;性能  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: All of the above (a, b, c, d) | 以上皆是（a、b、c、d）Explanation  | 解析 :Hydrogels mimic the extracellular matrix, are biocompatible, biodegradable, and tunable. | 水凝膠模仿細胞外基質，具備良好生物相容性、可降解性，且易於化學修飾，適合軟組織應用。  
+
+    
+  
+
+Q5. What is the ideal mesh size for hydrogels used in cell encapsulation (cell size ~10 μm)? | 用於細胞包封的水凝膠理想網孔大小（細胞大小約10微米）是多少？a. &gt;10 μm | &gt;10微米b. &lt;10 μm | &lt;10微米c. &lt;10 μm and &gt;0.01 nm | &lt;10微米且&gt;0.01奈米d. None of the above | 以上皆非  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: c. &lt;10 μm and &gt;0.01 nm | &lt;10微米且&gt;0.01奈米Explanation  | 解析 :Mesh size must be smaller than cells to retain them, but large enough for nutrient diffusion. | 網孔大小需小於細胞以包覆，但又要足夠大以利養分與廢物擴散。  
+
+    
+  
+
+Q6. What are potential ways to change mesh size of hydrogels? | 改變水凝膠網孔大小的可能方法是什麼？a. Density of linkers between polymer chains | 聚合物鏈之間連結密度b. Concentration of polymers | 聚合物濃度c. pH of the swelling media | 膨脹介質的pH值d. All of the above | 以上皆是  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the above | 以上皆是Explanation  | 解析 :All listed factors influence crosslinking density and swelling, thus affecting mesh size. | 所有列出的因素都會影響交聯密度和膨脹，從而影響網孔大小。  
+
+    
+  
+
+Q7. Why did nanoparticles affect the glass transition temperature (Tg) of PMMA differently in two studies? | 為何奈米粒子在兩項研究中對PMMA的玻璃轉化溫度（Tg）影響不同？Ash et al. (2004): Alumina nanoparticles ↓ Tg | Ash等人（2004）：氧化鋁奈米粒子降低TgAgrawal et al. (2011): ZnS nanoparticles ↑ Tg | Agrawal等人（2011）：ZnS奈米粒子提高Tg  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:The effect of nanoparticles on Tg depends on how they interact with the polymer chains:Alumina nanoparticles may disrupt chain packing, increasing free volume and lowering Tg.ZnS nanoparticles may restrict chain mobility due to stronger interfacial interactions, raising Tg. |奈米粒子對Tg的影響取決於其與聚合物鏈的相互作用：氧化鋁奈米粒子可能破壞鏈的排列，增加自由體積，導致Tg下降。ZnS奈米粒子可能限制鏈的運動性，使Tg上升。  
+Explanation  | 解析 :The effect of nanoparticles on Tg depends on their interaction with the polymer matrix. Alumina nanoparticles may act as spacers, reducing chain interactions and increasing free volume, thus lowering Tg. Conversely, ZnS nanoparticles may form strong interfacial bonds, restricting chain mobility and increasing Tg. | 奈米粒子對Tg的影響取決於其與聚合物基質的相互作用。氧化鋁奈米粒子可能作為間隔物，減少鏈間相互作用並增加自由體積，從而降低Tg。相反，ZnS奈米粒子可能形成強界面鍵，限制鏈的移動性，從而提高Tg。  
+
+    
+  
+
+Q8. Propose a synthesis method and list 3 unique properties of PCL (Polycaprolactone). | 提出PCL（聚己內酯）的合成方法並列出三個獨特性能。  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:Synthesis: Ring-opening polymerization of ε-caprolactone using a catalyst like stannous octoate.Three unique properties of PCL:  
+
+Biodegradable – slowly degrades in physiological conditions.  
+Thermoplastic – easy to process and mold.  
+Good mechanical strength – suitable for load-bearing applications like bone scaffolds. |合成方法：使用辛酸亞錫等催化劑進行ε-己內酯的開環聚合。PCL的三個獨特性能：  
+可生物降解 – 在生理條件下緩慢降解。  
+熱塑性 – 易於加工和成型。  
+良好機械強度 – 適用於骨支架等承重應用。
+
+Explanation  | 解析 :Ring-opening polymerization is a common method for synthesizing PCL, allowing precise control over molecular weight. Its biodegradability, thermoplasticity, and mechanical strength make it ideal for biomedical applications like scaffolds and sutures. | 開環聚合是合成PCL的常用方法，可精確控制分子量。其可生物降解性、熱塑性和機械強度使其成為生物醫學應用的理想選擇，如支架和縫線。  
+
+    
+  
+
+Q9. Label the stress-strain curve of a 3D-printed PCL scaffold. | 標記3D列印PCL支架的應力-應變曲線。  
+Identify:  
+
+Elastic region  
+Yield stress  
+Plastic region  
+Ultimate tensile strength  
+Fracture point識別：  
+彈性區  
+屈服應力  
+塑性區  
+極限抗拉強度  
+斷裂點
+
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:  
+
+Elastic region: Initial linear portion of the curve (reversible deformation).  
+Yield stress: Point where plastic (permanent) deformation begins.  
+Plastic region: Nonlinear region after yield, material stretches without much increase in stress.  
+Ultimate tensile strength (UTS): Maximum stress the material can withstand.  
+Fracture point: Where the material breaks. |  
+彈性區：曲線初期線性部分（可逆變形）。  
+屈服應力：開始產生永久變形的點。  
+塑性區：屈服後的非線性區域，材料延展但應力變化不大。  
+極限抗拉強度（UTS）：材料可承受的最大應力。  
+斷裂點：材料最終破裂的位置。
+
+Explanation  | 解析 :The stress-strain curve of a 3D-printed PCL scaffold shows its mechanical behavior under tensile load. The elastic region indicates reversible deformation, followed by yielding where permanent deformation starts. The plastic region shows ductility, and the UTS marks the peak strength before fracture. | 3D列印PCL支架的應力-應變曲線顯示其在拉伸負載下的機械行為。彈性區表示可逆變形，隨後是屈服點，開始永久變形。塑性區顯示延展性，極限抗拉強度標示峰值強度，隨後斷裂。  
+
+    
+  
+
+Q10. What are the degradation mechanisms of GelMA hydrogel? | GelMA水凝膠的降解機制是什麼？  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:GelMA (gelatin methacrylate) degrades via:  
+
+Enzymatic degradation: Enzymes like collagenase cleave peptide bonds.  
+Hydrolysis: Water breaks down ester or amide bonds in the polymer network. |GelMA（明膠甲基丙烯酸酯）通過以下方式降解：  
+酶解作用：如膠原酶切斷肽鍵。  
+水解反應：水分子分解聚合物網絡中的酯鍵或醯胺鍵。
+
+Explanation  | 解析 :GelMA’s gelatin backbone is susceptible to enzymatic cleavage by collagenases, while its methacryloyl groups introduce hydrolyzable ester bonds, enabling degradation in physiological environments. | GelMA的明膠主鏈易受膠原酶的酶解作用，而其甲基丙烯醯基團引入可水解的酯鍵，使其在生理環境中降解。  
+
+    
+  
+
+Q11. What is the Simon IVC filter made of? | Simon下腔靜脈濾器由什麼材料製成？  
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:The Simon IVC filter is made of a shape memory metal, typically nitinol (nickel-titanium alloy). |Simon下腔靜脈濾器由形狀記憶金屬製成，通常為鎳鈦合金。Explanation  | 解析 :Nitinol provides flexibility, biocompatibility, and self-expanding properties, making it ideal for vascular implants like IVC filters. | 鎳鈦合金具有柔韌性、生物相容性和自擴展性，適合血管植入物，如下腔靜脈濾器。  
+
+    
+  
+
 
 ]]></content>
       <categories>
@@ -1514,7 +2653,7 @@ Calculation: Stress-strain calculated similarly to tensile tests, but values are
   <entry>
     <title>Biomaterials-4 | 生物材料-4</title>
     <url>/posts/170228b7.html</url>
-    <content><![CDATA[Lecture Outline | 課程大綱
+    <content><![CDATA[Lecture 4: Ceramics and Metals | 陶瓷與金屬Back to Outline | 回到大綱Lecture Outline | 課程大綱
 Outline | 講義提要
 Advantages of ceramics and metals for medical implants | 醫用植入物中陶瓷和金屬的優勢
 Composition of Bone | 骨的組成
@@ -1531,8 +2670,8 @@ Corrosion of metallic implants and solutions | 金屬植入物的腐蝕及解決
 
 
 Ceramic and Metal Biomaterials: Types, Manufacturing, and Applications | 陶瓷與金屬生物材料：類型、製造與應用Ceramic | 陶瓷Ceramic Types &amp; Manufacturing | 陶瓷類型與製造
-Traditional Ceramics: Porcelain, Stoneware, Earthenware; each uses unique chemical compositions and raw materials. The Hong Kong/Canton region is known for specialized techniques.傳統陶瓷： 瓷器、炻器、陶器；各自採用獨特的化學成分和原材料。港粵地區以專門工藝著稱。
-Manufacturing Process: Clay (powder + water) is shaped, dried (shrinks and reorganizes), then fired/sintered to bond particles.製造過程： 粘土（粉末+水）成型、乾燥（收縮與重組）、燒結使顆粒結合。
+Traditional Ceramics: Porcelain, Stoneware, Earthenware; each uses unique chemical compositions and raw materials. The Hong Kong&#x2F;Canton region is known for specialized techniques.傳統陶瓷： 瓷器、炻器、陶器；各自採用獨特的化學成分和原材料。港粵地區以專門工藝著稱。
+Manufacturing Process: Clay (powder + water) is shaped, dried (shrinks and reorganizes), then fired&#x2F;sintered to bond particles.製造過程： 粘土（粉末+水）成型、乾燥（收縮與重組）、燒結使顆粒結合。
 Materials: Kaolinite and Bentonite clays; Flint and Quartz additives reduce shrinkage; Feldspar creates glossy, non-porous finishes.原材料： 高嶺土和膨潤土；燧石和石英添加劑減少收縮；長石形成光滑致密表面。
 
 Biomedical Ceramic Classifications | 生物醫學陶瓷分類
@@ -1554,7 +2693,7 @@ Metals: High mechanical strength, used for load-bearing implants.金屬： 機�
 
 Ceramic Manufacturing &amp; Applications | 陶瓷製造與應用
 Steps: Raw material prep, shaping, drying, sintering.步驟： 原料準備、成型、乾燥、燒結。
-Applications: Dental/orthopedic coatings, surface treatments to minimize protein/cell deposition and reduce friction.應用： 牙科/骨科塗層，表面處理減少蛋白質/細胞沉積和摩擦。
+Applications: Dental&#x2F;orthopedic coatings, surface treatments to minimize protein&#x2F;cell deposition and reduce friction.應用： 牙科&#x2F;骨科塗層，表面處理減少蛋白質&#x2F;細胞沉積和摩擦。
 
 Metals | 金屬Types &amp; Properties of Medical Metals | 醫用金屬類型與性質
 Stainless Steel: Affordable, but poor corrosion resistance.不銹鋼： 價格低廉，但耐腐蝕性差。
@@ -1567,7 +2706,7 @@ Liquid Metals: Solid at room temp, liquid at body temp; used in wearable electro
 Biodegradable Metals: Magnesium- and zinc-based; gradually absorbed by the body.可降解金屬： 鎂基和鋅基金屬，能被人體逐漸吸收。
 
 Corrosion Issues &amp; Protection | 腐蝕問題與防護
-Mechanism: Oxidation, electrode formation, accelerated by moisture/oxygen.機制： 氧化、電極形成，受潮濕/氧氣加速。
+Mechanism: Oxidation, electrode formation, accelerated by moisture&#x2F;oxygen.機制： 氧化、電極形成，受潮濕&#x2F;氧氣加速。
 Biological Impact: Corrosion products trigger immune response and inflammation, may cause bone degradation.生物影響： 腐蝕產物引發免疫反應和炎症，可能導致骨質破壞。
 Protection: Use corrosion-resistant metals (chromium, titanium), inert ceramic coatings, and protective oxide layers.防護措施： 採用耐腐蝕金屬（鉻、鈦）、惰性陶瓷塗層和保護性氧化層。
 
@@ -1609,6 +2748,7 @@ D. Ironic attraction | 離子吸引
     
   
 
+
 Q2. What is the difference between bioactive and bioinert ceramics in dental implants? | 牙科植入物中生物活性陶瓷與生物惰性陶瓷的區別是什麼？
 A. Coating of implant; coating for crown | 植入物塗層；牙冠塗層
 B. Implant; coating for crown | 植入物；牙冠塗層
@@ -1645,6 +2785,7 @@ D. Implant; Crown | 植入物；牙冠
 
     
   
+
 
 Q3. What is the chemistry behind the corrosion resistance of titanium dioxide? | 二氧化鈦耐腐蝕性的化學原理是什麼？
 A. Titanium dioxide is very chemically stable and does not react with most of the chemicals | 二氧化鈦化學性質非常穩定，不與大多數化學物質反應
@@ -1683,6 +2824,7 @@ D. None of the above | 以上都不是
     
   
 
+
 Q4. Why is stainless steel still used despite titanium’s superiority? | 儘管鈦更優，為什麼仍使用不銹鋼？
 A. Cost | 成本
 B. Accessibility | 易獲得性
@@ -1720,6 +2862,7 @@ D. All of the above | 以上全部
     
   
 
+
 Q5. Roles of polymer, ceramic, and metal in full hip replacement | 全髖關節置換中聚合物、陶瓷和金屬的作用
 A. Acetabulum: Polymer; Femoral head: Ceramic; Femoral stem: Metal | 髖臼：聚合物；股骨頭：陶瓷；股骨柄：金屬
 B. Acetabulum: Ceramic; Femoral head: Metal; Femoral stem: Polymer | 髖臼：陶瓷；股骨頭：金屬；股骨柄：聚合物
@@ -1756,6 +2899,7 @@ D. Acetabulum: Ceramic; Femoral head: Ceramic; Femoral stem: Metal | 髖臼：�
 
     
   
+
 
 Q6. Dental Implant Design | 牙科植入物設計
 (4 marks) List two major reasons people choose titanium to make the dental implant (screw). | 列舉兩大選擇鈦製作牙科植入物（螺釘）的理由
@@ -1801,6 +2945,7 @@ Mimics natural bone mineral, enhancing biological response | 模仿天然骨礦�
     
   
 
+
 Q7. What is pyrolytic carbon? | 什麼是熱解碳？
     
       .collapse-button {
@@ -1831,6 +2976,7 @@ Q7. What is pyrolytic carbon? | 什麼是熱解碳？
 
     
   
+
 
 Q8. What kind of material is the Simon IVC filter made of? | Simon下腔靜脈濾器由什麼材料製成？
     
@@ -1876,7 +3022,7 @@ Q8. What kind of material is the Simon IVC filter made of? | Simon下腔靜脈�
   <entry>
     <title>Biomaterials-5 | 生物材料-5</title>
     <url>/posts/8f57aec0.html</url>
-    <content><![CDATA[🧭 Lecture Outline | 課程大綱
+    <content><![CDATA[Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料Back to Outline | 回到大綱🧭 Lecture Outline | 課程大綱
 Introduction | 引言
 Nanomaterials | 奈米材料
 Gold Nanoparticles (AuNPs) | 金奈米粒子
@@ -1969,46 +3115,7 @@ Broad absorption with narrow emission | 寬吸收與窄發射
 Used in QLED displays, solar cells, and bioimaging | 用於QLED顯示器、太陽能電池和生物成像
 
 
-🌐 SPR vs LSPR Technologies | SPR與LSPR技術比較
-
-
-
-Feature
-特性
-SPR (Surface Plasmon Resonance)
-表面電漿共振
-LSPR (Localized SPR)
-局部表面電漿共振
-
-
-
-
-Evanescent Field
-折射場
-250 nm – 1 μm
-250奈米 - 1微米
-Much shorter
-更短
-
-
-Propagation Length
-傳播長度
-Microns to millimeters
-微米到毫米
-Localized
-局部
-
-
-Resonance Conditions
-共振條件
-Prism optics
-稜鏡光學
-Light wavelength
-光波長
-
-
-
-
+🌐 SPR vs LSPR Technologies | SPR與LSPR技術比較| Feature | 特性              | SPR (Surface Plasmon Resonance) | 表面電漿共振 | LSPR (Localized SPR) | 局部表面電漿共振 ||———————-|———————————-|——————————|| Evanescent Field | 折射場     | 250 nm – 1 μm                    | 250奈米 - 1微米 | Much shorter | 更短                 || Propagation Length | 傳播長度   | Microns to millimeters           | 微米到毫米 | Localized | 局部                 || Resonance Conditions | 共振條件 | Prism optics                     | 稜鏡光學 | Light wavelength | 光波長             |
 
 SPR: | 表面電漿共振： Surface wave at metal-dielectric interface | 金屬-介電界面上的表面波
 LSPR: | 局部表面電漿共振： Electron cloud oscillation around nanoparticles | 奈米粒子周圍的電子雲振盪
@@ -2025,8 +3132,40 @@ Fabrication: freeze-drying → hydration → size control | 製造：冷凍乾�
 Lipid Nanoparticles (LNPs) | 脂質奈米粒子
 Solid lipid-based particles for nucleic acid delivery | 用於核酸傳遞的固體脂質粒子
 Fabricated via microfluidics | 通過微流控技術製造
-Typical formulation: 12 mg/mL lipids, 25% ethanol | 典型配方：12毫克/毫升脂質，25%乙醇
+Typical formulation: 12 mg&#x2F;mL lipids, 25% ethanol | 典型配方：12毫克&#x2F;毫升脂質，25%乙醇
 Purification: tangential flow filtration (TFF), dialysis, size exclusion | 純化：切向流過濾（TFF）、透析、尺寸排阻
+
+🧬 Structural Possibilities | 結構可能性!https://www.sciencedirect.com/science/article/pii/S0378517321003914?via%3Dihubimg: https://doi.org/10.1016/j.ijpharm.2021.120586
+
+Structure A: mRNA located in the core. | 結構A：mRNA位於核心。
+Structure B &amp; C: mRNA closer to the surface — more likely for mRNA than siRNA due to its larger size. | 結構B與C：mRNA靠近表面 — 由於其較大的尺寸，相較於siRNA更可能發生。
+Nanoparticles typically have | 奈米粒子通常具有：
+A surface lipid layer | 表面脂質層
+An amorphous or isotropic core | 非晶或各向同性核心
+Water pockets dispersed throughout | 分散於整個結構中的水囊
+
+
+
+Key Components | 關鍵成分Ionizable&#x2F;Cationic Lipids (e.g., DLin-MC3-DMA) | 可離子化&#x2F;陽離子脂質（例如，DLin-MC3-DMA）:
+
+Bind and stabilize nucleic acids | 結合並穩定核酸
+Prevent degradation | 防止降解
+Facilitate endosomal escape by becoming positively charged in acidic environments | 通過在酸性環境中帶正電荷促進內體逃逸
+
+Helper Lipids (e.g., DSPC) | 輔助脂質（例如，DSPC）:
+
+Improve biodistribution | 改善生物分佈
+Enhance membrane fusion and surface stability | 增強膜融合和表面穩定性
+
+Cholesterol | 膽固醇:
+
+Adds structural integrity | 增加結構完整性
+Promotes membrane fusion | 促進膜融合
+
+PEGylated Lipids (e.g., PEG) | 聚乙二醇化脂質（例如，PEG）:
+
+Increase circulation time by reducing opsonization | 通過減少調理作用延長循環時間
+Improve surface hydrophilicity | 改善表面親水性
 
 
 🧭 Nanomaterial Fabrication Strategies | 奈米材料製造策略Bottom-Up Approaches | 自下而上方法
@@ -2058,11 +3197,11 @@ Size: | 尺寸：
 
 
 Shape: | 形狀：
-Disc-shaped particles → liver/lung/spleen targeting | 盤狀粒子→靶向肝臟/肺部/脾臟
+Disc-shaped particles → liver&#x2F;lung&#x2F;spleen targeting | 盤狀粒子→靶向肝臟&#x2F;肺部&#x2F;脾臟
 
 
 Surface Charge: | 表面電荷：
-Positive charge → increased uptake in liver/lung | 正電荷→肝臟/肺部攝取增加
+Positive charge → increased uptake in liver&#x2F;lung | 正電荷→肝臟&#x2F;肺部攝取增加
 
 
 
@@ -2093,7 +3232,7 @@ DNA → mRNA → Protein | DNA → mRNA → 蛋白質
 
 Types of Therapeutic Nucleic Acids | 治療性核酸類型
 DNA: | DNA： e.g., Luxturna (FDA-approved in 2017) | 例如Luxturna（2017年FDA批准）
-mRNA: | mRNA： e.g., Pfizer/Moderna COVID-19 vaccines | 例如輝瑞/莫德納COVID-19疫苗
+mRNA: | mRNA： e.g., Pfizer&#x2F;Moderna COVID-19 vaccines | 例如輝瑞&#x2F;莫德納COVID-19疫苗
 siRNA: | siRNA： e.g., Patisiran (FDA-approved in 2018) | 例如Patisiran（2018年FDA批准）
 microRNA: | 微RNA： experimental, not FDA-approved | 實驗性，未經FDA批准
 
@@ -2157,6 +3296,7 @@ A. SPR involves valence band electrons | SPR涉及價帶電子B. SPR involves co
 
     
   
+
 Q2. What is the difference between LSPR and SPR? | LSPR與SPR的區別是什麼？
 A. Substrate | 基板B. Plasmon | 電漿C. Signal | 信號D. All | 全部  
 
@@ -2190,12 +3330,13 @@ Explanation: SPR occurs on flat metal surfaces; LSPR occurs on nanoparticles. Di
 
     
   
+
 Q3. Compare the longest SPR wavelength among gold nanostructures: | 比較金奈米結構中最長的SPR波長：
 
 10 nm AuNPs | 10奈米金奈米粒子  
 50 nm AuNPs | 50奈米金奈米粒子  
 10×60 nm nanorods | 10×60奈米奈米棒  
-10×40 nm nanorods | 10×40奈米奈米棒  
+10×40 nm nanorods | 10×40奈米奈米棒
 
 A. 1 &gt; 3 &gt; 2 &gt; 4B. 2 &gt; 1 &gt; 3 &gt; 4C. 3 &gt; 4 &gt; 2 &gt; 1D. 4 &gt; 3 &gt; 2 &gt; 1  
 
@@ -2229,6 +3370,7 @@ Explanation: Nanorods with higher aspect ratios show longer SPR wavelengths. Siz
 
     
   
+
 Q4. Which nanoparticles change color when 3 M NaCl is added? | 添加3M NaCl時，哪些奈米粒子會改變顏色？
 A. Citrate-stabilized 20 nm AuNPs | 檸檬酸穩定的20奈米金奈米粒子B. PEG-stabilized AuNPs | PEG穩定的金奈米粒子C. CdSe QDs with PEG | 帶PEG的CdSe量子點D. Lipid nanoparticles with PEG | 帶PEG的脂質奈米粒子  
 
@@ -2262,6 +3404,7 @@ Explanation: Salt disrupts electrostatic stabilization in citrate-coated AuNPs, 
 
     
   
+
 Q5. Quantum dots emitting blue, green, and red light—compare retention time in size exclusion chromatography: | 發射藍光、綠光和紅光的量子點—比較尺寸排阻層析中的保留時間：
 A. Blue &gt; Green &gt; RedB. Green &gt; Red &gt; BlueC. Red &gt; Green &gt; BlueD. Red &gt; Blue &gt; Green  
 
@@ -2295,6 +3438,7 @@ Explanation: Smaller QDs (blue) elute slower due to more pore interaction. Large
 
     
   
+
 Q6. What method can be used to make liposomes? | 哪種方法可用於製造脂質體？
 A. Electrochemical exfoliation | 電化學剝離B. PRINT technology | PRINT技術C. Spray drying | 噴霧乾燥D. Self-assembly | 自組裝  
 
@@ -2328,6 +3472,7 @@ Explanation: Liposomes form spontaneously when amphiphilic lipids self-assemble 
 
     
   
+
 Q7. Major difference between liposomes and lipid nanoparticles? | 脂質體與脂質奈米粒子的主要區別？
 A. Size | 尺寸B. Surface functional group | 表面官能團C. Composition and function | 組成與功能D. Surface charge | 表面電荷  
 
@@ -2361,6 +3506,7 @@ Explanation: Liposomes have bilayer structures; LNPs are solid or amorphous. The
 
     
   
+
 Q8. Which factor influences nanoparticle biodistribution in vivo? | 哪些因素影響奈米粒子在體內的生物分佈？
 A. Size | 尺寸B. Surface charge | 表面電荷C. Shape | 形狀D. All of the above | 以上全部  
 
@@ -2394,6 +3540,7 @@ Explanation: All these factors affect circulation, organ targeting, and cellular
 
     
   
+
 Q9. Why are lipid nanoparticles needed for nucleic acid drug delivery? | 為什麼核酸藥物傳遞需要脂質奈米粒子？
 A. In vivo degradation by nucleases | 體內核酸酶降解B. Renal clearance | 腎臟清除C. Negative charge prevents membrane crossing | 負電荷阻止膜穿越D. All of the above | 以上全部  
 
@@ -2427,11 +3574,165 @@ Explanation: LNPs protect nucleic acids, improve delivery efficiency, and preven
 
     
   
+
 Q10. mRNA-1273 (Moderna COVID vaccine) is injected intramuscularly. | mRNA-1273（莫德納COVID疫苗）通過肌肉注射給藥。
 
 Role of mRNA: Provides genetic instructions to antigen-presenting cells (APCs) to produce the spike (S) protein antigen | mRNA的角色：為抗原呈遞細胞（APCs）提供遺傳指令以產生刺突（S）蛋白抗原。  
 Role of lipid nanoparticles (LNPs): Protect mRNA from degradation, facilitate cellular uptake, and help deliver mRNA into APCs | 脂質奈米粒子（LNPs）的角色：保護mRNA免受降解，促進細胞攝取，並幫助將mRNA傳遞到APCs。  
 Target cells: APCs such as dendritic cells and Langerhans cells translate the mRNA into spike protein, initiating the immune response | 目標細胞：樹突細胞和朗格漢斯細胞等APCs將mRNA翻譯成刺突蛋白，啟動免疫反應。
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-6 | 生物材料-6</title>
+    <url>/posts/fcd82218.html</url>
+    <content><![CDATA[Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Tissue or host responses to injury:
+Implant material-tissue interaction 
+Coagulation
+Inflammation
+Angiogenesis
+Granulation tissue formation
+Foreign body reaction
+Tissue fibrosis
+Wound remodeling
+
+
+Biofilms:
+Bacterial in biofilm
+Biofilm development
+Device&#x2F;implant related infection
+Infection detection
+Prevention and treatment of infection
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomaterials</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-Outline | 生物材料-大綱</title>
+    <url>/posts/a5063481.html</url>
+    <content><![CDATA[Biomaterials-Outline | 生物材料-大綱Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
+Topics Covered | 涵蓋主題 :
+Definition of Biomaterials | 生物材料的定義
+Characteristics of four generations | 四個世代的特徵
+Major market shares | 主要市場份額
+Requirements of biomaterials | 生物材料的要求
+Major types and their pros and cons | 主要類型及其優缺點
+Forces in biomaterials | 生物材料中的作用力
+Three aspects in biomaterials | 生物材料的三個方面
+Restenosis | 再狹窄
+Need of selection and processing of biomaterials | 生物材料選擇與加工的需求
+
+
+
+Lecture 2: Structure and Properties of Biomaterials | 第二講：生物材料的結構與性質
+Topics Covered | 涵蓋主題:
+Atomic Structure and Bonding | 原子結構與鍵結
+Crystalline and Amorphous Structures | 晶體與非晶體結構
+Mechanical Properties | 機械性質
+Thermal Properties | 熱性質
+Electrical Properties | 電性質
+Optical Properties | 光學性質
+Magnetic Properties | 磁性質
+Surface Properties and Modifications | 表面性質與改性
+
+
+
+Lecture 3: Polymers and Hydrogels | 聚合物和水凝膠
+Topics Covered | 涵蓋主題:
+Definition of Polymer | 聚合物的定義
+Equilibrium Swelling Theory | 平衡膨脹理論
+Calculation of Swelling Ratio | 膨脹比率的計算
+Mesh Size | 網格尺寸
+Chemical and Physical Hydrogels; Their Difference in Swelling Ratio and Mesh Size and Strength | 化學與物理水凝膠；其膨脹比率、網格尺寸和強度的差異
+Lower Critical Solution Temperature | 較低臨界溶液溫度
+Advantages of Hydrogel for Biomedical Applications | 水凝膠在生物醫學應用中的優勢
+Representative Bioapplications of Hydrogel | 水凝膠的代表性生物應用
+Degradation of Hydrogel | 水凝膠的降解
+
+
+
+Lecture 4: Ceramics and Metals | 陶瓷與金屬
+Topics Covered | 涵蓋主題:
+Advantages of ceramics and metals for medical implants | 醫用植入物中陶瓷和金屬的優勢
+Composition of Bone | 骨的組成
+Three types of ceramics in biomaterials and their differences | 生物材料中三種陶瓷及其區別
+Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的區別
+Hydroxyapatite and its properties and applications | 羥基磷灰石的性質與應用
+Solid state sintering | 固態燒結
+Basic properties of metals | 金屬的基本性質
+Relative elastic modulus of different biomaterials | 不同生物材料的彈性模量比較
+Criteria for orthopaedic implant and choices of materials | 骨科植入物的標準及材料選擇
+Comparison of three types of metals as orthopaedic implant | 三種金屬作為骨科植入物的比較
+Corrosion of metallic implants and solutions | 金屬植入物的腐蝕及解決方案
+
+
+
+Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料
+Topics Covered | 涵蓋主題:
+Nanomaterials | 奈米材料
+Gold Nanoparticles (AuNPs) | 金奈米粒子
+Quantum Dots (QDs) | 量子點
+Liposomes &amp; Lipid Nanoparticles (LNPs) | 脂質體與脂質奈米粒子
+
+
+Fabrication Techniques | 製造技術
+Synthesis Methods | 合成方法
+Surface Engineering | 表面工程
+
+
+Biomedical Applications | 生物醫學應用
+Principles of Nanomedicine | 奈米醫學原理
+Gene Therapy &amp; Delivery | 基因療法與傳遞
+
+
+
+
+
+Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估
+Topics Covered | 涵蓋主題:
+Tissue or host responses to injury:
+Implant material-tissue interaction | 植入材料-組織相互作用
+Coagulation | 凝血
+Inflammation | 發炎
+Angiogenesis | 血管生成
+Granulation tissue formation | 肉芽組織形成
+Foreign body reaction | 異物反應
+Tissue fibrosis | 組織纖維化
+Wound remodeling | 傷口重塑
+
+
+Biofilms:
+Bacterial in biofilm | 生物膜中的細菌
+Biofilm development | 生物膜發展
+Device&#x2F;implant related infection | 器械&#x2F;植入物相關感染
+Infection detection | 感染檢測
+Prevention and treatment of infection | 感染的預防與治療
+
+
+
+
 
 ]]></content>
       <categories>
@@ -2472,30 +3773,43 @@ Mechanical Energy: Blood pressure, cardiac valve sounds, or motion.機械能：�
 
 Common Biosignals in Medicine | 醫學中常見的生物信號
 ECG: Monitors heart electrical activity (e.g., for arrhythmias).  
+
 EMG: Measures muscle activity (e.g., for neuromuscular disorders).  
+
 Blood Pressure: Tracks cardiovascular dynamics.  
+
 Heart Rate: Reflects cardiac response.  
+
 Blood Gas Concentrations: Monitors respiratory function (e.g., CO₂, O₂).  
+
 Cardiac Valve Sounds: Detects valve function.  
 
 心電圖（ECG）：監測心臟電活動（例如心律不整）。  
 
 肌電圖（EMG）：測量肌肉活動（例如神經肌肉疾病）。  
+
 血壓：追蹤心血管動態。  
+
 心率：反映心臟反應。  
+
 血氣濃度：監測呼吸功能（例如CO₂、O₂）。  
+
 心臟瓣膜聲音：檢測瓣膜功能。
+
 
 Key Concepts | 核心概念
 Input-Output Model: Describes how biological systems process stimuli (inputs) to produce responses (outputs). Example: The immune system detects pathogens (input) and produces antibodies (output).  
+
 Analog vs. Digital Biosignals:  
+
 Analog: Continuous signals (e.g., raw ECG waveform).  
-Digital: Discrete, sampled signals for analysis (e.g., digitized ECG).  
+Digital: Discrete, sampled signals for analysis (e.g., digitized ECG).
 
 
 Encoding and Sampling:  
+
 Encoding: Biosignals are naturally encoded (e.g., electrical pulses in neurons).  
-Sampling: Converts analog signals to digital via sampling (regular intervals), quantization (discrete values), and encoding (binary data).  
+Sampling: Converts analog signals to digital via sampling (regular intervals), quantization (discrete values), and encoding (binary data).
 
 
 MATLAB Simulation: Used to model biosignal acquisition, such as sampling an ECG signal, adding noise, and converting to digital format.  
@@ -2503,16 +3817,19 @@ MATLAB Simulation: Used to model biosignal acquisition, such as sampling an ECG 
 輸入-輸出模型：描述生物系統如何處理刺激（輸入）以產生反應（輸出）。示例：免疫系統檢測病原體（輸入）並產生抗體（輸出）。  
 
 模擬與數位生物信號：  
+
 模擬：連續信號（例如原始心電圖波形）。  
-數位：離散、採樣信號用於分析（例如數位化的心電圖）。  
+數位：離散、採樣信號用於分析（例如數位化的心電圖）。
 
 
 編碼與採樣：  
+
 編碼：生物信號自然編碼（例如神經元中的電脈衝）。  
-採樣：通過採樣（固定間隔）、量化（離散值）和編碼（二進制數據）將模擬信號轉換為數位。  
+採樣：通過採樣（固定間隔）、量化（離散值）和編碼（二進制數據）將模擬信號轉換為數位。
 
 
 MATLAB模擬：用於模擬生物信號採集，例如採樣心電圖信號、添加噪聲並轉換為數位格式。
+
 
 Why This Matters | 為什麼重要Understanding biosignals and biological systems is critical for:  
 
@@ -2526,30 +3843,31 @@ Advancing research in physiology and biomedical engineering.理解生物信號�
 This course will equip you with the tools to analyze biosignals, interpret system behavior, and apply computational techniques to real-world physiological data.本課程將為您提供分析生物信號、解釋系統行為以及將計算技術應用於現實世界生理數據的工具。
 Next Steps | 後續步驟Explore the input-output model and signal processing through hands-on MATLAB exercises and case studies on biosignals like ECG and EMG.通過MATLAB實操練習和生物信號（如心電圖和肌電圖）的案例研究，探索輸入-輸出模型和信號處理。
 
-Lecture 1: Biomedical Signals and Systems / 第一講：生物醫學信號與系統Overview / 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization/resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化/解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
-Systems / 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
-Input-Output / Stimuli-Response Model | 輸入-輸出 / 刺激-響應模型
+Lecture 1: Biomedical Signals and Systems &#x2F; 第一講：生物醫學信號與系統Overview &#x2F; 概述This lecture introduces the fundamentals of biomedical signals and systems, covering types of systems (SISO and MIMO), continuous vs. discrete signals, sampling, Nyquist theorem, aliasing, and digitization&#x2F;resolution concepts. Examples include temperature measurements, video frame rates, and LED flashing.本講介紹了生物醫學信號與系統的基本知識，包括系統類型（SISO 和 MIMO）、連續信號與離散信號、取樣、Nyquist 定理、混疊以及數位化&#x2F;解析度概念。範例包括溫度測量、視頻幀率和 LED 閃爍。
+Systems &#x2F; 系統Systems process inputs to produce outputs.系統處理輸入以產生輸出。
+Input-Output &#x2F; Stimuli-Response Model | 輸入-輸出 &#x2F; 刺激-響應模型
 Biological systems can be modeled as input-output systems where stimuli (e.g., drugs, mechanical force) produce responses (e.g., motion, reflexes).  
 生物系統可被建模為輸入-輸出系統，其中刺激（例如藥物、機械力）產生響應（例如運動、反射）。
 
-Single Input Single Output (SISO) / 單輸入單輸出 (SISO)
-Example: Thermistor / 範例：熱敏電阻
-Input: Temperature / 輸入：溫度
-System: Thermistor / 系統：熱敏電阻
-Output: Voltage / 輸出：電壓
+Single Input Single Output (SISO) &#x2F; 單輸入單輸出 (SISO)
+Example: Thermistor &#x2F; 範例：熱敏電阻
+Input: Temperature &#x2F; 輸入：溫度
+System: Thermistor &#x2F; 系統：熱敏電阻
+Output: Voltage &#x2F; 輸出：電壓
+
+
+
+
     flowchart LR
 subgraph SISO [SISO 單輸入單輸出]
   Temperature溫度 --&gt; Thermistor熱敏電阻 --&gt; Voltage電壓
   end
   
 
-
-
-
-Multiple Input Multiple Output (MIMO) / 多輸入多輸出 (MIMO)
-Example: Human Body / 範例：人體
-Inputs: Exercise, Sweat, Food / 輸入：運動、出汗、食物
-Outputs: Body Weight (multiple factors influencing) / 輸出：體重（多種因素影響）
+Multiple Input Multiple Output (MIMO) &#x2F; 多輸入多輸出 (MIMO)
+Example: Human Body &#x2F; 範例：人體
+Inputs: Exercise, Sweat, Food &#x2F; 輸入：運動、出汗、食物
+Outputs: Body Weight (multiple factors influencing) &#x2F; 輸出：體重（多種因素影響）
 
 
     flowchart LR
@@ -2567,6 +3885,8 @@ Outputs: Body Weight (multiple factors influencing) / 輸出：體重（多種�
   A --&gt; B 
   B --&gt; C
   
+
+
 Analog and Digital Biosignals | 模擬和數位生物信號
 Biosignals are either continuous analog (fluctuations over time) or discrete digital (encoded sequences). Conversion to electrical signals uses biotransducers (e.g., ECG electrodes).  
 生物信號要么是連續模擬（隨時間波動），要么是離散數位（編碼序列）。轉換為電信號使用生物轉換器（例如心電圖電極）。
@@ -2574,11 +3894,9 @@ Biosignals are either continuous analog (fluctuations over time) or discrete dig
 Comparison | 比較
 
 
-
 Feature
 Analog Signal
 Digital Signal
-
 
 
 
@@ -2602,27 +3920,25 @@ Noise-sensitive
 Risk of aliasing
 
 
-
-
 Signal Encoding | 信號編碼
 Biosignals use continuous (analog) or discrete (digital) encoding.  
 生物信號使用連續（模擬）或離散（數位）編碼。
 
 Continuous Encoding | 連續編碼
-Encodes information into continuous fluctuations, e.g., temperature to voltage (Voltage = (Temp + 10) * 0.5).  
-將信息編碼為連續波動，例如溫度到電壓（電壓 = (溫度 + 10) * 0.5）。
+Encodes information into continuous fluctuations, e.g., temperature to voltage (Voltage &#x3D; (Temp + 10) * 0.5).  
+將信息編碼為連續波動，例如溫度到電壓（電壓 &#x3D; (溫度 + 10) * 0.5）。
 
 Sampling | 採樣
-Converts continuous signals to digital by sampling in time (Ts = 1/fs) and amplitude. Nyquist rate: fs ≥ 2 * highest frequency to avoid aliasing.
-通過時間（Ts = 1/fs）和幅度採樣將連續信號轉換為數位。Nyquist率：fs ≥ 2 * 最高頻率以避免混疊。
+Converts continuous signals to digital by sampling in time (Ts &#x3D; 1&#x2F;fs) and amplitude. Nyquist rate: fs ≥ 2 * highest frequency to avoid aliasing.
+通過時間（Ts &#x3D; 1&#x2F;fs）和幅度採樣將連續信號轉換為數位。Nyquist率：fs ≥ 2 * 最高頻率以避免混疊。
 
 Example | 示例
 75 mmHg (0-100 mmHg to 0-5V) on 10-bit ADC gives 3.75V, digital value ≈ 768.
 75 mmHg（0-100 mmHg映射到0-5V）在10位ADC上給出3.75V，數字值 ≈ 768。
 
 ECG Sampling | 心電圖採樣
-For 120 Hz ECG, minimum fs = 240 Hz. At 250 Hz, 2500 samples in 10s. Downsampling to 125 Hz risks aliasing.
-對於120 Hz心電圖，最小fs = 240 Hz。在250 Hz，10秒內2500樣本。下採樣到125 Hz有混疊風險。
+For 120 Hz ECG, minimum fs &#x3D; 240 Hz. At 250 Hz, 2500 samples in 10s. Downsampling to 125 Hz risks aliasing.
+對於120 Hz心電圖，最小fs &#x3D; 240 Hz。在250 Hz，10秒內2500樣本。下採樣到125 Hz有混疊風險。
 
 
 Lecture 2: Signal Properties - Basic Measurements | 講座2：信號屬性 - 基本測量
@@ -2630,14 +3946,14 @@ This lecture covers mean, variance, RMS, and averaging for continuous and discre
 本講座涵蓋連續和離散信號的均值、變異數、RMS和平均。
 
 Continuous-Time Signals | 連續時間信號
-Mean μ = (1/T) ∫ x(t) dt (e.g., ECG baseline correction). Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/T) ∫ x(t)^2 dt ) measures power. For sinusoid, RMS = A/√2.
-均值 μ = (1/T) ∫ x(t) dt（例如心電圖基線修正）。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/T) ∫ x(t)^2 dt ) 測量功率。對於正弦，RMS = A/√2。English Example: x(t) = 2 sin(100π t), RMS = 1.414.繁體中文示例: x(t) = 2 sin(100π t)，RMS = 1.414。Discrete-Time Signals | 離散時間信號
-Mean μ = (1/N) Σ x[n]. Variance σ² and standard deviation σ measure fluctuations. RMS = sqrt( (1/N) Σ x[n]^2 ).
-均值 μ = (1/N) Σ x[n]。變異數 σ² 和標準差 σ 測量波動。RMS = sqrt( (1/N) Σ x[n]^2 )。English Example: x[n] = 1,3,5,4,2, RMS ≈ 3.317.繁體中文示例: x[n] = 1,3,5,4,2，RMS ≈ 3.317。
+Mean μ &#x3D; (1&#x2F;T) ∫ x(t) dt (e.g., ECG baseline correction). Variance σ² and standard deviation σ measure fluctuations. RMS &#x3D; sqrt( (1&#x2F;T) ∫ x(t)^2 dt ) measures power. For sinusoid, RMS &#x3D; A&#x2F;√2.
+均值 μ &#x3D; (1&#x2F;T) ∫ x(t) dt（例如心電圖基線修正）。變異數 σ² 和標準差 σ 測量波動。RMS &#x3D; sqrt( (1&#x2F;T) ∫ x(t)^2 dt ) 測量功率。對於正弦，RMS &#x3D; A&#x2F;√2。English Example: x(t) &#x3D; 2 sin(100π t), RMS &#x3D; 1.414.繁體中文示例: x(t) &#x3D; 2 sin(100π t)，RMS &#x3D; 1.414。Discrete-Time Signals | 離散時間信號
+Mean μ &#x3D; (1&#x2F;N) Σ x[n]. Variance σ² and standard deviation σ measure fluctuations. RMS &#x3D; sqrt( (1&#x2F;N) Σ x[n]^2 ).
+均值 μ &#x3D; (1&#x2F;N) Σ x[n]。變異數 σ² 和標準差 σ 測量波動。RMS &#x3D; sqrt( (1&#x2F;N) Σ x[n]^2 )。English Example: x[n] &#x3D; 1,3,5,4,2, RMS ≈ 3.317.繁體中文示例: x[n] &#x3D; 1,3,5,4,2，RMS ≈ 3.317。
 
 Averaging | 平均
-Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals for noise reduction.
-平均通過1/√N減少噪聲。集成平均對齊多個信號以減少噪聲。
+Averaging reduces noise by 1&#x2F;√N. Ensemble averaging aligns multiple signals for noise reduction.
+平均通過1&#x2F;√N減少噪聲。集成平均對齊多個信號以減少噪聲。
 
 
 ]]></content>
@@ -2657,7 +3973,8 @@ Averaging reduces noise by 1/√N. Ensemble averaging aligns multiple signals fo
     <url>/posts/1775fd89.html</url>
     <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
 
-這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過集成平均（ensemble averaging）來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
+這份作業的目的是讓你熟悉如何處理視覺誘發反應（VER）腦電訊號，並透過**集成平均（ensemble averaging）**來降低噪聲、提取神經反應訊號。VER 是在視覺皮質區域記錄的 EEG 訊號，通常在視覺刺激（如閃光）後出現。由於單次試驗的訊號中含有大量噪聲，因此我們需要透過多次試驗的平均來強化真正的神經反應。 
+
 
 🧠 Part 1: Plot EEG signal 繪製原始 EEG 訊號✅ Objective: Visualize one raw EEG signal to understand its noisy nature. 觀察單次試驗的腦電訊號，了解其噪聲特性。📌 Steps:
 
@@ -2675,16 +3992,20 @@ Plot one of the individual responses to visualize the “raw” EEG signal. 繪�
 
 
 load(&#x27;ver.mat&#x27;);           % Load VER datadisp(size(ver));           % Display the size of the matrixt = 0:0.005:(size(ver,2)-1)*0.005;  % Create time vector based on sampling intervalfigure;plot(t, ver(1,:));         % Plot the first trialxlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);title(&#x27;Raw VER Signal (Trial 1)&#x27;);
-🔍 Code Breakdownt = 0:0.005:(size(ver,2)-1)*0.005;
+🔍 Code Breakdown*t &#x3D; 0:0.005:(size(ver,2)-1)0.005;
 
 size(ver,2) gets the number of columns in the matrix ver, which represents the number of time points per trial.
+
 0:0.005:… creates a vector starting at 0, with increments of 0.005 seconds (sampling interval).
+
 The final value is (size(ver,2)-1)*0.005, which ensures the time vector matches the length of each trial.This time vector t is essential for plotting EEG signals against time in seconds.
 
 size(ver,2) 取得 ver 矩陣的欄數，也就是每筆試驗的時間點數量。
 
 0:0.005:… 表示從 0 開始，每 0.005 秒取一個時間點（即採樣間隔）。
+
 結尾的 (size(ver,2)-1)*0.005 確保時間向量的長度與試驗資料一致。這樣建立的 t 向量可以用來在繪圖時將腦電訊號對應到實際時間（秒）。
+
 
 📊 Part 2: Ensemble Averaging 集成平均✅ Objective: Reduce noise by averaging multiple trials. 透過多次試驗平均來降低噪聲。📌 Steps:
 
@@ -2700,11 +4021,11 @@ avg100 All on the same graph to compare how averaging reduces noise. 看看平�
 
 
 avg25 = mean(ver(1:25,:), 1);   % Average of first 25 trialsavg100 = mean(ver, 1);          % Average of all 100 trialsfigure;plot(t, ver(1,:), &#x27;Color&#x27;,[0.7,0.7,0.7]); hold on;plot(t, avg25, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);plot(t, avg100, &#x27;r&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;EEG Amplitude&#x27;);legend(&#x27;Raw Trial&#x27;, &#x27;25-Trial Avg&#x27;, &#x27;100-Trial Avg&#x27;);title(&#x27;VER Signal Averaging Comparison&#x27;);
-🔍 Code Breakdownavg25 = mean(ver(1:25,:), 1);
+🔍 Code Breakdownavg25 &#x3D; mean(ver(1:25,:), 1);
 
 ver is a matrix or 2D array. 是一個矩陣或二維陣列。
 1:25 means you’re selecting rows 1 through 25. 表示你正在選取第 1 到第 25 列的資料。
-**: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:)** 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
+****: means you’re selecting all columns in those rows. 表示你選取這些列中的所有欄位。So, ver(1:25,:) gives you a 25×N matrix, where N is the number of columns in ver.所以 ver(1:25,:) 會回傳一個 25×N 的矩陣，其中 N 是 ver 的欄位數（也就是每筆試驗的時間點數量）。
 mean(…, 1) Computes the mean along the first dimension (rows), meaning it averages the data across the 25 trials for each time point. 對這 25 行資料沿著第 1 維（行）做平均，也就是對每一個時間點的 25 次試驗取平均。
 avg25: Stores the result of the averaging, which is a 1×N vector representing the average EEG signal at each time point. 儲存平均後的結果，是一個1×N 的向量，代表每個時間點的平均 EEG 訊號。
 
@@ -2723,12 +4044,16 @@ std_ver, std_avg25, std_avg100
 
 
 load(&#x27;ver.mat&#x27;, &#x27;actual_ver&#x27;);  % Load noise-free signalnoise_ver = ver(1,:) - actual_ver;noise_avg25 = avg25 - actual_ver;noise_avg100 = avg100 - actual_ver;std_ver = std(noise_ver);std_avg25 = std(noise_avg25);std_avg100 = std(noise_avg100);disp([&#x27;STD of individual noise: &#x27;, num2str(std_ver)]);disp([&#x27;STD of 25-trial average noise: &#x27;, num2str(std_avg25)]);disp([&#x27;STD of 100-trial average noise: &#x27;, num2str(std_avg100)]);
+
 📐 Part IV: Comparison with Theoretical Prediction 與理論預測比較✅Objective: Compare actual noise reduction with theoretical expectations. 驗證噪聲是否依照理論預測隨平均次數減少📌Steps:
 
-Use the formula:-\text{Expected STD} = \frac{\text{STD of raw trial}}{\sqrt{N}}- where N = 25 or 100
+Use the formula:-\text{Expected STD} &#x3D; \frac{\text{STD of raw trial}}{\sqrt{N}}- where N &#x3D; 25 or 100
 Compare expected vs actual standard deviations.- 計算預測值並與實際值比較。
-Discuss any differences and possible reasons . 討論差異與可能原因。expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
+Discuss any differences and possible reasons . 討論差異與可能原因。
+
+expected_std_avg25 = std_ver / sqrt(25);expected_std_avg100 = std_ver / sqrt(100);disp([&#x27;Expected STD for 25-trial: &#x27;, num2str(expected_std_avg25)]);disp([&#x27;Expected STD for 100-trial: &#x27;, num2str(expected_std_avg100)]);
 Result | 結果%code sample for Avg_25fprintf(&#x27;Actual STD (Avg25): %.4f | Expected: %.4f\n | Differeces: %.4f\n&#x27;, std_avg25, expected_std_avg25, diff_avg25);
+
 Actual STD (Raw): 1.0405
 Actual STD (Avg25): 0.1986 | Expected: 0.2081 | Differeces: 0.0095
 Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
@@ -2736,6 +4061,7 @@ Actual STD (Avg100): 0.1005 | Expected: 0.1040 | Differeces: 0.0035
 Discussion of Discrepancies | 差異原因探討 :Several factors could explain the slight differences between actual and expected STD values | 儘管差異不大，仍可能由以下因素造成 :
 
 Non-Gaussian Noise: The theoretical model assumes random, Gaussian-distributed noise. Real EEG data often includes artifacts (e.g., muscle movement, eye blinks) that deviate from this assumption.
+
 非高斯噪音：理論假設噪音為高斯分布，但實際 EEG 資料可能包含肌肉活動、眼動等非隨機干擾。
 
 Signal Variability Across Trials: If the underlying neural response varies slightly between trials, averaging won’t perfectly cancel out the variability, leading to a higher actual STD than expected.
@@ -2753,6 +4079,7 @@ Finite Sample Effects: The expected STD is based on ideal statistical behavior. 
 Filtering or Preprocessing: If any filtering was applied before averaging, it could alter the noise characteristics and affect STD calculations
 
 前處理影響：若在平均前進行過濾或其他處理，可能改變噪音特性，影響 STD 計算。
+
 
 ]]></content>
       <categories>
@@ -2773,11 +4100,13 @@ Filtering or Preprocessing: If any filtering was applied before averaging, it co
 
 在這組作業中，您將致力於培養可視化訊號轉換和理解離散化過程的技能，這些技能對於分析和處理醫療診斷或監測系統中的生物醫學訊號至關重要。
 
+
 Code usage in MatlabTo obtain the orginal “Continous Time Signal with Straight Line” x(t)
 
 x-axis represent: Time
-y-axis represent: Amplitudey = [0,0,-5,5,-3,2,1,0,0];t = [-1,0,0,1,2,3,4,5,6];figure;subplot(3,2,1);plot( t, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Continous Time Signal with Straight Line&#x27;);grid on;
+y-axis represent: Amplitude
 
+ y = [0,0,-5,5,-3,2,1,0,0];t = [-1,0,0,1,2,3,4,5,6];figure;subplot(3,2,1);plot( t, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Continous Time Signal with Straight Line&#x27;);grid on;
 
 Signal Transformations | 訊號轉換: Question 1 and 2
 
@@ -2793,13 +4122,13 @@ Question 1Question 2Question 1Draw Draw 𝑥(𝑡+1):
 
 t+1 mean moved the signal toward left by 1 unit | 將信號向左移動 1 單位
 Or by calculate | 或透過計算 :
-orginal_time_data = new_time_data + 1  
-new_time_data = orginal_time_data - 1
-[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ -2, -1, -1, 0, 1, 2, 3, 4, 5]t_q1 = t-1;  % by using the fomular abovesubplot(3,2,2);plot( t_q1, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;*Question 1&#x27;);grid on;
+orginal_time_data &#x3D; new_time_data + 1  
+new_time_data &#x3D; orginal_time_data - 1
+[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ -2, -1, -1, 0, 1, 2, 3, 4, 5]
 
 
 
-Question 2Draw Draw 𝑥(-2𝑡+1):
+t_q1 = t-1;  % by using the fomular abovesubplot(3,2,2);plot( t_q1, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;*Question 1&#x27;);grid on;Question 2Draw Draw 𝑥(-2𝑡+1):
 
 In −2𝑡+1 involve:
 “2t” time scaling | 時間縮放: compression by a factor of 2. | 壓縮 2 倍。
@@ -2808,76 +4137,76 @@ In −2𝑡+1 involve:
 
 
 By calculate | 或透過計算 :
-orginal_time_data = 2 * new_time_data + 1  
-new_time_data = - (orginal_time_data - 1) / 2
-[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ 1, 0.5, 0.5, 0, -0.5, -1, -1.5, -2, -2.5]t_q2 = -(t-1)/2; % by using the fomular abovesubplot(3,2,3);plot(t_q2, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Question 2&#x27;);grid on;
+orginal_time_data &#x3D; 2 * new_time_data + 1  
+new_time_data &#x3D; - (orginal_time_data - 1) &#x2F; 2
+[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ 1, 0.5, 0.5, 0, -0.5, -1, -1.5, -2, -2.5]
 
 
 
+t_q2 = -(t-1)/2; % by using the fomular abovesubplot(3,2,3);plot(t_q2, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Question 2&#x27;);grid on;
 
 Signal Sampling : Question 3, 4 &amp; 5
 
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.
 
 
 
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0.
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0.
 
 
 
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1.
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1.
 
 
 Discretize 𝑥(𝑡) | 離散化𝑥(𝑡): 
-We need to extract the most significant (extreme) value — either the maximum or minimum — within each 1-second interval. | 我們需要提取每 1 秒間隔內最重要的（極端）值 - 最大值或最小值。From the original graph we can obtain following result of the Discretize dataset: discretize_y = [0,-5,5,-3,2,1,0,0];discretize_t = [-1,0,1,2,3,4,5,6];
+We need to extract the most significant (extreme) value — either the maximum or minimum — within each 1-second interval. | 我們需要提取每 1 秒間隔內最重要的（極端）值 - 最大值或最小值。From the original graph we can obtain following result of the Discretize dataset:
 
 
 
+discretize_y = [0,-5,5,-3,2,1,0,0];discretize_t = [-1,0,1,2,3,4,5,6];
 
-Question 3Question 4Question 2Question 3Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.:
+Question 3Question 4Question 2Question 3Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.:
 
 Discretize 𝑥(𝑡): 
 This introduces the concept of sampling a continuous signal at regular intervals (every 1 unit of time) | 以固定間隔（每 1 個時間單位）對連續訊號進行取樣的概念
 
 
 
-subplot(3,2,4);stem( discretize_t, discretize_y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5); xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;3. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.&#x27;)grid on;Question 4Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0 :
+subplot(3,2,4);stem( discretize_t, discretize_y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5); xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;3. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.&#x27;)grid on;Question 4Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0 :
 
 Discretize 𝑥(𝑡):
 similarly to question 3
 
 
-Sampling period of 𝑇𝑠=2, starting from t = 0:
-Sampling with a larger interval and start from time = 0 | 以更大的間隔採樣，並從時間= 0開始
+Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0:
+Sampling with a larger interval and start from time &#x3D; 0 | 以更大的間隔採樣，並從時間&#x3D; 0開始
 In this situation we use list_name(starting_index:inverval:end) to obtain the data
-In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以[1,2,3,4]開頭，而非[0,1,2,3]
+In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
 
 
-discretize_y(2:2:end) = [0,-5,5,-3,2,1,0,0] -&gt; [-5,-3,1,0]
-discretize_t(2:2:end) = [-1,0,1,2,3,4,5,6] -&gt; [0,2,4,6]discretize_t_q4 = discretize_t(2:2:end); discretize_y_q4 = discretize_y(2:2:end); subplot(3,2,5);stem(discretize_t_q4, discretize_y_q4, &#x27;b&#x27;,&#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;4. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0 &#x27;);grid on;
+discretize_y(2:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [-5,-3,1,0]
+discretize_t(2:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [0,2,4,6]
 
 
 
-Question 5
-
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1 :
-
+discretize_t_q4 = discretize_t(2:2:end); discretize_y_q4 = discretize_y(2:2:end); subplot(3,2,5);stem(discretize_t_q4, discretize_y_q4, &#x27;b&#x27;,&#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;4. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0 &#x27;);grid on;Question 55. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
 
 Discretize 𝑥(𝑡):
 similarly to question 3
 
 
-Sampling period of 𝑇𝑠=2, starting from t = -1 :
-Sampling with a larger interval and start from time = -1 | | 以更大的間隔採樣，並從時間= -1開始
+Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
+Sampling with a larger interval and start from time &#x3D; -1 | | 以更大的間隔採樣，並從時間&#x3D; -1開始
 In this situation we use list_name(starting_index:inverval:end) to obtain the data
-In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以[1,2,3,4]開頭，而非[0,1,2,3]
+In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
 
 
-discretize_y(1:2:end) = [0,-5,5,-3,2,1,0,0] -&gt; [0,5,2,0]
-discretize_t(1:2:end) = [-1,0,1,2,3,4,5,6] -&gt; [-1,1,3,5]discretize_t_q5 = discretize_t(1:2:end); discretize_y_q5 = discretize_y(1:2:end);subplot(3,2,6);stem( discretize_t_q5, discretize_y_q5, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;5. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1&#x27;);grid on;
+discretize_y(1:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [0,5,2,0]
+discretize_t(1:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [-1,1,3,5]
 
 
 
+discretize_t_q5 = discretize_t(1:2:end); discretize_y_q5 = discretize_y(1:2:end);subplot(3,2,6);stem( discretize_t_q5, discretize_y_q5, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;5. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1&#x27;);grid on;
 
 Result output |  結果輸出% Display output with windowsset(gcf, &#x27;Position&#x27;, [100, 100, 800, 600]);
 
@@ -2911,12 +4240,10 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
 Even component | 偶數分量: xe(t)=x(t)+x(−t)2x_e(t) = \frac{x(t) + x(-t)}{2}xe​(t)=2x(t)+x(−t)​
 Odd component | 奇數分量: xo(t)=x(t)−x(−t)2x_o(t) = \frac{x(t) - x(-t)}{2}xo​(t)=2x(t)−x(−t)​
 
-
 For a discrete-time signal x[n] x[n] x[n]:
 
 Even component | 偶數分量: xe[n]=x[n]+x[−n]2x_e[n] = \frac{x[n] + x[-n]}{2}xe​[n]=2x[n]+x[−n]​
 Odd component | 奇數分量: xo[n]=x[n]−x[−n]2x_o[n] = \frac{x[n] - x[-n]}{2}xo​[n]=2x[n]−x[−n]​
-
 
 A signal is even | 偶數 if x(t)=x(−t) x(t) = x(-t) x(t)=x(−t) or x[n]=x[−n] x[n] = x[-n] x[n]=x[−n], and odd | 奇數 if x(t)=−x(−t) x(t) = -x(-t) x(t)=−x(−t) or x[n]=−x[−n] x[n] = -x[-n] x[n]=−x[−n].
 Periodicity | 週期性
@@ -2927,39 +4254,68 @@ For continuous-time sinusoids cos⁡(ωt) \cos(\omega t) cos(ωt) or sin⁡(ωt)
 For discrete-time sinusoids cos⁡(ωn) \cos(\omega n) cos(ωn) or sin⁡(ωn) \sin(\omega n) sin(ωn), the signal is periodic if ω2π=kN \frac{\omega}{2\pi} = \frac{k}{N} 2πω​=Nk​ for integers k k k and N N N, with period N N N.
 
 Trigonometric Properties | 三角函數性質
-cos⁡(−t)=cos⁡(t) \cos(-t) = \cos(t) cos(−t)=cos(t) (even | 偶數)
-sin⁡(−t)=−sin⁡(t) \sin(-t) = -\sin(t) sin(−t)=−sin(t) (odd | 奇數)
+cos⁡(−t)=cos⁡(t) \cos(-t) = \cos(t) cos(−t)=cos(t) (**even | 偶數**)
+sin⁡(−t)=−sin⁡(t) \sin(-t) = -\sin(t) sin(−t)=−sin(t) (**odd | 奇數**)
 These apply similarly for discrete-time signals with n n n.
 
 
-Signal Analysis | 信號分析Signal 1: x(t)=2cos⁡(5t)+3sin⁡(3t) x(t) = 2\cos(5t) + 3\sin(3t) x(t)=2cos(5t)+3sin(3t)Even and Odd Components | 偶數與奇數分量Compute x(−t) x(-t) x(−t):x(−t)=2cos⁡(5(−t))+3sin⁡(3(−t))=2cos⁡(−5t)+3sin⁡(−3t)=2cos⁡(5t)−3sin⁡(3t)x(-t) = 2\cos(5(-t)) + 3\sin(3(-t)) = 2\cos(-5t) + 3\sin(-3t) = 2\cos(5t) - 3\sin(3t)x(−t)=2cos(5(−t))+3sin(3(−t))=2cos(−5t)+3sin(−3t)=2cos(5t)−3sin(3t)
-Even component | 偶數分量:xe(t)=x(t)+x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]+[2cos⁡(5t)−3sin⁡(3t)]2=4cos⁡(5t)2=2cos⁡(5t)x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] + [2\cos(5t) - 3\sin(3t)]}{2} = \frac{4\cos(5t)}{2} = 2\cos(5t)xe​(t)=2x(t)+x(−t)​=2[2cos(5t)+3sin(3t)]+[2cos(5t)−3sin(3t)]​=24cos(5t)​=2cos(5t)
-Odd component | 奇數分量:xo(t)=x(t)−x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]−[2cos⁡(5t)−3sin⁡(3t)]2=6sin⁡(3t)2=3sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] - [2\cos(5t) - 3\sin(3t)]}{2} = \frac{6\sin(3t)}{2} = 3\sin(3t)xo​(t)=2x(t)−x(−t)​=2[2cos(5t)+3sin(3t)]−[2cos(5t)−3sin(3t)]​=26sin(3t)​=3sin(3t)
-Verification | 驗證:xe(t)+xo(t)=2cos⁡(5t)+3sin⁡(3t)=x(t)x_e(t) + x_o(t) = 2\cos(5t) + 3\sin(3t) = x(t)xe​(t)+xo​(t)=2cos(5t)+3sin(3t)=x(t)
+Signal Analysis | 信號分析Signal 1: x(t)=2cos⁡(5t)+3sin⁡(3t) x(t) = 2\cos(5t) + 3\sin(3t) x(t)=2cos(5t)+3sin(3t)Even and Odd Components | 偶數與奇數分量Compute x(−t) x(-t) x(−t):
+x(−t)=2cos⁡(5(−t))+3sin⁡(3(−t))=2cos⁡(−5t)+3sin⁡(−3t)=2cos⁡(5t)−3sin⁡(3t)x(-t) = 2\cos(5(-t)) + 3\sin(3(-t)) = 2\cos(-5t) + 3\sin(-3t) = 2\cos(5t) - 3\sin(3t)x(−t)=2cos(5(−t))+3sin(3(−t))=2cos(−5t)+3sin(−3t)=2cos(5t)−3sin(3t)
+
+Even component | 偶數分量:
+xe(t)=x(t)+x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]+[2cos⁡(5t)−3sin⁡(3t)]2=4cos⁡(5t)2=2cos⁡(5t)x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] + [2\cos(5t) - 3\sin(3t)]}{2} = \frac{4\cos(5t)}{2} = 2\cos(5t)xe​(t)=2x(t)+x(−t)​=2[2cos(5t)+3sin(3t)]+[2cos(5t)−3sin(3t)]​=24cos(5t)​=2cos(5t)
+
+Odd component | 奇數分量:
+xo(t)=x(t)−x(−t)2=[2cos⁡(5t)+3sin⁡(3t)]−[2cos⁡(5t)−3sin⁡(3t)]2=6sin⁡(3t)2=3sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{[2\cos(5t) + 3\sin(3t)] - [2\cos(5t) - 3\sin(3t)]}{2} = \frac{6\sin(3t)}{2} = 3\sin(3t)xo​(t)=2x(t)−x(−t)​=2[2cos(5t)+3sin(3t)]−[2cos(5t)−3sin(3t)]​=26sin(3t)​=3sin(3t)
+
+Verification | 驗證:
+xe(t)+xo(t)=2cos⁡(5t)+3sin⁡(3t)=x(t)x_e(t) + x_o(t) = 2\cos(5t) + 3\sin(3t) = x(t)xe​(t)+xo​(t)=2cos(5t)+3sin(3t)=x(t)
+
 Periodicity | 週期性The signal is a sum of two sinusoids:
 
 First term: 2cos⁡(5t) 2\cos(5t) 2cos(5t), angular frequency ω1=5 \omega_1 = 5 ω1​=5, period T1=2π5 T_1 = \frac{2\pi}{5} T1​=52π​.
 Second term: 3sin⁡(3t) 3\sin(3t) 3sin(3t), angular frequency ω2=3 \omega_2 = 3 ω2​=3, period T2=2π3 T_2 = \frac{2\pi}{3} T2​=32π​.
 
-For the sum to be periodic, the periods must be commensurate:mT1=nT2  ⟹  m⋅2π5=n⋅2π3  ⟹  m5=n3  ⟹  3m=5nm T_1 = n T_2 \implies m \cdot \frac{2\pi}{5} = n \cdot \frac{2\pi}{3} \implies \frac{m}{5} = \frac{n}{3} \implies 3m = 5nmT1​=nT2​⟹m⋅52π​=n⋅32π​⟹5m​=3n​⟹3m=5nSince 3 and 5 are coprime, the smallest integers are m=5 m = 5 m=5, n=3 n = 3 n=3. The fundamental period is:T=mT1=5⋅2π5=2πorT=nT2=3⋅2π3=2πT = m T_1 = 5 \cdot \frac{2\pi}{5} = 2\pi \quad \text{or} \quad T = n T_2 = 3 \cdot \frac{2\pi}{3} = 2\piT=mT1​=5⋅52π​=2πorT=nT2​=3⋅32π​=2πAnswer for Signal 1 | 第一信號解答:
+For the sum to be periodic, the periods must be commensurate:
+mT1=nT2  ⟹  m⋅2π5=n⋅2π3  ⟹  m5=n3  ⟹  3m=5nm T_1 = n T_2 \implies m \cdot \frac{2\pi}{5} = n \cdot \frac{2\pi}{3} \implies \frac{m}{5} = \frac{n}{3} \implies 3m = 5nmT1​=nT2​⟹m⋅52π​=n⋅32π​⟹5m​=3n​⟹3m=5n
+Since 3 and 5 are coprime, the smallest integers are m=5 m = 5 m=5, n=3 n = 3 n=3. The fundamental period is:
+T=mT1=5⋅2π5=2πorT=nT2=3⋅2π3=2πT = m T_1 = 5 \cdot \frac{2\pi}{5} = 2\pi \quad \text{or} \quad T = n T_2 = 3 \cdot \frac{2\pi}{3} = 2\piT=mT1​=5⋅52π​=2πorT=nT2​=3⋅32π​=2π
+Answer for Signal 1 | 第一信號解答:
 
 Even component | 偶數分量: 2cos⁡(5t) 2\cos(5t) 2cos(5t)
 Odd component | 奇數分量: 3sin⁡(3t) 3\sin(3t) 3sin(3t)
 Periodic | 週期性: Yes, period T=2π T = 2\pi T=2π | 是，週期 T=2π T = 2\pi T=2π
 
 
-Signal 2: x(t)=cos⁡(5πt)sin⁡(3t) x(t) = \cos(5\pi t) \sin(3t) x(t)=cos(5πt)sin(3t)Even and Odd Components | 偶數與奇數分量Rewrite using the product-to-sum identity:cos⁡(a)sin⁡(b)=12[sin⁡(a+b)−sin⁡(a−b)]\cos(a) \sin(b) = \frac{1}{2} [\sin(a + b) - \sin(a - b)]cos(a)sin(b)=21​[sin(a+b)−sin(a−b)]x(t)=cos⁡(5πt)sin⁡(3t)=12[sin⁡((5π+3)t)−sin⁡((5π−3)t)]x(t) = \cos(5\pi t) \sin(3t) = \frac{1}{2} [\sin((5\pi + 3)t) - \sin((5\pi - 3)t)]x(t)=cos(5πt)sin(3t)=21​[sin((5π+3)t)−sin((5π−3)t)]
-Compute x(−t) x(-t) x(−t):x(−t)=cos⁡(5π(−t))sin⁡(3(−t))=cos⁡(−5πt)sin⁡(−3t)=cos⁡(5πt)(−sin⁡(3t))=−cos⁡(5πt)sin⁡(3t)=−x(t)x(-t) = \cos(5\pi (-t)) \sin(3(-t)) = \cos(-5\pi t) \sin(-3t) = \cos(5\pi t) (-\sin(3t)) = -\cos(5\pi t) \sin(3t) = -x(t)x(−t)=cos(5π(−t))sin(3(−t))=cos(−5πt)sin(−3t)=cos(5πt)(−sin(3t))=−cos(5πt)sin(3t)=−x(t)
+Signal 2: x(t)=cos⁡(5πt)sin⁡(3t) x(t) = \cos(5\pi t) \sin(3t) x(t)=cos(5πt)sin(3t)Even and Odd Components | 偶數與奇數分量Rewrite using the product-to-sum identity:
+cos⁡(a)sin⁡(b)=12[sin⁡(a+b)−sin⁡(a−b)]\cos(a) \sin(b) = \frac{1}{2} [\sin(a + b) - \sin(a - b)]cos(a)sin(b)=21​[sin(a+b)−sin(a−b)]
+x(t)=cos⁡(5πt)sin⁡(3t)=12[sin⁡((5π+3)t)−sin⁡((5π−3)t)]x(t) = \cos(5\pi t) \sin(3t) = \frac{1}{2} [\sin((5\pi + 3)t) - \sin((5\pi - 3)t)]x(t)=cos(5πt)sin(3t)=21​[sin((5π+3)t)−sin((5π−3)t)]
+
+Compute x(−t) x(-t) x(−t):
+x(−t)=cos⁡(5π(−t))sin⁡(3(−t))=cos⁡(−5πt)sin⁡(−3t)=cos⁡(5πt)(−sin⁡(3t))=−cos⁡(5πt)sin⁡(3t)=−x(t)x(-t) = \cos(5\pi (-t)) \sin(3(-t)) = \cos(-5\pi t) \sin(-3t) = \cos(5\pi t) (-\sin(3t)) = -\cos(5\pi t) \sin(3t) = -x(t)x(−t)=cos(5π(−t))sin(3(−t))=cos(−5πt)sin(−3t)=cos(5πt)(−sin(3t))=−cos(5πt)sin(3t)=−x(t)
+
 Since x(−t)=−x(t) x(-t) = -x(t) x(−t)=−x(t), the signal is odd.
-Even component | 偶數分量:xe(t)=x(t)+x(−t)2=x(t)−x(t)2=0x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{x(t) - x(t)}{2} = 0xe​(t)=2x(t)+x(−t)​=2x(t)−x(t)​=0
-Odd component | 奇數分量:xo(t)=x(t)−x(−t)2=x(t)−(−x(t))2=2x(t)2=x(t)=cos⁡(5πt)sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{x(t) - (-x(t))}{2} = \frac{2x(t)}{2} = x(t) = \cos(5\pi t) \sin(3t)xo​(t)=2x(t)−x(−t)​=2x(t)−(−x(t))​=22x(t)​=x(t)=cos(5πt)sin(3t)
-Verification | 驗證:xe(t)+xo(t)=0+cos⁡(5πt)sin⁡(3t)=x(t)x_e(t) + x_o(t) = 0 + \cos(5\pi t) \sin(3t) = x(t)xe​(t)+xo​(t)=0+cos(5πt)sin(3t)=x(t)
-Periodicity | 週期性Using the product-to-sum form:x(t)=12sin⁡((5π+3)t)−12sin⁡((5π−3)t)x(t) = \frac{1}{2} \sin((5\pi + 3)t) - \frac{1}{2} \sin((5\pi - 3)t)x(t)=21​sin((5π+3)t)−21​sin((5π−3)t)
+Even component | 偶數分量:
+xe(t)=x(t)+x(−t)2=x(t)−x(t)2=0x_e(t) = \frac{x(t) + x(-t)}{2} = \frac{x(t) - x(t)}{2} = 0xe​(t)=2x(t)+x(−t)​=2x(t)−x(t)​=0
+
+Odd component | 奇數分量:
+xo(t)=x(t)−x(−t)2=x(t)−(−x(t))2=2x(t)2=x(t)=cos⁡(5πt)sin⁡(3t)x_o(t) = \frac{x(t) - x(-t)}{2} = \frac{x(t) - (-x(t))}{2} = \frac{2x(t)}{2} = x(t) = \cos(5\pi t) \sin(3t)xo​(t)=2x(t)−x(−t)​=2x(t)−(−x(t))​=22x(t)​=x(t)=cos(5πt)sin(3t)
+
+Verification | 驗證:
+xe(t)+xo(t)=0+cos⁡(5πt)sin⁡(3t)=x(t)x_e(t) + x_o(t) = 0 + \cos(5\pi t) \sin(3t) = x(t)xe​(t)+xo​(t)=0+cos(5πt)sin(3t)=x(t)
+
+Periodicity | 週期性Using the product-to-sum form:
+x(t)=12sin⁡((5π+3)t)−12sin⁡((5π−3)t)x(t) = \frac{1}{2} \sin((5\pi + 3)t) - \frac{1}{2} \sin((5\pi - 3)t)x(t)=21​sin((5π+3)t)−21​sin((5π−3)t)
+
 
 First term: sin⁡((5π+3)t) \sin((5\pi + 3)t) sin((5π+3)t), angular frequency ω1=5π+3 \omega_1 = 5\pi + 3 ω1​=5π+3, period T1=2π5π+3 T_1 = \frac{2\pi}{5\pi + 3} T1​=5π+32π​.
 Second term: sin⁡((5π−3)t) \sin((5\pi - 3)t) sin((5π−3)t), angular frequency ω2=5π−3 \omega_2 = 5\pi - 3 ω2​=5π−3, period T2=2π5π−3 T_2 = \frac{2\pi}{5\pi - 3} T2​=5π−32π​.
 
-Check if periods are commensurate:T1T2=2π5π+32π5π−3=5π−35π+3\frac{T_1}{T_2} = \frac{\frac{2\pi}{5\pi + 3}}{\frac{2\pi}{5\pi - 3}} = \frac{5\pi - 3}{5\pi + 3}T2​T1​​=5π−32π​5π+32π​​=5π+35π−3​Approximate:5π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,12.7079618.70796≈0.6792455\pi \approx 15.70796, \quad 5\pi - 3 \approx 12.70796, \quad 5\pi + 3 \approx 18.70796, \quad \frac{12.70796}{18.70796} \approx 0.6792455π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,18.7079612.70796​≈0.679245This ratio is not rational due to the presence of π \pi π. Thus, the signal is non-periodic.
+Check if periods are commensurate:
+T1T2=2π5π+32π5π−3=5π−35π+3\frac{T_1}{T_2} = \frac{\frac{2\pi}{5\pi + 3}}{\frac{2\pi}{5\pi - 3}} = \frac{5\pi - 3}{5\pi + 3}T2​T1​​=5π−32π​5π+32π​​=5π+35π−3​
+Approximate:
+5π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,12.7079618.70796≈0.6792455\pi \approx 15.70796, \quad 5\pi - 3 \approx 12.70796, \quad 5\pi + 3 \approx 18.70796, \quad \frac{12.70796}{18.70796} \approx 0.6792455π≈15.70796,5π−3≈12.70796,5π+3≈18.70796,18.7079612.70796​≈0.679245
+This ratio is not rational due to the presence of π \pi π. Thus, the signal is non-periodic.
 Answer for Signal 2 | 第二信號解答:
 
 Even component | 偶數分量: 0 0 0
@@ -2967,10 +4323,18 @@ Odd component | 奇數分量: cos⁡(5πt)sin⁡(3t) \cos(5\pi t) \sin(3t) cos(5
 Periodic | 週期性: No | 否
 
 
-Signal 3: x[n]=cos⁡(6πn)+sin⁡(4πn) x[n] = \cos(6\pi n) + \sin(4\pi n) x[n]=cos(6πn)+sin(4πn)Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:x[−n]=cos⁡(6π(−n))+sin⁡(4π(−n))=cos⁡(−6πn)+sin⁡(−4πn)=cos⁡(6πn)−sin⁡(4πn)x[-n] = \cos(6\pi (-n)) + \sin(4\pi (-n)) = \cos(-6\pi n) + \sin(-4\pi n) = \cos(6\pi n) - \sin(4\pi n)x[−n]=cos(6π(−n))+sin(4π(−n))=cos(−6πn)+sin(−4πn)=cos(6πn)−sin(4πn)
-Even component | 偶數分量:xe[n]=x[n]+x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]+[cos⁡(6πn)−sin⁡(4πn)]2=cos⁡(6πn)x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] + [\cos(6\pi n) - \sin(4\pi n)]}{2} = \cos(6\pi n)xe​[n]=2x[n]+x[−n]​=2[cos(6πn)+sin(4πn)]+[cos(6πn)−sin(4πn)]​=cos(6πn)
-Odd component | 奇數分量:xo[n]=x[n]−x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]−[cos⁡(6πn)−sin⁡(4πn)]2=sin⁡(4πn)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] - [\cos(6\pi n) - \sin(4\pi n)]}{2} = \sin(4\pi n)xo​[n]=2x[n]−x[−n]​=2[cos(6πn)+sin(4πn)]−[cos(6πn)−sin(4πn)]​=sin(4πn)
-Verification | 驗證:xe[n]+xo[n]=cos⁡(6πn)+sin⁡(4πn)=x[n]x_e[n] + x_o[n] = \cos(6\pi n) + \sin(4\pi n) = x[n]xe​[n]+xo​[n]=cos(6πn)+sin(4πn)=x[n]
+Signal 3: x[n]=cos⁡(6πn)+sin⁡(4πn) x[n] = \cos(6\pi n) + \sin(4\pi n) x[n]=cos(6πn)+sin(4πn)Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:
+x[−n]=cos⁡(6π(−n))+sin⁡(4π(−n))=cos⁡(−6πn)+sin⁡(−4πn)=cos⁡(6πn)−sin⁡(4πn)x[-n] = \cos(6\pi (-n)) + \sin(4\pi (-n)) = \cos(-6\pi n) + \sin(-4\pi n) = \cos(6\pi n) - \sin(4\pi n)x[−n]=cos(6π(−n))+sin(4π(−n))=cos(−6πn)+sin(−4πn)=cos(6πn)−sin(4πn)
+
+Even component | 偶數分量:
+xe[n]=x[n]+x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]+[cos⁡(6πn)−sin⁡(4πn)]2=cos⁡(6πn)x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] + [\cos(6\pi n) - \sin(4\pi n)]}{2} = \cos(6\pi n)xe​[n]=2x[n]+x[−n]​=2[cos(6πn)+sin(4πn)]+[cos(6πn)−sin(4πn)]​=cos(6πn)
+
+Odd component | 奇數分量:
+xo[n]=x[n]−x[−n]2=[cos⁡(6πn)+sin⁡(4πn)]−[cos⁡(6πn)−sin⁡(4πn)]2=sin⁡(4πn)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\cos(6\pi n) + \sin(4\pi n)] - [\cos(6\pi n) - \sin(4\pi n)]}{2} = \sin(4\pi n)xo​[n]=2x[n]−x[−n]​=2[cos(6πn)+sin(4πn)]−[cos(6πn)−sin(4πn)]​=sin(4πn)
+
+Verification | 驗證:
+xe[n]+xo[n]=cos⁡(6πn)+sin⁡(4πn)=x[n]x_e[n] + x_o[n] = \cos(6\pi n) + \sin(4\pi n) = x[n]xe​[n]+xo​[n]=cos(6πn)+sin(4πn)=x[n]
+
 Periodicity | 週期性
 First term: cos⁡(6πn)=cos⁡(2π⋅3n)=1 \cos(6\pi n) = \cos(2\pi \cdot 3n) = 1 cos(6πn)=cos(2π⋅3n)=1, constant, period N1=1 N_1 = 1 N1​=1.
 Second term: sin⁡(4πn)=sin⁡(2π⋅2n) \sin(4\pi n) = \sin(2\pi \cdot 2n) sin(4πn)=sin(2π⋅2n), ω=4π=2π⋅2 \omega = 4\pi = 2\pi \cdot 2 ω=4π=2π⋅2, so ω2π=2 \frac{\omega}{2\pi} = 2 2πω​=2, period N2=1 N_2 = 1 N2​=1.
@@ -2983,10 +4347,18 @@ Odd component | 奇數分量: sin⁡(4πn) \sin(4\pi n) sin(4πn)
 Periodic | 週期性: Yes, period N=1 N = 1 N=1 | 是，週期 N=1 N = 1 N=1
 
 
-Signal 4: x[n]=sin⁡(4n)+4 x[n] = \sin(4n) + 4 x[n]=sin(4n)+4Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:x[−n]=sin⁡(4(−n))+4=sin⁡(−4n)+4=−sin⁡(4n)+4x[-n] = \sin(4(-n)) + 4 = \sin(-4n) + 4 = -\sin(4n) + 4x[−n]=sin(4(−n))+4=sin(−4n)+4=−sin(4n)+4
-Even component | 偶數分量:xe[n]=x[n]+x[−n]2=[sin⁡(4n)+4]+[−sin⁡(4n)+4]2=82=4x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\sin(4n) + 4] + [-\sin(4n) + 4]}{2} = \frac{8}{2} = 4xe​[n]=2x[n]+x[−n]​=2[sin(4n)+4]+[−sin(4n)+4]​=28​=4
-Odd component | 奇數分量:xo[n]=x[n]−x[−n]2=[sin⁡(4n)+4]−[−sin⁡(4n)+4]2=2sin⁡(4n)2=sin⁡(4n)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\sin(4n) + 4] - [-\sin(4n) + 4]}{2} = \frac{2\sin(4n)}{2} = \sin(4n)xo​[n]=2x[n]−x[−n]​=2[sin(4n)+4]−[−sin(4n)+4]​=22sin(4n)​=sin(4n)
-Verification | 驗證:xe[n]+xo[n]=4+sin⁡(4n)=x[n]x_e[n] + x_o[n] = 4 + \sin(4n) = x[n]xe​[n]+xo​[n]=4+sin(4n)=x[n]
+Signal 4: x[n]=sin⁡(4n)+4 x[n] = \sin(4n) + 4 x[n]=sin(4n)+4Even and Odd Components | 偶數與奇數分量Compute x[−n] x[-n] x[−n]:
+x[−n]=sin⁡(4(−n))+4=sin⁡(−4n)+4=−sin⁡(4n)+4x[-n] = \sin(4(-n)) + 4 = \sin(-4n) + 4 = -\sin(4n) + 4x[−n]=sin(4(−n))+4=sin(−4n)+4=−sin(4n)+4
+
+Even component | 偶數分量:
+xe[n]=x[n]+x[−n]2=[sin⁡(4n)+4]+[−sin⁡(4n)+4]2=82=4x_e[n] = \frac{x[n] + x[-n]}{2} = \frac{[\sin(4n) + 4] + [-\sin(4n) + 4]}{2} = \frac{8}{2} = 4xe​[n]=2x[n]+x[−n]​=2[sin(4n)+4]+[−sin(4n)+4]​=28​=4
+
+Odd component | 奇數分量:
+xo[n]=x[n]−x[−n]2=[sin⁡(4n)+4]−[−sin⁡(4n)+4]2=2sin⁡(4n)2=sin⁡(4n)x_o[n] = \frac{x[n] - x[-n]}{2} = \frac{[\sin(4n) + 4] - [-\sin(4n) + 4]}{2} = \frac{2\sin(4n)}{2} = \sin(4n)xo​[n]=2x[n]−x[−n]​=2[sin(4n)+4]−[−sin(4n)+4]​=22sin(4n)​=sin(4n)
+
+Verification | 驗證:
+xe[n]+xo[n]=4+sin⁡(4n)=x[n]x_e[n] + x_o[n] = 4 + \sin(4n) = x[n]xe​[n]+xo​[n]=4+sin(4n)=x[n]
+
 Periodicity | 週期性
 First term: sin⁡(4n) \sin(4n) sin(4n), ω=4 \omega = 4 ω=4. Check:ω2π=42π=2π\frac{\omega}{2\pi} = \frac{4}{2\pi} = \frac{2}{\pi}2πω​=2π4​=π2​
 This is irrational. For periodicity:sin⁡(4(n+N))=sin⁡(4n)  ⟹  4N=2πk  ⟹  N=πk2\sin(4(n + N)) = \sin(4n) \implies 4N = 2\pi k \implies N = \frac{\pi k}{2}sin(4(n+N))=sin(4n)⟹4N=2πk⟹N=2πk​
