@@ -29,6 +29,131 @@
       </tags>
   </entry>
   <entry>
+    <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
+    <url>/posts/6778c1a2.html</url>
+    <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
+It covers computer fundamentals, programming concepts, and an introduction to Python. Designed for beginners, it explains everything from hardware basics to why Python is a great starting language.內容涵蓋電腦基本原理、編程概念，以及 Python 語言入門。這是一份為初學者設計的指南，從硬件基礎到為什麼 Python 是理想的入門語言都有詳細說明。
+💻 What is a Computer? | 什麼是電腦？
+A computer is more than an advanced calculator—it’s an electronic device that manipulates data and performs arithmetic operations.電腦不僅僅是高級計算機，它是一種能夠處理資料並執行算術操作的電子設備。
+Unlike ancient tools like the abacus, modern computers are programmable and versatile.與古老的工具如算盤不同，現代電腦具有可編程性和多功能性。
+🧩 Von Neumann Architecture | 馮·諾依曼架構Most computers follow the Von Neumann architecture, which includes:大多數電腦遵循「馮·諾依曼架構」，包括：
+
+Input&#x2F;Output Devices: Read&#x2F;write data to&#x2F;from memory on CPU command.輸入&#x2F;輸出設備：根據 CPU 指令讀取或寫入記憶體資料。
+Examples: Keyboard (input), Monitor (output), Touchscreen (both).例子：鍵盤（輸入）、顯示器（輸出）、觸控螢幕（輸入與輸出）。
+
+
+Central Processing Unit (CPU): The “brain” of the computer.中央處理器（CPU）：電腦的「大腦」。
+Arithmetic and Logic Unit (ALU): Performs binary math operations.算術邏輯單元（ALU）：執行二進位數學運算。
+Control Unit (CU): Directs program execution.控制單元（CU）：指導程式執行流程。
+
+
+Main Memory: Stores data and instructions.主記憶體：儲存資料與指令。
+
+
+🧪 A CPU simulator in the original notes visualizes the fetch-decode-execute cycle.🧪 原教材中的 CPU 模擬器展示了「提取-解碼-執行」循環。
+
+🧠 What’s in a Computer? | 電腦的組成A CPU consists of several main components:一個 CPU 包含以下主要組件：
+
+
+Arithmetic Logic Unit (ALU): Performs arithmetic and logical operations.算術邏輯單元（ALU）：執行算術和邏輯運算。
+Control Unit (CU): Directs processor operations.控制單元（CU）：指導處理器的操作。
+Registers: Small, fast storage locations for temporary data and instructions.暫存器：用於暫時儲存資料和指令的小型高速儲存區。
+
+🗂️ Memory Types | 記憶體類型
+RAM (Random Access Memory): Volatile; holds data during execution.RAM（隨機存取記憶體）：揮發性；執行期間儲存資料。
+Subtypes: SRAM (fast), DRAM (cheap).子類型：SRAM（快速）、DRAM（便宜）。
+
+
+ROM (Read-Only Memory): Non-volatile; stores boot essentials.ROM（唯讀記憶體）：非揮發性；儲存開機所需資料。
+Subtypes: PROM, EPROM, EEPROM.子類型：PROM、EPROM、EEPROM。
+
+
+
+🧑‍💻 What is Programming? | 什麼是編程？Programming is the process of writing instructions for computers to perform tasks.編程是撰寫指令讓電腦執行特定任務的過程。
+It’s like giving step-by-step directions in a language the computer understands.就像用電腦能理解的語言提供逐步指示。
+🔣 Programming Languages | 編程語言Computers use binary (0s and 1s) for data and instructions.電腦使用 二進位（0 和 1） 來表示資料與指令。
+
+Example: Intel CPU addition → 00000011 00000100例子：Intel CPU 加法 → 00000011 00000100
+Why Binary? Reliable for electronic circuits (on&#x2F;off states).為什麼使用二進位？因為電子電路的開&#x2F;關狀態非常可靠。
+
+🕰️ Historical Note | 歷史小知識
+ENIAC (1940s): First electronic computer.ENIAC（1940年代）：第一台電子電腦。
+Used switches and inefficient decimal representation (10 bits &#x3D; 1024 values).使用開關並以低效方式表示十進位數字（10 位元 &#x3D; 1024 種可能）。
+
+
+
+📏 Standards for Representation | 資料表示標準
+ASCII: 8-bit codes for English characters (A &#x3D; 01000001)ASCII：8 位元英文字元編碼（如 ‘A’ &#x3D; 01000001）
+Unicode: Supports global languages (e.g., Chinese, Japanese)Unicode：支援全球語言（如中文、日文）
+Numbers:  
+2’s complement for negatives負數使用二的補數  
+IEEE floating-point for decimals小數使用 IEEE 浮點格式
+
+
+
+🧬 Generations of Programming Languages | 編程語言世代
+
+
+Generation
+Description
+Example
+
+
+
+1st
+Machine Language (binary)
+10101010
+
+
+第一代
+機器語言（二進位）
+10101010
+
+
+2nd
+Assembly Language (mnemonics)
+ADD, SUB
+
+
+第二代
+組合語言（助記符）
+ADD, SUB
+
+
+3rd
+High-Level Languages
+Python, Java, C++
+
+
+第三代
+高階語言（人類可讀）
+Python, Java, C++
+
+
+
+🧠 Assembly is still useful for microprocessors. A simulator demo compares assembly vs. high-level code.🧠 組合語言仍適用於微處理器等高效率場景。教材中有模擬器展示組合語言與高階語言的比較。
+
+🐍 Introduction to Python | Python 語言簡介Python is chosen for its:選擇 Python 的原因：
+
+Expressiveness: Write less, do more.表達力強：少量程式碼即可完成任務。
+Popularity: Rich libraries (math, AI, graphics).廣泛使用：擁有大量函式庫（數學、AI、圖形等）。
+Free &amp; Open-Source: No restrictions.免費且開源：無使用限制。
+Portability: Runs on multiple platforms.可移植性高：跨平台執行無需修改。
+
+🧪 Sample Python Program | Python 範例程式碼import datetime  # library to obtain current yearcohort = input(&quot;In which year did you join CityU? [e.g., 2020]&quot;)year = datetime.datetime.now().year - int(cohort) + 1print(&quot;So you are a year&quot;, year, &quot;student.&quot;)
+
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ESP32-S3 與心跳和血氧測試</title>
     <url>/posts/c2e18503.html</url>
     <content><![CDATA[
@@ -229,131 +354,6 @@ OLED 無顯示或亂碼：
         <tag>ESP32-S3</tag>
         <tag>Arduino</tag>
         <tag>入門</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
-    <url>/posts/6778c1a2.html</url>
-    <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
-It covers computer fundamentals, programming concepts, and an introduction to Python. Designed for beginners, it explains everything from hardware basics to why Python is a great starting language.內容涵蓋電腦基本原理、編程概念，以及 Python 語言入門。這是一份為初學者設計的指南，從硬件基礎到為什麼 Python 是理想的入門語言都有詳細說明。
-💻 What is a Computer? | 什麼是電腦？
-A computer is more than an advanced calculator—it’s an electronic device that manipulates data and performs arithmetic operations.電腦不僅僅是高級計算機，它是一種能夠處理資料並執行算術操作的電子設備。
-Unlike ancient tools like the abacus, modern computers are programmable and versatile.與古老的工具如算盤不同，現代電腦具有可編程性和多功能性。
-🧩 Von Neumann Architecture | 馮·諾依曼架構Most computers follow the Von Neumann architecture, which includes:大多數電腦遵循「馮·諾依曼架構」，包括：
-
-Input&#x2F;Output Devices: Read&#x2F;write data to&#x2F;from memory on CPU command.輸入&#x2F;輸出設備：根據 CPU 指令讀取或寫入記憶體資料。
-Examples: Keyboard (input), Monitor (output), Touchscreen (both).例子：鍵盤（輸入）、顯示器（輸出）、觸控螢幕（輸入與輸出）。
-
-
-Central Processing Unit (CPU): The “brain” of the computer.中央處理器（CPU）：電腦的「大腦」。
-Arithmetic and Logic Unit (ALU): Performs binary math operations.算術邏輯單元（ALU）：執行二進位數學運算。
-Control Unit (CU): Directs program execution.控制單元（CU）：指導程式執行流程。
-
-
-Main Memory: Stores data and instructions.主記憶體：儲存資料與指令。
-
-
-🧪 A CPU simulator in the original notes visualizes the fetch-decode-execute cycle.🧪 原教材中的 CPU 模擬器展示了「提取-解碼-執行」循環。
-
-🧠 What’s in a Computer? | 電腦的組成A CPU consists of several main components:一個 CPU 包含以下主要組件：
-
-
-Arithmetic Logic Unit (ALU): Performs arithmetic and logical operations.算術邏輯單元（ALU）：執行算術和邏輯運算。
-Control Unit (CU): Directs processor operations.控制單元（CU）：指導處理器的操作。
-Registers: Small, fast storage locations for temporary data and instructions.暫存器：用於暫時儲存資料和指令的小型高速儲存區。
-
-🗂️ Memory Types | 記憶體類型
-RAM (Random Access Memory): Volatile; holds data during execution.RAM（隨機存取記憶體）：揮發性；執行期間儲存資料。
-Subtypes: SRAM (fast), DRAM (cheap).子類型：SRAM（快速）、DRAM（便宜）。
-
-
-ROM (Read-Only Memory): Non-volatile; stores boot essentials.ROM（唯讀記憶體）：非揮發性；儲存開機所需資料。
-Subtypes: PROM, EPROM, EEPROM.子類型：PROM、EPROM、EEPROM。
-
-
-
-🧑‍💻 What is Programming? | 什麼是編程？Programming is the process of writing instructions for computers to perform tasks.編程是撰寫指令讓電腦執行特定任務的過程。
-It’s like giving step-by-step directions in a language the computer understands.就像用電腦能理解的語言提供逐步指示。
-🔣 Programming Languages | 編程語言Computers use binary (0s and 1s) for data and instructions.電腦使用 二進位（0 和 1） 來表示資料與指令。
-
-Example: Intel CPU addition → 00000011 00000100例子：Intel CPU 加法 → 00000011 00000100
-Why Binary? Reliable for electronic circuits (on&#x2F;off states).為什麼使用二進位？因為電子電路的開&#x2F;關狀態非常可靠。
-
-🕰️ Historical Note | 歷史小知識
-ENIAC (1940s): First electronic computer.ENIAC（1940年代）：第一台電子電腦。
-Used switches and inefficient decimal representation (10 bits &#x3D; 1024 values).使用開關並以低效方式表示十進位數字（10 位元 &#x3D; 1024 種可能）。
-
-
-
-📏 Standards for Representation | 資料表示標準
-ASCII: 8-bit codes for English characters (A &#x3D; 01000001)ASCII：8 位元英文字元編碼（如 ‘A’ &#x3D; 01000001）
-Unicode: Supports global languages (e.g., Chinese, Japanese)Unicode：支援全球語言（如中文、日文）
-Numbers:  
-2’s complement for negatives負數使用二的補數  
-IEEE floating-point for decimals小數使用 IEEE 浮點格式
-
-
-
-🧬 Generations of Programming Languages | 編程語言世代
-
-
-Generation
-Description
-Example
-
-
-
-1st
-Machine Language (binary)
-10101010
-
-
-第一代
-機器語言（二進位）
-10101010
-
-
-2nd
-Assembly Language (mnemonics)
-ADD, SUB
-
-
-第二代
-組合語言（助記符）
-ADD, SUB
-
-
-3rd
-High-Level Languages
-Python, Java, C++
-
-
-第三代
-高階語言（人類可讀）
-Python, Java, C++
-
-
-
-🧠 Assembly is still useful for microprocessors. A simulator demo compares assembly vs. high-level code.🧠 組合語言仍適用於微處理器等高效率場景。教材中有模擬器展示組合語言與高階語言的比較。
-
-🐍 Introduction to Python | Python 語言簡介Python is chosen for its:選擇 Python 的原因：
-
-Expressiveness: Write less, do more.表達力強：少量程式碼即可完成任務。
-Popularity: Rich libraries (math, AI, graphics).廣泛使用：擁有大量函式庫（數學、AI、圖形等）。
-Free &amp; Open-Source: No restrictions.免費且開源：無使用限制。
-Portability: Runs on multiple platforms.可移植性高：跨平台執行無需修改。
-
-🧪 Sample Python Program | Python 範例程式碼import datetime  # library to obtain current yearcohort = input(&quot;In which year did you join CityU? [e.g., 2020]&quot;)year = datetime.datetime.now().year - int(cohort) + 1print(&quot;So you are a year&quot;, year, &quot;student.&quot;)
-
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
-        <tag>CityU</tag>
-        <tag>Beginner</tag>
       </tags>
   </entry>
   <entry>
