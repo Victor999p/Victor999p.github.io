@@ -232,94 +232,6 @@ OLED 無顯示或亂碼：
       </tags>
   </entry>
   <entry>
-    <title>常用Python程式碼片段集合</title>
-    <url>/posts/a4367020.html</url>
-    <content><![CDATA[Switch to English Version 🇬🇧
-常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
-1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
-print(&quot;你好，世界！&quot;)
-說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：
-你好，世界！
-
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
-# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
-說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：
-水果：蘋果水果：香蕉水果：橙子水果：葡萄
-
-
-3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
-# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
-
-說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
-
-4. 檔案讀寫在Python中，讀寫檔案是常見任務。
-# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
-
-說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
----## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
-
-說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
----## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
-
-說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：&#96;&#96;&#96;text
-面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
-
-說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
----## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
-
-說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：
-&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
-
-
-9. 字串操作Python 提供強大的字串處理工具。
-text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
-
-說明：strip()、split() 和 join() 方法使字串處理變得簡單。
-
-10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
-# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
-
-說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
-
-11. 日期處理datetime 模組幫助處理日期和時間。
-from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
-
-說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：
-當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
-
-
-12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
-numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
-
-說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：
-[0, 1, 2][0, 2, 4]
-
-
-結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
-
-發布於 
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
-        <tag>CityU</tag>
-        <tag>Beginner</tag>
-        <tag>AI generate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -526,27 +438,91 @@ ConclusionThese Python snippets cover common tasks and demonstrate Python’s si
       </tags>
   </entry>
   <entry>
-    <title>Test 01</title>
-    <url>/posts/fe3551ce.html</url>
-    <content><![CDATA[Welcome to my blog!This is my first post using Hexo and the Butterfly theme.
-Why I started this blog
-To share my journey of self-improvement
-To document what I learn about technology
-To connect with like-minded people
+    <title>常用Python程式碼片段集合</title>
+    <url>/posts/a4367020.html</url>
+    <content><![CDATA[Switch to English Version 🇬🇧
+常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
+1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
+print(&quot;你好，世界！&quot;)
+說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
+執行結果：
+你好，世界！
 
-def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
+# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
+說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：
+水果：蘋果水果：香蕉水果：橙子水果：葡萄
 
-Output:
-Hello, Hexo + Butterfly + Python!
-Stay tuned for more updates!
-test 123
+
+3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
+# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
+說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
+
+4. 檔案讀寫在Python中，讀寫檔案是常見任務。
+# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+
+說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
+執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
+---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+
+說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
+執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
+---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+
+說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
+執行結果：&#96;&#96;&#96;text
+面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+
+說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
+執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
+---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+
+說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
+執行結果：
+&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
+
+9. 字串操作Python 提供強大的字串處理工具。
+text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+
+說明：strip()、split() 和 join() 方法使字串處理變得簡單。
+
+10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
+# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+
+說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
+
+11. 日期處理datetime 模組幫助處理日期和時間。
+from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+
+說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
+執行結果（假設當前時間為 2025-08-30 17:31:05）：
+當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
+
+12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
+numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+
+說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
+執行結果：
+[0, 1, 2][0, 2, 4]
+
+
+結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+
+發布於 
 ]]></content>
       <categories>
-        <category>Test</category>
+        <category>Programming</category>
       </categories>
       <tags>
-        <tag>introduction</tag>
-        <tag>first</tag>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+        <tag>AI generate</tag>
       </tags>
   </entry>
   <entry>
@@ -703,11 +679,173 @@ Use 03_predict_dna.py followed by 04_structural_check.py to analyze new sequence
         <category>Education</category>
         <category>Biomedical Engineering</category>
         <category>Bioinformatics</category>
-        <category>cs4426</category>
+        <category>CS4425</category>
       </categories>
       <tags>
         <tag>Bioinfometics</tag>
         <tag>Biomedical Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test 01</title>
+    <url>/posts/fe3551ce.html</url>
+    <content><![CDATA[Welcome to my blog!This is my first post using Hexo and the Butterfly theme.
+Why I started this blog
+To share my journey of self-improvement
+To document what I learn about technology
+To connect with like-minded people
+
+def hello():    print(&quot;Hello, Hexo + Butterfly !&quot;)
+
+Output:
+Hello, Hexo + Butterfly + Python!
+Stay tuned for more updates!
+test 123
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>introduction</tag>
+        <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>📚 CS4465 Computational Biology and Bioinformatics — Ultimate Study Guide</title>
+    <url>/posts/bf16a5c.html</url>
+    <content><![CDATA[🧬 1. Introduction to Molecular Biology | 分子生物學入門Body Structure Hierarchy | 身體結構層次Body → Organs → Tissues → Cells(身體 → 器官 → 組織 → 細胞)
+Key Molecules | 關鍵分子
+DNA: Stores genetic info. (儲存遺傳信息)
+RNA: Intermediate between DNA and proteins. (DNA 同蛋白質之間嘅中介)
+Protein: Performs chemical reactions. (執行化學反應)
+
+Central Dogma | 分子生物學中心教條DNA →Transcription\xrightarrow{\text{Transcription}}Transcription​ mRNA →Translation\xrightarrow{\text{Translation}}Translation​ Protein
+
+Transcription (轉錄): DNA 變 mRNA。
+Translation (翻譯): mRNA 變蛋白質。
+
+
+[!TIP]💡 Memory Master (廣東話口訣):「一條龍服務」: DNA 係藍圖 (Blueprint)，RNA 係影印本 (Photocopy)，Protein 係製成品 (Product)。
+
+
+🔍 2. Sequence Similarity and Alignment | 序列比對Needleman-Wunsch (Global Alignment) | 全域比對Align entire sequences. (成條序列由頭到尾對齊)
+
+Recurrence: V(i,j)=max⁡{Diagonal + match, Up + gap, Left + gap}V(i,j) = \max \{ \text{Diagonal + match, Up + gap, Left + gap} \}V(i,j)=max{Diagonal + match, Up + gap, Left + gap}
+
+Smith-Waterman (Local Alignment) | 區域比對Align subsequences with highest similarity. (淨係搵最似嗰段嚟比對)
+
+Key: Adds a 0 to the max function (No negative scores).
+
+
+[!TIP]💡 Memory Master (廣東話口訣):
+
+Needleman-Wunsch: 「全份做晒」。似考 Essay，由頭寫到尾，一格都唔放過。
+Smith-Waterman: 「重點觀察」。似睇重點，唔好嘅地方直接俾 0 分唔計，淨係睇最夾嗰段。
+
+
+
+🔎 3. Database Search (BLAST) | 數據庫搜索BLAST: Heuristic search (Fast but not 100% optimal).(啟發式搜索：快，但未必係最準，係「攞個大概」。)
+BLAST Variants | BLAST 版本
+Blastp: Protein →\to→ Protein
+Blastn: DNA →\to→ DNA
+Blastx: Translated DNA →\to→ Protein
+
+
+[!TIP]💡 Memory Master (廣東話口訣):「快閃搜尋」: BLAST &#x3D; Be Like A Speedy Tool。用 E-value 嚟睇結果，「E 值越細，緣份越深」（愈細越 Significant）。
+
+
+🧩 4. Multiple Sequence Alignment (MSA) | 多序列比對Methods | 方法
+Center Star: Choose a “star” sequence and align others to it. (搵一個中心點，其他圍住佢嚟對)
+ClustalW: Progressive alignment using a tree. (由親戚開始，一對對咁加上去)
+MUSCLE: Iterative refinement. (做完一次再執，執到最靚為止)
+
+
+[!TIP]💡 Memory Master (廣東話口訣):「排隊排齊」: Center Star 係「排隊跟大佬」，ClustalW 係「逐個加入」，MUSCLE 係「執完又執」。
+
+
+🌳 5. Phylogeny Reconstruction | 系統發育重建Methods | 方法
+Maximum Parsimony: Minimum mutations (The simplest explanation is best).
+(最簡約法：搵最少變異嘅樹，最簡單就係最好。)
+
+
+UPGMA: Distance-based, assumes constant rate (Molecular clock).
+(距離法：次次攞平均值去合體。)
+
+
+
+
+[!TIP]💡 Memory Master (廣東話口訣):「搵祖宗」: Parsimony 係「慳得就慳」（少變異），UPGMA 係「夾份攞平均」（平均分）。
+
+
+🔍 6. Motif Discovery | 基序發現Motifs: Short conserved patterns (Transcription factor binding sites).(基序：DNA 入面一啲短而保守嘅模式，通常係蛋白質開關嘅位置。)
+Gibbs Sampling | 吉布斯採樣Iterative probabilistic sampling to find motifs.(隨機抽樣：每次抽一條出嚟重新估計，直到搵到最似樣嘅 Motif。)
+
+[!TIP]💡 Memory Master (廣東話口訣):「抽獎搵 Pattern」: Gibbs Sampling 似抽籤，抽吓抽吓就搵到隱藏嘅規律。
+
+
+🧬 7. RNA Secondary Structure | RNA 次級結構Nussinov AlgorithmMaximize base pairs (A-U, G-C). (目標：令到最多鹼基可以成功配對)
+
+[!TIP]💡 Memory Master (廣東話口訣):「連連看」: RNA 係一條繩，Nussinov 就係幫佢搵最多「另一半」嚟配對，記住要用 Stack (疊羅漢) 嚟做 Traceback。
+
+
+🧩 8. Protein Structure &amp; Prediction | 蛋白質結構與預測Classification | 分類
+Pfam: Families.
+SCOP&#x2F;CATH: Hierarchical (Class, Architecture, Topology, etc.).
+
+Prediction | 預測
+Homology Modeling: Needs a template. (有模板跟住做)
+Ab Initio (Rosetta): From scratch. (無模板，由零開始砌)
+AlphaFold2: Deep learning (The current King).
+
+
+[!TIP]💡 Memory Master (廣東話口訣):「照抄 vs 盲摸」: Homology 係「照抄」（跟 Template），Ab Initio 係「盲摸摸」（Rosetta 逐塊拼），AlphaFold2 係「人工智能大師」。
+
+
+📊 Summary Table | 總結表
+
+
+Topic 課題
+Algorithm 算法
+Key Idea 核心思想
+
+
+
+Alignment
+Needleman-Wunsch
+Global &amp; Optimal (全域最優)
+
+
+Search
+BLAST
+Fast Heuristic (快閃啟發)
+
+
+Phylogeny
+UPGMA
+Averaging Distances (攞平均值)
+
+
+RNA
+Nussinov
+Maximize Base Pairs (配對最大化)
+
+
+Protein
+AlphaFold2
+Deep Learning (最強 AI)
+
+
+
+]]></content>
+      <categories>
+        <category>University</category>
+        <category>Biomedical_Engineering</category>
+      </categories>
+      <tags>
+        <tag>Bioinformatics</tag>
+        <tag>Algorithms</tag>
+        <tag>CS4465</tag>
+        <tag>Study_Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -3126,6 +3264,123 @@ Prevention and treatment of infection
       </tags>
   </entry>
   <entry>
+    <title>Biomaterials-Outline | 生物材料-大綱</title>
+    <url>/posts/a5063481.html</url>
+    <content><![CDATA[Biomaterials-Outline | 生物材料-大綱Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
+Topics Covered | 涵蓋主題 :
+Definition of Biomaterials | 生物材料的定義
+Characteristics of four generations | 四個世代的特徵
+Major market shares | 主要市場份額
+Requirements of biomaterials | 生物材料的要求
+Major types and their pros and cons | 主要類型及其優缺點
+Forces in biomaterials | 生物材料中的作用力
+Three aspects in biomaterials | 生物材料的三個方面
+Restenosis | 再狹窄
+Need of selection and processing of biomaterials | 生物材料選擇與加工的需求
+
+
+
+Lecture 2: Structure and Properties of Biomaterials | 第二講：生物材料的結構與性質
+Topics Covered | 涵蓋主題:
+Atomic Structure and Bonding | 原子結構與鍵結
+Crystalline and Amorphous Structures | 晶體與非晶體結構
+Mechanical Properties | 機械性質
+Thermal Properties | 熱性質
+Electrical Properties | 電性質
+Optical Properties | 光學性質
+Magnetic Properties | 磁性質
+Surface Properties and Modifications | 表面性質與改性
+
+
+
+Lecture 3: Polymers and Hydrogels | 聚合物和水凝膠
+Topics Covered | 涵蓋主題:
+Definition of Polymer | 聚合物的定義
+Equilibrium Swelling Theory | 平衡膨脹理論
+Calculation of Swelling Ratio | 膨脹比率的計算
+Mesh Size | 網格尺寸
+Chemical and Physical Hydrogels; Their Difference in Swelling Ratio and Mesh Size and Strength | 化學與物理水凝膠；其膨脹比率、網格尺寸和強度的差異
+Lower Critical Solution Temperature | 較低臨界溶液溫度
+Advantages of Hydrogel for Biomedical Applications | 水凝膠在生物醫學應用中的優勢
+Representative Bioapplications of Hydrogel | 水凝膠的代表性生物應用
+Degradation of Hydrogel | 水凝膠的降解
+
+
+
+Lecture 4: Ceramics and Metals | 陶瓷與金屬
+Topics Covered | 涵蓋主題:
+Advantages of ceramics and metals for medical implants | 醫用植入物中陶瓷和金屬的優勢
+Composition of Bone | 骨的組成
+Three types of ceramics in biomaterials and their differences | 生物材料中三種陶瓷及其區別
+Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的區別
+Hydroxyapatite and its properties and applications | 羥基磷灰石的性質與應用
+Solid state sintering | 固態燒結
+Basic properties of metals | 金屬的基本性質
+Relative elastic modulus of different biomaterials | 不同生物材料的彈性模量比較
+Criteria for orthopaedic implant and choices of materials | 骨科植入物的標準及材料選擇
+Comparison of three types of metals as orthopaedic implant | 三種金屬作為骨科植入物的比較
+Corrosion of metallic implants and solutions | 金屬植入物的腐蝕及解決方案
+
+
+
+Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料
+Topics Covered | 涵蓋主題:
+Nanomaterials | 奈米材料
+Gold Nanoparticles (AuNPs) | 金奈米粒子
+Quantum Dots (QDs) | 量子點
+Liposomes &amp; Lipid Nanoparticles (LNPs) | 脂質體與脂質奈米粒子
+
+
+Fabrication Techniques | 製造技術
+Synthesis Methods | 合成方法
+Surface Engineering | 表面工程
+
+
+Biomedical Applications | 生物醫學應用
+Principles of Nanomedicine | 奈米醫學原理
+Gene Therapy &amp; Delivery | 基因療法與傳遞
+
+
+
+
+
+Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估
+Topics Covered | 涵蓋主題:
+Tissue or host responses to injury:
+Implant material-tissue interaction | 植入材料-組織相互作用
+Coagulation | 凝血
+Inflammation | 發炎
+Angiogenesis | 血管生成
+Granulation tissue formation | 肉芽組織形成
+Foreign body reaction | 異物反應
+Tissue fibrosis | 組織纖維化
+Wound remodeling | 傷口重塑
+
+
+Biofilms:
+Bacterial in biofilm | 生物膜中的細菌
+Biofilm development | 生物膜發展
+Device&#x2F;implant related infection | 器械&#x2F;植入物相關感染
+Infection detection | 感染檢測
+Prevention and treatment of infection | 感染的預防與治療
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomedical Engineering</tag>
+        <tag>Biomaterials</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Biomaterials-5 | 生物材料-5</title>
     <url>/posts/8f57aec0.html</url>
     <content><![CDATA[Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料Back to Outline | 回到大綱🧭 Lecture Outline | 課程大綱
@@ -3700,123 +3955,6 @@ Target cells: APCs such as dendritic cells and Langerhans cells translate the mR
       </tags>
   </entry>
   <entry>
-    <title>Biomaterials-Outline | 生物材料-大綱</title>
-    <url>/posts/a5063481.html</url>
-    <content><![CDATA[Biomaterials-Outline | 生物材料-大綱Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
-Topics Covered | 涵蓋主題 :
-Definition of Biomaterials | 生物材料的定義
-Characteristics of four generations | 四個世代的特徵
-Major market shares | 主要市場份額
-Requirements of biomaterials | 生物材料的要求
-Major types and their pros and cons | 主要類型及其優缺點
-Forces in biomaterials | 生物材料中的作用力
-Three aspects in biomaterials | 生物材料的三個方面
-Restenosis | 再狹窄
-Need of selection and processing of biomaterials | 生物材料選擇與加工的需求
-
-
-
-Lecture 2: Structure and Properties of Biomaterials | 第二講：生物材料的結構與性質
-Topics Covered | 涵蓋主題:
-Atomic Structure and Bonding | 原子結構與鍵結
-Crystalline and Amorphous Structures | 晶體與非晶體結構
-Mechanical Properties | 機械性質
-Thermal Properties | 熱性質
-Electrical Properties | 電性質
-Optical Properties | 光學性質
-Magnetic Properties | 磁性質
-Surface Properties and Modifications | 表面性質與改性
-
-
-
-Lecture 3: Polymers and Hydrogels | 聚合物和水凝膠
-Topics Covered | 涵蓋主題:
-Definition of Polymer | 聚合物的定義
-Equilibrium Swelling Theory | 平衡膨脹理論
-Calculation of Swelling Ratio | 膨脹比率的計算
-Mesh Size | 網格尺寸
-Chemical and Physical Hydrogels; Their Difference in Swelling Ratio and Mesh Size and Strength | 化學與物理水凝膠；其膨脹比率、網格尺寸和強度的差異
-Lower Critical Solution Temperature | 較低臨界溶液溫度
-Advantages of Hydrogel for Biomedical Applications | 水凝膠在生物醫學應用中的優勢
-Representative Bioapplications of Hydrogel | 水凝膠的代表性生物應用
-Degradation of Hydrogel | 水凝膠的降解
-
-
-
-Lecture 4: Ceramics and Metals | 陶瓷與金屬
-Topics Covered | 涵蓋主題:
-Advantages of ceramics and metals for medical implants | 醫用植入物中陶瓷和金屬的優勢
-Composition of Bone | 骨的組成
-Three types of ceramics in biomaterials and their differences | 生物材料中三種陶瓷及其區別
-Difference between biocompatibility, bioactivity and biodegradability | 生物相容性、生物活性和生物可降解性的區別
-Hydroxyapatite and its properties and applications | 羥基磷灰石的性質與應用
-Solid state sintering | 固態燒結
-Basic properties of metals | 金屬的基本性質
-Relative elastic modulus of different biomaterials | 不同生物材料的彈性模量比較
-Criteria for orthopaedic implant and choices of materials | 骨科植入物的標準及材料選擇
-Comparison of three types of metals as orthopaedic implant | 三種金屬作為骨科植入物的比較
-Corrosion of metallic implants and solutions | 金屬植入物的腐蝕及解決方案
-
-
-
-Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料
-Topics Covered | 涵蓋主題:
-Nanomaterials | 奈米材料
-Gold Nanoparticles (AuNPs) | 金奈米粒子
-Quantum Dots (QDs) | 量子點
-Liposomes &amp; Lipid Nanoparticles (LNPs) | 脂質體與脂質奈米粒子
-
-
-Fabrication Techniques | 製造技術
-Synthesis Methods | 合成方法
-Surface Engineering | 表面工程
-
-
-Biomedical Applications | 生物醫學應用
-Principles of Nanomedicine | 奈米醫學原理
-Gene Therapy &amp; Delivery | 基因療法與傳遞
-
-
-
-
-
-Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估
-Topics Covered | 涵蓋主題:
-Tissue or host responses to injury:
-Implant material-tissue interaction | 植入材料-組織相互作用
-Coagulation | 凝血
-Inflammation | 發炎
-Angiogenesis | 血管生成
-Granulation tissue formation | 肉芽組織形成
-Foreign body reaction | 異物反應
-Tissue fibrosis | 組織纖維化
-Wound remodeling | 傷口重塑
-
-
-Biofilms:
-Bacterial in biofilm | 生物膜中的細菌
-Biofilm development | 生物膜發展
-Device&#x2F;implant related infection | 器械&#x2F;植入物相關感染
-Infection detection | 感染檢測
-Prevention and treatment of infection | 感染的預防與治療
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Biomaterials(BME3123)</category>
-      </categories>
-      <tags>
-        <tag>Biomedical Engineering</tag>
-        <tag>Biomaterials</tag>
-        <tag>Lecture Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HW1 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/1775fd89.html</url>
     <content><![CDATA[Homework 1In this homework set, you will work with a set of Visual Evoked Response (VER) data. The VER is an EEG signal recorded near the visual cortex following a visual stimulus, like a flash of light. The individual recordings contain a significant amount of noise, thus we will be using ensemble averaging to reduce the noise and enhance the signal response.
@@ -4303,6 +4441,156 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
       </tags>
   </entry>
   <entry>
+    <title>BME 2104 Tissue Engineering – Overview</title>
+    <url>/posts/74ab02e4.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – OverviewLecture 1: 基礎概念
+TE定義 (Definition) 🔴
+用工程同生命科學嘅原理，整啲 生物替代物 (Biological substitutes) 出嚟，去修復、維持或者改善組織功能。
+
+
+歷史與里程碑 (History &amp; Milestones) 🔴
+1993年：Langer 同 Vacanti 篇經典論文。
+
+
+三大工具與策略 (3 Tools &amp; Strategies) 🔴
+細胞 (Cells) - 有生命嘅部分。
+支架&#x2F;材料 (Scaffolds&#x2F;Materials) - 三維結構。
+生長信號&#x2F;因子 (Growth signals&#x2F;factors) - 控制細胞行為。
+
+
+移植類型 (Transplant Types) 🔵
+自體 (Autologous) - 用自己嘢，冇排斥，但數量有限。
+同種異體 (Allogeneic) - 用第二個人嘅嘢，有排斥風險。
+異種 (Xenogeneic) - 用動物嘢，排斥反應好勁。
+
+
+技術挑戰 (Technical Challenges) 🟢
+血管生成 (Vascularization)、免疫排斥 (Immune rejection)、神經連接 (Innervation)。
+
+
+皮膚應用 (Skin Applications) 🔵
+分層：表皮 (Epidermis)、真皮 (Dermis)。
+產品例子：Apligraf、Dermagraft。
+
+
+軟骨應用 (Cartilage Applications) 🔵
+軟骨係 冇血管 (Avascular)，好難自己修復。
+常用細胞：軟骨細胞 (Chondrocytes)、間充質幹細胞 (Mesenchymal stem cells)。
+
+
+先進技術 (Advanced Tech) 🔵
+3D生物打印 (3D bioprinting) - 精準控制結構。
+器官晶片 (Organ-on-a-Chip) - 用微流體 (Microfluidics) 模仿器官功能。
+
+
+
+
+Lecture 2: 細胞與生物材料
+Stem Cells 幹細胞 🔴
+Embryonic stem cells (ESC) 胚胎幹細胞: 乜都能變 (Pluripotent)。
+Mesenchymal stem cells (MSC) 間充質幹細胞: 可以變骨、軟骨、脂肪 (Multipotent)。
+
+
+Biocompatibility 生物相容性 🟢: 材料唔可以引起毒性 (Toxicity) 或者有害反應 (Adverse reaction)。
+Bioreactors 生物反應器 🔵: 用嚟大規模培養細胞同組織嘅設備，可以控制環境 (例如pH、氧氣、流體剪切力 Fluid shear stress)。
+
+
+Lecture 3: 發育生物學
+Germ Layers 胚層 🔴
+外胚層 (Ectoderm): 變表皮、神經系統。
+中胚層 (Mesoderm): 變肌肉、骨、血液、血管。
+內胚層 (Endoderm): 變肺、肝、腸等內臟。
+
+
+Epithelial-Mesenchymal Transition (EMT) 上皮-間質轉化 🟢: 上皮細胞失去黏附性，變成可以遷移 (Migrate) 嘅間質細胞，對發育同癌症好重要。
+Extracellular Matrix (ECM) 細胞外基質 🔴
+主要成分：膠原蛋白 (Collagen) (提供強度)、蛋白聚糖 (Proteoglycans) (好似海綿，保持水分)。
+
+
+
+
+Lecture 4: 細胞信號與黏附
+Fibronectin 纖連蛋白 &amp; RGD Sequence (Arg-Gly-Asp) 🔴: 細胞點樣黐喺ECM上面，主要靠RGD呢個三肽序列。
+Focal Adhesions 黏著斑 in 2D vs 3D 🔵: 2D環境下黏著斑大而穩定；3D環境下細而動態，更似真實情況。
+Cell Migration 細胞遷移 &amp; Chemotaxis 趨化性 🟢: 細胞跟住化學信號梯度 (Chemical gradient) 移動。
+Signal Transduction 信號轉導 🔴: 過程係 配體(Ligand) → 受體(Receptor) → 信號傳遞(Signaling cascade) → 細胞反應(Cellular response)。
+G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體 🟢: 一大類受體，激活後會影響細胞內第二信使 (Second messengers)。
+Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 🟢: 另一大類受體，激活後會啟動 MAPK pathway 等重要途徑，影響細胞生長、分化。
+Mechanotransduction 機械轉導 🔵: 細胞點樣將 機械力 (Mechanical force) (例如拉扯、壓力) 轉化成 生化信號 (Biochemical signals)。
+
+
+Lecture 5: 機械生物學與支架
+Tensegrity Model 張拉整體模型 🔴: 解釋細胞骨架 (Cytoskeleton) 好似一個張拉結構，將外力傳遍成個細胞。
+Integrins 整合素 🔴: 係最主要嘅 機械感受器 (Mechanoreceptors) 同黏附分子，連接細胞內部同外部ECM。
+Effect of Mechanical Forces on Differentiation 機械力對分化嘅影響 🔵: 基質硬度 (Matrix stiffness) 可以直接影響幹細胞變成乜嘢細胞 (例如，硬基質傾向變骨細胞)。
+Scaffold Requirements 支架要求 🟢:
+生物相容性 (Biocompatible)
+有適當孔隙 (Porous) 俾細胞生長同營養運輸
+降解速度要匹配組織生長速度 (Degradable)
+
+
+Types of Scaffolds 支架類型 🔴:
+Bioinert 生物惰性: 唔同身體反應，例如用喺髖關節置換嘅鈦金屬。
+Bioactive 生物活性: 會同身體互動，促進組織結合，例如羟基磷灰石 (Hydroxyapatite)。
+Bioresorbable 生物可吸收: 完成任務後會俾身體分解吸收，例如PLGA聚合物。
+
+
+Scaffold Materials 支架材料 🔵:
+天然 (Natural): 膠原蛋白、海藻酸鹽 (Alginate)。優點：生物活性好；缺點：力學性能弱、批次差異大。
+合成 (Synthetic): PLA, PGA, PLGA。優點：力學可控、降解可調；缺點：缺乏生物識別位點 (Lack bio-recognition sites)。
+
+
+
+
+Lecture 6: 聚合物科學與3D培養
+Polymer Basics 聚合物基礎 🔴: 單體 (Monomer) 聚合 (Polymerize) 成 聚合物 (Polymer)。
+Hydrogels 水凝膠 🔵: 交聯嘅親水聚合物網絡，可以鎖住大量水分。用於 細胞封裝 (Cell encapsulation)。
+3D vs 2D Cell Culture 3D與2D細胞培養比較 🔵:
+2D: 細胞平鋪生長，行為不自然，但操作簡單。
+3D: 細胞在立體環境生長，更似體內情況，細胞信號、機械力、分化都更準確。
+
+
+Natural Polymer Examples 天然聚合物例子 🔴: 膠原蛋白 (Collagen)、纖維蛋白 (Fibrin)、透明質酸 (Hyaluronic acid)。
+
+
+Lecture 7: 生物製造與臨床挑戰
+Classic Scaffold Fabrication 傳統支架製備技術 🔵:
+Solvent Casting &amp; Particulate Leaching 溶劑澆鑄-粒子浸出: 用鹽粒做孔，溶解後留低孔隙。優點：易控制孔隙率；缺點：用有機溶劑 (Organic solvent)。
+Gas Foaming 氣體發泡: 用高壓氣體整出氣孔。優點：唔使溶劑；缺點：可能形成閉孔 (Closed pores)。
+Freeze-Drying 冷凍乾燥: 水溶液結冰後昇華 (Sublimation) 留低孔隙。優點：適合熱敏感材料；缺點：可能結構不均勻。
+
+
+Advanced Biofabrication 先進生物製造 🔵:
+Electrospinning 靜電紡絲: 整出納米纖維 (Nanofibers)，模仿天然ECM結構。
+3D Bioprinting 3D生物打印: 將細胞同材料一齊精確打印。
+Decellularization 脫細胞: 將捐贈組織嘅細胞洗走，留低天然嘅ECM支架。
+
+
+Bioreactors 生物反應器 🔵: 動態培養系統，可以施加 流體剪切力 (Fluid shear stress)、壓縮力 (Compression) 等，促進組織成熟。
+Host Response 宿主反應 🟢:
+植入後會引發炎症 (Inflammation)。
+如果材料生物相容性差或降解產物有刺激，可能會發展成纖維化&#x2F;疤痕包裹 (Fibrosis&#x2F;Scar encapsulation)，隔離植入物，導致功能失敗。
+
+
+Immunoisolation 免疫隔離 🔵:
+用半透膜 (Semi-permeable membrane) 包住移植嘅細胞，容許營養同廢物交換，但阻止免疫細胞同抗體進入攻擊細胞。
+應用：治療糖尿病嘅 封裝胰島細胞療法 (Encapsulated islet cell therapy)。
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Tissue Engineering</category>
+      </categories>
+      <tags>
+        <tag>biomedical engineering</tag>
+        <tag>Exam Notes</tag>
+        <tag>Tissue Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HW3 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/a776c643.html</url>
     <content><![CDATA[Signal Analysis: Even and Odd Components and Periodicity | 信號分析：偶數與奇數分量及週期性Background Concepts | 背景概念Even and Odd Components | 偶數與奇數分量For a continuous-time signal x(t) x(t) x(t):
@@ -4480,903 +4768,6 @@ Periodic | 週期性: No | 否
         <tag>biomedical engineering</tag>
         <tag>Homework</tag>
         <tag>Signals and Systems</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BME 2104 Tissue Engineering – Overview</title>
-    <url>/posts/74ab02e4.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – OverviewLecture 1: 基礎概念
-TE定義 (Definition) 🔴
-用工程同生命科學嘅原理，整啲 生物替代物 (Biological substitutes) 出嚟，去修復、維持或者改善組織功能。
-
-
-歷史與里程碑 (History &amp; Milestones) 🔴
-1993年：Langer 同 Vacanti 篇經典論文。
-
-
-三大工具與策略 (3 Tools &amp; Strategies) 🔴
-細胞 (Cells) - 有生命嘅部分。
-支架&#x2F;材料 (Scaffolds&#x2F;Materials) - 三維結構。
-生長信號&#x2F;因子 (Growth signals&#x2F;factors) - 控制細胞行為。
-
-
-移植類型 (Transplant Types) 🔵
-自體 (Autologous) - 用自己嘢，冇排斥，但數量有限。
-同種異體 (Allogeneic) - 用第二個人嘅嘢，有排斥風險。
-異種 (Xenogeneic) - 用動物嘢，排斥反應好勁。
-
-
-技術挑戰 (Technical Challenges) 🟢
-血管生成 (Vascularization)、免疫排斥 (Immune rejection)、神經連接 (Innervation)。
-
-
-皮膚應用 (Skin Applications) 🔵
-分層：表皮 (Epidermis)、真皮 (Dermis)。
-產品例子：Apligraf、Dermagraft。
-
-
-軟骨應用 (Cartilage Applications) 🔵
-軟骨係 冇血管 (Avascular)，好難自己修復。
-常用細胞：軟骨細胞 (Chondrocytes)、間充質幹細胞 (Mesenchymal stem cells)。
-
-
-先進技術 (Advanced Tech) 🔵
-3D生物打印 (3D bioprinting) - 精準控制結構。
-器官晶片 (Organ-on-a-Chip) - 用微流體 (Microfluidics) 模仿器官功能。
-
-
-
-
-Lecture 2: 細胞與生物材料
-Stem Cells 幹細胞 🔴
-Embryonic stem cells (ESC) 胚胎幹細胞: 乜都能變 (Pluripotent)。
-Mesenchymal stem cells (MSC) 間充質幹細胞: 可以變骨、軟骨、脂肪 (Multipotent)。
-
-
-Biocompatibility 生物相容性 🟢: 材料唔可以引起毒性 (Toxicity) 或者有害反應 (Adverse reaction)。
-Bioreactors 生物反應器 🔵: 用嚟大規模培養細胞同組織嘅設備，可以控制環境 (例如pH、氧氣、流體剪切力 Fluid shear stress)。
-
-
-Lecture 3: 發育生物學
-Germ Layers 胚層 🔴
-外胚層 (Ectoderm): 變表皮、神經系統。
-中胚層 (Mesoderm): 變肌肉、骨、血液、血管。
-內胚層 (Endoderm): 變肺、肝、腸等內臟。
-
-
-Epithelial-Mesenchymal Transition (EMT) 上皮-間質轉化 🟢: 上皮細胞失去黏附性，變成可以遷移 (Migrate) 嘅間質細胞，對發育同癌症好重要。
-Extracellular Matrix (ECM) 細胞外基質 🔴
-主要成分：膠原蛋白 (Collagen) (提供強度)、蛋白聚糖 (Proteoglycans) (好似海綿，保持水分)。
-
-
-
-
-Lecture 4: 細胞信號與黏附
-Fibronectin 纖連蛋白 &amp; RGD Sequence (Arg-Gly-Asp) 🔴: 細胞點樣黐喺ECM上面，主要靠RGD呢個三肽序列。
-Focal Adhesions 黏著斑 in 2D vs 3D 🔵: 2D環境下黏著斑大而穩定；3D環境下細而動態，更似真實情況。
-Cell Migration 細胞遷移 &amp; Chemotaxis 趨化性 🟢: 細胞跟住化學信號梯度 (Chemical gradient) 移動。
-Signal Transduction 信號轉導 🔴: 過程係 配體(Ligand) → 受體(Receptor) → 信號傳遞(Signaling cascade) → 細胞反應(Cellular response)。
-G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體 🟢: 一大類受體，激活後會影響細胞內第二信使 (Second messengers)。
-Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 🟢: 另一大類受體，激活後會啟動 MAPK pathway 等重要途徑，影響細胞生長、分化。
-Mechanotransduction 機械轉導 🔵: 細胞點樣將 機械力 (Mechanical force) (例如拉扯、壓力) 轉化成 生化信號 (Biochemical signals)。
-
-
-Lecture 5: 機械生物學與支架
-Tensegrity Model 張拉整體模型 🔴: 解釋細胞骨架 (Cytoskeleton) 好似一個張拉結構，將外力傳遍成個細胞。
-Integrins 整合素 🔴: 係最主要嘅 機械感受器 (Mechanoreceptors) 同黏附分子，連接細胞內部同外部ECM。
-Effect of Mechanical Forces on Differentiation 機械力對分化嘅影響 🔵: 基質硬度 (Matrix stiffness) 可以直接影響幹細胞變成乜嘢細胞 (例如，硬基質傾向變骨細胞)。
-Scaffold Requirements 支架要求 🟢:
-生物相容性 (Biocompatible)
-有適當孔隙 (Porous) 俾細胞生長同營養運輸
-降解速度要匹配組織生長速度 (Degradable)
-
-
-Types of Scaffolds 支架類型 🔴:
-Bioinert 生物惰性: 唔同身體反應，例如用喺髖關節置換嘅鈦金屬。
-Bioactive 生物活性: 會同身體互動，促進組織結合，例如羟基磷灰石 (Hydroxyapatite)。
-Bioresorbable 生物可吸收: 完成任務後會俾身體分解吸收，例如PLGA聚合物。
-
-
-Scaffold Materials 支架材料 🔵:
-天然 (Natural): 膠原蛋白、海藻酸鹽 (Alginate)。優點：生物活性好；缺點：力學性能弱、批次差異大。
-合成 (Synthetic): PLA, PGA, PLGA。優點：力學可控、降解可調；缺點：缺乏生物識別位點 (Lack bio-recognition sites)。
-
-
-
-
-Lecture 6: 聚合物科學與3D培養
-Polymer Basics 聚合物基礎 🔴: 單體 (Monomer) 聚合 (Polymerize) 成 聚合物 (Polymer)。
-Hydrogels 水凝膠 🔵: 交聯嘅親水聚合物網絡，可以鎖住大量水分。用於 細胞封裝 (Cell encapsulation)。
-3D vs 2D Cell Culture 3D與2D細胞培養比較 🔵:
-2D: 細胞平鋪生長，行為不自然，但操作簡單。
-3D: 細胞在立體環境生長，更似體內情況，細胞信號、機械力、分化都更準確。
-
-
-Natural Polymer Examples 天然聚合物例子 🔴: 膠原蛋白 (Collagen)、纖維蛋白 (Fibrin)、透明質酸 (Hyaluronic acid)。
-
-
-Lecture 7: 生物製造與臨床挑戰
-Classic Scaffold Fabrication 傳統支架製備技術 🔵:
-Solvent Casting &amp; Particulate Leaching 溶劑澆鑄-粒子浸出: 用鹽粒做孔，溶解後留低孔隙。優點：易控制孔隙率；缺點：用有機溶劑 (Organic solvent)。
-Gas Foaming 氣體發泡: 用高壓氣體整出氣孔。優點：唔使溶劑；缺點：可能形成閉孔 (Closed pores)。
-Freeze-Drying 冷凍乾燥: 水溶液結冰後昇華 (Sublimation) 留低孔隙。優點：適合熱敏感材料；缺點：可能結構不均勻。
-
-
-Advanced Biofabrication 先進生物製造 🔵:
-Electrospinning 靜電紡絲: 整出納米纖維 (Nanofibers)，模仿天然ECM結構。
-3D Bioprinting 3D生物打印: 將細胞同材料一齊精確打印。
-Decellularization 脫細胞: 將捐贈組織嘅細胞洗走，留低天然嘅ECM支架。
-
-
-Bioreactors 生物反應器 🔵: 動態培養系統，可以施加 流體剪切力 (Fluid shear stress)、壓縮力 (Compression) 等，促進組織成熟。
-Host Response 宿主反應 🟢:
-植入後會引發炎症 (Inflammation)。
-如果材料生物相容性差或降解產物有刺激，可能會發展成纖維化&#x2F;疤痕包裹 (Fibrosis&#x2F;Scar encapsulation)，隔離植入物，導致功能失敗。
-
-
-Immunoisolation 免疫隔離 🔵:
-用半透膜 (Semi-permeable membrane) 包住移植嘅細胞，容許營養同廢物交換，但阻止免疫細胞同抗體進入攻擊細胞。
-應用：治療糖尿病嘅 封裝胰島細胞療法 (Encapsulated islet cell therapy)。
-
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Tissue Engineering</category>
-      </categories>
-      <tags>
-        <tag>biomedical engineering</tag>
-        <tag>Exam Notes</tag>
-        <tag>Tissue Engineering</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BME 2104 Tissue Engineering – 1 </title>
-    <url>/posts/83d538e2.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – 1Exam Overview
-Exam date &amp; duration: Mid-December 2025 (likely 7-19 Dec), 2-3 hours  
-Top 8 topics that appear every year: Definitions of TE, History &amp; Pioneers, Strategies&#x2F;Tools, Technical Challenges, Transplant Types, Skin Applications, Cartilage Applications, Advanced Tech (e.g., 3D Printing)  
-Colour code: 🔴 Memorise | 🟢 Understand | 🔵 Apply
-
-BME 2104 組織工程 Tissue Engineering – Final Revision Notes（中英對照版）Overview
-TE定義 Definition  
-歷史與里程碑 History &amp; Milestones  
-三大工具與策略 3 Tools &amp; Strategies  
-移植類型 Transplant Types  
-技術挑戰 Technical Challenges  
-皮膚應用 Skin Applications  
-軟骨應用 Cartilage Applications  
-先進技術 Advanced Tech (3D printing, Organ-on-Chip)
-
-
-Colour code 顏色代號: 🔴 要背晒 Memorise | 🟢 要明 Understand | 🔵 要識用 Apply
-
-Topic 1 – Course Structure &amp; Assessments 課程結構與評核Big Picture 總覽整個課程圍繞「點樣用細胞+支架+訊號」去解決器官短缺問題。  
-Topic 2 – Motivation 點解要讀組織工程？Big Picture因為好多器官唔會自己生返，捐贈又少，人等緊等緊就死晒。Mind map: 疾病 → 無再生能力 → 器官短缺 → TE救命
-Must-Know Facts
-🔴 香港器官捐贈率全球最低，等器官平均5年，最長29年  
-🔴 每年需求: Skin 300萬、Bone&#x2F;Cartilage&#x2F;Blood vessel 各100萬、Kidney 60萬  
-🟢 Christopher Reeve 超人演員 → 脊椎受傷終身癱瘓 → 代表性案例  
-🔵 目標: Repair 修補 | Restore 恢復 | Regenerate 再生 | Replace 取代
-
-Mnemonics
-香港三個關鍵字: 「最低、最多、最長」→ 捐贈率最低、等緊人最多、等最長
-
-Topic 3 – History 歷史Must-Know Timeline（背晒）
-1000 BC 古印度鼻移植  
-16世紀 Tagliacozzi 用手臂皮瓣整鼻  
-1962 首個合成皮膚  
-1985 Langer &amp; Vacanti 正式提出「Tissue Engineering」  
-1996 Dolly 多利羊（第一隻複製哺乳動物）  
-1997 Vacanti Mouse 老鼠背長人耳（PLGA + 軟骨細胞）
-
-Mnemonics
-「96羊97鼠」→ Dolly 96年，Vacanti Mouse 97年
-
-Topic 4 – Definitions 定義（必背金句）Langer &amp; Vacanti (1993) 最經典
-「Tissue engineering is an interdisciplinary field that applies the principles of engineering and life sciences toward the development of biological substitutes that restore, maintain, or improve tissue or organ function.」組織工程係一個跨學科領域，用工程同生命科學嘅原理，去開發可以恢復、維持或改善組織或器官功能嘅生物替代品。
-
-三大工具 Three Tools（CSS）
-Cells 細胞 → 活嘅部分  
-Scaffolds 支架 → 結構支撐（要可降解）  
-Signals 訊號 → 生長因子或機械刺激
-
-TE vs Regenerative Medicine 對比
-
-
-TE 組織工程
-Regenerative Medicine 再生醫學
-
-
-
-In vitro 體外培養
-In vivo 體內直接刺激
-
-
-嚴格控制環境
-用身體自己嘅調節
-
-
-Topic 5 – Transplant Types 移植類型四大類（背晒優缺點）
-
-
-類型
-來源
-優點
-缺點
-
-
-
-Autograft
-自己
-無排斥
-痛、來源少
-
-
-Allograft
-其他人
-來源較多
-排斥、捐贈者少
-
-
-Xenograft
-動物
-來源多
-排斥+感染風險
-
-
-Man-made
-人工心&#x2F;肺
-即用
-機械故障
-
-
-Mnemonics
-「自家無痛、他人排斥、動物染病」→ Auto無排斥、Allo排斥、Xeno感染
-
-Topic 6 – Technical Challenges 技術挑戰四大死穴（考試最愛問）
-Vascularization 血管化 → 細胞離毛細血管要&lt;100μm  
-Scale-up 放大 → 點樣做出有臨床意義嘅大小  
-Microenvironment 微環境 → 營養、訊號、力學  
-Cell source &amp; control 細胞來源同控制分化&#x2F;增生
-
-Mnemonics
-「血管、放大、微環境、細胞」→ 血大微細
-
-Topic 7 – Successful Applications 成功案例Skin 皮膚（最成熟）
-Epicel → 自体角質細胞薄片（超薄，易碎）  
-Apligraf → 同種異體（纖維母細胞+角質細胞），3星期培養，有真皮層
-
-Cartilage 軟骨
-Carticel → 自体軟骨細胞注射  
-Hyalograft-C → 細胞+支架，效果更好
-
-Bladder 膀胱（Atala 2006）
-首個成功移植實驗室培養嘅器官（用自体細胞+可降解支架）
-
-Topic 8 – Advanced &amp; Future 未來技術
-3D Bioprinting 生物3D打印  
-Organ-on-a-Chip 器官晶片（藥物測試，減少動物試驗）  
-Decellularized ECM 去細胞基質（Badylak）  
-Microfluidic vascular networks 微流控血管網
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)
-香港等器官平均幾耐？ _____ → 5年（最長29年）  
-Vacanti Mouse 用咩物料？ _____ → PLGA  
-TE三大工具？ _____ → Cells, Scaffolds, Signals  
-Autograft 最大缺點？ _____ → 痛、來源少  
-皮膚產品 Apligraf 用咩細胞？ _____ → 同種異體纖維母細胞+角質細胞  
-細胞點樣先有營養？ _____ → &lt;100μm 離毛細血管  
-首個移植實驗室膀胱嘅人係邊個？ _____ → Anthony Atala
-
-English Version BelowTopic 1 – Motivation for Tissue EngineeringBig Picture (1 sentence + mind map in text)Tissue engineering addresses the critical shortage of organs and tissues for transplantation by creating viable substitutes.Mind map: Need → Diseases (SCI&#x2F;Parkinson’s&#x2F;Alzheimer’s&#x2F;Heart) → Shortage (Waitlists&#x2F;Deaths) → Limited Regeneration → TE Solutions
-Must-Know Facts (max 12 bullet points)
-🔴 Millions suffer from damaged tissues (e.g., Spinal Cord Injury, Parkinson’s)  
-🟢 Most tissues don’t regenerate spontaneously after damage  
-🔴 HK organ shortage: Lowest donation rates, &gt;3,000 waiting, avg 5-29 years  
-🟢 Waitlist: 1 added every 10 min; only 80 transplants&#x2F;day  
-🔴 Annual needs: Skin 3M, Bone&#x2F;Cartilage&#x2F;Vessel 1M each, Kidney 600K, Liver&#x2F;Nerve 200K  
-🟢 Examples: Christopher Reeve (SCI from accident)  
-🔵 Congenital abnormalities, injuries, diseases drive need  
-🟢 TE aims: Repair&#x2F;Restore&#x2F;Regenerate&#x2F;Replace
-
-Key Formulas &#x2F; Diagrams (use code blocks)Tissue Regeneration Table:Connective: Bone (Yes), Articular Cartilage (No)Epithelia: Epidermis (Yes)Muscle: Cardiac/Skeletal (No), Smooth (Yes?)Nerve: No
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Regenerating vs Non-Regenerating Tissues
-Yes (Regenerate)
-No (Don’t)
-
-
-
-Examples
-Bone, Epidermis
-Cardiac Muscle, Nerve
-
-
-Reasons
-Stem cells present
-Limited vasculature&#x2F;proliferation
-
-
-Implications
-Self-heal small defects
-Need TE&#x2F;transplants
-
-
-Common Mistakes &amp; Examiner Traps
-Assuming all muscles regenerate (skeletal&#x2F;cardiac don’t fully)  
-Forgetting stats like annual procedures – trap: vague answers without numbers  
-Mixing HK-specific shortage with global waitlists
-
-Mnemonics &#x2F; Memory Hooks
-Needs: “Skinny Bones Never Bleed Lots, Can’t Keep Bladder Strong” – Skin, Bone, Nerve, Blood vessel, Liver, Cartilage, Kidney, Bladder, Skeletal Muscle  
-Waitlist: “10 min add, 80 day transplants” – 10-80 rule
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Why is there a need for tissue engineering? Give examples.  
-
-Due to limited regeneration and organ shortages causing deaths; e.g., Spinal Cord Injury (no repair), HK waits up to 29 years for organs.  
-
-What tissues regenerate spontaneously?  
-
-Bone, epithelia (e.g., epidermis); not cardiac muscle or nerves.
-
-Topic 2 – History of Tissue EngineeringBig Picture (1 sentence + mind map in text)Tissue engineering evolved from ancient transplants to modern cell-based therapies, driven by medical needs.Mind map: Ancient (1000 BC nose) → 16-19th C (Skin&#x2F;Tooth) → 20th C (Transplants&#x2F;Synthetics) → 1980s (TE Concept) → Milestones (Dolly&#x2F;Vacanti)
-Must-Know Facts (max 12 bullet points)
-🔴 Ancient: 1000 BC Sushrutha nose transplants  
-🟢 16th C: Tagliacozzi forearm flap for nose  
-🔴 17-18th C: Tooth&#x2F;Skin&#x2F;Corneal transplants  
-🟢 19th C: Sterile technique&#x2F;anesthesia enable surgery  
-🔴 20th C: Kidney&#x2F;Heart&#x2F;Lung&#x2F;Bone marrow post-1950  
-🟢 1962: First synthetic skin  
-🔴 1985: TE articulated; 1988 first symposium  
-🟢 Dolly (1996): First cloned mammal, sparks reproduction ideas  
-🔵 Vacanti Mouse (1997): PLGA scaffold with chondrocytes  
-🟢 Pet cloning available; human cloning ethical issues  
-🔵 Shift to cell-based therapies late 20th C
-
-Key Formulas &#x2F; Diagrams (use code blocks)History Timeline:1000 BC: Nose transplants16th C: Forearm flap1950+: Organ transplants1962: Synthetic skin1985: TE concept1996: Dolly1997: Vacanti Mouse
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Ancient vs Modern TE
-Ancient
-Modern
-
-
-
-Methods
-Autografts (nose&#x2F;skin)
-Scaffolds&#x2F;Cloning&#x2F;3D Printing
-
-
-Focus
-Reconstruction
-Regeneration&#x2F;Organ substitutes
-
-
-Tech
-Manual surgery
-Cells&#x2F;Biomaterials&#x2F;Signaling
-
-
-Common Mistakes &amp; Examiner Traps
-Confusing Dolly as human cloning (sheep, 1996)  
-Forgetting ethical concerns in human cloning – trap: ethical Qs  
-Misattributing Vacanti Mouse to human application
-
-Mnemonics &#x2F; Memory Hooks
-History: “Nose To Tooth, Skin Cornea, Sterile Transplants” – N(1000BC), T(17C), S&#x2F;C(18C), S(19C), T(20C)  
-Milestones: “Dolly Vacanti” – D(Cloning), V(Scaffold)
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline the history of tissue engineering from ancient to modern times.  
-
-Ancient: 1000 BC nose; 16-19th C skin&#x2F;tooth; 20th C transplants; 1962 synthetic skin; 1985 TE concept; 1997 Vacanti Mouse.  
-
-What was the Vacanti Mouse and its significance?  
-
-Mouse with human ear-shaped cartilage grown on back using PLGA scaffold and chondrocytes; popularized TE.
-
-Topic 3 – Definitions and ParadigmsBig Picture (1 sentence + mind map in text)Tissue engineering applies biology and engineering to create substitutes that restore tissue function.Mind map: Definitions → Langer&#x2F;Vacanti (1993) → Goals (Restore&#x2F;Maintain&#x2F;Improve) → Paradigm (Cells&#x2F;Materials&#x2F;Factors)
-Must-Know Facts (max 12 bullet points)
-🔴 Definition (Langer&#x2F;Vacanti): Biological substitutes to restore&#x2F;maintain&#x2F;improve function  
-🟢 Fung: Understanding structure-function in tissues  
-🔴 Laurencin: Repair using biomaterials&#x2F;cells&#x2F;factors  
-🟢 Includes cells&#x2F;tissues&#x2F;organs&#x2F;blood  
-🔵 Paradigm: Cells + Biocompatible materials + Biochemical&#x2F;Biophysical factors  
-🟢 TE vs Regenerative Med: In vitro (TE) vs In vivo (RM)  
-🔴 In vitro advantages: Evaluation&#x2F;control; disadvantages: Remodeling needed  
-🟢 In vivo: Physiologic environment; disadvantages: Mechanical stresses
-
-Key Formulas &#x2F; Diagrams (use code blocks)TE Paradigm:Cells --&gt; Building blocksScaffolds --&gt; Support/ShapeSignaling --&gt; Proteins/Mechanical
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-TE vs Regenerative Medicine
-Tissue Engineering
-Regenerative Medicine
-
-
-
-Environment
-In vitro
-In vivo
-
-
-Advantages
-Control&#x2F;evaluation
-Physiologic regulators
-
-
-Disadvantages
-Needs remodeling
-Dislodgement&#x2F;stresses
-
-
-Common Mistakes &amp; Examiner Traps
-Quoting only one definition – trap: Compare multiple  
-Confusing TE as only for tissues (includes organs&#x2F;cells)  
-Ignoring biophysical factors in paradigm
-
-Mnemonics &#x2F; Memory Hooks
-Definitions: “Langer Vacanti Fung Laurencin” – LVFL (Love Very Fine Laundry)  
-Paradigm: “Cells Scaffold Signals” – CSS (Cascading Style Sheets for tissues)
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Define tissue engineering according to Langer and Vacanti.  
-
-An interdisciplinary field that applies engineering and life sciences to develop biological substitutes that restore, maintain, or improve tissue function.  
-
-Compare TE and regenerative medicine.  
-
-TE: In vitro, controlled but needs integration; RM: In vivo, natural but prone to stresses.
-
-Topic 4 – Strategies and ToolsBig Picture (1 sentence + mind map in text)TE strategies combine cells, scaffolds, and signaling to engineer functional tissues.Mind map: Tools → Cells (Function&#x2F;Repair) → Scaffolds (Support&#x2F;Degrade) → Signaling (Proteins&#x2F;Mechanical) → Strategies (Isolated Cells&#x2F;Growth Factors&#x2F;Cell-Matrix)
-Must-Know Facts (max 12 bullet points)
-🔴 3 Tools: Cells (living&#x2F;protein-producing), Scaffolds (structural&#x2F;biodegradable), Signaling (proteins&#x2F;mechanical)  
-🟢 Strategies: Isolated cells&#x2F;substitutes, Tissue growth factors, Cell-matrix with scaffolds  
-🔵 Paradigm considerations: Cells, Materials, Biochemical factors (growth), Biophysical (loading)  
-🟢 Isolated cells: Infusion without surgery  
-🔴 Growth factors: Targeted delivery&#x2F;gene systems  
-🟢 Scaffolds: Grow&#x2F;replace biodegradable matrix
-
-Key Formulas &#x2F; Diagrams (use code blocks)Strategies:1. Cells --&gt; Infusion2. Factors --&gt; Delivery3. Matrix --&gt; Scaffolds + Cells
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Isolated Cells vs Cell-Matrix
-Isolated Cells
-Cell-Matrix
-
-
-
-Method
-Infusion
-Scaffold growth
-
-
-Advantages
-No surgery
-Replace matrix
-
-
-Applications
-Specific cells
-Complex tissues
-
-
-Common Mistakes &amp; Examiner Traps
-Forgetting biophysical factors (e.g., mechanical loading)  
-Assuming scaffolds are permanent – trap: Must be biodegradable  
-Mixing tools with strategies
-
-Mnemonics &#x2F; Memory Hooks
-Tools: “Cells Scaffold Signals” – CSS  
-Strategies: “I Grow Cells” – Isolated, Growth factors, Cell-matrix
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are the three main tools in TE?  
-
-Cells (building blocks), Scaffolds (support), Cell Signaling (direct function).  
-
-Describe TE strategies.  
-
-Isolated cells for infusion, growth factors for delivery, cell-matrix for scaffold replacement.
-
-Topic 5 – Types of TransplantsBig Picture (1 sentence + mind map in text)Transplants vary by source, each with benefits and drawbacks in compatibility and availability.Mind map: Types → Autograft (Self) → Allograft (Same species) → Xenograft (Other species) → Man-made (Artificial)
-Must-Know Facts (max 12 bullet points)
-🔴 Autograft: From self; painful, limited source  
-🟢 Allograft: From another human; donor scarcity, rejection  
-🔴 Xenograft: From animals; biocompatibility issues, infection risk  
-🟢 Man-made: Artificial hearts&#x2F;lungs; no rejection but mechanical failures  
-🔵 Drawbacks: Autograft (pain&#x2F;failure in elderly), Allograft (immune), Xenograft (contamination)  
-🟢 Examples: Skin grafts, organ transplants
-
-Key Formulas &#x2F; Diagrams (use code blocks)Transplant Types:Auto: Self --&gt; No rejection, but limitedAllo: Human --&gt; Rejection riskXeno: Animal --&gt; Infection risk
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Autograft vs Allograft vs Xenograft
-Autograft
-Allograft
-Xenograft
-
-
-
-Source
-Self
-Same species
-Other species
-
-
-Rejection Risk
-Low
-High
-High
-
-
-Availability
-Limited
-Scarce
-Abundant
-
-
-Drawbacks
-Painful
-Immune
-Infection
-
-
-Common Mistakes &amp; Examiner Traps
-Claiming autografts have rejection (they don’t)  
-Forgetting man-made as a type – trap: Include in answers  
-Overstating xenograft safety
-
-Mnemonics &#x2F; Memory Hooks
-Types: “Auto All Xeno Man” – AAXM (Axe ‘em)  
-Drawbacks: “Pain Scarcity Infection” – PSI (Pressure)
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Compare types of transplants.  
-
-Autograft: Self, no rejection but painful; Allograft: Human, rejection; Xenograft: Animal, infection.  
-
-What are drawbacks of xenografts?  
-
-Biocompatibility, immune rejection, higher contamination risk.
-
-Topic 6 – Technical ChallengesBig Picture (1 sentence + mind map in text)TE faces hurdles in cell biology, materials, microenvironment, and scale-up for clinical use.Mind map: Challenges → Cell (Differentiation&#x2F;Proliferation) → Materials (Porosity&#x2F;Degradation) → Microenv (Signals&#x2F;Nutrients) → Scale (Vascularization&#x2F;Automation)
-Must-Know Facts (max 12 bullet points)
-🔴 Cell Biology: Control diff&#x2F;prolif, adhesion, immune, environment  
-🟢 Materials: 3D scaffolds, porosity vs strength, degradation, interactions  
-🔴 Microenvironment: Reconstitute for function (cells&#x2F;ECM&#x2F;signals)  
-🟢 Scale-up: Enough microenvs, microcirculation (capillaries &lt;100um)  
-🔵 Automation for clinical scale  
-🟢 Cell communication&#x2F;migration  
-🔴 Post-implant: Slow vascularization, nutrient lack  
-🟢 Vascular need: Cells near capillaries
-
-Key Formulas &#x2F; Diagrams (use code blocks)Challenges Hierarchy:Cell --&gt; Biology/ControlMaterials --&gt; Scaffold/InteractionsMicroenv --&gt; Signals/DynamicsScale --&gt; Vascular/Automation
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Cell Biology vs Materials Challenges
-Cell Biology
-Materials
-
-
-
-Key Issues
-Diff&#x2F;Prolif&#x2F;Immune
-Porosity&#x2F;Degradation
-
-
-Solutions
-Signaling&#x2F;Environment
-Polymers&#x2F;Processing
-
-
-Impact
-Function&#x2F;Phenotype
-Strength&#x2F;Support
-
-
-Common Mistakes &amp; Examiner Traps
-Ignoring microenvironment dynamics  
-Underestimating vascularization – trap: Why thick tissues fail  
-Forgetting automation for scale
-
-Mnemonics &#x2F; Memory Hooks
-Challenges: “Cells Make Micro Scale” – CMMS (Comms)  
-Microcirculation: “&lt;100um from capillary” – 100 rule
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are key technical challenges in TE?  
-
-Cell control (diff&#x2F;prolif), materials (porosity&#x2F;degrade), microenvironment (signals), scale-up (vascular&#x2F;automation).  
-
-Why is vascularization a challenge?  
-
-Cells need nutrients &lt;100um from capillaries; slow ingrowth post-implant.
-
-Topic 7 – Specific Tissue ApplicationsBig Picture (1 sentence + mind map in text)TE has succeeded in avascular tissues like skin, cartilage, bladder, but struggles with complex organs.Mind map: Apps → Skin (Epicel&#x2F;Apligraf) → Cartilage (Microfracture&#x2F;Carticel) → Bladder (Autologous cells&#x2F;scaffold) → Others (Kidney&#x2F;Liver challenges)
-Must-Know Facts (max 12 bullet points)
-🔴 Skin: Epicel (autologous keratinocytes), Apligraf (dermal&#x2F;epidermal)  
-🟢 Skin repair: Epithelial regen, Dermal matrix (Alloderm), Full-thickness  
-🔴 Limitations: Slow vasc, no glands&#x2F;follicles  
-🟢 Cartilage: Limited regen; Microfracture, Osteochondral transplants  
-🔴 Cell-based: Carticel (autologous chondrocytes)  
-🟢 Scaffold: Hyalograft-C; better in young&#x2F;athletes  
-🔴 Bladder: Autologous cells on scaffold; integrated over years  
-🟢 Success: Avascular tissues; hurdles for vascular (kidney&#x2F;liver)  
-🔵 Kidney: Glomerular structure hard  
-🟢 Liver: Hepatic lobules challenging
-
-Key Formulas &#x2F; Diagrams (use code blocks)Skin Layers:Epidermis --&gt; KeratinocytesDermis --&gt; Fibroblasts/CollagenFull --&gt; Apligraf process (3 weeks)
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Skin vs Cartilage TE
-Skin
-Cartilage
-
-
-
-Methods
-Grafts&#x2F;Epicel&#x2F;Apligraf
-Microfracture&#x2F;Carticel&#x2F;Scaffolds
-
-
-Challenges
-Vasc&#x2F;No glands
-Limited sources&#x2F;Rediff
-
-
-Success
-Commercialized
-Long-term in young
-
-
-Common Mistakes &amp; Examiner Traps
-Assuming bladder TE works for all organs (only avascular)  
-Forgetting stem cells in cartilage – trap: Coculture benefits  
-Mixing products (Epicel xenogeneic)
-
-Mnemonics &#x2F; Memory Hooks
-Skin Products: “Epic Apple” – Epicel, Apligraf  
-Cartilage: “Micro Osteo Cell Scaff” – MOCS (Mocks)
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe skin TE products.  
-
-Epicel: Autologous keratinocytes sheets; Apligraf: Allogeneic dermal&#x2F;epidermal, air-liquid differentiation.  
-
-What are cartilage repair methods?  
-
-Microfracture (marrow clot), Osteochondral (harvest plugs), Cell-based (Carticel injection).
-
-Topic 8 – Advanced Technologies and PotentialBig Picture (1 sentence + mind map in text)Emerging tech like nanotech, microfluidics, and 3D printing enhance TE for complex organs and testing.Mind map: Tech → Nanotech&#x2F;Microfluidics (Scaffolds&#x2F;Networks) → 3D Printing (Organs&#x2F;Chips) → Potential (Drug Testing&#x2F;Heart Membranes)
-Must-Know Facts (max 12 bullet points)
-🔴 Nanotech: Complex 3D scaffolds mimicking in vivo  
-🟢 Microfluidics: Vascular networks, &lt;10um resolution  
-🔴 Solve nutrient transport for organs like liver&#x2F;kidney  
-🟢 Organ-on-Chip: Reduce animal testing, vaccine trials  
-🔴 3D Printing: Heart membranes, blood vessels (sugar)  
-🟢 Bioengineering: Decellularized matrices  
-🔵 Drug delivery&#x2F;high-throughput screening
-
-Key Formulas &#x2F; Diagrams (use code blocks)Microfluidic Scaffold:Geometry --&gt; Cellular networksResolution --&gt; &lt;10 micronsApps --&gt; Vascular/Drug screening
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Traditional vs Advanced TE
-Traditional
-Advanced
-
-
-
-Methods
-Scaffolds&#x2F;Cells
-Nanotech&#x2F;3D Print&#x2F;Microfluidics
-
-
-Benefits
-Basic repair
-Vascular&#x2F;Scale-up
-
-
-Examples
-Vacanti Mouse
-Organ-on-Chip
-
-
-Common Mistakes &amp; Examiner Traps
-Overhyping 3D printing for full organs (still potential)  
-Forgetting microfluidics for vascular – trap: Nutrient issues
-
-Mnemonics &#x2F; Memory Hooks
-Tech: “Nano Micro 3D” – NM3 (Enemy)  
-Potential: “Chip Print Decell” – CPD (Copied)
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)How do microfluidics aid TE?  
-
-Create vascular networks for nutrient transport in scaffolds for complex organs.  
-
-What is organ-on-a-chip?  
-
-3D printed tissues for drug testing, reducing animal use.
-
-Topic 10 – Pioneers and BusinessBig Picture (1 sentence + mind map in text)Pioneers advanced TE from concepts to clinical, with businesses commercializing products.Mind map: Pioneers → Atala (Organs) → Langer (Systems) → Macchiarini (Trachea) → Others (Badylak&#x2F;Hamilton) → Business (Organovo&#x2F;Tengion)
-Must-Know Facts (max 12 bullet points)
-🔴 Atala (WFIRM): First lab-grown organ transplant (2006)  
-🟢 Langer (MIT): TE&#x2F;Controlled release (1993)  
-🔴 Macchiarini: First donor trachea (2008)  
-🟢 Khademhosseini: Living tissues&#x2F;organs in lab  
-🔴 Badylak: ECM for regrowth  
-🟢 Hamilton: Organ-on-chip (2011)  
-🔴 Bhatia: Microchip livers  
-🟢 Stevens: Biomaterials&#x2F;regeneration  
-🔵 Miller: 3D print vessels  
-🟢 Shah: 3D inks&#x2F;scaffolds  
-🔴 Business: Organovo (Bioprinting), Tengion (Neo-Organs)
-
-Key Formulas &#x2F; Diagrams (use code blocks)Pioneers Timeline:1993: Langer2006: Atala2008: Macchiarini2011: Hamilton2013: Miller
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Academic Pioneers vs Business
-Pioneers
-Business
-
-
-
-Focus
-Research&#x2F;Innovation
-Commercialization
-
-
-Examples
-Atala&#x2F;Langer
-Organovo&#x2F;Tengion
-
-
-Impact
-Concepts&#x2F;Transplants
-Products&#x2F;Testing
-
-
-Common Mistakes &amp; Examiner Traps
-Misattributing milestones (e.g., Atala first organ)  
-Forgetting business aspects – trap: Commercial viability Qs
-
-Mnemonics &#x2F; Memory Hooks
-Pioneers: “Atala Langer Mac Khad Bad Ham Bhat Ste Mil Sha” – ALMKBHBSMS (All Make Big History)  
-Business: “Org Ten” – Organovo, Tengion
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Who are key TE pioneers?  
-
-Atala (first organ), Langer (definitions), Macchiarini (trachea).  
-
-Describe a TE business.  
-
-Organovo: 3D bioprinting for tissues, collaborates with NIH for drug efficacy.
-
-Active Recall Bank
-Christopher Reeve suffered from? _____  
-HK organ wait average? _____  
-Dolly was cloned in? _____  
-Vacanti Mouse material? _____  
-TE definition by Langer? _____  
-3 TE tools? _____  
-Autograft drawback? _____  
-Cell biology challenge? _____  
-Skin product Epicel? _____  
-Cartilage method Microfracture? _____  
-Microfluidics resolution? _____  
-Pioneer Atala milestone? _____  
-Business Organovo focus? _____  
-Paradigm factors? _____  
-Regenerating tissue example? _____  
-History 1985? _____  
-Challenges scale-up? _____
-
-15-Minute Mock Exam
-Define tissue engineering and explain its paradigm.  
-
-Interdisciplinary field developing substitutes to restore function; involves cells, materials, biochemical&#x2F;biophysical factors.  
-
-
-Compare autograft and xenograft.  
-
-Autograft: Self-source, no rejection but painful&#x2F;limited; Xenograft: Animal, abundant but infection&#x2F;rejection risk.  
-
-
-What are challenges in cartilage TE?  
-
-Limited regeneration, inefficient redifferentiation, scaling thickness, cell sources.  
-
-
-Describe Apligraf for skin repair.  
-
-Allogeneic fibroblasts in collagen + keratinocytes; 3 weeks, promotes healing despite rejection.  
-
-
-Why vascularization is key challenge?  
-
-Nutrient lack post-implant; cells need &lt;100um from capillaries.  
-
-
-Name a pioneer and contribution.  
-
-Langer: TE concepts and controlled release systems.
-
-
-
-One-Page Cheat Sheet Summary
-
-
-Section
-Key Points
-
-
-
-Assessments
-Exam 50%, Project 20%, Labs&#x2F;Assign 15% each; Presentations 15 min
-
-
-Motivation
-Diseases&#x2F;shortage; Stats: Skin 3M&#x2F;yr, Waitlist 10 min add
-
-
-History
-Ancient nose → 1962 skin → 1997 Vacanti → Dolly cloning
-
-
-Definitions
-Restore function via cells&#x2F;scaffolds&#x2F;signals; TE in vitro vs RM in vivo
-
-
-Strategies
-Isolated cells, Growth factors, Cell-matrix
-
-
-Transplants
-Auto (self), Allo (human), Xeno (animal); Drawbacks: Pain&#x2F;rejection&#x2F;infection
-
-
-Challenges
-Cell control, Materials porosity, Microenv, Scale vascular
-
-
-Apps
-Skin: Epicel&#x2F;Apligraf; Cartilage: Carticel; Bladder: Scaffold
-
-
-Advanced
-Microfluidics vascular, 3D print organs, Chip testing
-
-
-Pioneers
-Atala organ, Langer defs, Organovo bioprint
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Tissue Engineering</category>
-      </categories>
-      <tags>
-        <tag>biomedical engineering</tag>
-        <tag>Exam Notes</tag>
-        <tag>Tissue Engineering</tag>
       </tags>
   </entry>
   <entry>
@@ -8033,6 +7424,753 @@ Actin: Polymer&#x2F;Treadmill&#x2F;Myosin; MT: Dynamic&#x2F;GTP&#x2F;Paclitaxel;
 
 TE Apps
 Dermal matrix: Cell invasion; Growth factors in scaffolds; Avoid stress shielding in implants.
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Tissue Engineering</category>
+      </categories>
+      <tags>
+        <tag>biomedical engineering</tag>
+        <tag>Exam Notes</tag>
+        <tag>Tissue Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BME 2104 Tissue Engineering – 1 </title>
+    <url>/posts/83d538e2.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – 1Exam Overview
+Exam date &amp; duration: Mid-December 2025 (likely 7-19 Dec), 2-3 hours  
+Top 8 topics that appear every year: Definitions of TE, History &amp; Pioneers, Strategies&#x2F;Tools, Technical Challenges, Transplant Types, Skin Applications, Cartilage Applications, Advanced Tech (e.g., 3D Printing)  
+Colour code: 🔴 Memorise | 🟢 Understand | 🔵 Apply
+
+BME 2104 組織工程 Tissue Engineering – Final Revision Notes（中英對照版）Overview
+TE定義 Definition  
+歷史與里程碑 History &amp; Milestones  
+三大工具與策略 3 Tools &amp; Strategies  
+移植類型 Transplant Types  
+技術挑戰 Technical Challenges  
+皮膚應用 Skin Applications  
+軟骨應用 Cartilage Applications  
+先進技術 Advanced Tech (3D printing, Organ-on-Chip)
+
+
+Colour code 顏色代號: 🔴 要背晒 Memorise | 🟢 要明 Understand | 🔵 要識用 Apply
+
+Topic 1 – Course Structure &amp; Assessments 課程結構與評核Big Picture 總覽整個課程圍繞「點樣用細胞+支架+訊號」去解決器官短缺問題。  
+Topic 2 – Motivation 點解要讀組織工程？Big Picture因為好多器官唔會自己生返，捐贈又少，人等緊等緊就死晒。Mind map: 疾病 → 無再生能力 → 器官短缺 → TE救命
+Must-Know Facts
+🔴 香港器官捐贈率全球最低，等器官平均5年，最長29年  
+🔴 每年需求: Skin 300萬、Bone&#x2F;Cartilage&#x2F;Blood vessel 各100萬、Kidney 60萬  
+🟢 Christopher Reeve 超人演員 → 脊椎受傷終身癱瘓 → 代表性案例  
+🔵 目標: Repair 修補 | Restore 恢復 | Regenerate 再生 | Replace 取代
+
+Mnemonics
+香港三個關鍵字: 「最低、最多、最長」→ 捐贈率最低、等緊人最多、等最長
+
+Topic 3 – History 歷史Must-Know Timeline（背晒）
+1000 BC 古印度鼻移植  
+16世紀 Tagliacozzi 用手臂皮瓣整鼻  
+1962 首個合成皮膚  
+1985 Langer &amp; Vacanti 正式提出「Tissue Engineering」  
+1996 Dolly 多利羊（第一隻複製哺乳動物）  
+1997 Vacanti Mouse 老鼠背長人耳（PLGA + 軟骨細胞）
+
+Mnemonics
+「96羊97鼠」→ Dolly 96年，Vacanti Mouse 97年
+
+Topic 4 – Definitions 定義（必背金句）Langer &amp; Vacanti (1993) 最經典
+「Tissue engineering is an interdisciplinary field that applies the principles of engineering and life sciences toward the development of biological substitutes that restore, maintain, or improve tissue or organ function.」組織工程係一個跨學科領域，用工程同生命科學嘅原理，去開發可以恢復、維持或改善組織或器官功能嘅生物替代品。
+
+三大工具 Three Tools（CSS）
+Cells 細胞 → 活嘅部分  
+Scaffolds 支架 → 結構支撐（要可降解）  
+Signals 訊號 → 生長因子或機械刺激
+
+TE vs Regenerative Medicine 對比
+
+
+TE 組織工程
+Regenerative Medicine 再生醫學
+
+
+
+In vitro 體外培養
+In vivo 體內直接刺激
+
+
+嚴格控制環境
+用身體自己嘅調節
+
+
+Topic 5 – Transplant Types 移植類型四大類（背晒優缺點）
+
+
+類型
+來源
+優點
+缺點
+
+
+
+Autograft
+自己
+無排斥
+痛、來源少
+
+
+Allograft
+其他人
+來源較多
+排斥、捐贈者少
+
+
+Xenograft
+動物
+來源多
+排斥+感染風險
+
+
+Man-made
+人工心&#x2F;肺
+即用
+機械故障
+
+
+Mnemonics
+「自家無痛、他人排斥、動物染病」→ Auto無排斥、Allo排斥、Xeno感染
+
+Topic 6 – Technical Challenges 技術挑戰四大死穴（考試最愛問）
+Vascularization 血管化 → 細胞離毛細血管要&lt;100μm  
+Scale-up 放大 → 點樣做出有臨床意義嘅大小  
+Microenvironment 微環境 → 營養、訊號、力學  
+Cell source &amp; control 細胞來源同控制分化&#x2F;增生
+
+Mnemonics
+「血管、放大、微環境、細胞」→ 血大微細
+
+Topic 7 – Successful Applications 成功案例Skin 皮膚（最成熟）
+Epicel → 自体角質細胞薄片（超薄，易碎）  
+Apligraf → 同種異體（纖維母細胞+角質細胞），3星期培養，有真皮層
+
+Cartilage 軟骨
+Carticel → 自体軟骨細胞注射  
+Hyalograft-C → 細胞+支架，效果更好
+
+Bladder 膀胱（Atala 2006）
+首個成功移植實驗室培養嘅器官（用自体細胞+可降解支架）
+
+Topic 8 – Advanced &amp; Future 未來技術
+3D Bioprinting 生物3D打印  
+Organ-on-a-Chip 器官晶片（藥物測試，減少動物試驗）  
+Decellularized ECM 去細胞基質（Badylak）  
+Microfluidic vascular networks 微流控血管網
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)
+香港等器官平均幾耐？ _____ → 5年（最長29年）  
+Vacanti Mouse 用咩物料？ _____ → PLGA  
+TE三大工具？ _____ → Cells, Scaffolds, Signals  
+Autograft 最大缺點？ _____ → 痛、來源少  
+皮膚產品 Apligraf 用咩細胞？ _____ → 同種異體纖維母細胞+角質細胞  
+細胞點樣先有營養？ _____ → &lt;100μm 離毛細血管  
+首個移植實驗室膀胱嘅人係邊個？ _____ → Anthony Atala
+
+English Version BelowTopic 1 – Motivation for Tissue EngineeringBig Picture (1 sentence + mind map in text)Tissue engineering addresses the critical shortage of organs and tissues for transplantation by creating viable substitutes.Mind map: Need → Diseases (SCI&#x2F;Parkinson’s&#x2F;Alzheimer’s&#x2F;Heart) → Shortage (Waitlists&#x2F;Deaths) → Limited Regeneration → TE Solutions
+Must-Know Facts (max 12 bullet points)
+🔴 Millions suffer from damaged tissues (e.g., Spinal Cord Injury, Parkinson’s)  
+🟢 Most tissues don’t regenerate spontaneously after damage  
+🔴 HK organ shortage: Lowest donation rates, &gt;3,000 waiting, avg 5-29 years  
+🟢 Waitlist: 1 added every 10 min; only 80 transplants&#x2F;day  
+🔴 Annual needs: Skin 3M, Bone&#x2F;Cartilage&#x2F;Vessel 1M each, Kidney 600K, Liver&#x2F;Nerve 200K  
+🟢 Examples: Christopher Reeve (SCI from accident)  
+🔵 Congenital abnormalities, injuries, diseases drive need  
+🟢 TE aims: Repair&#x2F;Restore&#x2F;Regenerate&#x2F;Replace
+
+Key Formulas &#x2F; Diagrams (use code blocks)Tissue Regeneration Table:Connective: Bone (Yes), Articular Cartilage (No)Epithelia: Epidermis (Yes)Muscle: Cardiac/Skeletal (No), Smooth (Yes?)Nerve: No
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Regenerating vs Non-Regenerating Tissues
+Yes (Regenerate)
+No (Don’t)
+
+
+
+Examples
+Bone, Epidermis
+Cardiac Muscle, Nerve
+
+
+Reasons
+Stem cells present
+Limited vasculature&#x2F;proliferation
+
+
+Implications
+Self-heal small defects
+Need TE&#x2F;transplants
+
+
+Common Mistakes &amp; Examiner Traps
+Assuming all muscles regenerate (skeletal&#x2F;cardiac don’t fully)  
+Forgetting stats like annual procedures – trap: vague answers without numbers  
+Mixing HK-specific shortage with global waitlists
+
+Mnemonics &#x2F; Memory Hooks
+Needs: “Skinny Bones Never Bleed Lots, Can’t Keep Bladder Strong” – Skin, Bone, Nerve, Blood vessel, Liver, Cartilage, Kidney, Bladder, Skeletal Muscle  
+Waitlist: “10 min add, 80 day transplants” – 10-80 rule
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Why is there a need for tissue engineering? Give examples.  
+
+Due to limited regeneration and organ shortages causing deaths; e.g., Spinal Cord Injury (no repair), HK waits up to 29 years for organs.  
+
+What tissues regenerate spontaneously?  
+
+Bone, epithelia (e.g., epidermis); not cardiac muscle or nerves.
+
+Topic 2 – History of Tissue EngineeringBig Picture (1 sentence + mind map in text)Tissue engineering evolved from ancient transplants to modern cell-based therapies, driven by medical needs.Mind map: Ancient (1000 BC nose) → 16-19th C (Skin&#x2F;Tooth) → 20th C (Transplants&#x2F;Synthetics) → 1980s (TE Concept) → Milestones (Dolly&#x2F;Vacanti)
+Must-Know Facts (max 12 bullet points)
+🔴 Ancient: 1000 BC Sushrutha nose transplants  
+🟢 16th C: Tagliacozzi forearm flap for nose  
+🔴 17-18th C: Tooth&#x2F;Skin&#x2F;Corneal transplants  
+🟢 19th C: Sterile technique&#x2F;anesthesia enable surgery  
+🔴 20th C: Kidney&#x2F;Heart&#x2F;Lung&#x2F;Bone marrow post-1950  
+🟢 1962: First synthetic skin  
+🔴 1985: TE articulated; 1988 first symposium  
+🟢 Dolly (1996): First cloned mammal, sparks reproduction ideas  
+🔵 Vacanti Mouse (1997): PLGA scaffold with chondrocytes  
+🟢 Pet cloning available; human cloning ethical issues  
+🔵 Shift to cell-based therapies late 20th C
+
+Key Formulas &#x2F; Diagrams (use code blocks)History Timeline:1000 BC: Nose transplants16th C: Forearm flap1950+: Organ transplants1962: Synthetic skin1985: TE concept1996: Dolly1997: Vacanti Mouse
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Ancient vs Modern TE
+Ancient
+Modern
+
+
+
+Methods
+Autografts (nose&#x2F;skin)
+Scaffolds&#x2F;Cloning&#x2F;3D Printing
+
+
+Focus
+Reconstruction
+Regeneration&#x2F;Organ substitutes
+
+
+Tech
+Manual surgery
+Cells&#x2F;Biomaterials&#x2F;Signaling
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing Dolly as human cloning (sheep, 1996)  
+Forgetting ethical concerns in human cloning – trap: ethical Qs  
+Misattributing Vacanti Mouse to human application
+
+Mnemonics &#x2F; Memory Hooks
+History: “Nose To Tooth, Skin Cornea, Sterile Transplants” – N(1000BC), T(17C), S&#x2F;C(18C), S(19C), T(20C)  
+Milestones: “Dolly Vacanti” – D(Cloning), V(Scaffold)
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline the history of tissue engineering from ancient to modern times.  
+
+Ancient: 1000 BC nose; 16-19th C skin&#x2F;tooth; 20th C transplants; 1962 synthetic skin; 1985 TE concept; 1997 Vacanti Mouse.  
+
+What was the Vacanti Mouse and its significance?  
+
+Mouse with human ear-shaped cartilage grown on back using PLGA scaffold and chondrocytes; popularized TE.
+
+Topic 3 – Definitions and ParadigmsBig Picture (1 sentence + mind map in text)Tissue engineering applies biology and engineering to create substitutes that restore tissue function.Mind map: Definitions → Langer&#x2F;Vacanti (1993) → Goals (Restore&#x2F;Maintain&#x2F;Improve) → Paradigm (Cells&#x2F;Materials&#x2F;Factors)
+Must-Know Facts (max 12 bullet points)
+🔴 Definition (Langer&#x2F;Vacanti): Biological substitutes to restore&#x2F;maintain&#x2F;improve function  
+🟢 Fung: Understanding structure-function in tissues  
+🔴 Laurencin: Repair using biomaterials&#x2F;cells&#x2F;factors  
+🟢 Includes cells&#x2F;tissues&#x2F;organs&#x2F;blood  
+🔵 Paradigm: Cells + Biocompatible materials + Biochemical&#x2F;Biophysical factors  
+🟢 TE vs Regenerative Med: In vitro (TE) vs In vivo (RM)  
+🔴 In vitro advantages: Evaluation&#x2F;control; disadvantages: Remodeling needed  
+🟢 In vivo: Physiologic environment; disadvantages: Mechanical stresses
+
+Key Formulas &#x2F; Diagrams (use code blocks)TE Paradigm:Cells --&gt; Building blocksScaffolds --&gt; Support/ShapeSignaling --&gt; Proteins/Mechanical
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+TE vs Regenerative Medicine
+Tissue Engineering
+Regenerative Medicine
+
+
+
+Environment
+In vitro
+In vivo
+
+
+Advantages
+Control&#x2F;evaluation
+Physiologic regulators
+
+
+Disadvantages
+Needs remodeling
+Dislodgement&#x2F;stresses
+
+
+Common Mistakes &amp; Examiner Traps
+Quoting only one definition – trap: Compare multiple  
+Confusing TE as only for tissues (includes organs&#x2F;cells)  
+Ignoring biophysical factors in paradigm
+
+Mnemonics &#x2F; Memory Hooks
+Definitions: “Langer Vacanti Fung Laurencin” – LVFL (Love Very Fine Laundry)  
+Paradigm: “Cells Scaffold Signals” – CSS (Cascading Style Sheets for tissues)
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Define tissue engineering according to Langer and Vacanti.  
+
+An interdisciplinary field that applies engineering and life sciences to develop biological substitutes that restore, maintain, or improve tissue function.  
+
+Compare TE and regenerative medicine.  
+
+TE: In vitro, controlled but needs integration; RM: In vivo, natural but prone to stresses.
+
+Topic 4 – Strategies and ToolsBig Picture (1 sentence + mind map in text)TE strategies combine cells, scaffolds, and signaling to engineer functional tissues.Mind map: Tools → Cells (Function&#x2F;Repair) → Scaffolds (Support&#x2F;Degrade) → Signaling (Proteins&#x2F;Mechanical) → Strategies (Isolated Cells&#x2F;Growth Factors&#x2F;Cell-Matrix)
+Must-Know Facts (max 12 bullet points)
+🔴 3 Tools: Cells (living&#x2F;protein-producing), Scaffolds (structural&#x2F;biodegradable), Signaling (proteins&#x2F;mechanical)  
+🟢 Strategies: Isolated cells&#x2F;substitutes, Tissue growth factors, Cell-matrix with scaffolds  
+🔵 Paradigm considerations: Cells, Materials, Biochemical factors (growth), Biophysical (loading)  
+🟢 Isolated cells: Infusion without surgery  
+🔴 Growth factors: Targeted delivery&#x2F;gene systems  
+🟢 Scaffolds: Grow&#x2F;replace biodegradable matrix
+
+Key Formulas &#x2F; Diagrams (use code blocks)Strategies:1. Cells --&gt; Infusion2. Factors --&gt; Delivery3. Matrix --&gt; Scaffolds + Cells
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Isolated Cells vs Cell-Matrix
+Isolated Cells
+Cell-Matrix
+
+
+
+Method
+Infusion
+Scaffold growth
+
+
+Advantages
+No surgery
+Replace matrix
+
+
+Applications
+Specific cells
+Complex tissues
+
+
+Common Mistakes &amp; Examiner Traps
+Forgetting biophysical factors (e.g., mechanical loading)  
+Assuming scaffolds are permanent – trap: Must be biodegradable  
+Mixing tools with strategies
+
+Mnemonics &#x2F; Memory Hooks
+Tools: “Cells Scaffold Signals” – CSS  
+Strategies: “I Grow Cells” – Isolated, Growth factors, Cell-matrix
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are the three main tools in TE?  
+
+Cells (building blocks), Scaffolds (support), Cell Signaling (direct function).  
+
+Describe TE strategies.  
+
+Isolated cells for infusion, growth factors for delivery, cell-matrix for scaffold replacement.
+
+Topic 5 – Types of TransplantsBig Picture (1 sentence + mind map in text)Transplants vary by source, each with benefits and drawbacks in compatibility and availability.Mind map: Types → Autograft (Self) → Allograft (Same species) → Xenograft (Other species) → Man-made (Artificial)
+Must-Know Facts (max 12 bullet points)
+🔴 Autograft: From self; painful, limited source  
+🟢 Allograft: From another human; donor scarcity, rejection  
+🔴 Xenograft: From animals; biocompatibility issues, infection risk  
+🟢 Man-made: Artificial hearts&#x2F;lungs; no rejection but mechanical failures  
+🔵 Drawbacks: Autograft (pain&#x2F;failure in elderly), Allograft (immune), Xenograft (contamination)  
+🟢 Examples: Skin grafts, organ transplants
+
+Key Formulas &#x2F; Diagrams (use code blocks)Transplant Types:Auto: Self --&gt; No rejection, but limitedAllo: Human --&gt; Rejection riskXeno: Animal --&gt; Infection risk
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Autograft vs Allograft vs Xenograft
+Autograft
+Allograft
+Xenograft
+
+
+
+Source
+Self
+Same species
+Other species
+
+
+Rejection Risk
+Low
+High
+High
+
+
+Availability
+Limited
+Scarce
+Abundant
+
+
+Drawbacks
+Painful
+Immune
+Infection
+
+
+Common Mistakes &amp; Examiner Traps
+Claiming autografts have rejection (they don’t)  
+Forgetting man-made as a type – trap: Include in answers  
+Overstating xenograft safety
+
+Mnemonics &#x2F; Memory Hooks
+Types: “Auto All Xeno Man” – AAXM (Axe ‘em)  
+Drawbacks: “Pain Scarcity Infection” – PSI (Pressure)
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Compare types of transplants.  
+
+Autograft: Self, no rejection but painful; Allograft: Human, rejection; Xenograft: Animal, infection.  
+
+What are drawbacks of xenografts?  
+
+Biocompatibility, immune rejection, higher contamination risk.
+
+Topic 6 – Technical ChallengesBig Picture (1 sentence + mind map in text)TE faces hurdles in cell biology, materials, microenvironment, and scale-up for clinical use.Mind map: Challenges → Cell (Differentiation&#x2F;Proliferation) → Materials (Porosity&#x2F;Degradation) → Microenv (Signals&#x2F;Nutrients) → Scale (Vascularization&#x2F;Automation)
+Must-Know Facts (max 12 bullet points)
+🔴 Cell Biology: Control diff&#x2F;prolif, adhesion, immune, environment  
+🟢 Materials: 3D scaffolds, porosity vs strength, degradation, interactions  
+🔴 Microenvironment: Reconstitute for function (cells&#x2F;ECM&#x2F;signals)  
+🟢 Scale-up: Enough microenvs, microcirculation (capillaries &lt;100um)  
+🔵 Automation for clinical scale  
+🟢 Cell communication&#x2F;migration  
+🔴 Post-implant: Slow vascularization, nutrient lack  
+🟢 Vascular need: Cells near capillaries
+
+Key Formulas &#x2F; Diagrams (use code blocks)Challenges Hierarchy:Cell --&gt; Biology/ControlMaterials --&gt; Scaffold/InteractionsMicroenv --&gt; Signals/DynamicsScale --&gt; Vascular/Automation
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Cell Biology vs Materials Challenges
+Cell Biology
+Materials
+
+
+
+Key Issues
+Diff&#x2F;Prolif&#x2F;Immune
+Porosity&#x2F;Degradation
+
+
+Solutions
+Signaling&#x2F;Environment
+Polymers&#x2F;Processing
+
+
+Impact
+Function&#x2F;Phenotype
+Strength&#x2F;Support
+
+
+Common Mistakes &amp; Examiner Traps
+Ignoring microenvironment dynamics  
+Underestimating vascularization – trap: Why thick tissues fail  
+Forgetting automation for scale
+
+Mnemonics &#x2F; Memory Hooks
+Challenges: “Cells Make Micro Scale” – CMMS (Comms)  
+Microcirculation: “&lt;100um from capillary” – 100 rule
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are key technical challenges in TE?  
+
+Cell control (diff&#x2F;prolif), materials (porosity&#x2F;degrade), microenvironment (signals), scale-up (vascular&#x2F;automation).  
+
+Why is vascularization a challenge?  
+
+Cells need nutrients &lt;100um from capillaries; slow ingrowth post-implant.
+
+Topic 7 – Specific Tissue ApplicationsBig Picture (1 sentence + mind map in text)TE has succeeded in avascular tissues like skin, cartilage, bladder, but struggles with complex organs.Mind map: Apps → Skin (Epicel&#x2F;Apligraf) → Cartilage (Microfracture&#x2F;Carticel) → Bladder (Autologous cells&#x2F;scaffold) → Others (Kidney&#x2F;Liver challenges)
+Must-Know Facts (max 12 bullet points)
+🔴 Skin: Epicel (autologous keratinocytes), Apligraf (dermal&#x2F;epidermal)  
+🟢 Skin repair: Epithelial regen, Dermal matrix (Alloderm), Full-thickness  
+🔴 Limitations: Slow vasc, no glands&#x2F;follicles  
+🟢 Cartilage: Limited regen; Microfracture, Osteochondral transplants  
+🔴 Cell-based: Carticel (autologous chondrocytes)  
+🟢 Scaffold: Hyalograft-C; better in young&#x2F;athletes  
+🔴 Bladder: Autologous cells on scaffold; integrated over years  
+🟢 Success: Avascular tissues; hurdles for vascular (kidney&#x2F;liver)  
+🔵 Kidney: Glomerular structure hard  
+🟢 Liver: Hepatic lobules challenging
+
+Key Formulas &#x2F; Diagrams (use code blocks)Skin Layers:Epidermis --&gt; KeratinocytesDermis --&gt; Fibroblasts/CollagenFull --&gt; Apligraf process (3 weeks)
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Skin vs Cartilage TE
+Skin
+Cartilage
+
+
+
+Methods
+Grafts&#x2F;Epicel&#x2F;Apligraf
+Microfracture&#x2F;Carticel&#x2F;Scaffolds
+
+
+Challenges
+Vasc&#x2F;No glands
+Limited sources&#x2F;Rediff
+
+
+Success
+Commercialized
+Long-term in young
+
+
+Common Mistakes &amp; Examiner Traps
+Assuming bladder TE works for all organs (only avascular)  
+Forgetting stem cells in cartilage – trap: Coculture benefits  
+Mixing products (Epicel xenogeneic)
+
+Mnemonics &#x2F; Memory Hooks
+Skin Products: “Epic Apple” – Epicel, Apligraf  
+Cartilage: “Micro Osteo Cell Scaff” – MOCS (Mocks)
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe skin TE products.  
+
+Epicel: Autologous keratinocytes sheets; Apligraf: Allogeneic dermal&#x2F;epidermal, air-liquid differentiation.  
+
+What are cartilage repair methods?  
+
+Microfracture (marrow clot), Osteochondral (harvest plugs), Cell-based (Carticel injection).
+
+Topic 8 – Advanced Technologies and PotentialBig Picture (1 sentence + mind map in text)Emerging tech like nanotech, microfluidics, and 3D printing enhance TE for complex organs and testing.Mind map: Tech → Nanotech&#x2F;Microfluidics (Scaffolds&#x2F;Networks) → 3D Printing (Organs&#x2F;Chips) → Potential (Drug Testing&#x2F;Heart Membranes)
+Must-Know Facts (max 12 bullet points)
+🔴 Nanotech: Complex 3D scaffolds mimicking in vivo  
+🟢 Microfluidics: Vascular networks, &lt;10um resolution  
+🔴 Solve nutrient transport for organs like liver&#x2F;kidney  
+🟢 Organ-on-Chip: Reduce animal testing, vaccine trials  
+🔴 3D Printing: Heart membranes, blood vessels (sugar)  
+🟢 Bioengineering: Decellularized matrices  
+🔵 Drug delivery&#x2F;high-throughput screening
+
+Key Formulas &#x2F; Diagrams (use code blocks)Microfluidic Scaffold:Geometry --&gt; Cellular networksResolution --&gt; &lt;10 micronsApps --&gt; Vascular/Drug screening
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Traditional vs Advanced TE
+Traditional
+Advanced
+
+
+
+Methods
+Scaffolds&#x2F;Cells
+Nanotech&#x2F;3D Print&#x2F;Microfluidics
+
+
+Benefits
+Basic repair
+Vascular&#x2F;Scale-up
+
+
+Examples
+Vacanti Mouse
+Organ-on-Chip
+
+
+Common Mistakes &amp; Examiner Traps
+Overhyping 3D printing for full organs (still potential)  
+Forgetting microfluidics for vascular – trap: Nutrient issues
+
+Mnemonics &#x2F; Memory Hooks
+Tech: “Nano Micro 3D” – NM3 (Enemy)  
+Potential: “Chip Print Decell” – CPD (Copied)
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)How do microfluidics aid TE?  
+
+Create vascular networks for nutrient transport in scaffolds for complex organs.  
+
+What is organ-on-a-chip?  
+
+3D printed tissues for drug testing, reducing animal use.
+
+Topic 10 – Pioneers and BusinessBig Picture (1 sentence + mind map in text)Pioneers advanced TE from concepts to clinical, with businesses commercializing products.Mind map: Pioneers → Atala (Organs) → Langer (Systems) → Macchiarini (Trachea) → Others (Badylak&#x2F;Hamilton) → Business (Organovo&#x2F;Tengion)
+Must-Know Facts (max 12 bullet points)
+🔴 Atala (WFIRM): First lab-grown organ transplant (2006)  
+🟢 Langer (MIT): TE&#x2F;Controlled release (1993)  
+🔴 Macchiarini: First donor trachea (2008)  
+🟢 Khademhosseini: Living tissues&#x2F;organs in lab  
+🔴 Badylak: ECM for regrowth  
+🟢 Hamilton: Organ-on-chip (2011)  
+🔴 Bhatia: Microchip livers  
+🟢 Stevens: Biomaterials&#x2F;regeneration  
+🔵 Miller: 3D print vessels  
+🟢 Shah: 3D inks&#x2F;scaffolds  
+🔴 Business: Organovo (Bioprinting), Tengion (Neo-Organs)
+
+Key Formulas &#x2F; Diagrams (use code blocks)Pioneers Timeline:1993: Langer2006: Atala2008: Macchiarini2011: Hamilton2013: Miller
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Academic Pioneers vs Business
+Pioneers
+Business
+
+
+
+Focus
+Research&#x2F;Innovation
+Commercialization
+
+
+Examples
+Atala&#x2F;Langer
+Organovo&#x2F;Tengion
+
+
+Impact
+Concepts&#x2F;Transplants
+Products&#x2F;Testing
+
+
+Common Mistakes &amp; Examiner Traps
+Misattributing milestones (e.g., Atala first organ)  
+Forgetting business aspects – trap: Commercial viability Qs
+
+Mnemonics &#x2F; Memory Hooks
+Pioneers: “Atala Langer Mac Khad Bad Ham Bhat Ste Mil Sha” – ALMKBHBSMS (All Make Big History)  
+Business: “Org Ten” – Organovo, Tengion
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Who are key TE pioneers?  
+
+Atala (first organ), Langer (definitions), Macchiarini (trachea).  
+
+Describe a TE business.  
+
+Organovo: 3D bioprinting for tissues, collaborates with NIH for drug efficacy.
+
+Active Recall Bank
+Christopher Reeve suffered from? _____  
+HK organ wait average? _____  
+Dolly was cloned in? _____  
+Vacanti Mouse material? _____  
+TE definition by Langer? _____  
+3 TE tools? _____  
+Autograft drawback? _____  
+Cell biology challenge? _____  
+Skin product Epicel? _____  
+Cartilage method Microfracture? _____  
+Microfluidics resolution? _____  
+Pioneer Atala milestone? _____  
+Business Organovo focus? _____  
+Paradigm factors? _____  
+Regenerating tissue example? _____  
+History 1985? _____  
+Challenges scale-up? _____
+
+15-Minute Mock Exam
+Define tissue engineering and explain its paradigm.  
+
+Interdisciplinary field developing substitutes to restore function; involves cells, materials, biochemical&#x2F;biophysical factors.  
+
+
+Compare autograft and xenograft.  
+
+Autograft: Self-source, no rejection but painful&#x2F;limited; Xenograft: Animal, abundant but infection&#x2F;rejection risk.  
+
+
+What are challenges in cartilage TE?  
+
+Limited regeneration, inefficient redifferentiation, scaling thickness, cell sources.  
+
+
+Describe Apligraf for skin repair.  
+
+Allogeneic fibroblasts in collagen + keratinocytes; 3 weeks, promotes healing despite rejection.  
+
+
+Why vascularization is key challenge?  
+
+Nutrient lack post-implant; cells need &lt;100um from capillaries.  
+
+
+Name a pioneer and contribution.  
+
+Langer: TE concepts and controlled release systems.
+
+
+
+One-Page Cheat Sheet Summary
+
+
+Section
+Key Points
+
+
+
+Assessments
+Exam 50%, Project 20%, Labs&#x2F;Assign 15% each; Presentations 15 min
+
+
+Motivation
+Diseases&#x2F;shortage; Stats: Skin 3M&#x2F;yr, Waitlist 10 min add
+
+
+History
+Ancient nose → 1962 skin → 1997 Vacanti → Dolly cloning
+
+
+Definitions
+Restore function via cells&#x2F;scaffolds&#x2F;signals; TE in vitro vs RM in vivo
+
+
+Strategies
+Isolated cells, Growth factors, Cell-matrix
+
+
+Transplants
+Auto (self), Allo (human), Xeno (animal); Drawbacks: Pain&#x2F;rejection&#x2F;infection
+
+
+Challenges
+Cell control, Materials porosity, Microenv, Scale vascular
+
+
+Apps
+Skin: Epicel&#x2F;Apligraf; Cartilage: Carticel; Bladder: Scaffold
+
+
+Advanced
+Microfluidics vascular, 3D print organs, Chip testing
+
+
+Pioneers
+Atala organ, Langer defs, Organovo bioprint
 
 
 ]]></content>
