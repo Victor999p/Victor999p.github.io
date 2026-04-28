@@ -357,94 +357,6 @@ Portability: Runs on multiple platforms.可移植性高：跨平台執行無需�
       </tags>
   </entry>
   <entry>
-    <title>常用Python程式碼片段集合</title>
-    <url>/posts/a4367020.html</url>
-    <content><![CDATA[Switch to English Version 🇬🇧
-常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
-1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
-print(&quot;你好，世界！&quot;)
-說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：
-你好，世界！
-
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
-# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
-說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：
-水果：蘋果水果：香蕉水果：橙子水果：葡萄
-
-
-3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
-# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
-
-說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
-
-4. 檔案讀寫在Python中，讀寫檔案是常見任務。
-# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
-
-說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
----## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
-
-說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
----## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
-
-說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：&#96;&#96;&#96;text
-面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
-
-說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
----## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
-
-說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：
-&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
-
-
-9. 字串操作Python 提供強大的字串處理工具。
-text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
-
-說明：strip()、split() 和 join() 方法使字串處理變得簡單。
-
-10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
-# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
-
-說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
-
-11. 日期處理datetime 模組幫助處理日期和時間。
-from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
-
-說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：
-當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
-
-
-12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
-numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
-
-說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：
-[0, 1, 2][0, 2, 4]
-
-
-結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
-
-發布於 
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
-        <tag>CityU</tag>
-        <tag>Beginner</tag>
-        <tag>AI generate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Basic</title>
     <url>/posts/98acdb98.html</url>
     <content><![CDATA[
@@ -638,6 +550,94 @@ title Key elements in Product X
       <tags>
         <tag>introduction</tag>
         <tag>first</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用Python程式碼片段集合</title>
+    <url>/posts/a4367020.html</url>
+    <content><![CDATA[Switch to English Version 🇬🇧
+常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
+1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
+print(&quot;你好，世界！&quot;)
+說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
+執行結果：
+你好，世界！
+
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
+# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
+說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：
+水果：蘋果水果：香蕉水果：橙子水果：葡萄
+
+
+3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
+# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
+說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
+
+4. 檔案讀寫在Python中，讀寫檔案是常見任務。
+# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+
+說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
+執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
+---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+
+說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
+執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
+---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+
+說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
+執行結果：&#96;&#96;&#96;text
+面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+
+說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
+執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
+---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+
+說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
+執行結果：
+&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
+
+9. 字串操作Python 提供強大的字串處理工具。
+text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+
+說明：strip()、split() 和 join() 方法使字串處理變得簡單。
+
+10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
+# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+
+說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
+
+11. 日期處理datetime 模組幫助處理日期和時間。
+from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+
+說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
+執行結果（假設當前時間為 2025-08-30 17:31:05）：
+當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
+
+12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
+numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+
+說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
+執行結果：
+[0, 1, 2][0, 2, 4]
+
+
+結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+
+發布於 
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+        <tag>AI generate</tag>
       </tags>
   </entry>
   <entry>
@@ -3228,42 +3228,6 @@ Q8. What kind of material is the Simon IVC filter made of? | Simon下腔靜脈�
       </tags>
   </entry>
   <entry>
-    <title>Biomaterials-6 | 生物材料-6</title>
-    <url>/posts/fcd82218.html</url>
-    <content><![CDATA[Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估Back to Outline | 回到大綱Lecture Outline | 課程大綱
-Tissue or host responses to injury:
-Implant material-tissue interaction 
-Coagulation
-Inflammation
-Angiogenesis
-Granulation tissue formation
-Foreign body reaction
-Tissue fibrosis
-Wound remodeling
-
-
-Biofilms:
-Bacterial in biofilm
-Biofilm development
-Device&#x2F;implant related infection
-Infection detection
-Prevention and treatment of infection
-
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Biomaterials(BME3123)</category>
-      </categories>
-      <tags>
-        <tag>Biomedical Engineering</tag>
-        <tag>Biomaterials</tag>
-        <tag>Lecture Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Biomaterials-5 | 生物材料-5</title>
     <url>/posts/8f57aec0.html</url>
     <content><![CDATA[Lecture 5: Micro&#x2F;nano-sized biomaterials | 微&#x2F;奈米尺寸生物材料Back to Outline | 回到大綱🧭 Lecture Outline | 課程大綱
@@ -3838,6 +3802,42 @@ Target cells: APCs such as dendritic cells and Langerhans cells translate the mR
       </tags>
   </entry>
   <entry>
+    <title>Biomaterials-6 | 生物材料-6</title>
+    <url>/posts/fcd82218.html</url>
+    <content><![CDATA[Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Tissue or host responses to injury:
+Implant material-tissue interaction 
+Coagulation
+Inflammation
+Angiogenesis
+Granulation tissue formation
+Foreign body reaction
+Tissue fibrosis
+Wound remodeling
+
+
+Biofilms:
+Bacterial in biofilm
+Biofilm development
+Device&#x2F;implant related infection
+Infection detection
+Prevention and treatment of infection
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomedical Engineering</tag>
+        <tag>Biomaterials</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Biomaterials-Outline | 生物材料-大綱</title>
     <url>/posts/a5063481.html</url>
     <content><![CDATA[Biomaterials-Outline | 生物材料-大綱Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
@@ -4302,6 +4302,145 @@ Filtering or Preprocessing: If any filtering was applied before averaging, it co
       </tags>
   </entry>
   <entry>
+    <title>HW2 Signals and Systems | 生物信號與生物系統</title>
+    <url>/posts/6d4835d0.html</url>
+    <content><![CDATA[Homework 2In this homework set, you will aims to build your skills in visualizing signal transformations and understanding the process of discretization, which are fundamental in analyzing and processing biomedical signals in systems like those used in medical diagnostics or monitoring.
+
+在這組作業中，您將致力於培養可視化訊號轉換和理解離散化過程的技能，這些技能對於分析和處理醫療診斷或監測系統中的生物醫學訊號至關重要。
+
+
+Code usage in MatlabTo obtain the orginal “Continous Time Signal with Straight Line” x(t)
+
+x-axis represent: Time
+y-axis represent: Amplitude
+
+ y = [0,0,-5,5,-3,2,1,0,0];t = [-1,0,0,1,2,3,4,5,6];figure;subplot(3,2,1);plot( t, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Continous Time Signal with Straight Line&#x27;);grid on;
+
+Signal Transformations | 訊號轉換: Question 1 and 2
+
+Draw 𝑥(𝑡+1).
+
+
+
+Draw 𝑥(−2𝑡+1).
+
+
+
+Question 1Question 2Question 1Draw Draw 𝑥(𝑡+1):
+
+t+1 mean moved the signal toward left by 1 unit | 將信號向左移動 1 單位
+Or by calculate | 或透過計算 :
+orginal_time_data &#x3D; new_time_data + 1  
+new_time_data &#x3D; orginal_time_data - 1
+[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ -2, -1, -1, 0, 1, 2, 3, 4, 5]
+
+
+
+t_q1 = t-1;  % by using the fomular abovesubplot(3,2,2);plot( t_q1, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;*Question 1&#x27;);grid on;Question 2Draw Draw 𝑥(-2𝑡+1):
+
+In −2𝑡+1 involve:
+“2t” time scaling | 時間縮放: compression by a factor of 2. | 壓縮 2 倍。
+“-“reversal | 反轉: due to the negative sign - infront of 2t. | 由於 2t 前面的負號 -。 
+“+1” shifting | 移位 : moved the signal. | 訊號平移。
+
+
+By calculate | 或透過計算 :
+orginal_time_data &#x3D; 2 * new_time_data + 1  
+new_time_data &#x3D; - (orginal_time_data - 1) &#x2F; 2
+[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ 1, 0.5, 0.5, 0, -0.5, -1, -1.5, -2, -2.5]
+
+
+
+t_q2 = -(t-1)/2; % by using the fomular abovesubplot(3,2,3);plot(t_q2, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Question 2&#x27;);grid on;
+
+Signal Sampling : Question 3, 4 &amp; 5
+
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.
+
+
+
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0.
+
+
+
+Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1.
+
+
+Discretize 𝑥(𝑡) | 離散化𝑥(𝑡): 
+We need to extract the most significant (extreme) value — either the maximum or minimum — within each 1-second interval. | 我們需要提取每 1 秒間隔內最重要的（極端）值 - 最大值或最小值。From the original graph we can obtain following result of the Discretize dataset:
+
+
+
+discretize_y = [0,-5,5,-3,2,1,0,0];discretize_t = [-1,0,1,2,3,4,5,6];
+
+Question 3Question 4Question 2Question 3Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.:
+
+Discretize 𝑥(𝑡): 
+This introduces the concept of sampling a continuous signal at regular intervals (every 1 unit of time) | 以固定間隔（每 1 個時間單位）對連續訊號進行取樣的概念
+
+
+
+subplot(3,2,4);stem( discretize_t, discretize_y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5); xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;3. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.&#x27;)grid on;Question 4Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0 :
+
+Discretize 𝑥(𝑡):
+similarly to question 3
+
+
+Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0:
+Sampling with a larger interval and start from time &#x3D; 0 | 以更大的間隔採樣，並從時間&#x3D; 0開始
+In this situation we use list_name(starting_index:inverval:end) to obtain the data
+In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
+
+
+discretize_y(2:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [-5,-3,1,0]
+discretize_t(2:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [0,2,4,6]
+
+
+
+discretize_t_q4 = discretize_t(2:2:end); discretize_y_q4 = discretize_y(2:2:end); subplot(3,2,5);stem(discretize_t_q4, discretize_y_q4, &#x27;b&#x27;,&#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;4. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0 &#x27;);grid on;Question 55. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
+
+Discretize 𝑥(𝑡):
+similarly to question 3
+
+
+Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
+Sampling with a larger interval and start from time &#x3D; -1 | | 以更大的間隔採樣，並從時間&#x3D; -1開始
+In this situation we use list_name(starting_index:inverval:end) to obtain the data
+In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
+
+
+discretize_y(1:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [0,5,2,0]
+discretize_t(1:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [-1,1,3,5]
+
+
+
+discretize_t_q5 = discretize_t(1:2:end); discretize_y_q5 = discretize_y(1:2:end);subplot(3,2,6);stem( discretize_t_q5, discretize_y_q5, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;5. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1&#x27;);grid on;
+
+Result output |  結果輸出% Display output with windowsset(gcf, &#x27;Position&#x27;, [100, 100, 800, 600]);
+
+gcf: “Get Current Figure” — refers to the active figure window | 取得活動圖形視窗
+‘Position’: Specifies the window’s position and size | 指定視窗的位置和大小
+[100, 100, 800, 600]:
+100, 100: Position of the bottom-left corner of the window on your screen (in pixels) | 視窗左下角在螢幕上的位置（以像素為單位）
+800: Width of the window | 視窗寬度
+600: Height of the window | 視窗高度
+
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Signals and Systems</category>
+      </categories>
+      <tags>
+        <tag>Signals and Systems</tag>
+        <tag>biomedical engineering</tag>
+        <tag>Homework</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HW3 Signals and Systems | 生物信號與生物系統</title>
     <url>/posts/a776c643.html</url>
     <content><![CDATA[Signal Analysis: Even and Odd Components and Periodicity | 信號分析：偶數與奇數分量及週期性Background Concepts | 背景概念Even and Odd Components | 偶數與奇數分量For a continuous-time signal x(t) x(t) x(t):
@@ -4482,129 +4621,140 @@ Periodic | 週期性: No | 否
       </tags>
   </entry>
   <entry>
-    <title>HW2 Signals and Systems | 生物信號與生物系統</title>
-    <url>/posts/6d4835d0.html</url>
-    <content><![CDATA[Homework 2In this homework set, you will aims to build your skills in visualizing signal transformations and understanding the process of discretization, which are fundamental in analyzing and processing biomedical signals in systems like those used in medical diagnostics or monitoring.
-
-在這組作業中，您將致力於培養可視化訊號轉換和理解離散化過程的技能，這些技能對於分析和處理醫療診斷或監測系統中的生物醫學訊號至關重要。
-
-
-Code usage in MatlabTo obtain the orginal “Continous Time Signal with Straight Line” x(t)
-
-x-axis represent: Time
-y-axis represent: Amplitude
-
- y = [0,0,-5,5,-3,2,1,0,0];t = [-1,0,0,1,2,3,4,5,6];figure;subplot(3,2,1);plot( t, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Continous Time Signal with Straight Line&#x27;);grid on;
-
-Signal Transformations | 訊號轉換: Question 1 and 2
-
-Draw 𝑥(𝑡+1).
+    <title>BME 2104 Tissue Engineering – Overview</title>
+    <url>/posts/74ab02e4.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – OverviewLecture 1: 基礎概念
+TE定義 (Definition) 🔴
+用工程同生命科學嘅原理，整啲 生物替代物 (Biological substitutes) 出嚟，去修復、維持或者改善組織功能。
 
 
-
-Draw 𝑥(−2𝑡+1).
-
-
-
-Question 1Question 2Question 1Draw Draw 𝑥(𝑡+1):
-
-t+1 mean moved the signal toward left by 1 unit | 將信號向左移動 1 單位
-Or by calculate | 或透過計算 :
-orginal_time_data &#x3D; new_time_data + 1  
-new_time_data &#x3D; orginal_time_data - 1
-[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ -2, -1, -1, 0, 1, 2, 3, 4, 5]
+歷史與里程碑 (History &amp; Milestones) 🔴
+1993年：Langer 同 Vacanti 篇經典論文。
 
 
-
-t_q1 = t-1;  % by using the fomular abovesubplot(3,2,2);plot( t_q1, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;*Question 1&#x27;);grid on;Question 2Draw Draw 𝑥(-2𝑡+1):
-
-In −2𝑡+1 involve:
-“2t” time scaling | 時間縮放: compression by a factor of 2. | 壓縮 2 倍。
-“-“reversal | 反轉: due to the negative sign - infront of 2t. | 由於 2t 前面的負號 -。 
-“+1” shifting | 移位 : moved the signal. | 訊號平移。
+三大工具與策略 (3 Tools &amp; Strategies) 🔴
+細胞 (Cells) - 有生命嘅部分。
+支架&#x2F;材料 (Scaffolds&#x2F;Materials) - 三維結構。
+生長信號&#x2F;因子 (Growth signals&#x2F;factors) - 控制細胞行為。
 
 
-By calculate | 或透過計算 :
-orginal_time_data &#x3D; 2 * new_time_data + 1  
-new_time_data &#x3D; - (orginal_time_data - 1) &#x2F; 2
-[ -1, 0, 0, 1, 2, 3, 4, 5, 6] -&gt; [ 1, 0.5, 0.5, 0, -0.5, -1, -1.5, -2, -2.5]
+移植類型 (Transplant Types) 🔵
+自體 (Autologous) - 用自己嘢，冇排斥，但數量有限。
+同種異體 (Allogeneic) - 用第二個人嘅嘢，有排斥風險。
+異種 (Xenogeneic) - 用動物嘢，排斥反應好勁。
+
+
+技術挑戰 (Technical Challenges) 🟢
+血管生成 (Vascularization)、免疫排斥 (Immune rejection)、神經連接 (Innervation)。
+
+
+皮膚應用 (Skin Applications) 🔵
+分層：表皮 (Epidermis)、真皮 (Dermis)。
+產品例子：Apligraf、Dermagraft。
+
+
+軟骨應用 (Cartilage Applications) 🔵
+軟骨係 冇血管 (Avascular)，好難自己修復。
+常用細胞：軟骨細胞 (Chondrocytes)、間充質幹細胞 (Mesenchymal stem cells)。
+
+
+先進技術 (Advanced Tech) 🔵
+3D生物打印 (3D bioprinting) - 精準控制結構。
+器官晶片 (Organ-on-a-Chip) - 用微流體 (Microfluidics) 模仿器官功能。
 
 
 
-t_q2 = -(t-1)/2; % by using the fomular abovesubplot(3,2,3);plot(t_q2, y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);                 xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;Question 2&#x27;);grid on;
 
-Signal Sampling : Question 3, 4 &amp; 5
-
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.
-
-
-
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0.
+Lecture 2: 細胞與生物材料
+Stem Cells 幹細胞 🔴
+Embryonic stem cells (ESC) 胚胎幹細胞: 乜都能變 (Pluripotent)。
+Mesenchymal stem cells (MSC) 間充質幹細胞: 可以變骨、軟骨、脂肪 (Multipotent)。
 
 
-
-Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1.
-
-
-Discretize 𝑥(𝑡) | 離散化𝑥(𝑡): 
-We need to extract the most significant (extreme) value — either the maximum or minimum — within each 1-second interval. | 我們需要提取每 1 秒間隔內最重要的（極端）值 - 最大值或最小值。From the original graph we can obtain following result of the Discretize dataset:
+Biocompatibility 生物相容性 🟢: 材料唔可以引起毒性 (Toxicity) 或者有害反應 (Adverse reaction)。
+Bioreactors 生物反應器 🔵: 用嚟大規模培養細胞同組織嘅設備，可以控制環境 (例如pH、氧氣、流體剪切力 Fluid shear stress)。
 
 
+Lecture 3: 發育生物學
+Germ Layers 胚層 🔴
+外胚層 (Ectoderm): 變表皮、神經系統。
+中胚層 (Mesoderm): 變肌肉、骨、血液、血管。
+內胚層 (Endoderm): 變肺、肝、腸等內臟。
 
-discretize_y = [0,-5,5,-3,2,1,0,0];discretize_t = [-1,0,1,2,3,4,5,6];
 
-Question 3Question 4Question 2Question 3Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;1.:
-
-Discretize 𝑥(𝑡): 
-This introduces the concept of sampling a continuous signal at regular intervals (every 1 unit of time) | 以固定間隔（每 1 個時間單位）對連續訊號進行取樣的概念
+Epithelial-Mesenchymal Transition (EMT) 上皮-間質轉化 🟢: 上皮細胞失去黏附性，變成可以遷移 (Migrate) 嘅間質細胞，對發育同癌症好重要。
+Extracellular Matrix (ECM) 細胞外基質 🔴
+主要成分：膠原蛋白 (Collagen) (提供強度)、蛋白聚糖 (Proteoglycans) (好似海綿，保持水分)。
 
 
 
-subplot(3,2,4);stem( discretize_t, discretize_y, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5); xlabel(&#x27;Time (s)&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;3. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=1.&#x27;)grid on;Question 4Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0 :
 
-Discretize 𝑥(𝑡):
-similarly to question 3
-
-
-Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; 0:
-Sampling with a larger interval and start from time &#x3D; 0 | 以更大的間隔採樣，並從時間&#x3D; 0開始
-In this situation we use list_name(starting_index:inverval:end) to obtain the data
-In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
-
-
-discretize_y(2:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [-5,-3,1,0]
-discretize_t(2:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [0,2,4,6]
+Lecture 4: 細胞信號與黏附
+Fibronectin 纖連蛋白 &amp; RGD Sequence (Arg-Gly-Asp) 🔴: 細胞點樣黐喺ECM上面，主要靠RGD呢個三肽序列。
+Focal Adhesions 黏著斑 in 2D vs 3D 🔵: 2D環境下黏著斑大而穩定；3D環境下細而動態，更似真實情況。
+Cell Migration 細胞遷移 &amp; Chemotaxis 趨化性 🟢: 細胞跟住化學信號梯度 (Chemical gradient) 移動。
+Signal Transduction 信號轉導 🔴: 過程係 配體(Ligand) → 受體(Receptor) → 信號傳遞(Signaling cascade) → 細胞反應(Cellular response)。
+G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體 🟢: 一大類受體，激活後會影響細胞內第二信使 (Second messengers)。
+Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 🟢: 另一大類受體，激活後會啟動 MAPK pathway 等重要途徑，影響細胞生長、分化。
+Mechanotransduction 機械轉導 🔵: 細胞點樣將 機械力 (Mechanical force) (例如拉扯、壓力) 轉化成 生化信號 (Biochemical signals)。
 
 
-
-discretize_t_q4 = discretize_t(2:2:end); discretize_y_q4 = discretize_y(2:2:end); subplot(3,2,5);stem(discretize_t_q4, discretize_y_q4, &#x27;b&#x27;,&#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;4. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = 0 &#x27;);grid on;Question 55. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
-
-Discretize 𝑥(𝑡):
-similarly to question 3
-
-
-Sampling period of 𝑇𝑠&#x3D;2, starting from t &#x3D; -1 :
-Sampling with a larger interval and start from time &#x3D; -1 | | 以更大的間隔採樣，並從時間&#x3D; -1開始
-In this situation we use list_name(starting_index:inverval:end) to obtain the data
-In Matlab index starting with [1,2,3,4] not [0,1,2,3] | 在Matlab中，索引以**[1,2,3,4]開頭，而非[0,1,2,3]**
+Lecture 5: 機械生物學與支架
+Tensegrity Model 張拉整體模型 🔴: 解釋細胞骨架 (Cytoskeleton) 好似一個張拉結構，將外力傳遍成個細胞。
+Integrins 整合素 🔴: 係最主要嘅 機械感受器 (Mechanoreceptors) 同黏附分子，連接細胞內部同外部ECM。
+Effect of Mechanical Forces on Differentiation 機械力對分化嘅影響 🔵: 基質硬度 (Matrix stiffness) 可以直接影響幹細胞變成乜嘢細胞 (例如，硬基質傾向變骨細胞)。
+Scaffold Requirements 支架要求 🟢:
+生物相容性 (Biocompatible)
+有適當孔隙 (Porous) 俾細胞生長同營養運輸
+降解速度要匹配組織生長速度 (Degradable)
 
 
-discretize_y(1:2:end) &#x3D; [0,-5,5,-3,2,1,0,0] -&gt; [0,5,2,0]
-discretize_t(1:2:end) &#x3D; [-1,0,1,2,3,4,5,6] -&gt; [-1,1,3,5]
+Types of Scaffolds 支架類型 🔴:
+Bioinert 生物惰性: 唔同身體反應，例如用喺髖關節置換嘅鈦金屬。
+Bioactive 生物活性: 會同身體互動，促進組織結合，例如羟基磷灰石 (Hydroxyapatite)。
+Bioresorbable 生物可吸收: 完成任務後會俾身體分解吸收，例如PLGA聚合物。
+
+
+Scaffold Materials 支架材料 🔵:
+天然 (Natural): 膠原蛋白、海藻酸鹽 (Alginate)。優點：生物活性好；缺點：力學性能弱、批次差異大。
+合成 (Synthetic): PLA, PGA, PLGA。優點：力學可控、降解可調；缺點：缺乏生物識別位點 (Lack bio-recognition sites)。
 
 
 
-discretize_t_q5 = discretize_t(1:2:end); discretize_y_q5 = discretize_y(1:2:end);subplot(3,2,6);stem( discretize_t_q5, discretize_y_q5, &#x27;b&#x27;, &#x27;LineWidth&#x27;, 1.5);xlabel(&#x27;Time&#x27;);ylabel(&#x27;Amplitude&#x27;);title(&#x27;5. Discretize 𝑥(𝑡) using a sampling period of 𝑇𝑠=2, starting from t = -1&#x27;);grid on;
 
-Result output |  結果輸出% Display output with windowsset(gcf, &#x27;Position&#x27;, [100, 100, 800, 600]);
+Lecture 6: 聚合物科學與3D培養
+Polymer Basics 聚合物基礎 🔴: 單體 (Monomer) 聚合 (Polymerize) 成 聚合物 (Polymer)。
+Hydrogels 水凝膠 🔵: 交聯嘅親水聚合物網絡，可以鎖住大量水分。用於 細胞封裝 (Cell encapsulation)。
+3D vs 2D Cell Culture 3D與2D細胞培養比較 🔵:
+2D: 細胞平鋪生長，行為不自然，但操作簡單。
+3D: 細胞在立體環境生長，更似體內情況，細胞信號、機械力、分化都更準確。
 
-gcf: “Get Current Figure” — refers to the active figure window | 取得活動圖形視窗
-‘Position’: Specifies the window’s position and size | 指定視窗的位置和大小
-[100, 100, 800, 600]:
-100, 100: Position of the bottom-left corner of the window on your screen (in pixels) | 視窗左下角在螢幕上的位置（以像素為單位）
-800: Width of the window | 視窗寬度
-600: Height of the window | 視窗高度
 
+Natural Polymer Examples 天然聚合物例子 🔴: 膠原蛋白 (Collagen)、纖維蛋白 (Fibrin)、透明質酸 (Hyaluronic acid)。
+
+
+Lecture 7: 生物製造與臨床挑戰
+Classic Scaffold Fabrication 傳統支架製備技術 🔵:
+Solvent Casting &amp; Particulate Leaching 溶劑澆鑄-粒子浸出: 用鹽粒做孔，溶解後留低孔隙。優點：易控制孔隙率；缺點：用有機溶劑 (Organic solvent)。
+Gas Foaming 氣體發泡: 用高壓氣體整出氣孔。優點：唔使溶劑；缺點：可能形成閉孔 (Closed pores)。
+Freeze-Drying 冷凍乾燥: 水溶液結冰後昇華 (Sublimation) 留低孔隙。優點：適合熱敏感材料；缺點：可能結構不均勻。
+
+
+Advanced Biofabrication 先進生物製造 🔵:
+Electrospinning 靜電紡絲: 整出納米纖維 (Nanofibers)，模仿天然ECM結構。
+3D Bioprinting 3D生物打印: 將細胞同材料一齊精確打印。
+Decellularization 脫細胞: 將捐贈組織嘅細胞洗走，留低天然嘅ECM支架。
+
+
+Bioreactors 生物反應器 🔵: 動態培養系統，可以施加 流體剪切力 (Fluid shear stress)、壓縮力 (Compression) 等，促進組織成熟。
+Host Response 宿主反應 🟢:
+植入後會引發炎症 (Inflammation)。
+如果材料生物相容性差或降解產物有刺激，可能會發展成纖維化&#x2F;疤痕包裹 (Fibrosis&#x2F;Scar encapsulation)，隔離植入物，導致功能失敗。
+
+
+Immunoisolation 免疫隔離 🔵:
+用半透膜 (Semi-permeable membrane) 包住移植嘅細胞，容許營養同廢物交換，但阻止免疫細胞同抗體進入攻擊細胞。
+應用：治療糖尿病嘅 封裝胰島細胞療法 (Encapsulated islet cell therapy)。
 
 
 
@@ -4612,12 +4762,12 @@ gcf: “Get Current Figure” — refers to the active figure window | 取得活
       <categories>
         <category>Education</category>
         <category>Biomedical Engineering</category>
-        <category>Signals and Systems</category>
+        <category>Tissue Engineering</category>
       </categories>
       <tags>
-        <tag>Signals and Systems</tag>
         <tag>biomedical engineering</tag>
-        <tag>Homework</tag>
+        <tag>Exam Notes</tag>
+        <tag>Tissue Engineering</tag>
       </tags>
   </entry>
   <entry>
@@ -7140,141 +7290,887 @@ Collagen (strength); Laminin (networks); Elastin (stretch); Fibronectin (binding
       </tags>
   </entry>
   <entry>
-    <title>BME 2104 Tissue Engineering – Overview</title>
-    <url>/posts/74ab02e4.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – OverviewLecture 1: 基礎概念
-TE定義 (Definition) 🔴
-用工程同生命科學嘅原理，整啲 生物替代物 (Biological substitutes) 出嚟，去修復、維持或者改善組織功能。
+    <title>BME 2104 Tissue Engineering – 4  </title>
+    <url>/posts/a1205bc2.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – 4Lecture Overview
+Top 8 topics that appear every year: Fibronectin and RGD Binding, Focal Adhesions in 2D vs 3D, Cell Migration and Chemotaxis, Signaling Ligands and Types, Central Paradigm of Signal Transduction, G-Protein Coupled Receptors, Receptor Tyrosine Kinases and Pathways, Mechanotransduction and Cytoskeleton
+Colour code: 🔴 Memorise | 🟢 Understand | 🔵 Apply
+每年必出嘅八大題目 (Top 8 topics that appear every year):
+Fibronectin 纖連蛋白 同 RGD Binding 結合
+Focal Adhesions 黏著斑 in 2D vs 3D
+Cell Migration 細胞遷移 同 Chemotaxis 趨化性
+Signaling Ligands 信號配體 同 Types 類型
+Central Paradigm of Signal Transduction 信號轉導中心法則
+G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體
+Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 同 Pathways 信號途徑
+Mechanotransduction 機械轉導 同 Cytoskeleton 細胞骨架
 
 
-歷史與里程碑 (History &amp; Milestones) 🔴
-1993年：Langer 同 Vacanti 篇經典論文。
+顏色標記 (Colour code): 🔴 Memorise 必須背誦 | 🟢 Understand 必須理解 | 🔵 Apply 必須應用
+
+Topic 1 – Fibronectin 纖連蛋白 同 Integrin 整合素 Binding 結合大圖景 (Big Picture)Fibronectin 纖連蛋白係關鍵嘅 ECM (Extracellular Matrix) 細胞外基質 glycoprotein 糖蛋白，透過 integrins 整合素促進 cell adhesion 細胞黏附，對組織結構同信號傳遞至關重要。
+思維導圖 (Mind map):Fibronectin → Types 類型 (Soluble Plasma 可溶性血漿型 → Bloodstream 血液循環 → Hepatocytes 肝細胞; Insoluble Cellular 不可溶性細胞型 → Secreted by Fibroblasts 成纖維細胞分泌) → Binds to 結合對象 (Integrins 整合素 → RGD Sequence RGD序列 → α5β1&#x2F;αVβ3; ECM Components ECM成分 → Collagen 膠原蛋白&#x2F;Fibrin 纖維蛋白&#x2F;Heparan Sulfate 硫酸肝素) → Enables Cell Attachment 實現細胞黏附。
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Fibronectin 纖連蛋白係結合 integrins 整合素嘅主要 ECM 糖蛋白。
+🟢 亦結合其他 ECM 成分，如 collagen 膠原蛋白、fibrin 纖維蛋白、heparan sulfate proteoglycans 硫酸肝素蛋白聚糖。
+🔴 兩種類型 (Two types): soluble plasma 可溶性血漿型 (hepatocytes 肝細胞產生) 同 insoluble cellular 不可溶性細胞型 (fibroblasts 成纖維細胞等分泌)。
+🟢 Integrin 整合素 binding 結合使用 RGD sequence RGD序列 (Arg-Gly-Asp 精氨酸-甘氨酸-天冬氨酸)。
+🔴 關鍵 integrins 整合素: α5β1 同 αVβ3 (喺細胞表面)。
+🟢 短嘅 RGD peptides RGD肽可以模仿 fibronectin 纖連蛋白功能，促進 cell attachment 細胞黏附。
+🔵 RGD 序列促成 focal adhesion 黏著斑形成。
+🟢 Plasma fibronectin 血漿纖連蛋白喺血液中循環；cellular fibronectin 細胞型纖連蛋白則整合入 matrix 基質。
+🔴 RGD 係 primary cell attachment site 主要細胞黏附位點。
+🟢 Binding 結合促進 clustering 聚集，形成 focal adhesions 黏著斑。
+🔵 應用於 biomaterials 生物材料，用於 cell adhesion engineering 細胞黏附工程。
+🟢 Insoluble form 不可溶性型由好多細胞分泌，例如 fibroblasts 成纖維細胞。
+🔴 Heparan sulfate 硫酸肝素 binding 結合有助於 growth factor 生長因子 localization 定位。
+🟢 Fibronectin 纖連蛋白 domains 結構域可以結合 TGF-β 同 bFGF。
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Fibronectin Structure 纖連蛋白結構:NH2 - [Type I Repeats I型重複序列] - [Type II II型] - [Type III III型] - COOHBindings 結合位點: Fibrin纖維蛋白/Heparan硫酸肝素 (I型), Collagen膠原蛋白 (I/II型), Integrin整合素 (III型 - RGD), Heparan硫酸肝素/Fibrin纖維蛋白 (III型)
+RGD Binding RGD結合:Cell Surface Integrin 細胞表面整合素 (α5β1/αVβ3) ⇄ RGD Sequence RGD序列 → Cell Attachment 細胞黏附
+
+對比表 (Comparison Table) - Soluble Plasma vs Insoluble Cellular Fibronectin 可溶性血漿型 vs 不可溶性細胞型纖連蛋白
 
 
-三大工具與策略 (3 Tools &amp; Strategies) 🔴
-細胞 (Cells) - 有生命嘅部分。
-支架&#x2F;材料 (Scaffolds&#x2F;Materials) - 三維結構。
-生長信號&#x2F;因子 (Growth signals&#x2F;factors) - 控制細胞行為。
-
-
-移植類型 (Transplant Types) 🔵
-自體 (Autologous) - 用自己嘢，冇排斥，但數量有限。
-同種異體 (Allogeneic) - 用第二個人嘅嘢，有排斥風險。
-異種 (Xenogeneic) - 用動物嘢，排斥反應好勁。
-
-
-技術挑戰 (Technical Challenges) 🟢
-血管生成 (Vascularization)、免疫排斥 (Immune rejection)、神經連接 (Innervation)。
-
-
-皮膚應用 (Skin Applications) 🔵
-分層：表皮 (Epidermis)、真皮 (Dermis)。
-產品例子：Apligraf、Dermagraft。
-
-
-軟骨應用 (Cartilage Applications) 🔵
-軟骨係 冇血管 (Avascular)，好難自己修復。
-常用細胞：軟骨細胞 (Chondrocytes)、間充質幹細胞 (Mesenchymal stem cells)。
-
-
-先進技術 (Advanced Tech) 🔵
-3D生物打印 (3D bioprinting) - 精準控制結構。
-器官晶片 (Organ-on-a-Chip) - 用微流體 (Microfluidics) 模仿器官功能。
-
-
-
-
-Lecture 2: 細胞與生物材料
-Stem Cells 幹細胞 🔴
-Embryonic stem cells (ESC) 胚胎幹細胞: 乜都能變 (Pluripotent)。
-Mesenchymal stem cells (MSC) 間充質幹細胞: 可以變骨、軟骨、脂肪 (Multipotent)。
-
-
-Biocompatibility 生物相容性 🟢: 材料唔可以引起毒性 (Toxicity) 或者有害反應 (Adverse reaction)。
-Bioreactors 生物反應器 🔵: 用嚟大規模培養細胞同組織嘅設備，可以控制環境 (例如pH、氧氣、流體剪切力 Fluid shear stress)。
-
-
-Lecture 3: 發育生物學
-Germ Layers 胚層 🔴
-外胚層 (Ectoderm): 變表皮、神經系統。
-中胚層 (Mesoderm): 變肌肉、骨、血液、血管。
-內胚層 (Endoderm): 變肺、肝、腸等內臟。
-
-
-Epithelial-Mesenchymal Transition (EMT) 上皮-間質轉化 🟢: 上皮細胞失去黏附性，變成可以遷移 (Migrate) 嘅間質細胞，對發育同癌症好重要。
-Extracellular Matrix (ECM) 細胞外基質 🔴
-主要成分：膠原蛋白 (Collagen) (提供強度)、蛋白聚糖 (Proteoglycans) (好似海綿，保持水分)。
+Aspect 方面
+Soluble Plasma Fibronectin (X) 可溶性血漿型纖連蛋白
+Insoluble Cellular Fibronectin (Y) 不可溶性細胞型纖連蛋白
 
 
 
-
-Lecture 4: 細胞信號與黏附
-Fibronectin 纖連蛋白 &amp; RGD Sequence (Arg-Gly-Asp) 🔴: 細胞點樣黐喺ECM上面，主要靠RGD呢個三肽序列。
-Focal Adhesions 黏著斑 in 2D vs 3D 🔵: 2D環境下黏著斑大而穩定；3D環境下細而動態，更似真實情況。
-Cell Migration 細胞遷移 &amp; Chemotaxis 趨化性 🟢: 細胞跟住化學信號梯度 (Chemical gradient) 移動。
-Signal Transduction 信號轉導 🔴: 過程係 配體(Ligand) → 受體(Receptor) → 信號傳遞(Signaling cascade) → 細胞反應(Cellular response)。
-G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體 🟢: 一大類受體，激活後會影響細胞內第二信使 (Second messengers)。
-Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 🟢: 另一大類受體，激活後會啟動 MAPK pathway 等重要途徑，影響細胞生長、分化。
-Mechanotransduction 機械轉導 🔵: 細胞點樣將 機械力 (Mechanical force) (例如拉扯、壓力) 轉化成 生化信號 (Biochemical signals)。
+Source 來源
+Produced by hepatocytes 肝細胞產生
+Secreted by fibroblasts etc. 成纖維細胞等分泌
 
 
-Lecture 5: 機械生物學與支架
-Tensegrity Model 張拉整體模型 🔴: 解釋細胞骨架 (Cytoskeleton) 好似一個張拉結構，將外力傳遍成個細胞。
-Integrins 整合素 🔴: 係最主要嘅 機械感受器 (Mechanoreceptors) 同黏附分子，連接細胞內部同外部ECM。
-Effect of Mechanical Forces on Differentiation 機械力對分化嘅影響 🔵: 基質硬度 (Matrix stiffness) 可以直接影響幹細胞變成乜嘢細胞 (例如，硬基質傾向變骨細胞)。
-Scaffold Requirements 支架要求 🟢:
-生物相容性 (Biocompatible)
-有適當孔隙 (Porous) 俾細胞生長同營養運輸
-降解速度要匹配組織生長速度 (Degradable)
+Location 位置
+Circulates in bloodstream 喺血液循環中
+Integrated into ECM 整合入細胞外基質
 
 
-Types of Scaffolds 支架類型 🔴:
-Bioinert 生物惰性: 唔同身體反應，例如用喺髖關節置換嘅鈦金屬。
-Bioactive 生物活性: 會同身體互動，促進組織結合，例如羟基磷灰石 (Hydroxyapatite)。
-Bioresorbable 生物可吸收: 完成任務後會俾身體分解吸收，例如PLGA聚合物。
+Function 功能
+Coagulation 凝血, wound healing 傷口癒合
+Cell adhesion 細胞黏附, matrix structure 基質結構
 
 
-Scaffold Materials 支架材料 🔵:
-天然 (Natural): 膠原蛋白、海藻酸鹽 (Alginate)。優點：生物活性好；缺點：力學性能弱、批次差異大。
-合成 (Synthetic): PLA, PGA, PLGA。優點：力學可控、降解可調；缺點：缺乏生物識別位點 (Lack bio-recognition sites)。
+Solubility 溶解性
+Soluble 可溶性
+Insoluble 不可溶性
+
+
+Production 生產
+Liver-specific 肝臟特異性
+Various cell types 多種細胞類型
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+誤以為 RGD 係唯一結合位點 (陷阱: 忘記其他協同區域，例如 PHSRN)。
+混淆 fibronectin 纖連蛋白嘅類型: 以為所有纖連蛋白都係 insoluble 不可溶性，喺 ECM 入面。
+忽略 RGD 喺 tissue engineering (TE) 組織工程應用中，用於 synthetic peptides 合成肽嘅作用。
+
+記憶法 (Mnemonics &#x2F; Memory Hooks)
+RGD: “Really Good Dance” – Arg-Gly-Asp 精氨酸-甘氨酸-天冬氨酸令細胞”跳舞” (黏附同移動)。
+Fibronectin types 纖連蛋白類型: “Plasma Soluble in Blood, Cellular Insoluble in Matrix” – PSB-CIM。
+
+過往試題 + 標準答案 (Past Exam Questions + Model Answers)What is the role of the RGD sequence in fibronectin? 纖連蛋白中 RGD 序列嘅作用係咩？  
+
+The RGD (Arg-Gly-Asp) sequence is the primary integrin-binding site facilitating cell attachment via α5β1 and αVβ3 integrins.RGD (精氨酸-甘氨酸-天冬氨酸) 序列係主要嘅整合素結合位點，透過 α5β1 同 αVβ3 整合素促進細胞黏附。
+
+Compare soluble and insoluble fibronectin. 比較可溶性同不可溶性纖連蛋白。  
+
+Soluble plasma fibronectin circulates in blood from hepatocytes for systemic roles; insoluble cellular fibronectin is secreted locally for ECM integration and adhesion.可溶性血漿型纖連蛋白由肝細胞產生，喺血液中循環，發揮全身性作用；不可溶性細胞型纖連蛋白由局部細胞分泌，用於 ECM 整合同黏附。
+
+Topic 2 – Focal Adhesions 黏著斑大圖景 (Big Picture)Focal adhesions 黏著斑係 integrin 整合素介導嘅聚集結構，連結 ECM 細胞外基質 同 cytoskeleton 細胞骨架，傳遞信號同機械力。思維導圖 (Mind map):Focal Adhesion 黏著斑 → Integrin Binds 整合素結合 (Collagen 膠原蛋白&#x2F;Fibronectin 纖連蛋白 → RGD) → Cluster Formation 聚集形成 → Components 組成部分 (Vinculin&#x2F;Talin&#x2F;FAK&#x2F;Actin&#x2F;Myosin) → Signals to Nucleus 信號傳至細胞核 → 2D (Punctate 點狀) vs 3D (Diffuse 瀰漫性).
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Integrins 整合素 bind 結合 ECM (如 collagen 膠原蛋白&#x2F;fibronectin 纖連蛋白) 形成 focal adhesions 黏著斑。
+🟢 Focal adhesions 黏著斑係細胞黏附聚集結構。
+🔴 顯微成像中常用綠色螢光標記 focal adhesions 黏著斑。
+🟢 2D 環境下嘅 adhesions 黏著斑呈 punctate 點狀；3D 環境下呈 fibrillar&#x2F;diffuse 纖維狀&#x2F;瀰漫性。
+🔵 透過 cytoskeleton 細胞骨架將 mechanical signals 機械信號傳遞至 nucleus 細胞核。
+🟢 涉及蛋白質: vinculin, talin, paxillin, FAK。
+🔴 Neural progenitor cells (NPCs) 神經祖細胞: 喺 3D 環境中，remodeling 重塑 &gt; binding 結合。
+🟢 NPC stemness NPC幹性對 3D 環境中嘅 adhesive ligands 黏附配體不敏感。
+🔵 應用於 TE 組織工程，用於模仿 ECM 嘅 scaffold 支架設計。
+🟢 機械力來自 actin-myosin contraction 肌動蛋白-肌球蛋白收縮。
+🔴 Turnover 更新調節 migration 遷移。
+🟢 FAK 透過 phosphorylation 磷酸化進行信號傳遞。
+🔵 3D 環境會改變 adhesion morphology 黏附形態。
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Focal Adhesion Assembly 黏著斑組裝:ECM (Fibronectin)細胞外基質 (纖連蛋白) → Integrin整合素 → Talin/Vinculin → Actin/Myosin肌動蛋白/肌球蛋白 → Force Transmission力傳遞 → Nucleus細胞核 (Gene Expression基因表達)
+2D vs 3D:2D: Flat substrate 平坦基底 → Discrete spots 離散點狀3D: Matrix embedding 基質包埋 → Elongated fibrils 延長纖維狀
+
+對比表 (Comparison Table) - 2D vs 3D Focal Adhesions
+
+
+Aspect 方面
+2D Focal Adhesions (X)
+3D Focal Adhesions (Y)
 
 
 
-
-Lecture 6: 聚合物科學與3D培養
-Polymer Basics 聚合物基礎 🔴: 單體 (Monomer) 聚合 (Polymerize) 成 聚合物 (Polymer)。
-Hydrogels 水凝膠 🔵: 交聯嘅親水聚合物網絡，可以鎖住大量水分。用於 細胞封裝 (Cell encapsulation)。
-3D vs 2D Cell Culture 3D與2D細胞培養比較 🔵:
-2D: 細胞平鋪生長，行為不自然，但操作簡單。
-3D: 細胞在立體環境生長，更似體內情況，細胞信號、機械力、分化都更準確。
+Morphology 形態
+Punctate 點狀, discrete 離散
+Fibrillar 纖維狀, diffuse 瀰漫性
 
 
-Natural Polymer Examples 天然聚合物例子 🔴: 膠原蛋白 (Collagen)、纖維蛋白 (Fibrin)、透明質酸 (Hyaluronic acid)。
+Environment 環境
+Flat surfaces 平坦表面
+Volumetric matrices 立體基質
 
 
-Lecture 7: 生物製造與臨床挑戰
-Classic Scaffold Fabrication 傳統支架製備技術 🔵:
-Solvent Casting &amp; Particulate Leaching 溶劑澆鑄-粒子浸出: 用鹽粒做孔，溶解後留低孔隙。優點：易控制孔隙率；缺點：用有機溶劑 (Organic solvent)。
-Gas Foaming 氣體發泡: 用高壓氣體整出氣孔。優點：唔使溶劑；缺點：可能形成閉孔 (Closed pores)。
-Freeze-Drying 冷凍乾燥: 水溶液結冰後昇華 (Sublimation) 留低孔隙。優點：適合熱敏感材料；缺點：可能結構不均勻。
+Function 功能
+Strong anchorage 強力錨定
+Dynamic remodeling 動態重塑
 
 
-Advanced Biofabrication 先進生物製造 🔵:
-Electrospinning 靜電紡絲: 整出納米纖維 (Nanofibers)，模仿天然ECM結構。
-3D Bioprinting 3D生物打印: 將細胞同材料一齊精確打印。
-Decellularization 脫細胞: 將捐贈組織嘅細胞洗走，留低天然嘅ECM支架。
+Imaging 成像
+Bright spots 明亮點狀
+Linear extensions 線性延伸
 
 
-Bioreactors 生物反應器 🔵: 動態培養系統，可以施加 流體剪切力 (Fluid shear stress)、壓縮力 (Compression) 等，促進組織成熟。
-Host Response 宿主反應 🟢:
-植入後會引發炎症 (Inflammation)。
-如果材料生物相容性差或降解產物有刺激，可能會發展成纖維化&#x2F;疤痕包裹 (Fibrosis&#x2F;Scar encapsulation)，隔離植入物，導致功能失敗。
+NPC Response 神經祖細胞反應
+Ligand-sensitive 配體敏感
+Remodeling-focused 聚焦重塑
 
 
-Immunoisolation 免疫隔離 🔵:
-用半透膜 (Semi-permeable membrane) 包住移植嘅細胞，容許營養同廢物交換，但阻止免疫細胞同抗體進入攻擊細胞。
-應用：治療糖尿病嘅 封裝胰島細胞療法 (Encapsulated islet cell therapy)。
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+假設 2D 同 3D 嘅 adhesions 黏著斑係一樣嘅 (陷阱: 喺 TE 設計中忽略維度影響)。
+忘記 focal adhesions 黏著斑除咗黏附，仲有 signaling 信號傳遞嘅作用。
+忽略 NPC 神經祖細胞喺 3D 中對 ligands 配體不敏感呢點。
 
+記憶法 (Mnemonics &#x2F; Memory Hooks)
+Focal Adhesion 黏著斑: “FACTS” – Fibronectin-Actin Connection Transmits Signals 纖連蛋白-肌動蛋白連接傳遞信號。
+2D vs 3D: “Punctate in Plane (2D), Fibrils in Full (3D)” 平面上點狀(2D)，立體中纖維(3D)。
+
+過往試題 + 標準答案 (Past Exam Questions + Model Answers)Describe focal adhesion formation. 描述黏著斑嘅形成。  
+
+Integrins bind ECM (e.g., fibronectin via RGD), clustering with talin&#x2F;vinculin&#x2F;actin to form adhesions transmitting signals.整合素結合 ECM (例如，透過 RGD 結合纖連蛋白)，與 talin&#x2F;vinculin&#x2F;肌動蛋白聚集形成黏著斑，傳遞信號。
+
+How do focal adhesions differ in 2D vs 3D? 黏著斑喺 2D 同 3D 環境中有咩唔同？  
+
+In 2D, they are punctate for strong anchorage; in 3D, fibrillar for remodeling, as seen in NPC maintenance.喺 2D 環境，佢哋呈點狀用於強力錨定；喺 3D 環境，呈纖維狀用於重塑，正如喺 NPC 維持中所見。
+
+(Topic 3-8 及以下部分因篇幅限制，將以同樣模式呈現關鍵詞中英對照，但內容精簡。)
+Topic 3 – Cell Migration 細胞遷移 同 Chemotaxis 趨化性大圖景 (Big Picture)Cell migration 細胞遷移涉及 cytoskeleton 細胞骨架重組以進行移動，由 taxis 趨向性引導，例如 development 發育同 repair 修復中嘅 chemotaxis 趨化性。Key Terms: Actin polymerization 肌動蛋白聚合, Myosin 肌球蛋白, Haptotaxis 趨觸性, Phototaxis 趨光性, Embryogenesis 胚胎發生。
+Topic 4 – Signaling Ligands 信號配體 同 Types 類型大圖景 (Big Picture)Ligands 配體啟動 signaling 信號以協調組織發育，根據類型、作用範圍同功能分類。Key Terms: Diffusible 可擴散, ECM-bound 細胞外基質結合, Endocrine 內分泌, Paracrine 旁分泌, Autocrine 自分泌, Juxtacrine 近分泌&#x2F;並列分泌, Growth factors (GFs) 生長因子, Cytokines 細胞因子, Chemokines 趨化因子.
+Topic 5 – Central Paradigm of Signal Transduction 信號轉導中心法則大圖景 (Big Picture)Signal transduction 信號轉導將 extracellular 細胞外 ligands 配體轉化為 intracellular 細胞內 responses 反應，透過 receptors 受體同 cascades 級聯反應，最終導致 gene activation 基因激活。Key Terms: Initiation 啟動, Transduction 轉導, Transcription factors (TFs) 轉錄因子, Second messengers 第二信使, Translation 翻譯, mRNA vaccines mRNA疫苗。
+Topic 6 – G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體大圖景 (Big Picture)GPCRs 透過 G-protein G蛋白解離傳遞多樣化信號，參與 sensory perception 感官知覺同生理調節。Key Terms: 7 transmembrane (7TM) segments 7次跨膜片段, Agonist 激動劑, G-protein subunits (α&#x2F;β&#x2F;γ) G蛋白亞基, Effectors 效應器, Adenylate cyclase 腺苷酸環化酶, Phospholipase C (PLC) 磷脂酶C。
+Topic 7 – Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 同 Pathways 信號途徑大圖景 (Big Picture)RTKs 喺 ligand 配體結合後 dimerize 二聚化並發生 phosphorylation 磷酸化，啟動 cascades 級聯反應，參與生長同 angiogenesis 血管生成。Key Terms: Dimerization 二聚化, Autophosphorylation 自磷酸化, Ras&#x2F;Raf&#x2F;MEK&#x2F;ERK pathway, TGF-β (Transforming Growth Factor-β) 轉化生長因子-β, Smad proteins Smad蛋白, Wnt pathway, β-catenin β-連環蛋白。
+Topic 8 – Mechanotransduction 機械轉導 同 Cytoskeleton 細胞骨架大圖景 (Big Picture)Mechanotransduction 機械轉導將 physical forces 物理力轉化為 biochemical responses 生化反應，透過 cytoskeleton 細胞骨架實現，對骨同血管健康至關重要。Key Terms: Shear stress 剪切應力, Tension 張力, Actin filaments (Microfilaments) 肌動蛋白絲 (微絲), Microtubules (MTs) 微管, Intermediate filaments (IFs) 中間絲, Treadmilling 踏車運動, Dynamic instability 動態不穩定性, Stress shielding 應力遮擋。
+Active Recall Bank 主動回憶庫
+What sequence in fibronectin binds integrins? (RGD)
+Name two types of fibronectin. (Soluble plasma, insoluble cellular)
+Focal adhesions in 2D are ____; in 3D ____. (punctate, fibrillar)
+Chemotaxis responds to ____ gradients. (chemical)
+Ligand range: distant via blood? (Endocrine)
+Central paradigm steps: Initiation, ____, Gene Activation. (Transduction)
+GPCRs have ____ transmembrane segments. (7)
+RTKs phosphorylate ____ residues. (tyrosine)
+Cytoskeleton filaments: Actin, ____, Intermediate. (Microtubules)
+Treadmilling occurs in ____ filaments. (actin)
+BMP signaling uses ____ proteins. (Smads)
+Wnt canonical pathway stabilizes ____. (β-catenin)
+Stress shielding causes bone ____. (atrophy 萎縮)
+Myosin uses ____ for force. (ATP)
+MTOC (Microtubule Organizing Center) 微管組織中心 organizes ____. (microtubules 微管)
+RGD stands for --____. (Arg-Gly-Asp)
+Taxis type for light: ____. (Phototaxis 趨光性)
+Translation starts with codon ____. (AUG)
+Ion channels can be ____-gated or ____-gated. (voltage 電壓, ligand 配體)
+Paclitaxel ____ microtubules. (stabilizes 穩定)
+
+15-Minute Mock Exam 15分鐘模擬考試
+Explain the role of RGD in cell adhesion and its TE applications.  
+
+RGD (Arg-Gly-Asp) is the integrin-binding site in fibronectin promoting attachment; in TE, short RGD peptides functionalize scaffolds for cell adhesion without full proteins.
+
+
+Compare focal adhesions in 2D vs 3D environments, with NPC example.  
+
+2D: punctate, ligand-sensitive; 3D: fibrillar, remodeling-focused; for NPCs, 3D stemness maintenance is insensitive to ligands, prioritizing remodeling.
+
+
+Describe chemotaxis and its measurement.  
+
+Directed migration to chemical gradients; assessed by polarized morphology and proportion of cells moving toward&#x2F;away from attractant, depending on concentration and gradient steepness.
+
+
+Outline the central signal transduction paradigm.  
+
+Initiation: ligand-receptor binding; Transduction: cascade activates nuclear TF; Gene activation: TF binds DNA, leading to transcription, translation, and physiological changes.
+
+
+How does Wnt canonical pathway work?  
+
+Ligand binds Fz&#x2F;LRP, stabilizes β-catenin, which enters nucleus and interacts with TCF&#x2F;Lef for gene transcription in development and cancer.
+
+
+
+One-Page Cheat Sheet Summary 一頁速查表總結
+
+
+Section 部分
+Key Points 要點 (中英對照)
+
+
+
+ECM&#x2F;Adhesion 細胞外基質&#x2F;黏附
+Fibronectin 纖連蛋白: RGD binds α5β1&#x2F;αVβ3; Focal adhesions 黏著斑: 2D punctate vs 3D fibrillar; NPCs 神經祖細胞: remodeling 重塑 &gt; binding 結合 in 3D.
+
+
+Migration 遷移
+Cycle 循環: Attach-Contract-Detach 黏附-收縮-脫離; Taxis 趨向性: Chemo 趨化性 (gradients 梯度), Hapto 趨觸性 (adhesives 黏附分子); Defects 缺陷: embryonic issues 胚胎問題.
+
+
+Signaling 信號傳導
+Ligands 配體: Endocrine內分泌&#x2F;Paracrine旁分泌&#x2F;Autocrine自分泌&#x2F;Juxtacrine近分泌; GFs 生長因子: VEGF&#x2F;TGF-β; Paradigm 法則: Bind結合 → Cascade級聯 → Gene基因.
+
+
+Receptors 受體
+GPCR: 7TM, dissociate G解離G蛋白; RTK: Dimer二聚&#x2F;P-Tyr酪氨酸磷酸化&#x2F;Ras-ERK通路; TGF-β: Ser&#x2F;Thr絲氨酸&#x2F;蘇氨酸&#x2F;Smads; Wnt: β-catenin&#x2F;TCF.
+
+
+Transport 運輸
+Hydrophobic 疏水性: Diffuse擴散 (NO&#x2F;AA); Ion Channels 離子通道: Voltage&#x2F;Ligand gated電壓&#x2F;配體門控 (Ca2+&#x2F;Na+); Optogenetics 光遺傳學: Light control光控制.
+
+
+Cytoskeleton 細胞骨架
+Actin 肌動蛋白: Polymer聚合&#x2F;Treadmill踏車運動&#x2F;Myosin肌球蛋白; MT微管: Dynamic動態&#x2F;GTP&#x2F;Paclitaxel紫杉醇; Mechanotransduction機械轉導: Forces力 → Signals信號 (Wolff’s Law沃爾夫定律).
+
+
+TE Apps 組織工程應用
+Dermal matrix 真皮基質: Cell invasion細胞侵入; Growth factors 生長因子 in scaffolds支架; Avoid stress shielding 避免應力遮擋 in implants植入物.
+
+
+English Version BelowTopic 1 – Fibronectin and Integrin BindingBig Picture (1 sentence + mind map in text)Fibronectin is a key ECM glycoprotein facilitating cell adhesion via integrins, crucial for tissue structure and signaling.Mind map: Fibronectin → Types (Soluble Plasma → Bloodstream → Hepatocytes; Insoluble Cellular → Secreted by Fibroblasts) → Binds to (Integrins → RGD Sequence → α5β1&#x2F;αVβ3; ECM Components → Collagen&#x2F;Fibrin&#x2F;Heparan Sulfate) → Enables Cell Attachment.
+Must-Know Facts (max 15 bullet points)
+🔴 Fibronectin is the major ECM glycoprotein binding integrins.
+🟢 Binds other ECM like collagen, fibrin, heparan sulfate proteoglycans.
+🔴 Two types: soluble plasma (hepatocytes) and insoluble cellular (fibroblasts).
+🟢 Integrin binding uses RGD sequence (Arg-Gly-Asp).
+🔴 Key integrins: α5β1 and αVβ3 on cell surface.
+🟢 Short RGD peptides can mimic fibronectin for cell attachment.
+🔵 RGD enables focal adhesion formation.
+🟢 Plasma fibronectin circulates in blood; cellular is matrix-integrated.
+🔴 RGD is the primary cell attachment site.
+🟢 Binding promotes clustering into focal adhesions.
+🔵 Used in biomaterials for cell adhesion engineering.
+🟢 Insoluble form secreted by many cells like fibroblasts.
+🔴 Heparan sulfate binding aids in growth factor localization.
+🟢 Fibronectin domains bind TGF-β and bFGF actively.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Fibronectin Structure:NH2 - [Type I Repeats] - [Type II] - [Type III] - COOHBindings: Fibrin/Heparan (I), Collagen (I/II), Integrin (III - RGD), Heparan/Fibrin (III)
+RGD Binding:Cell Surface Integrin (α5β1/αVβ3) ⇄ RGD Sequence → Cell Attachment
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Soluble Plasma Fibronectin (X)
+Insoluble Cellular Fibronectin (Y)
+
+
+
+Source
+Produced by hepatocytes
+Secreted by fibroblasts etc.
+
+
+Location
+Circulates in bloodstream
+Integrated into ECM
+
+
+Function
+Coagulation, wound healing
+Cell adhesion, matrix structure
+
+
+Solubility
+Soluble
+Insoluble
+
+
+Production
+Liver-specific
+Various cell types
+
+
+Common Mistakes &amp; Examiner Traps
+Mistaking RGD as the only binding site (trap: forget synergy regions like PHSRN).
+Confusing fibronectin types: assuming all fibronectin is insoluble in ECM.
+Overlooking RGD’s role in synthetic peptides for TE applications.
+
+Mnemonics &#x2F; Memory Hooks
+RGD: “Really Good Dance” – Arg-Gly-Asp makes cells “dance” (attach and move).
+Fibronectin types: “Plasma Soluble in Blood, Cellular Insoluble in Matrix” – PSB-CIM.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is the role of the RGD sequence in fibronectin?  
+
+The RGD (Arg-Gly-Asp) sequence is the primary integrin-binding site facilitating cell attachment via α5β1 and αVβ3 integrins.
+
+Compare soluble and insoluble fibronectin.  
+
+Soluble plasma fibronectin circulates in blood from hepatocytes for systemic roles; insoluble cellular fibronectin is secreted locally for ECM integration and adhesion.
+
+Topic 2 – Focal AdhesionsBig Picture (1 sentence + mind map in text)Focal adhesions are integrin-mediated clusters linking ECM to cytoskeleton, transmitting signals and forces.Mind map: Focal Adhesion → Integrin Binds (Collagen&#x2F;Fibronectin → RGD) → Cluster Formation → Components (Vinculin&#x2F;Talin&#x2F;FAK&#x2F;Actin&#x2F;Myosin) → Signals to Nucleus → 2D (Punctate) vs 3D (Diffuse).
+Must-Know Facts (max 15 bullet points)
+🔴 Integrins bind ECM like collagen&#x2F;fibronectin to form focal adhesions.
+🟢 Focal adhesions are cell adhesion clusters.
+🔴 Green fluorescence often labels focal adhesions in imaging.
+🟢 2D adhesions are punctate; 3D are fibrillar&#x2F;diffuse.
+🔵 Transmit mechanical signals to nucleus via cytoskeleton.
+🟢 Involve proteins: vinculin, talin, paxillin, FAK.
+🔴 Neural progenitor cells: remodeling &gt; binding in 3D.
+🟢 NPC stemness insensitive to adhesive ligands in 3D.
+🔵 Used in TE for scaffold design mimicking ECM.
+🟢 Forces from actin-myosin contraction.
+🔴 Turnover regulates migration.
+🟢 FAK phosphorylates for signaling.
+🔵 3D environments alter adhesion morphology.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Focal Adhesion Assembly:ECM (Fibronectin) → Integrin → Talin/Vinculin → Actin/Myosin → Force Transmission → Nucleus (Gene Expression)
+2D vs 3D:2D: Flat substrate → Discrete spots3D: Matrix embedding → Elongated fibrils
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+2D Focal Adhesions (X)
+3D Focal Adhesions (Y)
+
+
+
+Morphology
+Punctate, discrete
+Fibrillar, diffuse
+
+
+Environment
+Flat surfaces
+Volumetric matrices
+
+
+Function
+Strong anchorage
+Dynamic remodeling
+
+
+Imaging
+Bright spots
+Linear extensions
+
+
+NPC Response
+Ligand-sensitive
+Remodeling-focused
+
+
+Common Mistakes &amp; Examiner Traps
+Assuming 2D and 3D adhesions are identical (trap: ignore dimensionality in TE designs).
+Forgetting focal adhesions’ role in signaling, not just adhesion.
+Overlooking NPC insensitivity to ligands in 3D.
+
+Mnemonics &#x2F; Memory Hooks
+Focal Adhesion: “FACTS” – Fibronectin-Actin Connection Transmits Signals.
+2D vs 3D: “Punctate in Plane (2D), Fibrils in Full (3D)”.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe focal adhesion formation.  
+
+Integrins bind ECM (e.g., fibronectin via RGD), clustering with talin&#x2F;vinculin&#x2F;actin to form adhesions transmitting signals.
+
+How do focal adhesions differ in 2D vs 3D?  
+
+In 2D, they are punctate for strong anchorage; in 3D, fibrillar for remodeling, as seen in NPC maintenance.
+
+Topic 3 – Cell Migration and ChemotaxisBig Picture (1 sentence + mind map in text)Cell migration involves cytoskeleton reorganization for movement, guided by taxis like chemotaxis in development and repair.Mind map: Migration → Mechanisms (Attachment → Contraction → Detachment) → Cytoskeleton (Actin Polymerization → Myosin Force) → Taxis (Chemo → Gradient; Hapto → Adhesive; Photo → Light) → Applications (Embryogenesis → Wound Healing).
+Must-Know Facts (max 15 bullet points)
+🔴 Cells migrate via attachment, contraction, detachment.
+🟢 Not just elastic bags; involve cytoskeleton reorganization.
+🔴 Chemotaxis: movement by chemical gradients (e.g., cAMP).
+🟢 Polarized morphology in migrating cells.
+🔵 Strength depends on concentration and gradient steepness.
+🟢 Taxis types: topo (turning to stimulus), klino (less turning oriented), ortho (speed increase oriented).
+🔴 Defects cause embryonic malformations, epilepsy.
+🟢 In skin repair: cells invade dermal matrix.
+🔵 Actin polymerization initiates; myosin maintains.
+🟢 Focal adhesions as traction points.
+🔴 Neutrophil chases bacterium via chemotaxis.
+🟢 Cilia motion for fluid movement.
+🔵 Embryonic: blastocyst implantation requires migration.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Migration Cycle:1. Protrusion (Actin Polymerization at Leading Edge)2. Adhesion (Focal Contacts Form)3. Contraction (Myosin Pulls Body Forward)4. Release (Rear Detachment)
+Chemotaxis:Cell → Detect Gradient (High [Chemoattractant] → Movement) → Polarization
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Chemotaxis (X)
+Haptotaxis (Y)
+
+
+
+Stimulus
+Dissolved chemicals
+Insoluble adhesives
+
+
+Mechanism
+Gradient sensing
+Adhesive gradient
+
+
+Example
+Neutrophil to bacteria
+Cell on ECM gradient
+
+
+Response
+Directed speed&#x2F;turning
+Enhanced adhesion-move
+
+
+TE Application
+Wound healing signals
+Scaffold design
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing chemotaxis with random migration (trap: ignore gradient dependency).
+Forgetting migration’s role in embryogenesis defects.
+Overlooking contraction’s myosin dependence.
+
+Mnemonics &#x2F; Memory Hooks
+Taxis Types: “TACO” – Topo&#x2F;ortho (Turn&#x2F;Accelerate), Chemo&#x2F;Hapto (Chemical&#x2F;Adhesive Orientation).
+Migration: “ACD” – Attach-Contract-Detach.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Explain chemotaxis.  
+
+Directed migration responding to chemical gradients, with polarized cells moving toward higher concentrations.
+
+Why is cell migration crucial in embryonic development?  
+
+Defects lead to implantation failure, malformed tissues, or congenital abnormalities like epilepsy.
+
+Topic 4 – Signaling Ligands and TypesBig Picture (1 sentence + mind map in text)Ligands initiate signaling for coordination in tissue development, classified by type, range, and function.Mind map: Ligands → Molecular (Diffusible → Growth Factors&#x2F;Steroids; ECM → Proteoglycans&#x2F;Collagen) → Range (Endocrine → Distant; Paracrine → Nearby; Autocrine → Self; Juxtacrine → Contact) → Function (Growth Factors → VEGF&#x2F;TGF-β; Hormones&#x2F;Cytokines&#x2F;Chemokines).
+Must-Know Facts (max 15 bullet points)
+🔴 Ligands: diffusible (soluble proteins, steroids) or ECM-bound.
+🟢 Range: endocrine (distant, blood), paracrine (local), autocrine (self), juxtacrine (contact).
+🔴 Growth factors stimulate proliferation&#x2F;differentiation (VEGF, TGF-β, bFGF, EGF).
+🟢 Hormones: messengers via circulation.
+🔵 Cytokines affect other cells; chemokines are chemotactic.
+🟢 Matrikines: ECM fragments with activity.
+🔴 Thrombospondins inhibit angiogenesis.
+🟢 Signaling: ligand generation → response (proliferation, migration, ECM production).
+🔵 TE applications: growth factors in scaffolds.
+🟢 Parathyroid hormone: endocrine for bone remodeling.
+🔴 Interleukins: paracrine in skin.
+🟢 Autocrine: self-response.
+🔵 Juxtacrine requires cell-cell contact.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Ligand Classification:Type: Diffusible vs ECMRange: Endocrine (Blood) → Paracrine (Local) → Autocrine (Self) → Juxtacrine (Contact)Function: GF (Prolif/Diff) → Hormone (Systemic) → Cytokine (Cell Behavior)
+Signaling Initiation:Ligand Bind Receptor → Transduction → Gene Activation
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Endocrine Ligands (X)
+Paracrine Ligands (Y)
+
+
+
+Range
+Distant targets
+Nearby cells
+
+
+Transport
+Blood&#x2F;extracellular
+Diffusion
+
+
+Example
+Parathyroid hormone
+Interleukins
+
+
+Speed
+Slower (systemic)
+Faster (local)
+
+
+TE Use
+Systemic delivery
+Local scaffold release
+
+
+Common Mistakes &amp; Examiner Traps
+Mixing range with function (trap: call growth factors hormones).
+Forgetting juxtacrine needs physical contact.
+Assuming all ligands are soluble.
+
+Mnemonics &#x2F; Memory Hooks
+Ranges: “EPAJ” – Endocrine-Paracrine-Autocrine-Juxtacrine (Every Person Acts Justly).
+Growth Factors: “Very Tall Big Elephants” – VEGF&#x2F;TGF-β&#x2F;bFGF&#x2F;EGF.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Classify ligands by range.  
+
+Endocrine: distant via blood; paracrine: local; autocrine: self; juxtacrine: contact-based.
+
+Name key growth factors in TE.  
+
+VEGF (angiogenesis), TGF-β (differentiation), bFGF (proliferation), EGF (epithelial growth).
+
+Topic 5 – Central Paradigm of Signal TransductionBig Picture (1 sentence + mind map in text)Signal transduction converts extracellular ligands into intracellular responses via receptors and cascades leading to gene activation.Mind map: Paradigm → Initiation (Ligand Bind Receptor → Activation) → Transduction (Cascade → TF Activation) → Gene (TF Binds → Transcription → Protein Synthesis).
+Must-Know Facts (max 15 bullet points)
+🔴 Initiation: ligand binds membrane receptor, changes activity.
+🟢 Transduction: activates cascade to nuclear TF.
+🔴 Gene activation: TF binds regulatory sequences → mRNA&#x2F;protein.
+🟢 TF: DNA-binding proteins; may translocate or activate.
+🔵 Involves second messengers (cAMP, Ca2+, NO).
+🟢 Transcription: RNA polymerase uses rNTPs.
+🔴 Translation: mRNA → protein via ribosomes, start AUG.
+🟢 Protein folding: ER → Golgi → secretion.
+🔵 mRNA vaccines: modified bases reduce inflammation.
+🟢 Protein structure: primary (AA sequence) to quaternary.
+🔴 Central dogma: signal → transduction → gene expression.
+🟢 Relocalization: e.g., NFκB from cytosol to nucleus.
+🔵 Phosphorylation common in cascades.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Central Paradigm:1. Ligand + Receptor → Activated Receptor2. Cascade (Phosphorylation/Second Messengers) → Active TF3. TF + DNA → Transcription → mRNA → Translation → Protein
+Transcription:DNA → RNA Polymerase → mRNA (rNTPs: A/U/G/C)
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Transcription (X)
+Translation (Y)
+
+
+
+Location
+Nucleus
+Cytoplasm&#x2F;Ribosomes
+
+
+Input
+DNA
+mRNA
+
+
+Output
+mRNA
+Protein
+
+
+Building Blocks
+rNTPs
+Amino Acids
+
+
+Initiation
+Promoter&#x2F;TF
+Start Codon AUG
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing transcription with translation (trap: mix RNA vs protein synthesis).
+Forgetting second messengers in transduction.
+Overlooking protein processing post-translation.
+
+Mnemonics &#x2F; Memory Hooks
+Paradigm: “I-T-G” – Initiation-Transduction-Gene Activation.
+Codons: “AUG Starts Translation” – Always Use Gloves (safety hook).
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline the central paradigm.  
+
+Ligand binds receptor (initiation), triggers cascade (transduction), activates TF for gene expression.
+
+What is gene activation?  
+
+TF binds DNA regulatory sequences, increasing transcription rate to produce mRNA and proteins.
+
+Topic 6 – G-Protein Coupled ReceptorsBig Picture (1 sentence + mind map in text)GPCRs transmit diverse signals via G-protein dissociation, involved in senses and regulation.Mind map: GPCR → 7 Transmembrane → Ligand Bind → G-Protein (α&#x2F;β&#x2F;γ Dissociate) → Effectors (Adenylate Cyclase&#x2F;PLC) → Second Messengers (cAMP&#x2F;IP3&#x2F;Ca2+).
+Must-Know Facts (max 15 bullet points)
+🔴 GPCRs: 7 transmembrane segments.
+🟢 Respond to photons, amines, hormones, proteins.
+🔴 Agonist binding dissociates G-protein subunits.
+🟢 α subunit or β&#x2F;γ interact with effectors.
+🔵 Involved in vision (photoisomerization), smell, immunity.
+🟢 Autonomic NS: blood pressure, heart rate.
+🔴 Visual: rhodopsin activation.
+🟢 Smell: olfactory receptors.
+🔵 Immune: chemokine receptors.
+🟢 Dissociation: GDP → GTP exchange.
+
+Key Formulas &#x2F; Diagrams (use code blocks)GPCR Signaling:Ligand + GPCR → G-Protein Activation (GDP → GTP) → α Dissociates → Effector (e.g., AC → cAMP)
+Topology:Extracellular Loops → Ligand Bind → 7 TM Helices → Intracellular G-Protein Interaction
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Before Binding (X)
+After Binding (Y)
+
+
+
+G-Protein State
+Bound (αβγ)
+Dissociated (α + βγ)
+
+
+Nucleotide
+GDP
+GTP
+
+
+Effect
+Inactive
+Effector Activation
+
+
+Example
+Resting Receptor
+Signal Transduction
+
+
+Common Mistakes &amp; Examiner Traps
+Forgetting 7 TM structure (trap: confuse with RTKs).
+Assuming all ligands bind extracellularly.
+Overlooking β&#x2F;γ subunit roles.
+
+Mnemonics &#x2F; Memory Hooks
+GPCR: “7 Seas” – 7 Transmembrane for Signaling Seas (diverse ligands).
+Dissociation: “Agonist Kicks GDP Out for GTP Party”.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe GPCR activation.  
+
+Ligand binds, causing G-protein interaction and dissociation of α (GTP-bound) from βγ.
+
+GPCRs’ roles?  
+
+Vision (photons), smell (odorants), immunity (chemokines), autonomic regulation.
+
+Topic 7 – Receptor Tyrosine Kinases and PathwaysBig Picture (1 sentence + mind map in text)RTKs dimerize upon ligand binding, phosphorylating for cascades in growth and angiogenesis.Mind map: RTK → Ligand (e.g., VEGF) → Dimerization → Phosphorylation → Cascade (Ras&#x2F;Raf&#x2F;MEK&#x2F;ERK) → TF (Ets-1) → Gene Expression.
+Must-Know Facts (max 15 bullet points)
+🔴 RTKs: dimerize, autophosphorylate tyrosines.
+🟢 Include VEGF-R, PDGF-R for vessel assembly.
+🔴 VEGF: endothelial differentiation.
+🟢 PDGF-B: recruits mural cells.
+🔵 Cascade: Sos → Ras → Raf → MEK → ERK → Nucleus.
+🟢 TGF-β: serine&#x2F;threonine kinases, Smad pathway.
+🔴 BMPs: bone induction via Smads.
+🟢 Wnt: canonical (β-catenin → TCF&#x2F;Lef), noncanonical (polarity&#x2F;Ca2+).
+🔵 Involved in cancer, development.
+🟢 LRP5&#x2F;6 co-receptors in Wnt.
+🔴 Fz: GPCR-like in Wnt.
+
+Key Formulas &#x2F; Diagrams (use code blocks)RTK Pathway:Ligand → Dimer → P-Tyr → Adapter → Ras-GTP → Raf → MEK → ERK → TF
+BMP Signaling:BMP + Type II R → Type I P → Smad1/5/8 P → Smad4 Complex → Nucleus
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+RTK (X)
+Ser&#x2F;Thr Kinase (Y)
+
+
+
+Phosphorylation
+Tyrosine
+Serine&#x2F;Threonine
+
+
+Example
+VEGF-R
+TGF-β&#x2F;BMP R
+
+
+Downstream
+Ras&#x2F;MAPK
+Smads
+
+
+Function
+Growth&#x2F;Angiogenesis
+Differentiation&#x2F;Bone
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing Tyr vs Ser&#x2F;Thr kinases (trap: mix VEGF with BMP).
+Forgetting dimerization in RTKs.
+Overlooking Wnt’s multiple pathways.
+
+Mnemonics &#x2F; Memory Hooks
+RTK: “Dimer-Phos-Cascade” – Dinner Party Cascade (dimerize to start).
+Wnt: “Beta Cat in Canon” – β-Catenin Canonical.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline VEGF signaling.  
+
+VEGF binds VEGF-R2, activates Ras via Sos, leading to ERK phosphorylation and Ets-1 activation for angiogenic genes.
+
+Describe BMP pathway.  
+
+BMP binds receptors, phosphorylates Smad1&#x2F;5&#x2F;8, complexes with Smad4, translocates to nucleus for transcription.
+
+Topic 8 – Mechanotransduction and CytoskeletonBig Picture (1 sentence + mind map in text)Mechanotransduction converts physical forces into biochemical responses via cytoskeleton, vital for bone and vessel health.Mind map: Forces (Shear&#x2F;Tension) → Sense (Integrins&#x2F;Junctions) → Transmit (Cytoskeleton → Actin&#x2F;MT&#x2F;IF) → Response (Gene Expression) → Applications (Stress Shielding&#x2F;Osteoporosis).
+Must-Know Facts (max 15 bullet points)
+🔴 Mechanotransduction: physical stimulus → physiological change.
+🟢 Cytoskeleton: actin (microfilaments), microtubules, intermediate filaments.
+🔴 Actin: G-actin → F-actin polymerization; (+) end growth.
+🟢 Myosin: ATP → force for contraction.
+🔵 Treadmilling: add at (+), remove at (-).
+🟢 Microtubules: α&#x2F;β tubulin; dynamic instability.
+🔴 MTOC organizes polarity.
+🟢 Stress shielding: prosthesis reduces bone load → atrophy.
+🔵 Endothelial: shear → alignment via PECAM-1&#x2F;VE-cad&#x2F;VEGFR2.
+🟢 Fibroblasts contract collagen matrix.
+🔴 Wolff’s Law: stress influences bone strength.
+🟢 Optogenetics: light-sensitive channels control activity.
+🔵 Paclitaxel stabilizes MT, inhibits division.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Actin Dynamics:G-Actin (ATP) → Nucleation → Elongation (+) End → Treadmilling (Hydrolysis ADP)
+Cytoskeleton:Actin → Contraction/MigrationMT → Transport/DivisionIF → Stability
+
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Aspect
+Actin Filaments (X)
+Microtubules (Y)
+
+
+
+Monomer
+G-Actin
+α&#x2F;β Tubulin
+
+
+Function
+Motility&#x2F;Contraction
+Transport&#x2F;Division
+
+
+Nucleotide
+ATP
+GTP
+
+
+Dynamics
+Treadmilling
+Dynamic Instability
+
+
+Motor Protein
+Myosin
+Kinesin&#x2F;Dynein
+
+
+Common Mistakes &amp; Examiner Traps
+Treating cells as simple viscous bags (trap: ignore cytoskeleton).
+Forgetting GTP&#x2F;ATP in dynamics.
+Overlooking stress shielding in implants.
+
+Mnemonics &#x2F; Memory Hooks
+Cytoskeleton: “AMI” – Actin (Movement), MT (Transport), IF (Integrity).
+Actin Ends: “+ Grows, - Goes” (add +, remove -).
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is mechanotransduction?  
+
+Conversion of physical forces (e.g., shear) into biochemical responses like gene expression via cytoskeleton.
+
+Describe actin polymerization.  
+
+G-actin nucleates with ATP, elongates at (+) end, hydrolyzes to ADP, treadmills with disassembly at (-).
+
+Active Recall Bank
+What sequence in fibronectin binds integrins? (RGD)
+Name two types of fibronectin. (Soluble plasma, insoluble cellular)
+Focal adhesions in 2D are ____; in 3D ____. (punctate, fibrillar)
+Chemotaxis responds to ____ gradients. (chemical)
+Ligand range: distant via blood? (Endocrine)
+Central paradigm steps: Initiation, ____, Gene Activation. (Transduction)
+GPCRs have ____ transmembrane segments. (7)
+RTKs phosphorylate ____ residues. (tyrosine)
+Cytoskeleton filaments: Actin, ____, Intermediate. (Microtubules)
+Treadmilling occurs in ____ filaments. (actin)
+BMP signaling uses ____ proteins. (Smads)
+Wnt canonical pathway stabilizes ____. (β-catenin)
+Stress shielding causes bone ____. (atrophy)
+Myosin uses ____ for force. (ATP)
+MTOC organizes ____. (microtubules)
+RGD stands for --____. (Arg-Gly-Asp)
+Taxis type for light: ____. (Phototaxis)
+Translation starts with codon ____. (AUG)
+Ion channels can be ____-gated or ____-gated. (voltage, ligand)
+Paclitaxel ____ microtubules. (stabilizes)
+
+15-Minute Mock Exam
+Explain the role of RGD in cell adhesion and its TE applications.  
+
+RGD (Arg-Gly-Asp) is the integrin-binding site in fibronectin promoting attachment; in TE, short RGD peptides functionalize scaffolds for cell adhesion without full proteins.
+
+
+Compare focal adhesions in 2D vs 3D environments, with NPC example.  
+
+2D: punctate, ligand-sensitive; 3D: fibrillar, remodeling-focused; for NPCs, 3D stemness maintenance is insensitive to ligands, prioritizing remodeling.
+
+
+Describe chemotaxis and its measurement.  
+
+Directed migration to chemical gradients; assessed by polarized morphology and proportion of cells moving toward&#x2F;away from attractant, depending on concentration and gradient steepness.
+
+
+Outline the central signal transduction paradigm.  
+
+Initiation: ligand-receptor binding; Transduction: cascade activates nuclear TF; Gene activation: TF binds DNA, leading to transcription, translation, and physiological changes.
+
+
+How does Wnt canonical pathway work?  
+
+Ligand binds Fz&#x2F;LRP, stabilizes β-catenin, which enters nucleus and interacts with TCF&#x2F;Lef for gene transcription in development and cancer.
+
+
+
+One-Page Cheat Sheet Summary
+
+
+Section
+Key Points
+
+
+
+ECM&#x2F;Adhesion
+Fibronectin: RGD binds α5β1&#x2F;αVβ3; Focal: 2D punctate vs 3D fibrillar; NPCs: remodeling &gt; binding.
+
+
+Migration
+Cycle: Attach-Contract-Detach; Taxis: Chemo (gradients), Hapto (adhesives); Defects: embryonic issues.
+
+
+Signaling
+Ligands: Endocrine&#x2F;Paracrine&#x2F;Autocrine&#x2F;Juxtacrine; GFs: VEGF&#x2F;TGF-β; Paradigm: Bind → Cascade → Gene.
+
+
+Receptors
+GPCR: 7TM, dissociate G; RTK: Dimer&#x2F;P-Tyr&#x2F;Ras-ERK; TGF-β: Ser&#x2F;Thr&#x2F;Smads; Wnt: β-catenin&#x2F;TCF.
+
+
+Transport
+Hydrophobic: Diffuse (NO&#x2F;AA); Ion Channels: Voltage&#x2F;Ligand (Ca2+&#x2F;Na+); Optogenetics: Light control.
+
+
+Cytoskeleton
+Actin: Polymer&#x2F;Treadmill&#x2F;Myosin; MT: Dynamic&#x2F;GTP&#x2F;Paclitaxel; Mechano: Forces → Signals (Wolff’s Law).
+
+
+TE Apps
+Dermal matrix: Cell invasion; Growth factors in scaffolds; Avoid stress shielding in implants.
 
 
 ]]></content>
@@ -8333,717 +9229,6 @@ PLA (brittle), PGA (sutures), PCL (slow degrade), Injectables (PPF-DA).
 Vs 2D: In vivo-like; Limitations: Diffusion; Apps: Regen med, bioreactors for transport.
 
 
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Tissue Engineering</category>
-      </categories>
-      <tags>
-        <tag>biomedical engineering</tag>
-        <tag>Exam Notes</tag>
-        <tag>Tissue Engineering</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BME 2104 Tissue Engineering – 7</title>
-    <url>/posts/e0b4f024.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – Lecture 7: Scaffold Foundations (III) Final Revision NotesLecture Overview
-🔴 Top 8 high-yield topics 八大高頻考點 that appear every year:
-Scaffold fabrication techniques 支架製備技術 &amp; porosity creation 孔隙形成
-Advantages&#x2F;disadvantages of classic methods 傳統方法優缺點 (solvent casting-PL, gas foaming, freeze-drying, etc.)
-Advanced biofabrication 先進生物製造技術 (electrospinning 靜電紡絲, 3D printing, decellularization 脫細胞)
-Hydrogels 水凝膠 &amp; cell encapsulation 細胞封裝
-Limitations of conventional scaffolds 傳統支架局限性
-Bioreactors 生物反應器 &amp; cultivation strategies 培養策略
-Host response to implanted scaffolds 宿主對植入支架的反應 (inflammation → fibrosis 炎症 → 纖維化)
-Immunoisolation 免疫隔離 &amp; encapsulated cell therapy 封裝細胞療法
-
-
-
-Topic 1 – Scaffold Fabrication Principles &amp; Material Selection 支架製備原則與材料選擇大圖景 (Big Picture)Scaffold must mimic native ECM 細胞外基質 mechanically and biologically → material choice dictates fabrication method → porosity 孔隙率 &amp; interconnectivity 互連性 are critical for cell migration 細胞遷移&#x2F;nutrient diffusion 營養擴散.
-Material 材料 → Soft tissue 軟組織 (polymers 聚合物) vs Hard tissue 硬組織 (ceramics 陶瓷/metals 金屬/composites 複合材料)         ↓   Fabrication method 製備方法 → Porosity technique 造孔技術         ↓   Final scaffold properties 最終支架特性
-
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Soft tissues 軟組織 (skin 皮膚, tendon 肌腱, liver 肝臟, vessels 血管) → synthetic&#x2F;natural polymers 合成&#x2F;天然聚合物
-🔴 Hard tissues 硬組織 (bone 骨) → metals 金屬, ceramics 陶瓷, polymer-containing composites 含聚合物複合材料
-🔴 Scaffold must have high porosity 高孔隙率 (&gt;90% ideal 理想&gt;90%), large surface area 大表面積, interconnected pores 互連孔隙
-🔴 Pore size 孔徑: 100–500 μm generally optimal for most tissues
-🟢 Fabrication technique depends on polymer solubility 聚合物溶解性, Tg&#x2F;Tm, biocompatibility needs 生物相容性需求
-🔴 All methods aim to create 3D porous structure 3D多孔結構 for cell infiltration 細胞浸潤 &amp; vascularisation 血管化
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Porosity (%) = [1 – (ρscaffold / ρbulk polymer)] × 100孔隙率 (%) = [1 – (支架密度 / 本體聚合物密度)] × 100
-
-對比表 (Comparison Table)
-
-
-Property 特性
-Soft Tissue Scaffolds 軟組織支架
-Hard Tissue Scaffolds 硬組織支架
-
-
-
-Main materials 主要材料
-PLGA, PLLA, collagen 膠原蛋白, alginate 藻酸鹽
-HA 羥基磷灰石, β-TCP, Ti鈦, composites 複合材料
-
-
-Mechanical need 機械需求
-Elastic 彈性, flexible 柔韌
-High compressive strength 高抗壓強度
-
-
-Typical fabrication 典型製備
-Polymer-based (foaming發泡, electrospinning靜電紡絲)
-Ceramic sintering陶瓷燒結, metal mesh金屬網
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-忘記陶瓷單獨用於軟組織承重時太脆 (Forgetting that ceramics alone are too brittle for load-bearing soft tissue)
-以為金屬總係用於軟組織 (Thinking metals are always used for soft tissue) - 實際上唔係
-
-Topic 2 – Conventional Porosity Techniques 傳統造孔技術大圖景 (Big Picture)Five classic ways to make pores; each has trade-offs in interconnectivity, solvent use, and pore control.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Solvent-casting + particulate leaching (SCPL) 溶劑鑄造+粒子浸出 – gold standard 金標準, uses salt&#x2F;sugar, highly interconnected
-🔴 Gas foaming 氣體發泡 – no organic solvent 無有機溶劑 (advantage), but mostly closed pores 閉孔
-🔴 Gas foaming + particulate leaching 氣體發泡+粒子浸出 – solves interconnectivity problem
-🔴 Melt molding 熔融成型 – no solvent, uses heat + porogen 致孔劑 (e.g., gelatin particles)
-🔴 Phase separation 相分離 – low temperature, good for incorporating growth factors 生長因子
-🔴 Freeze-drying 冷凍乾燥 – emulsion or non-emulsion, pore size controlled by freezing rate&#x2F;pH
-
-關鍵圖表 (Key Diagrams)SCPL Process SCPL過程:Polymer + salt in solvent 溶劑中的聚合物+鹽 → cast 鑄模 → evaporate solvent 蒸發溶劑 → leach salt with water 用水浸出鹽 → porous scaffold 多孔支架
-
-對比表 (Comparison Table)
-
-
-Method 方法
-Solvent? 使用溶劑?
-Interconnected pores? 互連孔隙?
-Pore control 孔徑控制
-Bioactive molecule friendly? 對生物活性分子友好?
-
-
-
-SCPL
-Yes
-Excellent 優秀
-Good 良好
-No (solvent)
-
-
-Gas foaming
-No
-Poor (closed) 差 (閉孔)
-Poor 差
-Yes
-
-
-Gas foaming + PL
-No
-Excellent 優秀
-Good 良好
-Yes
-
-
-Melt molding
-No
-Good 良好
-Good 良好
-No (high T)
-
-
-Phase separation
-Yes
-Excellent 優秀
-Good 良好
-Yes (low T)
-
-
-Freeze-drying
-Yes&#x2F;No
-Excellent 優秀
-Excellent 優秀
-Yes
-
-
-常見錯誤 (Common Mistakes)
-話氣體發泡單獨使用能提供高互連性 (Saying gas foaming alone gives high interconnectivity) - 實際上唔得
-忘記聚合物必須不溶於水但致孔劑必須水溶 (Forgetting polymer must be insoluble in water but porogen must be water-soluble)
-
-Topic 3 – Advanced Biofabrication Techniques 先進生物製造技術大圖景 (Big Picture)Move from random porosity to precise, reproducible 3D architecture 3D結構 + ability to include cells during printing.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Electrospinning 靜電紡絲 → nanofibers 納米纖維, excellent for ECM mimicry, cheap &amp; fast
-🔴 Rapid prototyping 快速原型 &#x2F; 3D printing 3D打印 &#x2F; microstereolithography 微立體光刻 → CAD-CAM control CAD-CAM控制 of exact geometry
-🔴 Microsphere sintering 微球燒結 → trabecular bone-like pores 小梁骨樣孔隙
-🔴 Decellularized organs 脫細胞器官 → keep native vascular network 血管網絡 (Ott 2008, 2010 – perfused lung 灌注肺)
-🟢 Decellularization + recellularization 脫細胞+再細胞化 &#x3D; whole organ engineering gold standard 全器官工程金標準
-
-對比表 (Comparison Table)
-
-
-Technique 技術
-Resolution 分辨率
-Speed 速度
-Cell inclusion during fab? 製造時包含細胞?
-Vascular network? 血管網絡?
-
-
-
-Electrospinning 靜電紡絲
-Nano 納米
-Fast 快
-No 否
-No 否
-
-
-3D Bioprinting 3D生物打印
-50–100 μm
-Slow 慢
-Yes (bioink 生物墨水)
-Possible 可能
-
-
-Decellularization 脫細胞
-Native 原生
-Slow 慢
-No (recell later 稍後再細胞化)
-Yes (native 原生)
-
-
-考官陷阱 (Examiner Trap)學生忘記脫細胞支架已經擁有完美嘅血管樹 (Students forget decellularized scaffolds already have perfect vascular tree)
-Topic 4 – Hydrogels &amp; Cell Encapsulation 水凝膠與細胞封裝大圖景 (Big Picture)Hydrogels 水凝膠 &#x3D; water-swollen polymer networks 水溶脹聚合物網絡; unique ability to encapsulate live cells during gelation.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Gelation triggers 凝膠化觸發: chemical crosslinking 化學交聯, UV, temperature, ionic (Ca²⁺ for alginate 藻酸鹽鈣交聯)
-🔴 Advantages: cells encapsulated in true 3D, cytocompatible gelation possible 細胞兼容性凝膠化
-🔴 GelMA, PEG, alginate most common
-🔴 Photoencapsulation 光封裝 allows spatial patterning 空間圖案化
-🔴 Major limitation inside thick hydrogels: diffusion limit 擴散限制 → necrosis 壞死 in centre after ~200–300 μm
-
-Topic 5 – Limitations of Conventional Scaffolds 傳統支架嘅局限性大圖景 (Big Picture)Traditional methods cannot give precise internal channels or full interconnectivity → poor vascularisation in thick constructs.
-必須掌握嘅要點 (Must-Know Facts) (memorise the list)
-Poor control of pore size&#x2F;geometry&#x2F;spatial distribution 孔徑&#x2F;幾何形狀&#x2F;空間分佈
-Lack of predefined internal channels 預定義內部通道
-Incomplete porogen leaching 不完全嘅致孔劑浸出 in thick scaffolds
-Closed pores 閉孔 in gas foaming (10–30% interconnected)
-Residual toxic solvents 殘留有毒溶劑
-Cell seeding inefficient 細胞接種效率低 (cells stay on surface, &lt;500 μm penetration)
-
-Topic 6 – Bioreactors in Tissue Engineering 組織工程中嘅生物反應器大圖景 (Big Picture)Static culture fails → bioreactors provide nutrient flow 營養流 &amp; mechanical signals 機械信號.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Purposes: mass transport 物質傳輸, chemical signals 化學信號, mechanical conditioning 機械調節
-🔴 Types: spinner flask 旋轉瓶, rotating wall vessel 旋轉壁容器, perfusion cartridges 灌注盒
-🔴 Perfusion 灌注 → uniform cell&#x2F;matrix distribution throughout scaffold
-🟢 Mechanical loading 機械負荷 examples:
-Cyclic compression 週期性壓縮 → ↑ GAG 糖胺聚糖&#x2F;collagen in cartilage
-Stretch 拉伸 → aligned collagen &amp; tenascin 腱生蛋白 in ligament
-
-
-
-對比表 (Comparison Table)
-
-
-Culture Method 培養方法
-Cell distribution 細胞分佈
-Mass transport 物質傳輸
-Mechanical signals 機械信號
-
-
-
-Static 靜態
-Surface only 僅表面
-Diffusion 擴散
-None 無
-
-
-Spinner flask 旋轉瓶
-Better 較好
-Convection 對流
-Minimal 極小
-
-
-Perfusion 灌注
-Homogeneous 均勻
-Excellent 優秀
-Flow&#x2F;shear 流動&#x2F;剪切
-
-
-Rotating vessel 旋轉容器
-Good 良好
-Good 良好
-Low shear 低剪切
-
-
-Topic 7 – Host Response to Implanted Biomaterials 宿主對植入生物材料嘅反應大圖景 (Big Picture)Injury → hemostasis 止血 → inflammation 炎症 → granulation 肉芽組織形成 → foreign body reaction 異物反應 → fibrosis&#x2F;encapsulation 纖維化&#x2F;包裹.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Sequence: Hemostasis 止血 → Acute inflammation 急性炎症 (neutrophils 中性粒細胞) → Chronic inflammation 慢性炎症 (macrophages 巨噬細胞) → Granulation tissue 肉芽組織 → Foreign body giant cells 異物巨細胞 → Fibrous capsule 纖維囊
-🔴 Biomaterials cause non-specific inflammation 非特異性炎症, NOT immune rejection 非免疫排斥
-🔴 Final usual outcome &#x3D; fibrous encapsulation 纖維包裹 (acellular collagen capsule)
-🔴 Capsule thicker with: motion 移動, sharp edges 銳邊, leaching monomers 單體浸出, corrosion 腐蝕
-
-Topic 8 – Immunoisolation &amp; Encapsulated Cell Therapy 免疫隔離與封裝細胞療法大圖景 (Big Picture)Physical barrier protects allogeneic&#x2F;xenogeneic cells 同種異體&#x2F;異種細胞 from immune attack while allowing nutrient&#x2F;waste&#x2F;hormone exchange.
-必須掌握嘅要點 (Must-Know Facts)
-🔴 Classic example: alginate-polylysine microcapsules 藻酸鹽-聚賴氨酸微膠囊 for pancreatic islets 胰島
-🔴 Membrane MWCO (Molecular Weight Cut-Off) 分子量截留值 typically 50–150 kDa (lets insulin&#x2F;glucose through, blocks antibodies)
-🔴 Allows use of non-autologous cells 非自體細胞 without immunosuppression 無需免疫抑制
-
-Active Recall Bank 主動回憶庫
-Name 3 porosity methods that avoid organic solvents 三種避免使用有機溶劑嘅造孔方法
-Which method gives closed pores if used alone? 邊種方法單獨使用會產生閉孔？
-What is the main advantage of decellularized organs? 脫細胞器官嘅主要優勢係咩？
-Why do cells die in the centre of thick hydrogels? 點解厚水凝膠中心嘅細胞會死亡？
-Name the sequence of host response stages (6) 列出宿主反應階段嘅順序（6個）
-What cells dominate acute vs chronic inflammation? 急性 vs 慢性炎症中主導嘅細胞係咩？
-What is the usual final fate of a non-degradable implant? 不可降解植入物通常嘅最終命運係咩？
-Best bioreactor for uniform cell seeding in thick scaffolds? 用於厚支架均勻接種細胞嘅最佳生物反應器？
-Two mechanical signals used in bioreactors for cartilage? 用於軟骨嘅生物反應器中嘅兩種機械信號？
-Material of choice for soft vs hard tissue scaffolds? 軟組織 vs 硬組織支架嘅材料選擇？
-Pore size range generally optimal? 通常最佳嘅孔徑範圍？
-Name one natural hydrogel polymer used for encapsulation 一種用於封裝嘅天然水凝膠聚合物
-What does “foreign body giant cell” indicate? “異物巨細胞”表明咩？
-Why is perfusion better than static culture? 點解灌注培養好過靜態培養？
-Example of self-organized vascularised tissue from iPSCs? 來源於iPSC嘅自組織血管化組織例子？
-What does SCPL stand for and what porogen is commonly used? SCPL代表咩？常用咩致孔劑？
-Which fabrication method is best for incorporating growth factors without denaturation? 邊種製備方法最適合加入生長因子而不使其變性？
-What is the main drawback of melt molding? 熔融成型嘅主要缺點係咩？
-What does Re &lt; 2000 mean in microfluidics? 微流體中 Re &lt; 2000 代表咩？
-Classic encapsulated cell therapy target disease? 經典嘅封裝細胞療法目標疾病？
-
-(Answers at bottom – cover first! 答案在底部 – 先遮住!)
-15-Minute Mock Exam 15分鐘模擬考試
-Compare advantages and disadvantages of solvent-casting particulate leaching versus gas foaming&#x2F;particulate leaching combination. (8 marks)  
-
-SCPL 溶劑鑄造粒子浸出: excellent interconnectivity 互連性優秀, good pore control 孔徑控制良好, but uses toxic organic solvent 但使用有毒有機溶劑. Gas foaming + PL 氣體發泡+粒子浸出: no solvent (more biocompatible) 無溶劑 (更生物相容), excellent interconnectivity 互連性優秀, retains temperature-sensitive molecules 保留溫度敏感分子, slightly more complex process 過程稍複雜.
-
-
-Explain why conventional scaffold techniques fail to produce clinically relevant thick tissues (&gt;1 cm). Give two biological reasons and one fabrication reason. (6 marks)  
-
-Diffusion limitation 擴散限制 of oxygen&#x2F;nutrients (&lt;200–300 μm), lack of pre-formed vascular channels 預成型血管通道, poor cell penetration 細胞滲透 during seeding (cells remain on surface 細胞停留在表面).
-
-
-Describe the host response timeline from implantation to fibrous encapsulation. (8 marks)  
-
-Injury 損傷 → hemostasis &amp; platelet activation 止血 &amp; 血小板激活 → acute inflammation 急性炎症 (neutrophils 中性粒細胞) → chronic inflammation 慢性炎症 (macrophages&#x2F;monocytes 巨噬細胞&#x2F;單核細胞) → granulation tissue 肉芽組織 + angiogenesis 血管生成 → foreign body giant cells 異物巨細胞 → fibrous capsule formation 纖維囊形成 (weeks–months 數週-數月).
-
-
-A company wants to implant insulin-producing cells from pig into diabetic patients without immunosuppression. Suggest and justify a tissue-engineering strategy. (6 marks)  
-
-Encapsulate 封裝 porcine islets 豬胰島 in alginate-polylysine microcapsules 藻酸鹽-聚賴氨酸微膠囊 (immunoisolation 免疫隔離). Membrane permits glucose&#x2F;insulin diffusion 葡萄糖&#x2F;胰島素擴散 but excludes immune cells&#x2F;antibodies 免疫細胞&#x2F;抗體 → prevents rejection 防止排斥 while allowing function.
-
-
-State four essential requirements of a tissue engineering bioreactor. (4 marks)  
-
-Controlled temperature&#x2F;pH 受控溫度&#x2F;pH, efficient mass transfer 質量傳遞, delivery of chemical signals 化學信號, ability to apply mechanical&#x2F;electrical signals 機械&#x2F;電信號.
-
-
-
-One-Page Cheat Sheet Summary 一頁速查表總結
-
-
-Category 類別
-Key Methods &#x2F; Materials 關鍵方法&#x2F;材料
-Pros 優點
-Cons 缺點
-Best for 最適用於
-
-
-
-Classic porosity 傳統造孔
-SCPL, Gas foaming+PL, Freeze-drying
-High interconnectivity 高互連性
-Solvent (SCPL) or heat 溶劑或高溫
-General scaffolds 通用支架
-
-
-Advanced 先進
-Electrospinning, 3D printing, Decellularization
-Precise geometry 精確幾何, native vessels 原生血管
-Slow 慢, expensive 貴
-Vascularised organs 血管化器官
-
-
-Cell-friendly 細胞友好
-Hydrogels (PEG, GelMA, alginate)
-Encapsulation during gelation 凝膠過程中封裝
-Diffusion limit 擴散限制
-3D culture 3D培養, islets 胰島
-
-
-Cultivation 培養
-Perfusion bioreactors 灌注生物反應器
-Uniform cell&#x2F;matrix 均勻細胞&#x2F;基質
-Complex setup 設置複雜
-Thick constructs 厚構建體
-
-
-Host response endpoint 宿主反應終點
-Fibrous encapsulation 纖維包裹
-Isolates implant 隔離植入物
-Avascular wall 無血管壁, no integration 無整合
-Most permanent implants 大多數永久植入物
-
-
-Immunoisolation 免疫隔離
-Alginate microcapsules 藻酸鹽微膠囊
-No immunosuppression 無需免疫抑制
-Fibrosis of capsules over time 膠囊隨時間纖維化
-Xenogeneic cells 異種細胞
-
-
-Active Recall Answers 主動回憶答案:
-
-Gas foaming(+PL) 氣體發泡(+粒子浸出), melt molding 熔融成型, freeze-drying 冷凍乾燥
-Gas foaming alone 單獨氣體發泡
-Native vascular network retained 保留原生血管網絡
-Diffusion limitation 擴散限制
-Hemostasis 止血–acute 急性–chronic 慢性–granulation 肉芽組織–giant cells 巨細胞–capsule 囊
-Neutrophils 中性粒細胞 vs macrophages 巨噬細胞
-Fibrous encapsulation 纖維包裹
-Perfusion 灌注
-Cyclic compression 週期性壓縮, hydrostatic pressure 靜水壓
-Polymers 聚合物 vs ceramics&#x2F;metals 陶瓷&#x2F;金屬
-100–500 μm
-Alginate 藻酸鹽&#x2F;collagen 膠原蛋白
-Persistent material or wear particles 持續存在嘅材料或磨損顆粒
-Overcomes diffusion limit &amp; uniform seeding 克服擴散限制 &amp; 均勻接種
-Liver buds 肝芽 (Takebe 2013)
-Solvent-casting particulate leaching 溶劑鑄造粒子浸出, NaCl&#x2F;sugar 氯化鈉&#x2F;糖
-Freeze-drying 冷凍乾燥 or phase separation 相分離
-High temperature denatures proteins 高溫使蛋白質變性
-Laminar flow 層流
-Diabetes (pancreatic islets) 糖尿病 (胰島)
-
-English Version BelowTopic 1 – Scaffold Fabrication Principles &amp; Material SelectionBig Picture (1 sentence + mind map in text)Scaffold must mimic native ECM mechanically and biologically → material choice dictates fabrication method → porosity &amp; interconnectivity are critical for cell migration&#x2F;nutrient diffusion.
-Material → Soft tissue (polymers) vs Hard tissue (ceramics/metals/composites)         ↓   Fabrication method → Porosity technique         ↓   Final scaffold properties
-
-Must-Know Facts (max 15 bullet points)
-🔴 Soft tissues (skin, tendon, liver, vessels) → synthetic&#x2F;natural polymers
-🔴 Hard tissues (bone) → metals, ceramics, polymer-containing composites
-🔴 Scaffold must have high porosity (&gt;90% ideal), large surface area, interconnected pores
-🔴 Pore size: 100–500 μm generally optimal for most tissues
-🟢 Fabrication technique depends on polymer solubility, Tg&#x2F;Tm, biocompatibility needs
-🔴 All methods aim to create 3D porous structure for cell infiltration &amp; vascularisation
-
-Key Formulas &#x2F; Diagrams (use code blocks)Porosity (%) = [1 – (ρscaffold / ρbulk polymer)] × 100
-
-Comparison Table
-
-
-Property
-Soft Tissue Scaffolds
-Hard Tissue Scaffolds
-
-
-
-Main materials
-PLGA, PLLA, collagen, alginate
-HA, β-TCP, Ti, composites
-
-
-Mechanical need
-Elastic, flexible
-High compressive strength
-
-
-Typical fabrication
-Polymer-based (foaming, electrospinning)
-Ceramic sintering, metal mesh
-
-
-Common Mistakes &amp; Examiner Traps
-Forgetting that ceramics alone are too brittle for load-bearing soft tissue
-Thinking metals are always used for soft tissue (they aren’t)
-
-Mnemonics &#x2F; Memory Hooks“Soft &#x3D; Polymer, Hard &#x3D; Pottery&#x2F;Metal” (pottery → ceramics)
-Topic 2 – Conventional Porosity TechniquesBig PictureFive classic ways to make pores; each has trade-offs in interconnectivity, solvent use, and pore control.
-Must-Know Facts
-🔴 Solvent-casting + particulate leaching (SCPL) – gold standard, uses salt&#x2F;sugar, highly interconnected
-🔴 Gas foaming – no organic solvent (advantage), but mostly closed pores
-🔴 Gas foaming + particulate leaching – solves interconnectivity problem
-🔴 Melt molding – no solvent, uses heat + porogen (e.g., gelatin particles)
-🔴 Phase separation – low temperature, good for incorporating growth factors
-🔴 Freeze-drying – emulsion or non-emulsion, pore size controlled by freezing rate&#x2F;pH
-
-Key DiagramsSCPL Process:Polymer + salt in solvent → cast → evaporate solvent → leach salt with water → porous scaffold
-
-Comparison Table
-
-
-Method
-Solvent?
-Interconnected pores?
-Pore control
-Bioactive molecule friendly?
-
-
-
-SCPL
-Yes
-Excellent
-Good
-No (solvent)
-
-
-Gas foaming
-No
-Poor (closed)
-Poor
-Yes
-
-
-Gas foaming + PL
-No
-Excellent
-Good
-Yes
-
-
-Melt molding
-No
-Good
-Good
-No (high T)
-
-
-Phase separation
-Yes
-Excellent
-Good
-Yes (low T)
-
-
-Freeze-drying
-Yes&#x2F;No
-Excellent
-Excellent
-Yes
-
-
-Common Mistakes
-Saying gas foaming alone gives high interconnectivity (it doesn’t)
-Forgetting polymer must be insoluble in water but porogen must be water-soluble
-
-Topic 3 – Advanced Biofabrication TechniquesBig PictureMove from random porosity to precise, reproducible 3D architecture + ability to include cells during printing.
-Must-Know Facts
-🔴 Electrospinning → nanofibers, excellent for ECM mimicry, cheap &amp; fast
-🔴 Rapid prototyping &#x2F; 3D printing &#x2F; microstereolithography → CAD-CAM control of exact geometry
-🔴 Microsphere sintering → trabecular bone-like pores
-🔴 Decellularized organs → keep native vascular network (Ott 2008, 2010 – perfused lung)
-🟢 Decellularization + recellularization &#x3D; whole organ engineering gold standard
-
-Comparison Table
-
-
-Technique
-Resolution
-Speed
-Cell inclusion during fab?
-Vascular network?
-
-
-
-Electrospinning
-Nano
-Fast
-No
-No
-
-
-3D Bioprinting
-50–100 μm
-Slow
-Yes (bioink)
-Possible
-
-
-Decellularization
-Native
-Slow
-No (recell later)
-Yes (native)
-
-
-Examiner TrapStudents forget decellularized scaffolds already have perfect vascular tree
-Topic 4 – Hydrogels &amp; Cell EncapsulationBig PictureHydrogels &#x3D; water-swollen polymer networks; unique ability to encapsulate live cells during gelation.
-Must-Know Facts
-🔴 Gelation triggers: chemical crosslinking, UV, temperature, ionic (Ca²⁺ for alginate)
-🔴 Advantages: cells encapsulated in true 3D, cytocompatible gelation possible
-🔴 GelMA, PEG, alginate most common
-🔴 Photoencapsulation allows spatial patterning
-🔴 Major limitation inside thick hydrogels: diffusion limit → necrosis in centre after ~200–300 μm
-
-Mnemonics“Hydrogels &#x3D; Hotel for cells” – cells check in alive during crosslinking
-Topic 5 – Limitations of Conventional ScaffoldsBig PictureTraditional methods cannot give precise internal channels or full interconnectivity → poor vascularisation in thick constructs.
-Must-Know Facts (memorise the list)
-Poor control of pore size&#x2F;geometry&#x2F;spatial distribution
-Lack of predefined internal channels
-Incomplete porogen leaching in thick scaffolds
-Closed pores in gas foaming (10–30% interconnected)
-Residual toxic solvents
-Cell seeding inefficient (cells stay on surface, &lt;500 μm penetration)
-
-Topic 6 – Bioreactors in Tissue EngineeringBig PictureStatic culture fails → bioreactors provide nutrient flow &amp; mechanical signals.
-Must-Know Facts
-🔴 Purposes: mass transport, chemical signals, mechanical conditioning
-🔴 Types: spinner flask, rotating wall vessel, perfusion cartridges
-🔴 Perfusion → uniform cell&#x2F;matrix distribution throughout scaffold
-🟢 Mechanical loading examples:
-Cyclic compression → ↑ GAG&#x2F;collagen in cartilage
-Stretch → aligned collagen &amp; tenascin in ligament
-
-
-
-Comparison Table
-
-
-Culture Method
-Cell distribution
-Mass transport
-Mechanical signals
-
-
-
-Static
-Surface only
-Diffusion
-None
-
-
-Spinner flask
-Better
-Convection
-Minimal
-
-
-Perfusion
-Homogeneous
-Excellent
-Flow&#x2F;shear
-
-
-Rotating vessel
-Good
-Good
-Low shear
-
-
-Topic 7 – Host Response to Implanted BiomaterialsBig PictureInjury → hemostasis → inflammation → granulation → foreign body reaction → fibrosis&#x2F;encapsulation.
-Must-Know Facts
-🔴 Sequence: Hemostasis → Acute inflammation (neutrophils) → Chronic inflammation (macrophages) → Granulation tissue → Foreign body giant cells → Fibrous capsule
-🔴 Biomaterials cause non-specific inflammation, NOT immune rejection
-🔴 Final usual outcome &#x3D; fibrous encapsulation (acellular collagen capsule)
-🔴 Capsule thicker with: motion, sharp edges, leaching monomers, corrosion
-
-Mnemonics“Hemostasis → Acute → Chronic → Granulation → Giant cells → Capsule” &#x3D; HAC3G
-Topic 8 – Immunoisolation &amp; Encapsulated Cell TherapyBig PicturePhysical barrier protects allogeneic&#x2F;xenogeneic cells from immune attack while allowing nutrient&#x2F;waste&#x2F;hormone exchange.
-Must-Know Facts
-🔴 Classic example: alginate-polylysine microcapsules for pancreatic islets
-🔴 Membrane MWCO typically 50–150 kDa (lets insulin&#x2F;glucose through, blocks antibodies)
-🔴 Allows use of non-autologous cells without immunosuppression
-
-Active Recall Bank
-Name 3 porosity methods that avoid organic solvents
-Which method gives closed pores if used alone?
-What is the main advantage of decellularized organs?
-Why do cells die in the centre of thick hydrogels?
-Name the sequence of host response stages (6)
-What cells dominate acute vs chronic inflammation?
-What is the usual final fate of a non-degradable implant?
-Best bioreactor for uniform cell seeding in thick scaffolds?
-Two mechanical signals used in bioreactors for cartilage?
-Material of choice for soft vs hard tissue scaffolds?
-Pore size range generally optimal?
-Name one natural hydrogel polymer used for encapsulation
-What does “foreign body giant cell” indicate?
-Why is perfusion better than static culture?
-Example of self-organized vascularised tissue from iPSCs?
-What does SCPL stand for and what porogen is commonly used?
-Which fabrication method is best for incorporating growth factors without denaturation?
-What is the main drawback of melt molding?
-What does Re &lt; 2000 mean in microfluidics?
-Classic encapsulated cell therapy target disease?
-
-(Answers at bottom – cover first!)
-15-Minute Mock Exam
-Compare advantages and disadvantages of solvent-casting particulate leaching versus gas foaming&#x2F;particulate leaching combination. (8 marks)  
-
-SCPL: excellent interconnectivity, good pore control, but uses toxic organic solvent. Gas foaming + PL: no solvent (more biocompatible), excellent interconnectivity, retains temperature-sensitive molecules, slightly more complex process.
-
-
-Explain why conventional scaffold techniques fail to produce clinically relevant thick tissues (&gt;1 cm). Give two biological reasons and one fabrication reason. (6 marks)  
-
-Diffusion limitation of oxygen&#x2F;nutrients (&lt;200–300 μm), lack of pre-formed vascular channels, poor cell penetration during seeding (cells remain on surface).
-
-
-Describe the host response timeline from implantation to fibrous encapsulation. (8 marks)  
-
-Injury → hemostasis &amp; platelet activation → acute inflammation (neutrophils) → chronic inflammation (macrophages&#x2F;monocytes) → granulation tissue + angiogenesis → foreign body giant cells → fibrous capsule formation (weeks–months).
-
-
-A company wants to implant insulin-producing cells from pig into diabetic patients without immunosuppression. Suggest and justify a tissue-engineering strategy. (6 marks)  
-
-Encapsulate porcine islets in alginate-polylysine microcapsules (immunoisolation). Membrane permits glucose&#x2F;insulin diffusion but excludes immune cells&#x2F;antibodies → prevents rejection while allowing function.
-
-
-State four essential requirements of a tissue engineering bioreactor. (4 marks)  
-
-Controlled temperature&#x2F;pH, efficient mass transfer, delivery of chemical signals, ability to apply mechanical&#x2F;electrical signals.
-
-
-
-One-Page Cheat Sheet Summary
-
-
-Category
-Key Methods &#x2F; Materials
-Pros
-Cons
-Best for
-
-
-
-Classic porosity
-SCPL, Gas foaming+PL, Freeze-drying
-High interconnectivity
-Solvent (SCPL) or heat
-General scaffolds
-
-
-Advanced
-Electrospinning, 3D printing, Decellularization
-Precise geometry, native vessels
-Slow, expensive
-Vascularised organs
-
-
-Cell-friendly
-Hydrogels (PEG, GelMA, alginate)
-Encapsulation during gelation
-Diffusion limit
-3D culture, islets
-
-
-Cultivation
-Perfusion bioreactors
-Uniform cell&#x2F;matrix
-Complex setup
-Thick constructs
-
-
-Host response endpoint
-Fibrous encapsulation
-Isolates implant
-Avascular wall, no integration
-Most permanent implants
-
-
-Immunoisolation
-Alginate microcapsules
-No immunosuppression
-Fibrosis of capsules over time
-Xenogeneic cells
-
-
-Active Recall Answers: 1. Gas foaming(+PL), melt molding, freeze-drying 2. Gas foaming alone 3. Native vascular network retained 4. Diffusion limitation 5. Hemostasis–acute–chronic–granulation–giant cells–capsule 6. Neutrophils vs macrophages 7. Fibrous encapsulation 8. Perfusion 9. Cyclic compression, hydrostatic pressure 10. Polymers vs ceramics&#x2F;metals 11. 100–500 μm 12. Alginate&#x2F;collagen 13. Persistent material or wear particles 14. Overcomes diffusion limit &amp; uniform seeding 15. Liver buds (Takebe 2013) 16. Solvent-casting particulate leaching, NaCl&#x2F;sugar 17. Freeze-drying or phase separation 18. High temperature denatures proteins 19. Laminar flow 20. Diabetes (pancreatic islets)
 ]]></content>
       <categories>
         <category>Education</category>
@@ -10567,889 +10752,704 @@ Natural (collagen, active); Synthetic (modifiable); Metals (Ti strong, Mg resorb
       </tags>
   </entry>
   <entry>
-    <title>BME 2104 Tissue Engineering – 4  </title>
-    <url>/posts/a1205bc2.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – 4Lecture Overview
-Top 8 topics that appear every year: Fibronectin and RGD Binding, Focal Adhesions in 2D vs 3D, Cell Migration and Chemotaxis, Signaling Ligands and Types, Central Paradigm of Signal Transduction, G-Protein Coupled Receptors, Receptor Tyrosine Kinases and Pathways, Mechanotransduction and Cytoskeleton
-Colour code: 🔴 Memorise | 🟢 Understand | 🔵 Apply
-每年必出嘅八大題目 (Top 8 topics that appear every year):
-Fibronectin 纖連蛋白 同 RGD Binding 結合
-Focal Adhesions 黏著斑 in 2D vs 3D
-Cell Migration 細胞遷移 同 Chemotaxis 趨化性
-Signaling Ligands 信號配體 同 Types 類型
-Central Paradigm of Signal Transduction 信號轉導中心法則
-G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體
-Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 同 Pathways 信號途徑
-Mechanotransduction 機械轉導 同 Cytoskeleton 細胞骨架
+    <title>BME 2104 Tissue Engineering – 7</title>
+    <url>/posts/e0b4f024.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – Lecture 7: Scaffold Foundations (III) Final Revision NotesLecture Overview
+🔴 Top 8 high-yield topics 八大高頻考點 that appear every year:
+Scaffold fabrication techniques 支架製備技術 &amp; porosity creation 孔隙形成
+Advantages&#x2F;disadvantages of classic methods 傳統方法優缺點 (solvent casting-PL, gas foaming, freeze-drying, etc.)
+Advanced biofabrication 先進生物製造技術 (electrospinning 靜電紡絲, 3D printing, decellularization 脫細胞)
+Hydrogels 水凝膠 &amp; cell encapsulation 細胞封裝
+Limitations of conventional scaffolds 傳統支架局限性
+Bioreactors 生物反應器 &amp; cultivation strategies 培養策略
+Host response to implanted scaffolds 宿主對植入支架的反應 (inflammation → fibrosis 炎症 → 纖維化)
+Immunoisolation 免疫隔離 &amp; encapsulated cell therapy 封裝細胞療法
 
 
-顏色標記 (Colour code): 🔴 Memorise 必須背誦 | 🟢 Understand 必須理解 | 🔵 Apply 必須應用
 
-Topic 1 – Fibronectin 纖連蛋白 同 Integrin 整合素 Binding 結合大圖景 (Big Picture)Fibronectin 纖連蛋白係關鍵嘅 ECM (Extracellular Matrix) 細胞外基質 glycoprotein 糖蛋白，透過 integrins 整合素促進 cell adhesion 細胞黏附，對組織結構同信號傳遞至關重要。
-思維導圖 (Mind map):Fibronectin → Types 類型 (Soluble Plasma 可溶性血漿型 → Bloodstream 血液循環 → Hepatocytes 肝細胞; Insoluble Cellular 不可溶性細胞型 → Secreted by Fibroblasts 成纖維細胞分泌) → Binds to 結合對象 (Integrins 整合素 → RGD Sequence RGD序列 → α5β1&#x2F;αVβ3; ECM Components ECM成分 → Collagen 膠原蛋白&#x2F;Fibrin 纖維蛋白&#x2F;Heparan Sulfate 硫酸肝素) → Enables Cell Attachment 實現細胞黏附。
+Topic 1 – Scaffold Fabrication Principles &amp; Material Selection 支架製備原則與材料選擇大圖景 (Big Picture)Scaffold must mimic native ECM 細胞外基質 mechanically and biologically → material choice dictates fabrication method → porosity 孔隙率 &amp; interconnectivity 互連性 are critical for cell migration 細胞遷移&#x2F;nutrient diffusion 營養擴散.
+Material 材料 → Soft tissue 軟組織 (polymers 聚合物) vs Hard tissue 硬組織 (ceramics 陶瓷/metals 金屬/composites 複合材料)         ↓   Fabrication method 製備方法 → Porosity technique 造孔技術         ↓   Final scaffold properties 最終支架特性
+
 必須掌握嘅要點 (Must-Know Facts)
-🔴 Fibronectin 纖連蛋白係結合 integrins 整合素嘅主要 ECM 糖蛋白。
-🟢 亦結合其他 ECM 成分，如 collagen 膠原蛋白、fibrin 纖維蛋白、heparan sulfate proteoglycans 硫酸肝素蛋白聚糖。
-🔴 兩種類型 (Two types): soluble plasma 可溶性血漿型 (hepatocytes 肝細胞產生) 同 insoluble cellular 不可溶性細胞型 (fibroblasts 成纖維細胞等分泌)。
-🟢 Integrin 整合素 binding 結合使用 RGD sequence RGD序列 (Arg-Gly-Asp 精氨酸-甘氨酸-天冬氨酸)。
-🔴 關鍵 integrins 整合素: α5β1 同 αVβ3 (喺細胞表面)。
-🟢 短嘅 RGD peptides RGD肽可以模仿 fibronectin 纖連蛋白功能，促進 cell attachment 細胞黏附。
-🔵 RGD 序列促成 focal adhesion 黏著斑形成。
-🟢 Plasma fibronectin 血漿纖連蛋白喺血液中循環；cellular fibronectin 細胞型纖連蛋白則整合入 matrix 基質。
-🔴 RGD 係 primary cell attachment site 主要細胞黏附位點。
-🟢 Binding 結合促進 clustering 聚集，形成 focal adhesions 黏著斑。
-🔵 應用於 biomaterials 生物材料，用於 cell adhesion engineering 細胞黏附工程。
-🟢 Insoluble form 不可溶性型由好多細胞分泌，例如 fibroblasts 成纖維細胞。
-🔴 Heparan sulfate 硫酸肝素 binding 結合有助於 growth factor 生長因子 localization 定位。
-🟢 Fibronectin 纖連蛋白 domains 結構域可以結合 TGF-β 同 bFGF。
+🔴 Soft tissues 軟組織 (skin 皮膚, tendon 肌腱, liver 肝臟, vessels 血管) → synthetic&#x2F;natural polymers 合成&#x2F;天然聚合物
+🔴 Hard tissues 硬組織 (bone 骨) → metals 金屬, ceramics 陶瓷, polymer-containing composites 含聚合物複合材料
+🔴 Scaffold must have high porosity 高孔隙率 (&gt;90% ideal 理想&gt;90%), large surface area 大表面積, interconnected pores 互連孔隙
+🔴 Pore size 孔徑: 100–500 μm generally optimal for most tissues
+🟢 Fabrication technique depends on polymer solubility 聚合物溶解性, Tg&#x2F;Tm, biocompatibility needs 生物相容性需求
+🔴 All methods aim to create 3D porous structure 3D多孔結構 for cell infiltration 細胞浸潤 &amp; vascularisation 血管化
 
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Fibronectin Structure 纖連蛋白結構:NH2 - [Type I Repeats I型重複序列] - [Type II II型] - [Type III III型] - COOHBindings 結合位點: Fibrin纖維蛋白/Heparan硫酸肝素 (I型), Collagen膠原蛋白 (I/II型), Integrin整合素 (III型 - RGD), Heparan硫酸肝素/Fibrin纖維蛋白 (III型)
-RGD Binding RGD結合:Cell Surface Integrin 細胞表面整合素 (α5β1/αVβ3) ⇄ RGD Sequence RGD序列 → Cell Attachment 細胞黏附
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Porosity (%) = [1 – (ρscaffold / ρbulk polymer)] × 100孔隙率 (%) = [1 – (支架密度 / 本體聚合物密度)] × 100
 
-對比表 (Comparison Table) - Soluble Plasma vs Insoluble Cellular Fibronectin 可溶性血漿型 vs 不可溶性細胞型纖連蛋白
+對比表 (Comparison Table)
 
 
-Aspect 方面
-Soluble Plasma Fibronectin (X) 可溶性血漿型纖連蛋白
-Insoluble Cellular Fibronectin (Y) 不可溶性細胞型纖連蛋白
+Property 特性
+Soft Tissue Scaffolds 軟組織支架
+Hard Tissue Scaffolds 硬組織支架
 
 
 
-Source 來源
-Produced by hepatocytes 肝細胞產生
-Secreted by fibroblasts etc. 成纖維細胞等分泌
+Main materials 主要材料
+PLGA, PLLA, collagen 膠原蛋白, alginate 藻酸鹽
+HA 羥基磷灰石, β-TCP, Ti鈦, composites 複合材料
 
 
-Location 位置
-Circulates in bloodstream 喺血液循環中
-Integrated into ECM 整合入細胞外基質
+Mechanical need 機械需求
+Elastic 彈性, flexible 柔韌
+High compressive strength 高抗壓強度
 
 
-Function 功能
-Coagulation 凝血, wound healing 傷口癒合
-Cell adhesion 細胞黏附, matrix structure 基質結構
-
-
-Solubility 溶解性
-Soluble 可溶性
-Insoluble 不可溶性
-
-
-Production 生產
-Liver-specific 肝臟特異性
-Various cell types 多種細胞類型
+Typical fabrication 典型製備
+Polymer-based (foaming發泡, electrospinning靜電紡絲)
+Ceramic sintering陶瓷燒結, metal mesh金屬網
 
 
 常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-誤以為 RGD 係唯一結合位點 (陷阱: 忘記其他協同區域，例如 PHSRN)。
-混淆 fibronectin 纖連蛋白嘅類型: 以為所有纖連蛋白都係 insoluble 不可溶性，喺 ECM 入面。
-忽略 RGD 喺 tissue engineering (TE) 組織工程應用中，用於 synthetic peptides 合成肽嘅作用。
+忘記陶瓷單獨用於軟組織承重時太脆 (Forgetting that ceramics alone are too brittle for load-bearing soft tissue)
+以為金屬總係用於軟組織 (Thinking metals are always used for soft tissue) - 實際上唔係
 
-記憶法 (Mnemonics &#x2F; Memory Hooks)
-RGD: “Really Good Dance” – Arg-Gly-Asp 精氨酸-甘氨酸-天冬氨酸令細胞”跳舞” (黏附同移動)。
-Fibronectin types 纖連蛋白類型: “Plasma Soluble in Blood, Cellular Insoluble in Matrix” – PSB-CIM。
-
-過往試題 + 標準答案 (Past Exam Questions + Model Answers)What is the role of the RGD sequence in fibronectin? 纖連蛋白中 RGD 序列嘅作用係咩？  
-
-The RGD (Arg-Gly-Asp) sequence is the primary integrin-binding site facilitating cell attachment via α5β1 and αVβ3 integrins.RGD (精氨酸-甘氨酸-天冬氨酸) 序列係主要嘅整合素結合位點，透過 α5β1 同 αVβ3 整合素促進細胞黏附。
-
-Compare soluble and insoluble fibronectin. 比較可溶性同不可溶性纖連蛋白。  
-
-Soluble plasma fibronectin circulates in blood from hepatocytes for systemic roles; insoluble cellular fibronectin is secreted locally for ECM integration and adhesion.可溶性血漿型纖連蛋白由肝細胞產生，喺血液中循環，發揮全身性作用；不可溶性細胞型纖連蛋白由局部細胞分泌，用於 ECM 整合同黏附。
-
-Topic 2 – Focal Adhesions 黏著斑大圖景 (Big Picture)Focal adhesions 黏著斑係 integrin 整合素介導嘅聚集結構，連結 ECM 細胞外基質 同 cytoskeleton 細胞骨架，傳遞信號同機械力。思維導圖 (Mind map):Focal Adhesion 黏著斑 → Integrin Binds 整合素結合 (Collagen 膠原蛋白&#x2F;Fibronectin 纖連蛋白 → RGD) → Cluster Formation 聚集形成 → Components 組成部分 (Vinculin&#x2F;Talin&#x2F;FAK&#x2F;Actin&#x2F;Myosin) → Signals to Nucleus 信號傳至細胞核 → 2D (Punctate 點狀) vs 3D (Diffuse 瀰漫性).
+Topic 2 – Conventional Porosity Techniques 傳統造孔技術大圖景 (Big Picture)Five classic ways to make pores; each has trade-offs in interconnectivity, solvent use, and pore control.
 必須掌握嘅要點 (Must-Know Facts)
-🔴 Integrins 整合素 bind 結合 ECM (如 collagen 膠原蛋白&#x2F;fibronectin 纖連蛋白) 形成 focal adhesions 黏著斑。
-🟢 Focal adhesions 黏著斑係細胞黏附聚集結構。
-🔴 顯微成像中常用綠色螢光標記 focal adhesions 黏著斑。
-🟢 2D 環境下嘅 adhesions 黏著斑呈 punctate 點狀；3D 環境下呈 fibrillar&#x2F;diffuse 纖維狀&#x2F;瀰漫性。
-🔵 透過 cytoskeleton 細胞骨架將 mechanical signals 機械信號傳遞至 nucleus 細胞核。
-🟢 涉及蛋白質: vinculin, talin, paxillin, FAK。
-🔴 Neural progenitor cells (NPCs) 神經祖細胞: 喺 3D 環境中，remodeling 重塑 &gt; binding 結合。
-🟢 NPC stemness NPC幹性對 3D 環境中嘅 adhesive ligands 黏附配體不敏感。
-🔵 應用於 TE 組織工程，用於模仿 ECM 嘅 scaffold 支架設計。
-🟢 機械力來自 actin-myosin contraction 肌動蛋白-肌球蛋白收縮。
-🔴 Turnover 更新調節 migration 遷移。
-🟢 FAK 透過 phosphorylation 磷酸化進行信號傳遞。
-🔵 3D 環境會改變 adhesion morphology 黏附形態。
+🔴 Solvent-casting + particulate leaching (SCPL) 溶劑鑄造+粒子浸出 – gold standard 金標準, uses salt&#x2F;sugar, highly interconnected
+🔴 Gas foaming 氣體發泡 – no organic solvent 無有機溶劑 (advantage), but mostly closed pores 閉孔
+🔴 Gas foaming + particulate leaching 氣體發泡+粒子浸出 – solves interconnectivity problem
+🔴 Melt molding 熔融成型 – no solvent, uses heat + porogen 致孔劑 (e.g., gelatin particles)
+🔴 Phase separation 相分離 – low temperature, good for incorporating growth factors 生長因子
+🔴 Freeze-drying 冷凍乾燥 – emulsion or non-emulsion, pore size controlled by freezing rate&#x2F;pH
 
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Focal Adhesion Assembly 黏著斑組裝:ECM (Fibronectin)細胞外基質 (纖連蛋白) → Integrin整合素 → Talin/Vinculin → Actin/Myosin肌動蛋白/肌球蛋白 → Force Transmission力傳遞 → Nucleus細胞核 (Gene Expression基因表達)
-2D vs 3D:2D: Flat substrate 平坦基底 → Discrete spots 離散點狀3D: Matrix embedding 基質包埋 → Elongated fibrils 延長纖維狀
+關鍵圖表 (Key Diagrams)SCPL Process SCPL過程:Polymer + salt in solvent 溶劑中的聚合物+鹽 → cast 鑄模 → evaporate solvent 蒸發溶劑 → leach salt with water 用水浸出鹽 → porous scaffold 多孔支架
 
-對比表 (Comparison Table) - 2D vs 3D Focal Adhesions
+對比表 (Comparison Table)
 
 
-Aspect 方面
-2D Focal Adhesions (X)
-3D Focal Adhesions (Y)
+Method 方法
+Solvent? 使用溶劑?
+Interconnected pores? 互連孔隙?
+Pore control 孔徑控制
+Bioactive molecule friendly? 對生物活性分子友好?
 
 
 
-Morphology 形態
-Punctate 點狀, discrete 離散
-Fibrillar 纖維狀, diffuse 瀰漫性
+SCPL
+Yes
+Excellent 優秀
+Good 良好
+No (solvent)
 
 
-Environment 環境
-Flat surfaces 平坦表面
-Volumetric matrices 立體基質
+Gas foaming
+No
+Poor (closed) 差 (閉孔)
+Poor 差
+Yes
 
 
-Function 功能
-Strong anchorage 強力錨定
-Dynamic remodeling 動態重塑
+Gas foaming + PL
+No
+Excellent 優秀
+Good 良好
+Yes
 
 
-Imaging 成像
-Bright spots 明亮點狀
-Linear extensions 線性延伸
+Melt molding
+No
+Good 良好
+Good 良好
+No (high T)
 
 
-NPC Response 神經祖細胞反應
-Ligand-sensitive 配體敏感
-Remodeling-focused 聚焦重塑
+Phase separation
+Yes
+Excellent 優秀
+Good 良好
+Yes (low T)
 
 
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-假設 2D 同 3D 嘅 adhesions 黏著斑係一樣嘅 (陷阱: 喺 TE 設計中忽略維度影響)。
-忘記 focal adhesions 黏著斑除咗黏附，仲有 signaling 信號傳遞嘅作用。
-忽略 NPC 神經祖細胞喺 3D 中對 ligands 配體不敏感呢點。
+Freeze-drying
+Yes&#x2F;No
+Excellent 優秀
+Excellent 優秀
+Yes
 
-記憶法 (Mnemonics &#x2F; Memory Hooks)
-Focal Adhesion 黏著斑: “FACTS” – Fibronectin-Actin Connection Transmits Signals 纖連蛋白-肌動蛋白連接傳遞信號。
-2D vs 3D: “Punctate in Plane (2D), Fibrils in Full (3D)” 平面上點狀(2D)，立體中纖維(3D)。
 
-過往試題 + 標準答案 (Past Exam Questions + Model Answers)Describe focal adhesion formation. 描述黏著斑嘅形成。  
+常見錯誤 (Common Mistakes)
+話氣體發泡單獨使用能提供高互連性 (Saying gas foaming alone gives high interconnectivity) - 實際上唔得
+忘記聚合物必須不溶於水但致孔劑必須水溶 (Forgetting polymer must be insoluble in water but porogen must be water-soluble)
 
-Integrins bind ECM (e.g., fibronectin via RGD), clustering with talin&#x2F;vinculin&#x2F;actin to form adhesions transmitting signals.整合素結合 ECM (例如，透過 RGD 結合纖連蛋白)，與 talin&#x2F;vinculin&#x2F;肌動蛋白聚集形成黏著斑，傳遞信號。
+Topic 3 – Advanced Biofabrication Techniques 先進生物製造技術大圖景 (Big Picture)Move from random porosity to precise, reproducible 3D architecture 3D結構 + ability to include cells during printing.
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Electrospinning 靜電紡絲 → nanofibers 納米纖維, excellent for ECM mimicry, cheap &amp; fast
+🔴 Rapid prototyping 快速原型 &#x2F; 3D printing 3D打印 &#x2F; microstereolithography 微立體光刻 → CAD-CAM control CAD-CAM控制 of exact geometry
+🔴 Microsphere sintering 微球燒結 → trabecular bone-like pores 小梁骨樣孔隙
+🔴 Decellularized organs 脫細胞器官 → keep native vascular network 血管網絡 (Ott 2008, 2010 – perfused lung 灌注肺)
+🟢 Decellularization + recellularization 脫細胞+再細胞化 &#x3D; whole organ engineering gold standard 全器官工程金標準
 
-How do focal adhesions differ in 2D vs 3D? 黏著斑喺 2D 同 3D 環境中有咩唔同？  
+對比表 (Comparison Table)
 
-In 2D, they are punctate for strong anchorage; in 3D, fibrillar for remodeling, as seen in NPC maintenance.喺 2D 環境，佢哋呈點狀用於強力錨定；喺 3D 環境，呈纖維狀用於重塑，正如喺 NPC 維持中所見。
 
-(Topic 3-8 及以下部分因篇幅限制，將以同樣模式呈現關鍵詞中英對照，但內容精簡。)
-Topic 3 – Cell Migration 細胞遷移 同 Chemotaxis 趨化性大圖景 (Big Picture)Cell migration 細胞遷移涉及 cytoskeleton 細胞骨架重組以進行移動，由 taxis 趨向性引導，例如 development 發育同 repair 修復中嘅 chemotaxis 趨化性。Key Terms: Actin polymerization 肌動蛋白聚合, Myosin 肌球蛋白, Haptotaxis 趨觸性, Phototaxis 趨光性, Embryogenesis 胚胎發生。
-Topic 4 – Signaling Ligands 信號配體 同 Types 類型大圖景 (Big Picture)Ligands 配體啟動 signaling 信號以協調組織發育，根據類型、作用範圍同功能分類。Key Terms: Diffusible 可擴散, ECM-bound 細胞外基質結合, Endocrine 內分泌, Paracrine 旁分泌, Autocrine 自分泌, Juxtacrine 近分泌&#x2F;並列分泌, Growth factors (GFs) 生長因子, Cytokines 細胞因子, Chemokines 趨化因子.
-Topic 5 – Central Paradigm of Signal Transduction 信號轉導中心法則大圖景 (Big Picture)Signal transduction 信號轉導將 extracellular 細胞外 ligands 配體轉化為 intracellular 細胞內 responses 反應，透過 receptors 受體同 cascades 級聯反應，最終導致 gene activation 基因激活。Key Terms: Initiation 啟動, Transduction 轉導, Transcription factors (TFs) 轉錄因子, Second messengers 第二信使, Translation 翻譯, mRNA vaccines mRNA疫苗。
-Topic 6 – G-Protein Coupled Receptors (GPCRs) G蛋白偶聯受體大圖景 (Big Picture)GPCRs 透過 G-protein G蛋白解離傳遞多樣化信號，參與 sensory perception 感官知覺同生理調節。Key Terms: 7 transmembrane (7TM) segments 7次跨膜片段, Agonist 激動劑, G-protein subunits (α&#x2F;β&#x2F;γ) G蛋白亞基, Effectors 效應器, Adenylate cyclase 腺苷酸環化酶, Phospholipase C (PLC) 磷脂酶C。
-Topic 7 – Receptor Tyrosine Kinases (RTKs) 受體酪氨酸激酶 同 Pathways 信號途徑大圖景 (Big Picture)RTKs 喺 ligand 配體結合後 dimerize 二聚化並發生 phosphorylation 磷酸化，啟動 cascades 級聯反應，參與生長同 angiogenesis 血管生成。Key Terms: Dimerization 二聚化, Autophosphorylation 自磷酸化, Ras&#x2F;Raf&#x2F;MEK&#x2F;ERK pathway, TGF-β (Transforming Growth Factor-β) 轉化生長因子-β, Smad proteins Smad蛋白, Wnt pathway, β-catenin β-連環蛋白。
-Topic 8 – Mechanotransduction 機械轉導 同 Cytoskeleton 細胞骨架大圖景 (Big Picture)Mechanotransduction 機械轉導將 physical forces 物理力轉化為 biochemical responses 生化反應，透過 cytoskeleton 細胞骨架實現，對骨同血管健康至關重要。Key Terms: Shear stress 剪切應力, Tension 張力, Actin filaments (Microfilaments) 肌動蛋白絲 (微絲), Microtubules (MTs) 微管, Intermediate filaments (IFs) 中間絲, Treadmilling 踏車運動, Dynamic instability 動態不穩定性, Stress shielding 應力遮擋。
+Technique 技術
+Resolution 分辨率
+Speed 速度
+Cell inclusion during fab? 製造時包含細胞?
+Vascular network? 血管網絡?
+
+
+
+Electrospinning 靜電紡絲
+Nano 納米
+Fast 快
+No 否
+No 否
+
+
+3D Bioprinting 3D生物打印
+50–100 μm
+Slow 慢
+Yes (bioink 生物墨水)
+Possible 可能
+
+
+Decellularization 脫細胞
+Native 原生
+Slow 慢
+No (recell later 稍後再細胞化)
+Yes (native 原生)
+
+
+考官陷阱 (Examiner Trap)學生忘記脫細胞支架已經擁有完美嘅血管樹 (Students forget decellularized scaffolds already have perfect vascular tree)
+Topic 4 – Hydrogels &amp; Cell Encapsulation 水凝膠與細胞封裝大圖景 (Big Picture)Hydrogels 水凝膠 &#x3D; water-swollen polymer networks 水溶脹聚合物網絡; unique ability to encapsulate live cells during gelation.
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Gelation triggers 凝膠化觸發: chemical crosslinking 化學交聯, UV, temperature, ionic (Ca²⁺ for alginate 藻酸鹽鈣交聯)
+🔴 Advantages: cells encapsulated in true 3D, cytocompatible gelation possible 細胞兼容性凝膠化
+🔴 GelMA, PEG, alginate most common
+🔴 Photoencapsulation 光封裝 allows spatial patterning 空間圖案化
+🔴 Major limitation inside thick hydrogels: diffusion limit 擴散限制 → necrosis 壞死 in centre after ~200–300 μm
+
+Topic 5 – Limitations of Conventional Scaffolds 傳統支架嘅局限性大圖景 (Big Picture)Traditional methods cannot give precise internal channels or full interconnectivity → poor vascularisation in thick constructs.
+必須掌握嘅要點 (Must-Know Facts) (memorise the list)
+Poor control of pore size&#x2F;geometry&#x2F;spatial distribution 孔徑&#x2F;幾何形狀&#x2F;空間分佈
+Lack of predefined internal channels 預定義內部通道
+Incomplete porogen leaching 不完全嘅致孔劑浸出 in thick scaffolds
+Closed pores 閉孔 in gas foaming (10–30% interconnected)
+Residual toxic solvents 殘留有毒溶劑
+Cell seeding inefficient 細胞接種效率低 (cells stay on surface, &lt;500 μm penetration)
+
+Topic 6 – Bioreactors in Tissue Engineering 組織工程中嘅生物反應器大圖景 (Big Picture)Static culture fails → bioreactors provide nutrient flow 營養流 &amp; mechanical signals 機械信號.
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Purposes: mass transport 物質傳輸, chemical signals 化學信號, mechanical conditioning 機械調節
+🔴 Types: spinner flask 旋轉瓶, rotating wall vessel 旋轉壁容器, perfusion cartridges 灌注盒
+🔴 Perfusion 灌注 → uniform cell&#x2F;matrix distribution throughout scaffold
+🟢 Mechanical loading 機械負荷 examples:
+Cyclic compression 週期性壓縮 → ↑ GAG 糖胺聚糖&#x2F;collagen in cartilage
+Stretch 拉伸 → aligned collagen &amp; tenascin 腱生蛋白 in ligament
+
+
+
+對比表 (Comparison Table)
+
+
+Culture Method 培養方法
+Cell distribution 細胞分佈
+Mass transport 物質傳輸
+Mechanical signals 機械信號
+
+
+
+Static 靜態
+Surface only 僅表面
+Diffusion 擴散
+None 無
+
+
+Spinner flask 旋轉瓶
+Better 較好
+Convection 對流
+Minimal 極小
+
+
+Perfusion 灌注
+Homogeneous 均勻
+Excellent 優秀
+Flow&#x2F;shear 流動&#x2F;剪切
+
+
+Rotating vessel 旋轉容器
+Good 良好
+Good 良好
+Low shear 低剪切
+
+
+Topic 7 – Host Response to Implanted Biomaterials 宿主對植入生物材料嘅反應大圖景 (Big Picture)Injury → hemostasis 止血 → inflammation 炎症 → granulation 肉芽組織形成 → foreign body reaction 異物反應 → fibrosis&#x2F;encapsulation 纖維化&#x2F;包裹.
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Sequence: Hemostasis 止血 → Acute inflammation 急性炎症 (neutrophils 中性粒細胞) → Chronic inflammation 慢性炎症 (macrophages 巨噬細胞) → Granulation tissue 肉芽組織 → Foreign body giant cells 異物巨細胞 → Fibrous capsule 纖維囊
+🔴 Biomaterials cause non-specific inflammation 非特異性炎症, NOT immune rejection 非免疫排斥
+🔴 Final usual outcome &#x3D; fibrous encapsulation 纖維包裹 (acellular collagen capsule)
+🔴 Capsule thicker with: motion 移動, sharp edges 銳邊, leaching monomers 單體浸出, corrosion 腐蝕
+
+Topic 8 – Immunoisolation &amp; Encapsulated Cell Therapy 免疫隔離與封裝細胞療法大圖景 (Big Picture)Physical barrier protects allogeneic&#x2F;xenogeneic cells 同種異體&#x2F;異種細胞 from immune attack while allowing nutrient&#x2F;waste&#x2F;hormone exchange.
+必須掌握嘅要點 (Must-Know Facts)
+🔴 Classic example: alginate-polylysine microcapsules 藻酸鹽-聚賴氨酸微膠囊 for pancreatic islets 胰島
+🔴 Membrane MWCO (Molecular Weight Cut-Off) 分子量截留值 typically 50–150 kDa (lets insulin&#x2F;glucose through, blocks antibodies)
+🔴 Allows use of non-autologous cells 非自體細胞 without immunosuppression 無需免疫抑制
+
 Active Recall Bank 主動回憶庫
-What sequence in fibronectin binds integrins? (RGD)
-Name two types of fibronectin. (Soluble plasma, insoluble cellular)
-Focal adhesions in 2D are ____; in 3D ____. (punctate, fibrillar)
-Chemotaxis responds to ____ gradients. (chemical)
-Ligand range: distant via blood? (Endocrine)
-Central paradigm steps: Initiation, ____, Gene Activation. (Transduction)
-GPCRs have ____ transmembrane segments. (7)
-RTKs phosphorylate ____ residues. (tyrosine)
-Cytoskeleton filaments: Actin, ____, Intermediate. (Microtubules)
-Treadmilling occurs in ____ filaments. (actin)
-BMP signaling uses ____ proteins. (Smads)
-Wnt canonical pathway stabilizes ____. (β-catenin)
-Stress shielding causes bone ____. (atrophy 萎縮)
-Myosin uses ____ for force. (ATP)
-MTOC (Microtubule Organizing Center) 微管組織中心 organizes ____. (microtubules 微管)
-RGD stands for --____. (Arg-Gly-Asp)
-Taxis type for light: ____. (Phototaxis 趨光性)
-Translation starts with codon ____. (AUG)
-Ion channels can be ____-gated or ____-gated. (voltage 電壓, ligand 配體)
-Paclitaxel ____ microtubules. (stabilizes 穩定)
+Name 3 porosity methods that avoid organic solvents 三種避免使用有機溶劑嘅造孔方法
+Which method gives closed pores if used alone? 邊種方法單獨使用會產生閉孔？
+What is the main advantage of decellularized organs? 脫細胞器官嘅主要優勢係咩？
+Why do cells die in the centre of thick hydrogels? 點解厚水凝膠中心嘅細胞會死亡？
+Name the sequence of host response stages (6) 列出宿主反應階段嘅順序（6個）
+What cells dominate acute vs chronic inflammation? 急性 vs 慢性炎症中主導嘅細胞係咩？
+What is the usual final fate of a non-degradable implant? 不可降解植入物通常嘅最終命運係咩？
+Best bioreactor for uniform cell seeding in thick scaffolds? 用於厚支架均勻接種細胞嘅最佳生物反應器？
+Two mechanical signals used in bioreactors for cartilage? 用於軟骨嘅生物反應器中嘅兩種機械信號？
+Material of choice for soft vs hard tissue scaffolds? 軟組織 vs 硬組織支架嘅材料選擇？
+Pore size range generally optimal? 通常最佳嘅孔徑範圍？
+Name one natural hydrogel polymer used for encapsulation 一種用於封裝嘅天然水凝膠聚合物
+What does “foreign body giant cell” indicate? “異物巨細胞”表明咩？
+Why is perfusion better than static culture? 點解灌注培養好過靜態培養？
+Example of self-organized vascularised tissue from iPSCs? 來源於iPSC嘅自組織血管化組織例子？
+What does SCPL stand for and what porogen is commonly used? SCPL代表咩？常用咩致孔劑？
+Which fabrication method is best for incorporating growth factors without denaturation? 邊種製備方法最適合加入生長因子而不使其變性？
+What is the main drawback of melt molding? 熔融成型嘅主要缺點係咩？
+What does Re &lt; 2000 mean in microfluidics? 微流體中 Re &lt; 2000 代表咩？
+Classic encapsulated cell therapy target disease? 經典嘅封裝細胞療法目標疾病？
 
+(Answers at bottom – cover first! 答案在底部 – 先遮住!)
 15-Minute Mock Exam 15分鐘模擬考試
-Explain the role of RGD in cell adhesion and its TE applications.  
+Compare advantages and disadvantages of solvent-casting particulate leaching versus gas foaming&#x2F;particulate leaching combination. (8 marks)  
 
-RGD (Arg-Gly-Asp) is the integrin-binding site in fibronectin promoting attachment; in TE, short RGD peptides functionalize scaffolds for cell adhesion without full proteins.
-
-
-Compare focal adhesions in 2D vs 3D environments, with NPC example.  
-
-2D: punctate, ligand-sensitive; 3D: fibrillar, remodeling-focused; for NPCs, 3D stemness maintenance is insensitive to ligands, prioritizing remodeling.
+SCPL 溶劑鑄造粒子浸出: excellent interconnectivity 互連性優秀, good pore control 孔徑控制良好, but uses toxic organic solvent 但使用有毒有機溶劑. Gas foaming + PL 氣體發泡+粒子浸出: no solvent (more biocompatible) 無溶劑 (更生物相容), excellent interconnectivity 互連性優秀, retains temperature-sensitive molecules 保留溫度敏感分子, slightly more complex process 過程稍複雜.
 
 
-Describe chemotaxis and its measurement.  
+Explain why conventional scaffold techniques fail to produce clinically relevant thick tissues (&gt;1 cm). Give two biological reasons and one fabrication reason. (6 marks)  
 
-Directed migration to chemical gradients; assessed by polarized morphology and proportion of cells moving toward&#x2F;away from attractant, depending on concentration and gradient steepness.
-
-
-Outline the central signal transduction paradigm.  
-
-Initiation: ligand-receptor binding; Transduction: cascade activates nuclear TF; Gene activation: TF binds DNA, leading to transcription, translation, and physiological changes.
+Diffusion limitation 擴散限制 of oxygen&#x2F;nutrients (&lt;200–300 μm), lack of pre-formed vascular channels 預成型血管通道, poor cell penetration 細胞滲透 during seeding (cells remain on surface 細胞停留在表面).
 
 
-How does Wnt canonical pathway work?  
+Describe the host response timeline from implantation to fibrous encapsulation. (8 marks)  
 
-Ligand binds Fz&#x2F;LRP, stabilizes β-catenin, which enters nucleus and interacts with TCF&#x2F;Lef for gene transcription in development and cancer.
+Injury 損傷 → hemostasis &amp; platelet activation 止血 &amp; 血小板激活 → acute inflammation 急性炎症 (neutrophils 中性粒細胞) → chronic inflammation 慢性炎症 (macrophages&#x2F;monocytes 巨噬細胞&#x2F;單核細胞) → granulation tissue 肉芽組織 + angiogenesis 血管生成 → foreign body giant cells 異物巨細胞 → fibrous capsule formation 纖維囊形成 (weeks–months 數週-數月).
+
+
+A company wants to implant insulin-producing cells from pig into diabetic patients without immunosuppression. Suggest and justify a tissue-engineering strategy. (6 marks)  
+
+Encapsulate 封裝 porcine islets 豬胰島 in alginate-polylysine microcapsules 藻酸鹽-聚賴氨酸微膠囊 (immunoisolation 免疫隔離). Membrane permits glucose&#x2F;insulin diffusion 葡萄糖&#x2F;胰島素擴散 but excludes immune cells&#x2F;antibodies 免疫細胞&#x2F;抗體 → prevents rejection 防止排斥 while allowing function.
+
+
+State four essential requirements of a tissue engineering bioreactor. (4 marks)  
+
+Controlled temperature&#x2F;pH 受控溫度&#x2F;pH, efficient mass transfer 質量傳遞, delivery of chemical signals 化學信號, ability to apply mechanical&#x2F;electrical signals 機械&#x2F;電信號.
 
 
 
 One-Page Cheat Sheet Summary 一頁速查表總結
 
 
-Section 部分
-Key Points 要點 (中英對照)
+Category 類別
+Key Methods &#x2F; Materials 關鍵方法&#x2F;材料
+Pros 優點
+Cons 缺點
+Best for 最適用於
 
 
 
-ECM&#x2F;Adhesion 細胞外基質&#x2F;黏附
-Fibronectin 纖連蛋白: RGD binds α5β1&#x2F;αVβ3; Focal adhesions 黏著斑: 2D punctate vs 3D fibrillar; NPCs 神經祖細胞: remodeling 重塑 &gt; binding 結合 in 3D.
+Classic porosity 傳統造孔
+SCPL, Gas foaming+PL, Freeze-drying
+High interconnectivity 高互連性
+Solvent (SCPL) or heat 溶劑或高溫
+General scaffolds 通用支架
 
 
-Migration 遷移
-Cycle 循環: Attach-Contract-Detach 黏附-收縮-脫離; Taxis 趨向性: Chemo 趨化性 (gradients 梯度), Hapto 趨觸性 (adhesives 黏附分子); Defects 缺陷: embryonic issues 胚胎問題.
+Advanced 先進
+Electrospinning, 3D printing, Decellularization
+Precise geometry 精確幾何, native vessels 原生血管
+Slow 慢, expensive 貴
+Vascularised organs 血管化器官
 
 
-Signaling 信號傳導
-Ligands 配體: Endocrine內分泌&#x2F;Paracrine旁分泌&#x2F;Autocrine自分泌&#x2F;Juxtacrine近分泌; GFs 生長因子: VEGF&#x2F;TGF-β; Paradigm 法則: Bind結合 → Cascade級聯 → Gene基因.
+Cell-friendly 細胞友好
+Hydrogels (PEG, GelMA, alginate)
+Encapsulation during gelation 凝膠過程中封裝
+Diffusion limit 擴散限制
+3D culture 3D培養, islets 胰島
 
 
-Receptors 受體
-GPCR: 7TM, dissociate G解離G蛋白; RTK: Dimer二聚&#x2F;P-Tyr酪氨酸磷酸化&#x2F;Ras-ERK通路; TGF-β: Ser&#x2F;Thr絲氨酸&#x2F;蘇氨酸&#x2F;Smads; Wnt: β-catenin&#x2F;TCF.
+Cultivation 培養
+Perfusion bioreactors 灌注生物反應器
+Uniform cell&#x2F;matrix 均勻細胞&#x2F;基質
+Complex setup 設置複雜
+Thick constructs 厚構建體
 
 
-Transport 運輸
-Hydrophobic 疏水性: Diffuse擴散 (NO&#x2F;AA); Ion Channels 離子通道: Voltage&#x2F;Ligand gated電壓&#x2F;配體門控 (Ca2+&#x2F;Na+); Optogenetics 光遺傳學: Light control光控制.
+Host response endpoint 宿主反應終點
+Fibrous encapsulation 纖維包裹
+Isolates implant 隔離植入物
+Avascular wall 無血管壁, no integration 無整合
+Most permanent implants 大多數永久植入物
 
 
-Cytoskeleton 細胞骨架
-Actin 肌動蛋白: Polymer聚合&#x2F;Treadmill踏車運動&#x2F;Myosin肌球蛋白; MT微管: Dynamic動態&#x2F;GTP&#x2F;Paclitaxel紫杉醇; Mechanotransduction機械轉導: Forces力 → Signals信號 (Wolff’s Law沃爾夫定律).
+Immunoisolation 免疫隔離
+Alginate microcapsules 藻酸鹽微膠囊
+No immunosuppression 無需免疫抑制
+Fibrosis of capsules over time 膠囊隨時間纖維化
+Xenogeneic cells 異種細胞
 
 
-TE Apps 組織工程應用
-Dermal matrix 真皮基質: Cell invasion細胞侵入; Growth factors 生長因子 in scaffolds支架; Avoid stress shielding 避免應力遮擋 in implants植入物.
+Active Recall Answers 主動回憶答案:
 
+Gas foaming(+PL) 氣體發泡(+粒子浸出), melt molding 熔融成型, freeze-drying 冷凍乾燥
+Gas foaming alone 單獨氣體發泡
+Native vascular network retained 保留原生血管網絡
+Diffusion limitation 擴散限制
+Hemostasis 止血–acute 急性–chronic 慢性–granulation 肉芽組織–giant cells 巨細胞–capsule 囊
+Neutrophils 中性粒細胞 vs macrophages 巨噬細胞
+Fibrous encapsulation 纖維包裹
+Perfusion 灌注
+Cyclic compression 週期性壓縮, hydrostatic pressure 靜水壓
+Polymers 聚合物 vs ceramics&#x2F;metals 陶瓷&#x2F;金屬
+100–500 μm
+Alginate 藻酸鹽&#x2F;collagen 膠原蛋白
+Persistent material or wear particles 持續存在嘅材料或磨損顆粒
+Overcomes diffusion limit &amp; uniform seeding 克服擴散限制 &amp; 均勻接種
+Liver buds 肝芽 (Takebe 2013)
+Solvent-casting particulate leaching 溶劑鑄造粒子浸出, NaCl&#x2F;sugar 氯化鈉&#x2F;糖
+Freeze-drying 冷凍乾燥 or phase separation 相分離
+High temperature denatures proteins 高溫使蛋白質變性
+Laminar flow 層流
+Diabetes (pancreatic islets) 糖尿病 (胰島)
 
-English Version BelowTopic 1 – Fibronectin and Integrin BindingBig Picture (1 sentence + mind map in text)Fibronectin is a key ECM glycoprotein facilitating cell adhesion via integrins, crucial for tissue structure and signaling.Mind map: Fibronectin → Types (Soluble Plasma → Bloodstream → Hepatocytes; Insoluble Cellular → Secreted by Fibroblasts) → Binds to (Integrins → RGD Sequence → α5β1&#x2F;αVβ3; ECM Components → Collagen&#x2F;Fibrin&#x2F;Heparan Sulfate) → Enables Cell Attachment.
+English Version BelowTopic 1 – Scaffold Fabrication Principles &amp; Material SelectionBig Picture (1 sentence + mind map in text)Scaffold must mimic native ECM mechanically and biologically → material choice dictates fabrication method → porosity &amp; interconnectivity are critical for cell migration&#x2F;nutrient diffusion.
+Material → Soft tissue (polymers) vs Hard tissue (ceramics/metals/composites)         ↓   Fabrication method → Porosity technique         ↓   Final scaffold properties
+
 Must-Know Facts (max 15 bullet points)
-🔴 Fibronectin is the major ECM glycoprotein binding integrins.
-🟢 Binds other ECM like collagen, fibrin, heparan sulfate proteoglycans.
-🔴 Two types: soluble plasma (hepatocytes) and insoluble cellular (fibroblasts).
-🟢 Integrin binding uses RGD sequence (Arg-Gly-Asp).
-🔴 Key integrins: α5β1 and αVβ3 on cell surface.
-🟢 Short RGD peptides can mimic fibronectin for cell attachment.
-🔵 RGD enables focal adhesion formation.
-🟢 Plasma fibronectin circulates in blood; cellular is matrix-integrated.
-🔴 RGD is the primary cell attachment site.
-🟢 Binding promotes clustering into focal adhesions.
-🔵 Used in biomaterials for cell adhesion engineering.
-🟢 Insoluble form secreted by many cells like fibroblasts.
-🔴 Heparan sulfate binding aids in growth factor localization.
-🟢 Fibronectin domains bind TGF-β and bFGF actively.
+🔴 Soft tissues (skin, tendon, liver, vessels) → synthetic&#x2F;natural polymers
+🔴 Hard tissues (bone) → metals, ceramics, polymer-containing composites
+🔴 Scaffold must have high porosity (&gt;90% ideal), large surface area, interconnected pores
+🔴 Pore size: 100–500 μm generally optimal for most tissues
+🟢 Fabrication technique depends on polymer solubility, Tg&#x2F;Tm, biocompatibility needs
+🔴 All methods aim to create 3D porous structure for cell infiltration &amp; vascularisation
 
-Key Formulas &#x2F; Diagrams (use code blocks)Fibronectin Structure:NH2 - [Type I Repeats] - [Type II] - [Type III] - COOHBindings: Fibrin/Heparan (I), Collagen (I/II), Integrin (III - RGD), Heparan/Fibrin (III)
-RGD Binding:Cell Surface Integrin (α5β1/αVβ3) ⇄ RGD Sequence → Cell Attachment
+Key Formulas &#x2F; Diagrams (use code blocks)Porosity (%) = [1 – (ρscaffold / ρbulk polymer)] × 100
 
-Comparison Table (“X vs Y” in proper Markdown table)
+Comparison Table
 
 
-Aspect
-Soluble Plasma Fibronectin (X)
-Insoluble Cellular Fibronectin (Y)
+Property
+Soft Tissue Scaffolds
+Hard Tissue Scaffolds
 
 
 
-Source
-Produced by hepatocytes
-Secreted by fibroblasts etc.
+Main materials
+PLGA, PLLA, collagen, alginate
+HA, β-TCP, Ti, composites
 
 
-Location
-Circulates in bloodstream
-Integrated into ECM
+Mechanical need
+Elastic, flexible
+High compressive strength
 
 
-Function
-Coagulation, wound healing
-Cell adhesion, matrix structure
-
-
-Solubility
-Soluble
-Insoluble
-
-
-Production
-Liver-specific
-Various cell types
+Typical fabrication
+Polymer-based (foaming, electrospinning)
+Ceramic sintering, metal mesh
 
 
 Common Mistakes &amp; Examiner Traps
-Mistaking RGD as the only binding site (trap: forget synergy regions like PHSRN).
-Confusing fibronectin types: assuming all fibronectin is insoluble in ECM.
-Overlooking RGD’s role in synthetic peptides for TE applications.
+Forgetting that ceramics alone are too brittle for load-bearing soft tissue
+Thinking metals are always used for soft tissue (they aren’t)
 
-Mnemonics &#x2F; Memory Hooks
-RGD: “Really Good Dance” – Arg-Gly-Asp makes cells “dance” (attach and move).
-Fibronectin types: “Plasma Soluble in Blood, Cellular Insoluble in Matrix” – PSB-CIM.
+Mnemonics &#x2F; Memory Hooks“Soft &#x3D; Polymer, Hard &#x3D; Pottery&#x2F;Metal” (pottery → ceramics)
+Topic 2 – Conventional Porosity TechniquesBig PictureFive classic ways to make pores; each has trade-offs in interconnectivity, solvent use, and pore control.
+Must-Know Facts
+🔴 Solvent-casting + particulate leaching (SCPL) – gold standard, uses salt&#x2F;sugar, highly interconnected
+🔴 Gas foaming – no organic solvent (advantage), but mostly closed pores
+🔴 Gas foaming + particulate leaching – solves interconnectivity problem
+🔴 Melt molding – no solvent, uses heat + porogen (e.g., gelatin particles)
+🔴 Phase separation – low temperature, good for incorporating growth factors
+🔴 Freeze-drying – emulsion or non-emulsion, pore size controlled by freezing rate&#x2F;pH
 
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is the role of the RGD sequence in fibronectin?  
+Key DiagramsSCPL Process:Polymer + salt in solvent → cast → evaporate solvent → leach salt with water → porous scaffold
 
-The RGD (Arg-Gly-Asp) sequence is the primary integrin-binding site facilitating cell attachment via α5β1 and αVβ3 integrins.
+Comparison Table
 
-Compare soluble and insoluble fibronectin.  
 
-Soluble plasma fibronectin circulates in blood from hepatocytes for systemic roles; insoluble cellular fibronectin is secreted locally for ECM integration and adhesion.
+Method
+Solvent?
+Interconnected pores?
+Pore control
+Bioactive molecule friendly?
 
-Topic 2 – Focal AdhesionsBig Picture (1 sentence + mind map in text)Focal adhesions are integrin-mediated clusters linking ECM to cytoskeleton, transmitting signals and forces.Mind map: Focal Adhesion → Integrin Binds (Collagen&#x2F;Fibronectin → RGD) → Cluster Formation → Components (Vinculin&#x2F;Talin&#x2F;FAK&#x2F;Actin&#x2F;Myosin) → Signals to Nucleus → 2D (Punctate) vs 3D (Diffuse).
-Must-Know Facts (max 15 bullet points)
-🔴 Integrins bind ECM like collagen&#x2F;fibronectin to form focal adhesions.
-🟢 Focal adhesions are cell adhesion clusters.
-🔴 Green fluorescence often labels focal adhesions in imaging.
-🟢 2D adhesions are punctate; 3D are fibrillar&#x2F;diffuse.
-🔵 Transmit mechanical signals to nucleus via cytoskeleton.
-🟢 Involve proteins: vinculin, talin, paxillin, FAK.
-🔴 Neural progenitor cells: remodeling &gt; binding in 3D.
-🟢 NPC stemness insensitive to adhesive ligands in 3D.
-🔵 Used in TE for scaffold design mimicking ECM.
-🟢 Forces from actin-myosin contraction.
-🔴 Turnover regulates migration.
-🟢 FAK phosphorylates for signaling.
-🔵 3D environments alter adhesion morphology.
 
-Key Formulas &#x2F; Diagrams (use code blocks)Focal Adhesion Assembly:ECM (Fibronectin) → Integrin → Talin/Vinculin → Actin/Myosin → Force Transmission → Nucleus (Gene Expression)
-2D vs 3D:2D: Flat substrate → Discrete spots3D: Matrix embedding → Elongated fibrils
 
-Comparison Table (“X vs Y” in proper Markdown table)
+SCPL
+Yes
+Excellent
+Good
+No (solvent)
 
 
-Aspect
-2D Focal Adhesions (X)
-3D Focal Adhesions (Y)
+Gas foaming
+No
+Poor (closed)
+Poor
+Yes
 
 
+Gas foaming + PL
+No
+Excellent
+Good
+Yes
 
-Morphology
-Punctate, discrete
-Fibrillar, diffuse
 
+Melt molding
+No
+Good
+Good
+No (high T)
 
-Environment
-Flat surfaces
-Volumetric matrices
 
+Phase separation
+Yes
+Excellent
+Good
+Yes (low T)
 
-Function
-Strong anchorage
-Dynamic remodeling
 
+Freeze-drying
+Yes&#x2F;No
+Excellent
+Excellent
+Yes
 
-Imaging
-Bright spots
-Linear extensions
 
+Common Mistakes
+Saying gas foaming alone gives high interconnectivity (it doesn’t)
+Forgetting polymer must be insoluble in water but porogen must be water-soluble
 
-NPC Response
-Ligand-sensitive
-Remodeling-focused
+Topic 3 – Advanced Biofabrication TechniquesBig PictureMove from random porosity to precise, reproducible 3D architecture + ability to include cells during printing.
+Must-Know Facts
+🔴 Electrospinning → nanofibers, excellent for ECM mimicry, cheap &amp; fast
+🔴 Rapid prototyping &#x2F; 3D printing &#x2F; microstereolithography → CAD-CAM control of exact geometry
+🔴 Microsphere sintering → trabecular bone-like pores
+🔴 Decellularized organs → keep native vascular network (Ott 2008, 2010 – perfused lung)
+🟢 Decellularization + recellularization &#x3D; whole organ engineering gold standard
 
+Comparison Table
 
-Common Mistakes &amp; Examiner Traps
-Assuming 2D and 3D adhesions are identical (trap: ignore dimensionality in TE designs).
-Forgetting focal adhesions’ role in signaling, not just adhesion.
-Overlooking NPC insensitivity to ligands in 3D.
 
-Mnemonics &#x2F; Memory Hooks
-Focal Adhesion: “FACTS” – Fibronectin-Actin Connection Transmits Signals.
-2D vs 3D: “Punctate in Plane (2D), Fibrils in Full (3D)”.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe focal adhesion formation.  
-
-Integrins bind ECM (e.g., fibronectin via RGD), clustering with talin&#x2F;vinculin&#x2F;actin to form adhesions transmitting signals.
-
-How do focal adhesions differ in 2D vs 3D?  
-
-In 2D, they are punctate for strong anchorage; in 3D, fibrillar for remodeling, as seen in NPC maintenance.
-
-Topic 3 – Cell Migration and ChemotaxisBig Picture (1 sentence + mind map in text)Cell migration involves cytoskeleton reorganization for movement, guided by taxis like chemotaxis in development and repair.Mind map: Migration → Mechanisms (Attachment → Contraction → Detachment) → Cytoskeleton (Actin Polymerization → Myosin Force) → Taxis (Chemo → Gradient; Hapto → Adhesive; Photo → Light) → Applications (Embryogenesis → Wound Healing).
-Must-Know Facts (max 15 bullet points)
-🔴 Cells migrate via attachment, contraction, detachment.
-🟢 Not just elastic bags; involve cytoskeleton reorganization.
-🔴 Chemotaxis: movement by chemical gradients (e.g., cAMP).
-🟢 Polarized morphology in migrating cells.
-🔵 Strength depends on concentration and gradient steepness.
-🟢 Taxis types: topo (turning to stimulus), klino (less turning oriented), ortho (speed increase oriented).
-🔴 Defects cause embryonic malformations, epilepsy.
-🟢 In skin repair: cells invade dermal matrix.
-🔵 Actin polymerization initiates; myosin maintains.
-🟢 Focal adhesions as traction points.
-🔴 Neutrophil chases bacterium via chemotaxis.
-🟢 Cilia motion for fluid movement.
-🔵 Embryonic: blastocyst implantation requires migration.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Migration Cycle:1. Protrusion (Actin Polymerization at Leading Edge)2. Adhesion (Focal Contacts Form)3. Contraction (Myosin Pulls Body Forward)4. Release (Rear Detachment)
-Chemotaxis:Cell → Detect Gradient (High [Chemoattractant] → Movement) → Polarization
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Aspect
-Chemotaxis (X)
-Haptotaxis (Y)
-
-
-
-Stimulus
-Dissolved chemicals
-Insoluble adhesives
-
-
-Mechanism
-Gradient sensing
-Adhesive gradient
-
-
-Example
-Neutrophil to bacteria
-Cell on ECM gradient
-
-
-Response
-Directed speed&#x2F;turning
-Enhanced adhesion-move
-
-
-TE Application
-Wound healing signals
-Scaffold design
-
-
-Common Mistakes &amp; Examiner Traps
-Confusing chemotaxis with random migration (trap: ignore gradient dependency).
-Forgetting migration’s role in embryogenesis defects.
-Overlooking contraction’s myosin dependence.
-
-Mnemonics &#x2F; Memory Hooks
-Taxis Types: “TACO” – Topo&#x2F;ortho (Turn&#x2F;Accelerate), Chemo&#x2F;Hapto (Chemical&#x2F;Adhesive Orientation).
-Migration: “ACD” – Attach-Contract-Detach.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Explain chemotaxis.  
-
-Directed migration responding to chemical gradients, with polarized cells moving toward higher concentrations.
-
-Why is cell migration crucial in embryonic development?  
-
-Defects lead to implantation failure, malformed tissues, or congenital abnormalities like epilepsy.
-
-Topic 4 – Signaling Ligands and TypesBig Picture (1 sentence + mind map in text)Ligands initiate signaling for coordination in tissue development, classified by type, range, and function.Mind map: Ligands → Molecular (Diffusible → Growth Factors&#x2F;Steroids; ECM → Proteoglycans&#x2F;Collagen) → Range (Endocrine → Distant; Paracrine → Nearby; Autocrine → Self; Juxtacrine → Contact) → Function (Growth Factors → VEGF&#x2F;TGF-β; Hormones&#x2F;Cytokines&#x2F;Chemokines).
-Must-Know Facts (max 15 bullet points)
-🔴 Ligands: diffusible (soluble proteins, steroids) or ECM-bound.
-🟢 Range: endocrine (distant, blood), paracrine (local), autocrine (self), juxtacrine (contact).
-🔴 Growth factors stimulate proliferation&#x2F;differentiation (VEGF, TGF-β, bFGF, EGF).
-🟢 Hormones: messengers via circulation.
-🔵 Cytokines affect other cells; chemokines are chemotactic.
-🟢 Matrikines: ECM fragments with activity.
-🔴 Thrombospondins inhibit angiogenesis.
-🟢 Signaling: ligand generation → response (proliferation, migration, ECM production).
-🔵 TE applications: growth factors in scaffolds.
-🟢 Parathyroid hormone: endocrine for bone remodeling.
-🔴 Interleukins: paracrine in skin.
-🟢 Autocrine: self-response.
-🔵 Juxtacrine requires cell-cell contact.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Ligand Classification:Type: Diffusible vs ECMRange: Endocrine (Blood) → Paracrine (Local) → Autocrine (Self) → Juxtacrine (Contact)Function: GF (Prolif/Diff) → Hormone (Systemic) → Cytokine (Cell Behavior)
-Signaling Initiation:Ligand Bind Receptor → Transduction → Gene Activation
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Aspect
-Endocrine Ligands (X)
-Paracrine Ligands (Y)
-
-
-
-Range
-Distant targets
-Nearby cells
-
-
-Transport
-Blood&#x2F;extracellular
-Diffusion
-
-
-Example
-Parathyroid hormone
-Interleukins
-
-
+Technique
+Resolution
 Speed
-Slower (systemic)
-Faster (local)
+Cell inclusion during fab?
+Vascular network?
 
 
-TE Use
-Systemic delivery
-Local scaffold release
 
+Electrospinning
+Nano
+Fast
+No
+No
 
-Common Mistakes &amp; Examiner Traps
-Mixing range with function (trap: call growth factors hormones).
-Forgetting juxtacrine needs physical contact.
-Assuming all ligands are soluble.
 
-Mnemonics &#x2F; Memory Hooks
-Ranges: “EPAJ” – Endocrine-Paracrine-Autocrine-Juxtacrine (Every Person Acts Justly).
-Growth Factors: “Very Tall Big Elephants” – VEGF&#x2F;TGF-β&#x2F;bFGF&#x2F;EGF.
+3D Bioprinting
+50–100 μm
+Slow
+Yes (bioink)
+Possible
 
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Classify ligands by range.  
 
-Endocrine: distant via blood; paracrine: local; autocrine: self; juxtacrine: contact-based.
+Decellularization
+Native
+Slow
+No (recell later)
+Yes (native)
 
-Name key growth factors in TE.  
 
-VEGF (angiogenesis), TGF-β (differentiation), bFGF (proliferation), EGF (epithelial growth).
+Examiner TrapStudents forget decellularized scaffolds already have perfect vascular tree
+Topic 4 – Hydrogels &amp; Cell EncapsulationBig PictureHydrogels &#x3D; water-swollen polymer networks; unique ability to encapsulate live cells during gelation.
+Must-Know Facts
+🔴 Gelation triggers: chemical crosslinking, UV, temperature, ionic (Ca²⁺ for alginate)
+🔴 Advantages: cells encapsulated in true 3D, cytocompatible gelation possible
+🔴 GelMA, PEG, alginate most common
+🔴 Photoencapsulation allows spatial patterning
+🔴 Major limitation inside thick hydrogels: diffusion limit → necrosis in centre after ~200–300 μm
 
-Topic 5 – Central Paradigm of Signal TransductionBig Picture (1 sentence + mind map in text)Signal transduction converts extracellular ligands into intracellular responses via receptors and cascades leading to gene activation.Mind map: Paradigm → Initiation (Ligand Bind Receptor → Activation) → Transduction (Cascade → TF Activation) → Gene (TF Binds → Transcription → Protein Synthesis).
-Must-Know Facts (max 15 bullet points)
-🔴 Initiation: ligand binds membrane receptor, changes activity.
-🟢 Transduction: activates cascade to nuclear TF.
-🔴 Gene activation: TF binds regulatory sequences → mRNA&#x2F;protein.
-🟢 TF: DNA-binding proteins; may translocate or activate.
-🔵 Involves second messengers (cAMP, Ca2+, NO).
-🟢 Transcription: RNA polymerase uses rNTPs.
-🔴 Translation: mRNA → protein via ribosomes, start AUG.
-🟢 Protein folding: ER → Golgi → secretion.
-🔵 mRNA vaccines: modified bases reduce inflammation.
-🟢 Protein structure: primary (AA sequence) to quaternary.
-🔴 Central dogma: signal → transduction → gene expression.
-🟢 Relocalization: e.g., NFκB from cytosol to nucleus.
-🔵 Phosphorylation common in cascades.
+Mnemonics“Hydrogels &#x3D; Hotel for cells” – cells check in alive during crosslinking
+Topic 5 – Limitations of Conventional ScaffoldsBig PictureTraditional methods cannot give precise internal channels or full interconnectivity → poor vascularisation in thick constructs.
+Must-Know Facts (memorise the list)
+Poor control of pore size&#x2F;geometry&#x2F;spatial distribution
+Lack of predefined internal channels
+Incomplete porogen leaching in thick scaffolds
+Closed pores in gas foaming (10–30% interconnected)
+Residual toxic solvents
+Cell seeding inefficient (cells stay on surface, &lt;500 μm penetration)
 
-Key Formulas &#x2F; Diagrams (use code blocks)Central Paradigm:1. Ligand + Receptor → Activated Receptor2. Cascade (Phosphorylation/Second Messengers) → Active TF3. TF + DNA → Transcription → mRNA → Translation → Protein
-Transcription:DNA → RNA Polymerase → mRNA (rNTPs: A/U/G/C)
+Topic 6 – Bioreactors in Tissue EngineeringBig PictureStatic culture fails → bioreactors provide nutrient flow &amp; mechanical signals.
+Must-Know Facts
+🔴 Purposes: mass transport, chemical signals, mechanical conditioning
+🔴 Types: spinner flask, rotating wall vessel, perfusion cartridges
+🔴 Perfusion → uniform cell&#x2F;matrix distribution throughout scaffold
+🟢 Mechanical loading examples:
+Cyclic compression → ↑ GAG&#x2F;collagen in cartilage
+Stretch → aligned collagen &amp; tenascin in ligament
 
-Comparison Table (“X vs Y” in proper Markdown table)
 
 
-Aspect
-Transcription (X)
-Translation (Y)
+Comparison Table
 
 
+Culture Method
+Cell distribution
+Mass transport
+Mechanical signals
 
-Location
-Nucleus
-Cytoplasm&#x2F;Ribosomes
 
 
-Input
-DNA
-mRNA
+Static
+Surface only
+Diffusion
+None
 
 
-Output
-mRNA
-Protein
+Spinner flask
+Better
+Convection
+Minimal
 
 
-Building Blocks
-rNTPs
-Amino Acids
+Perfusion
+Homogeneous
+Excellent
+Flow&#x2F;shear
 
 
-Initiation
-Promoter&#x2F;TF
-Start Codon AUG
+Rotating vessel
+Good
+Good
+Low shear
 
 
-Common Mistakes &amp; Examiner Traps
-Confusing transcription with translation (trap: mix RNA vs protein synthesis).
-Forgetting second messengers in transduction.
-Overlooking protein processing post-translation.
+Topic 7 – Host Response to Implanted BiomaterialsBig PictureInjury → hemostasis → inflammation → granulation → foreign body reaction → fibrosis&#x2F;encapsulation.
+Must-Know Facts
+🔴 Sequence: Hemostasis → Acute inflammation (neutrophils) → Chronic inflammation (macrophages) → Granulation tissue → Foreign body giant cells → Fibrous capsule
+🔴 Biomaterials cause non-specific inflammation, NOT immune rejection
+🔴 Final usual outcome &#x3D; fibrous encapsulation (acellular collagen capsule)
+🔴 Capsule thicker with: motion, sharp edges, leaching monomers, corrosion
 
-Mnemonics &#x2F; Memory Hooks
-Paradigm: “I-T-G” – Initiation-Transduction-Gene Activation.
-Codons: “AUG Starts Translation” – Always Use Gloves (safety hook).
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline the central paradigm.  
-
-Ligand binds receptor (initiation), triggers cascade (transduction), activates TF for gene expression.
-
-What is gene activation?  
-
-TF binds DNA regulatory sequences, increasing transcription rate to produce mRNA and proteins.
-
-Topic 6 – G-Protein Coupled ReceptorsBig Picture (1 sentence + mind map in text)GPCRs transmit diverse signals via G-protein dissociation, involved in senses and regulation.Mind map: GPCR → 7 Transmembrane → Ligand Bind → G-Protein (α&#x2F;β&#x2F;γ Dissociate) → Effectors (Adenylate Cyclase&#x2F;PLC) → Second Messengers (cAMP&#x2F;IP3&#x2F;Ca2+).
-Must-Know Facts (max 15 bullet points)
-🔴 GPCRs: 7 transmembrane segments.
-🟢 Respond to photons, amines, hormones, proteins.
-🔴 Agonist binding dissociates G-protein subunits.
-🟢 α subunit or β&#x2F;γ interact with effectors.
-🔵 Involved in vision (photoisomerization), smell, immunity.
-🟢 Autonomic NS: blood pressure, heart rate.
-🔴 Visual: rhodopsin activation.
-🟢 Smell: olfactory receptors.
-🔵 Immune: chemokine receptors.
-🟢 Dissociation: GDP → GTP exchange.
-
-Key Formulas &#x2F; Diagrams (use code blocks)GPCR Signaling:Ligand + GPCR → G-Protein Activation (GDP → GTP) → α Dissociates → Effector (e.g., AC → cAMP)
-Topology:Extracellular Loops → Ligand Bind → 7 TM Helices → Intracellular G-Protein Interaction
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Aspect
-Before Binding (X)
-After Binding (Y)
-
-
-
-G-Protein State
-Bound (αβγ)
-Dissociated (α + βγ)
-
-
-Nucleotide
-GDP
-GTP
-
-
-Effect
-Inactive
-Effector Activation
-
-
-Example
-Resting Receptor
-Signal Transduction
-
-
-Common Mistakes &amp; Examiner Traps
-Forgetting 7 TM structure (trap: confuse with RTKs).
-Assuming all ligands bind extracellularly.
-Overlooking β&#x2F;γ subunit roles.
-
-Mnemonics &#x2F; Memory Hooks
-GPCR: “7 Seas” – 7 Transmembrane for Signaling Seas (diverse ligands).
-Dissociation: “Agonist Kicks GDP Out for GTP Party”.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe GPCR activation.  
-
-Ligand binds, causing G-protein interaction and dissociation of α (GTP-bound) from βγ.
-
-GPCRs’ roles?  
-
-Vision (photons), smell (odorants), immunity (chemokines), autonomic regulation.
-
-Topic 7 – Receptor Tyrosine Kinases and PathwaysBig Picture (1 sentence + mind map in text)RTKs dimerize upon ligand binding, phosphorylating for cascades in growth and angiogenesis.Mind map: RTK → Ligand (e.g., VEGF) → Dimerization → Phosphorylation → Cascade (Ras&#x2F;Raf&#x2F;MEK&#x2F;ERK) → TF (Ets-1) → Gene Expression.
-Must-Know Facts (max 15 bullet points)
-🔴 RTKs: dimerize, autophosphorylate tyrosines.
-🟢 Include VEGF-R, PDGF-R for vessel assembly.
-🔴 VEGF: endothelial differentiation.
-🟢 PDGF-B: recruits mural cells.
-🔵 Cascade: Sos → Ras → Raf → MEK → ERK → Nucleus.
-🟢 TGF-β: serine&#x2F;threonine kinases, Smad pathway.
-🔴 BMPs: bone induction via Smads.
-🟢 Wnt: canonical (β-catenin → TCF&#x2F;Lef), noncanonical (polarity&#x2F;Ca2+).
-🔵 Involved in cancer, development.
-🟢 LRP5&#x2F;6 co-receptors in Wnt.
-🔴 Fz: GPCR-like in Wnt.
-
-Key Formulas &#x2F; Diagrams (use code blocks)RTK Pathway:Ligand → Dimer → P-Tyr → Adapter → Ras-GTP → Raf → MEK → ERK → TF
-BMP Signaling:BMP + Type II R → Type I P → Smad1/5/8 P → Smad4 Complex → Nucleus
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Aspect
-RTK (X)
-Ser&#x2F;Thr Kinase (Y)
-
-
-
-Phosphorylation
-Tyrosine
-Serine&#x2F;Threonine
-
-
-Example
-VEGF-R
-TGF-β&#x2F;BMP R
-
-
-Downstream
-Ras&#x2F;MAPK
-Smads
-
-
-Function
-Growth&#x2F;Angiogenesis
-Differentiation&#x2F;Bone
-
-
-Common Mistakes &amp; Examiner Traps
-Confusing Tyr vs Ser&#x2F;Thr kinases (trap: mix VEGF with BMP).
-Forgetting dimerization in RTKs.
-Overlooking Wnt’s multiple pathways.
-
-Mnemonics &#x2F; Memory Hooks
-RTK: “Dimer-Phos-Cascade” – Dinner Party Cascade (dimerize to start).
-Wnt: “Beta Cat in Canon” – β-Catenin Canonical.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Outline VEGF signaling.  
-
-VEGF binds VEGF-R2, activates Ras via Sos, leading to ERK phosphorylation and Ets-1 activation for angiogenic genes.
-
-Describe BMP pathway.  
-
-BMP binds receptors, phosphorylates Smad1&#x2F;5&#x2F;8, complexes with Smad4, translocates to nucleus for transcription.
-
-Topic 8 – Mechanotransduction and CytoskeletonBig Picture (1 sentence + mind map in text)Mechanotransduction converts physical forces into biochemical responses via cytoskeleton, vital for bone and vessel health.Mind map: Forces (Shear&#x2F;Tension) → Sense (Integrins&#x2F;Junctions) → Transmit (Cytoskeleton → Actin&#x2F;MT&#x2F;IF) → Response (Gene Expression) → Applications (Stress Shielding&#x2F;Osteoporosis).
-Must-Know Facts (max 15 bullet points)
-🔴 Mechanotransduction: physical stimulus → physiological change.
-🟢 Cytoskeleton: actin (microfilaments), microtubules, intermediate filaments.
-🔴 Actin: G-actin → F-actin polymerization; (+) end growth.
-🟢 Myosin: ATP → force for contraction.
-🔵 Treadmilling: add at (+), remove at (-).
-🟢 Microtubules: α&#x2F;β tubulin; dynamic instability.
-🔴 MTOC organizes polarity.
-🟢 Stress shielding: prosthesis reduces bone load → atrophy.
-🔵 Endothelial: shear → alignment via PECAM-1&#x2F;VE-cad&#x2F;VEGFR2.
-🟢 Fibroblasts contract collagen matrix.
-🔴 Wolff’s Law: stress influences bone strength.
-🟢 Optogenetics: light-sensitive channels control activity.
-🔵 Paclitaxel stabilizes MT, inhibits division.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Actin Dynamics:G-Actin (ATP) → Nucleation → Elongation (+) End → Treadmilling (Hydrolysis ADP)
-Cytoskeleton:Actin → Contraction/MigrationMT → Transport/DivisionIF → Stability
-
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Aspect
-Actin Filaments (X)
-Microtubules (Y)
-
-
-
-Monomer
-G-Actin
-α&#x2F;β Tubulin
-
-
-Function
-Motility&#x2F;Contraction
-Transport&#x2F;Division
-
-
-Nucleotide
-ATP
-GTP
-
-
-Dynamics
-Treadmilling
-Dynamic Instability
-
-
-Motor Protein
-Myosin
-Kinesin&#x2F;Dynein
-
-
-Common Mistakes &amp; Examiner Traps
-Treating cells as simple viscous bags (trap: ignore cytoskeleton).
-Forgetting GTP&#x2F;ATP in dynamics.
-Overlooking stress shielding in implants.
-
-Mnemonics &#x2F; Memory Hooks
-Cytoskeleton: “AMI” – Actin (Movement), MT (Transport), IF (Integrity).
-Actin Ends: “+ Grows, - Goes” (add +, remove -).
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is mechanotransduction?  
-
-Conversion of physical forces (e.g., shear) into biochemical responses like gene expression via cytoskeleton.
-
-Describe actin polymerization.  
-
-G-actin nucleates with ATP, elongates at (+) end, hydrolyzes to ADP, treadmills with disassembly at (-).
+Mnemonics“Hemostasis → Acute → Chronic → Granulation → Giant cells → Capsule” &#x3D; HAC3G
+Topic 8 – Immunoisolation &amp; Encapsulated Cell TherapyBig PicturePhysical barrier protects allogeneic&#x2F;xenogeneic cells from immune attack while allowing nutrient&#x2F;waste&#x2F;hormone exchange.
+Must-Know Facts
+🔴 Classic example: alginate-polylysine microcapsules for pancreatic islets
+🔴 Membrane MWCO typically 50–150 kDa (lets insulin&#x2F;glucose through, blocks antibodies)
+🔴 Allows use of non-autologous cells without immunosuppression
 
 Active Recall Bank
-What sequence in fibronectin binds integrins? (RGD)
-Name two types of fibronectin. (Soluble plasma, insoluble cellular)
-Focal adhesions in 2D are ____; in 3D ____. (punctate, fibrillar)
-Chemotaxis responds to ____ gradients. (chemical)
-Ligand range: distant via blood? (Endocrine)
-Central paradigm steps: Initiation, ____, Gene Activation. (Transduction)
-GPCRs have ____ transmembrane segments. (7)
-RTKs phosphorylate ____ residues. (tyrosine)
-Cytoskeleton filaments: Actin, ____, Intermediate. (Microtubules)
-Treadmilling occurs in ____ filaments. (actin)
-BMP signaling uses ____ proteins. (Smads)
-Wnt canonical pathway stabilizes ____. (β-catenin)
-Stress shielding causes bone ____. (atrophy)
-Myosin uses ____ for force. (ATP)
-MTOC organizes ____. (microtubules)
-RGD stands for --____. (Arg-Gly-Asp)
-Taxis type for light: ____. (Phototaxis)
-Translation starts with codon ____. (AUG)
-Ion channels can be ____-gated or ____-gated. (voltage, ligand)
-Paclitaxel ____ microtubules. (stabilizes)
+Name 3 porosity methods that avoid organic solvents
+Which method gives closed pores if used alone?
+What is the main advantage of decellularized organs?
+Why do cells die in the centre of thick hydrogels?
+Name the sequence of host response stages (6)
+What cells dominate acute vs chronic inflammation?
+What is the usual final fate of a non-degradable implant?
+Best bioreactor for uniform cell seeding in thick scaffolds?
+Two mechanical signals used in bioreactors for cartilage?
+Material of choice for soft vs hard tissue scaffolds?
+Pore size range generally optimal?
+Name one natural hydrogel polymer used for encapsulation
+What does “foreign body giant cell” indicate?
+Why is perfusion better than static culture?
+Example of self-organized vascularised tissue from iPSCs?
+What does SCPL stand for and what porogen is commonly used?
+Which fabrication method is best for incorporating growth factors without denaturation?
+What is the main drawback of melt molding?
+What does Re &lt; 2000 mean in microfluidics?
+Classic encapsulated cell therapy target disease?
 
+(Answers at bottom – cover first!)
 15-Minute Mock Exam
-Explain the role of RGD in cell adhesion and its TE applications.  
+Compare advantages and disadvantages of solvent-casting particulate leaching versus gas foaming&#x2F;particulate leaching combination. (8 marks)  
 
-RGD (Arg-Gly-Asp) is the integrin-binding site in fibronectin promoting attachment; in TE, short RGD peptides functionalize scaffolds for cell adhesion without full proteins.
-
-
-Compare focal adhesions in 2D vs 3D environments, with NPC example.  
-
-2D: punctate, ligand-sensitive; 3D: fibrillar, remodeling-focused; for NPCs, 3D stemness maintenance is insensitive to ligands, prioritizing remodeling.
+SCPL: excellent interconnectivity, good pore control, but uses toxic organic solvent. Gas foaming + PL: no solvent (more biocompatible), excellent interconnectivity, retains temperature-sensitive molecules, slightly more complex process.
 
 
-Describe chemotaxis and its measurement.  
+Explain why conventional scaffold techniques fail to produce clinically relevant thick tissues (&gt;1 cm). Give two biological reasons and one fabrication reason. (6 marks)  
 
-Directed migration to chemical gradients; assessed by polarized morphology and proportion of cells moving toward&#x2F;away from attractant, depending on concentration and gradient steepness.
-
-
-Outline the central signal transduction paradigm.  
-
-Initiation: ligand-receptor binding; Transduction: cascade activates nuclear TF; Gene activation: TF binds DNA, leading to transcription, translation, and physiological changes.
+Diffusion limitation of oxygen&#x2F;nutrients (&lt;200–300 μm), lack of pre-formed vascular channels, poor cell penetration during seeding (cells remain on surface).
 
 
-How does Wnt canonical pathway work?  
+Describe the host response timeline from implantation to fibrous encapsulation. (8 marks)  
 
-Ligand binds Fz&#x2F;LRP, stabilizes β-catenin, which enters nucleus and interacts with TCF&#x2F;Lef for gene transcription in development and cancer.
+Injury → hemostasis &amp; platelet activation → acute inflammation (neutrophils) → chronic inflammation (macrophages&#x2F;monocytes) → granulation tissue + angiogenesis → foreign body giant cells → fibrous capsule formation (weeks–months).
+
+
+A company wants to implant insulin-producing cells from pig into diabetic patients without immunosuppression. Suggest and justify a tissue-engineering strategy. (6 marks)  
+
+Encapsulate porcine islets in alginate-polylysine microcapsules (immunoisolation). Membrane permits glucose&#x2F;insulin diffusion but excludes immune cells&#x2F;antibodies → prevents rejection while allowing function.
+
+
+State four essential requirements of a tissue engineering bioreactor. (4 marks)  
+
+Controlled temperature&#x2F;pH, efficient mass transfer, delivery of chemical signals, ability to apply mechanical&#x2F;electrical signals.
 
 
 
 One-Page Cheat Sheet Summary
 
 
-Section
-Key Points
+Category
+Key Methods &#x2F; Materials
+Pros
+Cons
+Best for
 
 
 
-ECM&#x2F;Adhesion
-Fibronectin: RGD binds α5β1&#x2F;αVβ3; Focal: 2D punctate vs 3D fibrillar; NPCs: remodeling &gt; binding.
+Classic porosity
+SCPL, Gas foaming+PL, Freeze-drying
+High interconnectivity
+Solvent (SCPL) or heat
+General scaffolds
 
 
-Migration
-Cycle: Attach-Contract-Detach; Taxis: Chemo (gradients), Hapto (adhesives); Defects: embryonic issues.
+Advanced
+Electrospinning, 3D printing, Decellularization
+Precise geometry, native vessels
+Slow, expensive
+Vascularised organs
 
 
-Signaling
-Ligands: Endocrine&#x2F;Paracrine&#x2F;Autocrine&#x2F;Juxtacrine; GFs: VEGF&#x2F;TGF-β; Paradigm: Bind → Cascade → Gene.
+Cell-friendly
+Hydrogels (PEG, GelMA, alginate)
+Encapsulation during gelation
+Diffusion limit
+3D culture, islets
 
 
-Receptors
-GPCR: 7TM, dissociate G; RTK: Dimer&#x2F;P-Tyr&#x2F;Ras-ERK; TGF-β: Ser&#x2F;Thr&#x2F;Smads; Wnt: β-catenin&#x2F;TCF.
+Cultivation
+Perfusion bioreactors
+Uniform cell&#x2F;matrix
+Complex setup
+Thick constructs
 
 
-Transport
-Hydrophobic: Diffuse (NO&#x2F;AA); Ion Channels: Voltage&#x2F;Ligand (Ca2+&#x2F;Na+); Optogenetics: Light control.
+Host response endpoint
+Fibrous encapsulation
+Isolates implant
+Avascular wall, no integration
+Most permanent implants
 
 
-Cytoskeleton
-Actin: Polymer&#x2F;Treadmill&#x2F;Myosin; MT: Dynamic&#x2F;GTP&#x2F;Paclitaxel; Mechano: Forces → Signals (Wolff’s Law).
+Immunoisolation
+Alginate microcapsules
+No immunosuppression
+Fibrosis of capsules over time
+Xenogeneic cells
 
 
-TE Apps
-Dermal matrix: Cell invasion; Growth factors in scaffolds; Avoid stress shielding in implants.
-
-
+Active Recall Answers: 1. Gas foaming(+PL), melt molding, freeze-drying 2. Gas foaming alone 3. Native vascular network retained 4. Diffusion limitation 5. Hemostasis–acute–chronic–granulation–giant cells–capsule 6. Neutrophils vs macrophages 7. Fibrous encapsulation 8. Perfusion 9. Cyclic compression, hydrostatic pressure 10. Polymers vs ceramics&#x2F;metals 11. 100–500 μm 12. Alginate&#x2F;collagen 13. Persistent material or wear particles 14. Overcomes diffusion limit &amp; uniform seeding 15. Liver buds (Takebe 2013) 16. Solvent-casting particulate leaching, NaCl&#x2F;sugar 17. Freeze-drying or phase separation 18. High temperature denatures proteins 19. Laminar flow 20. Diabetes (pancreatic islets)
 ]]></content>
       <categories>
         <category>Education</category>
@@ -11460,6 +11460,181 @@ Dermal matrix: Cell invasion; Growth factors in scaffolds; Avoid stress shieldin
         <tag>biomedical engineering</tag>
         <tag>Exam Notes</tag>
         <tag>Tissue Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>📚 BME4101 Biomedical Instrumentation 1 | 完整貓紙</title>
+    <url>/posts/259d8d41.html</url>
+    <content><![CDATA[🎯 課程目標與學習成果 (Aims &amp; Outcomes)理解生物醫學儀器嘅原理、應用同設計。
+
+掌握生理訊號特性： 了解 ECG, EEG 等訊號有幾細、幾多雜訊。
+儀器運作原理： 識得點樣設計設備去攞到生理資訊。
+系統評估： 識分精度 (Precision) 同準確度 (Accuracy)。
+
+
+🧰 背景技能與工具 (Skills &amp; Tools)
+軟件： MATLAB 同 Tinkercad。
+MATLAB 用途： 分析時域&#x2F;頻域訊號、畫 Bode plots (波德圖)、用 Simulink 模擬電路。
+
+
+⚙️ 生物醫學儀器基礎 (Fundamentals)定義： 用侵入性 (Invasive) 或非侵入性 (Noninvasive) 嘅方法，去量度人體、器官、細胞甚至分子嘅系統。關鍵要求： 可靠性 (Reliability) 同 安全性 (Safety)。
+
+
+歷史創新亮點
+1950s 前： X-Ray, ECG, 人工腎臟, 心臟起搏器。
+1970s： CT, 人工髖&#x2F;膝關節, 人工耳蝸。
+1980s： MRI, 激光手術, 血氧儀, 機械人輔助手術。
+
+
+🏗️ 基本儀器系統 (Basic System)系統組件表
+
+
+組件
+功能描述
+
+
+
+Measurand (待測量)
+想度嘅物理量 (e.g. 血壓、位移)
+
+
+Sensor (傳感器)
+將待測量轉做電訊號
+
+
+Signal Conditioning
+放大同濾波 (Amplification &amp; Filtering)
+
+
+Actuator &amp; Feedback
+提供控制同重新校準
+
+
+
+🔍 訊號調理與挑戰 (Conditioning &amp; Challenges)例子
+紅外線溫度計： 用 Thermopile 將熱能轉電壓，電壓好細，要放大。
+PPG (光電容積圖)： 度心跳，雜訊極大，一定要濾波。
+
+運作模式 (Modes)
+直接模式 (Direct)： 直接度（通常係侵入性，風險高）。
+間接模式 (Indirect)： 度相關嘅量（例如由呼吸度心輸出量）。
+
+
+📊 儀器特性與評估 (Characteristics)靜態特性 (Static)
+Accuracy (準確度)： 測量值同真值嘅接近程度。
+Precision (精密度)： 重複測量嘅一致性。
+Linearity (線性度)： Input 同 Output 係咪成直線比例。
+
+
+🛠️ 電阻式位移傳感器與電橋 (Wheatstone Bridge)Strain Gauge (應變計)利用電阻改變嚟度位移：R=ρLAR = \frac{\rho L}{A}R=AρL​。
+Wheatstone Bridge 配置對比
+
+
+配置
+靈敏度 (Sensitivity)
+溫度補償
+
+
+
+1 active gauge
+14GVin\frac{1}{4} G V_{in}41​GVin​
+無
+
+
+2 active gauges
+12GVin\frac{1}{2} G V_{in}21​GVin​
+有
+
+
+4 active gauges
+GVinG V_{in}GVin​
+有 (最強)
+
+
+
+⚡ 運算放大器 (Op-Amps)理想 (Ideal) vs 實際 (Practical)
+Open-loop Gain (A)： 理想係 ∞\infty∞，實際約 10510^5105。
+Input Impedance (ZinZ_{in}Zin​)： 理想係 ∞\infty∞，實際 &gt;1MΩ&gt; 1 M\Omega&gt;1MΩ。
+CMRR (共模抑制比)： 反映剔除雜訊（如電網 50Hz）嘅能力。  CMRR (dB)=20log⁡10(AdAcm)\text{CMRR (dB)} = 20 \log_{10} \left( \frac{A_d}{A_{cm}} \right)CMRR (dB)=20log10​(Acm​Ad​​)
+
+
+🔄 訊號濾波 (Filtering)目的： 最大化 SNR (信噪比)。
+
+
+
+Low-pass (LP)： 攞低頻，剔除高頻 Noise。
+Notch Filter： 專門剔除 50&#x2F;60 Hz 嘅電源線干擾。
+
+
+⚡ 生物電位記錄 (ECG&#x2F;EEG&#x2F;EMG)ECG 心電圖訊號
+P wave： 心房去極化。
+QRS complex： 心室去極化（訊號最強）。
+T wave： 心室復極化。
+
+
+🛡️ 生物電位放大器系統 (Amplifier Systems)關鍵要求： 高增益、低雜訊、高輸入阻抗、高 CMRR。
+
+
+
+Instrumentation Amplifier (儀表放大器)： 高 ZinZ_{in}Zin​，Gain 淨係靠一粒 RgainR_{gain}Rgain​ 嚟教。
+Driven Right Leg (DRL) 電路： 主動接地技術，將 Common-mode 雜訊反相打返入右腳，大大提升 SNR。
+
+
+⏱️ 採樣與數碼轉換 (Sampling &amp; ADC)
+Nyquist Theorem： 採樣頻率 fsf_sfs​ 必須 &gt;2×fm&gt; 2 \times f_m&gt;2×fm​，否則會出現 Aliasing (摺疊雜訊)。
+Quantization (量化)： 將連續電壓轉做數碼位元。
+
+
+💉 血壓量度 (Blood Pressure)
+Systolic (SP)： 收縮壓（高壓）。
+Diastolic (DP)： 舒張壓（低壓）。
+MAP (平均動脈壓)： MAP≈DP+13(SP−DP)MAP \approx DP + \frac{1}{3}(SP - DP)MAP≈DP+31​(SP−DP)。
+
+
+💉 血流量度技術 (Blood Flow)超聲波流量計 (Ultrasonic)
+Transit-Time： 度聲波來回時間差。
+Doppler Flowmeter： 利用多普勒效應度血流速度。Δf/f0=2ucos⁡θc\Delta f / f_0 = \frac{2 u \cos \theta}{c}Δf/f0​=c2ucosθ​
+
+
+💡 核心重點總結表
+
+
+主題
+廣東話重點
+
+
+
+Instrumentation
+讀熟個流程：感覺 -&gt; 放大 -&gt; 濾波 -&gt; 顯示。
+
+
+Op-Amps
+考試必計 Inverting 同 Non-inverting Gain。
+
+
+CMRR
+數值愈高，代表部機剔除 50Hz 雜訊愈勁。
+
+
+DRL Circuit
+用嚟減低 Common-mode Noise 嘅神技。
+
+
+Nyquist
+唔好採樣得太慢，唔係會 Aliasing。
+
+
+
+Gemini’s Note: 幫你執返好咗 Front-matter。YAML 最怕喺鍵值對（key: value）入面見到奇怪嘅括號或者冇空格。依家應該可以正常 hexo g 喇！
+]]></content>
+      <categories>
+        <category>University Notes</category>
+      </categories>
+      <tags>
+        <tag>CityU</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Study Notes</tag>
+        <tag>BME</tag>
       </tags>
   </entry>
 </search>
