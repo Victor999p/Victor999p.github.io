@@ -232,6 +232,94 @@ OLED 無顯示或亂碼：
       </tags>
   </entry>
   <entry>
+    <title>常用Python程式碼片段集合</title>
+    <url>/posts/a4367020.html</url>
+    <content><![CDATA[Switch to English Version 🇬🇧
+常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
+1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
+print(&quot;你好，世界！&quot;)
+說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
+執行結果：
+你好，世界！
+
+2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
+# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
+說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
+執行結果：
+水果：蘋果水果：香蕉水果：橙子水果：葡萄
+
+
+3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
+# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
+說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
+
+4. 檔案讀寫在Python中，讀寫檔案是常見任務。
+# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
+
+說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
+執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
+---## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
+
+說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
+執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
+---## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
+
+說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
+執行結果：&#96;&#96;&#96;text
+面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
+
+說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
+執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
+---## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
+
+說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
+執行結果：
+&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+
+
+9. 字串操作Python 提供強大的字串處理工具。
+text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
+
+說明：strip()、split() 和 join() 方法使字串處理變得簡單。
+
+10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
+# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
+
+說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
+
+11. 日期處理datetime 模組幫助處理日期和時間。
+from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
+
+說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
+執行結果（假設當前時間為 2025-08-30 17:31:05）：
+當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+
+
+12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
+numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
+
+說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
+執行結果：
+[0, 1, 2][0, 2, 4]
+
+
+結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+
+發布於 
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>CS1302</tag>
+        <tag>CityU</tag>
+        <tag>Beginner</tag>
+        <tag>AI generate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Introduction to Computer Programming:A Beginner&#39;s Guide</title>
     <url>/posts/6778c1a2.html</url>
     <content><![CDATA[🧠 Overview | 概覽This post summarizes key concepts from the CS1302: Introduction to Computer Programming lecture notes from City University of Hong Kong.本文總結了香港城市大學《CS1302：電腦編程入門》課程筆記的重點內容。
@@ -553,91 +641,178 @@ title Key elements in Product X
       </tags>
   </entry>
   <entry>
-    <title>常用Python程式碼片段集合</title>
-    <url>/posts/a4367020.html</url>
-    <content><![CDATA[Switch to English Version 🇬🇧
-常用Python程式碼片段集合本文提供了一份精心挑選的常用Python程式碼片段列表，涵蓋基本操作、資料結構、檔案處理等內容。每個片段都附有簡要說明及執行結果，可直接使用或根據您的專案需求進行調整。無論您是初學者還是經驗豐富的開發者，這些範例都將是一個方便的參考。
-1. 你好，世界！經典的“你好，世界！”程式，幫助您開始使用Python。
-print(&quot;你好，世界！&quot;)
-說明：print() 函數將文字輸出到控制台。這通常是測試Python環境設置的第一個程式。
-執行結果：
-你好，世界！
+    <title>📚 BME4101 Biomedical Instrumentation 1 | 完整貓紙</title>
+    <url>/posts/259d8d41.html</url>
+    <content><![CDATA[🎯 課程目標與學習成果 (Aims &amp; Outcomes)理解生物醫學儀器嘅原理、應用同設計。
 
-2. 列表操作列表是Python中最通用的資料結構之一。以下是如何創建、添加和遍歷列表的範例。
-# 創建列表fruits = [&quot;蘋果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]# 添加項fruits.append(&quot;葡萄&quot;)# 遍歷列表for fruit in fruits:    print(f&quot;水果：&#123;fruit&#125;&quot;)
-說明：列表是有序、可變的集合。append() 方法將項添加到列表末尾，for 迴圈用於遍歷每個元素。
-執行結果：
-水果：蘋果水果：香蕉水果：橙子水果：葡萄
+掌握生理訊號特性： 了解 ECG, EEG 等訊號有幾細、幾多雜訊。
+儀器運作原理： 識得點樣設計設備去攞到生理資訊。
+系統評估： 識分精度 (Precision) 同準確度 (Accuracy)。
 
 
-3. 字典操作字典用於儲存鍵值對。此片段展示如何創建、訪問和更新字典。
-# 創建字典person = &#123;&quot;姓名&quot;: &quot;Alice&quot;, &quot;年齡&quot;: 25, &quot;城市&quot;: &quot;紐約&quot;&#125;# 訪問值print(person[&quot;姓名&quot;])  #輸出：Alice# 更新值person[&quot;年齡&quot;] = 26# 添加新的鍵值對person[&quot;職業&quot;] = &quot;工程師&quot;# 遍歷鍵和值for key, value in person.items():    print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
-
-說明：字典是可變的，支持基於鍵的快速訪問。使用 items() 方法遍歷鍵值對。
-
-4. 檔案讀寫在Python中，讀寫檔案是常見任務。
-# 寫入檔案with open(&quot;example.txt&quot;, &quot;w&quot;) as file:    file.write(&quot;你好，這是一個測試檔案！\n&quot;)    file.write(&quot;第二行。&quot;)# 读取文件with open(&quot;example.txt&quot;, &quot;r&quot;) as file:    content = file.read()    print(content)
-
-說明：with 語句確保檔案使用後正確關閉。&quot;w&quot; 模式用於寫入，&quot;r&quot; 模式用於讀取。
-執行結果：&#96;&#96;&#96;text你好，這是一個測試檔案！第二行。
----## 5. 列表推導式列表推導式提供了一種簡潔的方式，基於現有可迭代物件創建列表。```python# 創建1到5的平方列表squares = [x**2 for x in range(1, 6)]print(squares)  # 輸出：[1, 4, 9, 16, 25]# 篩選偶數evens = [x for x in range(10) if x % 2 == 0]print(evens)  # 輸出：[0, 2, 4, 6, 8]
-
-說明：列表推導式將迴圈和條件語句合併成一行，提高可讀性和效率。
-執行結果：&#96;&#96;&#96;text[1, 4, 9, 16, 25][0, 2, 4, 6, 8]
----## 6. 函數定義函數幫助將程式碼組織成可重用的塊。```pythondef calculate_area(length, width):    &quot;&quot;&quot;計算矩形面積。&quot;&quot;&quot;    return length * width# 調用函數area = calculate_area(5, 3)print(f&quot;面積&#123;area&#125;&quot;)  # 輸出：面積：15
-
-說明：def 關鍵字定義函數。文件字串（&quot;&quot;&quot;...&quot;&quot;&quot;）描述函數用途，return 輸出結果。
-執行結果：&#96;&#96;&#96;text
-面積：15---## 7. 異常處理使用 try-except 塊優雅地處理錯誤。```pythontry:    num = int(input(&quot;請輸入一個數字：&quot;))    result = 10 / num    print(f&quot;結果：&#123;result&#125;&quot;)except ZeroDivisionError:    print(&quot;錯誤：不能除以零！&quot;)except ValueError:    print(&quot;錯誤：請輸入有效數字！&quot;)
-
-說明：try 塊運行可能引發錯誤的程式碼。except 塊處理特定異常，防止程式崩潰。
-執行結果（假設輸入為 2）：執行結果：&#96;&#96;&#96;text請輸入一個數字：2結果：5.0
----## 8. 集合操作集合用於儲存唯一項並執行集合操作。```python# 創建集合numbers = &#123;1, 2, 2, 3, 4&#125;  # 自動移除重複項print(numbers)  #輸出：&#123;1, 2, 3, 4&#125;# 集合操作other_numbers = &#123;3, 4, 5, 6&#125;union = numbers | other_numbersintersection = numbers &amp; other_numbersprint(f&quot;並集：&#123;union&#125;&quot;)  #輸出：並集：&#123;1, 2, 3, 4, 5, 6&#125;print(f&quot;交集：&#123;intersection&#125;&quot;)  #輸出：交集：&#123;3, 4&#125;
-
-說明：集合自動移除重複項。運算符如 |（並集）和 &amp;（交集）執行集合操作。
-執行結果：
-&#123;1, 2, 3, 4&#125;並集：&#123;1, 2, 3, 4, 5, 6&#125;交集：&#123;3, 4&#125;
+🧰 背景技能與工具 (Skills &amp; Tools)
+軟件： MATLAB 同 Tinkercad。
+MATLAB 用途： 分析時域&#x2F;頻域訊號、畫 Bode plots (波德圖)、用 Simulink 模擬電路。
 
 
-9. 字串操作Python 提供強大的字串處理工具。
-text = &quot;  你好，Python！  &quot;# 去除空格cleaned = text.strip()print(cleaned)  #輸出：你好，Python！# 分割成單詞words = cleaned.split()print(words)  #輸出：[&#x27;你好，&#x27;, &#x27;Python！&#x27;]# 連接單詞joined = &quot;-&quot;.join(words)print(joined)  #輸出：你好，-Python！
-
-說明：strip()、split() 和 join() 方法使字串處理變得簡單。
-
-10. Lambda 函數Lambda 函數是匿名的單表達式函數，適合快速操作。
-# 定義 lambda 函數square = lambda x: x**2print(square(5))  #輸出：25# 配合 sorted() 使用points = [(1, 2), (3, 1), (2, 3)]sorted_points = sorted(points, key=lambda x: x[1])print(sorted_points)  #輸出：[(3, 1), (1, 2), (2, 3)]
-
-說明：Lambda 函數是常規函數的簡潔替代，常用于 sorted() 或 map() 等函數。
-
-11. 日期處理datetime 模組幫助處理日期和時間。
-from datetime import datetime, timedelta# 當前日期和時間now = datetime.now()print(f&quot;當前時間：&#123;now&#125;&quot;)# 添加3天future = now + timedelta(days=3)print(f&quot;三天後：&#123;future&#125;&quot;)
-
-說明：datetime 模組提供日期和時間操作的類。timedelta 用於日期算術運算。
-執行結果（假設當前時間為 2025-08-30 17:31:05）：
-當前時間：2025-08-30 17:31:05.123456三天後：2025-09-02 17:31:05.123456
+⚙️ 生物醫學儀器基礎 (Fundamentals)定義： 用侵入性 (Invasive) 或非侵入性 (Noninvasive) 嘅方法，去量度人體、器官、細胞甚至分子嘅系統。關鍵要求： 可靠性 (Reliability) 同 安全性 (Safety)。
 
 
-12. 列表切片切片允許您提取列表（或其他序列）的部分內容。
-numbers = [0, 1, 2, 3, 4, 5]# 獲取前三個元素first_three = numbers[:3]print(first_three)  #輸出：[0, 1, 2]# 獲取每隔一個元素every_second = numbers[::2]print(every_second)  #輸出：[0, 2, 4]
-
-說明：[start:end:step] 語法提取列表的一部分。省略 start 或 end 使用列表的邊界。
-執行結果：
-[0, 1, 2][0, 2, 4]
+歷史創新亮點
+1950s 前： X-Ray, ECG, 人工腎臟, 心臟起搏器。
+1970s： CT, 人工髖&#x2F;膝關節, 人工耳蝸。
+1980s： MRI, 激光手術, 血氧儀, 機械人輔助手術。
 
 
-結論這些Python程式碼片段涵蓋了常見任務，展示了Python的簡單性和強大功能。它們可以作為您專案的起點或編碼時的快速參考。Python的可讀性和靈活性使其成為初學者和高級開發者的理想選擇。快樂編碼！
+🏗️ 基本儀器系統 (Basic System)系統組件表
 
-發布於 
+
+組件
+功能描述
+
+
+
+Measurand (待測量)
+想度嘅物理量 (e.g. 血壓、位移)
+
+
+Sensor (傳感器)
+將待測量轉做電訊號
+
+
+Signal Conditioning
+放大同濾波 (Amplification &amp; Filtering)
+
+
+Actuator &amp; Feedback
+提供控制同重新校準
+
+
+
+🔍 訊號調理與挑戰 (Conditioning &amp; Challenges)例子
+紅外線溫度計： 用 Thermopile 將熱能轉電壓，電壓好細，要放大。
+PPG (光電容積圖)： 度心跳，雜訊極大，一定要濾波。
+
+運作模式 (Modes)
+直接模式 (Direct)： 直接度（通常係侵入性，風險高）。
+間接模式 (Indirect)： 度相關嘅量（例如由呼吸度心輸出量）。
+
+
+📊 儀器特性與評估 (Characteristics)靜態特性 (Static)
+Accuracy (準確度)： 測量值同真值嘅接近程度。
+Precision (精密度)： 重複測量嘅一致性。
+Linearity (線性度)： Input 同 Output 係咪成直線比例。
+
+
+🛠️ 電阻式位移傳感器與電橋 (Wheatstone Bridge)Strain Gauge (應變計)利用電阻改變嚟度位移：R=ρLAR = \frac{\rho L}{A}R=AρL​。
+Wheatstone Bridge 配置對比
+
+
+配置
+靈敏度 (Sensitivity)
+溫度補償
+
+
+
+1 active gauge
+14GVin\frac{1}{4} G V_{in}41​GVin​
+無
+
+
+2 active gauges
+12GVin\frac{1}{2} G V_{in}21​GVin​
+有
+
+
+4 active gauges
+GVinG V_{in}GVin​
+有 (最強)
+
+
+
+⚡ 運算放大器 (Op-Amps)理想 (Ideal) vs 實際 (Practical)
+Open-loop Gain (A)： 理想係 ∞\infty∞，實際約 10510^5105。
+Input Impedance (ZinZ_{in}Zin​)： 理想係 ∞\infty∞，實際 &gt;1MΩ&gt; 1 M\Omega&gt;1MΩ。
+CMRR (共模抑制比)： 反映剔除雜訊（如電網 50Hz）嘅能力。  CMRR (dB)=20log⁡10(AdAcm)\text{CMRR (dB)} = 20 \log_{10} \left( \frac{A_d}{A_{cm}} \right)CMRR (dB)=20log10​(Acm​Ad​​)
+
+
+🔄 訊號濾波 (Filtering)目的： 最大化 SNR (信噪比)。
+
+
+
+Low-pass (LP)： 攞低頻，剔除高頻 Noise。
+Notch Filter： 專門剔除 50&#x2F;60 Hz 嘅電源線干擾。
+
+
+⚡ 生物電位記錄 (ECG&#x2F;EEG&#x2F;EMG)ECG 心電圖訊號
+P wave： 心房去極化。
+QRS complex： 心室去極化（訊號最強）。
+T wave： 心室復極化。
+
+
+🛡️ 生物電位放大器系統 (Amplifier Systems)關鍵要求： 高增益、低雜訊、高輸入阻抗、高 CMRR。
+
+
+
+Instrumentation Amplifier (儀表放大器)： 高 ZinZ_{in}Zin​，Gain 淨係靠一粒 RgainR_{gain}Rgain​ 嚟教。
+Driven Right Leg (DRL) 電路： 主動接地技術，將 Common-mode 雜訊反相打返入右腳，大大提升 SNR。
+
+
+⏱️ 採樣與數碼轉換 (Sampling &amp; ADC)
+Nyquist Theorem： 採樣頻率 fsf_sfs​ 必須 &gt;2×fm&gt; 2 \times f_m&gt;2×fm​，否則會出現 Aliasing (摺疊雜訊)。
+Quantization (量化)： 將連續電壓轉做數碼位元。
+
+
+💉 血壓量度 (Blood Pressure)
+Systolic (SP)： 收縮壓（高壓）。
+Diastolic (DP)： 舒張壓（低壓）。
+MAP (平均動脈壓)： MAP≈DP+13(SP−DP)MAP \approx DP + \frac{1}{3}(SP - DP)MAP≈DP+31​(SP−DP)。
+
+
+💉 血流量度技術 (Blood Flow)超聲波流量計 (Ultrasonic)
+Transit-Time： 度聲波來回時間差。
+Doppler Flowmeter： 利用多普勒效應度血流速度。Δf/f0=2ucos⁡θc\Delta f / f_0 = \frac{2 u \cos \theta}{c}Δf/f0​=c2ucosθ​
+
+
+💡 核心重點總結表
+
+
+主題
+廣東話重點
+
+
+
+Instrumentation
+讀熟個流程：感覺 -&gt; 放大 -&gt; 濾波 -&gt; 顯示。
+
+
+Op-Amps
+考試必計 Inverting 同 Non-inverting Gain。
+
+
+CMRR
+數值愈高，代表部機剔除 50Hz 雜訊愈勁。
+
+
+DRL Circuit
+用嚟減低 Common-mode Noise 嘅神技。
+
+
+Nyquist
+唔好採樣得太慢，唔係會 Aliasing。
+
+
+
+Gemini’s Note: 幫你執返好咗 Front-matter。YAML 最怕喺鍵值對（key: value）入面見到奇怪嘅括號或者冇空格。依家應該可以正常 hexo g 喇！
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>University Notes</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>CS1302</tag>
         <tag>CityU</tag>
-        <tag>Beginner</tag>
-        <tag>AI generate</tag>
+        <tag>Biomedical Engineering</tag>
+        <tag>Study Notes</tag>
+        <tag>BME</tag>
       </tags>
   </entry>
   <entry>
@@ -779,6 +954,646 @@ Deep Learning (最強 AI)
       </tags>
   </entry>
   <entry>
+    <title>BME4104 Technology for Drug Discovery</title>
+    <url>/posts/86a96b5c.html</url>
+    <content><![CDATA[
+
+本筆記旨在整理 BME4104 課程內容，涵蓋藥物研發的基本流程、分子相互作用、篩選技術及現代分析方法。
+
+
+BME4104 Technology for Drug DiscoveryTable of Contents
+Lecture 1: Introduction to Drug Discovery
+Lecture 2: Drug-Receptor Interactions &amp; Binding Theory
+Lecture 3: Binding Assays
+Lecture 4: Structure-Activity Relationship (SAR)
+Lecture 5: Analytical Technologies
+Lecture 6: In Silico Screening
+Lecture 7: Biologics
+Lecture 8: Single-Molecule (SM) Techniques
+
+Lecture 1: Introduction to Drug Discovery核心內容 (Technical Details)
+藥物定義: 化學物質用於治療、預防或診斷疾病。
+作用機制 (MOA): 藥物與特定蛋白質靶點 (Protein Target) 的生化相互作用。
+藥物分類:
+Small Molecules (小分子): 化學合成，分子量細，通常可以口服。
+Biopharmaceuticals (生物製劑): 蛋白質或抗體，分子量大，通常需注射。
+
+
+篩選策略:
+Phenotypical Screening: 先睇生物反應 (結果)，後搵原因。
+Target-based Screening: 針對特定蛋白質設計藥物。
+
+
+
+廣東話解釋 (Cantonese Summary)
+「藥物研發嘅大圖畫」：呢一課係成個 Course 嘅入門。最緊要分清 Small Molecule (好似阿士匹靈咁一粒粒食) 同 Biologics (好似抗體藥咁要打針)。以前啲人係「神農氏嘗百草」式咁試咗有無效先 (Phenotypic)，而家就多咗針對某個「壞咗」嘅蛋白質嚟度身訂造藥物 (Target-based)。
+
+1. 什麼是藥物？ (Defining a Drug)在生物工程角度，藥物不只是「藥丸」，它是一種化學信號：
+
+定義：任何能治療、預防、診斷疾病，或提升生理&#x2F;心理福祉的化學物質。
+作用機制 (Mechanism of Action, MOA)：
+藥物必須與體內的 Protein Target (蛋白質靶點) 結合才能發揮作用。
+歷史冷知識：阿士匹靈 (Aspirin) 雖然在 1897 年就面世，但人類直到 1970 年代才真正弄清楚它的 MOA。這說明了「有效」不代表我們當下就「明佢點運作」。
+
+
+
+廣東話解釋
+「藥物唔係變魔術」：隻藥入到身體，一定要搵到個「對手」（Protein Target）黐住，先會產生反應。就好似匙羹要配返個碗咁，呢個過程就係 MOA。
+
+
+2. 藥物兩大陣營：小分子 vs 生物製劑藥物研發主要分為兩條賽道，它們的物理性質與生產方式完全不同：
+
+
+
+特性
+小分子藥物 (Small Molecules)
+生物製劑 (Biopharmaceuticals &#x2F; Biologics)
+
+
+
+例子
+Aspirin, Caffeine, Antibiotics
+Insulin, Monoclonal Antibodies, Gene Therapy
+
+
+生產
+化學合成 (Chemical Synthesis)
+生物表達 (Cell-based Expression)
+
+
+給藥途徑
+通常可口服 (Oral)
+通常需注射 (Injection)
+
+
+分子量
+較小 (Small)
+極大且複雜 (Large &amp; Complex)
+
+
+優點
+成本低、方便、穿透力強
+專一性高 (Highly Specific)、毒性低
+
+
+廣東話解釋
+「細藥丸 vs 大分子」：
+
+小分子：好似一粒樂高積木咁細，可以周圍走，甚至入到細胞入面。
+生物製劑：好似一架飛機咁大，結構好複雜，雖然好準，但因為佢係蛋白質，你一吞落肚就會被胃酸消化晒，所以一定要用打針嘅方式入血。
+
+
+
+3. 研發策略：Phenotypic vs Target-based這是考試最常問的對比：
+A. 表現型篩選 (Phenotypic Screening) - 「經典法」
+邏輯：先看結果，再找原因。
+流程：將藥物加進細胞或動物（如斑馬魚），看病徵有沒有改善。
+優點：可以在最接近真實生物環境下觀察效果，不需要預先知道靶點。
+
+B. 靶點篩選 (Target-based Screening) - 「現代法」
+邏輯：先找靶點，再造藥物。
+流程：已知某個蛋白質跟疾病有關，然後針對該蛋白篩選能結合的分子。
+優點：研發方向明確，分子結構優化（Optimization）更科學化。
+
+廣東話解釋
+「神農氏 vs 狙擊手」：
+
+Phenotypic 就好似神農氏食草，食完見到個病好返就係好藥，唔使理佢點解好。
+Target-based 就係我哋已經知道個敵人（蛋白質）長咩樣，特登設計粒「子彈」去射佢。
+
+
+
+4. 藥物研發的跨學科本質藥物研發是一個巨大的 Pipeline (流水線)，涉及：
+
+Genomics (基因組學)：搵 Target。
+Chemistry (化學)：合成分子。
+Engineering (工程)：高通量篩選 (High-throughput screening) 與儀器分析。
+Economics (經濟)：考慮研發成本與回報。
+
+
+Lecture 2: Drug-Receptor Interactions &amp; Binding Theory核心內容 (Technical Details)
+Binding Affinity (結合親和力): 衡量藥物與目標結合嘅強度。
+平衡解離常數 (KD): 
+公式: KD = [drug] * [receptor] / [complex]
+KD 越小，親和力越高。
+
+
+藥效學 (Pharmacodynamics): 
+Agonist (激動劑): 結合後產生生物反應。
+Antagonist (拮抗劑): 霸住個位但唔產生反應，阻礙原本嘅配體結合。
+
+
+分子間相互作用: Van der Waals forces, Hydrogen Bonds, Ionic Interactions, Hydrophobic Interactions.
+
+廣東話解釋 (Cantonese Summary)
+「痴得有幾實？」：呢一課講緊隻藥點樣「黐」住個目標。你要記住個 KD 值，KD 越細即係代表隻藥同個受體痴得越實 (Affinity 越高)。另外要識分 Agonist (幫手開門嘅) 同 Antagonist (用嚟塞住個匙窿嘅)。
+
+Lecture 2 核心目標：量化藥物與目標蛋白結合的「強度」，理解 KDK_DKD​ 的數學意義，並分辨不同類型的藥物行為（Agonist vs Antagonist）。
+
+
+1. 結合親和力 (Drug Binding Affinity)親和力是指藥物分子（Ligand）與目標生物分子（Receptor&#x2F;Protein）結合的強度。
+A. 平衡解離常數 (Equilibrium Dissociation Constant, KDK_DKD​)這是衡量親和力最重要的指標。
+
+定義公式：KD=[Drug][Receptor][Complex]K_D = \frac{[Drug][Receptor]}{[Complex]}KD​=[Complex][Drug][Receptor]​
+物理意義：當一半的受體被藥物佔據時（50% Occupancy），此時的藥物濃度就等於 KDK_DKD​。
+關鍵結論：KDK_DKD​ 越小，親和力（Affinity）越高。
+
+廣東話解釋
+「KDK_DKD​ 越細隻藥越勁」：想像你要用幾多濃度嘅藥先可以「黐」住一半嘅目標。如果只需要好少藥（KDK_DKD​ 低）就已經黐到一半，證明呢隻藥同目標嘅吸引力好強。
+
+
+2. 藥效學基礎 (Pharmacodynamics)研究藥物如何與作用位點（Sites of Action）互動。
+A. 結合要求
+立體專一性：藥物與受體的 3D 形狀必須吻合，通常至少需要 3 個接觸點（Attachment points）。
+可逆性：大多數藥物結合是可逆的（非共價鍵）。
+
+B. 藥物角色分類
+Agonist (激動劑)：結合受體後，會激活受體並產生生物反應（例如開啟離子通道）。
+Antagonist (拮抗劑&#x2F;抑制劑)：結合受體但不產生反應。它的作用是「霸位」，阻止原本的配體結合。
+
+廣東話解釋
+「開門定塞匙窿？」：
+
+Agonist 就係條啱嘅鎖匙，插落去轉得郁，可以開到門（有反應）。
+Antagonist 就係一粒香口膠或者一條斷咗嘅鎖匙，佢塞住咗個匙窿，雖然開唔到門，但其他人（Agonist）都插唔入嚟。
+
+
+
+3. 分子間相互作用力 (Intermolecular Interactions)藥物能黐住 Target，全靠以下幾種弱作用力（由弱到強排列）：
+
+
+
+作用力類型
+能量 (kJ&#x2F;mol)
+特點
+
+
+
+Van der Waals
+0.4 - 4.0
+距離極短時才發生，所有分子都有。
+
+
+Hydrogen Bonds (氫鍵)
+12 - 30
+藥物設計中最常見，具方向性。
+
+
+Ionic Interactions
+~20
+正負電荷吸引。
+
+
+Hydrophobic Effect
+&lt; 40
+非極性分子在水中傾向自發聚集。
+
+
+廣東話解釋
+「點樣黐得實？」：雖然單一條氫鍵或者範德華力好弱，但如果隻藥同 Target 有好多個接觸點，加埋一齊就會黐得好實。藥物設計嘅目標就係要令呢啲弱作用力最大化。
+
+
+Lecture 3: Binding Assays核心內容 (Technical Details)
+Saturation Analysis (飽和分析): 直接測量藥物與受體嘅結合。
+Inhibition Binding Assay (競爭性結合實驗):
+利用有標記 (Labeled) 嘅分子同無標記 (Non-labeled) 嘅分子競爭同一個位。
+IC50: 抑制 50% 結合所需嘅藥物濃度。
+
+
+Surface Plasmon Resonance (SPR): 一種「無標記」(Label-free) 嘅光學技術，利用全反射原理觀察分子動態。
+
+廣東話解釋 (Cantonese Summary)
+「點樣測親和力？」：呢度教你點樣喺 Lab 測 KD。主要有兩種方法：一種係直接睇幾時「飽和」；另一種係搵隻已知嘅「競爭者」去搶位，睇下要幾多藥 (IC50) 先可以搶走一半位。SPR 係高科技方法，唔使加標記就睇到分子「黐」上去嘅過程。
+
+1. 飽和分析 (Saturation Analysis) - 直接測量這是最直觀的方法，直接將有放射性或螢光標記的藥物（Labeled Ligand）加到受體中：
+
+目的：測量該標記藥物的 KDK_DKD​ 值。
+過程：不斷增加標記藥物的濃度，直到所有受體都被佔滿（飽和）。
+缺點：如果每一種新開發的藥都要加標記，成本太高且化學結構可能改變。
+
+
+2. 抑制結合實驗 (Inhibition Binding Assay) - 間接測量這是藥物篩選中最常用的方法，又叫 Competitive Binding Assay。
+A. 運作原理我們不需要標記每一隻新藥。我們只需要：
+
+一隻已知的、有標記的藥物（Hot Ligand）。
+你的新藥（Cold Ligand &#x2F; Non-labeled）。讓它們競爭同一個蛋白質靶點。如果新藥很強，它就會把有標記的藥「踢走」。
+
+B. 重要指標：IC50
+定義：能將 50% 的標記藥物從受體上擠下來所需的新藥濃度。
+應用：用於比較不同候選藥物的強度（Potency）。
+注意：IC50IC_{50}IC50​ 並不直接等於 KDK_DKD​，但它們呈正相關。
+
+廣東話解釋
+「搶櫈仔」：想像有一張櫈（Target）。我哋先搵一個帶住螢光帽嘅人（Labeled Drug）坐喺度。之後你帶你隻新藥入嚟，如果你隻藥夠勁，就可以踢走個螢光帽人自己坐上去。我哋只要睇下個螢光弱咗幾多，就知你隻藥搶位搶得幾勁。IC50IC_{50}IC50​ 越細，代表你隻藥搶位越叻！
+
+
+3. 表面電漿共振 (Surface Plasmon Resonance, SPR)這是一種現代化、無需標記 (Label-free) 的光學感測技術。
+A. 核心技術點
+全反射 (Total Internal Reflection)：光線在特定角度入射時會產生 消逝波 (Evanescent wave)。
+實時監測：當藥物（Ligand）黐上固定在金屬片上的受體（Receptor）時，表面的折射率會改變。
+優點：
+不需要標記藥物（唔使加螢光）。
+可以即時睇到結合（On-rate）同解離（Off-rate）嘅動態過程。
+
+
+
+廣東話解釋
+「唔使標籤都睇到你」：SPR 係一種好高級嘅方法。佢利用光學原理，只要有嘢「黐」上去塊金片度，折射角度就會變。我哋唔使喺藥物上面加任何標籤，都可以即時知到隻藥結合得快唔快、解離得慢唔慢。
+
+
+Lecture 4: Structure-Activity Relationship (SAR)核心內容 (Technical Details)
+SAR 定義: 研究分子化學結構與其生物活性之間嘅關係。
+Analogs (類似物): 修改原始分子的結構（如增加碳鏈、改變取代基）嚟測試活性變化。
+ADME 屬性: 吸收 (Absorption)、分佈 (Distribution)、代謝 (Metabolism)、排泄 (Excretion)。
+QSAR (定量 SAR): 利用數學公式 (如 Hansch Equation) 嚟預測活性。
+
+廣東話解釋 (Cantonese Summary)
+「改頭換面」：科學家會將隻藥嘅結構改少少，睇下會唔會更勁 (Potency 更高) 或者更易入血 (ADME 更理想)。ADME 係藥代動力學嘅核心，決定咗隻藥喺你體內留幾耐同埋去唔去到患處。
+
+1. 什麼是 SAR？SAR (Structure-Activity Relationship) 是研究分子的化學結構與其生物活性之間的關係。
+
+核心邏輯：結構決定性質。如果你改變了一個分子的某個部分（例如加一個甲基），它的親和力、溶解度或毒性都會改變。
+Analogs (類似物)：透過對原始活性分子進行微調（如更換取代基）產生的新分子。科學家透過比較一組類似物的活性，來找出「關鍵結構」。
+
+廣東話解釋
+「微調零件」：就好似改車咁，你換個大啲嘅尾翼（加個官能團），架車會唔會跑得快啲？SAR 就係不斷試唔同嘅「零件」組合，睇下邊個組合最勁、最有效。
+
+
+2. 藥代動力學的四大維度：ADME在優化藥物時，我們不只要看它「黐得幾實」(Affinity)，還要看它在體內的「旅程」：
+
+Absorption (吸收)：藥物點樣入血（例如口服藥要穿過腸胃壁）。
+Distribution (分佈)：藥物去到身體邊個部位（係咪去到患處？定係留喺脂肪？）。
+Metabolism (代謝)：身體（主要係肝臟）點樣分解隻藥。有啲藥會變做更強嘅物質，有啲會被廢掉。
+Excretion (排泄)：隻藥點樣離開身體（通常經尿液排出）。
+
+廣東話解釋
+「入得嚟、去到、留得住、走得返」：隻藥幾勁都好，如果入唔到血（Absorption 差），或者未去到患處就被肝臟拆散晒（Metabolism 太快），咁都唔係一隻好藥。
+
+
+3. QSAR：定量研究 (Quantitative SAR)當我們想用數學公式來預測活性時，就會用到 QSAR。它將生物活性表示為物理化學參數的函數：
+
+生物活性：通常用 log(1/C)log(1/C)log(1/C) 表示，CCC 是引起效應的最小濃度。
+參數指標：
+疏水性 (Hydrophobicity)：logPlogPlogP 或 logDlogDlogD。值越高，越容易穿透細胞膜。
+電子效應 (Electronic Effects)：用 Hammett σ\sigmaσ 常數表示，睇個取代基係「捐電子」定「抽電子」。
+立體效應 (Steric Effects)：用 Taft EsE_sEs​ 表示分子的大小（Bulkiness）。
+
+
+
+廣東話解釋
+「用數學計出最強藥物」：QSAR 就係將藥物嘅特性（肥唔肥、電性強唔強、大唔大粒）變做數字，塞入一條公式（例如 Hansch 方程），直接預測下一隻新藥嘅表現，唔使吓吓都真係去整出嚟試。
+
+
+4. 案例學習：抗生素系列課件中提到了 Beta-lactam (如 Penicillin) 和 Aminoglycoside 系列：
+
+關鍵點：同一個系列的藥物（Class），基本架構相似，但透過 SAR 的調整（修改 R 基團），可以擴大殺菌範圍或降低耐藥性。
+
+
+Lecture 5: Analytical Technologies核心內容 (Technical Details)
+Spectroscopy (光譜法): 利用光與物質嘅相互作用。
+IR (紅外): 睇官能團 (Functional groups)。
+UV (紫外): 睇化學鍵模式。
+NMR (核磁共振): 區分異構體 (Isomers)，確定氫原子位置。
+
+
+Mass Spectrometry (質譜): 測量分子量。
+
+廣東話解釋 (Cantonese Summary)
+「藥物驗明正身」：你整咗隻新藥出嚟，點知佢純唔純或者係咪真係嗰樣嘢？就要靠呢幾部機。NMR 最勁，可以睇清楚成個分子嘅架構；Mass Spec 就係幫隻藥磅重，睇下分子量啱唔啱。
+
+1. 為什麼需要分析工具？在藥物研發中，我們經常面臨三個問題：
+
+未知鑑定：從天然植物提取的成分，結構長怎樣？
+純度檢測：合成出來的藥粉夠不夠純？有沒有雜質？
+代謝追蹤：藥物在體內被肝臟代謝後，變成了什麼新分子？
+
+
+2. 四大分析技術詳解A. 紅外光譜 (Infrared Spectroscopy, IR)
+原理：測量分子內部化學鍵的振動頻率。
+主要用途：鑑定官能團 (Functional Groups)。
+例子：如果圖譜在 1700 cm−11700\ cm^{-1}1700 cm−1 有強峰，代表分子含有 C=OC=OC=O（羰基）。
+
+B. 紫外-可見光譜 (UV-Vis Spectroscopy)
+原理：利用電子躍遷（Electron transitions）。
+主要用途：確定分子的共軛系統 (Bonding patterns)。
+特點：通常用於定量分析（根據 Beer-Lambert Law 計算濃度）。
+
+C. 質譜 (Mass Spectrometry, MS)
+原理：將分子打碎成離子碎片，按質荷比 (m&#x2F;z) 排列。
+主要用途：確定分子量 (Molecular Weight)。
+廣東話解釋：「幫分子磅重」。透過碎片的重量，我們可以像拼圖一樣拼湊回原始分子的結構。
+
+D. 核磁共振 (Nuclear Magnetic Resonance, NMR) —— 最強工具
+原理：偵測氫原子（1H^1H1H）或碳原子（13C^{13}C13C）在磁場中的信號。
+主要用途：確定分子骨架、區分異構體 (Isomers)。
+技術點：化學位移 (Chemical Shift)、偶合常數 (Coupling constant)。
+
+
+3. 技術對比與總結
+
+
+技術
+縮寫
+它能告訴你什麼？
+廣東話直白版
+
+
+
+Infrared
+IR
+有哪些官能團（如 -OH, -COOH）
+睇下佢帶住咩「配件」。
+
+
+Ultraviolet
+UV
+鍵的連接模式、濃度
+睇下佢「色相」如何。
+
+
+Mass Spec
+MS
+分子量、化學式
+幫佢「磅重」同拆零件。
+
+
+Nuclear Magnetic
+NMR
+原子具體排位、立體結構
+影一張「全家福」睇清全貌。
+
+
+廣東話解釋
+「分析四劍客」：如果你執到一隻未知藥粉，首先用 MS 磅下佢幾重，再用 IR 睇下佢有無啲特殊零件（官能團），最後用 NMR 影張 3D 相睇清楚啲原子點排。咁樣隻藥就無所遁形！
+
+
+Lecture 6: In Silico Screening核心內容 (Technical Details)
+CADD (計算機輔助藥物設計): 利用電腦模擬來篩選與設計藥物分子。
+關鍵驅動因素:
+商業因素: 降低研發成本（由 Target ID 到 Lead Refinement 都能慳錢）。
+倫理因素 (3Rs): 替代 (Replace)、減少 (Reduce)、優化 (Refine) 動物實驗。
+
+
+設計分類:
+Ligand-based (基於配體): 唔知 Target 結構，但知邊啲分子有效，從而搵相似嘅分子。
+Structure-based (基於結構): 知道目標蛋白嘅 3D 結構，直接做分子對接 (Molecular Docking)。
+
+
+ADME Prediction: 喺實驗室合成之前，先用電腦預測分子的藥代動力學特性。
+
+廣東話解釋 (Cantonese Summary)
+「用電腦打機咁搵藥」：呢一課講緊點樣用電腦幫手。點解要用電腦？一嚟係為咗慳錢，二嚟係為咗減少用動物做實驗 (3Rs)。如果你知個蛋白質長咩樣，就用 Structure-based 嚟「配對」；如果你唔知，就用 Ligand-based 嚟「照板煮碗」。
+
+1. 為什麼要 In Silico？ (Key Drivers)“In silico” 指的是透過電腦模擬進行的實驗。
+
+商業驅動 (Business)：
+省錢：實體合成一個分子並做測試非常貴。電腦篩選可以從幾百萬個分子中剔除明顯無效的，縮小範圍。
+加速：由目標識別 (Target ID) 到先導化合物優化 (Lead Refinement) 都能提速。
+
+
+倫理驅動 (Ethics - 3Rs)：
+Replace (替代)：用電腦或細胞模型代替動物。
+Reduce (減少)：減少所需動物的數量。
+Refine (優化)：減輕動物的痛苦。
+
+
+
+
+2. 兩大設計策略 (Drug Design Strategies)A. 基於結構的設計 (Structure-Based Drug Design, SBDD)
+前提：你已經知道目標蛋白質的 3D 結構（通常來自 X-ray 或 NMR）。
+核心技術：分子對接 (Molecular Docking)：
+像玩拼圖一樣，用電腦模擬藥物分子如何「插」進蛋白質的活性口袋（Binding Pocket）。
+計算評分（Scoring Function），預測結合得穩不穩。
+
+
+
+B. 基於配體的設計 (Ligand-Based Drug Design, LBDD)
+前提：不知道蛋白質結構，但知道一堆已經證實有效的藥物分子。
+方法：
+Pharmacophore Modeling：提取這些有效分子的共同特徵（例如都有一個氫鍵供體）。
+相似性搜尋：在數據庫（如 ZINC）中搵長得像這些「成功案例」的分子。
+
+
+
+
+3. 分子動力學 (Molecular Dynamics, MD)
+定義：模擬原子和分子在一段時間內的物理運動。
+應用：蛋白質不是死板板的，它們會動。MD 可以模擬藥物進入蛋白質後的動態變化，睇下個結合係咪真係穩定。
+
+廣東話解釋
+「模擬打機搵藥」：
+
+SBDD：你已經攞到對方個「鎖匙窿」模型，直接喺電腦度 3D Print 唔同嘅鎖匙去試。
+LBDD：你見人哋手頭上幾條鎖匙都開到門，你就照住嗰幾條鎖匙嘅形狀，去搵啲類似嘅返嚟試。電腦篩選就好似幫你過濾咗 99% 唔合格嘅候選人，剩低嗰 1% 先至真係入 Lab 做實驗。
+
+
+
+Lecture 7: Biologics核心內容 (Technical Details)
+定義: 利用生物技術（從活生物體中）產生的醫療藥物，如蛋白質、抗體、核酸（DNA&#x2F;RNA）。
+特點: 
+結構極其複雜，分子量遠大於小分子。
+與內源性蛋白質高度相似，代謝途徑較易預測。
+
+
+生產方式: 找到編碼該蛋白的基因，將其克隆到細胞系統中進行大規模表達。
+與小分子的比較:
+生物製劑通常毒性較低，但生產成本極高，且不能口服（會被胃酸消化）。
+
+
+
+廣東話解釋 (Cantonese Summary)
+「大分子藥物」：生物製劑同平時啲化學藥丸唔同，佢哋係由活生生嘅細胞整出嚟嘅。雖然佢哋好精準、毒性低，但係有個缺點：好貴，而且一定要打針 (注射)，因為佢係蛋白質，你直接吞落肚會當成肉咁消化咗。
+
+這是為你準備的 Lecture 7: Biologics 深度整理版本。這一課是關於現代藥物研發中最前沿、價值最高的領域之一，討論為什麼我們要從「化學合成」轉向「生物製造」。
+1. 什麼是生物製劑？ (What are Biologics?)生物製劑是指利用生物技術從活生物體（Living Organisms）中產生的醫療藥物。
+
+組成成分：蛋白質（包括抗體）、核酸（DNA, RNA）、細胞（如幹細胞）。
+特性：
+來源多樣：微生物、植物或動物細胞。
+結構極其複雜：比小分子大得多。
+與人體內源性蛋白質高度相似，因此代謝過程通常是可以預測的。
+
+
+
+
+2. 小分子藥物 vs 生物製劑 (The Great Comparison)這部分是考試的重點，必須清楚兩者的優劣對比：
+
+
+
+特性
+小分子藥物 (Small Molecule)
+生物製劑 (Biologics)
+
+
+
+大小 (Size)
+很小（如水分子）
+極大（如一架飛機）
+
+
+結構 (Structure)
+簡單、定義明確
+複雜、具三維空間摺疊
+
+
+穩定性 (Stability)
+高（通常耐熱、耐酸）
+低（易受熱或機械力破壞）
+
+
+免疫原性
+通常較低
+可能引發免疫反應（抗藥抗體）
+
+
+製造方法
+化學合成（容易複製）
+細胞培養（難以完全複製，「製程即產品」）
+
+
+廣東話解釋
+「腳踏車 vs 波音 747」：如果小分子藥物係一部單車，生物製劑就係一架波音 747 客機。單車結構簡單，壞咗零件好易配；但飛機結構極度精密，只要生產過程（細胞培養）有一點偏差，最後整出嚟嘅藥效可能已經完全唔同。
+
+
+3. 生物製劑的生產流程 (Manufacturing)
+基因克隆 (Cloning)：找到編碼該目標蛋白的基因。
+細胞轉染 (Transfection)：將基因植入宿主細胞（如 CHO 細胞）。
+擴增與培養 (Scale-up)：在生物反應器中大規模養細胞，讓它們「吐出」蛋白質。
+純化 (Purification)：將蛋白質從細胞殘骸與培養基中分離出來。
+
+廣東話解釋
+「細胞農場」：我哋唔係用燒杯做實驗，而係好似「養豬」咁養一大堆細胞，逼呢啲細胞幫我哋打工。佢哋食營養液，然後排泄出嚟嘅就係我哋要嘅抗體或者蛋白質藥物。
+
+
+4. 常見例子
+抗體藥物 (Monoclonal Antibodies, mAbs)：針對癌症、免疫疾病。
+胰島素 (Insulin)：最早的重組蛋白藥物。
+基因治療 (Gene Therapy)：直接修復出問題的 DNA。
+
+
+Lecture 8: Single-Molecule (SM) Techniques核心內容 (Technical Details)
+FCS (螢光相關光譜法): 觀測單個分子進入觀測區時產生的螢光波動。
+布朗運動 (Brownian Motion): 溶劑分子碰撞產生的隨機運動。
+擴散 (Diffusion): 粒子由高濃度向低濃度移動的宏觀表現。
+隨機行走模型 (Random Walk Model): 用數學描述粒子運動的路徑。
+藥研應用: 用來測量藥物分子與目標結合後的擴散係數變化（結合後分子變大，跑得慢咗）。
+
+廣東話解釋 (Cantonese Summary)
+「睇住一粒分子行街」：呢課講緊點樣觀測「單一分子」。主要用到 FCS 技術。原理好簡單：一隻藥如果黐住咗個大目標 (Protein)，佢就會變重咗，喺水入面「行路」(Diffusion) 就會變慢。我哋觀察佢行得幾快，就知佢結合得好唔好。
+
+1. 布朗運動與擴散 (Motion in Solution)引用課件： 2026SemB_8_SM+techniques_lecture_slides.pdf
+在液體中，分子永遠不會靜止：
+
+布朗運動 (Brownian Motion)：由於不斷受到溶劑分子（如水）的隨機撞擊，粒子產生連續且隨機的抖動。
+隨機行走模型 (Random Walk Model)：用來描述單個粒子運動路徑的數學模型。
+擴散 (Diffusion)：粒子從高濃度區域向低濃度區域的宏觀移動。擴散是數百萬個粒子進行隨機行走的集體表現。
+
+廣東話解釋
+「分子行街」：想像你喺旺角行人專用區行街，周圍啲人（溶劑分子）係咁撞埋嚟，令你行得歪來歪去。呢種無定向嘅郁動就係布朗運動。如果你觀察一大群人由地鐵站出口散開，呢個宏觀現象就係擴散。
+
+
+2. 螢光相關光譜法 (Fluorescence Correlation Spectroscopy, FCS)這是本課最核心的單分子觀測技術。
+A. 運作原理
+觀測體積 (Observation Volume)：用激光聚焦出一個極小的空間（約 1 飛升, fL）。
+螢光波動：當帶有螢光的藥物分子「走入」或「離開」這個微小空間時，檢測器會捕捉到螢光強度的變化（Fluctuation）。
+自相關函數 (Autocorrelation)：透過數學計算，分析螢光波動隨時間消失的速度。
+
+B. 藥研應用：測量結合
+邏輯：分子越大，跑得越慢。
+實驗：
+未結合時：藥物分子細，跑得快（擴散係數 DDD 大）。
+結合後：藥物黐住咗巨大的目標蛋白，整體變重、體積變大，跑得慢（擴散係數 DDD 變細）。
+
+
+結果：透過監測擴散速度的變化，我們可以直接判斷藥物有沒有成功結合。
+
+廣東話解釋
+「重咗就跑得慢」：FCS 就好似個交通監測器咁。原本粒藥（螢光分子）好細粒，行得好快；但如果佢黐住咗個大靶點（Protein），佢就會變得好臃腫，行過監測器嘅時間就會變長。我哋睇下佢行得幾快，就知佢係「單身」定係已經「黐埋一齊」。
+
+
+3. 為什麼要觀測「單分子」？ (Why Single-Molecule?)
+克服平均值誤差：傳統實驗測的是數百萬個分子的「平均反應」，單分子技術可以觀察到個體差異（Heterogeneity）。
+極高靈敏度：只需極少量的樣本即可進行。
+
+
+總結 (Course Conclusion) 點擊查看課程學習路徑 
+              
+              Intro: 識分小分子定生物製劑。Binding: 學識 KD 代表親和力。Assay: 學識用 IC50 去量化效果。SAR: 改結構 (ADME) 嚟優化藥效。Analysis: 用 NMR 同 MS 驗貨。In Silico: 電腦模擬慳時間。Biologics: 蛋白質&#x2F;抗體藥物。SM: 單分子觀測極限。
+              
+            
+
+考試前必睇：
+
+KDK_DKD​ 定義：KDK_DKD​ 越細，結合越實。
+IC50：競爭實驗中，踢走一半標記藥所需的濃度。
+ADME：Absorption, Distribution, Metabolism, Excretion。
+分析工具：NMR 睇結構，MS 磅重量，IR 睇零件。
+CADD：SBDD (知 Target) vs LBDD (唔知 Target)。
+生物製劑：大分子、複雜、唔可以口服。
+FCS：用擴散速度變慢嚟證實 Binding。
+
+
+
+Study Instructions: This guide combines theory from Lectures 1-8 with practical questions from Assignments 1-6. Use the folding blocks to test yourself before reading the answers.
+
+
+Part 1: Binding Theory &amp; Assays (L2, L3)Q1: The Cheng-Prusoff CorrectionQuestion: Lab A uses a ligand concentration [L]=48 nM[L] = 48\text{ nM}[L]=48 nM and finds IC50=200 nMIC_{50} = 200\text{ nM}IC50​=200 nM. Lab B uses [L]=4 nM[L] = 4\text{ nM}[L]=4 nM and finds IC50=150 nMIC_{50} = 150\text{ nM}IC50​=150 nM. If Klig=2 nMK_{lig} = 2\text{ nM}Klig​=2 nM, which compound is a better inhibitor?
+ View Answer & Explanation 
+              
+              English Answer:Using the Cheng-Prusoff equation: Ki&#x3D;IC50&#x2F;(1+[L]&#x2F;Klig)K_i &#x3D; IC_{50} &#x2F; (1 + [L]&#x2F;K_{lig})Ki​&#x3D;IC50​&#x2F;(1+[L]&#x2F;Klig​)Lab A (Compound X): Ki&#x3D;200&#x2F;(1+48&#x2F;2)&#x3D;200&#x2F;25&#x3D;8 nMK_i &#x3D; 200 &#x2F; (1 + 48&#x2F;2) &#x3D; 200 &#x2F; 25 &#x3D; \mathbf{8\text{ nM}}Ki​&#x3D;200&#x2F;(1+48&#x2F;2)&#x3D;200&#x2F;25&#x3D;8 nMLab B (Compound Y): Ki&#x3D;150&#x2F;(1+4&#x2F;2)&#x3D;150&#x2F;3&#x3D;50 nMK_i &#x3D; 150 &#x2F; (1 + 4&#x2F;2) &#x3D; 150 &#x2F; 3 &#x3D; \mathbf{50\text{ nM}}Ki​&#x3D;150&#x2F;(1+4&#x2F;2)&#x3D;150&#x2F;3&#x3D;50 nMConclusion: Compound X is a better inhibitor because it has a lower KiK_iKi​ value, indicating higher binding affinity.廣東話解釋 (Canto Explanation):呢條式係考試必出。記住 IC50IC_{50}IC50​ 係會被你落幾多 Ligand ([L][L][L]) 影響嘅。Lab A 落咗好多 Ligand，所以個 IC50IC_{50}IC50​ 被「谷大咗」。我哋計返個 KiK_iKi​ 出嚟先係隻藥真實嘅「戰鬥力」。KiK_iKi​ 愈細，代表隻藥愈少份量就鎖死個目標，即係愈勁。
+              
+            
+
+
+
+
+Part 2: Structure-Activity Relationship &amp; SAR (L4)Q2: Substituent Effects (π\piπ parameters)Question: Why does an −OCH3-OCH_3−OCH3​ group have a more negative π\piπ value than a methyl (−CH3-CH_3−CH3​) group, and how does this affect drug absorption?
+ View Answer & Explanation 
+              
+              English Answer:The π\piπ parameter represents substituent hydrophobicity (πx&#x3D;log⁡Px−log⁡PH\pi_x &#x3D; \log P_x - \log P_Hπx​&#x3D;logPx​−logPH​). −OCH3-OCH_3−OCH3​: The oxygen atom can participate in hydrogen bonding with water, making it more hydrophilic (negative π\piπ).−CH3-CH_3−CH3​: It is a non-polar hydrocarbon group, making it more hydrophobic (positive π\piπ).Absorption: Hydrophobic drugs (higher log⁡P\log PlogP) generally cross the lipid bilayer of cell membranes more easily via passive diffusion, leading to better absorption.廣東話解釋 (Canto Explanation):π\piπ 係睇粒零件係咪「好色」（色即係脂肪&#x2F;疏水）。甲基 (−CH3-CH_3−CH3​) 係純脂肪油，所以 π\piπ 係正數。但 −OCH3-OCH_3−OCH3​ 有個氧原子，佢鍾意同水玩（氫鍵），所以變咗親水，π\piπ 就係負值。如果你隻藥想穿過細胞膜（脂肪層），通常要有返咁上下疏水性先入得順。
+              
+            
+
+
+Part 3: Analytical Technologies (L5)Q3: Solving an Unknown StructureQuestion: An unknown molecule has M+=117M^+ = 117M+=117 in MS. IR shows a sharp peak at 2250 cm−12250\text{ cm}^{-1}2250 cm−1. 1H NMR^1H\text{ NMR}1H NMR shows signals at 7.3 ppm7.3\text{ ppm}7.3 ppm (5H) and 3.7 ppm3.7\text{ ppm}3.7 ppm (2H). Identify the molecule.
+ View Answer & Explanation 
+              
+              English Answer:IR 2250 cm−12250\text{ cm}^{-1}2250 cm−1: Indicates a Nitrile (C≡NC\equiv NC≡N) group.NMR 7.3 ppm7.3\text{ ppm}7.3 ppm (5H): Indicates a monosubstituted benzene ring (C6H5−C_6H_5-C6​H5​−).NMR 3.7 ppm3.7\text{ ppm}3.7 ppm (2H): Indicates a methylene group (−CH2−-CH_2-−CH2​−) next to an electronegative group.Mass Spec: 77 (phenyl)+14 (CH2)+26 (CN)&#x3D;11777\text{ (phenyl)} + 14\text{ (CH2)} + 26\text{ (CN)} &#x3D; 11777 (phenyl)+14 (CH2)+26 (CN)&#x3D;117.Structure: Benzyl cyanide.廣東話解釋 (Canto Explanation):玩呢啲拼圖題：見到 2250 就諗 Nitrile；見到 7.3ppm 有 5 粒 H 就一定係苯環；3.7ppm 嗰 2 粒 H 係 CH2CH_2CH2​。加埋啲重量：77+14+26&#x3D;11777+14+26 &#x3D; 11777+14+26&#x3D;117，啱啱好。個 CH2CH_2CH2​ 係夾喺苯環同 Nitrile 中間，所以被兩邊「吸電子」拉到個位高咗（Downfield）。
+              
+            
+
+
+
+
+Part 4: Biologics &amp; Modern Methods (L7, L8)Q4: Small Molecules vs. BiologicsQuestion: List two reasons why biologics (like antibodies) have low oral bioavailability.
+ View Answer & Explanation 
+              
+              English Answer:Large Molecular Weight: Biologics are too large to pass through the intestinal wall (epithelial cells) via passive diffusion.Enzymatic Degradation: Being proteins, they are easily broken down by proteases and gastric acid in the gastrointestinal (GI) tract.廣東話解釋 (Canto Explanation):生物製劑通常係蛋白質（大分子）。想像下你食隻抗體入肚，同食塊牛扒無分別，會被胃酸同腸道啲蛋白質酶消滅晒，變晒氨基酸。就算無被消滅，佢太巨型（波音 747 咁大），腸道啲「門口」根本過唔到，所以一定要打針（Injection）。
+              
+            
+
+Q5: FCS and BindingQuestion: How does Fluorescence Correlation Spectroscopy (FCS) detect if a drug binds to a protein?
+ View Answer & Explanation 
+              
+              English Answer:FCS monitors the Brownian motion of fluorescently labeled molecules. Unbound: Small drug molecules diffuse quickly (high Diffusion Coefficient DDD).Bound: When the drug binds to a large protein, the complex becomes larger and moves slower.Observation: A right-shift in the autocorrelation curve indicates the drug has bound to the target.廣東話解釋 (Canto Explanation):FCS 係睇「布朗運動」。原本粒藥係螢光細粒，行路行得好快。但如果佢成功結合咗個大 Protein，成份嘢變到好重，行路就會變慢。我哋睇下個螢光信號閃動得幾快，就知佢結合咗未。
+              
+            
+
+
+
+
+]]></content>
+      <categories>
+        <category>Study Notes</category>
+        <category>University</category>
+      </categories>
+      <tags>
+        <tag>Biomedical Engineering</tag>
+        <tag>BME4104</tag>
+        <tag>Drug Discovery</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CS4426 - DNA Motif Analysis &amp; Prediction Pipeline</title>
     <url>/posts/399f1187.html</url>
     <content><![CDATA[DNA Motif Analysis &amp; Prediction PipelineDeveloped with Gemini AI for Bioinformatics Research
@@ -844,8 +1659,483 @@ Use 03_predict_dna.py followed by 04_structural_check.py to analyze new sequence
         <category>CS4425</category>
       </categories>
       <tags>
-        <tag>Bioinfometics</tag>
         <tag>Biomedical Engineering</tag>
+        <tag>Bioinfometics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-2 | 生物材料-2</title>
+    <url>/posts/f5cdc6c3.html</url>
+    <content><![CDATA[Lecture 2: Surface and Bulk Properties of Biomaterials | 第二講：生物材料的表面與體相性質Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Surface Properties | 表面性質 ：
+Surface Contact Angle (Hydrophobicity) | 表面接觸角（疏水性）
+SEM (Roughness and Patterns) | 掃描電子顯微鏡（粗糙度和圖案）
+ESCA or XPS (Chemical Composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
+TOP-SIMS (Chemical Composition) | 飛行時間二次離子質譜（化學組成）
+Raman Spectroscopy (Chemical Composition) | 拉曼光譜（化學組成）
+
+
+Bulk Properties | 本體性質 ：
+Stress and Strain (Mechanical Properties) | 應力和應變（機械性質）
+Shear Stress and Shear Strain (Mechanical Properties) | 剪應力和剪應變（機械性質）
+Young’s Modulus and Shear Modulus (Mechanical Properties) | 楊氏模量和剪切模量（機械性質）
+
+
+
+Three Aspects in Biomaterials | 生物材料的三個面向
+Aspects | 面向:
+Biological materials or body | 生物材料或身體
+Implant materials | 植入材料
+Interaction between the two in the body | 兩者在體內的交互作用
+
+
+
+Surface and Bulk Properties Overview | 表面與體相性質概述
+Surface Properties | 表面性質:
+Surface contact angle | 表面接觸角
+Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
+Electron Spectroscopy for Chemical Analysis (ESCA or XPS) | 電子能譜化學分析（ESCA或XPS）
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
+Raman spectroscopy | 拉曼光譜
+
+
+Bulk Properties | 體相性質:
+Stress and strain | 應力與應變
+Shear stress and shear strain | 剪應力與剪應變
+Young’s modulus and shear modulus | 楊氏模量與剪切模量
+
+
+
+Surface Properties Characteristics | 表面性質特徵
+Key Points | 要點:
+Surfaces have unique reactivity. | 表面具有獨特的反應性。
+The surface is inevitably different from the bulk. | 表面與體相不可避免地不同。
+Surface molecules can exhibit considerable mobility. | 表面分子可展現顯著的流動性。
+
+
+
+Surface Dynamics | 表面動態
+Observation: The movement of atoms and molecules near the surface in response to the external environment is highly significant. | 觀察：表面附近的原子和分子對外部環境的響應具有重要意義。
+
+Protein-Surface Interaction | 蛋白質-表面交互作用
+Effect of Protein Size: Larger proteins with more amino acids can make more interactions with a surface. | 蛋白質大小的影響：具有更多氨基酸的較大蛋白質可與表面進行更多交互作用。
+
+Surface Characteristics | 表面特性
+Factors | 因素:
+Roughness (A) | 粗糙度 (A)
+Patterns (C) | 圖案 (C)
+Wettability, surface mobility, chemical composition (B) | 潤濕性、表面流動性、化學組成 (B)
+Electrical charge, crystallinity (E) | 電荷、結晶度 (E)
+Heterogeneity (D &amp; F) | 異質性 (D &amp; F)
+
+
+
+Cosmetic Contact Lenses | 彩色隱形眼鏡
+Context: Pigments in cosmetic contact lenses may alter surface properties, impacting comfort compared to clear lenses. | 背景：彩色隱形眼鏡中的色素可能改變表面性質，影響與透明隱形眼鏡相比的舒適度。
+Factors | 因素:
+Location and depth of pigment particles from the lens surface | 色素顆粒與鏡片表面的位置和深度
+Coefficient of friction | 摩擦係數
+Surface roughness | 表面粗糙度
+
+
+Source: Johnson &amp; Johnson Vision Inc, Eye Contact Lens, 2018 Nov; 44(2):S256
+
+Surface Analysis Considerations | 表面分析注意事項
+Challenges | 挑戰:
+All methods can alter the surface. | 所有方法都可能改變表面。
+Potential for artifacts requires corroborative information from multiple methods to construct a complete surface profile. | 可能出現的偽影需要多種方法提供佐證信息以構建完整的表面輪廓。
+
+
+
+Surface and Bulk Properties (Detailed) | 表面與體相性質（詳細）
+Surface Properties | 表面性質:
+Surface contact angle (hydrophobicity) | 表面接觸角（疏水性）
+SEM (roughness and patterns) | 掃描電子顯微鏡（粗糙度與圖案）
+ESCA or XPS (chemical composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
+TOF-SIMS (chemical composition) | 飛行時間二次離子質譜（化學組成）
+Raman spectroscopy (chemical composition) | 拉曼光譜（化學組成）
+
+
+Bulk Properties | 體相性質:
+Stress and strain (mechanical properties) | 應力與應變（機械性能）
+Shear stress and shear strain (mechanical properties) | 剪應力與剪應變（機械性能）
+Young’s modulus and shear modulus (mechanical properties) | 楊氏模量與剪切模量（機械性能）
+
+
+
+Surface Contact Angle | 表面接觸角
+Definition: Measures the balance between cohesive forces (liquid molecules attracted to each other) and adhesive forces (liquid molecules attracted to the surface). | 定義：測量液體分子相互吸引的內聚力與液體分子與表面吸引的黏附力之間的平衡。
+Purpose: Directly measures surface wettability; indirectly probes surface energy, roughness, heterogeneity, contamination, and molecular mobility. | 目的：直接測量表面潤濕性；間接探測表面能量、粗糙度、異質性、污染和分子流動性。
+Equation:\gamma_&#123;sl&#125; = \gamma_&#123;sv&#125; + \gamma_&#123;lv&#125; \cos \theta
+Where | 其中:
+((\gamma_{lv})): Liquid-vapor surface tension | 液-氣表面張力
+((\gamma_{sl})): Interfacial tension between solid and liquid | 固-液界面張力
+((\gamma_{sv})): Surface energy of the solid | 固體表面能量
+((\theta)): Contact angle | 接觸角
+
+
+
+Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
+Function: Uses a high-energy electron beam (5-100 keV) rastered on a specimen under vacuum. | 功能：使用高能電子束（5-100 keV）在真空下對樣品進行掃描。
+Mechanism: Low-energy secondary electrons (1-20 eV) are emitted from impact points, with intensity depending on atomic composition and geometry. | 機制：從撞擊點發射低能二次電子（1-20 eV），強度取決於原子組成和幾何形狀。
+Note: Insulating materials require metallic coating; images reflect the coating surface, not the underlying material. | 注意：絕緣材料需要金屬塗層；圖像反映塗層表面，而非底層材料。
+
+SEM Imaging | 掃描電子顯微鏡成像
+Electrons Used: Secondary and backscattered electrons are used for SEM imaging. | 使用的電子：二次電子和背散射電子用於SEM成像。
+
+Electron-Solid Interactions | 電子-固體交互作用
+Regions | 區域:
+Secondary Electron (SE): Produced wherever primary electrons go, but only those near the surface reach the SE detector for imaging. | 二次電子（SE）：只要初級電子到達就會產生，但只有靠近表面的二次電子到達SE檢測器進行成像。
+Backscattered Electron (BSE): Produced with higher energy, travels farther than SE, provides better Z-contrast. | 背散射電子（BSE）：以較高能量產生，傳播距離比SE遠，提供更好的Z對比。
+X-ray Region: Used for Energy-Dispersive X-ray Spectroscopy (EDX), travels farther than BSE, best for analytical purposes. | X射線區域：用於能量分散X射線光譜（EDX），傳播距離比BSE遠，最適合分析用途。
+
+
+Applications | 應用:
+SE: Best spatial resolution | 二次電子：最佳空間分辨率
+BSE: Better Z-contrast | 背散射電子：更好的Z對比
+EDX: Best for elemental analysis | 能量分散X射線光譜：最佳元素分析
+
+
+
+X-ray Photoelectron Spectroscopy (XPS&#x2F;ESCA) | X射線光電子能譜（XPS&#x2F;ESCA）
+Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements. | 機制：X射線光子從原子內殼（例如K殼）中逐出電子。逐出電子的動能可用於計算結合能，識別元素。
+Applications | 應用:
+Identifies all elements except H and He (concentrations &gt;0.1%). | 識別除H和He外的所有元素（濃度&gt;0.1%）。
+Semi-quantitative elemental surface composition (±10%). | 半定量元素表面組成（±10%）。
+Provides molecular environment details (oxidation state, bonding atoms). | 提供分子環境細節（氧化態、鍵結原子）。
+Detects aromatic&#x2F;unsaturated structures via shake-up transitions. | 通過激發躍遷檢測芳香族&#x2F;不飽和結構。
+Identifies organic groups using derivatization reactions. | 使用衍生反應識別有機基團。
+Non-destructive elemental depth profiles (100 Å). | 非破壞性元素深度輪廓（100 Å）。
+Destructive depth profiles (thousands of Å) using argon etching (for inorganics). | 使用氬蝕刻進行破壞性深度輪廓（數千Å，用於無機物）。
+Lateral surface composition variations (spatial resolution 8-150 µm). | 橫向表面組成變化（空間分辨率8-150 µm）。
+Fingerprinting materials using valence band spectra and bonding orbitals. | 使用價帶光譜和鍵結軌道進行材料指紋識別。
+Studies on hydrated (frozen) surfaces. | 研究水合（冷凍）表面。
+
+
+
+Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
+Mechanism: Bombards surface with accelerated ions, ejecting secondary ions, radicals, excited states, and neutrals. Only secondary ions are measured. | 機制：用加速離子轟擊表面，逐出二次離子、自由基、激發態和中性粒子。僅測量二次離子。
+Purpose: Analyzes elemental, isotopic, or molecular composition of the outermost 1-2 nm. | 目的：分析最外層1-2奈米的元素、同位素或分子組成。
+Static SIMS: Uses low ion doses for analysis. | 靜態SIMS：使用低離子劑量進行分析。
+
+When to Use EDX, ESCA, or SIMS | 何時使用EDX、ESCA或SIMS
+EDX: For elemental composition of materials. | 用於材料的元素組成。
+ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental&#x2F;chemical states with good energy resolution. | 用於量化表面污染、理解電子結構或分析具有良好能量分辨率的元素&#x2F;化學狀態。
+SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis. | 用於高靈敏度痕量元素檢測、高分辨率表面成像或分子組成分析。
+
+Raman Spectroscopy | 拉曼光譜
+Definition: Measures the energy difference (Raman shift) between incident and scattered light. | 定義：測量入射光與散射光之間的能量差（拉曼位移）。
+Spectrum: Vertical axis (intensity of scattered light), horizontal axis (wavenumber of Raman shift, cm⁻¹). | 光譜：縱軸（散射光強度），橫軸（拉曼位移波數，cm⁻¹）。
+Example: Raman spectrum of tetrachloromethane (532 nm green laser): | 範例：四氯化碳的拉曼光譜（532奈米綠色激光）:
+Stokes scattering: Lower wavenumber (longer wavelength), typically used for analysis. | 斯托克斯散射：較低波數（較長波長），通常用於分析。
+Anti-Stokes scattering: Higher wavenumber (shorter wavelength), also usable. | 反斯托克斯散射：較高波數（較短波長），也可用。
+
+
+
+Surface-Enhanced Raman Spectroscopy (SERS) | 表面增強拉曼光譜（SERS）
+Technique: Uses nanostructured metal surfaces (gold or silver) to amplify Raman scattering signals via localized surface plasmons, enabling ultra-sensitive detection (down to single-molecule level). | 技術：使用奈米結構金屬表面（金或銀）通過局部表面電漿子放大拉曼散射信號，實現超靈敏檢測（低至單分子水平）。
+
+Bulk Properties | 體相性質
+Role: Dictate the ability to carry loads without undue deflection, premature failure, or degradation. | 角色：決定在不發生過度變形、過早失效或降解的情況下承載負荷的能力。
+Properties | 性質:
+Mechanical (stress, strain, moduli) | 機械（應力、應變、模量）
+Thermal (response to heat) | 熱（對熱的響應）
+Optical (response to light) | 光學（對光的響應）
+
+
+Categories | 類別:
+Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness). | 內在：取決於組成（例如，密度、熱容量、剛度）。
+Extrinsic: Depend on microstructure (e.g., yield strength, optical&#x2F;magnetic properties). | 外在：取決於微觀結構（例如，屈服強度、光學&#x2F;磁性質）。
+
+
+
+Physical Properties | 物理性質
+Examples | 範例:
+Crystallinity | 結晶度
+Thermal transition points (melting point ((T_m)), glass transition point ((T_g))) | 熱轉換點（熔點((T_m))、玻璃化轉變點((T_g))）
+Chemical composition | 化學組成
+
+
+Impact: Chemical composition affects bulk properties, surface chemistry, and other characteristics. | 影響：化學組成影響體相性質、表面化學和其他特性。
+
+Mechanical Properties | 機械性質
+Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact). | 目的：估計在機械負載（拉伸、壓縮、扭轉、彎曲、循環負載、衝擊）下的行為。
+Influence: Highly affected by physical and chemical characteristics. | 影響：高度受物理和化學特性的影響。
+
+Tensile&#x2F;Compressive Testing | 拉伸&#x2F;壓縮測試
+Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate. | 方法：以控制的幅度和速率施加單軸負載（拉伸、壓縮或剪切）。
+Setup: One end of the specimen is attached to a movable platform. | 設置：樣品的一端附著在可移動平台上。
+
+Compression Testing | 壓縮測試
+Application: Common for biomaterials under compressive forces (e.g., orthopedic implants). | 應用：常用於承受壓縮力的生物材料（例如，骨科植入物）。
+Specimen: Cylindrical, with length at least twice the diameter. | 樣品：圓柱形，長度至少為直徑的兩倍。
+Calculation: Stress-strain calculated similarly to tensile tests, but values are negative. | 計算：應力-應變計算與拉伸測試類似，但值為負。
+
+Practice Questions | 練習題Q1. What does a “real-world” material’s surface have?a. Waterb. Oxidesc. Organic moleculesd. All of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the aboveExplanation: Real-world surfaces are rarely pristine; they typically have adsorbed water, oxide layers, and organic contaminants from the environment.解析： 真實材料表面通常含有水分、氧化層及有機污染物，並非完全潔淨。
+
+    
+  
+
+Q2. If a liquid does not wet a solid surface, then its angle of contact is:a. Acute angleb. Obtuse anglec. Right angled. More than one of the abovee. None of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Obtuse angleExplanation: Poor wetting corresponds to a large contact angle (&gt;90°), which is obtuse. Good wetting occurs when the angle is small (&lt;90°).解析： 液體不潤濕固體表面時，接觸角大於90°，屬於鈍角；良好潤濕時接觸角小於90°。
+
+    
+  
+
+Q3. Dancing of small pieces of camphor on the surface of water is due to:a. Viscosityb. Surface tensionc. Weightd. Lifting force
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Surface tensionExplanation: Camphor alters local surface tension, creating gradients that cause movement (Marangoni effect).解析： 樟腦改變水面局部表面張力，產生梯度，導致樟腦片移動，稱為馬蘭哥尼效應。
+
+    
+  
+
+Q4. Which one is true for cosmetic contact lenses?a. They alter eye color or appearance, some also correct visionb. They are harmless for anyone to usec. Contact lenses are considered consumablesd. Cosmetic lenses are one-size-fits-all
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: a. They alter eye color or appearance, some also correct visionExplanation: Cosmetic lenses primarily change appearance; some have corrective power. They are not universally safe and require proper fitting.解析： 美瞳主要改變眼睛外觀，有些具矯正功能，但並非人人安全，需適當配戴。
+
+    
+  
+
+Q5. Difference between EDX, ESCA and SIMS’s measurement?a. Excitation sourceb. Detection signalc. Profiling depthd. All of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: d. All of the aboveExplanation: These techniques differ in excitation (X-ray, electron, ion), detection (photon, electron, ion), and depth sensitivity (nm to μm scale).解析： EDX、ESCA、SIMS在激發源、檢測信號及深度解析度上均有差異。
+
+    
+  
+
+Q6. Which factor keeps changing in tensile stress and compression stress?a. Young’s modulus of materialsb. Cross-sectional area of materialsc. Surface chemistry of materialsd. None of the above
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: b. Cross-sectional area of materialsExplanation: Under tension or compression, the cross-sectional area changes due to deformation, while Young’s modulus remains constant for elastic range.解析： 拉伸或壓縮時，截面積隨變形改變，而楊氏模量在彈性範圍內保持不變。
+
+    
+  
+
+Q7. Why is PCL a better choice than PLGA in making scaffolds for skull regeneration?a. Glass transition temperature (−60 °C vs 40–60 °C)b. Melting temperature (60 °C vs 240 °C)c. Degradation time (2–3 years vs &lt;6 months)d. Mechanical properties (&gt;200 MPa vs 20–30 MPa)
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer: All of the above (a, b, c, d)Explanation: PCL has lower Tg and Tm, making it easier to process; it degrades slowly, providing long-term support, and has superior mechanical strength compared to PLGA.解析： PCL玻璃轉化溫度和熔點低，易加工；降解時間長，能長期支撐；機械強度高於PLGA，適合顱骨再生。
+
+    
+  
+
+Q8. How to evaluate antiviral coating (e.g., MAP-1)?
+EffectivenessDosage&#x2F;coverageHalf-life&#x2F;sustainabilityDuration under conditions (shower, sunlight, moisture)
+
+    
+      .collapse-button {
+        background-color: #FF7242;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .collapse-box {
+        display: none;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: #fef6f0;
+        border: 1px solid #FF7242;
+        color: #333;
+      }
+    
+    
+      Show Answer
+    
+    
+      ✅ Answer:Evaluation involves testing antimicrobial efficacy, required dosage, durability under environmental stress, and longevity before reapplication.解析： 評估需檢測抗菌效能、劑量覆蓋率、耐久性及在環境條件下的持續時間。
+
+    
+  ]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomedical Engineering</tag>
+        <tag>Biomaterials</tag>
+        <tag>Lecture Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -1692,481 +2982,6 @@ Harvest healthy skin from donor site → mesh graft → cover wound → secure a
       </tags>
   </entry>
   <entry>
-    <title>Biomaterials-2 | 生物材料-2</title>
-    <url>/posts/f5cdc6c3.html</url>
-    <content><![CDATA[Lecture 2: Surface and Bulk Properties of Biomaterials | 第二講：生物材料的表面與體相性質Back to Outline | 回到大綱Lecture Outline | 課程大綱
-Surface Properties | 表面性質 ：
-Surface Contact Angle (Hydrophobicity) | 表面接觸角（疏水性）
-SEM (Roughness and Patterns) | 掃描電子顯微鏡（粗糙度和圖案）
-ESCA or XPS (Chemical Composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
-TOP-SIMS (Chemical Composition) | 飛行時間二次離子質譜（化學組成）
-Raman Spectroscopy (Chemical Composition) | 拉曼光譜（化學組成）
-
-
-Bulk Properties | 本體性質 ：
-Stress and Strain (Mechanical Properties) | 應力和應變（機械性質）
-Shear Stress and Shear Strain (Mechanical Properties) | 剪應力和剪應變（機械性質）
-Young’s Modulus and Shear Modulus (Mechanical Properties) | 楊氏模量和剪切模量（機械性質）
-
-
-
-Three Aspects in Biomaterials | 生物材料的三個面向
-Aspects | 面向:
-Biological materials or body | 生物材料或身體
-Implant materials | 植入材料
-Interaction between the two in the body | 兩者在體內的交互作用
-
-
-
-Surface and Bulk Properties Overview | 表面與體相性質概述
-Surface Properties | 表面性質:
-Surface contact angle | 表面接觸角
-Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
-Electron Spectroscopy for Chemical Analysis (ESCA or XPS) | 電子能譜化學分析（ESCA或XPS）
-Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
-Raman spectroscopy | 拉曼光譜
-
-
-Bulk Properties | 體相性質:
-Stress and strain | 應力與應變
-Shear stress and shear strain | 剪應力與剪應變
-Young’s modulus and shear modulus | 楊氏模量與剪切模量
-
-
-
-Surface Properties Characteristics | 表面性質特徵
-Key Points | 要點:
-Surfaces have unique reactivity. | 表面具有獨特的反應性。
-The surface is inevitably different from the bulk. | 表面與體相不可避免地不同。
-Surface molecules can exhibit considerable mobility. | 表面分子可展現顯著的流動性。
-
-
-
-Surface Dynamics | 表面動態
-Observation: The movement of atoms and molecules near the surface in response to the external environment is highly significant. | 觀察：表面附近的原子和分子對外部環境的響應具有重要意義。
-
-Protein-Surface Interaction | 蛋白質-表面交互作用
-Effect of Protein Size: Larger proteins with more amino acids can make more interactions with a surface. | 蛋白質大小的影響：具有更多氨基酸的較大蛋白質可與表面進行更多交互作用。
-
-Surface Characteristics | 表面特性
-Factors | 因素:
-Roughness (A) | 粗糙度 (A)
-Patterns (C) | 圖案 (C)
-Wettability, surface mobility, chemical composition (B) | 潤濕性、表面流動性、化學組成 (B)
-Electrical charge, crystallinity (E) | 電荷、結晶度 (E)
-Heterogeneity (D &amp; F) | 異質性 (D &amp; F)
-
-
-
-Cosmetic Contact Lenses | 彩色隱形眼鏡
-Context: Pigments in cosmetic contact lenses may alter surface properties, impacting comfort compared to clear lenses. | 背景：彩色隱形眼鏡中的色素可能改變表面性質，影響與透明隱形眼鏡相比的舒適度。
-Factors | 因素:
-Location and depth of pigment particles from the lens surface | 色素顆粒與鏡片表面的位置和深度
-Coefficient of friction | 摩擦係數
-Surface roughness | 表面粗糙度
-
-
-Source: Johnson &amp; Johnson Vision Inc, Eye Contact Lens, 2018 Nov; 44(2):S256
-
-Surface Analysis Considerations | 表面分析注意事項
-Challenges | 挑戰:
-All methods can alter the surface. | 所有方法都可能改變表面。
-Potential for artifacts requires corroborative information from multiple methods to construct a complete surface profile. | 可能出現的偽影需要多種方法提供佐證信息以構建完整的表面輪廓。
-
-
-
-Surface and Bulk Properties (Detailed) | 表面與體相性質（詳細）
-Surface Properties | 表面性質:
-Surface contact angle (hydrophobicity) | 表面接觸角（疏水性）
-SEM (roughness and patterns) | 掃描電子顯微鏡（粗糙度與圖案）
-ESCA or XPS (chemical composition) | 電子能譜化學分析或X射線光電子能譜（化學組成）
-TOF-SIMS (chemical composition) | 飛行時間二次離子質譜（化學組成）
-Raman spectroscopy (chemical composition) | 拉曼光譜（化學組成）
-
-
-Bulk Properties | 體相性質:
-Stress and strain (mechanical properties) | 應力與應變（機械性能）
-Shear stress and shear strain (mechanical properties) | 剪應力與剪應變（機械性能）
-Young’s modulus and shear modulus (mechanical properties) | 楊氏模量與剪切模量（機械性能）
-
-
-
-Surface Contact Angle | 表面接觸角
-Definition: Measures the balance between cohesive forces (liquid molecules attracted to each other) and adhesive forces (liquid molecules attracted to the surface). | 定義：測量液體分子相互吸引的內聚力與液體分子與表面吸引的黏附力之間的平衡。
-Purpose: Directly measures surface wettability; indirectly probes surface energy, roughness, heterogeneity, contamination, and molecular mobility. | 目的：直接測量表面潤濕性；間接探測表面能量、粗糙度、異質性、污染和分子流動性。
-Equation:\gamma_&#123;sl&#125; = \gamma_&#123;sv&#125; + \gamma_&#123;lv&#125; \cos \theta
-Where | 其中:
-((\gamma_{lv})): Liquid-vapor surface tension | 液-氣表面張力
-((\gamma_{sl})): Interfacial tension between solid and liquid | 固-液界面張力
-((\gamma_{sv})): Surface energy of the solid | 固體表面能量
-((\theta)): Contact angle | 接觸角
-
-
-
-Scanning Electron Microscopy (SEM) | 掃描電子顯微鏡（SEM）
-Function: Uses a high-energy electron beam (5-100 keV) rastered on a specimen under vacuum. | 功能：使用高能電子束（5-100 keV）在真空下對樣品進行掃描。
-Mechanism: Low-energy secondary electrons (1-20 eV) are emitted from impact points, with intensity depending on atomic composition and geometry. | 機制：從撞擊點發射低能二次電子（1-20 eV），強度取決於原子組成和幾何形狀。
-Note: Insulating materials require metallic coating; images reflect the coating surface, not the underlying material. | 注意：絕緣材料需要金屬塗層；圖像反映塗層表面，而非底層材料。
-
-SEM Imaging | 掃描電子顯微鏡成像
-Electrons Used: Secondary and backscattered electrons are used for SEM imaging. | 使用的電子：二次電子和背散射電子用於SEM成像。
-
-Electron-Solid Interactions | 電子-固體交互作用
-Regions | 區域:
-Secondary Electron (SE): Produced wherever primary electrons go, but only those near the surface reach the SE detector for imaging. | 二次電子（SE）：只要初級電子到達就會產生，但只有靠近表面的二次電子到達SE檢測器進行成像。
-Backscattered Electron (BSE): Produced with higher energy, travels farther than SE, provides better Z-contrast. | 背散射電子（BSE）：以較高能量產生，傳播距離比SE遠，提供更好的Z對比。
-X-ray Region: Used for Energy-Dispersive X-ray Spectroscopy (EDX), travels farther than BSE, best for analytical purposes. | X射線區域：用於能量分散X射線光譜（EDX），傳播距離比BSE遠，最適合分析用途。
-
-
-Applications | 應用:
-SE: Best spatial resolution | 二次電子：最佳空間分辨率
-BSE: Better Z-contrast | 背散射電子：更好的Z對比
-EDX: Best for elemental analysis | 能量分散X射線光譜：最佳元素分析
-
-
-
-X-ray Photoelectron Spectroscopy (XPS&#x2F;ESCA) | X射線光電子能譜（XPS&#x2F;ESCA）
-Mechanism: An X-ray photon ejects an electron from an atom’s inner shell (e.g., K shell). The kinetic energy of the ejected electron allows calculation of binding energy, identifying elements. | 機制：X射線光子從原子內殼（例如K殼）中逐出電子。逐出電子的動能可用於計算結合能，識別元素。
-Applications | 應用:
-Identifies all elements except H and He (concentrations &gt;0.1%). | 識別除H和He外的所有元素（濃度&gt;0.1%）。
-Semi-quantitative elemental surface composition (±10%). | 半定量元素表面組成（±10%）。
-Provides molecular environment details (oxidation state, bonding atoms). | 提供分子環境細節（氧化態、鍵結原子）。
-Detects aromatic&#x2F;unsaturated structures via shake-up transitions. | 通過激發躍遷檢測芳香族&#x2F;不飽和結構。
-Identifies organic groups using derivatization reactions. | 使用衍生反應識別有機基團。
-Non-destructive elemental depth profiles (100 Å). | 非破壞性元素深度輪廓（100 Å）。
-Destructive depth profiles (thousands of Å) using argon etching (for inorganics). | 使用氬蝕刻進行破壞性深度輪廓（數千Å，用於無機物）。
-Lateral surface composition variations (spatial resolution 8-150 µm). | 橫向表面組成變化（空間分辨率8-150 µm）。
-Fingerprinting materials using valence band spectra and bonding orbitals. | 使用價帶光譜和鍵結軌道進行材料指紋識別。
-Studies on hydrated (frozen) surfaces. | 研究水合（冷凍）表面。
-
-
-
-Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) | 飛行時間二次離子質譜（TOF-SIMS）
-Mechanism: Bombards surface with accelerated ions, ejecting secondary ions, radicals, excited states, and neutrals. Only secondary ions are measured. | 機制：用加速離子轟擊表面，逐出二次離子、自由基、激發態和中性粒子。僅測量二次離子。
-Purpose: Analyzes elemental, isotopic, or molecular composition of the outermost 1-2 nm. | 目的：分析最外層1-2奈米的元素、同位素或分子組成。
-Static SIMS: Uses low ion doses for analysis. | 靜態SIMS：使用低離子劑量進行分析。
-
-When to Use EDX, ESCA, or SIMS | 何時使用EDX、ESCA或SIMS
-EDX: For elemental composition of materials. | 用於材料的元素組成。
-ESCA (XPS): For quantifying surface contamination, understanding electronic structure, or analyzing elemental&#x2F;chemical states with good energy resolution. | 用於量化表面污染、理解電子結構或分析具有良好能量分辨率的元素&#x2F;化學狀態。
-SIMS: For high-sensitivity trace element detection, high-resolution surface imaging, or molecular composition analysis. | 用於高靈敏度痕量元素檢測、高分辨率表面成像或分子組成分析。
-
-Raman Spectroscopy | 拉曼光譜
-Definition: Measures the energy difference (Raman shift) between incident and scattered light. | 定義：測量入射光與散射光之間的能量差（拉曼位移）。
-Spectrum: Vertical axis (intensity of scattered light), horizontal axis (wavenumber of Raman shift, cm⁻¹). | 光譜：縱軸（散射光強度），橫軸（拉曼位移波數，cm⁻¹）。
-Example: Raman spectrum of tetrachloromethane (532 nm green laser): | 範例：四氯化碳的拉曼光譜（532奈米綠色激光）:
-Stokes scattering: Lower wavenumber (longer wavelength), typically used for analysis. | 斯托克斯散射：較低波數（較長波長），通常用於分析。
-Anti-Stokes scattering: Higher wavenumber (shorter wavelength), also usable. | 反斯托克斯散射：較高波數（較短波長），也可用。
-
-
-
-Surface-Enhanced Raman Spectroscopy (SERS) | 表面增強拉曼光譜（SERS）
-Technique: Uses nanostructured metal surfaces (gold or silver) to amplify Raman scattering signals via localized surface plasmons, enabling ultra-sensitive detection (down to single-molecule level). | 技術：使用奈米結構金屬表面（金或銀）通過局部表面電漿子放大拉曼散射信號，實現超靈敏檢測（低至單分子水平）。
-
-Bulk Properties | 體相性質
-Role: Dictate the ability to carry loads without undue deflection, premature failure, or degradation. | 角色：決定在不發生過度變形、過早失效或降解的情況下承載負荷的能力。
-Properties | 性質:
-Mechanical (stress, strain, moduli) | 機械（應力、應變、模量）
-Thermal (response to heat) | 熱（對熱的響應）
-Optical (response to light) | 光學（對光的響應）
-
-
-Categories | 類別:
-Intrinsic: Depend on composition (e.g., density, heat capacity, stiffness). | 內在：取決於組成（例如，密度、熱容量、剛度）。
-Extrinsic: Depend on microstructure (e.g., yield strength, optical&#x2F;magnetic properties). | 外在：取決於微觀結構（例如，屈服強度、光學&#x2F;磁性質）。
-
-
-
-Physical Properties | 物理性質
-Examples | 範例:
-Crystallinity | 結晶度
-Thermal transition points (melting point ((T_m)), glass transition point ((T_g))) | 熱轉換點（熔點((T_m))、玻璃化轉變點((T_g))）
-Chemical composition | 化學組成
-
-
-Impact: Chemical composition affects bulk properties, surface chemistry, and other characteristics. | 影響：化學組成影響體相性質、表面化學和其他特性。
-
-Mechanical Properties | 機械性質
-Purpose: Estimate behavior under mechanical loads (tension, compression, torsion, bending, cyclic loading, impact). | 目的：估計在機械負載（拉伸、壓縮、扭轉、彎曲、循環負載、衝擊）下的行為。
-Influence: Highly affected by physical and chemical characteristics. | 影響：高度受物理和化學特性的影響。
-
-Tensile&#x2F;Compressive Testing | 拉伸&#x2F;壓縮測試
-Method: Applies uniaxial loading (tensile, compressive, or shear) at controlled amplitude and rate. | 方法：以控制的幅度和速率施加單軸負載（拉伸、壓縮或剪切）。
-Setup: One end of the specimen is attached to a movable platform. | 設置：樣品的一端附著在可移動平台上。
-
-Compression Testing | 壓縮測試
-Application: Common for biomaterials under compressive forces (e.g., orthopedic implants). | 應用：常用於承受壓縮力的生物材料（例如，骨科植入物）。
-Specimen: Cylindrical, with length at least twice the diameter. | 樣品：圓柱形，長度至少為直徑的兩倍。
-Calculation: Stress-strain calculated similarly to tensile tests, but values are negative. | 計算：應力-應變計算與拉伸測試類似，但值為負。
-
-Practice Questions | 練習題Q1. What does a “real-world” material’s surface have?a. Waterb. Oxidesc. Organic moleculesd. All of the above
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: d. All of the aboveExplanation: Real-world surfaces are rarely pristine; they typically have adsorbed water, oxide layers, and organic contaminants from the environment.解析： 真實材料表面通常含有水分、氧化層及有機污染物，並非完全潔淨。
-
-    
-  
-
-Q2. If a liquid does not wet a solid surface, then its angle of contact is:a. Acute angleb. Obtuse anglec. Right angled. More than one of the abovee. None of the above
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: b. Obtuse angleExplanation: Poor wetting corresponds to a large contact angle (&gt;90°), which is obtuse. Good wetting occurs when the angle is small (&lt;90°).解析： 液體不潤濕固體表面時，接觸角大於90°，屬於鈍角；良好潤濕時接觸角小於90°。
-
-    
-  
-
-Q3. Dancing of small pieces of camphor on the surface of water is due to:a. Viscosityb. Surface tensionc. Weightd. Lifting force
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: b. Surface tensionExplanation: Camphor alters local surface tension, creating gradients that cause movement (Marangoni effect).解析： 樟腦改變水面局部表面張力，產生梯度，導致樟腦片移動，稱為馬蘭哥尼效應。
-
-    
-  
-
-Q4. Which one is true for cosmetic contact lenses?a. They alter eye color or appearance, some also correct visionb. They are harmless for anyone to usec. Contact lenses are considered consumablesd. Cosmetic lenses are one-size-fits-all
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: a. They alter eye color or appearance, some also correct visionExplanation: Cosmetic lenses primarily change appearance; some have corrective power. They are not universally safe and require proper fitting.解析： 美瞳主要改變眼睛外觀，有些具矯正功能，但並非人人安全，需適當配戴。
-
-    
-  
-
-Q5. Difference between EDX, ESCA and SIMS’s measurement?a. Excitation sourceb. Detection signalc. Profiling depthd. All of the above
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: d. All of the aboveExplanation: These techniques differ in excitation (X-ray, electron, ion), detection (photon, electron, ion), and depth sensitivity (nm to μm scale).解析： EDX、ESCA、SIMS在激發源、檢測信號及深度解析度上均有差異。
-
-    
-  
-
-Q6. Which factor keeps changing in tensile stress and compression stress?a. Young’s modulus of materialsb. Cross-sectional area of materialsc. Surface chemistry of materialsd. None of the above
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: b. Cross-sectional area of materialsExplanation: Under tension or compression, the cross-sectional area changes due to deformation, while Young’s modulus remains constant for elastic range.解析： 拉伸或壓縮時，截面積隨變形改變，而楊氏模量在彈性範圍內保持不變。
-
-    
-  
-
-Q7. Why is PCL a better choice than PLGA in making scaffolds for skull regeneration?a. Glass transition temperature (−60 °C vs 40–60 °C)b. Melting temperature (60 °C vs 240 °C)c. Degradation time (2–3 years vs &lt;6 months)d. Mechanical properties (&gt;200 MPa vs 20–30 MPa)
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer: All of the above (a, b, c, d)Explanation: PCL has lower Tg and Tm, making it easier to process; it degrades slowly, providing long-term support, and has superior mechanical strength compared to PLGA.解析： PCL玻璃轉化溫度和熔點低，易加工；降解時間長，能長期支撐；機械強度高於PLGA，適合顱骨再生。
-
-    
-  
-
-Q8. How to evaluate antiviral coating (e.g., MAP-1)?
-EffectivenessDosage&#x2F;coverageHalf-life&#x2F;sustainabilityDuration under conditions (shower, sunlight, moisture)
-
-    
-      .collapse-button {
-        background-color: #FF7242;
-        color: #fff;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.9em;
-        margin-top: 10px;
-      }
-      .collapse-box {
-        display: none;
-        margin-top: 10px;
-        padding: 12px;
-        border-radius: 6px;
-        background-color: #fef6f0;
-        border: 1px solid #FF7242;
-        color: #333;
-      }
-    
-    
-      Show Answer
-    
-    
-      ✅ Answer:Evaluation involves testing antimicrobial efficacy, required dosage, durability under environmental stress, and longevity before reapplication.解析： 評估需檢測抗菌效能、劑量覆蓋率、耐久性及在環境條件下的持續時間。
-
-    
-  ]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Biomaterials(BME3123)</category>
-      </categories>
-      <tags>
-        <tag>Biomedical Engineering</tag>
-        <tag>Biomaterials</tag>
-        <tag>Lecture Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Biomaterials-3 | 生物材料-3</title>
     <url>/posts/6848b770.html</url>
     <content><![CDATA[Lecture 3: Polymers and Hydrogels | 聚合物和水凝膠Back to Outline | 回到大綱Lecture Outline | 課程大綱
@@ -2856,6 +3671,632 @@ Q11. What is the Simon IVC filter made of? | Simon下腔靜脈濾器由什麼材
         <tag>Biomedical Engineering</tag>
         <tag>Biomaterials</tag>
         <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title> BME 3102 Quantitative Human Physiology Comprehensive Notes</title>
+    <url>/posts/6e1ed4b7.html</url>
+    <content><![CDATA[
+
+🧠 BME 3102 Quantitative Human Physiology Comprehensive Notes
+📝 Course Overview and Structure
+Textbooks:
+Boron &amp; Boulpaep, Medical Physiology (2003, 3rd Edition 2016)
+
+
+Course Description:
+Quantitative, engineering approach to mammalian physiology.
+Covers major human physiological systems: nervous, renal, cardiovascular, respiratory.
+
+
+Primary Objective:
+Understand physiology of major systems biologically and quantitatively.
+Use mathematical models and engineering analysis.
+
+
+
+
+🧠 Nervous System PhysiologyNeuron Structure and Function
+Components: (神經元結構)
+Dendrites: receive signals (many to one) | 樹突：接收信號
+Soma (cell body) | 胞體（細胞體）
+Axon hillock: integrates signals | 軸初段：整合信號
+Axon: transmits signals (one to many) | 軸突：傳遞信號
+Presynaptic terminal (bouton): releases neurotransmitters | 突前膜末梢：釋放神經遞質
+
+
+Central Nervous System (CNS): brain and spinal cord | 中樞神經系統：大腦和脊髓
+Peripheral Nervous System (PNS): 12 pairs cranial nerves, 31 pairs spinal nerves | 周圍神經系統：12對腦神經，31對脊神經
+
+Electrical Signaling | 電信號傳遞
+Membrane Potential: | 膜電位
+
+Resting potential established by ion gradients. | 靜息電位由離子梯度建立。
+
+Nernst potential for ions calculated by: | 離子的能斯特電位計算如下：
+E=fracRTzFlnfrac[X]out[X]in E = \\frac{RT}{zF} \\ln \\frac{[X]_{out}}{[X]_{in}} E=fracRTzFlnfrac[X]out​[X]in​
+
+Constants:
+
+(R &#x3D; 8.314, J&#x2F;K&#x2F;mol)
+(T) in Kelvin
+(z): ion charge
+(F &#x3D; 96500, C&#x2F;mol)
+
+
+
+
+Typical Ion Concentrations and Nernst Potentials: | 典型離子濃度和能斯特電位：
+
+
+
+
+
+Ion
+Intracellular (mM)
+Extracellular (mM)
+Nernst Potential (mV)
+
+
+
+Na⁺
+50
+400
++54
+
+
+K⁺
+400
+10
+-96
+
+
+Cl⁻
+40
+540
+-68
+
+
+
+Resting Membrane Potential:
+[ V_m &#x3D; \frac{g_{Na} E_{Na} + g_K E_K + g_L E_L}{g_{Na} + g_K + g_L} ]
+
+Example values:
+
+
+
+Ion
+Conductance Ratio
+Concentration (In&#x2F;Out)
+
+
+
+Na⁺
+0.05
+12 &#x2F; 120 mM
+
+
+K⁺
+0.5
+120 &#x2F; 4 mM
+
+
+Cl⁻
+0.45
+4 &#x2F; 120 mM
+
+
+
+Calculated (V_m \approx -81, mV)
+
+
+
+
+Passive Membrane Model | 被動膜模型
+Membrane as RC Circuit: | 膜作為RC電路：
+
+Capacitance (C_m) | 電容 (C_m)
+Resistance (R_m) | 電阻 (R_m)
+Input current (I_{in}) | 輸入電流 (I_{in})
+
+
+Differential Equation: | 微分方程：
+taufracdVmdt=−Vm+IinRm,quadtau=RmCm \\tau \\frac{dV_m}{dt} = -V_m + I_{in} R_m, \\quad \\tau = R_m C_m taufracdVm​dt=−Vm​+Iin​Rm​,quadtau=Rm​Cm​
+
+Solution for step current:
+Vm(t)=IinRmleft(1−e−t/tauright) V_m(t) = I_{in} R_m \\left(1 - e^{-t/\\tau}\\right) Vm​(t)=Iin​Rm​left(1−e−t/tauright)
+
+Discharge (no input current):
+Vm(t)=Vm(t0)e−(t−t0)/tau V_m(t) = V_m(t_0) e^{-(t - t_0)/\\tau} Vm​(t)=Vm​(t0​)e−(t−t0​)/tau
+
+Hodgkin-Huxley Model | 霍奇金-赫胥黎模型
+Assumptions: | 假設：
+
+Ion currents are Ohmic. | 離子電流服從歐姆定律。
+Ion channels have voltage- and time-dependent conductances. | 離子通道具有電壓和時間依賴的電導。
+
+
+Currents: | 電流：
+I=CmfracdVdt+gNa(V−ENa)+gK(V−EK)+gL(V−EL) I = C_m \\frac{dV}{dt} + g_{Na} (V - E_{Na}) + g_K (V - E_K) + g_L (V - E_L) I=Cm​fracdVdt+gNa​(V−ENa​)+gK​(V−EK​)+gL​(V−EL​)
+
+Conductance gating variables: | 電導閘變數：
+
+Potassium: (g_K &#x3D; \bar{g}_K n^4), where (n) is the probability of a gate being open. | 鉀：(g_K &#x3D; \bar{g}_K n^4)，其中 (n) 是閘開啟的概率。
+Sodium: (g_{Na} &#x3D; \bar{g}_{Na} m^3 h), with activation (m) and inactivation (h). | 鈉：(g_{Na} &#x3D; \bar{g}_{Na} m^3 h)，具有激活 (m) 和失活 (h)。
+
+
+Gating kinetics: | 閘動力學：
+fracdndt=alphan(1−n)−betann \\frac{dn}{dt} = \\alpha_n (1 - n) - \\beta_n n fracdndt=alphan​(1−n)−betan​n
+
+Similar equations for (m) and (h) with voltage-dependent (\alpha) and (\beta). | (m) 和 (h) 的類似方程，具有電壓依賴的 (\alpha) 和 (\beta)。
+
+Action Potential: | 動作電位：
+
+Threshold reached when (I_{Na} &gt; I_K). | 當 (I_{Na} &gt; I_K) 時達到閾值。
+Positive feedback via Na channel activation. | 通過Na通道激活的正反饋。
+Refractory period due to Na channel inactivation (h gate). | 由於Na通道失活 (h 閘) 導致的不應期。
+
+
+
+Neural Conduction and Cable Theory
+Signal attenuation in dendrites and axons due to membrane leak and axial resistance. | 信號在樹突和軸突中的衰減由於膜漏和軸向阻力。
+
+Cable equation:
+lambda2fracpartial2psipartialx2=taufracpartialpsipartialt+psi \\lambda^2 \\frac{\\partial^2 \\psi}{\\partial x^2} = \\tau \\frac{\\partial \\psi}{\\partial t} + \\psi lambda2fracpartial2psipartialx2=taufracpartialpsipartialt+psi
+
+where (\psi &#x3D; V_i - V_o), (\lambda) is space constant, (\tau) is time constant. | 其中 (\psi &#x3D; V_i - V_o)， (\lambda) 是空間常數， (\tau) 是時間常數。
+
+Space constant: | 空間常數：
+lambda=sqrtfracrmri+roapproxsqrtfracrmri \\lambda = \\sqrt{\\frac{r_m}{r_i + r_o}} \\approx \\sqrt{\\frac{r_m}{r_i}} lambda=sqrtfracrm​ri​+ro​approxsqrtfracrm​ri​
+
+Myelination: | 髓鞘化：
+
+Increases membrane resistance (R_m), decreases capacitance (C_m). | 增加膜阻力 (R_m)，減少電容 (C_m)。
+
+Increases (\lambda), improving conduction velocity. | 增加 (\lambda)，改善傳導速度。
+
+Saltatory conduction via Nodes of Ranvier. | 通過Ranvier結的跳躍傳導。
+
+
+
+
+
+🩺 Renal PhysiologyMain Functions
+Maintain internal fluid environment. | 維持內部液體環境。
+
+Urine formation: | 尿液形成：
+
+Filter metabolic products. | 過濾代謝產物。
+
+Regulate fluid and electrolyte balance. | 調節液體和電解質平衡。
+
+Regulate blood pressure and volume. | 調節血壓和體積。
+
+
+
+
+Anatomy
+Location: Lower back, between T12 &amp; L3 vertebrae. | 位置：下背部，在T12和L3椎骨之間。
+
+Size: ~10 cm long, 5 cm wide, 4 cm thick. | 大小：約10厘米長，5厘米寬，4厘米厚。
+
+Blood flow: ~20% cardiac output (~1 L&#x2F;min). | 血流量：約20%心輸出（約1升&#x2F;分）。
+
+Kidney receives massive blood flow despite small mass (~0.5% body weight). | 腎臟儘管質量小（約0.5%體重），但接收大量血流量。
+
+
+Conservation of MasstextArterialFlow=textVenousFlow+textUrineOutput \\text{Arterial Flow} = \\text{Venous Flow} + \\text{Urine Output} textArterialFlow=textVenousFlow+textUrineOutput
+
+Filtration and Selectivity
+Filters ~180 L plasma&#x2F;day (~60x plasma volume). | 每天過濾約180升血漿（約60倍血漿體積）。
+
+Highly selective: only ~0.17% of plasma volume excreted as urine. | 高度選擇性：只有約0.17%的血漿體積以尿液形式排出。
+
+Filtration barrier: | 過濾屏障：
+
+Fenestrated capillaries. | 窗孔毛細血管。
+
+Basement membrane (negatively charged). | 基底膜（負電荷）。
+
+Podocyte filtration slits. | 足細胞過濾縫隙。
+
+
+
+Size and charge affect filtration: | 大小和電荷影響過濾：
+
+&lt;1.5 nm freely filtered. | &lt;1.5 nm自由過濾。
+
+4.2 nm not filtered. | 4.2 nm不被過濾。
+
+Anions filtered less due to negative charge. | 陰離子由於負電荷過濾較少。
+
+
+
+
+Models of Selectivity| Model | Description | 描述 |
+| — | — | — |
+| 1 | Selective secretion via transporters, channels, exchangers; active removal from blood. | 通過轉運體、通道、交換器的選擇性分泌；從血液中主動移除。 |
+| 2 | Passive filter followed by selective resorption via transporters and exchangers. | 被動過濾後通過轉運體和交換器的選擇性重吸收。 |
+| 3 | Combination of passive filtration and active removal&#x2F;resorption. | 被動過濾和主動移除&#x2F;重吸收的組合。 |
+Nephron Structure and Function
+Functional unit: ~1 million nephrons&#x2F;kidney. | 功能單位：每腎約100萬個腎單位。
+
+Components: | 組件：
+
+Glomerulus: leaky capillary, filters plasma. | 腎小球：漏毛細血管，過濾血漿。
+
+Bowman’s capsule: collects filtrate. | 鮑曼囊：收集濾液。
+
+Tubule: active excretion and resorption. | 小管：主動排泄和重吸收。
+
+Peritubular capillaries: resorb solutes and water. | 周圍毛細血管：重吸收溶質和水。
+
+Loop of Henle: generates osmotic gradient for urine concentration. | 亨利環：產生尿液濃縮的滲透梯度。
+
+Collecting duct: fine control of ion and water balance. | 集合管：對離子和水平衡的精細控制。
+
+
+
+
+Regulation
+Juxtaglomerular apparatus senses NaCl concentration. | 球旁器感測NaCl濃度。
+
+Baroreceptors in afferent arteriole sense pressure. | 輸入小動脈中的壓力感受器感測壓力。
+
+Renin release leads to angiotensin II production, vasoconstriction, and blood pressure regulation. | 腎素釋放導致血管緊張素II產生，血管收縮，和血壓調節。
+
+Sympathetic nervous system modulates renal blood flow. | 交感神經系統調節腎血流量。
+
+
+Renal Clearance and Filtration
+Clearance: volume of plasma cleared of a substance per unit time.
+
+Mass balance equation:
+Px,acdotRPFa=Px,vcdotRPFv+UxcdotdotV P_{x,a} \\cdot RPF_a = P_{x,v} \\cdot RPF_v + U_x \\cdot \\dot{V} Px,a​cdotRPFa​=Px,v​cdotRPFv​+Ux​cdotdotV
+
+For substances 100% cleared (e.g., PAH), clearance equals renal plasma flow (RPF).
+
+Inulin clearance measures glomerular filtration rate (GFR).
+
+Fractional excretion (FE):
+FEx=fracUxcdotdotVPxcdotGFR=fracCxGFR FE_x = \\frac{U_x \\cdot \\dot{V}}{P_x \\cdot GFR} = \\frac{C_x}{GFR} FEx​=fracUx​cdotdotVPx​cdotGFR=fracCx​GFR
+
+Glomerular Filtration
+Driven by net Starling forces:
+PUF=(PGC−PBS)−(piGC−piBS) P_{UF} = (P_{GC} - P_{BS}) - (\\pi_{GC} - \\pi_{BS}) PUF​=(PGC​−PBS​)−(piGC​−piBS​)
+
+GFR proportional to ultrafiltration coefficient (K_f) and (P_{UF}).
+
+Autoregulation maintains constant glomerular hydrostatic pressure despite changes in arterial pressure.
+
+Afferent arteriole constriction decreases GFR; efferent arteriole constriction increases GFR.
+
+
+Urine Concentration Mechanism
+Countercurrent multiplier in Loop of Henle creates hyperosmotic medullary gradient.
+Differential permeability of tubule segments:
+Proximal straight tubule (PST): permeable to water and NaCl.
+Thin descending limb (tDLH): permeable to water, low NaCl permeability.
+Thin ascending limb (tALH): low water permeability, permeable to NaCl.
+Thick ascending limb (TAL): low water permeability, actively pumps NaCl out.
+
+
+Collecting ducts pass through hyperosmotic medulla; permeability regulated by arginine vasopressin (AVP&#x2F;ADH).
+Surfactant reduces surface tension in alveoli, increasing lung compliance.
+
+
+❤️ Cardiovascular PhysiologyMajor Functions
+Respiration: transport O₂ and CO₂.
+Nutrition: supply nutrients.
+Excretion: remove metabolic waste.
+Hydration maintenance.
+Temperature regulation.
+Hormone delivery.
+Immune protection.
+
+Anatomy
+Heart: two pumps in series.
+Right heart: pumps deoxygenated blood to lungs.
+Left heart: pumps oxygenated blood to body.
+
+
+Four chambers: atria (priming pumps), ventricles (high pressure pumps).
+Valves prevent backflow: tricuspid, pulmonary, mitral, aortic.
+Blood vessels: arteries, arterioles, capillaries, venules, veins.
+
+Hemodynamics
+Blood flow modeled as laminar flow in rigid tubes.
+
+Flow rate (Q &#x3D; V \times A).
+
+Bernoulli’s equation relates pressure and velocity.
+
+Vascular resistance:
+R=frac8muLpia4 R = \\frac{8 \\mu L}{\\pi a^4} R=frac8muLpia4
+
+Compliance measures vessel stretchability:
+Cu=frac2pir3Eh C_u = \\frac{2 \\pi r^3}{E h} Cu​=frac2pir3Eh
+
+where (E) is Young’s modulus, (h) wall thickness.
+
+
+Cardiac Electrophysiology
+Pacemaker cells: SA node (~60 bpm), AV node (~40 bpm), Purkinje fibers (~20 bpm).
+Myocytes electrically coupled via gap junctions.
+Cardiac action potential phases:
+Phase 0: rapid Na⁺ influx (depolarization).
+Phase 1: Na⁺ channel inactivation, transient K⁺ current.
+Phase 2: Ca²⁺ influx plateau.
+Phase 3: K⁺ efflux (repolarization).
+Phase 4: resting potential.
+
+
+ECG measures electrical activity via limb and precordial leads.
+Einthoven’s triangle defines limb leads I, II, III.
+Augmented unipolar leads (aVR, aVL, aVF) and precordial leads (V1-V6) provide spatial information.
+
+Cardiac Cycle
+Four phases:
+Filling (inflow): AV valves open, ventricles fill.
+Isovolumic contraction: valves closed, pressure rises.
+Ejection (outflow): semilunar valves open, blood ejected.
+Isovolumic relaxation: valves closed, ventricles relax.
+
+
+Stroke volume (SV) &#x3D; End diastolic volume (EDV) - End systolic volume (ESV).
+Cardiac output (CO) &#x3D; SV × heart rate (f).
+Pressure-volume (PV) loops illustrate cardiac function.
+Starling’s law: increased preload increases SV and CO.
+Afterload increase reduces SV.
+
+Cardiac Muscle Mechanics
+Sarcomere: basic contractile unit.
+Force-length relationship:
+Active tension peaks at optimal sarcomere length (~2.0 µm).
+Passive tension increases with stretch.
+
+
+Cardiac muscle has more passive tension than skeletal muscle.
+Compliance changes between diastole (high compliance) and systole (low compliance).
+
+Cardiac Output Model
+Two-state spring model for ventricle compliance.
+
+CO depends on preload (P_f), afterload (P_a), contractility, and heart rate.
+
+Combined heart and peripheral circulation model predicts CO and venous return.
+
+Mean systemic pressure (P_{ms}) is intrinsic to vascular system.
+
+Venous return:
+Q=fracPms−PRARv+fracCaCa+CvRa Q = \\frac{P_{ms} - P_{RA}}{R_v + \\frac{C_a}{C_a + C_v} R_a} Q=fracPms​−PRA​Rv​+fracCa​Ca​+Cv​Ra​
+
+Cardiac output and venous return curves intersect at operating point.
+
+
+
+🌬 Respiratory PhysiologyAnatomy and Function
+Components: lungs, right heart, pulmonary circulation.
+Functional unit: alveolus (~300 µm diameter).
+Total alveolar surface area ~85 m².
+Gas exchange: O₂ uptake, CO₂ removal.
+Secondary functions: pH regulation, blood reserve, filtration.
+
+Ventilation
+Tidal volume ~500 ml, ~15 breaths&#x2F;min → 7.5 L&#x2F;min total ventilation.
+Dead space ~150 ml (conducting airways without alveoli).
+Alveolar ventilation ~5.25 L&#x2F;min.
+Spirometry measures lung volumes and capacities.
+Helium dilution technique measures residual volume (RV) or functional residual capacity (FRC).
+Dead space volume calculated using CO₂ concentration differences.
+
+Lung Mechanics
+Surface tension at alveolar air-liquid interface creates pressure barrier:
+DeltaP=frac2sigmar \\Delta P = \\frac{2 \\sigma}{r} DeltaP=frac2sigmar
+
+Water surface tension ~72 dynes&#x2F;cm; surfactant reduces to ~1 dyne&#x2F;cm.
+
+Surfactant increases lung compliance, reduces work of breathing.
+
+Compliance affected by diseases (edema, pneumonia, emphysema).
+
+
+Airflow Dynamics
+Airflow can be laminar or turbulent.
+Reynolds number determines flow type; laminar if &lt;2000.
+Upper airways have turbulent flow, generating sound.
+Resistance depends on airway generation and cross-sectional area.
+
+Ventilation Model
+Lung modeled as RC circuit:
+
+Resistance (R) to airflow.
+Compliance (C) of lung volume.
+
+
+Lung volume (V_l(t)) follows:
+Vl(t)=CPD(1−e−t/tau),quadtau=RC V_l(t) = C P_D (1 - e^{-t/\\tau}), \\quad \\tau = R C Vl​(t)=CPD​(1−e−t/tau),quadtau=RC
+
+Asthma increases (R), increasing (\tau), reducing ventilation efficiency.
+
+
+Gas Transport and Diffusion
+Governed by Fick’s Law:
+fracpartialNpartialt=−ADalphafracpartialPpartialx \\frac{\\partial N}{\\partial t} = - A D \\alpha \\frac{\\partial P}{\\partial x} fracpartialNpartialt=−ADalphafracpartialPpartialx
+
+Partial pressure (P) relates to concentration (c) by solubility (\alpha):
+c=alphaP c = \\alpha P c=alphaP
+
+Diffusion time constant:
+tau=fracx22D \\tau = \\frac{x^2}{2D} tau=fracx22D
+
+Typical (\tau \approx 4, ms), transit time ~1 s → sufficient for gas exchange.
+
+
+Hemoglobin and Oxygen Transport
+Hemoglobin (Hb) increases O₂ carrying capacity ~65x plasma alone.
+Hb saturation curve is sigmoidal, cooperative binding.
+Oxygen loading kinetics slower due to Hb binding, but transit time sufficient.
+Transport modeled as two resistances in series: diffusion and Hb binding.
+
+Lung Perfusion
+Pulmonary circulation is low pressure.
+Blood flow varies by lung zone due to hydrostatic pressure gradients.
+Four zones defined by relative pressures of alveolar, arterial, and venous pressures.
+Perfusion heterogeneity affects gas exchange efficiency.
+
+Ventilation-Perfusion (V&#x2F;Q) Matching
+Normal V&#x2F;Q ratio ~1.
+
+V&#x2F;Q mismatch leads to hypoxia or hypercapnia.
+
+Alveolar and arterial partial pressures depend on V&#x2F;Q ratio:
+PA,O2=fracPV,O2+PI,O2fracdotVAQ1+fracdotVAQ,quadPA,CO2=fracPV,CO21+fracdotVAQ P_{A,O_2} = \\frac{P_{V,O_2} + P_{I,O_2} \\frac{\\dot{V}_A}{Q}}{1 + \\frac{\\dot{V}_A}{Q}}, \\quad P_{A,CO_2} = \\frac{P_{V,CO_2}}{1 + \\frac{\\dot{V}_A}{Q}} PA,O2​​=fracPV,O2​​+PI,O2​​fracdotVA​Q1+fracdotVA​Q,quadPA,CO2​​=fracPV,CO2​​1+fracdotVA​Q
+
+Exercise increases ventilation and perfusion to meet metabolic demands.
+
+CO₂ ventilation tightly regulated to maintain acid-base balance.
+
+
+
+Summary
+The course integrates quantitative and biological perspectives on human physiology.
+Mathematical models describe electrical activity in neurons, renal filtration and clearance, cardiovascular dynamics, and respiratory gas exchange.
+Understanding these models aids in interpreting physiological function and pathophysiology.
+Emphasis on engineering principles such as circuit analogies, diffusion laws, and fluid dynamics.
+Clinical relevance highlighted through ECG interpretation, renal clearance tests, and respiratory function assessments.
+
+
+Tables and Key Equations
+
+
+Topic
+Key Equation &#x2F; Concept
+
+
+
+Nernst Potential
+E=fracRTzFlnfrac[X]out[X]inE = \\frac{RT}{zF} \\ln \\frac{[X]_{out}}{[X]_{in}}E=fracRTzFlnfrac[X]out​[X]in​
+
+
+Passive Membrane Model
+taufracdVmdt=−Vm+IinRm\\tau \\frac{dV_m}{dt} = -V_m + I_{in} R_mtaufracdVm​dt=−Vm​+Iin​Rm​
+
+
+Hodgkin-Huxley Model
+I=CmfracdVdt+gNa(V−ENa)+gK(V−EK)+gL(V−EL)I = C_m \\frac{dV}{dt} + g_{Na} (V - E_{Na}) + g_K (V - E_K) + g_L (V - E_L)I=Cm​fracdVdt+gNa​(V−ENa​)+gK​(V−EK​)+gL​(V−EL​)
+
+
+Cable Equation
+lambda2fracpartial2psipartialx2=taufracpartialpsipartialt+psi\\lambda^2 \\frac{\\partial^2 \\psi}{\\partial x^2} = \\tau \\frac{\\partial \\psi}{\\partial t} + \\psilambda2fracpartial2psipartialx2=taufracpartialpsipartialt+psi
+
+
+Renal Clearance
+Cx=fracUxcdotdotVPxC_x = \\frac{U_x \\cdot \\dot{V}}{P_x}Cx​=fracUx​cdotdotVPx​
+
+
+Starling Forces
+(P_{UF} &#x3D; (P_{GC} - P_{BS}) - (\pi_{GC} - \pi_{BS}))
+
+
+Poiseuille’s Law
+Q=fracpia48muLDeltaPQ = \\frac{\\pi a^4}{8 \\mu L} \\Delta PQ=fracpia48muLDeltaP
+
+
+Vascular Resistance
+R=frac8muLpia4R = \\frac{8 \\mu L}{\\pi a^4}R=frac8muLpia4
+
+
+Compliance (Vessels)
+Cu=frac2pir3EhC_u = \\frac{2 \\pi r^3}{E h}Cu​=frac2pir3Eh
+
+
+Lung Volume Dynamics
+Vl(t)=CPD(1−e−t/tau)V_l(t) = C P_D (1 - e^{-t/\\tau})Vl​(t)=CPD​(1−e−t/tau)
+
+
+Fick’s Law (Diffusion)
+fracpartialNpartialt=−ADalphafracpartialPpartialx\\frac{\\partial N}{\\partial t} = - A D \\alpha \\frac{\\partial P}{\\partial x}fracpartialNpartialt=−ADalphafracpartialPpartialx
+
+
+Ventilation-Perfusion
+PA,O2=fracPV,O2+PI,O2fracdotVAQ1+fracdotVAQ,quadPA,CO2=fracPV,CO21+fracdotVAQP_{A,O_2} = \\frac{P_{V,O_2} + P_{I,O_2} \\frac{\\dot{V}_A}{Q}}{1 + \\frac{\\dot{V}_A}{Q}}, \\quad P_{A,CO_2} = \\frac{P_{V,CO_2}}{1 + \\frac{\\dot{V}_A}{Q}}PA,O2​​=fracPV,O2​​+PI,O2​​fracdotVA​Q1+fracdotVA​Q,quadPA,CO2​​=fracPV,CO2​​1+fracdotVA​Q
+
+
+Cardiac Output Model
+CO=f(CDPf−CSPa)CO = f (C_D P_f - C_S P_a)CO=f(CD​Pf​−CS​Pa​)
+
+
+
+Important Vocabulary and Concepts
+Membrane Potential: Voltage difference across a cell membrane. (Cantonese: 膜電位：細胞膜兩側的電位差。)
+Membrane Capacitance (Cm): Ability of membrane to store charge. (Cantonese: 膜電容 (Cm)：膜層儲存電荷的能力。)
+Membrane Resistance (Rm): Resistance to ion flow across membrane. (Cantonese: 膜電阻 (Rm)：膜層對離子流動的阻力。)
+Nernst Potential: Equilibrium potential for a specific ion. (Cantonese: 能斯特電位：特定離子的平衡電位。)
+Passive Membrane Model: Membrane modeled as an RC circuit for voltage dynamics. (Cantonese: 被動膜模型：將膜視為RC電路以描述電壓變化。)
+Action Potential: Rapid change in membrane potential during neuron firing. (Cantonese: 動作電位：神經元放電時膜電位的快速變化。)
+Hodgkin-Huxley Model: Describes ionic currents and action potentials. (Cantonese: 霍奇金-赫胥黎模型：描述離子電流和動作電位。)
+Gating Variable: Probability of an ion channel gate being open. (Cantonese: 閘變數：離子通道閘開啟的概率。)
+Cable Theory: Models electrical signal propagation in neurons. (Cantonese: 電纜理論：模擬神經元中電信號的傳播。)
+Fick’s Law: Relates diffusive flux to concentration gradients. (Cantonese: 費克定律：將擴散通量與濃度梯度聯繫起來。)
+Nephron: Functional unit of the kidney that filters blood and forms urine. (Cantonese: 腎元：腎臟中過濾血液並形成尿液的功能單位。)
+Renal Clearance: Volume of plasma cleared of a substance per time. (Cantonese: 腎清除率：單位時間內清除物質的血漿體積。)
+Glomerular Filtration Rate (GFR): Rate of plasma filtration in kidneys. (Cantonese: 腎小球濾過率 (GFR)：腎臟中血漿濾過的速率。)
+Starling Forces: Balance of hydrostatic and oncotic pressures driving filtration. (Cantonese: 斯塔林力：驅動濾過的靜水壓和滲透壓平衡。)
+Countercurrent Multiplier: Mechanism in Loop of Henle for urine concentration. (Cantonese: 逆流倍增器：亨利環中尿液濃縮的機制。)
+Renin-Angiotensin System: Hormonal system regulating blood pressure and volume. (Cantonese: 腎素-血管緊張素系統：調節血壓和血容量的激素系統。)
+Autoregulation: Local control that maintains blood flow despite pressure changes. (Cantonese: 自我調節：在壓力變化下維持血流的局部控制。)
+Surfactant: Reduces alveolar surface tension, increases lung compliance. (Cantonese: 表面活性劑：降低肺泡表面張力，增加肺順應性。)
+Compliance: Measure of vessel or lung stretchability. (Cantonese: 順應性：血管或肺部伸展性的測量。)
+Hemoglobin: Protein that carries oxygen in red blood cells. (Cantonese: 血紅蛋白：紅血球中運送氧氣的蛋白質。)
+Stroke Volume (SV): Volume of blood ejected by the ventricle per beat. (Cantonese: 每搏輸出量 (SV)：每次心室收縮射出的血量。)
+Cardiac Output (CO): Volume of blood pumped by the heart per minute. (Cantonese: 心輸出量 (CO)：心臟每分鐘泵出的血液體積。)
+Mean Systemic Pressure (Pms): Pressure in the systemic circulation if flow were stopped. (Cantonese: 平均體循環壓力 (Pms)：若血流停止時體循環中的壓力。)
+Ventilation-Perfusion Ratio (V&#x2F;Q): Balance of air flow and blood flow in lungs. (Cantonese: 通風-灌注比 (V&#x2F;Q)：肺部通氣與灌注的平衡。)
+Respiratory Quotient (RQ): Ratio of CO₂ produced to O₂ consumed. (Cantonese: 呼吸商 (RQ)：產生的CO₂與消耗的O₂的比率。)
+
+
+Summary Diagrams (Conceptual)
+
+
+System
+Model Type
+Key Features
+
+
+
+Nervous System
+RC circuit, Hodgkin-Huxley
+Ion channels, gating variables, action potentials
+
+
+Renal System
+Mass balance, clearance
+Filtration, resorption, secretion, nephron structure
+
+
+Cardiovascular
+Electrical analog, PV loops
+Compliance, resistance, cardiac cycle phases
+
+
+Respiratory
+RC circuit, diffusion
+Lung compliance, ventilation, gas exchange
+
+
+
+These notes comprehensively cover the detailed material from the provided content, integrating all major topics and technical details for advanced understanding and exam preparation.
+References[1] Boron, W. F., &amp; Boulpaep, E. L. (2016). Medical Physiology (3rd ed.). Elsevier.
+]]></content>
+      <categories>
+        <category>University</category>
+        <category>Biomedical_Engineering</category>
+      </categories>
+      <tags>
+        <tag>Study_Notes</tag>
+        <tag>Quantitative Human Physiology</tag>
+        <tag>BME3102</tag>
       </tags>
   </entry>
   <entry>
@@ -3802,42 +5243,6 @@ Target cells: APCs such as dendritic cells and Langerhans cells translate the mR
       </tags>
   </entry>
   <entry>
-    <title>Biomaterials-6 | 生物材料-6</title>
-    <url>/posts/fcd82218.html</url>
-    <content><![CDATA[Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估Back to Outline | 回到大綱Lecture Outline | 課程大綱
-Tissue or host responses to injury:
-Implant material-tissue interaction 
-Coagulation
-Inflammation
-Angiogenesis
-Granulation tissue formation
-Foreign body reaction
-Tissue fibrosis
-Wound remodeling
-
-
-Biofilms:
-Bacterial in biofilm
-Biofilm development
-Device&#x2F;implant related infection
-Infection detection
-Prevention and treatment of infection
-
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Biomaterials(BME3123)</category>
-      </categories>
-      <tags>
-        <tag>Biomedical Engineering</tag>
-        <tag>Biomaterials</tag>
-        <tag>Lecture Notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Biomaterials-Outline | 生物材料-大綱</title>
     <url>/posts/a5063481.html</url>
     <content><![CDATA[Biomaterials-Outline | 生物材料-大綱Lecture 1: History, Definition, and Outline | 第一講：歷史、定義與大綱
@@ -3939,6 +5344,42 @@ Infection detection | 感染檢測
 Prevention and treatment of infection | 感染的預防與治療
 
 
+
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Biomaterials(BME3123)</category>
+      </categories>
+      <tags>
+        <tag>Biomedical Engineering</tag>
+        <tag>Biomaterials</tag>
+        <tag>Lecture Notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Biomaterials-6 | 生物材料-6</title>
+    <url>/posts/fcd82218.html</url>
+    <content><![CDATA[Lecture 6: Host reaction to biomaterials and their evaluation | 生物材料的宿主反應及其評估Back to Outline | 回到大綱Lecture Outline | 課程大綱
+Tissue or host responses to injury:
+Implant material-tissue interaction 
+Coagulation
+Inflammation
+Angiogenesis
+Granulation tissue formation
+Foreign body reaction
+Tissue fibrosis
+Wound remodeling
+
+
+Biofilms:
+Bacterial in biofilm
+Biofilm development
+Device&#x2F;implant related infection
+Infection detection
+Prevention and treatment of infection
 
 
 
@@ -8186,1062 +9627,6 @@ Dermal matrix: Cell invasion; Growth factors in scaffolds; Avoid stress shieldin
       </tags>
   </entry>
   <entry>
-    <title>BME 2104 Tissue Engineering – 6</title>
-    <url>/posts/97b3c0b2.html</url>
-    <content><![CDATA[BME 2104 Tissue Engineering – 6Lecture Overview
-🔴 Polymer basics and definitions 聚合物基礎與定義
-🟢 Polymerization mechanisms 聚合機制
-🔵 Polymer structures and states in solids 聚合物固體結構與狀態
-🟢 Thermal and crystallinity properties 熱性能與結晶性
-🔵 Crosslinked networks and hydrogels 交聯網絡與水凝膠
-🔴 Natural polymer scaffolds and examples 天然聚合物支架與例子
-🟢 Synthetic polymer scaffolds and degradation 合成聚合物支架與降解
-🔵 3D cell cultures vs 2D and applications 3D vs 2D 細胞培養與應用
-
-Topic 1 – Introduction to Polymers 聚合物簡介大圖景 (Big Picture)Polymers 聚合物 are large molecules essential for tissue engineering scaffolds due to their versatility in mimicking ECM 細胞外基質.
-思維導圖 (Mind map):Polymers 聚合物 → Natural 天然 (Wood&#x2F;Rubber&#x2F;DNA) → Synthetic 合成 (PE&#x2F;PS&#x2F;PEG) → Biomedical Suitability 生物醫學適用性 (Strength&#x2F;Biodegradability&#x2F;Fabrication 強度&#x2F;生物降解性&#x2F;加工性) → Disadvantages 缺點 (Deformation&#x2F;Toxicity&#x2F;Degradation 變形&#x2F;毒性&#x2F;降解)
-必須掌握嘅要點 (Must-Know Facts)
-Polymers revolutionized chemistry with major everyday impact (Lord Todd quote).
-ECM 細胞外基質 components like collagen 膠原蛋白, proteins 蛋白質, and GAGs 糖胺聚糖 are polymers.
-Suited for biomedical apps 生物醫學應用: low&#x2F;high strength, protein attachment 蛋白質黏附 resistance&#x2F;encouragement.
-Biodegradable 生物可降解 or permanent; fabricable into complex shapes.
-Disadvantages: lower strength than metals&#x2F;ceramics, deform over time.
-May deteriorate during sterilization 滅菌 or degrade catastrophically in body.
-Release toxic byproducts 有毒副產物 possible.
-Natural examples: Wood 木材, Rubber 橡膠, Leather 皮革, Cotton 棉花, Wool 羊毛, Silk 絲綢, DNA, Proteins 蛋白質.
-Synthetic examples: Polystyrene (PS) 聚苯乙烯, PET 聚對苯二甲酸乙二醇酯, PE 聚乙烯, PEG 聚乙二醇, Kevlar 凱夫拉.
-Polymers in scaffolds mimic ECM for cell support.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Polymer Chain Example 聚合物鏈例子:Monomer 單體: H2C=CH2 (Ethylene 乙烯)Polymer 聚合物: -[CH2-CH2]-n (Polyethylene 聚乙烯)
-
-對比表 (Comparison Table) - Natural vs Synthetic Polymers 天然 vs 合成聚合物
-
-
-Natural Polymers 天然聚合物
-Synthetic Polymers 合成聚合物
-
-
-
-From nature (e.g., wood, DNA) 來源於自然界 (如木材，DNA)
-Man-made (e.g., PE, PS) 人造 (如PE，PS)
-
-
-Biocompatible but variable 生物相容性好但性質多變
-Consistent but may inflame 性質穩定但可能引起炎症
-
-
-Often biodegradable 通常可生物降解
-Tunable degradation 可調節降解性
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-混淆聚合物與單體 (Confusing polymers with monomers): 陷阱題要求舉例聚合物時不指定類型。
-忽略缺點 (Overlooking disadvantages): 如體內產生有毒副產物。
-
-Topic 2 – Polymerization Types 聚合類型大圖景 (Big Picture)Polymerization 聚合作用 forms chains via addition 加成聚合 (non-degradable) or step-growth 逐步聚合 (degradable via hydrolysis 水解).
-思維導圖 (Mind map):Polymerization 聚合作用 → Addition 加成聚合 (Radicals&#x2F;Ions 自由基&#x2F;離子 → No labile bonds 無不穩定鍵) → Step-Growth 逐步聚合 (Condensation 縮合 → Ester bonds 酯鍵 → Hydrolysis 水解) → Examples 例子 (PE vs PLA&#x2F;PGA&#x2F;PLGA)
-必須掌握嘅要點 (Must-Know Facts)
-Addition 加成聚合: Double-bond monomers 雙鍵單體 like ethylene 乙烯, vinyl chloride 氯乙烯, styrene 苯乙烯, MMA 甲基丙烯酸甲酯.
-Via radicals 自由基 or ions 離子; no labile bonds, not degradable.
-Example: Ethylene → Polyethylene (PE) 聚乙烯.
-Step-growth 逐步聚合: Functional group reactions 官能團反應, condensation 縮合.
-Well-known: PLA 聚乳酸, PGA 聚乙醇酸, PLGA 聚乳酸-乙醇酸共聚物.
-Degrade via main chain ester hydrolysis 酯鍵水解.
-PLA from lactic acid 乳酸 condensation.
-PGA from glycolic acid 乙醇酸.
-PLGA copolymers tunable.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Addition 加成聚合: n H2C=CH2 → -[H2C-CH2]-nStep-Growth 逐步聚合: n HOCH(CH3)COOH → -[OCH(CH3)CO]-n + (n-1)H2O
-
-對比表 (Comparison Table) - Addition vs Step-Growth Polymerization 加成 vs 逐步聚合
-
-
-Addition Polymerization 加成聚合
-Step-Growth Polymerization 逐步聚合
-
-
-
-Double bonds break 雙鍵斷裂
-Functional groups react 官能團反應
-
-
-Non-degradable chains 鏈不可降解
-Degradable via hydrolysis 可通過水解降解
-
-
-Examples: PE, PVC 例子: PE，PVC
-Examples: PLA, PGA 例子: PLA，PGA
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-混淆加成聚合與逐步聚合 (Mixing addition and step-growth): 陷阱題將 PLA 分類為加成聚合（實際係逐步聚合）。
-忘記逐步聚合嘅副產物 (Forgetting condensation byproduct in step-growth): 有水生成。
-
-Topic 3 – Polymer Structures and States 聚合物結構與狀態大圖景 (Big Picture)Polymers exist as crystalline 結晶, amorphous 無定形, or semi-crystalline 半結晶, affecting melting 熔化 and glass transitions 玻璃化轉變.
-思維導圖 (Mind map):Structures 結構 → Crystals 晶體 (Ordered&#x2F;Lattice&#x2F;Sharp Tm 有序&#x2F;晶格&#x2F;銳利Tm) → Amorphous 無定形 (No order&#x2F;Tg 無序&#x2F;Tg) → Polymers 聚合物 (Semi-crystalline&#x2F;Folding&#x2F;Stacking 半結晶&#x2F;摺疊&#x2F;堆疊) → States 狀態 (Rubber&#x2F;Glass 橡膠態&#x2F;玻璃態)
-必須掌握嘅要點 (Must-Know Facts)
-Crystals 晶體: Infinite 3D lattice 無限三維晶格, sharp Tm 熔點.
-Amorphous 無定形: No structure, sharp Tm.
-Small molecules 小分子: 100% crystalline or amorphous.
-Polymer crystalline: Intramolecular folding&#x2F;stacking 分子內摺疊&#x2F;堆疊.
-Semi-crystalline 半結晶: Never 100% crystalline, have Tm.
-Rubber&#x2F;Glass 橡膠態&#x2F;玻璃態: Frozen liquid 凍結液體, no long-range order.
-Tg 玻璃化轉變溫度: Below Tg, no cooperative rotation&#x2F;translation 協同旋轉&#x2F;平移.
-Transition: Rubbery to glassy hard state.
-Crystallization 結晶 favored by simple structures, small side groups.
-Linear, non-crosslinked polymers crystallize better.
-Block&#x2F;alternating copolymers 嵌段&#x2F;交替共聚物, slow cooling aid crystallization.
-Crystalline: Stronger, resistant to dissolution.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Solid States 固體狀態:- Crystalline 結晶: Ordered chains 有序鏈 → Tm- Amorphous 無定形: Random 無序 → Tg
-
-對比表 (Comparison Table) - Crystalline vs Amorphous 結晶 vs 無定形
-
-
-Crystalline 結晶
-Amorphous 無定形
-
-
-
-Ordered lattice 有序晶格
-No order 無序
-
-
-Sharp Tm 銳利熔點
-Tg only 只有玻璃化轉變溫度
-
-
-Stronger 更強
-Flexible 更柔韌
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-假設聚合物100%結晶 (Assuming polymers are 100% crystalline): 陷阱題 - 聚合物是半結晶的。
-混淆Tm同Tg (Confusing Tm and Tg)。
-
-Topic 4 – Polymer Properties 聚合物特性大圖景 (Big Picture)Properties like crystallinity 結晶度, thermal behavior 熱行為, and side groups 側基 influence polymer performance in scaffolds.
-思維導圖 (Mind map):Properties 特性 → Crystallinity 結晶度 (Favored by simplicity 有利於簡單結構) → Side Groups 側基 (Flexible lower Tg 柔韌側基降低Tg) → Thermal 熱性能 (Tg&#x2F;Tm values) → Effects 影響 (Free volume&#x2F;Motion 自由體積&#x2F;運動)
-必須掌握嘅要點 (Must-Know Facts)
-Crystallization 結晶: Simple&#x2F;small side groups, linear, non-network.
-Slow cooling for chain motion.
-Crystalline stronger&#x2F;resistant.
-Flexible side groups: Tg decreases with length.
-Side chains rotate, increase free volume 自由體積, lower Tg.
-Thermal examples: Nylon 6,6 尼龍6,6 Tg 45°C Tm 267°C.
-UHMWPE 超高分子量聚乙烯 Tg -125°C Tm 140°C.
-Silicone 矽橡膠 Tg -123°C Tm -29°C.
-PMMA 聚甲基丙烯酸甲酯 Tg 105°C Tm 160°C.
-PDLLA 聚消旋乳酸 Tg 50°C amorphous.
-PCL 聚己內酯 Tg -60°C Tm 57°C.
-PGA 聚乙醇酸 Tg 35°C Tm 210°C.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Tg Trend Tg趨勢:Increasing side chain 側鏈增長: Tg ↓ (e.g., PMMA 105°C → Polydecyl MA -62°C)
-
-對比表 (Comparison Table) - Short vs Long Side Groups 短 vs 長側基
-
-
-Short Side Groups 短側基
-Long Side Groups 長側基
-
-
-
-Higher Tg 較高Tg
-Lower Tg 較低Tg
-
-
-Less free volume 較少自由體積
-More free volume 較多自由體積
-
-
-Restricted motion 運動受限
-Easier rotation 易於旋轉
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-認為長側基會提高Tg (Thinking longer sides increase Tg): 實際上會降低。
-忽略側基對堆積嘅影響 (Ignoring side chain effects on packing)。
-
-Topic 5 – Crosslinked Networks and Hydrogels 交聯網絡與水凝膠大圖景 (Big Picture)Crosslinks 交聯鍵 create networks that swell in water to form hydrogels 水凝膠 for cell environments.
-思維導圖 (Mind map):Crosslinks 交聯鍵 (Covalent&#x2F;H-bond&#x2F;Entangle 共價鍵&#x2F;氫鍵&#x2F;纏結) → Networks 網絡 (Increased MW&#x2F;Swell 分子量增加&#x2F;溶脹) → Hydrogels 水凝膠 (Water-swollen&#x2F;Balanced forces 水溶脹&#x2F;平衡力) → Apps 應用 (Nutrients&#x2F;Waste&#x2F;Aqueous mimic 營養&#x2F;廢物&#x2F;水環境模擬)
-必須掌握嘅要點 (Must-Know Facts)
-Crosslinks: Covalent 共價鍵, H-bonding 氫鍵, entanglements 纏結.
-Increase MW 分子量, swell in solvents (hydrogel).
-Hydrogels 水凝膠: Water-swollen crosslinked structures.
-From monomers or chain associations.
-Why: Cells need aqueous for nutrients&#x2F;waste.
-Prepared by crosslinking then swelling.
-PHEMA 聚羥基乙基甲基丙烯酸酯 common: Tissue-like water, degradation resistant.
-Apps: Contacts 隱形眼鏡, wounds 傷口, kidney membranes 腎膜.
-Swelling: Thermodynamic force 熱力學力 vs retractive 收縮力.
-Highly swollen: Cellulose 纖維素, PVA 聚乙烯醇, PEG.
-Moderately: PHEMA.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Hydrogel Formation 水凝膠形成:Polymer chains + Crosslinker 聚合物鏈 + 交聯劑 → Network 網絡 → Swell in H2O 在水中溶脹
-
-對比表 (Comparison Table) - Solid Porous Scaffolds vs Hydrogel Scaffolds 固體多孔支架 vs 水凝膠支架
-
-
-Solid Porous Scaffolds 固體多孔支架
-Hydrogel Scaffolds 水凝膠支架
-
-
-
-For bone (stable) 用於骨（穩定）
-For soft tissues (fill defects) 用於軟組織（填充缺損）
-
-
-Degrade by hydrolysis 通過水解降解
-Incorporate cells&#x2F;bioactives easily 易於包埋細胞&#x2F;生物活性因子
-
-
-Non-dissolving 不溶解
-Minimally invasive 微創
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-混淆交聯與聚合 (Confusing crosslinks with polymerization): 陷阱題 - 水凝膠不需要交聯（實際需要）。
-忽略溶脹平衡 (Overlooking swelling balance)。
-
-Topic 6 – Natural Polymer Scaffolds 天然聚合物支架大圖景 (Big Picture)Natural polymers from proteins 蛋白質&#x2F;polysaccharides 多糖 provide biocompatible scaffolds but with variability risks.
-思維導圖 (Mind map):Natural Scaffolds 天然支架 → Proteins 蛋白質 (Collagen&#x2F;Elastin 膠原蛋白&#x2F;彈性蛋白) → Polysaccharides 多糖 (GAGs&#x2F;Hyaluronan 糖胺聚糖&#x2F;透明質酸) → Sources 來源 (Plants&#x2F;Algae&#x2F;Animals&#x2F;Microbes 植物&#x2F;藻類&#x2F;動物&#x2F;微生物) → Crosslinking 交聯 (Chemical&#x2F;Physical 化學&#x2F;物理)
-必須掌握嘅要點 (Must-Know Facts)
-Proteins: Amino acid polymers, include collagen, elastin, laminin.
-DNA&#x2F;RNA: Phosphate-ribose backbone, not for scaffolds.
-Scaffolds: Proteins, polysaccharides, combos.
-Sources: Collagen&#x2F;fibrin&#x2F;elastin (animals), soybean (plants), silk fibroin 絲素蛋白.
-Gelatin 明膠: Partial hydrolysis of collagen from skin&#x2F;bones.
-Extraction: Reduce crosslinks, acid&#x2F;water at temp.
-Acidic pH speeds conversion.
-Scaffolds: Crosslink via -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH.
-Chemical mod tricky in water.
-May alter solubility&#x2F;conformation&#x2F;activity 溶解性&#x2F;構象&#x2F;活性.
-Collagen: Triple-helical 三螺旋, ECM main, immunogenicity risk 免疫原性風險.
-Crosslink: Physical (moisture&#x2F;heat&#x2F;UV), chemical (glutaraldehyde 戊二醛).
-Formaldehyde 甲醛: Fixes tissue by crosslinking aminos.
-Polysaccharides: Monosaccharide polymers, glycosidic bonds 糖苷鍵.
-GAGs: Unbranched 無分支, repeating disaccharides 重複雙糖單位 (chondroitin 硫酸軟骨素 etc.).
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Collagen Crosslink 膠原蛋白交聯:Protein-NH2 + Glutaraldehyde → Crosslinked 交聯
-
-對比表 (Comparison Table) - Proteins vs Polysaccharides 蛋白質 vs 多糖
-
-
-Proteins 蛋白質
-Polysaccharides 多糖
-
-
-
-Amino acids 氨基酸
-Monosaccharides 單糖
-
-
-Collagen&#x2F;Gelatin 膠原蛋白&#x2F;明膠
-GAGs&#x2F;Hyaluronan 糖胺聚糖&#x2F;透明質酸
-
-
-Crosslink via groups 通過官能團交聯
-Glycosidic bonds 糖苷鍵
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-認為DNA&#x2F;RNA用作支架 (Thinking DNA&#x2F;RNA used as scaffolds): 佢哋唔係。
-忽略天然聚合物嘅免疫原性 (Ignoring immunogenicity in natural polymers)。
-
-Topic 7 – Specific Natural Polymers 特定天然聚合物大圖景 (Big Picture)Specific naturals like hyaluronan 透明質酸, matrigel 基質膠, fibrin 纖維蛋白, alginate 藻酸鹽, chitosan 殼聚糖 offer unique TE properties.
-思維導圖 (Mind map):Specifics 特定聚合物 → Hyaluronan 透明質酸 (Repair&#x2F;Cartilage&#x2F;Hydrophilic 修復&#x2F;軟骨&#x2F;親水) → Matrigel 基質膠 (ECM mix&#x2F;Stem cells ECM混合物&#x2F;幹細胞) → Fibrin 纖維蛋白 (Coagulation&#x2F;Biocompatible 凝血&#x2F;生物相容) → Alginate 藻酸鹽 (Algae&#x2F;Ca crosslink 藻類&#x2F;鈣交聯) → Chitosan 殼聚糖 (Arthropod&#x2F;Cartilage 節肢動物&#x2F;軟骨)
-必須掌握嘅要點 (Must-Know Facts)
-Hyaluronan 透明質酸: Polysaccharide in repair&#x2F;ECM, needs peptides for attachment.
-Crosslink: Acrylated HA 丙烯酸化HA with ADH&#x2F;EDC, then thiol-acrylate 硫醇-丙烯酸酯.
-RGD addition aids proliferation&#x2F;migration.
-Matrigel 基質膠: EHS sarcoma secretion, laminin&#x2F;collagen&#x2F;GFs 層粘連蛋白&#x2F;膠原蛋白&#x2F;生長因子.
-For ESCs 胚胎幹細胞: Diluted maintains pluripotency 多能性, undiluted differentiates.
-Fibrin 纖維蛋白: From fibrinogen&#x2F;thrombin 纖維蛋白原&#x2F;凝血酶, aggregates to coagulate.
-Biocompatible, used as sealant 密封劑, but degrades by fibrinolysis 纖維蛋白溶解.
-Alginate 藻酸鹽: From algae, hydrophilic, G-blocks crosslink with Ca (egg-carton 蛋盒模型).
-M-blocks not involved.
-Chitosan 殼聚糖: From exoskeletons 外骨骼, like GAGs, for cartilage&#x2F;bone.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Hyaluronan Crosslink 透明質酸交聯:HA + ADH/EDC → HA-ADH + NHS-AC → Acrylated 丙烯酸化 → Thiol conjugate 硫醇偶聯物
-
-對比表 (Comparison Table) - Fibrin vs Alginate 纖維蛋白 vs 藻酸鹽
-
-
-Fibrin 纖維蛋白
-Alginate 藻酸鹽
-
-
-
-From blood 來源於血液
-From algae 來源於藻類
-
-
-Enzymatic cleavage 酶促裂解
-Ca crosslinking 鈣交聯
-
-
-Degrades fast 降解快
-Stable 穩定
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-忘記透明質酸需要修飾才能黏附細胞 (Forgetting hyaluronan needs modification for attachment).
-混淆藻酸鹽嘅G區同M區 (Mixing G&#x2F;M blocks in alginate)。
-
-Topic 8 – Synthetic Polymer Scaffolds 合成聚合物支架大圖景 (Big Picture)Synthetics offer consistency over naturals, with tunable degradation 可調節降解 for TE.
-思維導圖 (Mind map):Synthetics 合成聚合物 → Less issues 問題較少 (No allergens&#x2F;Batch var 無過敏原&#x2F;批次差異) → Examples 例子 (PLA&#x2F;PGA&#x2F;PLGA&#x2F;PCL&#x2F;PEOT&#x2F;PBT) → Degradation 降解 (Bulk&#x2F;Surface 整體&#x2F;表面) → Apps 應用 (Injectable&#x2F;Long-term 可注射&#x2F;長期)
-必須掌握嘅要點 (Must-Know Facts)
-Less byproducts, variations, immunogenicity than naturals.
-PLA 聚乳酸: Semicrystalline, brittle 脆, hydrophobic 疏水, degrades to lactic acid 乳酸.
-Copolymerize with PEG for solubility.
-PGA 聚乙醇酸: Crystalline, tough 堅韌, degrades to glycolic acid 乙醇酸, for sutures 縫合線.
-PLGA 聚乳酸-乙醇酸共聚物: Copolymers, biocompatible, acidic products inflame.
-PCL 聚己內酯: Biocompatible, slow bulk erosion 整體侵蝕 (&gt;3 yrs).
-PEOT&#x2F;PBT: Elastic, reversible crosslinks, tunable properties.
-PPEs&#x2F;PPAs 聚磷酸酯&#x2F;聚磷酸酯膠: Surface erosion 表面侵蝕, milder response.
-PPF-DA&#x2F;PEG-DA 聚富馬酸丙二醇酯-二丙烯酸酯&#x2F;聚乙二醇-二丙烯酸酯: Injectable, fill defects, low strength.
-Categories: Porous solid (bone) vs hydrogels (soft tissues).
-Solid: Stable, non-dissolve, hydrolyze.
-Hydrogels: Fill defects, minimally invasive, incorporate cells.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)PLA Degradation PLA降解:-[OCH(CH3)CO]-n + H2O → Lactic acid 乳酸
-
-對比表 (Comparison Table) - Natural vs Synthetic Polymers (Scaffolds) 天然 vs 合成聚合物 (支架)
-
-
-Natural 天然
-Synthetic 合成
-
-
-
-Variable&#x2F;biocompatible 多變&#x2F;生物相容
-Consistent&#x2F;tunable 穩定&#x2F;可調節
-
-
-Immunogenic risk 免疫原性風險
-Less inflammation 炎症較少
-
-
-From sources 來源於天然
-Lab-made 實驗室製備
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-認為合成聚合物不可降解 (Thinking synthetics non-biodegradable): 許多是可降解的。
-忘記酸性降解產物 (Forgetting acidic degradation products): 可能引起炎症。
-
-Topic 9 – 3D Cell Cultures and Applications 3D 細胞培養與應用大圖景 (Big Picture)3D cultures 3D培養 better mimic in vivo 體內 via scaffolds, improving cell behavior over 2D 二維.
-思維導圖 (Mind map):3D vs 2D → Why 原因 (ECM signals&#x2F;Topography ECM信號&#x2F;拓撲結構) → Limitations 局限性 (Diffusion 擴散) → Apps 應用 (Regen med&#x2F;Drug discovery&#x2F;Bioreactors 再生醫學&#x2F;藥物發現&#x2F;生物反應器)
-必須掌握嘅要點 (Must-Know Facts)
-2D artificial 人造; 3D natural with ECM cues.
-Control morphology&#x2F;architecture&#x2F;components.
-Cells respond in vivo-like.
-Matrices: Porous, support growth&#x2F;differentiation.
-Chemical mod: Adhesion&#x2F;degradation&#x2F;GF release.
-Limited diffusion 擴散 in 3D; viability drops over time.
-Apps: Clinical 臨床, in vitro 體外, regen med 再生醫學, drug discovery 藥物發現.
-Bioreactors 生物反應器: Stirring&#x2F;perfusion 攪拌&#x2F;灌注 for mass transport 物質傳輸.
-Focal adhesions 黏著斑 differ 2D vs 3D.
-3D for blood vessels&#x2F;skin&#x2F;cartilage 血管&#x2F;皮膚&#x2F;軟骨.
-
-關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Viability in 3D 3D培養中的活力:Day 1: 90% → Week 1: 60% → Week 3: &lt;10%
-
-對比表 (Comparison Table) - 2D vs 3D Cultures
-
-
-2D Cultures 2D培養
-3D Cultures 3D培養
-
-
-
-Flat&#x2F;rigid 平坦&#x2F;剛性
-Dynamic ECM 動態ECM
-
-
-Misrepresent 不能準確代表
-In vivo-like 更接近體內
-
-
-Simple 簡單
-Complex scaffolds 複雜支架
-
-
-常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
-假設2D培養足夠 (Assuming 2D sufficient): 陷阱題 - 為何3D更好。
-忘記大型組織需要生物反應器 (Forgetting bioreactor need for large tissues)。
-
-Active Recall Bank 主動回憶庫
-What is a polymer? (Large molecule made of repeating monomer units)
-Name two polymerization types: (Addition) and (Step-growth)
-Tg stands for: (Glass transition temperature)
-Factor favoring crystallinity: (Simple) structures
-Hydrogels are (Water)-swollen networks
-Natural polymer example: (Collagen)
-Gelatin from: (Partial) hydrolysis of collagen
-Hyaluronan needs (Peptides) for cell attachment
-PLA degrades to: (Lactic) acid
-PGA used for: (Sutures)
-Synthetic advantage over natural: No (batch) variations
-Crosslinks types: Covalent, (H-bonding), entanglements
-Matrigel for: (Embryonic) stem cells
-Fibrin from: (Fibrinogen) + thrombin
-Alginate crosslinks with: (Calcium) ions
-Chitosan from: (Arthropod) exoskeletons
-3D cultures mimic: (In vivo) environments
-Limitation in 3D: Limited (diffusion)
-Bioreactors provide: (Mass) transport
-Focal adhesions differ in: (2D) vs (3D)
-
-15-Minute Mock Exam 15分鐘模擬考試
-Describe two common techniques for fabricating polymeric scaffolds in tissue engineering.  
-
-Examples include electrospinning 靜電紡絲 and solvent casting&#x2F;particle leaching 溶劑鑄造&#x2F;粒子浸出; these may not suit ceramics due to material differences.
-
-
-Compare advantages and limitations of natural vs synthetic polymers for scaffolds.  
-
-Natural: Biocompatible, mimic ECM but variable&#x2F;immunogenic; Synthetic: Consistent, tunable degradation but may cause inflammation from byproducts.
-
-
-What properties make an ideal scaffold for tissue engineering?  
-
-Porous 多孔, biocompatible 生物相容, biodegradable at controlled rate 可控速率降解, mechanically suitable 機械性能合適, supports cell attachment&#x2F;growth 支持細胞黏附&#x2F;生長.
-
-
-Explain the role of hydrogels in scaffold-based tissue engineering.  
-
-Hydrogels provide hydrated 3D environments mimicking soft tissues, allowing cell encapsulation 細胞封裝 and nutrient diffusion.
-
-
-Which polymer is commonly used for absorbable sutures and why?  
-
-PGA; crystalline, tough, degrades to natural metabolite glycolic acid via hydrolysis.
-
-
-How does crystallinity affect polymer properties in scaffolds?  
-
-Increases strength and resistance to dissolution 耐溶解; favored by simple linear structures and slow cooling.
-
-
-Describe the degradation mechanism for PLGA copolymers.  
-
-Hydrolysis of ester bonds 酯鍵 in the main chain, releasing acidic products that may induce inflammation.
-
-
-Why are bioreactors used in 3D tissue engineering?  
-
-To provide convective mass transport 對流物質傳輸 (nutrients&#x2F;oxygen) via stirring&#x2F;perfusion for larger-scale tissue development.
-
-
-
-One-Page Cheat Sheet Summary 一頁速查表總結
-
-
-Category 類別
-Key Points 要點 (中英對照)
-
-
-
-Polymers Basics 聚合物基礎
-Natural 天然 (DNA&#x2F;Collagen), Synthetic 合成 (PLA&#x2F;PE); Suited for scaffolds: Versatile, but deform&#x2F;toxic. 適用於支架：多功能，但會變形&#x2F;有毒。
-
-
-Polymerization 聚合
-Addition 加成 (PE, non-degradable), Step-growth 逐步 (PLA&#x2F;PGA, hydrolyze esters).
-
-
-Structures&#x2F;States 結構&#x2F;狀態
-Crystalline 結晶 (Tm), Amorphous 無定形 (Tg); Semi-crystalline 半結晶 polymers; Tg decreases with long sides.
-
-
-Properties 特性
-Crystallinity 結晶度: Simple&#x2F;linear favors; Thermal 熱性能: e.g., PGA Tg 35°C Tm 210°C.
-
-
-Networks&#x2F;Hydrogels 網絡&#x2F;水凝膠
-Crosslinks swell; PHEMA common; Balance swelling&#x2F;retractive forces. 交聯溶脹；PHEMA常用；平衡溶脹&#x2F;收縮力。
-
-
-Natural Scaffolds 天然支架
-Collagen 膠原蛋白 (crosslink glutaraldehyde), Gelatin 明膠 (hydrolysis), Hyaluronan 透明質酸 (acrylate), Fibrin 纖維蛋白 (thrombin), Alginate 藻酸鹽 (Ca), Chitosan 殼聚糖 (GAG-like).
-
-
-Synthetic Scaffolds 合成支架
-PLA (brittle 脆), PGA (sutures 縫合線), PCL (slow degrade 慢降解), Injectables 可注射材料 (PPF-DA).
-
-
-3D Cultures 3D培養
-Vs 2D: In vivo-like; Limitations: Diffusion; Apps: Regen med, bioreactors for transport. 對比2D：更似體內；局限性：擴散；應用：再生醫學，生物反應器用於物質傳輸。
-
-
-English Version BelowTopic 1 – Introduction to PolymersBig Picture (1 sentence + mind map in text)Polymers are large molecules essential for tissue engineering scaffolds due to their versatility in mimicking ECM.Mind map: Polymers → Natural (Wood&#x2F;Rubber&#x2F;DNA) → Synthetic (PE&#x2F;PS&#x2F;PEG) → Biomedical Suitability (Strength&#x2F;Biodegradability&#x2F;Fabrication) → Disadvantages (Deformation&#x2F;Toxicity&#x2F;Degradation).
-Must-Know Facts (max 15 bullet points)
-Polymers revolutionized chemistry with major everyday impact (Lord Todd quote).
-ECM components like collagen, proteins, and GAGs are polymers.
-Suited for biomedical apps: low&#x2F;high strength, protein attachment resistance&#x2F;encouragement.
-Biodegradable or permanent; fabricable into complex shapes.
-Disadvantages: lower strength than metals&#x2F;ceramics, deform over time.
-May deteriorate during sterilization or degrade catastrophically in body.
-Release toxic byproducts possible.
-Natural examples: Wood, Rubber, Leather, Cotton, Wool, Silk, DNA, Proteins.
-Synthetic examples: Polystyrene, PET, PE, PEG, Kevlar.
-Polymers in scaffolds mimic ECM for cell support.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Polymer Chain Example:Monomer: H2C=CH2 (Ethylene)Polymer: -[CH2-CH2]-n (Polyethylene)
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Natural Polymers
-Synthetic Polymers
-
-
-
-From nature (e.g., wood, DNA)
-Man-made (e.g., PE, PS)
-
-
-Biocompatible but variable
-Consistent but may inflame
-
-
-Often biodegradable
-Tunable degradation
-
-
-Common Mistakes &amp; Examiner Traps
-Confusing polymers with monomers; trap: asking for polymer examples without specifying type.
-Overlooking disadvantages like toxic byproducts in body.
-
-Mnemonics &#x2F; Memory Hooks
-“Poly-Many”: Polymers are many monomers linked (poly &#x3D; many).
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are the advantages of polymers in biomedical applications?  
-
-Versatile strength, protein attachment control, biodegradability, and easy fabrication into shapes.
-
-Name two disadvantages of polymers.  
-
-Lower strength&#x2F;deformation over time; potential toxic degradation products.
-
-Topic 2 – Polymerization TypesBig Picture (1 sentence + mind map in text)Polymerization forms chains via addition (non-degradable) or step-growth (degradable via hydrolysis).Mind map: Polymerization → Addition (Radicals&#x2F;Ions → No labile bonds) → Step-Growth (Condensation → Ester bonds → Hydrolysis) → Examples (PE vs PLA&#x2F;PGA&#x2F;PLGA).
-Must-Know Facts (max 15 bullet points)
-Addition: Double-bond monomers like ethylene, vinyl chloride, styrene, MMA.
-Via radicals or ions; no labile bonds, not degradable.
-Example: Ethylene → Polyethylene.
-Step-growth: Functional group reactions, condensation.
-Well-known: PLA, PGA, PLGA.
-Degrade via main chain ester hydrolysis.
-PLA from lactic acid condensation.
-PGA from glycolic acid.
-PLGA copolymers tunable.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Addition: n H2C=CH2 → -[H2C-CH2]-nStep-Growth: n HOCH(CH3)COOH → -[OCH(CH3)CO]-n + (n-1)H2O
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Addition Polymerization
-Step-Growth Polymerization
-
-
-
-Double bonds break
-Functional groups react
-
-
-Non-degradable chains
-Degradable via hydrolysis
-
-
-Examples: PE, PVC
-Examples: PLA, PGA
-
-
-Common Mistakes &amp; Examiner Traps
-Mixing addition and step-growth; trap: classify PLA as addition (it’s step-growth).
-Forgetting condensation byproduct in step-growth.
-
-Mnemonics &#x2F; Memory Hooks
-“Add No Water”: Addition has no H2O byproduct; “Step Condense”: Step-growth condenses with H2O loss.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe addition polymerization.  
-
-Involves double-bond monomers reacting via radicals&#x2F;ions, forming non-degradable polymers.
-
-Why do step-growth polymers degrade?  
-
-Hydrolysis of main chain ester bonds.
-
-Topic 3 – Polymer Structures and StatesBig Picture (1 sentence + mind map in text)Polymers exist as crystalline, amorphous, or semi-crystalline, affecting melting and glass transitions.Mind map: Structures → Crystals (Ordered&#x2F;Lattice&#x2F;Sharp Tm) → Amorphous (No order&#x2F;Tg) → Polymers (Semi-crystalline&#x2F;Folding&#x2F;Stacking) → States (Rubber&#x2F;Glass).
-Must-Know Facts (max 15 bullet points)
-Crystals: Infinite 3D lattice, sharp Tm.
-Amorphous: No structure, sharp Tm.
-Small molecules: 100% crystalline or amorphous.
-Polymer crystalline: Intramolecular folding&#x2F;stacking.
-Semi-crystalline: Never 100% crystalline, have Tm.
-Rubber&#x2F;Glass: Frozen liquid, no long-range order.
-Tg: Below Tg, no cooperative rotation&#x2F;translation.
-Transition: Rubbery to glassy hard state.
-Crystallization favored by simple structures, small side groups.
-Linear, non-crosslinked polymers crystallize better.
-Block&#x2F;alternating copolymers, slow cooling aid crystallization.
-Crystalline: Stronger, resistant to dissolution.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Solid States:- Crystalline: Ordered chains → Tm- Amorphous: Random → TgDiagram:Crystalline: |||||| (aligned)Amorphous: ~ ~ ~ (tangled)
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Crystalline
-Amorphous
-
-
-
-Ordered lattice
-No order
-
-
-Sharp Tm
-Tg only
-
-
-Stronger
-Flexible
-
-
-Common Mistakes &amp; Examiner Traps
-Assuming polymers are 100% crystalline; trap: polymers are semi-crystalline.
-Confusing Tm and Tg.
-
-Mnemonics &#x2F; Memory Hooks
-“Crystal Clear Tm”: Crystals have sharp melting; “Amorphous Tg”: Amorphous has glass transition.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is Tg?  
-
-Glass transition temperature where polymer shifts from rubbery to glassy.
-
-Factors favoring crystallization?  
-
-Simple structures, linear chains, slow cooling.
-
-Topic 4 – Polymer PropertiesBig Picture (1 sentence + mind map in text)Properties like crystallinity, thermal behavior, and side groups influence polymer performance in scaffolds.Mind map: Properties → Crystallinity (Favored by simplicity) → Side Groups (Flexible lower Tg) → Thermal (Tg&#x2F;Tm values) → Effects (Free volume&#x2F;Motion).
-Must-Know Facts (max 15 bullet points)
-Crystallization: Simple&#x2F;small side groups, linear, non-network.
-Slow cooling for chain motion.
-Crystalline stronger&#x2F;resistant.
-Flexible side groups: Tg decreases with length.
-Side chains rotate, increase free volume, lower Tg.
-Thermal examples: Nylon 6,6 Tg 45°C Tm 267°C.
-UHMWPE Tg -125°C Tm 140°C.
-Silicone Tg -123°C Tm -29°C.
-PMMA Tg 105°C Tm 160°C.
-PDLLA Tg 50°C amorphous.
-PCL Tg -60°C Tm 57°C.
-PGA Tg 35°C Tm 210°C.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Tg Trend:Increasing side chain: Tg ↓ (e.g., PMMA 105°C → Polydecyl MA -62°C)
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Short Side Groups
-Long Side Groups
-
-
-
-Higher Tg
-Lower Tg
-
-
-Less free volume
-More free volume
-
-
-Restricted motion
-Easier rotation
-
-
-Common Mistakes &amp; Examiner Traps
-Thinking longer sides increase Tg; actually decrease.
-Ignoring side chain effects on packing.
-
-Mnemonics &#x2F; Memory Hooks
-“Long Sides Low Tg”: Longer flexible groups lower transition.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)How do side groups affect Tg?  
-
-Flexible long sides lower Tg by increasing free volume.
-
-Give Tg and Tm for PGA.  
-
-Tg 35°C, Tm 210°C.
-
-Topic 5 – Crosslinked Networks and HydrogelsBig Picture (1 sentence + mind map in text)Crosslinks create networks that swell in water to form hydrogels for cell environments.Mind map: Crosslinks (Covalent&#x2F;H-bond&#x2F;Entangle) → Networks (Increased MW&#x2F;Swell) → Hydrogels (Water-swollen&#x2F;Balanced forces) → Apps (Nutrients&#x2F;Waste&#x2F;Aqueous mimic).
-Must-Know Facts (max 15 bullet points)
-Crosslinks: Covalent, H-bonding, entanglements.
-Increase MW, swell in solvents (hydrogel).
-Hydrogels: Water-swollen crosslinked structures.
-From monomers or chain associations.
-Why: Cells need aqueous for nutrients&#x2F;waste.
-Prepared by crosslinking then swelling.
-PHEMA common: Tissue-like water, degradation resistant.
-Apps: Contacts, wounds, kidney membranes.
-Swelling: Thermodynamic force vs retractive.
-Highly swollen: Cellulose, PVA, PEG.
-Moderately: PHEMA.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Hydrogel Formation:Polymer chains + Crosslinker → Network → Swell in H2O
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Solid Porous Scaffolds
-Hydrogel Scaffolds
-
-
-
-For bone (stable)
-For soft tissues (fill defects)
-
-
-Degrade by hydrolysis
-Incorporate cells&#x2F;bioactives easily
-
-
-Non-dissolving
-Minimally invasive
-
-
-Common Mistakes &amp; Examiner Traps
-Confusing crosslinks with polymerization; trap: hydrogels don’t need crosslinks (they do).
-Overlooking swelling balance.
-
-Mnemonics &#x2F; Memory Hooks
-“Cross Swell Gel”: Crosslinks lead to swelling in hydrogels.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are hydrogels?  
-
-Water-swollen crosslinked polymeric structures.
-
-Why use hydrogels in TE?  
-
-Mimic aqueous cell environment for nutrient&#x2F;waste exchange.
-
-Topic 6 – Natural Polymer ScaffoldsBig Picture (1 sentence + mind map in text)Natural polymers from proteins&#x2F;polysaccharides provide biocompatible scaffolds but with variability risks.Mind map: Natural Scaffolds → Proteins (Collagen&#x2F;Elastin) → Polysaccharides (GAGs&#x2F;Hyaluronan) → Sources (Plants&#x2F;Algae&#x2F;Animals&#x2F;Microbes) → Crosslinking (Chemical&#x2F;Physical).
-Must-Know Facts (max 15 bullet points)
-Proteins: Amino acid polymers, include collagen, elastin, laminin.
-DNA&#x2F;RNA: Phosphate-ribose backbone, not for scaffolds.
-Scaffolds: Proteins, polysaccharides, combos.
-Sources: Collagen&#x2F;fibrin&#x2F;elastin (animals), soybean (plants), silk fibroin.
-Gelatin: Partial hydrolysis of collagen from skin&#x2F;bones.
-Extraction: Reduce crosslinks, acid&#x2F;water at temp.
-Acidic pH speeds conversion.
-Scaffolds: Crosslink via -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH.
-Chemical mod tricky in water.
-May alter solubility&#x2F;conformation&#x2F;activity.
-Collagen: Triple-helical, ECM main, immunogenicity risk.
-Crosslink: Physical (moisture&#x2F;heat&#x2F;UV), chemical (glutaraldehyde).
-Formaldehyde: Fixes tissue by crosslinking aminos.
-Polysaccharides: Monosaccharide polymers, glycosidic bonds.
-GAGs: Unbranched, repeating disaccharides (chondroitin etc.).
-
-Key Formulas &#x2F; Diagrams (use code blocks)Collagen Crosslink:Protein-NH2 + Glutaraldehyde → Crosslinked
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Proteins
-Polysaccharides
-
-
-
-Amino acids
-Monosaccharides
-
-
-Collagen&#x2F;Gelatin
-GAGs&#x2F;Hyaluronan
-
-
-Crosslink via groups
-Glycosidic bonds
-
-
-Common Mistakes &amp; Examiner Traps
-Thinking DNA&#x2F;RNA used as scaffolds; they’re not.
-Ignoring immunogenicity in natural polymers.
-
-Mnemonics &#x2F; Memory Hooks
-“Natural Cross Groups”: -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH for crosslinking.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Sources of natural polymers?  
-
-Plants (soybean), algae (alginate), animals (collagen), microbes (dextran).
-
-How extract gelatin?  
-
-Partial hydrolysis of collagen in acid&#x2F;water at increasing temps.
-
-Topic 7 – Specific Natural PolymersBig Picture (1 sentence + mind map in text)Specific naturals like hyaluronan, matrigel, fibrin, alginate, chitosan offer unique TE properties.Mind map: Specifics → Hyaluronan (Repair&#x2F;Cartilage&#x2F;Hydrophilic) → Matrigel (ECM mix&#x2F;Stem cells) → Fibrin (Coagulation&#x2F;Biocompatible) → Alginate (Algae&#x2F;Ca crosslink) → Chitosan (Arthropod&#x2F;Cartilage).
-Must-Know Facts (max 15 bullet points)
-Hyaluronan: Polysaccharide in repair&#x2F;ECM, needs peptides for attachment.
-Crosslink: Acrylated HA with ADH&#x2F;EDC, then thiol-acrylate.
-RGD addition aids proliferation&#x2F;migration.
-Matrigel: EHS sarcoma secretion, laminin&#x2F;collagen&#x2F;GFs.
-For ESCs: Diluted maintains pluripotency, undiluted differentiates.
-Fibrin: From fibrinogen&#x2F;thrombin, aggregates to coagulate.
-Biocompatible, used as sealant, but degrades by fibrinolysis.
-Alginate: From algae, hydrophilic, G-blocks crosslink with Ca (egg-carton).
-M-blocks not involved.
-Chitosan: From exoskeletons, like GAGs, for cartilage&#x2F;bone.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Hyaluronan Crosslink:HA + ADH/EDC → HA-ADH + NHS-AC → Acrylated → Thiol conjugate
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Fibrin
-Alginate
-
-
-
-From blood
-From algae
-
-
-Enzymatic cleavage
-Ca crosslinking
-
-
-Degrades fast
-Stable
-
-
-Common Mistakes &amp; Examiner Traps
-Forgetting hyaluronan needs modification for attachment.
-Mixing G&#x2F;M blocks in alginate.
-
-Mnemonics &#x2F; Memory Hooks
-“Hyal Needs Help”: Hyaluronan requires peptides for cell attach.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)How crosslink hyaluronan?  
-
-Acrylate with ADH&#x2F;EDC, then thiol-acrylate.
-
-What is matrigel for?  
-
-Maintain ESC pluripotency (diluted) or differentiation (undiluted).
-
-Topic 8 – Synthetic Polymer ScaffoldsBig Picture (1 sentence + mind map in text)Synthetics offer consistency over naturals, with tunable degradation for TE.Mind map: Synthetics → Less issues (No allergens&#x2F;Batch var) → Examples (PLA&#x2F;PGA&#x2F;PLGA&#x2F;PCL&#x2F;PEOT&#x2F;PBT) → Degradation (Bulk&#x2F;Surface) → Apps (Injectable&#x2F;Long-term).
-Must-Know Facts (max 15 bullet points)
-Less byproducts, variations, immunogenicity than naturals.
-PLA: Semicrystalline, brittle, hydrophobic, degrades to lactic acid.
-Copolymerize with PEG for solubility.
-PGA: Crystalline, tough, degrades to glycolic acid, for sutures.
-PLGA: Copolymers, biocompatible, acidic products inflame.
-PCL: Biocompatible, slow bulk erosion (&gt;3 yrs).
-PEOT&#x2F;PBT: Elastic, reversible crosslinks, tunable properties.
-PPEs&#x2F;PPAs: Surface erosion, milder response.
-PPF-DA&#x2F;PEG-DA: Injectable, fill defects, low strength.
-Categories: Porous solid (bone) vs hydrogels (soft tissues).
-Solid: Stable, non-dissolve, hydrolyze.
-Hydrogels: Fill defects, minimally invasive, incorporate cells.
-
-Key Formulas &#x2F; Diagrams (use code blocks)PLA Degradation:-[OCH(CH3)CO]-n + H2O → Lactic acid
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-Natural
-Synthetic
-
-
-
-Variable&#x2F;biocompatible
-Consistent&#x2F;tunable
-
-
-Immunogenic risk
-Less inflammation
-
-
-From sources
-Lab-made
-
-
-Common Mistakes &amp; Examiner Traps
-Thinking synthetics non-biodegradable; many are.
-Forgetting acidic degradation products.
-
-Mnemonics &#x2F; Memory Hooks
-“Synthetic Safe”: Less risks than natural.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Advantages of synthetics?  
-
-No byproducts&#x2F;variations&#x2F;immunogenicity.
-
-Describe PCL.  
-
-Good biocompatibility, slow bulk erosion for long-term implants.
-
-Topic 9 – 3D Cell Cultures and ApplicationsBig Picture (1 sentence + mind map in text)3D cultures better mimic in vivo via scaffolds, improving cell behavior over 2D.Mind map: 3D vs 2D → Why (ECM signals&#x2F;Topography) → Limitations (Diffusion) → Apps (Regen med&#x2F;Drug discovery&#x2F;Bioreactors).
-Must-Know Facts (max 15 bullet points)
-2D artificial; 3D natural with ECM cues.
-Control morphology&#x2F;architecture&#x2F;components.
-Cells respond in vivo-like.
-Matrices: Porous, support growth&#x2F;differentiation.
-Chemical mod: Adhesion&#x2F;degradation&#x2F;GF release.
-Limited diffusion in 3D; viability drops over time.
-Apps: Clinical, in vitro, regen med, drug discovery.
-Bioreactors: Stirring&#x2F;perfusion for mass transport.
-Focal adhesions differ 2D vs 3D.
-3D for blood vessels&#x2F;skin&#x2F;cartilage.
-
-Key Formulas &#x2F; Diagrams (use code blocks)Viability in 3D:Day 1: 90% → Week 1: 60% → Week 3: &lt;10%
-Comparison Table (“X vs Y” in proper Markdown table)
-
-
-2D Cultures
-3D Cultures
-
-
-
-Flat&#x2F;rigid
-Dynamic ECM
-
-
-Misrepresent
-In vivo-like
-
-
-Simple
-Complex scaffolds
-
-
-Common Mistakes &amp; Examiner Traps
-Assuming 2D sufficient; trap: why 3D better.
-Forgetting bioreactor need for large tissues.
-
-Mnemonics &#x2F; Memory Hooks
-“3D Real Deal”: 3D mimics real tissue better.
-
-Past Exam Questions + Model Answers (use &gt; blockquote for answers)Why 3D over 2D?  
-
-Reproduces complex environments, better cell responses.
-
-Role of bioreactors?  
-
-Provide mass transport for cm-scale tissues.
-
-Active Recall Bank
-What is a polymer? ____
-Name two polymerization types: ____ and ____
-Tg stands for: ____
-Factor favoring crystallinity: ____ structures
-Hydrogels are ____-swollen networks
-Natural polymer example: ____
-Gelatin from: ____ hydrolysis
-Hyaluronan needs ____ for cell attachment
-PLA degrades to: ____ acid
-PGA used for: ____
-Synthetic advantage over natural: No ____ variations
-Crosslinks types: Covalent, ____, entanglements
-Matrigel for: ____ stem cells
-Fibrin from: ____ + thrombin
-Alginate crosslinks with: ____ ions
-Chitosan from: ____ exoskeletons
-3D cultures mimic: ____ environments
-Limitation in 3D: Limited ____
-Bioreactors provide: ____ transport
-Focal adhesions differ in: ____ vs ____
-
-15-Minute Mock Exam
-Describe two common techniques for fabricating polymeric scaffolds in tissue engineering.  
-
-Examples include electrospinning and solvent casting&#x2F;particle leaching; these may not suit ceramics due to material differences.
-
-
-Compare advantages and limitations of natural vs synthetic polymers for scaffolds.  
-
-Natural: Biocompatible, mimic ECM but variable&#x2F;immunogenic; Synthetic: Consistent, tunable degradation but may cause inflammation from byproducts.
-
-
-What properties make an ideal scaffold for tissue engineering?  
-
-Porous, biocompatible, biodegradable at controlled rate, mechanically suitable, supports cell attachment&#x2F;growth.
-
-
-Explain the role of hydrogels in scaffold-based tissue engineering.  
-
-Hydrogels provide hydrated 3D environments mimicking soft tissues, allowing cell encapsulation and nutrient diffusion.
-
-
-Which polymer is commonly used for absorbable sutures and why?  
-
-PGA; crystalline, tough, degrades to natural metabolite glycolic acid via hydrolysis.
-
-
-How does crystallinity affect polymer properties in scaffolds?  
-
-Increases strength and resistance to dissolution; favored by simple linear structures and slow cooling.
-
-
-Describe the degradation mechanism for PLGA copolymers.  
-
-Hydrolysis of ester bonds in the main chain, releasing acidic products that may induce inflammation.
-
-
-Why are bioreactors used in 3D tissue engineering?  
-
-To provide convective mass transport (nutrients&#x2F;oxygen) via stirring&#x2F;perfusion for larger-scale tissue development.
-
-
-
-One-Page Cheat Sheet Summary
-
-
-Category
-Key Points
-
-
-
-Polymers Basics
-Natural (DNA&#x2F;Collagen), Synthetic (PLA&#x2F;PE); Suited for scaffolds: Versatile, but deform&#x2F;toxic.
-
-
-Polymerization
-Addition (PE, non-degradable); Step-growth (PLA&#x2F;PGA, hydrolyze esters).
-
-
-Structures&#x2F;States
-Crystalline (Tm), Amorphous (Tg); Semi-crystalline polymers; Tg decreases with long sides.
-
-
-Properties
-Crystallinity: Simple&#x2F;linear favors; Thermal: e.g., PGA Tg 35°C Tm 210°C.
-
-
-Networks&#x2F;Hydrogels
-Crosslinks swell; PHEMA common; Balance swelling&#x2F;retractive forces.
-
-
-Natural Scaffolds
-Collagen (crosslink glutaraldehyde), Gelatin (hydrolysis), Hyaluronan (acrylate), Fibrin (thrombin), Alginate (Ca), Chitosan (GAG-like).
-
-
-Synthetic Scaffolds
-PLA (brittle), PGA (sutures), PCL (slow degrade), Injectables (PPF-DA).
-
-
-3D Cultures
-Vs 2D: In vivo-like; Limitations: Diffusion; Apps: Regen med, bioreactors for transport.
-
-
-]]></content>
-      <categories>
-        <category>Education</category>
-        <category>Biomedical Engineering</category>
-        <category>Tissue Engineering</category>
-      </categories>
-      <tags>
-        <tag>biomedical engineering</tag>
-        <tag>Exam Notes</tag>
-        <tag>Tissue Engineering</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BME 2104 Tissue Engineering – 5  </title>
     <url>/posts/a0e231f5.html</url>
     <content><![CDATA[BME 2104 Tissue Engineering – 5Lecture Overview
@@ -10752,6 +11137,1062 @@ Natural (collagen, active); Synthetic (modifiable); Metals (Ti strong, Mg resorb
       </tags>
   </entry>
   <entry>
+    <title>BME 2104 Tissue Engineering – 6</title>
+    <url>/posts/97b3c0b2.html</url>
+    <content><![CDATA[BME 2104 Tissue Engineering – 6Lecture Overview
+🔴 Polymer basics and definitions 聚合物基礎與定義
+🟢 Polymerization mechanisms 聚合機制
+🔵 Polymer structures and states in solids 聚合物固體結構與狀態
+🟢 Thermal and crystallinity properties 熱性能與結晶性
+🔵 Crosslinked networks and hydrogels 交聯網絡與水凝膠
+🔴 Natural polymer scaffolds and examples 天然聚合物支架與例子
+🟢 Synthetic polymer scaffolds and degradation 合成聚合物支架與降解
+🔵 3D cell cultures vs 2D and applications 3D vs 2D 細胞培養與應用
+
+Topic 1 – Introduction to Polymers 聚合物簡介大圖景 (Big Picture)Polymers 聚合物 are large molecules essential for tissue engineering scaffolds due to their versatility in mimicking ECM 細胞外基質.
+思維導圖 (Mind map):Polymers 聚合物 → Natural 天然 (Wood&#x2F;Rubber&#x2F;DNA) → Synthetic 合成 (PE&#x2F;PS&#x2F;PEG) → Biomedical Suitability 生物醫學適用性 (Strength&#x2F;Biodegradability&#x2F;Fabrication 強度&#x2F;生物降解性&#x2F;加工性) → Disadvantages 缺點 (Deformation&#x2F;Toxicity&#x2F;Degradation 變形&#x2F;毒性&#x2F;降解)
+必須掌握嘅要點 (Must-Know Facts)
+Polymers revolutionized chemistry with major everyday impact (Lord Todd quote).
+ECM 細胞外基質 components like collagen 膠原蛋白, proteins 蛋白質, and GAGs 糖胺聚糖 are polymers.
+Suited for biomedical apps 生物醫學應用: low&#x2F;high strength, protein attachment 蛋白質黏附 resistance&#x2F;encouragement.
+Biodegradable 生物可降解 or permanent; fabricable into complex shapes.
+Disadvantages: lower strength than metals&#x2F;ceramics, deform over time.
+May deteriorate during sterilization 滅菌 or degrade catastrophically in body.
+Release toxic byproducts 有毒副產物 possible.
+Natural examples: Wood 木材, Rubber 橡膠, Leather 皮革, Cotton 棉花, Wool 羊毛, Silk 絲綢, DNA, Proteins 蛋白質.
+Synthetic examples: Polystyrene (PS) 聚苯乙烯, PET 聚對苯二甲酸乙二醇酯, PE 聚乙烯, PEG 聚乙二醇, Kevlar 凱夫拉.
+Polymers in scaffolds mimic ECM for cell support.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Polymer Chain Example 聚合物鏈例子:Monomer 單體: H2C=CH2 (Ethylene 乙烯)Polymer 聚合物: -[CH2-CH2]-n (Polyethylene 聚乙烯)
+
+對比表 (Comparison Table) - Natural vs Synthetic Polymers 天然 vs 合成聚合物
+
+
+Natural Polymers 天然聚合物
+Synthetic Polymers 合成聚合物
+
+
+
+From nature (e.g., wood, DNA) 來源於自然界 (如木材，DNA)
+Man-made (e.g., PE, PS) 人造 (如PE，PS)
+
+
+Biocompatible but variable 生物相容性好但性質多變
+Consistent but may inflame 性質穩定但可能引起炎症
+
+
+Often biodegradable 通常可生物降解
+Tunable degradation 可調節降解性
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+混淆聚合物與單體 (Confusing polymers with monomers): 陷阱題要求舉例聚合物時不指定類型。
+忽略缺點 (Overlooking disadvantages): 如體內產生有毒副產物。
+
+Topic 2 – Polymerization Types 聚合類型大圖景 (Big Picture)Polymerization 聚合作用 forms chains via addition 加成聚合 (non-degradable) or step-growth 逐步聚合 (degradable via hydrolysis 水解).
+思維導圖 (Mind map):Polymerization 聚合作用 → Addition 加成聚合 (Radicals&#x2F;Ions 自由基&#x2F;離子 → No labile bonds 無不穩定鍵) → Step-Growth 逐步聚合 (Condensation 縮合 → Ester bonds 酯鍵 → Hydrolysis 水解) → Examples 例子 (PE vs PLA&#x2F;PGA&#x2F;PLGA)
+必須掌握嘅要點 (Must-Know Facts)
+Addition 加成聚合: Double-bond monomers 雙鍵單體 like ethylene 乙烯, vinyl chloride 氯乙烯, styrene 苯乙烯, MMA 甲基丙烯酸甲酯.
+Via radicals 自由基 or ions 離子; no labile bonds, not degradable.
+Example: Ethylene → Polyethylene (PE) 聚乙烯.
+Step-growth 逐步聚合: Functional group reactions 官能團反應, condensation 縮合.
+Well-known: PLA 聚乳酸, PGA 聚乙醇酸, PLGA 聚乳酸-乙醇酸共聚物.
+Degrade via main chain ester hydrolysis 酯鍵水解.
+PLA from lactic acid 乳酸 condensation.
+PGA from glycolic acid 乙醇酸.
+PLGA copolymers tunable.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Addition 加成聚合: n H2C=CH2 → -[H2C-CH2]-nStep-Growth 逐步聚合: n HOCH(CH3)COOH → -[OCH(CH3)CO]-n + (n-1)H2O
+
+對比表 (Comparison Table) - Addition vs Step-Growth Polymerization 加成 vs 逐步聚合
+
+
+Addition Polymerization 加成聚合
+Step-Growth Polymerization 逐步聚合
+
+
+
+Double bonds break 雙鍵斷裂
+Functional groups react 官能團反應
+
+
+Non-degradable chains 鏈不可降解
+Degradable via hydrolysis 可通過水解降解
+
+
+Examples: PE, PVC 例子: PE，PVC
+Examples: PLA, PGA 例子: PLA，PGA
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+混淆加成聚合與逐步聚合 (Mixing addition and step-growth): 陷阱題將 PLA 分類為加成聚合（實際係逐步聚合）。
+忘記逐步聚合嘅副產物 (Forgetting condensation byproduct in step-growth): 有水生成。
+
+Topic 3 – Polymer Structures and States 聚合物結構與狀態大圖景 (Big Picture)Polymers exist as crystalline 結晶, amorphous 無定形, or semi-crystalline 半結晶, affecting melting 熔化 and glass transitions 玻璃化轉變.
+思維導圖 (Mind map):Structures 結構 → Crystals 晶體 (Ordered&#x2F;Lattice&#x2F;Sharp Tm 有序&#x2F;晶格&#x2F;銳利Tm) → Amorphous 無定形 (No order&#x2F;Tg 無序&#x2F;Tg) → Polymers 聚合物 (Semi-crystalline&#x2F;Folding&#x2F;Stacking 半結晶&#x2F;摺疊&#x2F;堆疊) → States 狀態 (Rubber&#x2F;Glass 橡膠態&#x2F;玻璃態)
+必須掌握嘅要點 (Must-Know Facts)
+Crystals 晶體: Infinite 3D lattice 無限三維晶格, sharp Tm 熔點.
+Amorphous 無定形: No structure, sharp Tm.
+Small molecules 小分子: 100% crystalline or amorphous.
+Polymer crystalline: Intramolecular folding&#x2F;stacking 分子內摺疊&#x2F;堆疊.
+Semi-crystalline 半結晶: Never 100% crystalline, have Tm.
+Rubber&#x2F;Glass 橡膠態&#x2F;玻璃態: Frozen liquid 凍結液體, no long-range order.
+Tg 玻璃化轉變溫度: Below Tg, no cooperative rotation&#x2F;translation 協同旋轉&#x2F;平移.
+Transition: Rubbery to glassy hard state.
+Crystallization 結晶 favored by simple structures, small side groups.
+Linear, non-crosslinked polymers crystallize better.
+Block&#x2F;alternating copolymers 嵌段&#x2F;交替共聚物, slow cooling aid crystallization.
+Crystalline: Stronger, resistant to dissolution.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Solid States 固體狀態:- Crystalline 結晶: Ordered chains 有序鏈 → Tm- Amorphous 無定形: Random 無序 → Tg
+
+對比表 (Comparison Table) - Crystalline vs Amorphous 結晶 vs 無定形
+
+
+Crystalline 結晶
+Amorphous 無定形
+
+
+
+Ordered lattice 有序晶格
+No order 無序
+
+
+Sharp Tm 銳利熔點
+Tg only 只有玻璃化轉變溫度
+
+
+Stronger 更強
+Flexible 更柔韌
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+假設聚合物100%結晶 (Assuming polymers are 100% crystalline): 陷阱題 - 聚合物是半結晶的。
+混淆Tm同Tg (Confusing Tm and Tg)。
+
+Topic 4 – Polymer Properties 聚合物特性大圖景 (Big Picture)Properties like crystallinity 結晶度, thermal behavior 熱行為, and side groups 側基 influence polymer performance in scaffolds.
+思維導圖 (Mind map):Properties 特性 → Crystallinity 結晶度 (Favored by simplicity 有利於簡單結構) → Side Groups 側基 (Flexible lower Tg 柔韌側基降低Tg) → Thermal 熱性能 (Tg&#x2F;Tm values) → Effects 影響 (Free volume&#x2F;Motion 自由體積&#x2F;運動)
+必須掌握嘅要點 (Must-Know Facts)
+Crystallization 結晶: Simple&#x2F;small side groups, linear, non-network.
+Slow cooling for chain motion.
+Crystalline stronger&#x2F;resistant.
+Flexible side groups: Tg decreases with length.
+Side chains rotate, increase free volume 自由體積, lower Tg.
+Thermal examples: Nylon 6,6 尼龍6,6 Tg 45°C Tm 267°C.
+UHMWPE 超高分子量聚乙烯 Tg -125°C Tm 140°C.
+Silicone 矽橡膠 Tg -123°C Tm -29°C.
+PMMA 聚甲基丙烯酸甲酯 Tg 105°C Tm 160°C.
+PDLLA 聚消旋乳酸 Tg 50°C amorphous.
+PCL 聚己內酯 Tg -60°C Tm 57°C.
+PGA 聚乙醇酸 Tg 35°C Tm 210°C.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Tg Trend Tg趨勢:Increasing side chain 側鏈增長: Tg ↓ (e.g., PMMA 105°C → Polydecyl MA -62°C)
+
+對比表 (Comparison Table) - Short vs Long Side Groups 短 vs 長側基
+
+
+Short Side Groups 短側基
+Long Side Groups 長側基
+
+
+
+Higher Tg 較高Tg
+Lower Tg 較低Tg
+
+
+Less free volume 較少自由體積
+More free volume 較多自由體積
+
+
+Restricted motion 運動受限
+Easier rotation 易於旋轉
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+認為長側基會提高Tg (Thinking longer sides increase Tg): 實際上會降低。
+忽略側基對堆積嘅影響 (Ignoring side chain effects on packing)。
+
+Topic 5 – Crosslinked Networks and Hydrogels 交聯網絡與水凝膠大圖景 (Big Picture)Crosslinks 交聯鍵 create networks that swell in water to form hydrogels 水凝膠 for cell environments.
+思維導圖 (Mind map):Crosslinks 交聯鍵 (Covalent&#x2F;H-bond&#x2F;Entangle 共價鍵&#x2F;氫鍵&#x2F;纏結) → Networks 網絡 (Increased MW&#x2F;Swell 分子量增加&#x2F;溶脹) → Hydrogels 水凝膠 (Water-swollen&#x2F;Balanced forces 水溶脹&#x2F;平衡力) → Apps 應用 (Nutrients&#x2F;Waste&#x2F;Aqueous mimic 營養&#x2F;廢物&#x2F;水環境模擬)
+必須掌握嘅要點 (Must-Know Facts)
+Crosslinks: Covalent 共價鍵, H-bonding 氫鍵, entanglements 纏結.
+Increase MW 分子量, swell in solvents (hydrogel).
+Hydrogels 水凝膠: Water-swollen crosslinked structures.
+From monomers or chain associations.
+Why: Cells need aqueous for nutrients&#x2F;waste.
+Prepared by crosslinking then swelling.
+PHEMA 聚羥基乙基甲基丙烯酸酯 common: Tissue-like water, degradation resistant.
+Apps: Contacts 隱形眼鏡, wounds 傷口, kidney membranes 腎膜.
+Swelling: Thermodynamic force 熱力學力 vs retractive 收縮力.
+Highly swollen: Cellulose 纖維素, PVA 聚乙烯醇, PEG.
+Moderately: PHEMA.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Hydrogel Formation 水凝膠形成:Polymer chains + Crosslinker 聚合物鏈 + 交聯劑 → Network 網絡 → Swell in H2O 在水中溶脹
+
+對比表 (Comparison Table) - Solid Porous Scaffolds vs Hydrogel Scaffolds 固體多孔支架 vs 水凝膠支架
+
+
+Solid Porous Scaffolds 固體多孔支架
+Hydrogel Scaffolds 水凝膠支架
+
+
+
+For bone (stable) 用於骨（穩定）
+For soft tissues (fill defects) 用於軟組織（填充缺損）
+
+
+Degrade by hydrolysis 通過水解降解
+Incorporate cells&#x2F;bioactives easily 易於包埋細胞&#x2F;生物活性因子
+
+
+Non-dissolving 不溶解
+Minimally invasive 微創
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+混淆交聯與聚合 (Confusing crosslinks with polymerization): 陷阱題 - 水凝膠不需要交聯（實際需要）。
+忽略溶脹平衡 (Overlooking swelling balance)。
+
+Topic 6 – Natural Polymer Scaffolds 天然聚合物支架大圖景 (Big Picture)Natural polymers from proteins 蛋白質&#x2F;polysaccharides 多糖 provide biocompatible scaffolds but with variability risks.
+思維導圖 (Mind map):Natural Scaffolds 天然支架 → Proteins 蛋白質 (Collagen&#x2F;Elastin 膠原蛋白&#x2F;彈性蛋白) → Polysaccharides 多糖 (GAGs&#x2F;Hyaluronan 糖胺聚糖&#x2F;透明質酸) → Sources 來源 (Plants&#x2F;Algae&#x2F;Animals&#x2F;Microbes 植物&#x2F;藻類&#x2F;動物&#x2F;微生物) → Crosslinking 交聯 (Chemical&#x2F;Physical 化學&#x2F;物理)
+必須掌握嘅要點 (Must-Know Facts)
+Proteins: Amino acid polymers, include collagen, elastin, laminin.
+DNA&#x2F;RNA: Phosphate-ribose backbone, not for scaffolds.
+Scaffolds: Proteins, polysaccharides, combos.
+Sources: Collagen&#x2F;fibrin&#x2F;elastin (animals), soybean (plants), silk fibroin 絲素蛋白.
+Gelatin 明膠: Partial hydrolysis of collagen from skin&#x2F;bones.
+Extraction: Reduce crosslinks, acid&#x2F;water at temp.
+Acidic pH speeds conversion.
+Scaffolds: Crosslink via -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH.
+Chemical mod tricky in water.
+May alter solubility&#x2F;conformation&#x2F;activity 溶解性&#x2F;構象&#x2F;活性.
+Collagen: Triple-helical 三螺旋, ECM main, immunogenicity risk 免疫原性風險.
+Crosslink: Physical (moisture&#x2F;heat&#x2F;UV), chemical (glutaraldehyde 戊二醛).
+Formaldehyde 甲醛: Fixes tissue by crosslinking aminos.
+Polysaccharides: Monosaccharide polymers, glycosidic bonds 糖苷鍵.
+GAGs: Unbranched 無分支, repeating disaccharides 重複雙糖單位 (chondroitin 硫酸軟骨素 etc.).
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Collagen Crosslink 膠原蛋白交聯:Protein-NH2 + Glutaraldehyde → Crosslinked 交聯
+
+對比表 (Comparison Table) - Proteins vs Polysaccharides 蛋白質 vs 多糖
+
+
+Proteins 蛋白質
+Polysaccharides 多糖
+
+
+
+Amino acids 氨基酸
+Monosaccharides 單糖
+
+
+Collagen&#x2F;Gelatin 膠原蛋白&#x2F;明膠
+GAGs&#x2F;Hyaluronan 糖胺聚糖&#x2F;透明質酸
+
+
+Crosslink via groups 通過官能團交聯
+Glycosidic bonds 糖苷鍵
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+認為DNA&#x2F;RNA用作支架 (Thinking DNA&#x2F;RNA used as scaffolds): 佢哋唔係。
+忽略天然聚合物嘅免疫原性 (Ignoring immunogenicity in natural polymers)。
+
+Topic 7 – Specific Natural Polymers 特定天然聚合物大圖景 (Big Picture)Specific naturals like hyaluronan 透明質酸, matrigel 基質膠, fibrin 纖維蛋白, alginate 藻酸鹽, chitosan 殼聚糖 offer unique TE properties.
+思維導圖 (Mind map):Specifics 特定聚合物 → Hyaluronan 透明質酸 (Repair&#x2F;Cartilage&#x2F;Hydrophilic 修復&#x2F;軟骨&#x2F;親水) → Matrigel 基質膠 (ECM mix&#x2F;Stem cells ECM混合物&#x2F;幹細胞) → Fibrin 纖維蛋白 (Coagulation&#x2F;Biocompatible 凝血&#x2F;生物相容) → Alginate 藻酸鹽 (Algae&#x2F;Ca crosslink 藻類&#x2F;鈣交聯) → Chitosan 殼聚糖 (Arthropod&#x2F;Cartilage 節肢動物&#x2F;軟骨)
+必須掌握嘅要點 (Must-Know Facts)
+Hyaluronan 透明質酸: Polysaccharide in repair&#x2F;ECM, needs peptides for attachment.
+Crosslink: Acrylated HA 丙烯酸化HA with ADH&#x2F;EDC, then thiol-acrylate 硫醇-丙烯酸酯.
+RGD addition aids proliferation&#x2F;migration.
+Matrigel 基質膠: EHS sarcoma secretion, laminin&#x2F;collagen&#x2F;GFs 層粘連蛋白&#x2F;膠原蛋白&#x2F;生長因子.
+For ESCs 胚胎幹細胞: Diluted maintains pluripotency 多能性, undiluted differentiates.
+Fibrin 纖維蛋白: From fibrinogen&#x2F;thrombin 纖維蛋白原&#x2F;凝血酶, aggregates to coagulate.
+Biocompatible, used as sealant 密封劑, but degrades by fibrinolysis 纖維蛋白溶解.
+Alginate 藻酸鹽: From algae, hydrophilic, G-blocks crosslink with Ca (egg-carton 蛋盒模型).
+M-blocks not involved.
+Chitosan 殼聚糖: From exoskeletons 外骨骼, like GAGs, for cartilage&#x2F;bone.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Hyaluronan Crosslink 透明質酸交聯:HA + ADH/EDC → HA-ADH + NHS-AC → Acrylated 丙烯酸化 → Thiol conjugate 硫醇偶聯物
+
+對比表 (Comparison Table) - Fibrin vs Alginate 纖維蛋白 vs 藻酸鹽
+
+
+Fibrin 纖維蛋白
+Alginate 藻酸鹽
+
+
+
+From blood 來源於血液
+From algae 來源於藻類
+
+
+Enzymatic cleavage 酶促裂解
+Ca crosslinking 鈣交聯
+
+
+Degrades fast 降解快
+Stable 穩定
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+忘記透明質酸需要修飾才能黏附細胞 (Forgetting hyaluronan needs modification for attachment).
+混淆藻酸鹽嘅G區同M區 (Mixing G&#x2F;M blocks in alginate)。
+
+Topic 8 – Synthetic Polymer Scaffolds 合成聚合物支架大圖景 (Big Picture)Synthetics offer consistency over naturals, with tunable degradation 可調節降解 for TE.
+思維導圖 (Mind map):Synthetics 合成聚合物 → Less issues 問題較少 (No allergens&#x2F;Batch var 無過敏原&#x2F;批次差異) → Examples 例子 (PLA&#x2F;PGA&#x2F;PLGA&#x2F;PCL&#x2F;PEOT&#x2F;PBT) → Degradation 降解 (Bulk&#x2F;Surface 整體&#x2F;表面) → Apps 應用 (Injectable&#x2F;Long-term 可注射&#x2F;長期)
+必須掌握嘅要點 (Must-Know Facts)
+Less byproducts, variations, immunogenicity than naturals.
+PLA 聚乳酸: Semicrystalline, brittle 脆, hydrophobic 疏水, degrades to lactic acid 乳酸.
+Copolymerize with PEG for solubility.
+PGA 聚乙醇酸: Crystalline, tough 堅韌, degrades to glycolic acid 乙醇酸, for sutures 縫合線.
+PLGA 聚乳酸-乙醇酸共聚物: Copolymers, biocompatible, acidic products inflame.
+PCL 聚己內酯: Biocompatible, slow bulk erosion 整體侵蝕 (&gt;3 yrs).
+PEOT&#x2F;PBT: Elastic, reversible crosslinks, tunable properties.
+PPEs&#x2F;PPAs 聚磷酸酯&#x2F;聚磷酸酯膠: Surface erosion 表面侵蝕, milder response.
+PPF-DA&#x2F;PEG-DA 聚富馬酸丙二醇酯-二丙烯酸酯&#x2F;聚乙二醇-二丙烯酸酯: Injectable, fill defects, low strength.
+Categories: Porous solid (bone) vs hydrogels (soft tissues).
+Solid: Stable, non-dissolve, hydrolyze.
+Hydrogels: Fill defects, minimally invasive, incorporate cells.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)PLA Degradation PLA降解:-[OCH(CH3)CO]-n + H2O → Lactic acid 乳酸
+
+對比表 (Comparison Table) - Natural vs Synthetic Polymers (Scaffolds) 天然 vs 合成聚合物 (支架)
+
+
+Natural 天然
+Synthetic 合成
+
+
+
+Variable&#x2F;biocompatible 多變&#x2F;生物相容
+Consistent&#x2F;tunable 穩定&#x2F;可調節
+
+
+Immunogenic risk 免疫原性風險
+Less inflammation 炎症較少
+
+
+From sources 來源於天然
+Lab-made 實驗室製備
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+認為合成聚合物不可降解 (Thinking synthetics non-biodegradable): 許多是可降解的。
+忘記酸性降解產物 (Forgetting acidic degradation products): 可能引起炎症。
+
+Topic 9 – 3D Cell Cultures and Applications 3D 細胞培養與應用大圖景 (Big Picture)3D cultures 3D培養 better mimic in vivo 體內 via scaffolds, improving cell behavior over 2D 二維.
+思維導圖 (Mind map):3D vs 2D → Why 原因 (ECM signals&#x2F;Topography ECM信號&#x2F;拓撲結構) → Limitations 局限性 (Diffusion 擴散) → Apps 應用 (Regen med&#x2F;Drug discovery&#x2F;Bioreactors 再生醫學&#x2F;藥物發現&#x2F;生物反應器)
+必須掌握嘅要點 (Must-Know Facts)
+2D artificial 人造; 3D natural with ECM cues.
+Control morphology&#x2F;architecture&#x2F;components.
+Cells respond in vivo-like.
+Matrices: Porous, support growth&#x2F;differentiation.
+Chemical mod: Adhesion&#x2F;degradation&#x2F;GF release.
+Limited diffusion 擴散 in 3D; viability drops over time.
+Apps: Clinical 臨床, in vitro 體外, regen med 再生醫學, drug discovery 藥物發現.
+Bioreactors 生物反應器: Stirring&#x2F;perfusion 攪拌&#x2F;灌注 for mass transport 物質傳輸.
+Focal adhesions 黏著斑 differ 2D vs 3D.
+3D for blood vessels&#x2F;skin&#x2F;cartilage 血管&#x2F;皮膚&#x2F;軟骨.
+
+關鍵公式&#x2F;圖表 (Key Formulas &#x2F; Diagrams)Viability in 3D 3D培養中的活力:Day 1: 90% → Week 1: 60% → Week 3: &lt;10%
+
+對比表 (Comparison Table) - 2D vs 3D Cultures
+
+
+2D Cultures 2D培養
+3D Cultures 3D培養
+
+
+
+Flat&#x2F;rigid 平坦&#x2F;剛性
+Dynamic ECM 動態ECM
+
+
+Misrepresent 不能準確代表
+In vivo-like 更接近體內
+
+
+Simple 簡單
+Complex scaffolds 複雜支架
+
+
+常見錯誤同考官陷阱 (Common Mistakes &amp; Examiner Traps)
+假設2D培養足夠 (Assuming 2D sufficient): 陷阱題 - 為何3D更好。
+忘記大型組織需要生物反應器 (Forgetting bioreactor need for large tissues)。
+
+Active Recall Bank 主動回憶庫
+What is a polymer? (Large molecule made of repeating monomer units)
+Name two polymerization types: (Addition) and (Step-growth)
+Tg stands for: (Glass transition temperature)
+Factor favoring crystallinity: (Simple) structures
+Hydrogels are (Water)-swollen networks
+Natural polymer example: (Collagen)
+Gelatin from: (Partial) hydrolysis of collagen
+Hyaluronan needs (Peptides) for cell attachment
+PLA degrades to: (Lactic) acid
+PGA used for: (Sutures)
+Synthetic advantage over natural: No (batch) variations
+Crosslinks types: Covalent, (H-bonding), entanglements
+Matrigel for: (Embryonic) stem cells
+Fibrin from: (Fibrinogen) + thrombin
+Alginate crosslinks with: (Calcium) ions
+Chitosan from: (Arthropod) exoskeletons
+3D cultures mimic: (In vivo) environments
+Limitation in 3D: Limited (diffusion)
+Bioreactors provide: (Mass) transport
+Focal adhesions differ in: (2D) vs (3D)
+
+15-Minute Mock Exam 15分鐘模擬考試
+Describe two common techniques for fabricating polymeric scaffolds in tissue engineering.  
+
+Examples include electrospinning 靜電紡絲 and solvent casting&#x2F;particle leaching 溶劑鑄造&#x2F;粒子浸出; these may not suit ceramics due to material differences.
+
+
+Compare advantages and limitations of natural vs synthetic polymers for scaffolds.  
+
+Natural: Biocompatible, mimic ECM but variable&#x2F;immunogenic; Synthetic: Consistent, tunable degradation but may cause inflammation from byproducts.
+
+
+What properties make an ideal scaffold for tissue engineering?  
+
+Porous 多孔, biocompatible 生物相容, biodegradable at controlled rate 可控速率降解, mechanically suitable 機械性能合適, supports cell attachment&#x2F;growth 支持細胞黏附&#x2F;生長.
+
+
+Explain the role of hydrogels in scaffold-based tissue engineering.  
+
+Hydrogels provide hydrated 3D environments mimicking soft tissues, allowing cell encapsulation 細胞封裝 and nutrient diffusion.
+
+
+Which polymer is commonly used for absorbable sutures and why?  
+
+PGA; crystalline, tough, degrades to natural metabolite glycolic acid via hydrolysis.
+
+
+How does crystallinity affect polymer properties in scaffolds?  
+
+Increases strength and resistance to dissolution 耐溶解; favored by simple linear structures and slow cooling.
+
+
+Describe the degradation mechanism for PLGA copolymers.  
+
+Hydrolysis of ester bonds 酯鍵 in the main chain, releasing acidic products that may induce inflammation.
+
+
+Why are bioreactors used in 3D tissue engineering?  
+
+To provide convective mass transport 對流物質傳輸 (nutrients&#x2F;oxygen) via stirring&#x2F;perfusion for larger-scale tissue development.
+
+
+
+One-Page Cheat Sheet Summary 一頁速查表總結
+
+
+Category 類別
+Key Points 要點 (中英對照)
+
+
+
+Polymers Basics 聚合物基礎
+Natural 天然 (DNA&#x2F;Collagen), Synthetic 合成 (PLA&#x2F;PE); Suited for scaffolds: Versatile, but deform&#x2F;toxic. 適用於支架：多功能，但會變形&#x2F;有毒。
+
+
+Polymerization 聚合
+Addition 加成 (PE, non-degradable), Step-growth 逐步 (PLA&#x2F;PGA, hydrolyze esters).
+
+
+Structures&#x2F;States 結構&#x2F;狀態
+Crystalline 結晶 (Tm), Amorphous 無定形 (Tg); Semi-crystalline 半結晶 polymers; Tg decreases with long sides.
+
+
+Properties 特性
+Crystallinity 結晶度: Simple&#x2F;linear favors; Thermal 熱性能: e.g., PGA Tg 35°C Tm 210°C.
+
+
+Networks&#x2F;Hydrogels 網絡&#x2F;水凝膠
+Crosslinks swell; PHEMA common; Balance swelling&#x2F;retractive forces. 交聯溶脹；PHEMA常用；平衡溶脹&#x2F;收縮力。
+
+
+Natural Scaffolds 天然支架
+Collagen 膠原蛋白 (crosslink glutaraldehyde), Gelatin 明膠 (hydrolysis), Hyaluronan 透明質酸 (acrylate), Fibrin 纖維蛋白 (thrombin), Alginate 藻酸鹽 (Ca), Chitosan 殼聚糖 (GAG-like).
+
+
+Synthetic Scaffolds 合成支架
+PLA (brittle 脆), PGA (sutures 縫合線), PCL (slow degrade 慢降解), Injectables 可注射材料 (PPF-DA).
+
+
+3D Cultures 3D培養
+Vs 2D: In vivo-like; Limitations: Diffusion; Apps: Regen med, bioreactors for transport. 對比2D：更似體內；局限性：擴散；應用：再生醫學，生物反應器用於物質傳輸。
+
+
+English Version BelowTopic 1 – Introduction to PolymersBig Picture (1 sentence + mind map in text)Polymers are large molecules essential for tissue engineering scaffolds due to their versatility in mimicking ECM.Mind map: Polymers → Natural (Wood&#x2F;Rubber&#x2F;DNA) → Synthetic (PE&#x2F;PS&#x2F;PEG) → Biomedical Suitability (Strength&#x2F;Biodegradability&#x2F;Fabrication) → Disadvantages (Deformation&#x2F;Toxicity&#x2F;Degradation).
+Must-Know Facts (max 15 bullet points)
+Polymers revolutionized chemistry with major everyday impact (Lord Todd quote).
+ECM components like collagen, proteins, and GAGs are polymers.
+Suited for biomedical apps: low&#x2F;high strength, protein attachment resistance&#x2F;encouragement.
+Biodegradable or permanent; fabricable into complex shapes.
+Disadvantages: lower strength than metals&#x2F;ceramics, deform over time.
+May deteriorate during sterilization or degrade catastrophically in body.
+Release toxic byproducts possible.
+Natural examples: Wood, Rubber, Leather, Cotton, Wool, Silk, DNA, Proteins.
+Synthetic examples: Polystyrene, PET, PE, PEG, Kevlar.
+Polymers in scaffolds mimic ECM for cell support.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Polymer Chain Example:Monomer: H2C=CH2 (Ethylene)Polymer: -[CH2-CH2]-n (Polyethylene)
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Natural Polymers
+Synthetic Polymers
+
+
+
+From nature (e.g., wood, DNA)
+Man-made (e.g., PE, PS)
+
+
+Biocompatible but variable
+Consistent but may inflame
+
+
+Often biodegradable
+Tunable degradation
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing polymers with monomers; trap: asking for polymer examples without specifying type.
+Overlooking disadvantages like toxic byproducts in body.
+
+Mnemonics &#x2F; Memory Hooks
+“Poly-Many”: Polymers are many monomers linked (poly &#x3D; many).
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are the advantages of polymers in biomedical applications?  
+
+Versatile strength, protein attachment control, biodegradability, and easy fabrication into shapes.
+
+Name two disadvantages of polymers.  
+
+Lower strength&#x2F;deformation over time; potential toxic degradation products.
+
+Topic 2 – Polymerization TypesBig Picture (1 sentence + mind map in text)Polymerization forms chains via addition (non-degradable) or step-growth (degradable via hydrolysis).Mind map: Polymerization → Addition (Radicals&#x2F;Ions → No labile bonds) → Step-Growth (Condensation → Ester bonds → Hydrolysis) → Examples (PE vs PLA&#x2F;PGA&#x2F;PLGA).
+Must-Know Facts (max 15 bullet points)
+Addition: Double-bond monomers like ethylene, vinyl chloride, styrene, MMA.
+Via radicals or ions; no labile bonds, not degradable.
+Example: Ethylene → Polyethylene.
+Step-growth: Functional group reactions, condensation.
+Well-known: PLA, PGA, PLGA.
+Degrade via main chain ester hydrolysis.
+PLA from lactic acid condensation.
+PGA from glycolic acid.
+PLGA copolymers tunable.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Addition: n H2C=CH2 → -[H2C-CH2]-nStep-Growth: n HOCH(CH3)COOH → -[OCH(CH3)CO]-n + (n-1)H2O
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Addition Polymerization
+Step-Growth Polymerization
+
+
+
+Double bonds break
+Functional groups react
+
+
+Non-degradable chains
+Degradable via hydrolysis
+
+
+Examples: PE, PVC
+Examples: PLA, PGA
+
+
+Common Mistakes &amp; Examiner Traps
+Mixing addition and step-growth; trap: classify PLA as addition (it’s step-growth).
+Forgetting condensation byproduct in step-growth.
+
+Mnemonics &#x2F; Memory Hooks
+“Add No Water”: Addition has no H2O byproduct; “Step Condense”: Step-growth condenses with H2O loss.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Describe addition polymerization.  
+
+Involves double-bond monomers reacting via radicals&#x2F;ions, forming non-degradable polymers.
+
+Why do step-growth polymers degrade?  
+
+Hydrolysis of main chain ester bonds.
+
+Topic 3 – Polymer Structures and StatesBig Picture (1 sentence + mind map in text)Polymers exist as crystalline, amorphous, or semi-crystalline, affecting melting and glass transitions.Mind map: Structures → Crystals (Ordered&#x2F;Lattice&#x2F;Sharp Tm) → Amorphous (No order&#x2F;Tg) → Polymers (Semi-crystalline&#x2F;Folding&#x2F;Stacking) → States (Rubber&#x2F;Glass).
+Must-Know Facts (max 15 bullet points)
+Crystals: Infinite 3D lattice, sharp Tm.
+Amorphous: No structure, sharp Tm.
+Small molecules: 100% crystalline or amorphous.
+Polymer crystalline: Intramolecular folding&#x2F;stacking.
+Semi-crystalline: Never 100% crystalline, have Tm.
+Rubber&#x2F;Glass: Frozen liquid, no long-range order.
+Tg: Below Tg, no cooperative rotation&#x2F;translation.
+Transition: Rubbery to glassy hard state.
+Crystallization favored by simple structures, small side groups.
+Linear, non-crosslinked polymers crystallize better.
+Block&#x2F;alternating copolymers, slow cooling aid crystallization.
+Crystalline: Stronger, resistant to dissolution.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Solid States:- Crystalline: Ordered chains → Tm- Amorphous: Random → TgDiagram:Crystalline: |||||| (aligned)Amorphous: ~ ~ ~ (tangled)
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Crystalline
+Amorphous
+
+
+
+Ordered lattice
+No order
+
+
+Sharp Tm
+Tg only
+
+
+Stronger
+Flexible
+
+
+Common Mistakes &amp; Examiner Traps
+Assuming polymers are 100% crystalline; trap: polymers are semi-crystalline.
+Confusing Tm and Tg.
+
+Mnemonics &#x2F; Memory Hooks
+“Crystal Clear Tm”: Crystals have sharp melting; “Amorphous Tg”: Amorphous has glass transition.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What is Tg?  
+
+Glass transition temperature where polymer shifts from rubbery to glassy.
+
+Factors favoring crystallization?  
+
+Simple structures, linear chains, slow cooling.
+
+Topic 4 – Polymer PropertiesBig Picture (1 sentence + mind map in text)Properties like crystallinity, thermal behavior, and side groups influence polymer performance in scaffolds.Mind map: Properties → Crystallinity (Favored by simplicity) → Side Groups (Flexible lower Tg) → Thermal (Tg&#x2F;Tm values) → Effects (Free volume&#x2F;Motion).
+Must-Know Facts (max 15 bullet points)
+Crystallization: Simple&#x2F;small side groups, linear, non-network.
+Slow cooling for chain motion.
+Crystalline stronger&#x2F;resistant.
+Flexible side groups: Tg decreases with length.
+Side chains rotate, increase free volume, lower Tg.
+Thermal examples: Nylon 6,6 Tg 45°C Tm 267°C.
+UHMWPE Tg -125°C Tm 140°C.
+Silicone Tg -123°C Tm -29°C.
+PMMA Tg 105°C Tm 160°C.
+PDLLA Tg 50°C amorphous.
+PCL Tg -60°C Tm 57°C.
+PGA Tg 35°C Tm 210°C.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Tg Trend:Increasing side chain: Tg ↓ (e.g., PMMA 105°C → Polydecyl MA -62°C)
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Short Side Groups
+Long Side Groups
+
+
+
+Higher Tg
+Lower Tg
+
+
+Less free volume
+More free volume
+
+
+Restricted motion
+Easier rotation
+
+
+Common Mistakes &amp; Examiner Traps
+Thinking longer sides increase Tg; actually decrease.
+Ignoring side chain effects on packing.
+
+Mnemonics &#x2F; Memory Hooks
+“Long Sides Low Tg”: Longer flexible groups lower transition.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)How do side groups affect Tg?  
+
+Flexible long sides lower Tg by increasing free volume.
+
+Give Tg and Tm for PGA.  
+
+Tg 35°C, Tm 210°C.
+
+Topic 5 – Crosslinked Networks and HydrogelsBig Picture (1 sentence + mind map in text)Crosslinks create networks that swell in water to form hydrogels for cell environments.Mind map: Crosslinks (Covalent&#x2F;H-bond&#x2F;Entangle) → Networks (Increased MW&#x2F;Swell) → Hydrogels (Water-swollen&#x2F;Balanced forces) → Apps (Nutrients&#x2F;Waste&#x2F;Aqueous mimic).
+Must-Know Facts (max 15 bullet points)
+Crosslinks: Covalent, H-bonding, entanglements.
+Increase MW, swell in solvents (hydrogel).
+Hydrogels: Water-swollen crosslinked structures.
+From monomers or chain associations.
+Why: Cells need aqueous for nutrients&#x2F;waste.
+Prepared by crosslinking then swelling.
+PHEMA common: Tissue-like water, degradation resistant.
+Apps: Contacts, wounds, kidney membranes.
+Swelling: Thermodynamic force vs retractive.
+Highly swollen: Cellulose, PVA, PEG.
+Moderately: PHEMA.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Hydrogel Formation:Polymer chains + Crosslinker → Network → Swell in H2O
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Solid Porous Scaffolds
+Hydrogel Scaffolds
+
+
+
+For bone (stable)
+For soft tissues (fill defects)
+
+
+Degrade by hydrolysis
+Incorporate cells&#x2F;bioactives easily
+
+
+Non-dissolving
+Minimally invasive
+
+
+Common Mistakes &amp; Examiner Traps
+Confusing crosslinks with polymerization; trap: hydrogels don’t need crosslinks (they do).
+Overlooking swelling balance.
+
+Mnemonics &#x2F; Memory Hooks
+“Cross Swell Gel”: Crosslinks lead to swelling in hydrogels.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)What are hydrogels?  
+
+Water-swollen crosslinked polymeric structures.
+
+Why use hydrogels in TE?  
+
+Mimic aqueous cell environment for nutrient&#x2F;waste exchange.
+
+Topic 6 – Natural Polymer ScaffoldsBig Picture (1 sentence + mind map in text)Natural polymers from proteins&#x2F;polysaccharides provide biocompatible scaffolds but with variability risks.Mind map: Natural Scaffolds → Proteins (Collagen&#x2F;Elastin) → Polysaccharides (GAGs&#x2F;Hyaluronan) → Sources (Plants&#x2F;Algae&#x2F;Animals&#x2F;Microbes) → Crosslinking (Chemical&#x2F;Physical).
+Must-Know Facts (max 15 bullet points)
+Proteins: Amino acid polymers, include collagen, elastin, laminin.
+DNA&#x2F;RNA: Phosphate-ribose backbone, not for scaffolds.
+Scaffolds: Proteins, polysaccharides, combos.
+Sources: Collagen&#x2F;fibrin&#x2F;elastin (animals), soybean (plants), silk fibroin.
+Gelatin: Partial hydrolysis of collagen from skin&#x2F;bones.
+Extraction: Reduce crosslinks, acid&#x2F;water at temp.
+Acidic pH speeds conversion.
+Scaffolds: Crosslink via -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH.
+Chemical mod tricky in water.
+May alter solubility&#x2F;conformation&#x2F;activity.
+Collagen: Triple-helical, ECM main, immunogenicity risk.
+Crosslink: Physical (moisture&#x2F;heat&#x2F;UV), chemical (glutaraldehyde).
+Formaldehyde: Fixes tissue by crosslinking aminos.
+Polysaccharides: Monosaccharide polymers, glycosidic bonds.
+GAGs: Unbranched, repeating disaccharides (chondroitin etc.).
+
+Key Formulas &#x2F; Diagrams (use code blocks)Collagen Crosslink:Protein-NH2 + Glutaraldehyde → Crosslinked
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Proteins
+Polysaccharides
+
+
+
+Amino acids
+Monosaccharides
+
+
+Collagen&#x2F;Gelatin
+GAGs&#x2F;Hyaluronan
+
+
+Crosslink via groups
+Glycosidic bonds
+
+
+Common Mistakes &amp; Examiner Traps
+Thinking DNA&#x2F;RNA used as scaffolds; they’re not.
+Ignoring immunogenicity in natural polymers.
+
+Mnemonics &#x2F; Memory Hooks
+“Natural Cross Groups”: -OH&#x2F;-NH2&#x2F;-COOH&#x2F;-SH for crosslinking.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Sources of natural polymers?  
+
+Plants (soybean), algae (alginate), animals (collagen), microbes (dextran).
+
+How extract gelatin?  
+
+Partial hydrolysis of collagen in acid&#x2F;water at increasing temps.
+
+Topic 7 – Specific Natural PolymersBig Picture (1 sentence + mind map in text)Specific naturals like hyaluronan, matrigel, fibrin, alginate, chitosan offer unique TE properties.Mind map: Specifics → Hyaluronan (Repair&#x2F;Cartilage&#x2F;Hydrophilic) → Matrigel (ECM mix&#x2F;Stem cells) → Fibrin (Coagulation&#x2F;Biocompatible) → Alginate (Algae&#x2F;Ca crosslink) → Chitosan (Arthropod&#x2F;Cartilage).
+Must-Know Facts (max 15 bullet points)
+Hyaluronan: Polysaccharide in repair&#x2F;ECM, needs peptides for attachment.
+Crosslink: Acrylated HA with ADH&#x2F;EDC, then thiol-acrylate.
+RGD addition aids proliferation&#x2F;migration.
+Matrigel: EHS sarcoma secretion, laminin&#x2F;collagen&#x2F;GFs.
+For ESCs: Diluted maintains pluripotency, undiluted differentiates.
+Fibrin: From fibrinogen&#x2F;thrombin, aggregates to coagulate.
+Biocompatible, used as sealant, but degrades by fibrinolysis.
+Alginate: From algae, hydrophilic, G-blocks crosslink with Ca (egg-carton).
+M-blocks not involved.
+Chitosan: From exoskeletons, like GAGs, for cartilage&#x2F;bone.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Hyaluronan Crosslink:HA + ADH/EDC → HA-ADH + NHS-AC → Acrylated → Thiol conjugate
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Fibrin
+Alginate
+
+
+
+From blood
+From algae
+
+
+Enzymatic cleavage
+Ca crosslinking
+
+
+Degrades fast
+Stable
+
+
+Common Mistakes &amp; Examiner Traps
+Forgetting hyaluronan needs modification for attachment.
+Mixing G&#x2F;M blocks in alginate.
+
+Mnemonics &#x2F; Memory Hooks
+“Hyal Needs Help”: Hyaluronan requires peptides for cell attach.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)How crosslink hyaluronan?  
+
+Acrylate with ADH&#x2F;EDC, then thiol-acrylate.
+
+What is matrigel for?  
+
+Maintain ESC pluripotency (diluted) or differentiation (undiluted).
+
+Topic 8 – Synthetic Polymer ScaffoldsBig Picture (1 sentence + mind map in text)Synthetics offer consistency over naturals, with tunable degradation for TE.Mind map: Synthetics → Less issues (No allergens&#x2F;Batch var) → Examples (PLA&#x2F;PGA&#x2F;PLGA&#x2F;PCL&#x2F;PEOT&#x2F;PBT) → Degradation (Bulk&#x2F;Surface) → Apps (Injectable&#x2F;Long-term).
+Must-Know Facts (max 15 bullet points)
+Less byproducts, variations, immunogenicity than naturals.
+PLA: Semicrystalline, brittle, hydrophobic, degrades to lactic acid.
+Copolymerize with PEG for solubility.
+PGA: Crystalline, tough, degrades to glycolic acid, for sutures.
+PLGA: Copolymers, biocompatible, acidic products inflame.
+PCL: Biocompatible, slow bulk erosion (&gt;3 yrs).
+PEOT&#x2F;PBT: Elastic, reversible crosslinks, tunable properties.
+PPEs&#x2F;PPAs: Surface erosion, milder response.
+PPF-DA&#x2F;PEG-DA: Injectable, fill defects, low strength.
+Categories: Porous solid (bone) vs hydrogels (soft tissues).
+Solid: Stable, non-dissolve, hydrolyze.
+Hydrogels: Fill defects, minimally invasive, incorporate cells.
+
+Key Formulas &#x2F; Diagrams (use code blocks)PLA Degradation:-[OCH(CH3)CO]-n + H2O → Lactic acid
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+Natural
+Synthetic
+
+
+
+Variable&#x2F;biocompatible
+Consistent&#x2F;tunable
+
+
+Immunogenic risk
+Less inflammation
+
+
+From sources
+Lab-made
+
+
+Common Mistakes &amp; Examiner Traps
+Thinking synthetics non-biodegradable; many are.
+Forgetting acidic degradation products.
+
+Mnemonics &#x2F; Memory Hooks
+“Synthetic Safe”: Less risks than natural.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Advantages of synthetics?  
+
+No byproducts&#x2F;variations&#x2F;immunogenicity.
+
+Describe PCL.  
+
+Good biocompatibility, slow bulk erosion for long-term implants.
+
+Topic 9 – 3D Cell Cultures and ApplicationsBig Picture (1 sentence + mind map in text)3D cultures better mimic in vivo via scaffolds, improving cell behavior over 2D.Mind map: 3D vs 2D → Why (ECM signals&#x2F;Topography) → Limitations (Diffusion) → Apps (Regen med&#x2F;Drug discovery&#x2F;Bioreactors).
+Must-Know Facts (max 15 bullet points)
+2D artificial; 3D natural with ECM cues.
+Control morphology&#x2F;architecture&#x2F;components.
+Cells respond in vivo-like.
+Matrices: Porous, support growth&#x2F;differentiation.
+Chemical mod: Adhesion&#x2F;degradation&#x2F;GF release.
+Limited diffusion in 3D; viability drops over time.
+Apps: Clinical, in vitro, regen med, drug discovery.
+Bioreactors: Stirring&#x2F;perfusion for mass transport.
+Focal adhesions differ 2D vs 3D.
+3D for blood vessels&#x2F;skin&#x2F;cartilage.
+
+Key Formulas &#x2F; Diagrams (use code blocks)Viability in 3D:Day 1: 90% → Week 1: 60% → Week 3: &lt;10%
+Comparison Table (“X vs Y” in proper Markdown table)
+
+
+2D Cultures
+3D Cultures
+
+
+
+Flat&#x2F;rigid
+Dynamic ECM
+
+
+Misrepresent
+In vivo-like
+
+
+Simple
+Complex scaffolds
+
+
+Common Mistakes &amp; Examiner Traps
+Assuming 2D sufficient; trap: why 3D better.
+Forgetting bioreactor need for large tissues.
+
+Mnemonics &#x2F; Memory Hooks
+“3D Real Deal”: 3D mimics real tissue better.
+
+Past Exam Questions + Model Answers (use &gt; blockquote for answers)Why 3D over 2D?  
+
+Reproduces complex environments, better cell responses.
+
+Role of bioreactors?  
+
+Provide mass transport for cm-scale tissues.
+
+Active Recall Bank
+What is a polymer? ____
+Name two polymerization types: ____ and ____
+Tg stands for: ____
+Factor favoring crystallinity: ____ structures
+Hydrogels are ____-swollen networks
+Natural polymer example: ____
+Gelatin from: ____ hydrolysis
+Hyaluronan needs ____ for cell attachment
+PLA degrades to: ____ acid
+PGA used for: ____
+Synthetic advantage over natural: No ____ variations
+Crosslinks types: Covalent, ____, entanglements
+Matrigel for: ____ stem cells
+Fibrin from: ____ + thrombin
+Alginate crosslinks with: ____ ions
+Chitosan from: ____ exoskeletons
+3D cultures mimic: ____ environments
+Limitation in 3D: Limited ____
+Bioreactors provide: ____ transport
+Focal adhesions differ in: ____ vs ____
+
+15-Minute Mock Exam
+Describe two common techniques for fabricating polymeric scaffolds in tissue engineering.  
+
+Examples include electrospinning and solvent casting&#x2F;particle leaching; these may not suit ceramics due to material differences.
+
+
+Compare advantages and limitations of natural vs synthetic polymers for scaffolds.  
+
+Natural: Biocompatible, mimic ECM but variable&#x2F;immunogenic; Synthetic: Consistent, tunable degradation but may cause inflammation from byproducts.
+
+
+What properties make an ideal scaffold for tissue engineering?  
+
+Porous, biocompatible, biodegradable at controlled rate, mechanically suitable, supports cell attachment&#x2F;growth.
+
+
+Explain the role of hydrogels in scaffold-based tissue engineering.  
+
+Hydrogels provide hydrated 3D environments mimicking soft tissues, allowing cell encapsulation and nutrient diffusion.
+
+
+Which polymer is commonly used for absorbable sutures and why?  
+
+PGA; crystalline, tough, degrades to natural metabolite glycolic acid via hydrolysis.
+
+
+How does crystallinity affect polymer properties in scaffolds?  
+
+Increases strength and resistance to dissolution; favored by simple linear structures and slow cooling.
+
+
+Describe the degradation mechanism for PLGA copolymers.  
+
+Hydrolysis of ester bonds in the main chain, releasing acidic products that may induce inflammation.
+
+
+Why are bioreactors used in 3D tissue engineering?  
+
+To provide convective mass transport (nutrients&#x2F;oxygen) via stirring&#x2F;perfusion for larger-scale tissue development.
+
+
+
+One-Page Cheat Sheet Summary
+
+
+Category
+Key Points
+
+
+
+Polymers Basics
+Natural (DNA&#x2F;Collagen), Synthetic (PLA&#x2F;PE); Suited for scaffolds: Versatile, but deform&#x2F;toxic.
+
+
+Polymerization
+Addition (PE, non-degradable); Step-growth (PLA&#x2F;PGA, hydrolyze esters).
+
+
+Structures&#x2F;States
+Crystalline (Tm), Amorphous (Tg); Semi-crystalline polymers; Tg decreases with long sides.
+
+
+Properties
+Crystallinity: Simple&#x2F;linear favors; Thermal: e.g., PGA Tg 35°C Tm 210°C.
+
+
+Networks&#x2F;Hydrogels
+Crosslinks swell; PHEMA common; Balance swelling&#x2F;retractive forces.
+
+
+Natural Scaffolds
+Collagen (crosslink glutaraldehyde), Gelatin (hydrolysis), Hyaluronan (acrylate), Fibrin (thrombin), Alginate (Ca), Chitosan (GAG-like).
+
+
+Synthetic Scaffolds
+PLA (brittle), PGA (sutures), PCL (slow degrade), Injectables (PPF-DA).
+
+
+3D Cultures
+Vs 2D: In vivo-like; Limitations: Diffusion; Apps: Regen med, bioreactors for transport.
+
+
+]]></content>
+      <categories>
+        <category>Education</category>
+        <category>Biomedical Engineering</category>
+        <category>Tissue Engineering</category>
+      </categories>
+      <tags>
+        <tag>biomedical engineering</tag>
+        <tag>Exam Notes</tag>
+        <tag>Tissue Engineering</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BME 2104 Tissue Engineering – 7</title>
     <url>/posts/e0b4f024.html</url>
     <content><![CDATA[BME 2104 Tissue Engineering – Lecture 7: Scaffold Foundations (III) Final Revision NotesLecture Overview
@@ -11460,181 +12901,6 @@ Active Recall Answers: 1. Gas foaming(+PL), melt molding, freeze-drying 2. Gas f
         <tag>biomedical engineering</tag>
         <tag>Exam Notes</tag>
         <tag>Tissue Engineering</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>📚 BME4101 Biomedical Instrumentation 1 | 完整貓紙</title>
-    <url>/posts/259d8d41.html</url>
-    <content><![CDATA[🎯 課程目標與學習成果 (Aims &amp; Outcomes)理解生物醫學儀器嘅原理、應用同設計。
-
-掌握生理訊號特性： 了解 ECG, EEG 等訊號有幾細、幾多雜訊。
-儀器運作原理： 識得點樣設計設備去攞到生理資訊。
-系統評估： 識分精度 (Precision) 同準確度 (Accuracy)。
-
-
-🧰 背景技能與工具 (Skills &amp; Tools)
-軟件： MATLAB 同 Tinkercad。
-MATLAB 用途： 分析時域&#x2F;頻域訊號、畫 Bode plots (波德圖)、用 Simulink 模擬電路。
-
-
-⚙️ 生物醫學儀器基礎 (Fundamentals)定義： 用侵入性 (Invasive) 或非侵入性 (Noninvasive) 嘅方法，去量度人體、器官、細胞甚至分子嘅系統。關鍵要求： 可靠性 (Reliability) 同 安全性 (Safety)。
-
-
-歷史創新亮點
-1950s 前： X-Ray, ECG, 人工腎臟, 心臟起搏器。
-1970s： CT, 人工髖&#x2F;膝關節, 人工耳蝸。
-1980s： MRI, 激光手術, 血氧儀, 機械人輔助手術。
-
-
-🏗️ 基本儀器系統 (Basic System)系統組件表
-
-
-組件
-功能描述
-
-
-
-Measurand (待測量)
-想度嘅物理量 (e.g. 血壓、位移)
-
-
-Sensor (傳感器)
-將待測量轉做電訊號
-
-
-Signal Conditioning
-放大同濾波 (Amplification &amp; Filtering)
-
-
-Actuator &amp; Feedback
-提供控制同重新校準
-
-
-
-🔍 訊號調理與挑戰 (Conditioning &amp; Challenges)例子
-紅外線溫度計： 用 Thermopile 將熱能轉電壓，電壓好細，要放大。
-PPG (光電容積圖)： 度心跳，雜訊極大，一定要濾波。
-
-運作模式 (Modes)
-直接模式 (Direct)： 直接度（通常係侵入性，風險高）。
-間接模式 (Indirect)： 度相關嘅量（例如由呼吸度心輸出量）。
-
-
-📊 儀器特性與評估 (Characteristics)靜態特性 (Static)
-Accuracy (準確度)： 測量值同真值嘅接近程度。
-Precision (精密度)： 重複測量嘅一致性。
-Linearity (線性度)： Input 同 Output 係咪成直線比例。
-
-
-🛠️ 電阻式位移傳感器與電橋 (Wheatstone Bridge)Strain Gauge (應變計)利用電阻改變嚟度位移：R=ρLAR = \frac{\rho L}{A}R=AρL​。
-Wheatstone Bridge 配置對比
-
-
-配置
-靈敏度 (Sensitivity)
-溫度補償
-
-
-
-1 active gauge
-14GVin\frac{1}{4} G V_{in}41​GVin​
-無
-
-
-2 active gauges
-12GVin\frac{1}{2} G V_{in}21​GVin​
-有
-
-
-4 active gauges
-GVinG V_{in}GVin​
-有 (最強)
-
-
-
-⚡ 運算放大器 (Op-Amps)理想 (Ideal) vs 實際 (Practical)
-Open-loop Gain (A)： 理想係 ∞\infty∞，實際約 10510^5105。
-Input Impedance (ZinZ_{in}Zin​)： 理想係 ∞\infty∞，實際 &gt;1MΩ&gt; 1 M\Omega&gt;1MΩ。
-CMRR (共模抑制比)： 反映剔除雜訊（如電網 50Hz）嘅能力。  CMRR (dB)=20log⁡10(AdAcm)\text{CMRR (dB)} = 20 \log_{10} \left( \frac{A_d}{A_{cm}} \right)CMRR (dB)=20log10​(Acm​Ad​​)
-
-
-🔄 訊號濾波 (Filtering)目的： 最大化 SNR (信噪比)。
-
-
-
-Low-pass (LP)： 攞低頻，剔除高頻 Noise。
-Notch Filter： 專門剔除 50&#x2F;60 Hz 嘅電源線干擾。
-
-
-⚡ 生物電位記錄 (ECG&#x2F;EEG&#x2F;EMG)ECG 心電圖訊號
-P wave： 心房去極化。
-QRS complex： 心室去極化（訊號最強）。
-T wave： 心室復極化。
-
-
-🛡️ 生物電位放大器系統 (Amplifier Systems)關鍵要求： 高增益、低雜訊、高輸入阻抗、高 CMRR。
-
-
-
-Instrumentation Amplifier (儀表放大器)： 高 ZinZ_{in}Zin​，Gain 淨係靠一粒 RgainR_{gain}Rgain​ 嚟教。
-Driven Right Leg (DRL) 電路： 主動接地技術，將 Common-mode 雜訊反相打返入右腳，大大提升 SNR。
-
-
-⏱️ 採樣與數碼轉換 (Sampling &amp; ADC)
-Nyquist Theorem： 採樣頻率 fsf_sfs​ 必須 &gt;2×fm&gt; 2 \times f_m&gt;2×fm​，否則會出現 Aliasing (摺疊雜訊)。
-Quantization (量化)： 將連續電壓轉做數碼位元。
-
-
-💉 血壓量度 (Blood Pressure)
-Systolic (SP)： 收縮壓（高壓）。
-Diastolic (DP)： 舒張壓（低壓）。
-MAP (平均動脈壓)： MAP≈DP+13(SP−DP)MAP \approx DP + \frac{1}{3}(SP - DP)MAP≈DP+31​(SP−DP)。
-
-
-💉 血流量度技術 (Blood Flow)超聲波流量計 (Ultrasonic)
-Transit-Time： 度聲波來回時間差。
-Doppler Flowmeter： 利用多普勒效應度血流速度。Δf/f0=2ucos⁡θc\Delta f / f_0 = \frac{2 u \cos \theta}{c}Δf/f0​=c2ucosθ​
-
-
-💡 核心重點總結表
-
-
-主題
-廣東話重點
-
-
-
-Instrumentation
-讀熟個流程：感覺 -&gt; 放大 -&gt; 濾波 -&gt; 顯示。
-
-
-Op-Amps
-考試必計 Inverting 同 Non-inverting Gain。
-
-
-CMRR
-數值愈高，代表部機剔除 50Hz 雜訊愈勁。
-
-
-DRL Circuit
-用嚟減低 Common-mode Noise 嘅神技。
-
-
-Nyquist
-唔好採樣得太慢，唔係會 Aliasing。
-
-
-
-Gemini’s Note: 幫你執返好咗 Front-matter。YAML 最怕喺鍵值對（key: value）入面見到奇怪嘅括號或者冇空格。依家應該可以正常 hexo g 喇！
-]]></content>
-      <categories>
-        <category>University Notes</category>
-      </categories>
-      <tags>
-        <tag>CityU</tag>
-        <tag>Biomedical Engineering</tag>
-        <tag>Study Notes</tag>
-        <tag>BME</tag>
       </tags>
   </entry>
 </search>
