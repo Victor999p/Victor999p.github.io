@@ -4,7 +4,7 @@
   <url>
     <loc>https://victor999p.github.io/manifest.json</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://victor999p.github.io/link/index.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,16 +22,7 @@
   <url>
     <loc>https://victor999p.github.io/movie/index.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/music/index.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +31,34 @@
   <url>
     <loc>https://victor999p.github.io/tags/index.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/music/index.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/5d5e9f89.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +67,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/a4367020.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +76,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/98acdb98.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +85,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/fe3551ce.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,16 +94,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/fe3551ce.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/index.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +103,16 @@
   <url>
     <loc>https://victor999p.github.io/about/index.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/index.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +121,7 @@
   <url>
     <loc>https://victor999p.github.io/comments/index.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +130,7 @@
   <url>
     <loc>https://victor999p.github.io/css/custom-about.css</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +139,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/889641a6.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -130,7 +148,16 @@
   <url>
     <loc>https://victor999p.github.io/posts/c2e18503.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/edc9a6e4.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -139,43 +166,16 @@
   <url>
     <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/posts/e0b4f024.html</loc>
+    <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/83d538e2.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/57c7c90b.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/e7d9343d.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,7 +184,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/a1205bc2.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,7 +193,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/a0e231f5.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -202,43 +202,16 @@
   <url>
     <loc>https://victor999p.github.io/posts/97b3c0b2.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/posts/1775fd89.html</loc>
+    <loc>https://victor999p.github.io/posts/e0b4f024.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/6d4835d0.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/a776c643.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/74ab02e4.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -247,25 +220,70 @@
   <url>
     <loc>https://victor999p.github.io/posts/6778c1a2.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/posts/f5cdc6c3.html</loc>
+    <loc>https://victor999p.github.io/posts/1775fd89.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/posts/6848b770.html</loc>
+    <loc>https://victor999p.github.io/posts/6d4835d0.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/a776c643.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/74ab02e4.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/83d538e2.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/57c7c90b.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/e7d9343d.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -274,7 +292,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/170228b7.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -283,7 +301,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/8f57aec0.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -292,7 +310,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/fcd82218.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -301,34 +319,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/a5063481.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/0.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/259d8d41.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/posts/10235619.html</loc>
-    
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -337,7 +328,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/399f1187.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -346,7 +337,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/86a96b5c.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -355,7 +346,7 @@
   <url>
     <loc>https://victor999p.github.io/posts/6e1ed4b7.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -364,7 +355,52 @@
   <url>
     <loc>https://victor999p.github.io/posts/d1e61a5b.html</loc>
     
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/f5cdc6c3.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/6848b770.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/0.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/259d8d41.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/posts/10235619.html</loc>
+    
+    <lastmod>2026-10-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -373,7 +409,7 @@
 
   <url>
     <loc>https://victor999p.github.io/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -381,224 +417,259 @@
   
   <url>
     <loc>https://victor999p.github.io/tags/1999/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/ESP32-S3/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/Arduino/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/%E5%85%A5%E9%96%80/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Python/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/CS1302/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/CityU/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Beginner/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/AI-generate/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/introduction/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/first/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Biomedical-Engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Study-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/BME/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Bioinformatics/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Algorithms/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/CS4465/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Study-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Bioinfometics/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/BME4104/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Drug-Discovery/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Quantitative-Human-Physiology/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/BME3102/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Lecture-notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Signals-and-Systems/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/biomedical-engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Homework/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Exam-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/tags/Tissue-Engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/Education/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/GE-course/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Philosophy/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Vibe-coding/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Linkin/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Self-learning/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Python/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/CS1302/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/CityU/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Beginner/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/AI-generate/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/introduction/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/first/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Biomedical-Engineering/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Study-Notes/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/BME/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Bioinformatics/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Algorithms/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/CS4465/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Study-Notes/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Bioinfometics/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/BME4104/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Drug-Discovery/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Quantitative-Human-Physiology/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/BME3102/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/Biomaterials/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Lecture-notes/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/tags/Lecture-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Signals-and-Systems/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/biomedical-engineering/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Homework/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Exam-Notes/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/tags/Tissue-Engineering/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -607,112 +678,133 @@
   
   <url>
     <loc>https://victor999p.github.io/categories/Gallery/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/%E7%A1%AC%E9%AB%94%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Programming/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/CityU/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/Programming/Esp-32/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/CityU/GE/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Test/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/University-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/University/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Education/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/CityU/GE/Philosophy/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Study-Notes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/University/Biomedical-Engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Study-Notes/University/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Tissue-Engineering/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Biomaterials/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Biomedical-Instrumentation/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Bioinformatics/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Biomaterials-BME3123/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Signals-and-Systems/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Bioinformatics/CS4425/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Bioinformatics/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Tissue-Engineering/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://victor999p.github.io/categories/Education/Biomedical-Engineering/Quantitative-Human-Physiology/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
